@@ -14,4 +14,4 @@ Poté otevřete `http://localhost:4173`.
 
 Repozitář stačí připojit k Vercelu jako projekt s framework presetem **Other**. Build command ani output directory nejsou potřeba.
 
-Závěrečné CTA vede přímo do aplikace na `https://moje-rodinka.vercel.app/`.
+Závěrečné CTA a přihlašovací tlačítko vedou přímo do aplikace na `https://app.mojerodinka.cz`.
