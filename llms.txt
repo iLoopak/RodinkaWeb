@@ -1,0 +1,30 @@
+# Rodinka
+
+> Rodinka is a family organizer for a shared calendar, household chores, shopping lists and meal planning. The product name is Rodinka. The canonical website is https://mojerodinka.cz/ and the web application is https://app.mojerodinka.cz.
+
+## Czech (default)
+- [Rodinka](https://mojerodinka.cz/)
+- [Rodinný plánovač](https://mojerodinka.cz/rodinny-planovac/)
+- [Rodinný kalendář](https://mojerodinka.cz/rodinny-kalendar/)
+- [Sdílený nákupní seznam](https://mojerodinka.cz/sdileny-nakupni-seznam/)
+- [Úkoly pro rodinu](https://mojerodinka.cz/ukoly-pro-rodinu/)
+- [Plánování jídel](https://mojerodinka.cz/planovani-jidla/)
+- [Aplikace pro rodinu](https://mojerodinka.cz/aplikace-pro-rodinu/)
+
+## Slovak
+- [Rodinka](https://mojerodinka.cz/sk/)
+- [Rodinný plánovač](https://mojerodinka.cz/sk/rodinny-planovac/)
+- [Rodinný kalendár](https://mojerodinka.cz/sk/rodinny-kalendar/)
+- [Zdieľaný nákupný zoznam](https://mojerodinka.cz/sk/zdielany-nakupny-zoznam/)
+- [Úlohy pre rodinu](https://mojerodinka.cz/sk/ulohy-pre-rodinu/)
+- [Plánovanie jedál](https://mojerodinka.cz/sk/planovanie-jedal/)
+- [Aplikácia pre rodinu](https://mojerodinka.cz/sk/aplikacia-pre-rodinu/)
+
+## English
+- [Rodinka](https://mojerodinka.cz/en/)
+- [Family planner](https://mojerodinka.cz/en/family-planner/)
+- [Family calendar](https://mojerodinka.cz/en/family-calendar/)
+- [Shared shopping list](https://mojerodinka.cz/en/shared-shopping-list/)
+- [Family chores](https://mojerodinka.cz/en/family-chores/)
+- [Meal planning](https://mojerodinka.cz/en/meal-planning/)
+- [Family organizer app](https://mojerodinka.cz/en/family-organizer/)
