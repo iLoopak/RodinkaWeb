@@ -39,6 +39,39 @@ META_REQUIRED = {
     "twitter:title", "twitter:description", "twitter:image", "twitter:image:alt",
 }
 
+PRODUCT_BASE_ASSETS = {
+    "/assets/product/rodinka-today-family-overview.webp",
+    "/assets/product/rodinka-shared-family-calendar.webp",
+    "/assets/product/rodinka-family-planning.webp",
+    "/assets/product/rodinka-family-activities.webp",
+    "/assets/product/rodinka-shared-shopping-list.webp",
+    "/assets/product/rodinka-family-memories.webp",
+}
+
+PRODUCT_ASSETS = {
+    base if locale == "cs" else f"{base.removesuffix('.webp')}-{locale}.webp"
+    for base in PRODUCT_BASE_ASSETS
+    for locale in ("cs", "sk", "en")
+}
+
+PRIMARY_PROOF_BY_FAMILY = {
+    "home": "/assets/product/rodinka-today-family-overview.webp",
+    "planner": "/assets/product/rodinka-family-planning.webp",
+    "calendar": "/assets/product/rodinka-shared-family-calendar.webp",
+    "shopping": "/assets/product/rodinka-shared-shopping-list.webp",
+    "app": "/assets/product/rodinka-family-activities.webp",
+}
+
+
+def localized_product_path(base: str, locale: str) -> str:
+    if locale == "cs":
+        return base
+    return f"{base.removesuffix('.webp')}-{locale}.webp"
+
+
+def base_product_path(src: str) -> str:
+    return re.sub(r"-(?:sk|en)\.webp$", ".webp", src)
+
 
 def file_for_path(path: str) -> Path:
     return ROOT / "index.html" if path == "/" else ROOT / path.strip("/") / "index.html"
@@ -51,11 +84,13 @@ class PageParser(HTMLParser):
         self.title = ""
         self._in_title = False
         self.h1_count = 0
+        self.direct_answer_count = 0
         self.ids: list[str] = []
         self.meta: dict[str, str] = {}
         self.canonical = ""
         self.alternates: dict[str, str] = {}
         self.hrefs: list[tuple[str, bool]] = []
+        self.images: list[dict[str, str]] = []
         self.jsonld: list[str] = []
         self._in_jsonld = False
         self._json_buffer: list[str] = []
@@ -74,6 +109,8 @@ class PageParser(HTMLParser):
             self._in_title = True
         if tag == "h1":
             self.h1_count += 1
+        if tag == "section" and "direct-answer" in classes:
+            self.direct_answer_count += 1
         if attrs.get("id"):
             self.ids.append(attrs["id"])
         if tag == "meta":
@@ -88,6 +125,8 @@ class PageParser(HTMLParser):
                 self.alternates[attrs["hreflang"]] = attrs.get("href", "")
         if tag == "a" and attrs.get("href"):
             self.hrefs.append((attrs["href"], bool(self._switcher_depth)))
+        if tag == "img":
+            self.images.append(attrs)
         if tag == "script" and attrs.get("type") == "application/ld+json":
             self._in_jsonld = True
             self._json_buffer = []
@@ -132,6 +171,9 @@ def main() -> int:
     titles: list[str] = []
     descriptions: list[str] = []
     linked_pages: set[str] = set()
+    product_sources_by_variant: dict[tuple[str, str], set[str]] = {}
+    localized_alts: dict[tuple[str, str], set[str]] = {}
+    published_product_sources: set[str] = set()
 
     for path, (family, locale) in EXPECTED.items():
         file_path = file_for_path(path)
@@ -151,6 +193,8 @@ def main() -> int:
             errors.append(f"{path}: html lang is {parser.html_lang!r}, expected {locale!r}")
         if parser.h1_count != 1:
             errors.append(f"{path}: expected one H1, found {parser.h1_count}")
+        if parser.direct_answer_count != 1:
+            errors.append(f"{path}: expected one visible direct-answer section, found {parser.direct_answer_count}")
         duplicate_ids = [key for key, count in Counter(parser.ids).items() if count > 1]
         if duplicate_ids:
             errors.append(f"{path}: duplicate IDs: {duplicate_ids}")
@@ -199,6 +243,15 @@ def main() -> int:
                 webpages = [item for item in graph if item.get("@type") == "WebPage"]
                 if not webpages or webpages[0].get("inLanguage") != locale:
                     errors.append(f"{path}: JSON-LD WebPage language mismatch")
+                if family in PRIMARY_PROOF_BY_FAMILY:
+                    proof_path = localized_product_path(PRIMARY_PROOF_BY_FAMILY[family], locale)
+                    proof_url = f"{SITE}{proof_path}"
+                    associated = webpages[0].get("associatedMedia", {}) if webpages else {}
+                    image_objects = [item for item in graph if item.get("@type") == "ImageObject"]
+                    if associated.get("@id") != f"{proof_url}#product-image":
+                        errors.append(f"{path}: JSON-LD does not connect the visible primary product image")
+                    if not any(item.get("contentUrl") == proof_url for item in image_objects):
+                        errors.append(f"{path}: JSON-LD lacks the visible primary product ImageObject")
             except json.JSONDecodeError as exc:
                 errors.append(f"{path}: invalid JSON-LD: {exc}")
 
@@ -208,6 +261,30 @@ def main() -> int:
             errors.append(f"{path}: missing CTA link to the web application")
         if locale == "sk" and re.search(r"[řěů]", text, re.IGNORECASE):
             errors.append(f"{path}: likely Czech text leaked into Slovak HTML")
+
+        page_product_sources: set[str] = set()
+        for image in parser.images:
+            src = image.get("src", "")
+            if not src.startswith("/assets/product/"):
+                continue
+            base_src = base_product_path(src)
+            page_product_sources.add(base_src)
+            published_product_sources.add(src)
+            expected_src = localized_product_path(base_src, locale)
+            if src != expected_src:
+                errors.append(f"{path}: product screenshot {src} is not localized for {locale}")
+            alt = image.get("alt", "").strip()
+            if not alt:
+                errors.append(f"{path}: product screenshot {src} lacks descriptive alt text")
+            else:
+                localized_alts.setdefault((family, base_src), set()).add(alt)
+            if not image.get("width", "").isdigit() or not image.get("height", "").isdigit():
+                errors.append(f"{path}: product screenshot {src} lacks numeric dimensions")
+            if image.get("loading") != "lazy":
+                errors.append(f"{path}: below-the-fold product screenshot {src} should be lazy-loaded")
+            if not (ROOT / src.lstrip("/")).is_file():
+                errors.append(f"{path}: missing product screenshot file {src}")
+        product_sources_by_variant[(family, locale)] = page_product_sources
 
         for href, in_switcher in parser.hrefs:
             target = internal_path(href)
@@ -232,6 +309,20 @@ def main() -> int:
     if orphaned:
         errors.append(f"Pages not reached by normal HTML links: {sorted(orphaned)}")
 
+    for family in FAMILIES:
+        variants = [product_sources_by_variant.get((family, locale), set()) for locale in ("cs", "sk", "en")]
+        if not all(sources == variants[0] for sources in variants[1:]):
+            errors.append(f"{family}: localized pages do not publish the same product screenshots")
+    for (family, src), alt_values in localized_alts.items():
+        if len(alt_values) != 3:
+            errors.append(f"{family}: product screenshot {src} does not have distinct localized alt text")
+    if published_product_sources != PRODUCT_ASSETS:
+        errors.append(
+            "Published product screenshots differ from the maintained asset set: "
+            f"missing={sorted(PRODUCT_ASSETS - published_product_sources)}, "
+            f"unexpected={sorted(published_product_sources - PRODUCT_ASSETS)}"
+        )
+
     try:
         sitemap_root = ET.parse(ROOT / "sitemap.xml").getroot()
         namespace = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
@@ -251,7 +342,7 @@ def main() -> int:
     except (json.JSONDecodeError, OSError) as exc:
         errors.append(f"Invalid vercel.json: {exc}")
 
-    for asset in ("styles.css", "script.js", "favicon.svg", "favicon-96.png", "apple-touch-icon.png", "og-image.png", "og-image-sk.png", "og-image-en.png"):
+    for asset in ("styles.css", "script.js", "favicon.svg", "favicon-96.png", "apple-touch-icon.png", "og-image.png", "og-image-sk.png", "og-image-en.png", *sorted(path.lstrip("/") for path in PRODUCT_ASSETS)):
         if not (ROOT / asset).is_file():
             errors.append(f"Missing shared asset: {asset}")
 
