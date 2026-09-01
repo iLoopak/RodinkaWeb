@@ -17,7 +17,7 @@ APP_URL = "https://app.mojerodinka.cz"
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260901"
+ASSET_VERSION = "20260901b"
 
 
 LOCALES = {
@@ -105,6 +105,198 @@ RELATED = {
     "chores": ("calendar", "planner", "app"),
     "meals": ("shopping", "calendar", "planner"),
     "app": ("planner", "calendar", "shopping"),
+}
+
+
+PRODUCT_IMAGE_WIDTH = 900
+PRODUCT_IMAGE_HEIGHT = 1951
+
+DIRECT_ANSWERS = {
+    "cs": {
+        "home": (
+            "Co je Rodinka a jak pomáhá s organizací rodiny?",
+            "Rodinka je rodinný plánovač, ve kterém má domácnost společný kalendář, úkoly, nákupní seznam a plán jídel. Rodiče i další členové rodiny pracují se stejným aktuálním přehledem místo hledání informací v několika chatech a poznámkách. Začít lze jednou oblastí a další přidat, až je rodina potřebuje.",
+        ),
+        "planner": (
+            "Jak funguje rodinný plánovač?",
+            "Rodinný plánovač soustředí společné termíny, povinnosti a praktické seznamy do jednoho rodinného prostoru. V Rodince tak rychle zjistíte, kdo dnes vyzvedává dítě, co je potřeba doma zařídit a co koupit. Každý vidí stejnou aktuální informaci a organizování nemusí ležet jen na jednom člověku.",
+        ),
+        "calendar": (
+            "Jak sdílet rodinný kalendář mezi rodiči?",
+            "V Rodince používají rodiče jeden společný rodinný prostor a zapisují události do stejného kalendáře. U kroužku, návštěvy nebo výletu je pak na jednom místě termín, účastníci i domluvený doprovod. Změnu uvidí oba bez přepisování mezi dvěma kalendáři.",
+        ),
+        "shopping": (
+            "Jak mít společný nákupní seznam pro celou domácnost?",
+            "V Rodince má domácnost jeden sdílený nákupní seznam, do kterého mohou členové průběžně přidávat položky. V obchodě se nakoupené věci odškrtávají ve stejném seznamu, takže všichni vidí aktuální stav. Není potřeba posílat novou verzi seznamu před každým nákupem.",
+        ),
+        "chores": (
+            "Jak rozdělit domácí úkoly mezi členy rodiny?",
+            "Nejdřív sepište konkrétní povinnosti a u každé určete, kdo ji má zařídit a do kdy. Rodinka udržuje toto rozdělení viditelné pro domácnost, takže úkoly nezůstávají jen v hlavě jednoho rodiče. Dětem lze vybírat jednoduché povinnosti odpovídající jejich věku.",
+        ),
+        "meals": (
+            "Jak plánovat jídla na celý týden pro rodinu?",
+            "Začněte rodinným programem a ke dnům přiřaďte jídla podle času, který bude na přípravu. V Rodince zůstane týdenní plán jídel vedle ostatních rodinných plánů a chybějící suroviny můžete přidat do společného nákupního seznamu. Jeden volnější den pomůže využít zbytky nebo reagovat na změnu programu.",
+        ),
+        "app": (
+            "Jaká aplikace pomůže s organizací rodiny?",
+            "Praktická aplikace pro rodinu má na jednom místě odpovědi na běžné otázky: kdo co dnes má, kdo něco zařídí a co je potřeba koupit. Rodinka spojuje rodinný kalendář, úkoly, nákupní seznam a plánování jídel ve společném prostoru. Funguje v prohlížeči na mobilu i počítači, takže není nutná instalace.",
+        ),
+    },
+    "sk": {
+        "home": (
+            "Čo je Rodinka a ako pomáha s organizáciou rodiny?",
+            "Rodinka je rodinný plánovač, v ktorom má domácnosť spoločný kalendár, úlohy, nákupný zoznam a plán jedál. Rodičia aj ďalší členovia rodiny pracujú s rovnakým aktuálnym prehľadom namiesto hľadania informácií vo viacerých chatoch a poznámkach. Začať môžete jednou oblasťou a ďalšie pridať, keď ich rodina potrebuje.",
+        ),
+        "planner": (
+            "Ako funguje rodinný plánovač?",
+            "Rodinný plánovač sústreďuje spoločné termíny, povinnosti a praktické zoznamy do jedného rodinného priestoru. V Rodinke tak rýchlo zistíte, kto dnes vyzdvihne dieťa, čo treba doma zariadiť a čo kúpiť. Každý vidí rovnakú aktuálnu informáciu a organizovanie nemusí zostať iba na jednom človeku.",
+        ),
+        "calendar": (
+            "Ako zdieľať rodinný kalendár medzi rodičmi?",
+            "V Rodinke rodičia používajú jeden spoločný rodinný priestor a udalosti zapisujú do rovnakého kalendára. Pri krúžku, návšteve alebo výlete je potom na jednom mieste termín, účastníci aj dohodnutý sprievod. Zmenu uvidia obaja bez prepisovania medzi dvoma kalendármi.",
+        ),
+        "shopping": (
+            "Ako mať spoločný nákupný zoznam pre celú domácnosť?",
+            "V Rodinke má domácnosť jeden zdieľaný nákupný zoznam, do ktorého môžu členovia priebežne pridávať položky. V obchode sa nakúpené veci odškrtávajú v rovnakom zozname, takže všetci vidia aktuálny stav. Pred každým nákupom netreba posielať novú verziu zoznamu.",
+        ),
+        "chores": (
+            "Ako rozdeliť domáce úlohy medzi členov rodiny?",
+            "Najprv spíšte konkrétne povinnosti a pri každej určte, kto ju má zariadiť a dokedy. Rodinka udržiava toto rozdelenie viditeľné pre domácnosť, takže úlohy nezostanú iba v hlave jedného rodiča. Deťom môžete vybrať jednoduché povinnosti primerané ich veku.",
+        ),
+        "meals": (
+            "Ako plánovať jedlá na celý týždeň pre rodinu?",
+            "Začnite rodinným programom a ku dňom priraďte jedlá podľa času, ktorý bude na prípravu. V Rodinke zostane týždenný plán jedál vedľa ostatných rodinných plánov a chýbajúce suroviny môžete pridať do spoločného nákupného zoznamu. Jeden voľnejší deň pomôže využiť zvyšky alebo reagovať na zmenu programu.",
+        ),
+        "app": (
+            "Aká aplikácia pomôže s organizáciou rodiny?",
+            "Praktická aplikácia pre rodinu má na jednom mieste odpovede na bežné otázky: kto čo dnes má, kto niečo zariadi a čo treba kúpiť. Rodinka spája rodinný kalendár, úlohy, nákupný zoznam a plánovanie jedál v spoločnom priestore. Funguje v prehliadači v mobile aj počítači, takže inštalácia nie je potrebná.",
+        ),
+    },
+    "en": {
+        "home": (
+            "What is Rodinka, and how does it help organize family life?",
+            "Rodinka is a family organizer with a shared calendar, chores, shopping list and meal plan for the household. Parents and other family members work from the same current overview instead of searching across several chats and notes. A family can start with one area and add the rest when it becomes useful.",
+        ),
+        "planner": (
+            "How does a family planner work?",
+            "A family planner keeps shared dates, responsibilities and practical lists in one household space. In Rodinka, you can quickly see who is picking up today, what needs doing at home and what the family needs to buy. Everyone works from the same current information, so the organizing does not have to sit with one person.",
+        ),
+        "calendar": (
+            "How can parents share a family calendar?",
+            "Parents use one shared family space in Rodinka and add events to the same calendar. An activity, appointment or trip can keep the date, participants and agreed transport together. Both parents see the change without copying it between separate calendars.",
+        ),
+        "shopping": (
+            "How do you keep a shared shopping list for the whole household?",
+            "Rodinka gives the household one shared shopping list that family members can update as things run out. Items are checked off in that same list while somebody shops, so everyone sees the current state. There is no need to send a new version before every grocery trip.",
+        ),
+        "chores": (
+            "How can you divide household chores between family members?",
+            "Start with specific responsibilities and give each one an owner and a realistic due date. Rodinka keeps that agreement visible to the household, so the list does not live only in one parent’s head. Children can take on simple chores that suit their age.",
+        ),
+        "meals": (
+            "How do you plan a week of meals for a family?",
+            "Start with the family schedule and match meals to the time available on each day. Rodinka keeps the weekly meal plan beside the rest of the family plan, and missing ingredients can go onto the shared shopping list. Leaving one flexible evening makes room for leftovers or an unexpected change.",
+        ),
+        "app": (
+            "What kind of app helps organize family life?",
+            "A useful family organizer answers everyday questions in one place: what is happening today, who is handling something and what needs to be bought. Rodinka combines a family calendar, chores, a shopping list and meal planning in one shared space. It works in a browser on phones and computers, so installation is optional.",
+        ),
+    },
+}
+
+
+PRODUCT_PROOFS = {
+    "home": {
+        "src": "/assets/product/rodinka-today-family-overview.webp",
+        "alt": {
+            "cs": "Rodinka na telefonu se souhrnem dnešního rodinného programu, úkolů a upozornění",
+            "sk": "Rodinka v telefóne so súhrnom dnešného rodinného programu, úloh a upozornení",
+            "en": "Rodinka on a phone showing today’s family schedule, chores and alerts",
+        },
+        "caption": {
+            "cs": "Na jedné obrazovce vidíte dnešní program, věci vyžadující pozornost i nejbližší rodinné události.",
+            "sk": "Na jednej obrazovke vidíte dnešný program, veci vyžadujúce pozornosť aj najbližšie rodinné udalosti.",
+            "en": "One screen shows today’s schedule, items that need attention and the family’s next events.",
+        },
+    },
+    "planner": {
+        "src": "/assets/product/rodinka-family-planning.webp",
+        "alt": {
+            "cs": "Obrazovka Plánovat v Rodince s domácími úkoly, aktivitami, jídlem, dokumenty a nákupním seznamem",
+            "sk": "Obrazovka Plánovať v Rodinke s domácimi úlohami, aktivitami, jedlom, dokumentmi a nákupným zoznamom",
+            "en": "Rodinka planning screen with household chores, activities, meals, documents and a shopping list",
+        },
+        "caption": {
+            "cs": "Přehled Plánovat spojuje oblasti, které rodina řeší opakovaně, a u každé ukazuje aktuální stav.",
+            "sk": "Prehľad Plánovať spája oblasti, ktoré rodina rieši opakovane, a pri každej ukazuje aktuálny stav.",
+            "en": "The planning overview brings recurring parts of family life together and shows the current state of each one.",
+        },
+    },
+    "calendar": {
+        "src": "/assets/product/rodinka-shared-family-calendar.webp",
+        "alt": {
+            "cs": "Ukázka sdíleného rodinného kalendáře v Rodince s kroužky, výletem a účastníky",
+            "sk": "Ukážka zdieľaného rodinného kalendára v Rodinke s krúžkami, výletom a účastníkmi",
+            "en": "Rodinka shared family calendar showing activities, a family trip and participants",
+        },
+        "caption": {
+            "cs": "Týdenní rodinný kalendář ukazuje společné termíny i to, koho se jednotlivé události týkají.",
+            "sk": "Týždenný rodinný kalendár ukazuje spoločné termíny aj to, koho sa jednotlivé udalosti týkajú.",
+            "en": "The weekly family calendar shows shared dates and who is involved in each event.",
+        },
+    },
+    "shopping": {
+        "src": "/assets/product/rodinka-shared-shopping-list.webp",
+        "alt": {
+            "cs": "Sdílený nákupní seznam v Rodince s položkami rozdělenými do kategorií",
+            "sk": "Zdieľaný nákupný zoznam v Rodinke s položkami rozdelenými do kategórií",
+            "en": "Rodinka shared shopping list with grocery items organized into categories",
+        },
+        "caption": {
+            "cs": "Seznam je synchronizovaný, rozdělený do kategorií a u položek je vidět, kdo je přidal.",
+            "sk": "Zoznam je synchronizovaný, rozdelený do kategórií a pri položkách vidno, kto ich pridal.",
+            "en": "The list stays synchronized, groups items by category and shows who added each one.",
+        },
+    },
+    "app": {
+        "src": "/assets/product/rodinka-family-activities.webp",
+        "alt": {
+            "cs": "Rodinka na telefonu s přehledem nadcházejících kroužků, rodinného výletu a účastníků",
+            "sk": "Rodinka v telefóne s prehľadom nadchádzajúcich krúžkov, rodinného výletu a účastníkov",
+            "en": "Rodinka on a phone showing upcoming activities, a family trip and participants",
+        },
+        "caption": {
+            "cs": "Aktivity a události dávají rodičům společný přehled o kroužcích, výletech, účasti i termínech.",
+            "sk": "Aktivity a udalosti dávajú rodičom spoločný prehľad o krúžkoch, výletoch, účasti aj termínoch.",
+            "en": "Activities and events give parents one view of clubs, trips, participants and dates.",
+        },
+    },
+}
+
+
+HOME_MEMORY_STORY = {
+    "src": "/assets/product/rodinka-family-memories.webp",
+    "cs": {
+        "kicker": "NEJEN POVINNOSTI",
+        "title": "Rodinné poklady uchovají i malé příběhy",
+        "text": "Rodinka není jen přehled toho, co je potřeba zařídit. Do rodinných pokladů můžete uložit drobnosti a vzpomínky, ke kterým se chcete společně vracet.",
+        "alt": "Dva telefony s funkcí Rodinné poklady v Rodince a uloženými rodinnými vzpomínkami",
+        "caption": "Rodinné poklady propojují fotografii nebo předmět s názvem, datem a členem rodiny.",
+    },
+    "sk": {
+        "kicker": "NIELEN POVINNOSTI",
+        "title": "Rodinné poklady uchovajú aj malé príbehy",
+        "text": "Rodinka nie je iba prehľad toho, čo treba zariadiť. Do rodinných pokladov môžete uložiť drobnosti a spomienky, ku ktorým sa chcete spolu vracať.",
+        "alt": "Dva telefóny s funkciou Rodinné poklady v Rodinke a uloženými rodinnými spomienkami",
+        "caption": "Rodinné poklady spájajú fotografiu alebo predmet s názvom, dátumom a členom rodiny.",
+    },
+    "en": {
+        "kicker": "MORE THAN ADMIN",
+        "title": "Family treasures keep the small stories too",
+        "text": "Rodinka is not only a view of what needs doing. Family treasures can hold the small objects and memories your household wants to return to together.",
+        "alt": "Two phones showing Rodinka family treasures and saved family memories",
+        "caption": "Family treasures connect a photo or object with its name, date and family member.",
+    },
 }
 
 
@@ -555,6 +747,12 @@ def og_image_url(locale: str) -> str:
     return canonical(OG_IMAGES[locale])
 
 
+def localized_product_src(base_src: str, locale: str) -> str:
+    if locale == "cs":
+        return base_src
+    return f"{base_src.removesuffix('.webp')}-{locale}.webp"
+
+
 def output_path(path: str) -> Path:
     if path == "/":
         return ROOT / "index.html"
@@ -613,6 +811,25 @@ def schema(page_key: str, locale: str, name: str, description: str) -> str:
             },
         ],
     }
+    proof = PRODUCT_PROOFS.get(page_key)
+    if proof:
+        proof_url = canonical(localized_product_src(proof["src"], locale))
+        webpage = next(item for item in graph["@graph"] if item.get("@type") == "WebPage")
+        webpage["associatedMedia"] = {"@id": f"{proof_url}#product-image"}
+        graph["@graph"].append(
+            {
+                "@type": "ImageObject",
+                "@id": f"{proof_url}#product-image",
+                "url": proof_url,
+                "contentUrl": proof_url,
+                "encodingFormat": "image/webp",
+                "width": PRODUCT_IMAGE_WIDTH,
+                "height": PRODUCT_IMAGE_HEIGHT,
+                "name": proof["alt"][locale],
+                "caption": proof["caption"][locale],
+                "inLanguage": LOCALES[locale]["lang"],
+            }
+        )
     return json.dumps(graph, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
@@ -699,6 +916,46 @@ def site_footer(locale: str) -> str:
     </footer>'''
 
 
+def product_figure(page_key: str, locale: str) -> str:
+    proof = PRODUCT_PROOFS[page_key]
+    src = localized_product_src(proof["src"], locale)
+    return f'''<figure class="proof-figure">
+          <img class="proof-image" src="{src}" width="{PRODUCT_IMAGE_WIDTH}" height="{PRODUCT_IMAGE_HEIGHT}" loading="lazy" decoding="async" alt="{esc(proof["alt"][locale])}" />
+          <figcaption>{esc(proof["caption"][locale])}</figcaption>
+        </figure>'''
+
+
+def render_direct_answer(page_key: str, locale: str) -> str:
+    labels = {"cs": "STRUČNÁ ODPOVĚĎ", "sk": "STRUČNÁ ODPOVEĎ", "en": "DIRECT ANSWER"}
+    question, answer = DIRECT_ANSWERS[locale][page_key]
+    figure = product_figure(page_key, locale) if page_key in PRODUCT_PROOFS else ""
+    modifier = "" if figure else " proof-section--text"
+    figure_markup = f"\n        {figure}" if figure else ""
+    return f'''      <section class="proof-section direct-answer{modifier}" aria-labelledby="direct-answer-{page_key}">
+        <div class="proof-copy">
+          <p class="section-kicker">{labels[locale]}</p>
+          <h2 id="direct-answer-{page_key}">{esc(question)}</h2>
+          <p>{esc(answer)}</p>
+        </div>{figure_markup}
+      </section>'''
+
+
+def render_home_memory_story(locale: str) -> str:
+    story = HOME_MEMORY_STORY[locale]
+    src = localized_product_src(HOME_MEMORY_STORY["src"], locale)
+    return f'''      <section class="proof-section product-story proof-section--reverse" aria-labelledby="memory-story-title">
+        <div class="proof-copy">
+          <p class="section-kicker">{esc(story["kicker"])}</p>
+          <h2 id="memory-story-title">{esc(story["title"])}</h2>
+          <p>{esc(story["text"])}</p>
+        </div>
+        <figure class="proof-figure">
+          <img class="proof-image" src="{src}" width="{PRODUCT_IMAGE_WIDTH}" height="{PRODUCT_IMAGE_HEIGHT}" loading="lazy" decoding="async" alt="{esc(story["alt"])}" />
+          <figcaption>{esc(story["caption"])}</figcaption>
+        </figure>
+      </section>'''
+
+
 def render_home(locale: str) -> str:
     data = HOME[locale]
     cfg = LOCALES[locale]
@@ -712,6 +969,8 @@ def render_home(locale: str) -> str:
     agenda = "".join(f'<div class="agenda-row"><span class="agenda-time">{esc(time)}</span><i class="dot {("coral", "blue", "yellow")[i]}"></i><div><strong>{esc(title)}</strong><small>{esc(note)}</small></div></div>' for i, (time, title, note) in enumerate(data["agenda"]))
     journey = "".join(f'<div><b>{esc(title)}</b><small>{esc(text)}</small></div>' for title, text in data["journey"])
     proof = "".join(f'<span>{esc(item)}</span>' for item in data["proof"])
+    direct_answer = render_direct_answer("home", locale)
+    memory_story = render_home_memory_story(locale)
     return f'''<!doctype html>
 <html lang="{locale}">
 {head("home", locale, data)}
@@ -733,8 +992,10 @@ def render_home(locale: str) -> str:
           <div class="phone-shell"><div class="phone-top"><div class="mini-brand"><span class="mini-mark">●</span> Rodinka</div><div class="member-dots"><span>M</span><span>K</span><span>+2</span></div></div><p class="phone-date">{esc(data["phone_date"])}</p><p class="phone-greeting">{esc(data["phone_greeting"])}</p><div class="today-card"><div class="card-title"><strong>{esc(data["today"])}</strong><span>{esc(data["items"])}</span></div>{agenda}</div><div class="quick-grid"><div><span class="quick-icon mint">✓</span><small>{esc(data["quick"][0][0])}</small><strong>{esc(data["quick"][0][1])}</strong></div><div><span class="quick-icon peach">▤</span><small>{esc(data["quick"][1][0])}</small><strong>{esc(data["quick"][1][1])}</strong></div></div></div>
         </div>
       </section>
+{direct_answer}
       <section class="intro" id="jak-to-funguje"><p class="section-kicker reveal">{esc(data["intro_kicker"])}</p><h2 class="section-title reveal">{esc(data["intro_title"])}</h2><p class="section-lead reveal">{esc(data["intro_lead"])}</p><div class="steps">{steps}</div><aside class="activation-note reveal"><span aria-hidden="true">💡</span><div><h3>{esc(data["note_title"])}</h3><p>{esc(data["note"])}</p></div></aside></section>
       <section class="features" id="funkce"><div class="feature-heading reveal"><p class="section-kicker">{esc(data["features_kicker"])}</p><h2 class="section-title">{esc(data["features_title"])}</h2><p class="feature-sublead">{esc(data["features_lead"])}</p></div><div class="feature-grid">{feature_cards}</div></section>
+{memory_story}
       <section class="topic-directory"><p class="section-kicker reveal">{esc(data["directory_kicker"])}</p><h2 class="section-title reveal">{esc(data["directory_title"])}</h2><p class="section-lead reveal">{esc(data["directory_lead"])}</p><div class="topic-grid">{directory_cards}</div></section>
       <section class="family-section"><figure class="family-quote reveal"><span class="quote-mark" aria-hidden="true">“</span><blockquote><p>{esc(data["quote"])}</p></blockquote><figcaption>{esc(data["quote_by"])}</figcaption></figure></section>
       <section class="cta-section" id="vyzkouset"><div class="cta-card reveal"><div class="cta-doodle" aria-hidden="true">✦</div><p class="section-kicker">{esc(data["cta_kicker"])}</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="cta-secondary" href="{APP_URL}">{esc(data["login"])}</a></div><div class="mini-journey">{journey}</div><div class="install-options"><h3>{esc(data["install_title"])}</h3><p>{esc(data["install_text"])}</p><a class="store-link" href="https://get.microsoft.com/installer/download/9nbxf0lqbmbj?referrer=appbadge">{esc(data["store"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(data["fine_print"])}</small></div></section>
@@ -753,6 +1014,7 @@ def render_topic(page_key: str, locale: str) -> str:
     steps = "".join(f'<li><span>{i}</span><div><h3>{esc(title)}</h3><p>{esc(text)}</p></div></li>' for i, (title, text) in enumerate(data["steps"], 1))
     answers = "".join(f'<article class="answer"><h3>{esc(question)}</h3><p>{esc(answer)}</p></article>' for question, answer in data["answers"])
     related = "".join(f'<article class="related-card"><h3><a href="{PATHS[key][locale]}">{esc(TOPICS[locale][key]["h1"])}</a></h3><p>{esc(TOPICS[locale][key]["card"])}</p></article>' for key in RELATED[page_key])
+    direct_answer = render_direct_answer(page_key, locale)
     return f'''<!doctype html>
 <html lang="{locale}">
 {head(page_key, locale, data)}
@@ -761,6 +1023,7 @@ def render_topic(page_key: str, locale: str) -> str:
     <main>
       <article class="topic-page">
         <header class="topic-hero"><nav class="breadcrumbs" aria-label="{esc(cfg["breadcrumb"])}"><a href="{cfg["home_path"]}">{esc(cfg["home"])}</a><span aria-hidden="true">/</span><span aria-current="page">{esc(data["eyebrow"].title())}</span></nav><p class="section-kicker">{esc(data["eyebrow"])}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions"><a class="button button-primary" href="{APP_URL}">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-pomaha">{esc(data["help_title"])} <span aria-hidden="true">↓</span></a></div></header>
+{direct_answer}
         <section class="content-section problem-section"><div class="section-copy"><p class="section-kicker">{esc(data["eyebrow"])}</p><h2>{esc(data["problem_title"])}</h2>{''.join(f'<p>{esc(paragraph)}</p>' for paragraph in data["problem"])}</div><div class="scenario-grid">{scenarios}</div></section>
         <section class="content-section help-section" id="jak-pomaha"><div class="section-copy"><p class="section-kicker">RODINKA</p><h2>{esc(data["help_title"])}</h2><p>{esc(data["help_intro"])}</p></div><ol class="help-steps">{steps}</ol></section>
         <section class="content-section answers-section"><div class="section-copy"><h2>{esc(data["answers_title"])}</h2></div><div class="answers-list">{answers}</div></section>
