@@ -17,7 +17,9 @@ APP_URL = "https://app.mojerodinka.cz"
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260901b"
+ASSET_VERSION = "20260904a"
+
+TOPIC_KEYS = ("planner", "calendar", "shopping", "chores", "meals", "baby", "app")
 
 
 LOCALES = {
@@ -95,16 +97,18 @@ PATHS = {
     "chores": {"cs": "/ukoly-pro-rodinu/", "sk": "/sk/ulohy-pre-rodinu/", "en": "/en/family-chores/"},
     "meals": {"cs": "/planovani-jidla/", "sk": "/sk/planovanie-jedal/", "en": "/en/meal-planning/"},
     "app": {"cs": "/aplikace-pro-rodinu/", "sk": "/sk/aplikacia-pre-rodinu/", "en": "/en/family-organizer/"},
+    "baby": {"cs": "/priprava-na-miminko/", "sk": "/sk/priprava-na-babatko/", "en": "/en/preparing-for-a-baby/"},
 }
 
 
 RELATED = {
-    "planner": ("calendar", "chores", "app"),
+    "planner": ("calendar", "baby", "app"),
     "calendar": ("planner", "chores", "meals"),
     "shopping": ("meals", "planner", "app"),
     "chores": ("calendar", "planner", "app"),
     "meals": ("shopping", "calendar", "planner"),
-    "app": ("planner", "calendar", "shopping"),
+    "app": ("planner", "baby", "calendar"),
+    "baby": ("planner", "calendar", "app"),
 }
 
 
@@ -141,6 +145,10 @@ DIRECT_ANSWERS = {
             "Jaká aplikace pomůže s organizací rodiny?",
             "Praktická aplikace pro rodinu má na jednom místě odpovědi na běžné otázky: kdo co dnes má, kdo něco zařídí a co je potřeba koupit. Rodinka spojuje rodinný kalendář, úkoly, nákupní seznam a plánování jídel ve společném prostoru. Funguje v prohlížeči na mobilu i počítači, takže není nutná instalace.",
         ),
+        "baby": (
+            "Jak se připravit na miminko společně s partnerem?",
+            "Rodinka spojuje orientační cestu po týdnech, praktické přípravy a společný výběr jména v jednom rodinném prostoru. Oba rodiče tak vidí, co už mají připravené, co ještě chtějí zařídit a která jména zvažují. Nejde o zdravotní těhotenský tracker, ale o společnou organizaci před narozením dítěte.",
+        ),
     },
     "sk": {
         "home": (
@@ -171,6 +179,10 @@ DIRECT_ANSWERS = {
             "Aká aplikácia pomôže s organizáciou rodiny?",
             "Praktická aplikácia pre rodinu má na jednom mieste odpovede na bežné otázky: kto čo dnes má, kto niečo zariadi a čo treba kúpiť. Rodinka spája rodinný kalendár, úlohy, nákupný zoznam a plánovanie jedál v spoločnom priestore. Funguje v prehliadači v mobile aj počítači, takže inštalácia nie je potrebná.",
         ),
+        "baby": (
+            "Ako sa pripraviť na bábätko spoločne s partnerom?",
+            "Rodinka spája orientačnú cestu po týždňoch, praktické prípravy a spoločný výber mena v jednom rodinnom priestore. Obaja rodičia tak vidia, čo už majú pripravené, čo ešte chcú zariadiť a ktoré mená zvažujú. Nejde o zdravotný tehotenský tracker, ale o spoločnú organizáciu pred narodením dieťaťa.",
+        ),
     },
     "en": {
         "home": (
@@ -200,6 +212,10 @@ DIRECT_ANSWERS = {
         "app": (
             "What kind of app helps organize family life?",
             "A useful family organizer answers everyday questions in one place: what is happening today, who is handling something and what needs to be bought. Rodinka combines a family calendar, chores, a shopping list and meal planning in one shared space. It works in a browser on phones and computers, so installation is optional.",
+        ),
+        "baby": (
+            "How can partners prepare for a baby together?",
+            "Rodinka brings a light week-by-week journey, practical preparations and choosing a name into one shared family space. Both parents can see what is ready, what they still want to arrange and which names they are considering. It is not a medical pregnancy tracker; it helps the family organize together before the baby arrives.",
         ),
     },
 }
@@ -271,6 +287,19 @@ PRODUCT_PROOFS = {
             "en": "Activities and events give parents one view of clubs, trips, participants and dates.",
         },
     },
+    "baby": {
+        "src": "/assets/product/rodinka-expected-child.webp",
+        "alt": {
+            "cs": "Dva telefony s funkcí Miminko na cestě v Rodince, přehledem příprav a společným výběrem jména",
+            "sk": "Dva telefóny s funkciou Bábätko na ceste v Rodinke, prehľadom príprav a spoločným výberom mena",
+            "en": "Two phones showing Rodinka’s expected-child journey, preparation checklist and shared name choices",
+        },
+        "caption": {
+            "cs": "Rodinka spojuje orientační cestu po týdnech, praktické přípravy a společný výběr jména.",
+            "sk": "Rodinka spája orientačnú cestu po týždňoch, praktické prípravy a spoločný výber mena.",
+            "en": "Rodinka brings a light week-by-week journey, practical preparations and choosing a name together.",
+        },
+    },
 }
 
 
@@ -296,6 +325,35 @@ HOME_MEMORY_STORY = {
         "text": "Rodinka is not only a view of what needs doing. Family treasures can hold the small objects and memories your household wants to return to together.",
         "alt": "Two phones showing Rodinka family treasures and saved family memories",
         "caption": "Family treasures connect a photo or object with its name, date and family member.",
+    },
+}
+
+
+HOME_BABY_STORY = {
+    "src": "/assets/product/rodinka-expected-child.webp",
+    "cs": {
+        "kicker": "NOVÁ KAPITOLA RODINY",
+        "title": "Čekáte miminko? Připravíme se spolu.",
+        "text": "Od orientační cesty po týdnech přes praktické přípravy až po jména, která se vám líbí. Rodinka pomůže oběma rodičům držet přípravy pohromadě.",
+        "link": "Příprava na miminko",
+        "alt": "Dva telefony s funkcí Miminko na cestě v Rodince, cestou po týdnech, přípravami a výběrem jména",
+        "caption": "Miminko na cestě dává dospělým společný přehled příprav před příchodem nového člena rodiny.",
+    },
+    "sk": {
+        "kicker": "NOVÁ KAPITOLA RODINY",
+        "title": "Čakáte bábätko? Pripravíme sa spolu.",
+        "text": "Od orientačnej cesty po týždňoch cez praktické prípravy až po mená, ktoré sa vám páčia. Rodinka pomôže obom rodičom udržať prípravy pokope.",
+        "link": "Príprava na bábätko",
+        "alt": "Dva telefóny s funkciou Bábätko na ceste v Rodinke, cestou po týždňoch, prípravami a výberom mena",
+        "caption": "Bábätko na ceste dáva dospelým spoločný prehľad príprav pred príchodom nového člena rodiny.",
+    },
+    "en": {
+        "kicker": "A NEW CHAPTER FOR YOUR FAMILY",
+        "title": "Expecting a baby? Get ready together.",
+        "text": "From a light week-by-week journey to practical preparations and names you both like, Rodinka helps parents keep the next chapter in one shared place.",
+        "link": "Preparing for a baby",
+        "alt": "Two phones showing Rodinka’s expected-child journey, practical preparations and shared name choices",
+        "caption": "Expected Child gives adults one shared view of family preparations before the new arrival.",
     },
 }
 
@@ -582,6 +640,27 @@ TOPICS = {
             "cta_title": "Dejte rodinným informacím jedno známé místo.",
             "cta_text": "Rodinka funguje rovnou v prohlížeči. Vytvořte rodinu a začněte první praktickou věcí.",
         },
+        "baby": {
+            "title": "Příprava na miminko společně | Rodinka",
+            "description": "Připravujte se na miminko společně. Orientační cesta po týdnech, praktické přípravy a výběr jména v rodinném plánovači Rodinka.",
+            "og_title": "Čekáte miminko? Připravíme se spolu.",
+            "og_description": "Cesta po týdnech, praktické přípravy i společný výběr jména v jednom rodinném prostoru.",
+            "og_alt": "Miminko na cestě v Rodince s přehledem příprav a výběrem jména",
+            "eyebrow": "MIMINKO NA CESTĚ",
+            "h1": "Čekáte miminko? Připravíme se spolu.",
+            "lead": "Cesta po týdnech, praktické přípravy i společný výběr jména. Rodinka pomůže držet věci pohromadě ještě předtím, než se nový člen rodiny narodí.",
+            "problem_title": "Přípravy snadno skončí v poznámkách, chatu a několika seznamech",
+            "problem": ("Něco je v poznámkách, nákupy na jiném seznamu a důležitou drobnost si pamatuje jen jeden rodič. Kandidátní jména mezitím mizí mezi běžnými zprávami a není jasné, co už je připravené.", "Společný prostor nepřidává další povinný plán. Dává oběma rodičům klidné místo pro věci, které chtějí před příchodem miminka řešit společně a vlastním tempem."),
+            "scenarios": (("Seznamy na několika místech", "Výbava na cesty, spaní nebo první dny nemusí být rozdělená mezi papír, poznámky a chat."), ("Jména v chatu", "Nápady na jména zůstávají pohromadě s preferencemi zapojených dospělých."), ("Co už je připravené?", "Oba rodiče vidí stejný přehled a mohou navázat tam, kde ten druhý skončil.")),
+            "help_title": "Jak Rodinka pomůže s přípravou na miminko",
+            "help_intro": "Miminko na cestě je organizační část Rodinky, ne zdravotní aplikace. Nabízí lehkou orientaci a praktický prostor pro společné přípravy.",
+            "steps": (("Cesta po týdnech", "Orientační týden, jednoduchý průběh a vybrané momenty pomohou zasadit přípravy do času. Nejde o medicínské měření ani hodnocení zdravotního stavu."), ("Přípravy podle témat", "Inspiraci najdete v oblastech na cesty, spaní, krmení a kojení, hygiena a přebalování, oblečení, doma, porodnice a první dny nebo administrativa. Co nepotřebujete, můžete nechat být."), ("Jména, která řešíte spolu", "Zapisujte si kandidátní jména, označte favority a sdílejte preference jako líbí se mi, možná nebo spíš ne. Nejde o soutěž ani skóre.")),
+            "answers_title": "Časté otázky k přípravě na miminko",
+            "answers": (("Je Rodinka těhotenská aplikace?", "Ne. Rodinka nenahrazuje zdravotní aplikaci ani doporučení lékaře. Pomáhá rodině s orientační cestou a praktickou organizací příprav."), ("Musíme použít celý checklist?", "Nemusíte. Seznam je inspirace a přehled, ne povinný nákupní plán. Každá rodina si ponechá jen to, co odpovídá jejím potřebám."), ("Můžeme společně vybírat jméno?", "Ano. Můžete si vést kandidátní jména, označit favority a u každého zachytit preference zapojených dospělých bez vyhlašování vítěze."), ("Uvidí informace automaticky děti?", "Ne. Část Miminko na cestě je určená dospělým v rodině, takže přípravy a citlivé informace zůstávají v jejich společném prostoru.")),
+            "card": "Cesta po týdnech, praktické přípravy a společný výběr jména na jednom místě.",
+            "cta_title": "Připravujte se na nového člena rodiny společně.",
+            "cta_text": "Otevřete Rodinku, přidejte Miminko na cestě a začněte tím, co chcete mít připravené jako první.",
+        },
     },
     "sk": {},
     "en": {},
@@ -662,6 +741,27 @@ TOPICS["sk"] = {
         "answers_title": "Ako vyberať aplikáciu pre rodinu", "answers": (("Čo by mala vedieť aplikácia pre rodinu?", "Mala by pokrývať najčastejšie spoločné situácie, fungovať rýchlo v mobile aj počítači a dovoliť viacerým členom pracovať s rovnakými aktuálnymi informáciami."), ("Nahradí Rodinka rodinný chat?", "Nie. Chat je výborný na rozhovor. Rodinka je prehľad termínov, úloh a zoznamov, ktoré chcete nájsť aj neskôr bez prechádzania histórie správ."), ("Musí rodina používať všetky funkcie?", "Nemusí. Začnite oblasťou, ktorá dnes spôsobuje najviac otázok. Ďalšie časti pridajte až vtedy, keď domácnosti naozaj pomôžu.")),
         "card": "Kalendár, povinnosti, nákupný zoznam a jedlá v jednom rodinnom priestore.", "cta_title": "Dajte rodinným informáciám jedno známe miesto.", "cta_text": "Rodinka funguje priamo v prehliadači. Vytvorte rodinu a začnite prvou praktickou vecou.",
     },
+    "baby": {
+        "title": "Príprava na bábätko spoločne | Rodinka",
+        "description": "Pripravujte sa na bábätko spoločne. Orientačná cesta po týždňoch, praktické prípravy a výber mena v rodinnom plánovači Rodinka.",
+        "og_title": "Čakáte bábätko? Pripravíme sa spolu.",
+        "og_description": "Cesta po týždňoch, praktické prípravy aj spoločný výber mena v jednom rodinnom priestore.",
+        "og_alt": "Bábätko na ceste v Rodinke s prehľadom príprav a výberom mena",
+        "eyebrow": "BÁBÄTKO NA CESTE",
+        "h1": "Príprava na bábätko, ktorú zvládnete spolu",
+        "lead": "Cesta po týždňoch, praktické prípravy aj spoločný výber mena. Rodinka pomôže udržať veci pokope ešte predtým, než sa nový člen rodiny narodí.",
+        "problem_title": "Prípravy ľahko skončia v poznámkach, chate a niekoľkých zoznamoch",
+        "problem": ("Výbava je v poznámkach, nákupy na inom zozname a dôležitú drobnosť si pamätá iba jeden rodič. Mená, o ktorých sa rozprávate, zatiaľ miznú medzi bežnými správami a nie je jasné, čo už máte pripravené.", "Spoločný priestor nepridáva ďalší povinný plán. Dáva obom rodičom pokojné miesto pre veci, ktoré chcú pred príchodom bábätka riešiť spolu a vlastným tempom."),
+        "scenarios": (("Zoznamy na viacerých miestach", "Výbava na cesty, spánok alebo prvé dni nemusí zostať rozdelená medzi papier, poznámky a chat."), ("Mená v chate", "Nápady na mená zostávajú pokope aj s preferenciami zapojených dospelých."), ("Čo je už pripravené?", "Obaja rodičia vidia rovnaký prehľad a môžu pokračovať tam, kde ten druhý skončil.")),
+        "help_title": "Ako Rodinka pomôže s prípravou na bábätko",
+        "help_intro": "Bábätko na ceste je organizačná časť Rodinky, nie zdravotná aplikácia. Ponúka ľahkú orientáciu a praktický priestor na spoločné prípravy.",
+        "steps": (("Cesta po týždňoch", "Orientačný týždeň, jednoduchý priebeh a vybrané momenty pomôžu zaradiť prípravy do času. Nejde o medicínske meranie ani hodnotenie zdravotného stavu."), ("Prípravy podľa tém", "Inšpiráciu nájdete v oblastiach na cesty, spánok, kŕmenie a dojčenie, hygienu a prebaľovanie, oblečenie, domov, pôrodnicu a prvé dni alebo administratívu. Čo nepotrebujete, môžete vynechať."), ("Mená, ktoré riešite spolu", "Zapisujte si kandidátne mená, označte favoritov a zdieľajte preferencie ako páči sa mi, možno alebo skôr nie. Nejde o súťaž ani skóre.")),
+        "answers_title": "Časté otázky k príprave na bábätko",
+        "answers": (("Je Rodinka tehotenská aplikácia?", "Nie. Rodinka nenahrádza zdravotnú aplikáciu ani odporúčania lekára. Pomáha rodine s orientačnou cestou a praktickou organizáciou príprav."), ("Musíme použiť celý checklist?", "Nemusíte. Zoznam je inšpirácia a prehľad, nie povinný nákupný plán. Každá rodina si ponechá iba to, čo zodpovedá jej potrebám."), ("Môžeme spoločne vyberať meno?", "Áno. Môžete si viesť kandidátne mená, označiť favoritov a pri každom zachytiť preferencie zapojených dospelých bez vyhlasovania víťaza."), ("Uvidia informácie automaticky deti?", "Nie. Časť Bábätko na ceste je určená dospelým v rodine, takže prípravy a citlivé informácie zostávajú v ich spoločnom priestore.")),
+        "card": "Cesta po týždňoch, praktické prípravy a spoločný výber mena na jednom mieste.",
+        "cta_title": "Pripravujte sa na nového člena rodiny spoločne.",
+        "cta_text": "Otvorte Rodinku, pridajte Bábätko na ceste a začnite tým, čo chcete mať pripravené ako prvé.",
+    },
 }
 
 
@@ -731,6 +831,27 @@ TOPICS["en"] = {
         "steps": (("A shared family calendar", "Joint events, recurring activities and practical details about who is handling transport or pick-up."), ("Chores and household tasks", "Responsibilities with a clear person and date so the organizing does not remain with one parent."), ("Shopping and meal planning", "A current list of what the household needs and a simple view of the family’s planned dinners.")),
         "answers_title": "How to choose a family organizer app", "answers": (("What should a family organizer app do?", "It should cover the shared situations your household handles most, work well on phones and computers, and let several people use the same current information."), ("Does Rodinka replace family group chat?", "No. Chat is excellent for conversation. Rodinka is the reference point for schedules, chores and lists you want to find later without scrolling through message history."), ("Do we need to use every feature?", "Not at all. Start with the area causing the most repeated questions today. Add another part only when it solves a real need for your household.")),
         "card": "A calendar, household responsibilities, shopping and meals in one family space.", "cta_title": "Give family information one familiar home.", "cta_text": "Rodinka works in the browser. Create your family and start with the first practical thing you need to share.",
+    },
+    "baby": {
+        "title": "Preparing for a baby together | Rodinka",
+        "description": "Prepare for a baby together with a light week-by-week journey, practical checklists and shared name choices in the Rodinka family organizer.",
+        "og_title": "Expecting a baby? Get ready together.",
+        "og_description": "A week-by-week journey, practical preparation and shared name choices in one family space.",
+        "og_alt": "Rodinka expected-child journey with preparation checklists and shared name choices",
+        "eyebrow": "EXPECTED CHILD",
+        "h1": "Prepare for your baby together, one practical step at a time",
+        "lead": "A gentle week-by-week journey, practical preparation and a shared place for possible names. Rodinka keeps the organizing together before your new family member arrives.",
+        "problem_title": "Preparation easily scatters across notes, chats and several lists",
+        "problem": ("Travel gear may sit in one note, first-week essentials in another list and one important detail only in a parent’s head. Possible names disappear between ordinary messages, while neither person has a clear view of what is already prepared.", "A shared space is not another compulsory plan. It gives both parents a calm place for the things they want to arrange together, in an order and at a pace that suits their family."),
+        "scenarios": (("Lists in too many places", "Ideas for travel, sleep and the first days can stay together instead of being split across paper, notes and chat."), ("Names lost in messages", "Possible names and each adult’s preferences remain easy to find when you return to the conversation."), ("What have we already handled?", "Both parents see the same overview and can pick up where the other person stopped.")),
+        "help_title": "How Rodinka helps you prepare for a baby",
+        "help_intro": "Expected Child is an organizing space inside Rodinka, not a health or pregnancy-tracking app. It offers light orientation and a practical place to prepare together.",
+        "steps": (("A week-by-week journey", "An approximate week, simple progress and selected moments help place preparation in time. This is not medical measurement, monitoring or health advice."), ("Preparation by topic", "Browse optional ideas for travel, sleep, feeding and breastfeeding, hygiene and changing, clothing, home, hospital and the first days, or administration. Keep only what is useful to you."), ("Names you consider together", "Collect possible names, mark favorites and share preferences such as like, maybe or probably not. It is a conversation aid, not a contest or score.")),
+        "answers_title": "Common questions about preparing for a baby",
+        "answers": (("Is Rodinka a pregnancy tracker?", "No. Rodinka does not replace a medical app, professional guidance or advice from your doctor. It helps a family organize practical preparation with a light, approximate journey."), ("Do we have to complete the whole checklist?", "No. It is optional inspiration and an overview, not a required shopping plan. Every family can keep only what matches its own needs."), ("Can we choose a name together?", "Yes. You can collect possible names, mark favorites and capture each participating adult’s preference without turning the choice into a leaderboard."), ("Will children automatically see this information?", "No. Expected Child is for the adults in the family, so preparation and sensitive information stay in their shared adult space.")),
+        "card": "A week-by-week journey, practical preparation and shared name choices in one place.",
+        "cta_title": "Get ready for your new family member together.",
+        "cta_text": "Open Rodinka, add Expected Child and start with the first thing you would like to have ready.",
     },
 }
 
@@ -956,6 +1077,23 @@ def render_home_memory_story(locale: str) -> str:
       </section>'''
 
 
+def render_home_baby_story(locale: str) -> str:
+    story = HOME_BABY_STORY[locale]
+    src = localized_product_src(HOME_BABY_STORY["src"], locale)
+    return f'''      <section class="proof-section product-story" aria-labelledby="baby-story-title">
+        <div class="proof-copy">
+          <p class="section-kicker">{esc(story["kicker"])}</p>
+          <h2 id="baby-story-title">{esc(story["title"])}</h2>
+          <p>{esc(story["text"])}</p>
+          <a class="card-link" href="{PATHS["baby"][locale]}">{esc(story["link"])} <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="proof-figure">
+          <img class="proof-image" src="{src}" width="{PRODUCT_IMAGE_WIDTH}" height="{PRODUCT_IMAGE_HEIGHT}" loading="lazy" decoding="async" alt="{esc(story["alt"])}" />
+          <figcaption>{esc(story["caption"])}</figcaption>
+        </figure>
+      </section>'''
+
+
 def render_home(locale: str) -> str:
     data = HOME[locale]
     cfg = LOCALES[locale]
@@ -965,11 +1103,12 @@ def render_home(locale: str) -> str:
     for key in ("calendar", "shopping", "chores", "meals"):
         label, title, text_value = data["feature_copy"][key]
         feature_cards += f'<article class="feature-card {feature_classes[key]} reveal"><span class="pill">{esc(label)}</span><h3>{esc(title)}</h3><p>{esc(text_value)}</p><a class="card-link" href="{PATHS[key][locale]}">{esc(cfg["learn_more"])} <span aria-hidden="true">→</span></a></article>'
-    directory_cards = "".join(f'<article class="topic-card reveal"><h3><a href="{PATHS[key][locale]}">{esc(TOPICS[locale][key]["h1"])}</a></h3><p>{esc(TOPICS[locale][key]["card"])}</p><a class="card-link" href="{PATHS[key][locale]}">{esc(cfg["learn_more"])} <span aria-hidden="true">→</span></a></article>' for key in ("planner", "calendar", "shopping", "chores", "meals", "app"))
+    directory_cards = "".join(f'<article class="topic-card reveal"><h3><a href="{PATHS[key][locale]}">{esc(TOPICS[locale][key]["h1"])}</a></h3><p>{esc(TOPICS[locale][key]["card"])}</p><a class="card-link" href="{PATHS[key][locale]}">{esc(cfg["learn_more"])} <span aria-hidden="true">→</span></a></article>' for key in TOPIC_KEYS)
     agenda = "".join(f'<div class="agenda-row"><span class="agenda-time">{esc(time)}</span><i class="dot {("coral", "blue", "yellow")[i]}"></i><div><strong>{esc(title)}</strong><small>{esc(note)}</small></div></div>' for i, (time, title, note) in enumerate(data["agenda"]))
     journey = "".join(f'<div><b>{esc(title)}</b><small>{esc(text)}</small></div>' for title, text in data["journey"])
     proof = "".join(f'<span>{esc(item)}</span>' for item in data["proof"])
     direct_answer = render_direct_answer("home", locale)
+    baby_story = render_home_baby_story(locale)
     memory_story = render_home_memory_story(locale)
     return f'''<!doctype html>
 <html lang="{locale}">
@@ -995,6 +1134,7 @@ def render_home(locale: str) -> str:
 {direct_answer}
       <section class="intro" id="jak-to-funguje"><p class="section-kicker reveal">{esc(data["intro_kicker"])}</p><h2 class="section-title reveal">{esc(data["intro_title"])}</h2><p class="section-lead reveal">{esc(data["intro_lead"])}</p><div class="steps">{steps}</div><aside class="activation-note reveal"><span aria-hidden="true">💡</span><div><h3>{esc(data["note_title"])}</h3><p>{esc(data["note"])}</p></div></aside></section>
       <section class="features" id="funkce"><div class="feature-heading reveal"><p class="section-kicker">{esc(data["features_kicker"])}</p><h2 class="section-title">{esc(data["features_title"])}</h2><p class="feature-sublead">{esc(data["features_lead"])}</p></div><div class="feature-grid">{feature_cards}</div></section>
+{baby_story}
 {memory_story}
       <section class="topic-directory"><p class="section-kicker reveal">{esc(data["directory_kicker"])}</p><h2 class="section-title reveal">{esc(data["directory_title"])}</h2><p class="section-lead reveal">{esc(data["directory_lead"])}</p><div class="topic-grid">{directory_cards}</div></section>
       <section class="family-section"><figure class="family-quote reveal"><span class="quote-mark" aria-hidden="true">“</span><blockquote><p>{esc(data["quote"])}</p></blockquote><figcaption>{esc(data["quote_by"])}</figcaption></figure></section>
@@ -1044,7 +1184,7 @@ def write_page(path: Path, content: str) -> None:
 
 
 def render_sitemap() -> str:
-    page_order = ("home", "planner", "calendar", "shopping", "chores", "meals", "app")
+    page_order = ("home", *TOPIC_KEYS)
     urls = "\n".join(
         f"  <url><loc>{canonical(PATHS[page_key][locale])}</loc></url>"
         for locale in ("cs", "sk", "en")
@@ -1060,7 +1200,7 @@ def render_sitemap() -> str:
 def render_llms_txt() -> str:
     return f'''# Rodinka
 
-> Rodinka is a family organizer for a shared calendar, household chores, shopping lists and meal planning. The product name is Rodinka. The canonical website is {SITE_URL}/ and the web application is {APP_URL}.
+> Rodinka is a family organizer for a shared calendar, household chores, shopping lists, meal planning and practical preparation for a new family member. The product name is Rodinka. The canonical website is {SITE_URL}/ and the web application is {APP_URL}.
 
 ## Czech (default)
 - [Rodinka]({canonical(PATHS["home"]["cs"])})
@@ -1069,6 +1209,7 @@ def render_llms_txt() -> str:
 - [Sdílený nákupní seznam]({canonical(PATHS["shopping"]["cs"])})
 - [Úkoly pro rodinu]({canonical(PATHS["chores"]["cs"])})
 - [Plánování jídel]({canonical(PATHS["meals"]["cs"])})
+- [Příprava na miminko]({canonical(PATHS["baby"]["cs"])})
 - [Aplikace pro rodinu]({canonical(PATHS["app"]["cs"])})
 
 ## Slovak
@@ -1078,6 +1219,7 @@ def render_llms_txt() -> str:
 - [Zdieľaný nákupný zoznam]({canonical(PATHS["shopping"]["sk"])})
 - [Úlohy pre rodinu]({canonical(PATHS["chores"]["sk"])})
 - [Plánovanie jedál]({canonical(PATHS["meals"]["sk"])})
+- [Príprava na bábätko]({canonical(PATHS["baby"]["sk"])})
 - [Aplikácia pre rodinu]({canonical(PATHS["app"]["sk"])})
 
 ## English
@@ -1087,6 +1229,7 @@ def render_llms_txt() -> str:
 - [Shared shopping list]({canonical(PATHS["shopping"]["en"])})
 - [Family chores]({canonical(PATHS["chores"]["en"])})
 - [Meal planning]({canonical(PATHS["meals"]["en"])})
+- [Preparing for a baby]({canonical(PATHS["baby"]["en"])})
 - [Family organizer app]({canonical(PATHS["app"]["en"])})
 '''
 
@@ -1094,11 +1237,11 @@ def render_llms_txt() -> str:
 def main() -> None:
     for locale in ("cs", "sk", "en"):
         write_page(output_path(PATHS["home"][locale]), render_home(locale))
-        for page_key in ("planner", "calendar", "shopping", "chores", "meals", "app"):
+        for page_key in TOPIC_KEYS:
             write_page(output_path(PATHS[page_key][locale]), render_topic(page_key, locale))
     write_page(ROOT / "sitemap.xml", render_sitemap())
     write_page(ROOT / "llms.txt", render_llms_txt())
-    print("Generated 21 localized HTML pages, sitemap.xml and llms.txt.")
+    print(f"Generated {3 * (1 + len(TOPIC_KEYS))} localized HTML pages, sitemap.xml and llms.txt.")
 
 
 if __name__ == "__main__":

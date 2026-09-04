@@ -23,6 +23,7 @@ FAMILIES = {
     "shopping": {"cs": "/sdileny-nakupni-seznam/", "sk": "/sk/zdielany-nakupny-zoznam/", "en": "/en/shared-shopping-list/"},
     "chores": {"cs": "/ukoly-pro-rodinu/", "sk": "/sk/ulohy-pre-rodinu/", "en": "/en/family-chores/"},
     "meals": {"cs": "/planovani-jidla/", "sk": "/sk/planovanie-jedal/", "en": "/en/meal-planning/"},
+    "baby": {"cs": "/priprava-na-miminko/", "sk": "/sk/priprava-na-babatko/", "en": "/en/preparing-for-a-baby/"},
     "app": {"cs": "/aplikace-pro-rodinu/", "sk": "/sk/aplikacia-pre-rodinu/", "en": "/en/family-organizer/"},
 }
 
@@ -46,6 +47,7 @@ PRODUCT_BASE_ASSETS = {
     "/assets/product/rodinka-family-activities.webp",
     "/assets/product/rodinka-shared-shopping-list.webp",
     "/assets/product/rodinka-family-memories.webp",
+    "/assets/product/rodinka-expected-child.webp",
 }
 
 PRODUCT_ASSETS = {
@@ -60,6 +62,7 @@ PRIMARY_PROOF_BY_FAMILY = {
     "calendar": "/assets/product/rodinka-shared-family-calendar.webp",
     "shopping": "/assets/product/rodinka-shared-shopping-list.webp",
     "app": "/assets/product/rodinka-family-activities.webp",
+    "baby": "/assets/product/rodinka-expected-child.webp",
 }
 
 
@@ -278,8 +281,8 @@ def main() -> int:
                 errors.append(f"{path}: product screenshot {src} lacks descriptive alt text")
             else:
                 localized_alts.setdefault((family, base_src), set()).add(alt)
-            if not image.get("width", "").isdigit() or not image.get("height", "").isdigit():
-                errors.append(f"{path}: product screenshot {src} lacks numeric dimensions")
+            if image.get("width") != "900" or image.get("height") != "1951":
+                errors.append(f"{path}: product screenshot {src} must declare its 900x1951 dimensions")
             if image.get("loading") != "lazy":
                 errors.append(f"{path}: below-the-fold product screenshot {src} should be lazy-loaded")
             if not (ROOT / src.lstrip("/")).is_file():
