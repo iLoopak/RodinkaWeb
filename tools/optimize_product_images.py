@@ -25,6 +25,7 @@ SOURCES = {
     "04-aktivity.png": "rodinka-family-activities.webp",
     "05-nakup.png": "rodinka-shared-shopping-list.webp",
     "06-vzpominky.png": "rodinka-family-memories.webp",
+    "07-mimco.png": "rodinka-expected-child.webp",
 }
 
 
