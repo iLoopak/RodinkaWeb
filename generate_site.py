@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SITE_URL = "https://mojerodinka.cz"
 APP_URL = "https://app.mojerodinka.cz"
+SUPPORT_URL = "https://buymeacoffee.com/rodinka"
 GTM_CONTAINER_ID = "GTM-5FM9NJHK"
 CONSENT_STORAGE_KEY = "rodinka_analytics_consent"
 CONSENT_VERSION = 1
@@ -46,6 +47,7 @@ LOCALES = {
         "footer_text": "Pro klidnější každodennost.",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikaci Rodinka",
+        "support_label": "Podpořit vývoj",
         "cookie_settings": "Nastavení cookies",
         "consent_title": "Analytika webu",
         "consent_text": "Analytiku používáme, abychom porozuměli používání webu Rodinky a mohli ho zlepšovat. Spustí se až po vašem souhlasu.",
@@ -72,6 +74,7 @@ LOCALES = {
         "footer_text": "Pre pokojnejší každý deň.",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikácii Rodinka",
+        "support_label": "Podporiť vývoj",
         "cookie_settings": "Nastavenie cookies",
         "consent_title": "Analytika webu",
         "consent_text": "Analytiku používame, aby sme porozumeli používaniu webu Rodinky a mohli ho zlepšovať. Spustí sa až po vašom súhlase.",
@@ -98,6 +101,7 @@ LOCALES = {
         "footer_text": "A calmer way to run family life.",
         "copyright": "© 2026 Rodinka",
         "app_label": "About the Rodinka app",
+        "support_label": "Support development",
         "cookie_settings": "Cookie settings",
         "consent_title": "Website analytics",
         "consent_text": "We use analytics to understand how Rodinka’s website is used and improve it. Analytics will only start after your consent.",
@@ -1105,7 +1109,7 @@ def site_footer(locale: str) -> str:
     return f'''    <footer class="site-footer">
       <div class="footer-brand"><a class="brand" href="{cfg["home_path"]}"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Rodinka</span></a><p>{esc(cfg["footer_text"])}</p></div>
       <nav class="footer-nav" aria-label="{esc(cfg["features"])}"><h2>{esc(cfg["features"])}</h2><ul>{feature_links}</ul></nav>
-      <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
+      <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{SUPPORT_URL}" target="_blank" rel="noopener">{esc(cfg["support_label"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
       <p class="copyright">{esc(cfg["copyright"])}</p>
     </footer>'''
 def product_figure(page_key: str, locale: str) -> str:
