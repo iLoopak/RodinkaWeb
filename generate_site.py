@@ -14,10 +14,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SITE_URL = "https://mojerodinka.cz"
 APP_URL = "https://app.mojerodinka.cz"
+GTM_CONTAINER_ID = "GTM-5FM9NJHK"
+CONSENT_STORAGE_KEY = "rodinka_analytics_consent"
+CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260904a"
+ASSET_VERSION = "20260910b"
 
 TOPIC_KEYS = ("planner", "calendar", "shopping", "chores", "meals", "baby", "app")
 
@@ -43,6 +46,11 @@ LOCALES = {
         "footer_text": "Pro klidnější každodennost.",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikaci Rodinka",
+        "cookie_settings": "Nastavení cookies",
+        "consent_title": "Analytika webu",
+        "consent_text": "Analytiku používáme, abychom porozuměli používání webu Rodinky a mohli ho zlepšovat. Spustí se až po vašem souhlasu.",
+        "consent_allow": "Povolit analytiku",
+        "consent_reject": "Odmítnout",
     },
     "sk": {
         "lang": "sk",
@@ -64,6 +72,11 @@ LOCALES = {
         "footer_text": "Pre pokojnejší každý deň.",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikácii Rodinka",
+        "cookie_settings": "Nastavenie cookies",
+        "consent_title": "Analytika webu",
+        "consent_text": "Analytiku používame, aby sme porozumeli používaniu webu Rodinky a mohli ho zlepšovať. Spustí sa až po vašom súhlase.",
+        "consent_allow": "Povoliť analytiku",
+        "consent_reject": "Odmietnuť",
     },
     "en": {
         "lang": "en",
@@ -85,6 +98,11 @@ LOCALES = {
         "footer_text": "A calmer way to run family life.",
         "copyright": "© 2026 Rodinka",
         "app_label": "About the Rodinka app",
+        "cookie_settings": "Cookie settings",
+        "consent_title": "Website analytics",
+        "consent_text": "We use analytics to understand how Rodinka’s website is used and improve it. Analytics will only start after your consent.",
+        "consent_allow": "Allow analytics",
+        "consent_reject": "Reject",
     },
 }
 
@@ -954,6 +972,60 @@ def schema(page_key: str, locale: str, name: str, description: str) -> str:
     return json.dumps(graph, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
+def analytics_head() -> str:
+    return f'''    <!-- Consent Mode defaults must be queued before Google Tag Manager loads. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() {{ window.dataLayer.push(arguments); }};
+      window.rodinkaConsent = {{ key: "{CONSENT_STORAGE_KEY}", version: {CONSENT_VERSION}, analytics: "denied" }};
+      (function () {{
+        var analyticsConsent = "denied";
+        try {{
+          var savedConsent = JSON.parse(window.localStorage.getItem(window.rodinkaConsent.key));
+          if (savedConsent && savedConsent.version === window.rodinkaConsent.version &&
+              (savedConsent.analytics === "granted" || savedConsent.analytics === "denied")) {{
+            analyticsConsent = savedConsent.analytics;
+          }}
+        }} catch (error) {{}}
+        window.rodinkaConsent.analytics = analyticsConsent;
+        window.gtag("consent", "default", {{
+          analytics_storage: analyticsConsent,
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        }});
+      }})();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+    new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    }})(window,document,'script','dataLayer','{GTM_CONTAINER_ID}');</script>
+    <!-- End Google Tag Manager -->'''
+
+
+def analytics_body() -> str:
+    return f'''    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_CONTAINER_ID}"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->'''
+
+
+def consent_panel(locale: str) -> str:
+    cfg = LOCALES[locale]
+    return f'''    <section class="cookie-consent" data-cookie-consent hidden role="region" aria-live="polite" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description">
+      <div class="cookie-consent-copy">
+        <h2 id="cookie-consent-title">{esc(cfg["consent_title"])}</h2>
+        <p id="cookie-consent-description">{esc(cfg["consent_text"])}</p>
+      </div>
+      <div class="cookie-consent-actions">
+        <button class="consent-button consent-allow" type="button" data-consent-choice="granted">{esc(cfg["consent_allow"])}</button>
+        <button class="consent-button consent-reject" type="button" data-consent-choice="denied">{esc(cfg["consent_reject"])}</button>
+      </div>
+    </section>'''
+
+
 def head(page_key: str, locale: str, data: dict) -> str:
     cfg = LOCALES[locale]
     path = PATHS[page_key][locale]
@@ -964,6 +1036,7 @@ def head(page_key: str, locale: str, data: dict) -> str:
     return f'''  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{analytics_head()}
     <title>{esc(data["title"])}</title>
     <meta name="description" content="{esc(data["description"])}" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -1020,7 +1093,7 @@ def site_header(page_key: str, locale: str) -> str:
       <button class="menu-button" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
       <nav class="nav" id="main-navigation" aria-label="{esc(cfg["primary_nav"])}">
         {links}
-        <a class="nav-cta" href="{APP_URL}">{esc(cfg["open_app"])} <span aria-hidden="true">→</span></a>
+        <a class="nav-cta" href="{APP_URL}" data-analytics-location="header">{esc(cfg["open_app"])} <span aria-hidden="true">→</span></a>
         {language_switcher(page_key, locale)}
       </nav>
     </header>'''
@@ -1032,11 +1105,9 @@ def site_footer(locale: str) -> str:
     return f'''    <footer class="site-footer">
       <div class="footer-brand"><a class="brand" href="{cfg["home_path"]}"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Rodinka</span></a><p>{esc(cfg["footer_text"])}</p></div>
       <nav class="footer-nav" aria-label="{esc(cfg["features"])}"><h2>{esc(cfg["features"])}</h2><ul>{feature_links}</ul></nav>
-      <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}">{esc(cfg["open_app"])}</a></li></ul></nav>
+      <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
       <p class="copyright">{esc(cfg["copyright"])}</p>
     </footer>'''
-
-
 def product_figure(page_key: str, locale: str) -> str:
     proof = PRODUCT_PROOFS[page_key]
     src = localized_product_src(proof["src"], locale)
@@ -1114,6 +1185,7 @@ def render_home(locale: str) -> str:
 <html lang="{locale}">
 {head("home", locale, data)}
   <body>
+{analytics_body()}
 {site_header("home", locale)}
     <main id="top">
       <section class="hero">
@@ -1122,7 +1194,7 @@ def render_home(locale: str) -> str:
           <h1>{esc(data["h1"])}</h1>
           <p class="brand-line">{esc(data["brand_line"])}</p>
           <p class="hero-lead">{esc(data["lead"])}</p>
-          <div class="hero-actions"><a class="button button-primary" href="{APP_URL}">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-to-funguje">{esc(data["how_link"])} <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-actions"><a class="button button-primary" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-to-funguje">{esc(data["how_link"])} <span aria-hidden="true">↓</span></a></div>
           <div class="hero-proof">{proof}</div>
           <div class="trust-row"><span class="trust-icon" aria-hidden="true">♥</span><p><strong>{esc(data["trust_title"])}</strong><br />{esc(data["trust_text"])}</p></div>
         </div>
@@ -1138,9 +1210,10 @@ def render_home(locale: str) -> str:
 {memory_story}
       <section class="topic-directory"><p class="section-kicker reveal">{esc(data["directory_kicker"])}</p><h2 class="section-title reveal">{esc(data["directory_title"])}</h2><p class="section-lead reveal">{esc(data["directory_lead"])}</p><div class="topic-grid">{directory_cards}</div></section>
       <section class="family-section"><figure class="family-quote reveal"><span class="quote-mark" aria-hidden="true">“</span><blockquote><p>{esc(data["quote"])}</p></blockquote><figcaption>{esc(data["quote_by"])}</figcaption></figure></section>
-      <section class="cta-section" id="vyzkouset"><div class="cta-card reveal"><div class="cta-doodle" aria-hidden="true">✦</div><p class="section-kicker">{esc(data["cta_kicker"])}</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="cta-secondary" href="{APP_URL}">{esc(data["login"])}</a></div><div class="mini-journey">{journey}</div><div class="install-options"><h3>{esc(data["install_title"])}</h3><p>{esc(data["install_text"])}</p><a class="store-link" href="https://get.microsoft.com/installer/download/9nbxf0lqbmbj?referrer=appbadge">{esc(data["store"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(data["fine_print"])}</small></div></section>
+      <section class="cta-section" id="vyzkouset"><div class="cta-card reveal"><div class="cta-doodle" aria-hidden="true">✦</div><p class="section-kicker">{esc(data["cta_kicker"])}</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="cta-secondary" href="{APP_URL}" data-analytics-location="content">{esc(data["login"])}</a></div><div class="mini-journey">{journey}</div><div class="install-options"><h3>{esc(data["install_title"])}</h3><p>{esc(data["install_text"])}</p><a class="store-link" href="https://get.microsoft.com/installer/download/9nbxf0lqbmbj?referrer=appbadge">{esc(data["store"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(data["fine_print"])}</small></div></section>
     </main>
 {site_footer(locale)}
+{consent_panel(locale)}
     <script src="/script.js?v={ASSET_VERSION}" defer></script>
   </body>
 </html>
@@ -1159,19 +1232,21 @@ def render_topic(page_key: str, locale: str) -> str:
 <html lang="{locale}">
 {head(page_key, locale, data)}
   <body>
+{analytics_body()}
 {site_header(page_key, locale)}
     <main>
       <article class="topic-page">
-        <header class="topic-hero"><nav class="breadcrumbs" aria-label="{esc(cfg["breadcrumb"])}"><a href="{cfg["home_path"]}">{esc(cfg["home"])}</a><span aria-hidden="true">/</span><span aria-current="page">{esc(data["eyebrow"].title())}</span></nav><p class="section-kicker">{esc(data["eyebrow"])}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions"><a class="button button-primary" href="{APP_URL}">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-pomaha">{esc(data["help_title"])} <span aria-hidden="true">↓</span></a></div></header>
+        <header class="topic-hero"><nav class="breadcrumbs" aria-label="{esc(cfg["breadcrumb"])}"><a href="{cfg["home_path"]}">{esc(cfg["home"])}</a><span aria-hidden="true">/</span><span aria-current="page">{esc(data["eyebrow"].title())}</span></nav><p class="section-kicker">{esc(data["eyebrow"])}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions"><a class="button button-primary" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-pomaha">{esc(data["help_title"])} <span aria-hidden="true">↓</span></a></div></header>
 {direct_answer}
         <section class="content-section problem-section"><div class="section-copy"><p class="section-kicker">{esc(data["eyebrow"])}</p><h2>{esc(data["problem_title"])}</h2>{''.join(f'<p>{esc(paragraph)}</p>' for paragraph in data["problem"])}</div><div class="scenario-grid">{scenarios}</div></section>
         <section class="content-section help-section" id="jak-pomaha"><div class="section-copy"><p class="section-kicker">RODINKA</p><h2>{esc(data["help_title"])}</h2><p>{esc(data["help_intro"])}</p></div><ol class="help-steps">{steps}</ol></section>
         <section class="content-section answers-section"><div class="section-copy"><h2>{esc(data["answers_title"])}</h2></div><div class="answers-list">{answers}</div></section>
         <aside class="related-section"><p class="section-kicker">{esc(cfg["related_kicker"])}</p><h2>{esc(cfg["related"])}</h2><div class="related-grid">{related}</div></aside>
       </article>
-      <section class="cta-section"><div class="cta-card"><p class="section-kicker">RODINKA</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><a class="app-cta" href="{APP_URL}">{esc(cfg["start"])} <span aria-hidden="true">→</span></a></div></section>
+      <section class="cta-section"><div class="cta-card"><p class="section-kicker">RODINKA</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><a class="app-cta" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a></div></section>
     </main>
 {site_footer(locale)}
+{consent_panel(locale)}
     <script src="/script.js?v={ASSET_VERSION}" defer></script>
   </body>
 </html>
