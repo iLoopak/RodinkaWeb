@@ -21,7 +21,13 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260910b"
+ASSET_VERSION = "20260914a"
+
+# Self-hosted webfonts, built by tools/build_fonts.py. Both are preloaded because
+# every page renders body copy in DM Sans and the header brand plus the h1 in
+# Manrope above the fold. Nothing else in assets/fonts/ is preloaded.
+DM_SANS_WOFF2 = "/assets/fonts/dm-sans-latin-ext-400-700.woff2"
+MANROPE_WOFF2 = "/assets/fonts/manrope-latin-ext-700-800.woff2"
 
 TOPIC_KEYS = ("planner", "calendar", "shopping", "chores", "meals", "baby", "app")
 
@@ -1067,9 +1073,8 @@ def head(page_key: str, locale: str, data: dict) -> str:
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="preload" href="{DM_SANS_WOFF2}" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="{MANROPE_WOFF2}" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css?v={ASSET_VERSION}" />
     <script>document.documentElement.classList.add('js');</script>
     <script type="application/ld+json">{schema(page_key, locale, data["title"], data["description"])}</script>
