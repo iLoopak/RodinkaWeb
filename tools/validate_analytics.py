@@ -8,8 +8,13 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
 
+from validate_seo import FAMILIES
+
 
 ROOT = Path(__file__).resolve().parents[1]
+# One page per language per family, taken from the SEO validator so adding a
+# topic family cannot silently shrink what this check covers.
+EXPECTED_PAGES = sum(len(variants) for variants in FAMILIES.values())
 GTM_ID = "GTM-5FM9NJHK"
 GA4_ID = "G-LMZQ91Y9NP"
 APP_ORIGIN = "https://app.mojerodinka.cz"
@@ -47,8 +52,8 @@ def main() -> int:
     html_files = sorted(ROOT.rglob("*.html"))
     errors: list[str] = []
 
-    if len(html_files) != 24:
-        errors.append(f"Expected 24 generated HTML pages, found {len(html_files)}")
+    if len(html_files) != EXPECTED_PAGES:
+        errors.append(f"Expected {EXPECTED_PAGES} generated HTML pages, found {len(html_files)}")
 
     for path in html_files:
         relative = path.relative_to(ROOT)
