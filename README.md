@@ -32,8 +32,20 @@ Skript znovu vytvoří 24 statických HTML stránek, `sitemap.xml` a experiment�
 - Viditelné produktové ukázky jsou optimalizované WebP soubory v `assets/product/`. Český základ používá název bez přípony jazyka, marketingově lokalizované varianty končí `-sk.webp` a `-en.webp`; samotné UI v telefonu zůstává věrnou českou produktovou ukázkou. Jejich přiřazení ke stránkám, lokalizované alternativní texty a popisky spravují `PRODUCT_PROOFS` a samostatné homepage story objekty v generátoru. Každá významová fotografie nebo obrazovka musí mít v HTML rozměry, užitečný lokalizovaný `alt` a viditelný kontext; nevkládejte screenshoty pouze jako CSS pozadí.
 - Každá indexovatelná stránka obsahuje nahoře krátkou přímou odpověď definovanou v `DIRECT_ANSWERS`. Při změně funkce upravte odpověď ve všech třech jazycích a držte ji konkrétní, faktickou a v souladu s viditelným produktem.
 - Favicon vychází z `favicon.svg`; raster fallbacky vytvoří `tools/generate_icons.ps1`.
+- Písma jsou self-hostovaná v `assets/fonts/` a web nesmí volat `fonts.googleapis.com` ani `fonts.gstatic.com`; SEO validace to hlídá. Každá rodina je jeden variabilní WOFF2 a `styles.css` z něj deklaruje jen ty váhy, které web používá (DM Sans 400/700, Manrope 700/800). Generátor preloaduje právě tyto dva soubory, protože obě rodiny jsou nad ohybem; další preload nepřidávejte. Licence OFL leží vedle fontů a musí zůstat commitnuté.
 - `llms.txt` je pouze neškodná experimentální pomůcka pro strojovou orientaci. Není SEO ranking faktor ani náhrada za sitemap, metadata, HTML obsah či strukturovaná data.
 - Po změně `styles.css` nebo `script.js` zvyšte `ASSET_VERSION` v generátoru, aby návštěvníci nedostali starou verzi z krátké cache.
+
+### Přegenerování písem
+
+Vygenerované WOFF2 soubory jsou commitnuté, takže nasazení skript nepotřebuje. Spusťte ho jen při změně upstream verze nebo znakové sady:
+
+```bash
+pip install fonttools brotli
+python tools/build_fonts.py
+```
+
+Skript reprodukuje přesně to, co dříve servírovalo Google Fonts: stejné upstream verze (DM Sans 4.004, Manrope 4.504) a u DM Sans optickou velikost zafixovanou na 14 — upstream default 9 by dal viditelně jiné tvary písmen. Osa váhy se ořízne na rozsah, který stylesheet skutečně používá, a znaková sada pokrývá latin-1 plus středoevropskou diakritiku, takže čeština i slovenština renderují z webfontu. Znak `→` v odkazech záměrně součástí není: nebyl ani v původní Google subsetě a vykresluje se systémovým písmem.
 
 ### Příprava produktových obrázků
 

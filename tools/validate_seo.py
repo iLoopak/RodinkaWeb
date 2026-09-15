@@ -56,6 +56,15 @@ PRODUCT_ASSETS = {
     for locale in ("cs", "sk", "en")
 }
 
+SELF_HOSTED_FONTS = {
+    "/assets/fonts/dm-sans-latin-ext-400-700.woff2",
+    "/assets/fonts/manrope-latin-ext-700-800.woff2",
+}
+
+# The fonts are self-hosted so the critical path is HTML -> font, with no
+# third-party stylesheet in between. Guard both halves of that.
+FORBIDDEN_FONT_HOSTS = ("fonts.googleapis.com", "fonts.gstatic.com")
+
 PRIMARY_PROOF_BY_FAMILY = {
     "home": "/assets/product/rodinka-today-family-overview.webp",
     "planner": "/assets/product/rodinka-family-planning.webp",
@@ -93,6 +102,7 @@ class PageParser(HTMLParser):
         self.canonical = ""
         self.alternates: dict[str, str] = {}
         self.hrefs: list[tuple[str, bool]] = []
+        self.link_attrs: list[tuple[str, dict[str, str]]] = []
         self.images: list[dict[str, str]] = []
         self.jsonld: list[str] = []
         self._in_jsonld = False
@@ -122,6 +132,7 @@ class PageParser(HTMLParser):
                 self.meta[key] = attrs.get("content", "")
         if tag == "link":
             rel = set(attrs.get("rel", "").split())
+            self.link_attrs.append((attrs.get("href", ""), attrs))
             if "canonical" in rel:
                 self.canonical = attrs.get("href", "")
             if "alternate" in rel and attrs.get("hreflang"):
@@ -205,6 +216,23 @@ def main() -> int:
             errors.append(f"{path}: missing title")
         titles.append(parser.title.strip())
         descriptions.append(parser.meta.get("description", ""))
+
+        for host in FORBIDDEN_FONT_HOSTS:
+            if host in text:
+                errors.append(f"{path}: references {host}; fonts must be served from /assets/fonts/")
+        preloaded = {
+            href for href, attrs in parser.link_attrs
+            if attrs.get("rel") == "preload" and attrs.get("as") == "font"
+        }
+        if preloaded != SELF_HOSTED_FONTS:
+            errors.append(
+                f"{path}: font preloads {sorted(preloaded)} != {sorted(SELF_HOSTED_FONTS)}; "
+                "preload exactly the two above-the-fold faces"
+            )
+        for href, attrs in parser.link_attrs:
+            if attrs.get("rel") == "preload" and attrs.get("as") == "font":
+                if attrs.get("type") != "font/woff2" or "crossorigin" not in attrs:
+                    errors.append(f"{path}: {href} preload needs type=\"font/woff2\" and crossorigin")
 
         expected_canonical = f"{SITE}{path}"
         if parser.canonical != expected_canonical:
