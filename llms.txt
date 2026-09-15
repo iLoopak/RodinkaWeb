@@ -1,6 +1,6 @@
 # Rodinka
 
-> Rodinka is a family organizer for a shared calendar, household chores, shopping lists, meal planning and practical preparation for a new family member. The product name is Rodinka. The canonical website is https://mojerodinka.cz/ and the web application is https://app.mojerodinka.cz.
+> Rodinka is a family organizer for a shared calendar, household chores, shopping lists, meal planning, family memories, document expiry reminders and practical preparation for a new family member. The product name is Rodinka. The canonical website is https://mojerodinka.cz/ and the web application is https://app.mojerodinka.cz.
 
 ## Czech (default)
 - [Rodinka](https://mojerodinka.cz/)
@@ -9,6 +9,8 @@
 - [Sdílený nákupní seznam](https://mojerodinka.cz/sdileny-nakupni-seznam/)
 - [Úkoly pro rodinu](https://mojerodinka.cz/ukoly-pro-rodinu/)
 - [Plánování jídel](https://mojerodinka.cz/planovani-jidla/)
+- [Rodinné vzpomínky](https://mojerodinka.cz/rodinne-vzpominky/)
+- [Hlídání platnosti dokladů](https://mojerodinka.cz/hlidani-platnosti-dokladu/)
 - [Příprava na miminko](https://mojerodinka.cz/priprava-na-miminko/)
 - [Aplikace pro rodinu](https://mojerodinka.cz/aplikace-pro-rodinu/)
 
@@ -19,6 +21,8 @@
 - [Zdieľaný nákupný zoznam](https://mojerodinka.cz/sk/zdielany-nakupny-zoznam/)
 - [Úlohy pre rodinu](https://mojerodinka.cz/sk/ulohy-pre-rodinu/)
 - [Plánovanie jedál](https://mojerodinka.cz/sk/planovanie-jedal/)
+- [Rodinné spomienky](https://mojerodinka.cz/sk/rodinne-spomienky/)
+- [Stráženie platnosti dokladov](https://mojerodinka.cz/sk/strazenie-platnosti-dokladov/)
 - [Príprava na bábätko](https://mojerodinka.cz/sk/priprava-na-babatko/)
 - [Aplikácia pre rodinu](https://mojerodinka.cz/sk/aplikacia-pre-rodinu/)
 
@@ -29,5 +33,7 @@
 - [Shared shopping list](https://mojerodinka.cz/en/shared-shopping-list/)
 - [Family chores](https://mojerodinka.cz/en/family-chores/)
 - [Meal planning](https://mojerodinka.cz/en/meal-planning/)
+- [Family memories](https://mojerodinka.cz/en/family-memories/)
+- [Document expiry reminders](https://mojerodinka.cz/en/document-expiry-reminders/)
 - [Preparing for a baby](https://mojerodinka.cz/en/preparing-for-a-baby/)
 - [Family organizer app](https://mojerodinka.cz/en/family-organizer/)

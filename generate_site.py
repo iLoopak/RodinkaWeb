@@ -29,7 +29,7 @@ ASSET_VERSION = "20260914a"
 DM_SANS_WOFF2 = "/assets/fonts/dm-sans-latin-ext-400-700.woff2"
 MANROPE_WOFF2 = "/assets/fonts/manrope-latin-ext-700-800.woff2"
 
-TOPIC_KEYS = ("planner", "calendar", "shopping", "chores", "meals", "baby", "app")
+TOPIC_KEYS = ("planner", "calendar", "shopping", "chores", "meals", "memories", "documents", "baby", "app")
 
 
 LOCALES = {
@@ -126,17 +126,21 @@ PATHS = {
     "meals": {"cs": "/planovani-jidla/", "sk": "/sk/planovanie-jedal/", "en": "/en/meal-planning/"},
     "app": {"cs": "/aplikace-pro-rodinu/", "sk": "/sk/aplikacia-pre-rodinu/", "en": "/en/family-organizer/"},
     "baby": {"cs": "/priprava-na-miminko/", "sk": "/sk/priprava-na-babatko/", "en": "/en/preparing-for-a-baby/"},
+    "memories": {"cs": "/rodinne-vzpominky/", "sk": "/sk/rodinne-spomienky/", "en": "/en/family-memories/"},
+    "documents": {"cs": "/hlidani-platnosti-dokladu/", "sk": "/sk/strazenie-platnosti-dokladov/", "en": "/en/document-expiry-reminders/"},
 }
 
 
 RELATED = {
-    "planner": ("calendar", "baby", "app"),
-    "calendar": ("planner", "chores", "meals"),
+    "planner": ("calendar", "documents", "app"),
+    "calendar": ("planner", "chores", "documents"),
     "shopping": ("meals", "planner", "app"),
     "chores": ("calendar", "planner", "app"),
     "meals": ("shopping", "calendar", "planner"),
-    "app": ("planner", "baby", "calendar"),
-    "baby": ("planner", "calendar", "app"),
+    "memories": ("baby", "app", "planner"),
+    "documents": ("planner", "calendar", "app"),
+    "baby": ("memories", "planner", "app"),
+    "app": ("planner", "memories", "documents"),
 }
 
 
@@ -173,6 +177,14 @@ DIRECT_ANSWERS = {
             "Jaká aplikace pomůže s organizací rodiny?",
             "Praktická aplikace pro rodinu má na jednom místě odpovědi na běžné otázky: kdo co dnes má, kdo něco zařídí a co je potřeba koupit. Rodinka spojuje rodinný kalendář, úkoly, nákupní seznam a plánování jídel ve společném prostoru. Funguje v prohlížeči na mobilu i počítači, takže není nutná instalace.",
         ),
+        "memories": (
+            "Kam ukládat dětské milníky a rodinné vzpomínky?",
+            "Rodinka vede rodinné vzpomínky jako jednu společnou kroniku: dětské milníky, rodinné poklady i fotografie se řadí na jednu časovou osu a každou vzpomínku můžete přiřadit konkrétnímu členovi rodiny. Na obrazovce Dnes se občas připomene, co se stalo v tentýž den v minulých letech, a z milníku si můžete připravit kartičku k vytištění.",
+        ),
+        "documents": (
+            "Jak hlídat platnost pasů a dokladů celé rodiny?",
+            "Zapište ke každému dokladu, komu patří a do kdy platí. Rodinka pak pošle připomínku s předstihem, takže na končící pas nebo občanku nepřijdete až týden před dovolenou. Doklady vidí jen dospělí členové rodiny a připomínky respektují tiché hodiny, které si nastavíte.",
+        ),
         "baby": (
             "Jak se připravit na miminko společně s partnerem?",
             "Rodinka spojuje orientační cestu po týdnech, praktické přípravy a společný výběr jména v jednom rodinném prostoru. Oba rodiče tak vidí, co už mají připravené, co ještě chtějí zařídit a která jména zvažují. Nejde o zdravotní těhotenský tracker, ale o společnou organizaci před narozením dítěte.",
@@ -207,6 +219,14 @@ DIRECT_ANSWERS = {
             "Aká aplikácia pomôže s organizáciou rodiny?",
             "Praktická aplikácia pre rodinu má na jednom mieste odpovede na bežné otázky: kto čo dnes má, kto niečo zariadi a čo treba kúpiť. Rodinka spája rodinný kalendár, úlohy, nákupný zoznam a plánovanie jedál v spoločnom priestore. Funguje v prehliadači v mobile aj počítači, takže inštalácia nie je potrebná.",
         ),
+        "memories": (
+            "Kam ukladať detské míľniky a rodinné spomienky?",
+            "Rodinka vedie rodinné spomienky ako jednu spoločnú kroniku: detské míľniky, rodinné poklady aj fotografie sa radia na jednu časovú os a každú spomienku môžete priradiť konkrétnemu členovi rodiny. Na obrazovke Dnes sa občas pripomenie, čo sa stalo v ten istý deň v minulých rokoch, a z míľnika si môžete pripraviť kartičku na vytlačenie.",
+        ),
+        "documents": (
+            "Ako strážiť platnosť pasov a dokladov celej rodiny?",
+            "Zapíšte ku každému dokladu, komu patrí a dokedy platí. Rodinka potom pošle pripomienku s predstihom, takže na končiaci pas alebo občiansky preukaz neprídete až týždeň pred dovolenkou. Doklady vidia len dospelí členovia rodiny a pripomienky rešpektujú tiché hodiny, ktoré si nastavíte.",
+        ),
         "baby": (
             "Ako sa pripraviť na bábätko spoločne s partnerom?",
             "Rodinka spája orientačnú cestu po týždňoch, praktické prípravy a spoločný výber mena v jednom rodinnom priestore. Obaja rodičia tak vidia, čo už majú pripravené, čo ešte chcú zariadiť a ktoré mená zvažujú. Nejde o zdravotný tehotenský tracker, ale o spoločnú organizáciu pred narodením dieťaťa.",
@@ -240,6 +260,14 @@ DIRECT_ANSWERS = {
         "app": (
             "What kind of app helps organize family life?",
             "A useful family organizer answers everyday questions in one place: what is happening today, who is handling something and what needs to be bought. Rodinka combines a family calendar, chores, a shopping list and meal planning in one shared space. It works in a browser on phones and computers, so installation is optional.",
+        ),
+        "memories": (
+            "Where can a family keep children’s milestones and memories?",
+            "Rodinka keeps family memories as one shared chronicle: children’s milestones, family treasures and photos sit on a single timeline, and every memory can belong to a particular family member. The Today screen occasionally resurfaces what happened on the same date in earlier years, and a milestone can be turned into a card you print at home.",
+        ),
+        "documents": (
+            "How can a family track passport and ID expiry dates?",
+            "Record who each document belongs to and when it expires. Rodinka then sends a reminder well ahead of time, so an expiring passport or ID card does not surface a week before the holiday. Documents are visible to adults only, and reminders respect the quiet hours your household sets.",
         ),
         "baby": (
             "How can partners prepare for a baby together?",
@@ -315,6 +343,22 @@ PRODUCT_PROOFS = {
             "en": "Activities and events give parents one view of clubs, trips, participants and dates.",
         },
     },
+    "memories": {
+        # The only Memories screenshot in the repo shows Family treasures, which is
+        # one source inside the section rather than the whole chronicle. The alt and
+        # caption say so instead of implying the image shows milestones too.
+        "src": "/assets/product/rodinka-family-memories.webp",
+        "alt": {
+            "cs": "Obrazovka Vzpomínky v Rodince se sbírkou rodinných pokladů, u každého fotografie, popis a datum",
+            "sk": "Obrazovka Spomienky v Rodinke so zbierkou rodinných pokladov, pri každom fotografia, popis a dátum",
+            "en": "The Memories screen in Rodinka with a family treasures collection, each with a photo, description and date",
+        },
+        "caption": {
+            "cs": "Rodinné poklady jsou jedním ze zdrojů rodinné kroniky — vedle dětských milníků a dalších uložených okamžiků.",
+            "sk": "Rodinné poklady sú jedným zo zdrojov rodinnej kroniky — popri detských míľnikoch a ďalších uložených okamihoch.",
+            "en": "Family treasures are one source feeding the family chronicle, alongside children’s milestones and other saved moments.",
+        },
+    },
     "baby": {
         "src": "/assets/product/rodinka-expected-child.webp",
         "alt": {
@@ -335,24 +379,27 @@ HOME_MEMORY_STORY = {
     "src": "/assets/product/rodinka-family-memories.webp",
     "cs": {
         "kicker": "NEJEN POVINNOSTI",
-        "title": "Rodinné poklady uchovají i malé příběhy",
-        "text": "Rodinka není jen přehled toho, co je potřeba zařídit. Do rodinných pokladů můžete uložit drobnosti a vzpomínky, ke kterým se chcete společně vracet.",
-        "alt": "Dva telefony s funkcí Rodinné poklady v Rodince a uloženými rodinnými vzpomínkami",
-        "caption": "Rodinné poklady propojují fotografii nebo předmět s názvem, datem a členem rodiny.",
+        "title": "Nejen to, co musíte zařídit. I to, co si chcete pamatovat.",
+        "text": "Dětské milníky, rodinné poklady a fotografie se v Rodince řadí na jednu společnou časovou osu. Každou vzpomínku můžete přiřadit člověku, kterého se týká, na obrazovce Dnes se občas připomene, co se stalo v tentýž den v minulých letech, a z milníku si připravíte kartičku k vytištění.",
+        "link": "Rodinné vzpomínky",
+        "alt": "Dva telefony s obrazovkou Vzpomínky v Rodince a sbírkou rodinných pokladů s fotografií, popisem a datem",
+        "caption": "Rodinné poklady jsou jedním ze zdrojů rodinné kroniky, vedle dětských milníků a dalších uložených okamžiků.",
     },
     "sk": {
         "kicker": "NIELEN POVINNOSTI",
-        "title": "Rodinné poklady uchovajú aj malé príbehy",
-        "text": "Rodinka nie je iba prehľad toho, čo treba zariadiť. Do rodinných pokladov môžete uložiť drobnosti a spomienky, ku ktorým sa chcete spolu vracať.",
-        "alt": "Dva telefóny s funkciou Rodinné poklady v Rodinke a uloženými rodinnými spomienkami",
-        "caption": "Rodinné poklady spájajú fotografiu alebo predmet s názvom, dátumom a členom rodiny.",
+        "title": "Nielen to, čo musíte zariadiť. Aj to, čo si chcete pamätať.",
+        "text": "Detské míľniky, rodinné poklady a fotografie sa v Rodinke radia na jednu spoločnú časovú os. Každú spomienku môžete priradiť človeku, ktorého sa týka, na obrazovke Dnes sa občas pripomenie, čo sa stalo v ten istý deň v minulých rokoch, a z míľnika si pripravíte kartičku na vytlačenie.",
+        "link": "Rodinné spomienky",
+        "alt": "Dva telefóny s obrazovkou Spomienky v Rodinke a zbierkou rodinných pokladov s fotografiou, popisom a dátumom",
+        "caption": "Rodinné poklady sú jedným zo zdrojov rodinnej kroniky, popri detských míľnikoch a ďalších uložených okamihoch.",
     },
     "en": {
         "kicker": "MORE THAN ADMIN",
-        "title": "Family treasures keep the small stories too",
-        "text": "Rodinka is not only a view of what needs doing. Family treasures can hold the small objects and memories your household wants to return to together.",
-        "alt": "Two phones showing Rodinka family treasures and saved family memories",
-        "caption": "Family treasures connect a photo or object with its name, date and family member.",
+        "title": "Not only what has to be arranged. Also what you want to remember.",
+        "text": "Children’s milestones, family treasures and photos share a single timeline in Rodinka. Every memory can belong to the person it is about, the Today screen occasionally resurfaces what happened on the same date in earlier years, and a milestone can become a card you print at home.",
+        "link": "Family memories",
+        "alt": "Two phones showing the Memories screen in Rodinka and a family treasures collection with a photo, description and date",
+        "caption": "Family treasures are one source feeding the family chronicle, alongside children’s milestones and other saved moments.",
     },
 }
 
@@ -382,6 +429,48 @@ HOME_BABY_STORY = {
         "link": "Preparing for a baby",
         "alt": "Two phones showing Rodinka’s expected-child journey, practical preparations and shared name choices",
         "caption": "Expected Child gives adults one shared view of family preparations before the new arrival.",
+    },
+}
+
+
+
+# The family layer beyond the four core utilities. Deliberately three compact
+# cards rather than three more full-width stories: the homepage is not a module
+# catalogue and the existing rhythm (features -> stories -> directory) holds.
+#
+# Claims here are limited to what the app does today. Dnešní Rodinka has no
+# streak, score or leaderboard by design, so none is implied; Moment dne needs a
+# per-family entitlement granted by hand and is therefore not marketed at all.
+HOME_FAMILY_LAYER = {
+    "cs": {
+        "kicker": "RODINA NENÍ JEN PROVOZ DOMÁCNOSTI",
+        "title": "Kromě toho, co je potřeba zařídit",
+        "lead": "Kalendář, úkoly a nákupy řeší provoz. Rodinka k nim přidává věci, kvůli kterým aplikaci otevřete rádi — a pár těch, na které se jinak zapomíná.",
+        "cards": (
+            ("Každý den malý důvod být spolu", "Dnešní Rodinka nabídne jednu otázku pro celou rodinu, krátkou anketu nebo hádanku. Občas připomene společnou vzpomínku. Není to úkol: když ji necháte být, nic se nestane a nic se nepočítá.", "app"),
+            ("Dítě není jen políčko v profilu", "Dítě může mít vlastní přihlášení a jednoduché prostředí s vlastními úkoly. K úkolu lze přidat odměnu nebo kapesné, splnění potvrdí dospělý. A když je hotovo, čeká rodinná herna.", "chores"),
+            ("Některé věci nemusíte nosit v hlavě", "Termíny, připomínky a doklady s datem platnosti. Rodinka se ozve s předstihem — třeba u pasu, který za dva měsíce propadne — a ticho v noci respektuje podle vašeho nastavení.", "documents"),
+        ),
+    },
+    "sk": {
+        "kicker": "RODINA NIE JE LEN PREVÁDZKA DOMÁCNOSTI",
+        "title": "Okrem toho, čo treba zariadiť",
+        "lead": "Kalendár, úlohy a nákupy riešia prevádzku. Rodinka k nim pridáva veci, kvôli ktorým aplikáciu otvoríte radi — a zopár tých, na ktoré sa inak zabúda.",
+        "cards": (
+            ("Každý deň malý dôvod byť spolu", "Dnešná Rodinka ponúkne jednu otázku pre celú rodinu, krátku anketu alebo hádanku. Občas pripomenie spoločnú spomienku. Nie je to povinnosť: keď ju necháte tak, nič sa nestane a nič sa nepočíta.", "app"),
+            ("Dieťa nie je len políčko v profile", "Dieťa môže mať vlastné prihlásenie a jednoduché prostredie s vlastnými úlohami. K úlohe sa dá pridať odmena alebo vreckové, splnenie potvrdí dospelý. A keď je hotovo, čaká rodinná herňa.", "chores"),
+            ("Niektoré veci nemusíte nosiť v hlave", "Termíny, pripomienky a doklady s dátumom platnosti. Rodinka sa ozve s predstihom — napríklad pri pase, ktorý o dva mesiace prepadne — a ticho v noci rešpektuje podľa vášho nastavenia.", "documents"),
+        ),
+    },
+    "en": {
+        "kicker": "A FAMILY IS MORE THAN LOGISTICS",
+        "title": "Beyond the things that simply need doing",
+        "lead": "A calendar, chores and shopping cover the running of a household. Rodinka adds the things you open the app for gladly — and a few that are otherwise easy to forget.",
+        "cards": (
+            ("A small reason to be together each day", "Dnešní Rodinka offers one question for the whole family, a short poll or a riddle, and now and then resurfaces a shared memory. It is not a task: ignore it and nothing happens and nothing is counted.", "app"),
+            ("A child is more than a field in a profile", "A child can have their own sign-in and a simple space with their own chores. A chore can carry a reward or pocket money, and an adult confirms it is done. When it is, the family arcade is waiting.", "chores"),
+            ("Some things should not live in your head", "Deadlines, reminders and documents with expiry dates. Rodinka speaks up early — the passport that lapses in two months, for instance — and stays quiet overnight according to your settings.", "documents"),
+        ),
     },
 }
 
@@ -577,9 +666,9 @@ TOPICS = {
             "scenarios": (("Kroužky dětí", "Plavání, hudebka i trénink mají čas, místo, dítě a domluvený doprovod."), ("Škola a lékaři", "Třídní schůzky, preventivní prohlídky a volné dny nezůstávají jen v e-mailu jednoho rodiče."), ("Víkendy a návštěvy", "Rodinné oslavy nebo víkend u prarodičů jsou vidět dřív, než se naplánuje něco dalšího.")),
             "help_title": "Jak funguje sdílený rodinný kalendář v Rodince",
             "help_intro": "Události zapisujete do stejného rodinného prostoru. Každý dospělý tak pracuje s aktuálním plánem a nemusí čekat, až mu druhý pošle screenshot.",
-            "steps": (("Přidejte událost", "Zapište čas, místo a člena rodiny, kterého se událost týká. U pravidelného kroužku nastavte opakování."), ("Ujasněte doprovod", "Přímo u plánu je vidět, kdo dítě přiveze nebo vyzvedne. Praktická část domluvy nezůstane ve vedlejším chatu."), ("Kontrolujte společný týden", "Při plánování návštěvy nebo vlastního programu oba rodiče vidí stejné rodinné závazky.")),
+            "steps": (("Přidejte událost", "Zapište čas, místo a člena rodiny, kterého se událost týká. U pravidelného kroužku nastavte opakování."), ("Oddělte, koho se to týká, od toho, kdo to zajišťuje", "U události je zvlášť vidět účastník — třeba dítě, které jde na plavání — a zvlášť dospělý, který ho tam doveze. Jsou to dvě různé informace a Rodinka je nesbaluje do jedné."), ("Kontrolujte společný týden", "Přepnete si měsíc, týden nebo agendu podle naléhavosti. Při plánování vlastního programu oba rodiče vidí stejné rodinné závazky.")),
             "answers_title": "Co lidé hledají u rodinného kalendáře",
-            "answers": (("Jak sdílet rodinný kalendář mezi rodiči?", "Vytvořte jeden rodinný prostor a pozvěte druhého dospělého. Události zapisujte tam, ne do dvou oddělených kalendářů, a doplňte i informaci o doprovodu, pokud je pro plán důležitá."), ("Jak zorganizovat kroužky dětí?", "U každého kroužku evidujte den, čas, místo, dítě a dopravu. Pravidelné termíny nastavte jako opakované a výjimky upravujte jednotlivě, aby zůstal týdenní plán čitelný."), ("Patří do rodinného kalendáře i úkoly?", "Událost říká, kdy se něco děje. Přípravu — třeba koupit dárek nebo odevzdat přihlášku — je lepší vést jako samostatný úkol s termínem a odpovědnou osobou.")),
+            "answers": (("Jak sdílet rodinný kalendář mezi rodiči?", "Vytvořte jeden rodinný prostor a pozvěte druhého dospělého. Události zapisujte tam, ne do dvou oddělených kalendářů, a doplňte i informaci o doprovodu, pokud je pro plán důležitá."), ("Jak zorganizovat kroužky dětí?", "U každého kroužku evidujte den, čas, místo, dítě a dopravu. Pravidelné termíny nastavte jako opakované a výjimky upravujte jednotlivě, aby zůstal týdenní plán čitelný."), ("Co když jeden týden veze dítě někdo jiný?", "Změníte doprovod jen u toho jednoho termínu. Opakovaná aktivita zůstane nedotčená, takže kvůli jedné výjimce nemusíte rozbíjet celou sérii ani ji zakládat znovu."), ("Patří do rodinného kalendáře i úkoly?", "Událost říká, kdy se něco děje. Přípravu — třeba koupit dárek nebo odevzdat přihlášku — je lepší vést jako samostatný úkol s termínem a odpovědnou osobou.")),
             "card": "Kroužky, škola, návštěvy a vyzvedávání ve společném kalendáři.",
             "cta_title": "Ať se na plán nemusí nikdo znovu ptát.",
             "cta_text": "Přidejte do Rodinky první událost a domluvte rovnou i to, kdo ji zajišťuje.",
@@ -595,12 +684,12 @@ TOPICS = {
             "lead": "Mléko došlo ráno, pečivo někdo napsal do chatu a seznam na lednici zůstal doma. Společný nákupní seznam zachytí položku ve chvíli, kdy si na ni někdo vzpomene — a v obchodě je pořád aktuální.",
             "problem_title": "Největší problém nákupu bývá sběr informací",
             "problem": ("Samotné nakupování je jednoduché. Složitější je zjistit, co opravdu chybí, jestli už to někdo přidal a kdo se dnes do obchodu dostane. Papírek funguje jen doma a zpráva v chatu rychle zapadne.", "Když má domácnost jeden seznam, nezáleží tolik na tom, kdo nakonec nakoupí. Položky může průběžně doplňovat každý, hotové věci se odškrtnou a zbytek zůstane pro příště."),
-            "scenarios": (("Něco právě došlo", "Poslední mléko nebo prací gel se zapíše hned, ne až při vzpomínání před obchodem."), ("Nakupuje někdo jiný", "Partner cestou z práce otevře stejný seznam a nemusí si vyžádat novou zprávu."), ("Plánujete jídla", "Suroviny k vybraným večeřím se přidají k běžným věcem pro domácnost.")),
+            "scenarios": (("Něco právě došlo", "Poslední mléko nebo prací gel se zapíše hned, ne až při vzpomínání před obchodem."), ("V obchodě bez signálu", "Seznam funguje, i když telefon signál nechytá. Odškrtnuté položky se dorovnají, jakmile se připojení vrátí."), ("Nakupuje někdo jiný", "Partner cestou z práce otevře stejný seznam a nemusí si vyžádat novou zprávu.")),
             "help_title": "Jak mít společný nákupní seznam v Rodince",
             "help_intro": "Seznam je součástí rodinného prostoru, takže ho vidí pozvaní členové domácnosti na mobilu i počítači.",
-            "steps": (("Přidávejte průběžně", "Zapište položku ve chvíli, kdy doma dochází. Krátký aktuální seznam je užitečnější než velké vzpomínání jednou týdně."), ("Nakupujte ze stejné verze", "V obchodě položky odškrtávejte. Ostatní vidí, co je hotové, a nepřidávají stejné věci podruhé."), ("Propojte nákup s jídlem", "Při plánování večeří doplňte potřebné suroviny, aby týdenní jídelníček nezůstal jen přáním.")),
+            "steps": (("Přidávejte průběžně — psaním i hlasem", "Zapište položku ve chvíli, kdy doma dochází. Na podporovaných zařízeních nemusíte psát: řekněte, co chybí, a Rodinka z toho připraví položky, které před přidáním ještě uvidíte a můžete upravit."), ("Nakupujte ze stejné verze, i bez signálu", "V obchodě položky odškrtávejte. Ostatní vidí, co je hotové, a nepřidávají stejné věci podruhé. Seznam funguje i offline a změny se dorovnají po návratu připojení."), ("Propojte nákup s jídlem", "Při plánování večeří doplňte potřebné suroviny, aby týdenní jídelníček nezůstal jen přáním.")),
             "answers_title": "Praktické otázky ke společnému nákupu",
-            "answers": (("Jak sdílet nákupní seznam s partnerem?", "Používejte jeden seznam ve společném rodinném prostoru. Oba do něj mohou přidávat a při nákupu odškrtávat, takže není potřeba posílat pokaždé novou verzi."), ("Je lepší seznam v aplikaci, nebo na papíře?", "Papír je rychlý, když u něj právě stojíte. Sdílený seznam je ale dostupný i mimo domov a může ho aktualizovat více lidí. Pro domácnost, kde se v nákupech střídáte, bývá praktičtější."), ("Jak nezapomínat suroviny na celý týden?", "Nejdřív si rámcově naplánujte hlavní jídla a potom projděte potřebné suroviny. Přidejte jen to, co doma opravdu není; seznam tak zůstane přehledný.")),
+            "answers": (("Jak sdílet nákupní seznam s partnerem?", "Používejte jeden seznam ve společném rodinném prostoru. Oba do něj mohou přidávat a při nákupu odškrtávat, takže není potřeba posílat pokaždé novou verzi."), ("Je lepší seznam v aplikaci, nebo na papíře?", "Papír je rychlý, když u něj právě stojíte. Sdílený seznam je ale dostupný i mimo domov a může ho aktualizovat více lidí. Pro domácnost, kde se v nákupech střídáte, bývá praktičtější."), ("Dá se nákupní seznam nadiktovat?", "Na podporovaných zařízeních ano. Řeknete, co chybí, Rodinka z toho připraví jednotlivé položky a ukáže je k potvrzení — teprve pak se přidají do seznamu. Rozpoznané položky můžete před přidáním upravit nebo smazat a nahrávka ani přepis se nikam neukládají."), ("Funguje seznam i bez signálu?", "Ano. Nákupní seznam je navržený tak, aby šel používat offline: v obchodě přidáváte i odškrtáváte položky dál a změny se dorovnají, jakmile se telefon připojí.")),
             "card": "Jeden aktuální seznam doma i v obchodě, který doplňuje celá rodina.",
             "cta_title": "Příští nákup nemusí začínat hledáním zpráv.",
             "cta_text": "Otevřete v Rodince společný seznam a přidejte první věc, která doma právě dochází.",
@@ -616,12 +705,12 @@ TOPICS = {
             "lead": "Objednat dítě k zubaři, vrátit knížky, vynést koš nebo připravit věci na výlet. Když má úkol konkrétního člověka a termín, domácnost se nemusí spoléhat na opakované připomínání.",
             "problem_title": "„Musíme to udělat“ ještě není rozdělený úkol",
             "problem": ("Domácí práce bývají viditelné až ve chvíli, kdy nejsou hotové. Ještě méně viditelné jsou organizační povinnosti: hlídat přihlášku na tábor, koupit dárek nebo zavolat opraváři. Pokud je drží v hlavě jeden člověk, nese i většinu mentální zátěže.", "Smyslem rodinných úkolů není měřit výkon domácnosti. Jde o jednoduchou dohodu: co je potřeba, kdo to převezme a dokdy. Hotový úkol pak nemusí nikdo znovu kontrolovat v chatu."),
-            "scenarios": (("Drobné denní povinnosti", "Koš, nádobí nebo příprava aktovky mohou mít jednoduché a srozumitelné zadání."), ("Neviditelná organizace", "Telefonát lékaři, platba kroužku nebo nákup dárku dostanou vlastníka i termín."), ("Zapojení dětí", "Přiměřené úkoly pomáhají dětem vidět, že domácnost je společná věc, ne servis rodičů.")),
+            "scenarios": (("Drobné denní povinnosti", "Koš, nádobí nebo příprava aktovky mohou mít jednoduché a srozumitelné zadání."), ("Neviditelná organizace", "Telefonát lékaři, platba kroužku nebo nákup dárku dostanou vlastníka i termín."), ("Úkoly pro děti", "Dítě může mít vlastní přihlášení a v něm jen svoje úkoly. K úkolu lze přidat odměnu nebo kapesné a splnění potvrdí dospělý.")),
             "help_title": "Jak rozdělit domácí úkoly mezi členy rodiny",
             "help_intro": "Rodinka pomáhá převést neurčité povinnosti na malé konkrétní kroky, které jsou vidět ve společném přehledu.",
-            "steps": (("Pojmenujte výsledek", "Místo „řešit školu“ napište konkrétně „odeslat přihlášku na výlet“. Každý hned ví, co znamená hotovo."), ("Přiřaďte člověka a termín", "Úkol nemá zůstat společný tak dlouho, až ho udělá ten nejvšímavější. Domluvte odpovědnost rovnou."), ("Nechte hotové věci zmizet z hlavy", "Splnění je vidět ostatním. Není nutné posílat potvrzovací zprávu ani se opakovaně ptát.")),
+            "steps": (("Pojmenujte výsledek", "Místo „řešit školu“ napište konkrétně „odeslat přihlášku na výlet“. Každý hned ví, co znamená hotovo."), ("Přiřaďte člověka a termín", "Úkol nemá zůstat společný tak dlouho, až ho udělá ten nejvšímavější. Domluvte odpovědnost rovnou."), ("Opakujte, co se opakuje", "Vynést koš každé úterý nastavíte jednou. Jednorázová poznámka bez termínu i pravidelná povinnost jsou přitom stejný typ úkolu."), ("Nechte hotové věci zmizet z hlavy", "Splnění je vidět ostatním. U úkolů s odměnou ho dospělý potvrdí a částka se dítěti připíše.")),
             "answers_title": "Otázky k domácím úkolům a povinnostem",
-            "answers": (("Jak rozdělit domácí práce spravedlivě?", "Nezačínejte jen viditelným úklidem. Sepište i plánování, telefonáty a hlídání termínů. Rozdělení pak posuzujte podle času a zátěže, ne pouze podle počtu položek."), ("Jak zadávat úkoly dětem?", "Úkol má odpovídat věku, být konkrétní a mít dosažitelný termín. Menším dětem pomůže krátké zadání a společná kontrola; cílem je návyk a zapojení, ne dokonalost."), ("Jak připomínat úkoly bez hádek?", "Dohodněte odpovědnost a zapište ji na společné místo. Připomínka pak neznamená, že jeden rodič druhého řídí; oba se mohou opřít o stejnou dohodu.")),
+            "answers": (("Jak rozdělit domácí práce spravedlivě?", "Nezačínejte jen viditelným úklidem. Sepište i plánování, telefonáty a hlídání termínů. Rozdělení pak posuzujte podle času a zátěže, ne pouze podle počtu položek."), ("Jak zadávat úkoly dětem?", "Úkol má odpovídat věku, být konkrétní a mít dosažitelný termín. Menším dětem pomůže krátké zadání a společná kontrola; cílem je návyk a zapojení, ne dokonalost."), ("Jak připomínat úkoly bez hádek?", "Dohodněte odpovědnost a zapište ji na společné místo. Připomínka pak neznamená, že jeden rodič druhého řídí; oba se mohou opřít o stejnou dohodu."), ("Jak fungují odměny a kapesné za úkoly?", "K úkolu můžete přidat odměnu a vyžadovat schválení dospělým. Dítě úkol odškrtne, rodič potvrdí splnění a částka se připíše. Pravidelné kapesné může být podmíněné tím, že jsou domluvené úkoly hotové."), ("Dá se rychlý úkol nadiktovat?", "Na podporovaných zařízeních ano — přímo na obrazovce Dnes. Řeknete, co je potřeba udělat, Rodinka z toho připraví návrhy úkolů a ukáže je k úpravě. Nic nevznikne dřív, než potvrdíte.")),
             "card": "Konkrétní povinnosti, jasný člověk a termín pro rodiče i děti.",
             "cta_title": "Rozdělte první úkol dřív, než se ztratí v hlavě.",
             "cta_text": "Přidejte do Rodinky jednu konkrétní povinnost a domluvte, kdo ji převezme.",
@@ -640,9 +729,9 @@ TOPICS = {
             "scenarios": (("Den plný kroužků", "Na večer se naplánuje rychlé jídlo, které nevyžaduje dlouhou přípravu po návratu domů."), ("Společné víkendové vaření", "Rodina dopředu vidí, kdy je prostor na oblíbené jídlo nebo vaření s dětmi."), ("Nákup bez hádání", "Z plánovaných jídel vzniknou konkrétní suroviny ve společném nákupním seznamu.")),
             "help_title": "Jak plánovat jídlo na celý týden v Rodince",
             "help_intro": "Nejde o detailní dietní program. Rodinka spojuje jednoduchou představu o jídlech s tím, co je potřeba nakoupit.",
-            "steps": (("Podívejte se na rodinný kalendář", "Nejdřív zvažte, které dny jsou dlouhé a kdy bude někdo doma dřív. Plán pak vychází z reálného času."), ("Vyberte několik jistých jídel", "Nemusíte vyplnit každý chod. Začněte večeřemi, které běžně vaříte, a nechte prostor na zbytky nebo změnu."), ("Doplňte suroviny do nákupu", "Zkontrolujte, co už doma je, a chybějící věci přidejte do sdíleného seznamu.")),
+            "steps": (("Podívejte se na rodinný kalendář", "Nejdřív zvažte, které dny jsou dlouhé a kdy bude někdo doma dřív. Plán pak vychází z reálného času."), ("Vyberte několik jistých jídel", "Nemusíte vyplnit každý chod. Jídla, která běžně vaříte, si uložte do knihovny a příště je vyberete jedním klepnutím."), ("Nechte rodinu rozhodnout", "Když se doma nemůžete shodnout, vypište pár možností a nechte o víkendovém obědě hlasovat. Hlasovat můžou i děti."), ("Pošlete suroviny do nákupu", "U naplánovaného jídla přenesete potřebné suroviny do sdíleného nákupního seznamu jedním krokem, takže se nepřepisují ručně.")),
             "answers_title": "Časté otázky k plánování rodinného jídla",
-            "answers": (("Jak plánovat jídlo na celý týden?", "Začněte rodinným programem a vyberte hlavní jídla podle času na přípravu. Neplánujte příliš těsně; jeden volný večer pomůže využít zbytky nebo reagovat na změnu."), ("Jak zapojit rodinu do výběru jídel?", "Nechte každého navrhnout jedno oblíbené jídlo a společně rozhodněte, do kterého dne se hodí. Plán je pak méně práce pro jednoho člověka a má větší šanci, že bude fungovat."), ("Jak propojit jídelníček s nákupním seznamem?", "U každého plánovaného jídla projděte hlavní suroviny a chybějící přidejte do společného seznamu. Před nákupem ještě zkontrolujte zásoby, aby se věci zbytečně nedublovaly.")),
+            "answers": (("Jak plánovat jídlo na celý týden?", "Začněte rodinným programem a vyberte hlavní jídla podle času na přípravu. Neplánujte příliš těsně; jeden volný večer pomůže využít zbytky nebo reagovat na změnu."), ("Jak zapojit rodinu do výběru jídel?", "V Rodince můžete otevřít hlasování o jídle: vypíšete možnosti a každý člen rodiny včetně dětí dá svůj hlas. Rozhodnutí tak není na jednom člověku a plán má větší šanci, že bude fungovat."), ("Jak propojit jídelníček s nákupním seznamem?", "U každého plánovaného jídla projděte hlavní suroviny a chybějící přidejte do společného seznamu. Před nákupem ještě zkontrolujte zásoby, aby se věci zbytečně nedublovaly.")),
             "card": "Jednoduchý plán večeří podle rodinného týdne a potřebných nákupů.",
             "cta_title": "Naplánujte pár večeří a ulevte zbytku týdne.",
             "cta_text": "Otevřete Rodinku, vyberte první jídlo a doplňte, co k němu bude potřeba koupit.",
@@ -660,10 +749,10 @@ TOPICS = {
             "problem": ("Každý nástroj může fungovat dobře sám o sobě, přesto se celek rozpadá. Termín je v osobním kalendáři, seznam na papíře, úkol v hlavě a změna ve skupinovém chatu. Informace existují, jen nejsou dostupné všem ve správný okamžik.", "Dobrá aplikace pro rodinu nesmí vyžadovat správce na plný úvazek. Zápis běžné věci má být rychlý, společný přehled srozumitelný a jednotlivé části mají odpovídat situacím, které domácnost opravdu řeší."),
             "scenarios": (("Před odchodem z domu", "Jeden pohled ukáže dnešní program, doprovod a povinnosti, které nesmějí zůstat doma."), ("Během dne", "Kdokoli přidá chybějící nákup nebo označí hotový úkol, aniž by musel psát všem zvlášť."), ("Při plánování týdne", "Kalendář, jídla a domácí úkoly dávají dohromady realistický obraz toho, co rodinu čeká.")),
             "help_title": "Co najdete v aplikaci Rodinka",
-            "help_intro": "Jednotlivé části používáte podle potřeby. Jejich výhoda roste ve chvíli, kdy navazují jedna na druhou.",
-            "steps": (("Rodinný kalendář", "Společné termíny, opakované aktivity a informace o tom, kdo zajišťuje doprovod."), ("Úkoly a domácnost", "Povinnosti s konkrétním člověkem a termínem, aby organizace neležela jen na jednom rodiči."), ("Nákupy a plán jídel", "Seznam toho, co chybí, a jednoduchý výhled na rodinné večeře v jednom prostoru.")),
+            "help_intro": "Rodinka není jen kalendář s úkoly. Níže jsou tři vrstvy, ze kterých se skládá — používáte z nich jen to, co vaší domácnosti dává smysl.",
+            "steps": (("Každodenní provoz", "Obrazovka Dnes s programem a tím, co potřebuje pozornost. Sdílený kalendář s opakovanými aktivitami a doprovodem, úkoly s vlastníkem a termínem, nákupní seznam fungující i offline a plán jídel s rodinným hlasováním."), ("Rodina, ne jen logistika", "Vzpomínky s dětskými milníky a rodinnými poklady, Dnešní Rodinka s otázkou nebo anketou pro celou domácnost, dětské účty s vlastními úkoly a kapesným, rodinná herna a rodinný chat."), ("Věci, na které se zapomíná", "Připomínky respektující tiché hodiny, doklady s hlídáním platnosti, zdravotní termíny a očkování, mazlíčci s veterinární historií a Miminko na cestě pro nadcházející rozšíření rodiny.")),
             "answers_title": "Jak vybírat aplikaci pro rodinu",
-            "answers": (("Co by měla aplikace pro rodinu umět?", "Měla by pokrýt nejčastější společné situace, být rychlá na mobilu i počítači a dovolit více členům pracovat se stejnými aktuálními informacemi."), ("Nahradí Rodinka rodinný chat?", "Ne. Chat je skvělý pro rozhovor. Rodinka slouží jako přehled pro termíny, úkoly a seznamy, které potřebujete najít i později bez procházení historie zpráv."), ("Musí rodina začít používat všechny funkce?", "Nemusí. Nejpraktičtější je začít jednou oblastí, která dnes způsobuje nejvíce dotazů. Další části přidejte až tehdy, když domácnosti opravdu pomohou.")),
+            "answers": (("Co by měla aplikace pro rodinu umět?", "Měla by pokrýt nejčastější společné situace, být rychlá na mobilu i počítači a dovolit více členům pracovat se stejnými aktuálními informacemi."), ("Nahradí Rodinka rodinný chat?", "Ne. Chat je skvělý pro rozhovor. Rodinka slouží jako přehled pro termíny, úkoly a seznamy, které potřebujete najít i později bez procházení historie zpráv."), ("Musí rodina začít používat všechny funkce?", "Nemusí. Nejpraktičtější je začít jednou oblastí, která dnes způsobuje nejvíce dotazů. Další části přidejte až tehdy, když domácnosti opravdu pomohou."), ("Funguje Rodinka bez internetu?", "Části, které to nejvíc potřebují, ano. Nákupní seznam je navržený pro použití offline a řada dalších obrazovek jde přinejmenším číst. Změny se dorovnají, jakmile se zařízení připojí.")),
             "card": "Kalendář, povinnosti, nákupní seznam a jídla v jednom rodinném prostoru.",
             "cta_title": "Dejte rodinným informacím jedno známé místo.",
             "cta_text": "Rodinka funguje rovnou v prohlížeči. Vytvořte rodinu a začněte první praktickou věcí.",
@@ -682,12 +771,54 @@ TOPICS = {
             "scenarios": (("Seznamy na několika místech", "Výbava na cesty, spaní nebo první dny nemusí být rozdělená mezi papír, poznámky a chat."), ("Jména v chatu", "Nápady na jména zůstávají pohromadě s preferencemi zapojených dospělých."), ("Co už je připravené?", "Oba rodiče vidí stejný přehled a mohou navázat tam, kde ten druhý skončil.")),
             "help_title": "Jak Rodinka pomůže s přípravou na miminko",
             "help_intro": "Miminko na cestě je organizační část Rodinky, ne zdravotní aplikace. Nabízí lehkou orientaci a praktický prostor pro společné přípravy.",
-            "steps": (("Cesta po týdnech", "Orientační týden, jednoduchý průběh a vybrané momenty pomohou zasadit přípravy do času. Nejde o medicínské měření ani hodnocení zdravotního stavu."), ("Přípravy podle témat", "Inspiraci najdete v oblastech na cesty, spaní, krmení a kojení, hygiena a přebalování, oblečení, doma, porodnice a první dny nebo administrativa. Co nepotřebujete, můžete nechat být."), ("Jména, která řešíte spolu", "Zapisujte si kandidátní jména, označte favority a sdílejte preference jako líbí se mi, možná nebo spíš ne. Nejde o soutěž ani skóre.")),
+            "steps": (("Cesta po týdnech", "Orientační týden, jednoduchý průběh a vybrané momenty pomohou zasadit přípravy do času. Nejde o medicínské měření ani hodnocení zdravotního stavu."), ("Přípravy podle témat", "Inspiraci najdete v oblastech na cesty, spaní, krmení a kojení, hygiena a přebalování, oblečení, doma, porodnice a první dny nebo administrativa. Z položky checklistu navíc uděláte běžný úkol, nákup nebo událost, takže příprava nezůstane v odděleném seznamu."), ("Jména, která řešíte spolu", "Zapisujte si kandidátní jména, označte favority a sdílejte preference jako líbí se mi, možná nebo spíš ne. Nejde o soutěž ani skóre.")),
             "answers_title": "Časté otázky k přípravě na miminko",
             "answers": (("Je Rodinka těhotenská aplikace?", "Ne. Rodinka nenahrazuje zdravotní aplikaci ani doporučení lékaře. Pomáhá rodině s orientační cestou a praktickou organizací příprav."), ("Musíme použít celý checklist?", "Nemusíte. Seznam je inspirace a přehled, ne povinný nákupní plán. Každá rodina si ponechá jen to, co odpovídá jejím potřebám."), ("Můžeme společně vybírat jméno?", "Ano. Můžete si vést kandidátní jména, označit favority a u každého zachytit preference zapojených dospělých bez vyhlašování vítěze."), ("Uvidí informace automaticky děti?", "Ne. Část Miminko na cestě je určená dospělým v rodině, takže přípravy a citlivé informace zůstávají v jejich společném prostoru.")),
             "card": "Cesta po týdnech, praktické přípravy a společný výběr jména na jednom místě.",
             "cta_title": "Připravujte se na nového člena rodiny společně.",
             "cta_text": "Otevřete Rodinku, přidejte Miminko na cestě a začněte tím, co chcete mít připravené jako první.",
+        },
+        "memories": {
+            "title": "Rodinné vzpomínky a dětské milníky na jednom místě | Rodinka",
+            "description": "Dětské milníky, rodinné poklady a fotografie na jedné časové ose. Vzpomínku přiřadíte členovi rodiny a z milníku si můžete vytisknout kartičku.",
+            "og_title": "Rodinné vzpomínky, které nezapadnou v galerii telefonu",
+            "og_description": "Jedna společná kronika rodiny: dětské milníky, poklady a okamžiky, ke kterým se chcete vracet.",
+            "og_alt": "Rodinné vzpomínky a dětské milníky v aplikaci Rodinka",
+            "eyebrow": "RODINNÁ PAMĚŤ",
+            "h1": "Rodinné vzpomínky a dětské milníky, které nezapadnou",
+            "lead": "První krok, vysvědčení, kamínek z dovolené i fotka, u které se pokaždé smějete. Většina těchhle věcí skončí v galerii telefonu jednoho rodiče mezi tisíci dalšími snímky. Rodinka jim dává společné místo, kde je najde celá rodina.",
+            "problem_title": "Vzpomínky se neztrácejí naráz, ale postupně",
+            "problem": ("Fotek přibývá rychleji, než stíháme třídit. Za dva roky se k prvnímu kroku nedostanete přes dovolenou, Vánoce a stovky náhodných snímků — a příběh k té fotce zná jen ten, kdo ji vyfotil. Druhý rodič často nemá přístup vůbec.", "Rodinná paměť nepotřebuje další galerii. Potřebuje pár vět u fotky, datum, jméno člověka, kterého se to týká, a jedno místo, kam se dá vrátit. Rodinka proto vede vzpomínky jako společnou kroniku, ne jako úložiště souborů."),
+            "scenarios": (("Dětské milníky", "První krok, první slovo, první den ve škole. Zapíšete, co se stalo a kdy, a přidáte fotku."), ("Rodinné poklady", "Obrázek, mušle z výletu nebo dopis od babičky. Fotografie, krátký popis a datum z nich udělají exponát rodinné sbírky."), ("Společná časová osa", "Milníky i poklady se řadí chronologicky, takže je vidět, jak šel rodině rok za rokem.")),
+            "help_title": "Jak Rodinka vede rodinné vzpomínky",
+            "help_intro": "Vzpomínky jsou jedna sekce, ne rozcestník. Všechny typy se prolínají na jedné ose a každou položku můžete přiřadit konkrétnímu členovi rodiny.",
+            "steps": (("Přidejte vzpomínku", "Fotografie, krátký popis a datum stačí. Nic dalšího není povinné a uložení nic neblokuje."), ("Přiřaďte ji člověku", "U milníku i pokladu je vidět, koho se týká. Každé dítě tak má vlastní časovou osu v rámci rodinné kroniky."), ("Vracejte se k nim", "Na obrazovce Dnes se občas připomene, co se stalo v tentýž den v minulých letech. Z milníku si můžete připravit kartičku k vytištění.")),
+            "answers_title": "Časté otázky o rodinných vzpomínkách",
+            "answers": (("Je Rodinka náhrada za fotogalerii nebo cloud?", "Ne. Rodinka není úložiště na všechny fotky z telefonu a nesnaží se jím být. Je to místo pro vybrané okamžiky, které chcete mít popsané, zařazené v čase a dostupné celé rodině — ne pro zálohu celé galerie."), ("Sledují dětské milníky, jestli je dítě „napřed“ nebo „pozadu“?", "Ne. Milník je vzpomínka na něco, co se stalo, ne tvrzení o tom, kdy by to dítě mělo umět. Rodinka proto nemá očekávaný věk, normy ani porovnávání dětí mezi sebou a nikdy neupozorní na to, že nějaký milník chybí."), ("Můžou vzpomínky vidět i děti?", "Ano, kronika je pro celou rodinu ke čtení. Zakládání a úpravy zůstávají na dospělých, takže se dítě může dívat, ale nic nesmaže.")),
+            "card": "Dětské milníky, poklady a rodinné okamžiky na jedné časové ose.",
+            "cta_title": "Dejte rodinným vzpomínkám společné místo.",
+            "cta_text": "Otevřete v Rodince Vzpomínky a přidejte první milník nebo poklad. Stačí fotka, pár vět a datum.",
+        },
+        "documents": {
+            "title": "Hlídání platnosti dokladů celé rodiny | Rodinka",
+            "description": "Evidujte pasy, občanky a další doklady s datem platnosti. Rodinka pošle připomínku s předstihem, takže končící doklad nezjistíte až před dovolenou.",
+            "og_title": "Platnost dokladů, kterou nemusíte nosit v hlavě",
+            "og_description": "U každého dokladu je vidět, komu patří a do kdy platí. Připomínka přijde včas, ne na poslední chvíli.",
+            "og_alt": "Přehled rodinných dokladů a jejich platnosti v aplikaci Rodinka",
+            "eyebrow": "DOKLADY A JEJICH PLATNOST",
+            "h1": "Platnost pasů a dokladů celé rodiny na jednom místě",
+            "lead": "Pas se nedá vyřídit ze dne na den. Přesto se na jeho platnost obvykle přijde ve chvíli, kdy je zarezervovaná dovolená. U čtyřčlenné rodiny je to osm dokladů a osm různých dat, která si nikdo nepamatuje.",
+            "problem_title": "Termín, na který si nikdo nevzpomene včas",
+            "problem": ("Doklady mají jednu nepříjemnou vlastnost: mezi vyřízením a další potřebou uplyne pět nebo deset let. Připomínka v kalendáři se za tu dobu ztratí, telefon se vymění a papír ve šuplíku nikdo nečte. Platnost se tak nejčastěji řeší pod tlakem.", "Přitom stačí zapsat dvě informace — komu doklad patří a do kdy platí — a nechat je hlídat něco jiného než vlastní paměť. Rodinka je proto vede u rodiny, ne u jednoho člověka, a ozve se dřív, než je pozdě."),
+            "scenarios": (("Před dovolenou", "Platnost pasů celé rodiny zkontrolujete na jedné obrazovce, ne přebíráním šuplíku."), ("Doklady dětí", "Dětské pasy a průkazy mají kratší platnost než ty vaše. U každého je vidět, komu patří."), ("Nejen doklady totožnosti", "Řidičský průkaz, technická nebo kartička pojišťovny — hlídat se dá cokoli, co má datum platnosti.")),
+            "help_title": "Jak hlídání platnosti v Rodince funguje",
+            "help_intro": "Doklady jsou v Rodince dostupné jen dospělým členům rodiny. Model je postavený kolem jediné otázky: co brzy přestane platit a čí to je.",
+            "steps": (("Zapište doklad", "Název, majitel a datum platnosti. Volitelně datum vydání a poznámka, kde doklad fyzicky je."), ("Nechte si připomenout", "Rodinka pošle upozornění s předstihem, takže na vyřízení zbývá čas. Připomínky respektují tiché hodiny, které si nastavíte."), ("Mějte přehled o stavu", "Doklady jsou rozdělené podle toho, čemu brzy končí platnost, co už prošlo a co je v pořádku.")),
+            "answers_title": "Časté otázky o dokladech a připomínkách",
+            "answers": (("Kdy má připomínka na končící doklad přijít?", "U cestovního pasu nebo občanského průkazu se vyplatí vědět o blížícím se konci platnosti několik měsíců dopředu — vyřízení má svou lhůtu a před prázdninami bývají fronty delší. Rodinka proto upozorňuje s předstihem, ne až v posledním týdnu."), ("Vidí doklady i děti?", "Ne. Doklady jsou v Rodince dostupné jen dospělým členům rodiny. Dítě se na tuto část aplikace nedostane."), ("Musím do Rodinky nahrávat sken dokladu?", "Ne. K hlídání platnosti stačí název, majitel a datum — sken není podmínkou. Rodinka je postavená na tom, aby vám připomněla termín, ne aby nahradila místo, kde doklady fyzicky máte.")),
+            "card": "Pasy, občanky a další doklady s datem platnosti a včasnou připomínkou.",
+            "cta_title": "Ať vás končící pas nepřekvapí před odletem.",
+            "cta_text": "Přidejte do Rodinky první doklad s datem platnosti a nechte připomenutí na aplikaci.",
         },
     },
     "sk": {},
@@ -721,8 +852,8 @@ TOPICS["sk"] = {
         "problem_title": "Samotný termín často nestačí", "problem": ("Rodinný program nie je iba zoznam hodín. Pri detských aktivitách treba vedieť aj to, koho sa udalosť týka, kam sa ide a ktorý dospelý zabezpečí cestu. Ak časť informácie zostane v chate, kalendár nepomôže naplno.", "Spoločný kalendár má byť rýchly pri rannej kontrole aj plánovaní týždňa. Pravidelné krúžky zapíšete raz, jednorazovú zmenu uvidia všetci a rodina nemusí udržiavať viac verzií plánu."),
         "scenarios": (("Krúžky detí", "Plávanie, hudobná aj tréning majú čas, miesto, dieťa a dohodnutý odvoz."), ("Škola a lekári", "Rodičovské združenia, preventívne prehliadky a voľné dni nezostanú iba v e-maile jedného rodiča."), ("Víkendy a návštevy", "Rodinné oslavy či víkend u starých rodičov sú viditeľné skôr, než niekto naplánuje ďalšiu akciu.")),
         "help_title": "Ako funguje zdieľaný rodinný kalendár v Rodinke", "help_intro": "Udalosti zapisujete do jedného rodinného priestoru. Každý dospelý pracuje s aktuálnym plánom a nemusí čakať na novú snímku obrazovky.",
-        "steps": (("Pridajte udalosť", "Zapíšte čas, miesto a člena rodiny, ktorého sa týka. Pri pravidelnom krúžku nastavte opakovanie."), ("Ujasnite odvoz", "Pri pláne je vidieť, kto dieťa privezie alebo vyzdvihne. Praktická dohoda nezostane vo vedľajšom chate."), ("Kontrolujte spoločný týždeň", "Pri plánovaní návštevy alebo vlastného programu obaja rodičia vidia rovnaké rodinné záväzky.")),
-        "answers_title": "Čo ľudia hľadajú pri rodinnom kalendári", "answers": (("Ako zdieľať rodinný kalendár medzi rodičmi?", "Vytvorte spoločný rodinný priestor a pozvite druhého dospelého. Udalosti zapisujte tam a pri aktivitách doplňte aj dohodnutý odvoz."), ("Ako zorganizovať krúžky detí?", "Pri každom krúžku evidujte deň, čas, miesto, dieťa a dopravu. Pravidelné termíny nastavte ako opakované a výnimky upravujte samostatne."), ("Patria do rodinného kalendára aj úlohy?", "Udalosť hovorí, kedy sa niečo deje. Prípravu, napríklad kúpiť darček alebo odovzdať prihlášku, veďte ako úlohu s termínom a zodpovednou osobou.")),
+        "steps": (("Pridajte udalosť", "Zapíšte čas, miesto a člena rodiny, ktorého sa týka. Pri pravidelnom krúžku nastavte opakovanie."), ("Oddeľte, koho sa to týka, od toho, kto to zabezpečí", "Pri udalosti je zvlášť vidieť účastníka — napríklad dieťa, ktoré ide na plávanie — a zvlášť dospelého, ktorý ho tam odvezie. Sú to dve rôzne informácie a Rodinka ich nezlučuje do jednej."), ("Kontrolujte spoločný týždeň", "Prepnete si mesiac, týždeň alebo agendu podľa naliehavosti. Pri plánovaní vlastného programu obaja rodičia vidia rovnaké rodinné záväzky.")),
+        "answers_title": "Čo ľudia hľadajú pri rodinnom kalendári", "answers": (("Ako zdieľať rodinný kalendár medzi rodičmi?", "Vytvorte spoločný rodinný priestor a pozvite druhého dospelého. Udalosti zapisujte tam a pri aktivitách doplňte aj dohodnutý odvoz."), ("Ako zorganizovať krúžky detí?", "Pri každom krúžku evidujte deň, čas, miesto, dieťa a dopravu. Pravidelné termíny nastavte ako opakované a výnimky upravujte samostatne."), ("Čo keď jeden týždeň vezie dieťa niekto iný?", "Zmeníte odvoz len pri tom jednom termíne. Opakovaná aktivita zostane nedotknutá, takže kvôli jednej výnimke nemusíte rozbíjať celú sériu ani ju zakladať nanovo."), ("Patria do rodinného kalendára aj úlohy?", "Udalosť hovorí, kedy sa niečo deje. Prípravu, napríklad kúpiť darček alebo odovzdať prihlášku, veďte ako úlohu s termínom a zodpovednou osobou.")),
         "card": "Krúžky, škola, návštevy a vyzdvihovanie v spoločnom kalendári.", "cta_title": "Nech sa na plán nemusí nikto znovu pýtať.", "cta_text": "Pridajte do Rodinky prvú udalosť a dohodnite rovno aj to, kto ju zabezpečí.",
     },
     "shopping": {
@@ -730,10 +861,10 @@ TOPICS["sk"] = {
         "og_title": "Spoločný nákupný zoznam, ktorý máte vždy poruke", "og_description": "Pridávajte, čo doma dochádza, a nakupujte z rovnakého aktuálneho zoznamu.", "og_alt": "Zdieľaný rodinný nákupný zoznam v aplikácii Rodinka",
         "eyebrow": "NÁKUPY BEZ ZABUDNUTÝCH SPRÁV", "h1": "Zdieľaný nákupný zoznam, do ktorého môže pridať každý", "lead": "Mlieko sa minulo ráno, pečivo niekto napísal do chatu a zoznam na chladničke zostal doma. Spoločný nákupný zoznam zachytí položku vtedy, keď si na ňu niekto spomenie — a v obchode zostáva aktuálny.",
         "problem_title": "Najväčším problémom nákupu býva zber informácií", "problem": ("Samotné nakupovanie je jednoduché. Ťažšie je zistiť, čo naozaj chýba, či to už niekto pridal a kto sa dnes dostane do obchodu. Papierik funguje iba doma a správa v chate rýchlo zapadne.", "Keď má domácnosť jeden zoznam, nezáleží na tom, kto napokon nakúpi. Položky môže pridávať každý, hotové veci sa odškrtnú a zvyšok zostane na neskôr."),
-        "scenarios": (("Niečo sa práve minulo", "Posledné mlieko alebo prací gél sa zapíšu hneď, nie až pri spomínaní pred obchodom."), ("Nakupuje niekto iný", "Partner cestou z práce otvorí rovnaký zoznam a nemusí žiadať ďalšiu správu."), ("Plánujete jedlá", "Suroviny k vybraným večeriam sa pridajú k bežným veciam pre domácnosť.")),
+        "scenarios": (("Niečo sa práve minulo", "Posledné mlieko alebo prací gél sa zapíšu hneď, nie až pri spomínaní pred obchodom."), ("V obchode bez signálu", "Zoznam funguje, aj keď telefón nechytá signál. Odškrtnuté položky sa dorovnajú, len čo sa pripojenie vráti."), ("Nakupuje niekto iný", "Partner cestou z práce otvorí rovnaký zoznam a nemusí žiadať ďalšiu správu.")),
         "help_title": "Ako mať spoločný nákupný zoznam v Rodinke", "help_intro": "Zoznam je súčasťou rodinného priestoru, preto ho pozvaní členovia domácnosti vidia v mobile aj počítači.",
-        "steps": (("Pridávajte priebežne", "Položku zapíšte vo chvíli, keď doma dochádza. Krátky aktuálny zoznam je užitočnejší než veľké spomínanie raz za týždeň."), ("Nakupujte z rovnakej verzie", "V obchode položky odškrtávajte. Ostatní vidia, čo je hotové, a nepridajú tú istú vec druhýkrát."), ("Prepojte nákup s jedlom", "Pri plánovaní večerí doplňte potrebné suroviny, aby týždenný plán nezostal iba želaním.")),
-        "answers_title": "Praktické otázky k spoločnému nákupu", "answers": (("Ako zdieľať nákupný zoznam s partnerom?", "Používajte jeden zoznam v spoločnom rodinnom priestore. Obaja doň môžete pridávať aj odškrtávať, takže netreba posielať novú verziu."), ("Je lepší zoznam v aplikácii alebo na papieri?", "Papier je rýchly pri chladničke. Zdieľaný zoznam je však dostupný mimo domu a aktualizuje ho viac ľudí, čo pomáha, keď sa v nákupoch striedate."), ("Ako nezabudnúť suroviny na celý týždeň?", "Najprv rámcovo naplánujte hlavné jedlá a potom prejdite potrebné suroviny. Pridajte iba to, čo doma naozaj nie je.")),
+        "steps": (("Pridávajte priebežne — písaním aj hlasom", "Položku zapíšte vo chvíli, keď doma dochádza. Na podporovaných zariadeniach nemusíte písať: povedzte, čo chýba, a Rodinka z toho pripraví položky, ktoré pred pridaním ešte uvidíte a môžete upraviť."), ("Nakupujte z rovnakej verzie, aj bez signálu", "V obchode položky odškrtávajte. Ostatní vidia, čo je hotové, a nepridajú tú istú vec druhýkrát. Zoznam funguje aj offline a zmeny sa dorovnajú po návrate pripojenia."), ("Prepojte nákup s jedlom", "Pri plánovaní večerí doplňte potrebné suroviny, aby týždenný plán nezostal iba želaním.")),
+        "answers_title": "Praktické otázky k spoločnému nákupu", "answers": (("Ako zdieľať nákupný zoznam s partnerom?", "Používajte jeden zoznam v spoločnom rodinnom priestore. Obaja doň môžete pridávať aj odškrtávať, takže netreba posielať novú verziu."), ("Je lepší zoznam v aplikácii alebo na papieri?", "Papier je rýchly pri chladničke. Zdieľaný zoznam je však dostupný mimo domu a aktualizuje ho viac ľudí, čo pomáha, keď sa v nákupoch striedate."), ("Dá sa nákupný zoznam nadiktovať?", "Na podporovaných zariadeniach áno. Poviete, čo chýba, Rodinka z toho pripraví jednotlivé položky a ukáže ich na potvrdenie — až potom sa pridajú do zoznamu. Rozpoznané položky môžete pred pridaním upraviť alebo zmazať a nahrávka ani prepis sa nikam neukladajú."), ("Funguje zoznam aj bez signálu?", "Áno. Nákupný zoznam je navrhnutý tak, aby sa dal používať offline: v obchode pridávate aj odškrtávate položky ďalej a zmeny sa dorovnajú, len čo sa telefón pripojí.")),
         "card": "Jeden aktuálny zoznam doma aj v obchode, ktorý dopĺňa celá rodina.", "cta_title": "Ďalší nákup nemusí začať hľadaním správ.", "cta_text": "Otvorte v Rodinke spoločný zoznam a pridajte prvú vec, ktorá doma práve dochádza.",
     },
     "chores": {
@@ -741,10 +872,10 @@ TOPICS["sk"] = {
         "og_title": "Domáce povinnosti bez nekonečného pripomínania", "og_description": "Konkrétne rodinné úlohy, jasná zodpovednosť a prehľad o tom, čo je hotové.", "og_alt": "Úlohy pre rodinu a rozdelené domáce povinnosti v Rodinke",
         "eyebrow": "KTO ČO DOMA ZARIADI", "h1": "Úlohy pre rodinu, ktoré nenosí v hlave iba jeden rodič", "lead": "Objednať dieťa k zubárovi, vrátiť knihy, vyniesť kôš alebo pripraviť veci na výlet. Keď má úloha konkrétneho človeka a termín, domácnosť sa nemusí spoliehať na opakované pripomínanie.",
         "problem_title": "„Musíme to urobiť“ ešte nie je rozdelená úloha", "problem": ("Domáce práce si často všimneme až vtedy, keď nie sú hotové. Ešte menej viditeľné sú organizačné povinnosti: sledovať prihlášku do tábora, kúpiť darček či zavolať opravárovi. Ak ich drží jeden človek, nesie aj väčšinu mentálnej záťaže.", "Rodinné úlohy nemajú merať výkon domácnosti. Ide o jednoduchú dohodu: čo treba urobiť, kto to prevezme a dokedy. Hotovú vec potom netreba kontrolovať v chate."),
-        "scenarios": (("Drobné denné povinnosti", "Kôš, riad alebo príprava školskej tašky môžu mať jednoduché a zrozumiteľné zadanie."), ("Neviditeľná organizácia", "Telefonát lekárovi, platba za krúžok alebo nákup darčeka dostanú človeka aj termín."), ("Zapojenie detí", "Primerané úlohy ukazujú deťom, že domácnosť je spoločná vec, nie servis rodičov.")),
+        "scenarios": (("Drobné denné povinnosti", "Kôš, riad alebo príprava školskej tašky môžu mať jednoduché a zrozumiteľné zadanie."), ("Neviditeľná organizácia", "Telefonát lekárovi, platba za krúžok alebo nákup darčeka dostanú človeka aj termín."), ("Úlohy pre deti", "Dieťa môže mať vlastné prihlásenie a v ňom len svoje úlohy. K úlohe sa dá pridať odmena alebo vreckové a splnenie potvrdí dospelý.")),
         "help_title": "Ako rozdeliť domáce úlohy medzi členov rodiny", "help_intro": "Rodinka pomáha premeniť neurčité povinnosti na malé konkrétne kroky, ktoré vidno v spoločnom prehľade.",
-        "steps": (("Pomenujte výsledok", "Namiesto „riešiť školu“ napíšte „odoslať prihlášku na výlet“. Každý vie, čo znamená hotovo."), ("Priraďte človeka a termín", "Úloha nemá zostať spoločná dovtedy, kým ju urobí ten najvšímavejší. Zodpovednosť si dohodnite rovno."), ("Nechajte hotové veci odísť z hlavy", "Splnenie vidia ostatní. Netreba posielať potvrdzujúcu správu ani sa opakovane pýtať.")),
-        "answers_title": "Otázky k domácim úlohám a povinnostiam", "answers": (("Ako rozdeliť domáce práce spravodlivo?", "Nezačínajte iba viditeľným upratovaním. Spíšte aj plánovanie, telefonáty a sledovanie termínov. Rozdelenie potom posudzujte podľa času a záťaže."), ("Ako zadávať úlohy deťom?", "Úloha má zodpovedať veku, byť konkrétna a mať dosiahnuteľný termín. Cieľom je návyk a zapojenie, nie dokonalosť."), ("Ako pripomínať úlohy bez hádok?", "Dohodnite zodpovednosť a zapíšte ju na spoločné miesto. Obaja rodičia sa tak môžu oprieť o rovnakú dohodu, nie o pamäť jedného z nich.")),
+        "steps": (("Pomenujte výsledok", "Namiesto „riešiť školu“ napíšte „odoslať prihlášku na výlet“. Každý vie, čo znamená hotovo."), ("Priraďte človeka a termín", "Úloha nemá zostať spoločná dovtedy, kým ju urobí ten najvšímavejší. Zodpovednosť si dohodnite rovno."), ("Opakujte, čo sa opakuje", "Vyniesť kôš každý utorok nastavíte raz. Jednorazová poznámka bez termínu aj pravidelná povinnosť sú pritom rovnaký typ úlohy."), ("Nechajte hotové veci odísť z hlavy", "Splnenie vidia ostatní. Pri úlohách s odmenou ho dospelý potvrdí a suma sa dieťaťu pripíše.")),
+        "answers_title": "Otázky k domácim úlohám a povinnostiam", "answers": (("Ako rozdeliť domáce práce spravodlivo?", "Nezačínajte iba viditeľným upratovaním. Spíšte aj plánovanie, telefonáty a sledovanie termínov. Rozdelenie potom posudzujte podľa času a záťaže."), ("Ako zadávať úlohy deťom?", "Úloha má zodpovedať veku, byť konkrétna a mať dosiahnuteľný termín. Cieľom je návyk a zapojenie, nie dokonalosť."), ("Ako pripomínať úlohy bez hádok?", "Dohodnite zodpovednosť a zapíšte ju na spoločné miesto. Obaja rodičia sa tak môžu oprieť o rovnakú dohodu, nie o pamäť jedného z nich."), ("Ako fungujú odmeny a vreckové za úlohy?", "K úlohe môžete pridať odmenu a vyžadovať schválenie dospelým. Dieťa úlohu odškrtne, rodič potvrdí splnenie a suma sa pripíše. Pravidelné vreckové môže byť podmienené tým, že sú dohodnuté úlohy hotové."), ("Dá sa rýchla úloha nadiktovať?", "Na podporovaných zariadeniach áno — priamo na obrazovke Dnes. Poviete, čo treba spraviť, Rodinka z toho pripraví návrhy úloh a ukáže ich na úpravu. Nič nevznikne skôr, než potvrdíte.")),
         "card": "Konkrétne povinnosti, jasný človek a termín pre rodičov aj deti.", "cta_title": "Rozdeľte prvú úlohu skôr, než sa stratí v hlave.", "cta_text": "Pridajte do Rodinky jednu konkrétnu povinnosť a dohodnite sa, kto ju prevezme.",
     },
     "meals": {
@@ -754,8 +885,8 @@ TOPICS["sk"] = {
         "problem_title": "Najťažšie často nie je varenie, ale rozhodovanie", "problem": ("Otázka „čo bude na večeru?“ prichádza zvyčajne vtedy, keď je hlad a málo času. Bez rámcového plánu sa častejšie nakupuje narýchlo, niektoré suroviny chýbajú a iné sa nestihnú využiť.", "Rodinný plán má rešpektovať rytmus týždňa. Po náročnom popoludní môže počítať s rýchlym jedlom, vo voľnejší deň s dlhším varením. Zmena plánu nie je zlyhanie, iba aktualizácia spoločného prehľadu."),
         "scenarios": (("Deň plný krúžkov", "Na večer sa naplánuje rýchle jedlo, ktoré po návrate domov nevyžaduje dlhú prípravu."), ("Spoločné víkendové varenie", "Rodina vopred vidí, kedy je priestor na obľúbené jedlo alebo varenie s deťmi."), ("Nákup bez hádania", "Z plánovaných jedál vzniknú konkrétne suroviny v spoločnom nákupnom zozname.")),
         "help_title": "Ako plánovať jedlo na celý týždeň v Rodinke", "help_intro": "Nejde o podrobný diétny program. Rodinka spája jednoduchú predstavu o jedlách s tým, čo treba nakúpiť.",
-        "steps": (("Pozrite si rodinný kalendár", "Najskôr zvážte, ktoré dni sú dlhé a kedy bude niekto doma skôr. Plán potom vychádza zo skutočného času."), ("Vyberte niekoľko istých jedál", "Nemusíte vyplniť každý chod. Začnite večerami, ktoré bežne varíte, a nechajte priestor na zvyšky či zmenu."), ("Doplňte suroviny do nákupu", "Skontrolujte, čo už doma máte, a chýbajúce veci pridajte do zdieľaného zoznamu.")),
-        "answers_title": "Časté otázky k plánovaniu rodinného jedla", "answers": (("Ako plánovať jedlo na celý týždeň?", "Začnite rodinným programom a hlavné jedlá vyberte podľa času na prípravu. Jeden voľný večer pomôže využiť zvyšky alebo reagovať na zmenu."), ("Ako zapojiť rodinu do výberu jedál?", "Nech každý navrhne jedno obľúbené jedlo a spoločne rozhodnite, do ktorého dňa sa hodí. Plán potom nie je iba prácou jedného človeka."), ("Ako prepojiť jedálny lístok s nákupným zoznamom?", "Pri každom plánovanom jedle prejdite hlavné suroviny a chýbajúce pridajte do spoločného zoznamu. Pred nákupom ešte skontrolujte zásoby.")),
+        "steps": (("Pozrite si rodinný kalendár", "Najskôr zvážte, ktoré dni sú dlhé a kedy bude niekto doma skôr. Plán potom vychádza zo skutočného času."), ("Vyberte niekoľko istých jedál", "Nemusíte vyplniť každý chod. Jedlá, ktoré bežne varíte, si uložte do knižnice a nabudúce ich vyberiete jedným klepnutím."), ("Nechajte rodinu rozhodnúť", "Keď sa doma neviete zhodnúť, vypíšte pár možností a nechajte o víkendovom obede hlasovať. Hlasovať môžu aj deti."), ("Pošlite suroviny do nákupu", "Pri naplánovanom jedle prenesiete potrebné suroviny do zdieľaného nákupného zoznamu jedným krokom, takže sa neprepisujú ručne.")),
+        "answers_title": "Časté otázky k plánovaniu rodinného jedla", "answers": (("Ako plánovať jedlo na celý týždeň?", "Začnite rodinným programom a hlavné jedlá vyberte podľa času na prípravu. Jeden voľný večer pomôže využiť zvyšky alebo reagovať na zmenu."), ("Ako zapojiť rodinu do výberu jedál?", "V Rodinke môžete otvoriť hlasovanie o jedle: vypíšete možnosti a každý člen rodiny vrátane detí dá svoj hlas. Rozhodnutie tak nie je na jednom človeku a plán má väčšiu šancu fungovať."), ("Ako prepojiť jedálny lístok s nákupným zoznamom?", "Pri každom plánovanom jedle prejdite hlavné suroviny a chýbajúce pridajte do spoločného zoznamu. Pred nákupom ešte skontrolujte zásoby.")),
         "card": "Jednoduchý plán večerí podľa rodinného týždňa a potrebných nákupov.", "cta_title": "Naplánujte pár večerí a uľahčite zvyšok týždňa.", "cta_text": "Otvorte Rodinku, vyberte prvé jedlo a doplňte, čo k nemu treba kúpiť.",
     },
     "app": {
@@ -764,9 +895,9 @@ TOPICS["sk"] = {
         "eyebrow": "APLIKÁCIA PRE KAŽDODENNÝ CHOD RODINY", "h1": "Aplikácia pre rodinu, ktorá spája plán aj domáce povinnosti", "lead": "Kalendár ukazuje termíny, no nie vždy nákup. Chat obsahuje dohodu, ale o týždeň sa v ňom ťažko hľadá. Rodinka spája praktické časti rodinného života, aby každý vedel, kam sa pozrieť.",
         "problem_title": "Rodina nepotrebuje viac miest, ale menej hľadania", "problem": ("Každý nástroj môže fungovať dobre, no celok sa aj tak rozpadá. Termín je v osobnom kalendári, zoznam na papieri, úloha v hlave a zmena v skupinovom chate. Informácie existujú, iba nie sú dostupné všetkým v správnej chvíli.", "Dobrá aplikácia pre rodinu nemá potrebovať správcu na plný úväzok. Bežná vec sa zapíše rýchlo, spoločný prehľad je zrozumiteľný a jednotlivé časti zodpovedajú situáciám zo skutočnej domácnosti."),
         "scenarios": (("Pred odchodom z domu", "Jeden pohľad ukáže dnešný program, odvoz aj povinnosti, ktoré nesmú zostať doma."), ("Počas dňa", "Ktokoľvek pridá chýbajúci nákup alebo označí hotovú úlohu bez správy pre všetkých."), ("Pri plánovaní týždňa", "Kalendár, jedlá a domáce úlohy spolu vytvoria reálny obraz toho, čo rodinu čaká.")),
-        "help_title": "Čo nájdete v aplikácii Rodinka", "help_intro": "Jednotlivé časti používate podľa potreby. Najväčší úžitok majú vo chvíli, keď na seba prirodzene nadväzujú.",
-        "steps": (("Rodinný kalendár", "Spoločné termíny, opakované aktivity a informácie o tom, kto zabezpečuje odvoz."), ("Úlohy a domácnosť", "Povinnosti s konkrétnym človekom a termínom, aby organizácia neležala iba na jednom rodičovi."), ("Nákupy a plán jedál", "Zoznam toho, čo chýba, a jednoduchý výhľad na rodinné večere v jednom priestore.")),
-        "answers_title": "Ako vyberať aplikáciu pre rodinu", "answers": (("Čo by mala vedieť aplikácia pre rodinu?", "Mala by pokrývať najčastejšie spoločné situácie, fungovať rýchlo v mobile aj počítači a dovoliť viacerým členom pracovať s rovnakými aktuálnymi informáciami."), ("Nahradí Rodinka rodinný chat?", "Nie. Chat je výborný na rozhovor. Rodinka je prehľad termínov, úloh a zoznamov, ktoré chcete nájsť aj neskôr bez prechádzania histórie správ."), ("Musí rodina používať všetky funkcie?", "Nemusí. Začnite oblasťou, ktorá dnes spôsobuje najviac otázok. Ďalšie časti pridajte až vtedy, keď domácnosti naozaj pomôžu.")),
+        "help_title": "Čo nájdete v aplikácii Rodinka", "help_intro": "Rodinka nie je len kalendár s úlohami. Nižšie sú tri vrstvy, z ktorých sa skladá — použijete z nich len to, čo vašej domácnosti dáva zmysel.",
+        "steps": (("Každodenná prevádzka", "Obrazovka Dnes s programom a tým, čo potrebuje pozornosť. Zdieľaný kalendár s opakovanými aktivitami a odvozom, úlohy s vlastníkom a termínom, nákupný zoznam fungujúci aj offline a plán jedál s rodinným hlasovaním."), ("Rodina, nie iba logistika", "Spomienky s detskými míľnikmi a rodinnými pokladmi, Dnešná Rodinka s otázkou alebo anketou pre celú domácnosť, detské účty s vlastnými úlohami a vreckovým, rodinná herňa a rodinný chat."), ("Veci, na ktoré sa zabúda", "Pripomienky rešpektujúce tiché hodiny, doklady so strážením platnosti, zdravotné termíny a očkovania, mazlíčikovia s veterinárnou históriou a Bábätko na ceste pre nadchádzajúce rozšírenie rodiny.")),
+        "answers_title": "Ako vyberať aplikáciu pre rodinu", "answers": (("Čo by mala vedieť aplikácia pre rodinu?", "Mala by pokrývať najčastejšie spoločné situácie, fungovať rýchlo v mobile aj počítači a dovoliť viacerým členom pracovať s rovnakými aktuálnymi informáciami."), ("Nahradí Rodinka rodinný chat?", "Nie. Chat je výborný na rozhovor. Rodinka je prehľad termínov, úloh a zoznamov, ktoré chcete nájsť aj neskôr bez prechádzania histórie správ."), ("Musí rodina používať všetky funkcie?", "Nemusí. Začnite oblasťou, ktorá dnes spôsobuje najviac otázok. Ďalšie časti pridajte až vtedy, keď domácnosti naozaj pomôžu."), ("Funguje Rodinka bez internetu?", "Časti, ktoré to najviac potrebujú, áno. Nákupný zoznam je navrhnutý na použitie offline a rad ďalších obrazoviek sa dá prinajmenšom čítať. Zmeny sa dorovnajú, len čo sa zariadenie pripojí.")),
         "card": "Kalendár, povinnosti, nákupný zoznam a jedlá v jednom rodinnom priestore.", "cta_title": "Dajte rodinným informáciám jedno známe miesto.", "cta_text": "Rodinka funguje priamo v prehliadači. Vytvorte rodinu a začnite prvou praktickou vecou.",
     },
     "baby": {
@@ -783,12 +914,54 @@ TOPICS["sk"] = {
         "scenarios": (("Zoznamy na viacerých miestach", "Výbava na cesty, spánok alebo prvé dni nemusí zostať rozdelená medzi papier, poznámky a chat."), ("Mená v chate", "Nápady na mená zostávajú pokope aj s preferenciami zapojených dospelých."), ("Čo je už pripravené?", "Obaja rodičia vidia rovnaký prehľad a môžu pokračovať tam, kde ten druhý skončil.")),
         "help_title": "Ako Rodinka pomôže s prípravou na bábätko",
         "help_intro": "Bábätko na ceste je organizačná časť Rodinky, nie zdravotná aplikácia. Ponúka ľahkú orientáciu a praktický priestor na spoločné prípravy.",
-        "steps": (("Cesta po týždňoch", "Orientačný týždeň, jednoduchý priebeh a vybrané momenty pomôžu zaradiť prípravy do času. Nejde o medicínske meranie ani hodnotenie zdravotného stavu."), ("Prípravy podľa tém", "Inšpiráciu nájdete v oblastiach na cesty, spánok, kŕmenie a dojčenie, hygienu a prebaľovanie, oblečenie, domov, pôrodnicu a prvé dni alebo administratívu. Čo nepotrebujete, môžete vynechať."), ("Mená, ktoré riešite spolu", "Zapisujte si kandidátne mená, označte favoritov a zdieľajte preferencie ako páči sa mi, možno alebo skôr nie. Nejde o súťaž ani skóre.")),
+        "steps": (("Cesta po týždňoch", "Orientačný týždeň, jednoduchý priebeh a vybrané momenty pomôžu zaradiť prípravy do času. Nejde o medicínske meranie ani hodnotenie zdravotného stavu."), ("Prípravy podľa tém", "Inšpiráciu nájdete v oblastiach na cesty, spánok, kŕmenie a dojčenie, hygienu a prebaľovanie, oblečenie, domov, pôrodnicu a prvé dni alebo administratívu. Z položky checklistu navyše spravíte bežnú úlohu, nákup alebo udalosť, takže príprava nezostane v oddelenom zozname."), ("Mená, ktoré riešite spolu", "Zapisujte si kandidátne mená, označte favoritov a zdieľajte preferencie ako páči sa mi, možno alebo skôr nie. Nejde o súťaž ani skóre.")),
         "answers_title": "Časté otázky k príprave na bábätko",
         "answers": (("Je Rodinka tehotenská aplikácia?", "Nie. Rodinka nenahrádza zdravotnú aplikáciu ani odporúčania lekára. Pomáha rodine s orientačnou cestou a praktickou organizáciou príprav."), ("Musíme použiť celý checklist?", "Nemusíte. Zoznam je inšpirácia a prehľad, nie povinný nákupný plán. Každá rodina si ponechá iba to, čo zodpovedá jej potrebám."), ("Môžeme spoločne vyberať meno?", "Áno. Môžete si viesť kandidátne mená, označiť favoritov a pri každom zachytiť preferencie zapojených dospelých bez vyhlasovania víťaza."), ("Uvidia informácie automaticky deti?", "Nie. Časť Bábätko na ceste je určená dospelým v rodine, takže prípravy a citlivé informácie zostávajú v ich spoločnom priestore.")),
         "card": "Cesta po týždňoch, praktické prípravy a spoločný výber mena na jednom mieste.",
         "cta_title": "Pripravujte sa na nového člena rodiny spoločne.",
         "cta_text": "Otvorte Rodinku, pridajte Bábätko na ceste a začnite tým, čo chcete mať pripravené ako prvé.",
+    },
+    "memories": {
+        "title": "Rodinné spomienky a detské míľniky na jednom mieste | Rodinka",
+        "description": "Detské míľniky, rodinné poklady a fotografie na jednej časovej osi. Spomienku priradíte členovi rodiny a z míľnika si môžete vytlačiť kartičku.",
+        "og_title": "Rodinné spomienky, ktoré nezapadnú v galérii telefónu",
+        "og_description": "Jedna spoločná kronika rodiny: detské míľniky, poklady a okamihy, ku ktorým sa chcete vracať.",
+        "og_alt": "Rodinné spomienky a detské míľniky v aplikácii Rodinka",
+        "eyebrow": "RODINNÁ PAMÄŤ",
+        "h1": "Rodinné spomienky a detské míľniky, ktoré nezapadnú",
+        "lead": "Prvý krok, vysvedčenie, kamienok z dovolenky aj fotka, na ktorej sa zakaždým smejete. Väčšina týchto vecí skončí v galérii telefónu jedného rodiča medzi tisíckami ďalších snímok. Rodinka im dáva spoločné miesto, kde ich nájde celá rodina.",
+        "problem_title": "Spomienky sa nestrácajú naraz, ale postupne",
+        "problem": ("Fotiek pribúda rýchlejšie, než ich stíhame triediť. O dva roky sa k prvému kroku nedostanete cez dovolenku, Vianoce a stovky náhodných snímok — a príbeh k tej fotke pozná len ten, kto ju odfotil. Druhý rodič často nemá prístup vôbec.", "Rodinná pamäť nepotrebuje ďalšiu galériu. Potrebuje pár viet pri fotke, dátum, meno človeka, ktorého sa to týka, a jedno miesto, kam sa dá vrátiť. Rodinka preto vedie spomienky ako spoločnú kroniku, nie ako úložisko súborov."),
+        "scenarios": (("Detské míľniky", "Prvý krok, prvé slovo, prvý deň v škole. Zapíšete, čo sa stalo a kedy, a pridáte fotku."), ("Rodinné poklady", "Obrázok, mušľa z výletu alebo list od starej mamy. Fotografia, krátky popis a dátum z nich spravia exponát rodinnej zbierky."), ("Spoločná časová os", "Míľniky aj poklady sa radia chronologicky, takže vidieť, ako rodine šiel rok za rokom.")),
+        "help_title": "Ako Rodinka vedie rodinné spomienky",
+        "help_intro": "Spomienky sú jedna sekcia, nie rázcestník. Všetky typy sa prelínajú na jednej osi a každú položku môžete priradiť konkrétnemu členovi rodiny.",
+        "steps": (("Pridajte spomienku", "Fotografia, krátky popis a dátum stačia. Nič ďalšie nie je povinné a uloženie nič neblokuje."), ("Priraďte ju človeku", "Pri míľniku aj poklade vidieť, koho sa týka. Každé dieťa tak má vlastnú časovú os v rámci rodinnej kroniky."), ("Vracajte sa k nim", "Na obrazovke Dnes sa občas pripomenie, čo sa stalo v ten istý deň v minulých rokoch. Z míľnika si môžete pripraviť kartičku na vytlačenie.")),
+        "answers_title": "Časté otázky o rodinných spomienkach",
+        "answers": (("Je Rodinka náhrada za fotogalériu alebo cloud?", "Nie. Rodinka nie je úložisko na všetky fotky z telefónu a ani sa ním nesnaží byť. Je to miesto pre vybrané okamihy, ktoré chcete mať popísané, zaradené v čase a dostupné celej rodine — nie pre zálohu celej galérie."), ("Sledujú detské míľniky, či je dieťa „napred“ alebo „pozadu“?", "Nie. Míľnik je spomienka na niečo, čo sa stalo, nie tvrdenie o tom, kedy by to dieťa malo vedieť. Rodinka preto nemá očakávaný vek, normy ani porovnávanie detí medzi sebou a nikdy neupozorní na to, že nejaký míľnik chýba."), ("Môžu spomienky vidieť aj deti?", "Áno, kronika je pre celú rodinu na čítanie. Zakladanie a úpravy zostávajú na dospelých, takže dieťa sa môže pozerať, ale nič nezmaže.")),
+        "card": "Detské míľniky, poklady a rodinné okamihy na jednej časovej osi.",
+        "cta_title": "Dajte rodinným spomienkam spoločné miesto.",
+        "cta_text": "Otvorte v Rodinke Spomienky a pridajte prvý míľnik alebo poklad. Stačí fotka, pár viet a dátum.",
+    },
+    "documents": {
+        "title": "Stráženie platnosti dokladov celej rodiny | Rodinka",
+        "description": "Evidujte pasy, občianske preukazy a ďalšie doklady s dátumom platnosti. Rodinka pošle pripomienku s predstihom, takže končiaci doklad nezistíte až pred dovolenkou.",
+        "og_title": "Platnosť dokladov, ktorú nemusíte nosiť v hlave",
+        "og_description": "Pri každom doklade vidieť, komu patrí a dokedy platí. Pripomienka príde včas, nie na poslednú chvíľu.",
+        "og_alt": "Prehľad rodinných dokladov a ich platnosti v aplikácii Rodinka",
+        "eyebrow": "DOKLADY A ICH PLATNOSŤ",
+        "h1": "Platnosť pasov a dokladov celej rodiny na jednom mieste",
+        "lead": "Pas sa nedá vybaviť zo dňa na deň. Napriek tomu sa na jeho platnosť obvykle príde vo chvíli, keď je dovolenka zarezervovaná. Pri štvorčlennej rodine je to osem dokladov a osem rôznych dátumov, ktoré si nikto nepamätá.",
+        "problem_title": "Termín, na ktorý si nikto nespomenie včas",
+        "problem": ("Doklady majú jednu nepríjemnú vlastnosť: medzi vybavením a ďalšou potrebou uplynie päť alebo desať rokov. Pripomienka v kalendári sa za ten čas stratí, telefón sa vymení a papier v zásuvke nikto nečíta. Platnosť sa tak najčastejšie rieši pod tlakom.", "Pritom stačí zapísať dve informácie — komu doklad patrí a dokedy platí — a nechať ich strážiť niečo iné než vlastnú pamäť. Rodinka ich preto vedie pri rodine, nie pri jednom človeku, a ozve sa skôr, než je neskoro."),
+        "scenarios": (("Pred dovolenkou", "Platnosť pasov celej rodiny skontrolujete na jednej obrazovke, nie preberaním zásuvky."), ("Doklady detí", "Detské pasy a preukazy majú kratšiu platnosť než tie vaše. Pri každom vidieť, komu patrí."), ("Nielen doklady totožnosti", "Vodičský preukaz, technická alebo kartička poisťovne — strážiť sa dá čokoľvek, čo má dátum platnosti.")),
+        "help_title": "Ako stráženie platnosti v Rodinke funguje",
+        "help_intro": "Doklady sú v Rodinke dostupné len dospelým členom rodiny. Model je postavený okolo jedinej otázky: čo čoskoro prestane platiť a čie to je.",
+        "steps": (("Zapíšte doklad", "Názov, majiteľ a dátum platnosti. Voliteľne dátum vydania a poznámka, kde doklad fyzicky je."), ("Nechajte si pripomenúť", "Rodinka pošle upozornenie s predstihom, takže na vybavenie zostáva čas. Pripomienky rešpektujú tiché hodiny, ktoré si nastavíte."), ("Majte prehľad o stave", "Doklady sú rozdelené podľa toho, čomu čoskoro končí platnosť, čo už prešlo a čo je v poriadku.")),
+        "answers_title": "Časté otázky o dokladoch a pripomienkach",
+        "answers": (("Kedy má pripomienka na končiaci doklad prísť?", "Pri cestovnom pase alebo občianskom preukaze sa oplatí vedieť o blížiacom sa konci platnosti niekoľko mesiacov dopredu — vybavenie má svoju lehotu a pred prázdninami bývajú rady dlhšie. Rodinka preto upozorňuje s predstihom, nie až v poslednom týždni."), ("Vidia doklady aj deti?", "Nie. Doklady sú v Rodinke dostupné len dospelým členom rodiny. Dieťa sa do tejto časti aplikácie nedostane."), ("Musím do Rodinky nahrávať sken dokladu?", "Nie. Na stráženie platnosti stačí názov, majiteľ a dátum — sken nie je podmienkou. Rodinka je postavená na tom, aby vám pripomenula termín, nie aby nahradila miesto, kde doklady fyzicky máte.")),
+        "card": "Pasy, občianske preukazy a ďalšie doklady s dátumom platnosti a včasnou pripomienkou.",
+        "cta_title": "Nech vás končiaci pas neprekvapí pred odletom.",
+        "cta_text": "Pridajte do Rodinky prvý doklad s dátumom platnosti a pripomenutie nechajte na aplikácii.",
     },
 }
 
@@ -812,8 +985,8 @@ TOPICS["en"] = {
         "problem_title": "A date and time are often only half the plan", "problem": ("Family schedules are not just a list of appointments. Children’s activities also need a place, the right child and a clear adult handling transport. If half of that information remains in chat, the calendar cannot do its full job.", "The shared view needs to work for a quick morning check and for planning the week ahead. Recurring activities are added once, exceptions are visible to everyone and nobody maintains a separate version of the family schedule."),
         "scenarios": (("Children’s activities", "Swimming, music lessons and practice include the time, place, child and agreed transport."), ("School and appointments", "Parent meetings, check-ups and days off no longer sit only in one parent’s inbox."), ("Weekends and visits", "Birthdays and time with grandparents are visible before another plan is made.")),
         "help_title": "How a shared family calendar works in Rodinka", "help_intro": "Events live in the same family space, so every invited adult sees the current schedule instead of waiting for a screenshot or forwarded message.",
-        "steps": (("Add the full event", "Record the time, place and family member involved. Set regular activities to repeat so they do not need weekly re-entry."), ("Make the hand-off clear", "Show who is driving or picking up beside the event. The practical agreement will not be stranded in another conversation."), ("Review one family week", "When either parent makes plans, both can see the same school events, appointments and family commitments.")),
-        "answers_title": "Questions families ask about shared calendars", "answers": (("How do parents share a family calendar?", "Create one family space and invite the other adult. Put shared events there, and include the transport or pick-up detail whenever it affects the plan."), ("How can we organize children’s activities?", "For every activity, record the day, time, place, child and transport. Repeat regular sessions and edit exceptions individually so the weekly view stays accurate."), ("Should chores go in the family calendar?", "Use an event for something that happens at a time. Preparation, such as buying a gift or returning a form, works better as a separate chore with an owner and due date.")),
+        "steps": (("Add the full event", "Record the time, place and family member involved. Set regular activities to repeat so they do not need weekly re-entry."), ("Separate who it is about from who is handling it", "An event shows the participant — the child going to swimming — separately from the adult driving them there. They are two different facts and Rodinka does not collapse them into one."), ("Review one family week", "Switch between a month, a week or an agenda grouped by urgency. When either parent makes plans, both see the same family commitments.")),
+        "answers_title": "Questions families ask about shared calendars", "answers": (("How do parents share a family calendar?", "Create one family space and invite the other adult. Put shared events there, and include the transport or pick-up detail whenever it affects the plan."), ("How can we organize children’s activities?", "For every activity, record the day, time, place, child and transport. Repeat regular sessions and edit exceptions individually so the weekly view stays accurate."), ("What if someone else drives just one week?", "Change the companion on that single occurrence. The repeating activity itself is untouched, so one exception does not mean breaking up the series or recreating it."), ("Should chores go in the family calendar?", "Use an event for something that happens at a time. Preparation, such as buying a gift or returning a form, works better as a separate chore with an owner and due date.")),
         "card": "School, activities, visits and pick-ups in one shared calendar.", "cta_title": "Make the plan available without another message.", "cta_text": "Add your first family event in Rodinka and include who is handling the practical side.",
     },
     "shopping": {
@@ -821,10 +994,10 @@ TOPICS["en"] = {
         "og_title": "One household shopping list, always close at hand", "og_description": "Add what is running out at home and shop from the same current list.", "og_alt": "Rodinka shared family shopping list for groceries and household items",
         "eyebrow": "SHOPPING WITHOUT THE LOST MESSAGES", "h1": "A shared shopping list the whole family can update", "lead": "The milk ran out this morning, someone mentioned bread in chat and the note on the fridge stayed at home. A shared list catches an item when anyone remembers it — and it is still current in the store.",
         "problem_title": "Collecting the list is often harder than the shopping", "problem": ("Buying groceries is straightforward. Working out what is actually missing, whether someone has already added it and who is going to the store is the messy part. Paper only works where it is left, while a chat message quickly disappears.", "With one household list, it matters less who ends up shopping. Everyone can add items, completed ones are checked off and anything left stays available for later."),
-        "scenarios": (("Something just ran out", "The last milk or laundry detergent goes on the list immediately, not during a rushed memory test later."), ("Someone else is shopping", "A partner stopping on the way home opens the same list without asking for an updated message."), ("Meals are planned", "Ingredients for chosen dinners join the regular household items in one place.")),
+        "scenarios": (("Something just ran out", "The last milk or laundry detergent goes on the list immediately, not during a rushed memory test later."), ("In a shop with no signal", "The list keeps working when the phone has no reception. Items you tick off catch up as soon as the connection returns."), ("Someone else is shopping", "A partner stopping on the way home opens the same list without asking for an updated message.")),
         "help_title": "How to keep a shared shopping list in Rodinka", "help_intro": "The list belongs to your family space, so invited household members can open and update it on a phone or computer.",
-        "steps": (("Add items as they run low", "Capture an item when you notice it. A short current list is more reliable than rebuilding everything once a week."), ("Shop from the same version", "Check things off in the store. Everyone else can see what is done and avoid adding or buying it twice."), ("Connect shopping with meals", "When you choose dinners for the week, add the ingredients you need so the meal plan is practical.")),
-        "answers_title": "Practical questions about shared grocery lists", "answers": (("How do I share a grocery list with my partner?", "Use one list inside a shared family space. Both of you can add and check off items, so there is no need to send a fresh version before every trip."), ("Is an app better than a paper shopping list?", "Paper is quick beside the fridge. A shared digital list is also available away from home and can be updated by several people, which helps when different family members shop."), ("How do we remember a full week of ingredients?", "Sketch out the main meals first, then review their ingredients. Add only what is not already at home so the final list remains useful in the store.")),
+        "steps": (("Add items by typing or by voice", "Capture an item when you notice it. On supported devices you do not have to type: say what has run out and Rodinka turns it into items you review, edit and confirm before anything is added."), ("Shop from the same version, signal or not", "Check things off in the store. Everyone else can see what is done and avoid adding or buying it twice, and the list keeps working offline until the connection returns."), ("Connect shopping with meals", "When you choose dinners for the week, add the ingredients you need so the meal plan is practical.")),
+        "answers_title": "Practical questions about shared grocery lists", "answers": (("How do I share a grocery list with my partner?", "Use one list inside a shared family space. Both of you can add and check off items, so there is no need to send a fresh version before every trip."), ("Is an app better than a paper shopping list?", "Paper is quick beside the fridge. A shared digital list is also available away from home and can be updated by several people, which helps when different family members shop."), ("Can I dictate the shopping list?", "On supported devices, yes. You say what is missing, Rodinka turns it into separate items and shows them for confirmation — only then are they added. You can edit or remove anything it got wrong first, and no recording or transcript is stored."), ("Does the list work without a signal?", "Yes. The shopping list is built to be used offline: you can keep adding and ticking off items in the shop, and the changes catch up once the phone reconnects.")),
         "card": "One current list at home and in the store, updated by the whole family.", "cta_title": "Your next shop can start without searching through chat.", "cta_text": "Open the shared list in Rodinka and add the first thing your household is running low on.",
     },
     "chores": {
@@ -832,10 +1005,10 @@ TOPICS["en"] = {
         "og_title": "Household chores without endless reminders", "og_description": "Clear family tasks, visible responsibility and a shared view of what is done.", "og_alt": "Family chores and household responsibilities assigned in Rodinka",
         "eyebrow": "WHO IS HANDLING WHAT AT HOME", "h1": "Family chores that do not live in one parent’s head", "lead": "Book the dentist, return library books, take out the recycling or pack for a trip. When a task has a person and a due date, the household does not have to run on repeated reminders.",
         "problem_title": "“We need to do that” is not an assigned chore", "problem": ("Housework often becomes visible only when it is not done. Planning work is even easier to miss: watching a camp deadline, buying a birthday gift or calling a repair service. If one person holds those details, they also carry most of the mental load.", "A family task list is not a household performance score. It is a simple agreement about what needs doing, who has taken it and when it matters. Once complete, the task no longer needs another check-in message."),
-        "scenarios": (("Small daily responsibilities", "Recycling, dishes or packing a school bag can each have a short, clear definition of done."), ("Invisible organizing work", "A doctor’s call, activity payment or gift purchase gets an owner and a due date."), ("Children taking part", "Age-appropriate chores show children that a home is shared work rather than a service run by parents.")),
+        "scenarios": (("Small daily responsibilities", "Recycling, dishes or packing a school bag can each have a short, clear definition of done."), ("Invisible organizing work", "A doctor’s call, activity payment or gift purchase gets an owner and a due date."), ("Chores for children", "A child can have their own sign-in showing only their chores. A chore can carry a reward or pocket money, and an adult confirms it is done.")),
         "help_title": "How to divide household chores across the family", "help_intro": "Rodinka turns loose household intentions into small, specific actions that everyone can see in the shared overview.",
-        "steps": (("Name the outcome", "Replace “sort out school” with “send the trip form”. A concrete task makes it obvious what completion means."), ("Choose a person and a date", "Do not leave every task shared until the most attentive person does it. Agree on ownership while the need is clear."), ("Let completed work leave your head", "Everyone can see that the chore is done. No confirmation message or repeated question is needed.")),
-        "answers_title": "Questions about family chores and responsibilities", "answers": (("How can we divide household work fairly?", "Include planning, calls and deadline tracking as well as visible cleaning. Then consider time and mental effort, not only the number of items each person has."), ("How should we give chores to children?", "Choose something age-appropriate, specific and achievable by a clear time. The aim is participation and a habit of helping, not a perfect result."), ("How can we remind each other without arguing?", "Agree on the owner and put the task in a shared place. A reminder then refers to the same visible agreement instead of one person managing the other.")),
+        "steps": (("Name the outcome", "Replace “sort out school” with “send the trip form”. A concrete task makes it obvious what completion means."), ("Choose a person and a date", "Do not leave every task shared until the most attentive person does it. Agree on ownership while the need is clear."), ("Let repeating work repeat itself", "Taking the bins out every Tuesday is set up once. A one-off note with no due date and a standing weekly duty are the same kind of task here."), ("Let completed work leave your head", "Everyone can see that the chore is done, and where a reward is attached an adult confirms it and the amount is credited.")),
+        "answers_title": "Questions about family chores and responsibilities", "answers": (("How can we divide household work fairly?", "Include planning, calls and deadline tracking as well as visible cleaning. Then consider time and mental effort, not only the number of items each person has."), ("How should we give chores to children?", "Choose something age-appropriate, specific and achievable by a clear time. The aim is participation and a habit of helping, not a perfect result."), ("How can we remind each other without arguing?", "Agree on the owner and put the task in a shared place. A reminder then refers to the same visible agreement instead of one person managing the other."), ("How do rewards and pocket money work?", "A chore can carry a reward and require an adult to approve it. The child ticks it off, a parent confirms, and the amount is credited. Regular pocket money can depend on the agreed chores being done."), ("Can a quick task be dictated?", "On supported devices, yes — straight from the Today screen. You say what needs doing, Rodinka turns it into draft tasks and shows them for editing. Nothing is created until you confirm.")),
         "card": "Specific responsibilities, a clear owner and a due date for adults and children.", "cta_title": "Assign one task before it disappears into someone’s mental list.", "cta_text": "Add a concrete household responsibility in Rodinka and agree on who will take it.",
     },
     "meals": {
@@ -845,8 +1018,8 @@ TOPICS["en"] = {
         "problem_title": "The hardest part is often deciding, not cooking", "problem": ("“What’s for dinner?” tends to arrive when everyone is hungry and short on time. Without a loose plan, the family shops in a rush, useful ingredients are missing and other food goes unused.", "A family meal plan should follow the shape of the week. Busy afternoons call for something quick; a slower day can hold a longer recipe. When plans change, updating the overview is enough — it is not a failed system."),
         "scenarios": (("An activity-packed day", "A quick dinner is planned for the evening when everyone gets home late."), ("Cooking together at the weekend", "The family can see where there is space for a favorite meal or cooking with children."), ("A shopping list with a reason", "Planned dinners become the specific ingredients needed alongside regular household shopping.")),
         "help_title": "How to plan a week of meals in Rodinka", "help_intro": "This is not a detailed diet program. Rodinka connects a simple dinner plan with the groceries required to make it happen.",
-        "steps": (("Check the family calendar", "Notice which days are long and when someone will be home earlier. Build the meal plan around the time you actually have."), ("Choose a few reliable meals", "You do not need to fill every slot. Start with familiar dinners and leave room for leftovers or a change of plans."), ("Add missing ingredients", "Check what is already at home, then put everything else on the shared shopping list.")),
-        "answers_title": "Common questions about family meal planning", "answers": (("How do I plan meals for the whole week?", "Start with the family schedule and choose main meals by the time available to prepare them. Leave one evening open for leftovers or an unexpected change."), ("How can the whole family help choose meals?", "Ask each person for one favorite and decide together where it fits. The plan becomes less work for one person and more likely to suit the household."), ("How do I connect a meal plan to a grocery list?", "Review the main ingredients for each planned meal and add what is missing to the shared list. Check the cupboards once more before shopping to avoid duplicates.")),
+        "steps": (("Check the family calendar", "Notice which days are long and when someone will be home earlier. Build the meal plan around the time you actually have."), ("Choose a few reliable meals", "You do not need to fill every slot. Save the dinners you cook often to the meal library and pick them again in one tap."), ("Let the family decide", "When nobody can agree, list a few options and put the weekend lunch to a vote. Children get a vote too."), ("Send ingredients to the shopping list", "From a planned meal, move the ingredients you need into the shared shopping list in one step instead of retyping them.")),
+        "answers_title": "Common questions about family meal planning", "answers": (("How do I plan meals for the whole week?", "Start with the family schedule and choose main meals by the time available to prepare them. Leave one evening open for leftovers or an unexpected change."), ("How can the whole family help choose meals?", "Rodinka can open a vote on a meal: you list the options and every family member, children included, casts a vote. The decision stops resting on one person and the plan is more likely to stick."), ("How do I connect a meal plan to a grocery list?", "Review the main ingredients for each planned meal and add what is missing to the shared list. Check the cupboards once more before shopping to avoid duplicates.")),
         "card": "A simple dinner plan shaped around the week and the groceries it needs.", "cta_title": "Plan a few dinners and make the rest of the week lighter.", "cta_text": "Open Rodinka, choose the first meal and add anything the family needs to buy.",
     },
     "app": {
@@ -855,9 +1028,9 @@ TOPICS["en"] = {
         "eyebrow": "AN APP FOR THE EVERYDAY WORK OF FAMILY LIFE", "h1": "A family organizer app for schedules, chores, shopping and meals", "lead": "A calendar holds dates but not always groceries. Chat holds conversations but makes last week’s detail hard to find. Rodinka brings the practical parts of family life together so everyone knows where to look.",
         "problem_title": "Families need fewer places to search, not more", "problem": ("Every tool may work on its own while the complete picture still falls apart. An event sits in a personal calendar, a list is on paper, a chore stays in someone’s head and the latest change is in group chat. The information exists, but not for everyone at the right moment.", "A good family organizer should not need its own full-time administrator. Everyday updates must be quick, the shared overview must be easy to read and each part should match a real household situation."),
         "scenarios": (("Before leaving home", "One view shows today’s schedule, pick-ups and the responsibilities that cannot be forgotten."), ("During the day", "Anyone can add a missing grocery item or complete a chore without messaging the entire family."), ("Planning the week", "The calendar, meals and household tasks create a realistic picture of what the family is taking on.")),
-        "help_title": "What the Rodinka family organizer includes", "help_intro": "Use each part when it is helpful. Their value grows when one naturally supports the next.",
-        "steps": (("A shared family calendar", "Joint events, recurring activities and practical details about who is handling transport or pick-up."), ("Chores and household tasks", "Responsibilities with a clear person and date so the organizing does not remain with one parent."), ("Shopping and meal planning", "A current list of what the household needs and a simple view of the family’s planned dinners.")),
-        "answers_title": "How to choose a family organizer app", "answers": (("What should a family organizer app do?", "It should cover the shared situations your household handles most, work well on phones and computers, and let several people use the same current information."), ("Does Rodinka replace family group chat?", "No. Chat is excellent for conversation. Rodinka is the reference point for schedules, chores and lists you want to find later without scrolling through message history."), ("Do we need to use every feature?", "Not at all. Start with the area causing the most repeated questions today. Add another part only when it solves a real need for your household.")),
+        "help_title": "What the Rodinka family organizer includes", "help_intro": "Rodinka is not just a calendar with chores attached. These are the three layers it is built from — use only the parts that earn their place in your household.",
+        "steps": (("Everyday logistics", "A Today screen with the day’s schedule and whatever needs attention. A shared calendar with recurring activities and companions, chores with an owner and a due date, a shopping list that works offline and a meal plan the family can vote on."), ("Family, not just logistics", "Memories holding children’s milestones and family treasures, Dnešní Rodinka with a question or poll for the household, child accounts with their own chores and pocket money, a family arcade and a family chat."), ("The things that slip", "Reminders that respect quiet hours, documents with expiry tracking, health appointments and vaccinations, pets with their veterinary history, and Expected Child for a family about to grow.")),
+        "answers_title": "How to choose a family organizer app", "answers": (("What should a family organizer app do?", "It should cover the shared situations your household handles most, work well on phones and computers, and let several people use the same current information."), ("Does Rodinka replace family group chat?", "No. Chat is excellent for conversation. Rodinka is the reference point for schedules, chores and lists you want to find later without scrolling through message history."), ("Do we need to use every feature?", "Not at all. Start with the area causing the most repeated questions today. Add another part only when it solves a real need for your household."), ("Does Rodinka work without an internet connection?", "The parts that need it most do. The shopping list is built for offline use and many other screens can at least be read. Changes catch up as soon as the device reconnects.")),
         "card": "A calendar, household responsibilities, shopping and meals in one family space.", "cta_title": "Give family information one familiar home.", "cta_text": "Rodinka works in the browser. Create your family and start with the first practical thing you need to share.",
     },
     "baby": {
@@ -874,12 +1047,54 @@ TOPICS["en"] = {
         "scenarios": (("Lists in too many places", "Ideas for travel, sleep and the first days can stay together instead of being split across paper, notes and chat."), ("Names lost in messages", "Possible names and each adult’s preferences remain easy to find when you return to the conversation."), ("What have we already handled?", "Both parents see the same overview and can pick up where the other person stopped.")),
         "help_title": "How Rodinka helps you prepare for a baby",
         "help_intro": "Expected Child is an organizing space inside Rodinka, not a health or pregnancy-tracking app. It offers light orientation and a practical place to prepare together.",
-        "steps": (("A week-by-week journey", "An approximate week, simple progress and selected moments help place preparation in time. This is not medical measurement, monitoring or health advice."), ("Preparation by topic", "Browse optional ideas for travel, sleep, feeding and breastfeeding, hygiene and changing, clothing, home, hospital and the first days, or administration. Keep only what is useful to you."), ("Names you consider together", "Collect possible names, mark favorites and share preferences such as like, maybe or probably not. It is a conversation aid, not a contest or score.")),
+        "steps": (("A week-by-week journey", "An approximate week, simple progress and selected moments help place preparation in time. This is not medical measurement, monitoring or health advice."), ("Preparation by topic", "Browse optional ideas for travel, sleep, feeding and breastfeeding, hygiene and changing, clothing, home, hospital and the first days, or administration. A checklist item can also become an ordinary chore, shopping item or event, so preparation does not stay in a list of its own."), ("Names you consider together", "Collect possible names, mark favorites and share preferences such as like, maybe or probably not. It is a conversation aid, not a contest or score.")),
         "answers_title": "Common questions about preparing for a baby",
         "answers": (("Is Rodinka a pregnancy tracker?", "No. Rodinka does not replace a medical app, professional guidance or advice from your doctor. It helps a family organize practical preparation with a light, approximate journey."), ("Do we have to complete the whole checklist?", "No. It is optional inspiration and an overview, not a required shopping plan. Every family can keep only what matches its own needs."), ("Can we choose a name together?", "Yes. You can collect possible names, mark favorites and capture each participating adult’s preference without turning the choice into a leaderboard."), ("Will children automatically see this information?", "No. Expected Child is for the adults in the family, so preparation and sensitive information stay in their shared adult space.")),
         "card": "A week-by-week journey, practical preparation and shared name choices in one place.",
         "cta_title": "Get ready for your new family member together.",
         "cta_text": "Open Rodinka, add Expected Child and start with the first thing you would like to have ready.",
+    },
+    "memories": {
+        "title": "Family memories and children\u2019s milestones in one place | Rodinka",
+        "description": "Children\u2019s milestones, family treasures and photos on a single timeline. Assign a memory to a family member and turn a milestone into a card you can print.",
+        "og_title": "Family memories that do not disappear into a camera roll",
+        "og_description": "One shared family chronicle: children\u2019s milestones, treasures and the moments you want to come back to.",
+        "og_alt": "Family memories and children\u2019s milestones in the Rodinka app",
+        "eyebrow": "YOUR FAMILY\u2019S MEMORY",
+        "h1": "Family memories and milestones that do not get lost",
+        "lead": "A first step, a school report, a pebble from a holiday, the photo that still makes everyone laugh. Most of it ends up in one parent\u2019s camera roll among thousands of other pictures. Rodinka gives those moments a shared home the whole family can reach.",
+        "problem_title": "Memories are not lost all at once",
+        "problem": ("Photos pile up faster than anyone can sort them. Two years later the first step sits behind a holiday, a Christmas and several hundred incidental shots \u2014 and the story behind the picture is known only to whoever took it. The other parent often has no access at all.", "A family\u2019s memory does not need another gallery. It needs a few sentences next to the photo, a date, the name of the person it belongs to, and one place to return to. That is why Rodinka keeps memories as a shared chronicle rather than a file store."),
+        "scenarios": (("Children\u2019s milestones", "A first step, a first word, a first day at school. Record what happened and when, and add a photo."), ("Family treasures", "A drawing, a shell from a trip, a letter from a grandparent. A photo, a short description and a date turn it into part of the family collection."), ("A shared timeline", "Milestones and treasures sit in chronological order, so you can see how a year unfolded for the family.")),
+        "help_title": "How Rodinka keeps family memories",
+        "help_intro": "Memories are one section, not a menu of separate tools. Every type shares a single timeline, and each entry can belong to a particular family member.",
+        "steps": (("Add a memory", "A photo, a short description and a date are enough. Nothing else is required and nothing blocks saving."), ("Give it a person", "Milestones and treasures show who they belong to, so each child has their own thread within the family chronicle."), ("Come back to them", "The Today screen occasionally resurfaces what happened on the same date in earlier years, and a milestone can become a card you print at home.")),
+        "answers_title": "Common questions about family memories",
+        "answers": (("Does Rodinka replace a photo gallery or cloud backup?", "No. Rodinka is not storage for every photo on your phone and does not try to be. It is a place for chosen moments you want described, placed in time and available to the whole family \u2014 not a backup of your camera roll."), ("Do milestones track whether a child is ahead or behind?", "No. A milestone records something that happened; it is not a statement about when a child should be able to do it. There is no expected age, no norm, no comparison between children, and Rodinka never flags a milestone as missing."), ("Can children see the memories too?", "Yes, the chronicle is readable by the whole family. Creating and editing stays with adults, so a child can look through it without changing anything.")),
+        "card": "Children\u2019s milestones, treasures and family moments on one timeline.",
+        "cta_title": "Give your family memories a shared home.",
+        "cta_text": "Open Memories in Rodinka and add a first milestone or treasure. A photo, a few sentences and a date are enough.",
+    },
+    "documents": {
+        "title": "Track passport and ID expiry for the whole family | Rodinka",
+        "description": "Record passports, ID cards and other documents with their expiry dates. Rodinka reminds you in good time, so an expiring document does not surface days before a trip.",
+        "og_title": "Document expiry dates you do not have to remember",
+        "og_description": "Every document shows who it belongs to and when it runs out, with a reminder that arrives early enough to act on.",
+        "og_alt": "An overview of family documents and their expiry dates in the Rodinka app",
+        "eyebrow": "DOCUMENTS AND THEIR EXPIRY",
+        "h1": "Passport and ID expiry dates for the whole family",
+        "lead": "A passport cannot be renewed overnight. Yet most households discover an expiry date right after the holiday is booked. For a family of four that is eight documents and eight different dates nobody is keeping track of.",
+        "problem_title": "A deadline nobody remembers in time",
+        "problem": ("Documents have an awkward property: five or ten years pass between getting one and needing it again. A calendar reminder does not survive that long, the phone gets replaced and nobody reads the paper in the drawer. So expiry dates tend to be handled under pressure.", "Two pieces of information are enough \u2014 who the document belongs to and when it expires \u2014 as long as something other than your memory is watching them. Rodinka keeps them with the family rather than with one person, and speaks up before it is too late."),
+        "scenarios": (("Before a holiday", "Check every passport in the household on one screen instead of going through a drawer."), ("Children\u2019s documents", "Children\u2019s passports and ID cards expire sooner than yours, and each one shows who it belongs to."), ("Not only identity documents", "A driving licence, a vehicle inspection or an insurance card \u2014 anything with an expiry date can be tracked the same way.")),
+        "help_title": "How expiry tracking works in Rodinka",
+        "help_intro": "Documents are available to adult family members only. The model is built around a single question: what stops being valid soon, and whose is it?",
+        "steps": (("Record the document", "A name, an owner and an expiry date. The issue date and a note about where the document physically lives are optional."), ("Let it remind you", "Rodinka raises it early enough to leave time for the paperwork, and reminders respect the quiet hours your household sets."), ("See where things stand", "Documents are grouped by what expires soon, what has already lapsed and what is still fine.")),
+        "answers_title": "Common questions about documents and reminders",
+        "answers": (("How far ahead should a document reminder arrive?", "For a passport or an ID card it helps to know several months in advance \u2014 processing takes its own time and queues get longer before the summer. Rodinka raises it early rather than in the final week."), ("Can children see the documents?", "No. Documents in Rodinka are available to adult family members only; a child account cannot open that part of the app."), ("Do I have to upload a scan of each document?", "No. A name, an owner and a date are enough to track expiry \u2014 a scan is optional. Rodinka is built to remind you of the deadline, not to replace wherever you keep the documents themselves.")),
+        "card": "Passports, ID cards and other documents with expiry dates and timely reminders.",
+        "cta_title": "Do not let an expiring passport surprise you at the airport.",
+        "cta_text": "Add your first document with its expiry date and let Rodinka handle the reminder.",
     },
 }
 
@@ -1110,7 +1325,7 @@ def site_header(page_key: str, locale: str) -> str:
 
 def site_footer(locale: str) -> str:
     cfg = LOCALES[locale]
-    feature_links = "".join(f'<li><a href="{PATHS[key][locale]}">{esc(cfg["nav"].get(key, TOPICS[locale][key]["h1"]))}</a></li>' for key in ("planner", "calendar", "chores", "shopping", "meals"))
+    feature_links = "".join(f'<li><a href="{PATHS[key][locale]}">{esc(cfg["nav"].get(key, LLMS_LABELS[locale][key]))}</a></li>' for key in ("planner", "calendar", "chores", "shopping", "meals", "memories", "documents"))
     return f'''    <footer class="site-footer">
       <div class="footer-brand"><a class="brand" href="{cfg["home_path"]}"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Rodinka</span></a><p>{esc(cfg["footer_text"])}</p></div>
       <nav class="footer-nav" aria-label="{esc(cfg["features"])}"><h2>{esc(cfg["features"])}</h2><ul>{feature_links}</ul></nav>
@@ -1141,6 +1356,22 @@ def render_direct_answer(page_key: str, locale: str) -> str:
       </section>'''
 
 
+def render_home_family_layer(locale: str) -> str:
+    data = HOME_FAMILY_LAYER[locale]
+    cfg = LOCALES[locale]
+    cards = "".join(
+        f'<article class="topic-card reveal"><h3>{esc(title)}</h3><p>{esc(text)}</p>'
+        f'<a class="card-link" href="{PATHS[key][locale]}">{esc(cfg["learn_more"])} <span aria-hidden="true">→</span></a></article>'
+        for title, text, key in data["cards"]
+    )
+    return f'''      <section class="topic-directory" aria-labelledby="family-layer-title">
+        <p class="section-kicker reveal">{esc(data["kicker"])}</p>
+        <h2 class="section-title reveal" id="family-layer-title">{esc(data["title"])}</h2>
+        <p class="section-lead reveal">{esc(data["lead"])}</p>
+        <div class="topic-grid">{cards}</div>
+      </section>'''
+
+
 def render_home_memory_story(locale: str) -> str:
     story = HOME_MEMORY_STORY[locale]
     src = localized_product_src(HOME_MEMORY_STORY["src"], locale)
@@ -1149,6 +1380,7 @@ def render_home_memory_story(locale: str) -> str:
           <p class="section-kicker">{esc(story["kicker"])}</p>
           <h2 id="memory-story-title">{esc(story["title"])}</h2>
           <p>{esc(story["text"])}</p>
+          <a class="card-link" href="{PATHS["memories"][locale]}">{esc(story["link"])} <span aria-hidden="true">→</span></a>
         </div>
         <figure class="proof-figure">
           <img class="proof-image" src="{src}" width="{PRODUCT_IMAGE_WIDTH}" height="{PRODUCT_IMAGE_HEIGHT}" loading="lazy" decoding="async" alt="{esc(story["alt"])}" />
@@ -1190,6 +1422,7 @@ def render_home(locale: str) -> str:
     direct_answer = render_direct_answer("home", locale)
     baby_story = render_home_baby_story(locale)
     memory_story = render_home_memory_story(locale)
+    family_layer = render_home_family_layer(locale)
     return f'''<!doctype html>
 <html lang="{locale}">
 {head("home", locale, data)}
@@ -1215,6 +1448,7 @@ def render_home(locale: str) -> str:
 {direct_answer}
       <section class="intro" id="jak-to-funguje"><p class="section-kicker reveal">{esc(data["intro_kicker"])}</p><h2 class="section-title reveal">{esc(data["intro_title"])}</h2><p class="section-lead reveal">{esc(data["intro_lead"])}</p><div class="steps">{steps}</div><aside class="activation-note reveal"><span aria-hidden="true">💡</span><div><h3>{esc(data["note_title"])}</h3><p>{esc(data["note"])}</p></div></aside></section>
       <section class="features" id="funkce"><div class="feature-heading reveal"><p class="section-kicker">{esc(data["features_kicker"])}</p><h2 class="section-title">{esc(data["features_title"])}</h2><p class="feature-sublead">{esc(data["features_lead"])}</p></div><div class="feature-grid">{feature_cards}</div></section>
+{family_layer}
 {baby_story}
 {memory_story}
       <section class="topic-directory"><p class="section-kicker reveal">{esc(data["directory_kicker"])}</p><h2 class="section-title reveal">{esc(data["directory_title"])}</h2><p class="section-lead reveal">{esc(data["directory_lead"])}</p><div class="topic-grid">{directory_cards}</div></section>
@@ -1281,41 +1515,32 @@ def render_sitemap() -> str:
 '''
 
 
+# Short labels for llms.txt. Kept next to the paths so a new topic family cannot
+# be added to PATHS and silently skipped here.
+LLMS_LABELS = {
+    "cs": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendář", "shopping": "Sdílený nákupní seznam", "chores": "Úkoly pro rodinu", "meals": "Plánování jídel", "memories": "Rodinné vzpomínky", "documents": "Hlídání platnosti dokladů", "baby": "Příprava na miminko", "app": "Aplikace pro rodinu"},
+    "sk": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendár", "shopping": "Zdieľaný nákupný zoznam", "chores": "Úlohy pre rodinu", "meals": "Plánovanie jedál", "memories": "Rodinné spomienky", "documents": "Stráženie platnosti dokladov", "baby": "Príprava na bábätko", "app": "Aplikácia pre rodinu"},
+    "en": {"home": "Rodinka", "planner": "Family planner", "calendar": "Family calendar", "shopping": "Shared shopping list", "chores": "Family chores", "meals": "Meal planning", "memories": "Family memories", "documents": "Document expiry reminders", "baby": "Preparing for a baby", "app": "Family organizer app"},
+}
+
+LLMS_SECTIONS = (("cs", "Czech (default)"), ("sk", "Slovak"), ("en", "English"))
+
+
 def render_llms_txt() -> str:
-    return f'''# Rodinka
+    sections = []
+    for locale, heading in LLMS_SECTIONS:
+        links = "\n".join(
+            f'- [{LLMS_LABELS[locale][key]}]({canonical(PATHS[key][locale])})'
+            for key in ("home", *TOPIC_KEYS)
+        )
+        sections.append(f"## {heading}\n{links}")
+    body = "\n\n".join(sections)
+    return f"""# Rodinka
 
-> Rodinka is a family organizer for a shared calendar, household chores, shopping lists, meal planning and practical preparation for a new family member. The product name is Rodinka. The canonical website is {SITE_URL}/ and the web application is {APP_URL}.
+> Rodinka is a family organizer for a shared calendar, household chores, shopping lists, meal planning, family memories, document expiry reminders and practical preparation for a new family member. The product name is Rodinka. The canonical website is {SITE_URL}/ and the web application is {APP_URL}.
 
-## Czech (default)
-- [Rodinka]({canonical(PATHS["home"]["cs"])})
-- [Rodinný plánovač]({canonical(PATHS["planner"]["cs"])})
-- [Rodinný kalendář]({canonical(PATHS["calendar"]["cs"])})
-- [Sdílený nákupní seznam]({canonical(PATHS["shopping"]["cs"])})
-- [Úkoly pro rodinu]({canonical(PATHS["chores"]["cs"])})
-- [Plánování jídel]({canonical(PATHS["meals"]["cs"])})
-- [Příprava na miminko]({canonical(PATHS["baby"]["cs"])})
-- [Aplikace pro rodinu]({canonical(PATHS["app"]["cs"])})
-
-## Slovak
-- [Rodinka]({canonical(PATHS["home"]["sk"])})
-- [Rodinný plánovač]({canonical(PATHS["planner"]["sk"])})
-- [Rodinný kalendár]({canonical(PATHS["calendar"]["sk"])})
-- [Zdieľaný nákupný zoznam]({canonical(PATHS["shopping"]["sk"])})
-- [Úlohy pre rodinu]({canonical(PATHS["chores"]["sk"])})
-- [Plánovanie jedál]({canonical(PATHS["meals"]["sk"])})
-- [Príprava na bábätko]({canonical(PATHS["baby"]["sk"])})
-- [Aplikácia pre rodinu]({canonical(PATHS["app"]["sk"])})
-
-## English
-- [Rodinka]({canonical(PATHS["home"]["en"])})
-- [Family planner]({canonical(PATHS["planner"]["en"])})
-- [Family calendar]({canonical(PATHS["calendar"]["en"])})
-- [Shared shopping list]({canonical(PATHS["shopping"]["en"])})
-- [Family chores]({canonical(PATHS["chores"]["en"])})
-- [Meal planning]({canonical(PATHS["meals"]["en"])})
-- [Preparing for a baby]({canonical(PATHS["baby"]["en"])})
-- [Family organizer app]({canonical(PATHS["app"]["en"])})
-'''
+{body}
+"""
 
 
 def main() -> None:
