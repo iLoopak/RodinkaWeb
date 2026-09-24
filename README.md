@@ -59,6 +59,19 @@ Skript vytváří maximálně 900 px široké WebP soubory. Vercel servíruje co
 
 Pro bezpečnou lokalizaci plochého marketingového exportu použijte `tools/composite_localized_product_header.py`: vezme pouze lokalizovaný nadpis a štítek z připraveného návrhu, zatímco logo, telefon a celé produktové UI zachová z českého základního WebP. Výsledkem je nový soubor, nikdy přepsání originálu.
 
+### Promo video
+
+Česká homepage má pod stručnou odpovědí padesátivteřinový spot z `Rodinka/promo/rodinka-spot/video/`. Obsah sekce spravuje `HOME_SPOT` v generátoru; slovenská a anglická homepage ho nemají, protože spot má český voice-over. Soubory leží v `assets/video/`: 16:9 pro širší obrazovky, 9:16 pro telefony do 560 px. Video se stahuje až po kliknutí na plakát. Bez JavaScriptu se zobrazí běžný přehrávač s verzí 16:9.
+
+Webové verze a WebP plakáty (snímek z 11,4 s) vznikly takto; pro 9:16 platí totéž se vstupem `rodinka-spot-1080x1920.mp4` a plakátem širokým 720 px:
+
+```bash
+ffmpeg -i rodinka-spot-1080p.mp4 -c:v libx264 -preset slow -crf 26 -r 30 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/rodinka-spot-16x9.mp4
+ffmpeg -ss 11.4 -i rodinka-spot-1080p.mp4 -frames:v 1 -vf scale=1600:-1 poster.png && cwebp -q 82 poster.png -o assets/video/rodinka-spot-16x9.webp
+```
+
+Lokální `python -m http.server` nepodporuje HTTP Range, takže v něm video nejde přetáčet; na Vercelu to funguje.
+
 ### IndexNow
 
 Automatické odesílání do IndexNow zatím není zapojené. U tohoto malého statického webu by kvůli několika stabilním URL přidalo klíč a nasazovací automatizaci bez jasného přínosu pro hlavní Google vyhledávání. Po významné změně odešlete sitemapu a reprezentativní URL přes Search Console; IndexNow lze později doplnit jako samostatný Vercel/CI krok, pokud bude důležitá rychlost objevení v podporovaných vyhledávačích.
