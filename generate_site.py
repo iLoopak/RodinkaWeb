@@ -433,11 +433,13 @@ HOME_BABY_STORY = {
 }
 
 
-# The promo spot has a Czech voice-over. Slovak visitors understand it, so the
-# Slovak homepage shows it too and says it is in Czech; English waits for a
-# localized cut. Phones get the 9:16 cut, everything else 16:9.
+# The promo spot exists with a Czech and an English voice-over. Slovak visitors
+# understand Czech, so the Slovak homepage reuses the Czech cut and says so.
+# "stem" is the file prefix in /assets/video/; phones get the 9:16 cut and
+# poster, everything else 16:9.
 HOME_SPOT = {
     "cs": {
+        "stem": "/assets/video/rodinka-spot",
         "kicker": "RODINKA ZA 50 VTEŘIN",
         "title": "Rodina je ten nejkrásnější chaos.",
         "lead": "Jedno obyčejné ráno — od otázek na lednici po společný víkend.",
@@ -446,12 +448,22 @@ HOME_SPOT = {
         "label": "Přehrát video o Rodince, 50 sekund se zvukem",
     },
     "sk": {
+        "stem": "/assets/video/rodinka-spot",
         "kicker": "RODINKA ZA 50 SEKÚND",
         "title": "Rodina je ten najkrajší chaos.",
         "lead": "Jedno obyčajné ráno — od otázok na chladničke po spoločný víkend.",
         "play": "Pustite si Rodinku",
         "meta": "Video · 0:50 · v češtine",
         "label": "Prehrať video o Rodinke, 50 sekúnd so zvukom, v češtine",
+    },
+    "en": {
+        "stem": "/assets/video/rodinka-spot-en",
+        "kicker": "RODINKA IN 50 SECONDS",
+        "title": "Family is the most beautiful chaos.",
+        "lead": "One ordinary morning — from questions on the fridge to a weekend together.",
+        "play": "Watch Rodinka",
+        "meta": "Video · 0:50 · with sound",
+        "label": "Play the Rodinka video, 50 seconds with sound",
     },
 }
 SPOT_TALL_MEDIA = "(max-width: 560px)"
@@ -1434,6 +1446,7 @@ def render_home_spot(locale: str) -> str:
     spot = HOME_SPOT.get(locale)
     if not spot:
         return ""
+    stem = spot["stem"]
     return f'''
       <section class="spot-section" aria-labelledby="spot-title">
         <p class="section-kicker reveal">{esc(spot["kicker"])}</p>
@@ -1441,9 +1454,9 @@ def render_home_spot(locale: str) -> str:
         <p class="section-lead reveal">{esc(spot["lead"])}</p>
         <div class="spot reveal">
           <div class="spot-frame">
-            <video class="spot-video" controls playsinline preload="none" aria-labelledby="spot-title" data-src-tall="/assets/video/rodinka-spot-9x16.mp4"><source src="/assets/video/rodinka-spot-16x9.mp4" type="video/mp4" /></video>
+            <video class="spot-video" controls playsinline preload="none" aria-labelledby="spot-title" data-src-tall="{stem}-9x16.mp4"><source src="{stem}-16x9.mp4" type="video/mp4" /></video>
             <button class="spot-cover" type="button" aria-label="{esc(spot["label"])}">
-              <picture><source media="{SPOT_TALL_MEDIA}" srcset="/assets/video/rodinka-spot-9x16.webp" width="720" height="1280" /><img src="/assets/video/rodinka-spot-16x9.webp" width="1600" height="900" alt="" loading="lazy" decoding="async" /></picture>
+              <picture><source media="{SPOT_TALL_MEDIA}" srcset="{stem}-9x16.webp" width="720" height="1280" /><img src="{stem}-16x9.webp" width="1600" height="900" alt="" loading="lazy" decoding="async" /></picture>
               <span class="spot-play" aria-hidden="true"><span class="spot-play-icon"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></svg></span><span><strong>{esc(spot["play"])}</strong><small>{esc(spot["meta"])}</small></span></span>
             </button>
           </div>
