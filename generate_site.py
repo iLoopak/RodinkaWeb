@@ -21,7 +21,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260914a"
+ASSET_VERSION = "20260924a"
 
 # Self-hosted webfonts, built by tools/build_fonts.py. Both are preloaded because
 # every page renders body copy in DM Sans and the header brand plus the h1 in
@@ -431,6 +431,21 @@ HOME_BABY_STORY = {
         "caption": "Expected Child gives adults one shared view of family preparations before the new arrival.",
     },
 }
+
+
+# The promo spot has a Czech voice-over, so only the Czech homepage shows it
+# until localized cuts exist. Phones get the 9:16 cut, everything else 16:9.
+HOME_SPOT = {
+    "cs": {
+        "kicker": "RODINKA ZA 50 VTEŘIN",
+        "title": "Rodina je ten nejkrásnější chaos.",
+        "lead": "Jedno obyčejné ráno — od otázek na lednici po společný víkend.",
+        "play": "Pusťte si Rodinku",
+        "meta": "Video · 0:50 · se zvukem",
+        "label": "Přehrát video o Rodince, 50 sekund se zvukem",
+    },
+}
+SPOT_TALL_MEDIA = "(max-width: 560px)"
 
 
 
@@ -1406,6 +1421,27 @@ def render_home_baby_story(locale: str) -> str:
       </section>'''
 
 
+def render_home_spot(locale: str) -> str:
+    spot = HOME_SPOT.get(locale)
+    if not spot:
+        return ""
+    return f'''
+      <section class="spot-section" aria-labelledby="spot-title">
+        <p class="section-kicker reveal">{esc(spot["kicker"])}</p>
+        <h2 class="section-title reveal" id="spot-title">{esc(spot["title"])}</h2>
+        <p class="section-lead reveal">{esc(spot["lead"])}</p>
+        <div class="spot reveal">
+          <div class="spot-frame">
+            <video class="spot-video" controls playsinline preload="none" poster="/assets/video/rodinka-spot-16x9.webp" aria-labelledby="spot-title" data-src-tall="/assets/video/rodinka-spot-9x16.mp4"><source src="/assets/video/rodinka-spot-16x9.mp4" type="video/mp4" /></video>
+            <button class="spot-cover" type="button" aria-label="{esc(spot["label"])}">
+              <picture><source media="{SPOT_TALL_MEDIA}" srcset="/assets/video/rodinka-spot-9x16.webp" width="720" height="1280" /><img src="/assets/video/rodinka-spot-16x9.webp" width="1600" height="900" alt="" loading="lazy" decoding="async" /></picture>
+              <span class="spot-play" aria-hidden="true"><span class="spot-play-icon"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></svg></span><span><strong>{esc(spot["play"])}</strong><small>{esc(spot["meta"])}</small></span></span>
+            </button>
+          </div>
+        </div>
+      </section>'''
+
+
 def render_home(locale: str) -> str:
     data = HOME[locale]
     cfg = LOCALES[locale]
@@ -1420,6 +1456,7 @@ def render_home(locale: str) -> str:
     journey = "".join(f'<div><b>{esc(title)}</b><small>{esc(text)}</small></div>' for title, text in data["journey"])
     proof = "".join(f'<span>{esc(item)}</span>' for item in data["proof"])
     direct_answer = render_direct_answer("home", locale)
+    spot = render_home_spot(locale)
     baby_story = render_home_baby_story(locale)
     memory_story = render_home_memory_story(locale)
     family_layer = render_home_family_layer(locale)
@@ -1445,7 +1482,7 @@ def render_home(locale: str) -> str:
           <div class="phone-shell"><div class="phone-top"><div class="mini-brand"><span class="mini-mark">●</span> Rodinka</div><div class="member-dots"><span>M</span><span>K</span><span>+2</span></div></div><p class="phone-date">{esc(data["phone_date"])}</p><p class="phone-greeting">{esc(data["phone_greeting"])}</p><div class="today-card"><div class="card-title"><strong>{esc(data["today"])}</strong><span>{esc(data["items"])}</span></div>{agenda}</div><div class="quick-grid"><div><span class="quick-icon mint">✓</span><small>{esc(data["quick"][0][0])}</small><strong>{esc(data["quick"][0][1])}</strong></div><div><span class="quick-icon peach">▤</span><small>{esc(data["quick"][1][0])}</small><strong>{esc(data["quick"][1][1])}</strong></div></div></div>
         </div>
       </section>
-{direct_answer}
+{direct_answer}{spot}
       <section class="intro" id="jak-to-funguje"><p class="section-kicker reveal">{esc(data["intro_kicker"])}</p><h2 class="section-title reveal">{esc(data["intro_title"])}</h2><p class="section-lead reveal">{esc(data["intro_lead"])}</p><div class="steps">{steps}</div><aside class="activation-note reveal"><span aria-hidden="true">💡</span><div><h3>{esc(data["note_title"])}</h3><p>{esc(data["note"])}</p></div></aside></section>
       <section class="features" id="funkce"><div class="feature-heading reveal"><p class="section-kicker">{esc(data["features_kicker"])}</p><h2 class="section-title">{esc(data["features_title"])}</h2><p class="feature-sublead">{esc(data["features_lead"])}</p></div><div class="feature-grid">{feature_cards}</div></section>
 {family_layer}

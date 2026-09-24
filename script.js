@@ -159,3 +159,21 @@ document.addEventListener('click', (event) => {
     // Navigation is never delayed or cancelled when analytics is unavailable.
   }
 });
+
+const spotVideo = document.querySelector('.spot-video');
+const spotCover = document.querySelector('.spot-cover');
+
+if (spotVideo && spotCover) {
+  spotVideo.controls = false;
+
+  spotCover.addEventListener('click', () => {
+    spotVideo.poster = spotCover.querySelector('img').currentSrc;
+    if (window.matchMedia('(max-width: 560px)').matches) {
+      spotVideo.src = spotVideo.dataset.srcTall;
+    }
+    spotVideo.controls = true;
+    spotCover.hidden = true;
+    spotVideo.focus({ preventScroll: true });
+    spotVideo.play().catch(() => {});
+  });
+}
