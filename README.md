@@ -61,7 +61,7 @@ Pro bezpečnou lokalizaci plochého marketingového exportu použijte `tools/com
 
 ### Promo video
 
-Česká homepage má pod stručnou odpovědí padesátivteřinový spot z `Rodinka/promo/rodinka-spot/video/`. Obsah sekce spravuje `HOME_SPOT` v generátoru; slovenská a anglická homepage ho nemají, protože spot má český voice-over. Soubory leží v `assets/video/`: 16:9 pro širší obrazovky, 9:16 pro telefony do 560 px. Video se stahuje až po kliknutí na plakát. Bez JavaScriptu se zobrazí běžný přehrávač s verzí 16:9.
+Česká a slovenská homepage mají pod stručnou odpovědí padesátivteřinový spot z `Rodinka/promo/rodinka-spot/video/`. Obsah sekce spravuje `HOME_SPOT` v generátoru. Spot má český voice-over, slovenská verze to proto u tlačítka uvádí; anglická homepage ho nemá, dokud nevznikne lokalizovaná verze. Soubory leží v `assets/video/`: 16:9 pro širší obrazovky, 9:16 pro telefony do 560 px. Video se stahuje až po kliknutí na plakát. Bez JavaScriptu se zobrazí běžný přehrávač s verzí 16:9.
 
 Webové verze a WebP plakáty (snímek z 11,4 s) vznikly takto; pro 9:16 platí totéž se vstupem `rodinka-spot-1080x1920.mp4` a plakátem širokým 720 px:
 
