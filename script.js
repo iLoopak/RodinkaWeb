@@ -177,3 +177,43 @@ if (spotVideo && spotCover) {
     spotVideo.play().catch(() => {});
   });
 }
+
+const spotCta = document.querySelector('.spot-cta');
+
+if (spotVideo && spotCta) {
+  // The closing "try Rodinka" pill is part of the picture, so the link only
+  // exists from the moment it appears. Sizes are pixels of the 1080 px cuts:
+  // the pill is centred and 104 px tall, and the link overhangs it a little
+  // to be an easier target.
+  const pillHeight = 104;
+  const slack = 14;
+  const pillCentreY = { wide: 831.5 / 1080, tall: 1395 / 1920 };
+  const showFrom = Number(spotCta.dataset.from);
+  const pillWidth = Number(spotCta.dataset.width);
+
+  const placeSpotCta = () => {
+    const { videoWidth, videoHeight, clientWidth, clientHeight } = spotVideo;
+    if (!videoWidth || !videoHeight) return;
+    // Mirror object-fit: contain, so the link follows the drawn picture even
+    // when the cut and the frame disagree, e.g. after rotating a phone.
+    const scale = Math.min(clientWidth / videoWidth, clientHeight / videoHeight);
+    const unit = (Math.min(videoWidth, videoHeight) * scale) / 1080;
+    const centreY = (clientHeight - videoHeight * scale) / 2
+      + videoHeight * scale * (videoWidth > videoHeight ? pillCentreY.wide : pillCentreY.tall);
+    const width = (pillWidth + 2 * slack) * unit;
+    const height = (pillHeight + 2 * slack) * unit;
+    spotCta.style.left = `${(clientWidth - width) / 2}px`;
+    spotCta.style.top = `${centreY - height / 2}px`;
+    spotCta.style.width = `${width}px`;
+    spotCta.style.height = `${height}px`;
+  };
+
+  spotVideo.addEventListener('timeupdate', () => {
+    const show = spotVideo.currentTime >= showFrom;
+    if (show) placeSpotCta();
+    spotCta.hidden = !show;
+  });
+  window.addEventListener('resize', () => {
+    if (!spotCta.hidden) placeSpotCta();
+  });
+}
