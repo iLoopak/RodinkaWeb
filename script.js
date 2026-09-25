@@ -177,3 +177,16 @@ if (spotVideo && spotCover) {
     spotVideo.play().catch(() => {});
   });
 }
+
+// The spot ends on a painted "try Rodinka" button. From the moment it appears,
+// a link over the picture makes it (and the rest of the end card) clickable.
+const spotCta = document.querySelector('.spot-cta');
+
+if (spotVideo && spotCta) {
+  const ctaAt = Number(spotVideo.dataset.ctaAt);
+  const syncSpotCta = () => {
+    spotCta.hidden = !(spotVideo.currentTime >= ctaAt);
+  };
+
+  ['timeupdate', 'seeking', 'ended', 'emptied'].forEach((type) => spotVideo.addEventListener(type, syncSpotCta));
+}

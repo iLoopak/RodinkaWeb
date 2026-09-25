@@ -63,6 +63,8 @@ Pro bezpečnou lokalizaci plochého marketingového exportu použijte `tools/com
 
 Všechny tři homepage mají pod stručnou odpovědí padesátivteřinový spot z `Rodinka/promo/rodinka-spot/video/`. Obsah sekce i použitý soubor (`stem`) spravuje `HOME_SPOT` v generátoru. Každý jazyk má vlastní verzi spotu s lokalizovaným voice-overem. Soubory leží v `assets/video/` (slovenské s příponou `-sk`, anglické `-en`): 16:9 pro širší obrazovky, 9:16 pro telefony do 560 px. Video se stahuje až po kliknutí na plakát. Bez JavaScriptu se zobrazí běžný přehrávač s verzí 16:9.
 
+Spot končí namalovaným tlačítkem „Vyzkoušet Rodinku“. Od vteřiny, kdy se ve videu objeví (`cta_at` v `HOME_SPOT`, pro každý jazyk zvlášť), překryje obraz odkaz na aplikaci s `data-analytics-location="video"`; spodní pruh s ovládáním přehrávače zůstává volný. Při převinutí zpět odkaz zase zmizí. Po výměně videa ověřte, že `cta_at` odpovídá novému záznamu.
+
 Webové verze a WebP plakáty vznikly takto; pro 9:16 platí totéž se vstupem `rodinka-spot-1080x1920.mp4` a plakátem širokým 720 px, pro další jazyky vstupy i výstupy `rodinka-spot-sk-*` a `rodinka-spot-en-*`. Plakát je snímek, na kterém je celý titulek („Rodina je ten nejkrásnější chaos na světě.“) a všechny postavičky: 11,4 s u české a anglické verze, 11,02 s u slovenské, která běží o kousek dřív:
 
 ```bash
@@ -104,7 +106,7 @@ Kliknutí na označený odkaz do `https://app.mojerodinka.cz` vloží do `dataLa
 ```js
 {
   event: 'cta_app_click',
-  cta_location: 'header' | 'hero' | 'content' | 'footer',
+  cta_location: 'header' | 'hero' | 'video' | 'content' | 'footer',
   cta_text: 'lokalizovaný viditelný text odkazu',
   page_path: '/aktuální-cesta/',
   page_language: 'cs' | 'sk' | 'en'

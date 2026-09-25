@@ -18,7 +18,7 @@ EXPECTED_PAGES = sum(len(variants) for variants in FAMILIES.values())
 GTM_ID = "GTM-5FM9NJHK"
 GA4_ID = "G-LMZQ91Y9NP"
 APP_ORIGIN = "https://app.mojerodinka.cz"
-ALLOWED_LOCATIONS = {"header", "hero", "content", "footer"}
+ALLOWED_LOCATIONS = {"header", "hero", "video", "content", "footer"}
 EXPECTED_COPY = {
     "cs": ("Povolit analytiku", "Odmítnout", "Nastavení cookies"),
     "sk": ("Povoliť analytiku", "Odmietnuť", "Nastavenie cookies"),

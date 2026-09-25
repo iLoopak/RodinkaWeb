@@ -21,7 +21,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260924a"
+ASSET_VERSION = "20260925a"
 
 # Self-hosted webfonts, built by tools/build_fonts.py. Both are preloaded because
 # every page renders body copy in DM Sans and the header brand plus the h1 in
@@ -435,7 +435,9 @@ HOME_BABY_STORY = {
 
 # The promo spot has a localized voice-over for each homepage. "stem" is the
 # file prefix in /assets/video/; phones get the 9:16 cut and poster,
-# everything else 16:9.
+# everything else 16:9. The spot ends on a painted "try Rodinka" button:
+# "cta_at" is the second it pops in (same in both cuts), from which the video
+# becomes a link to the app, and "cta" repeats the button's text for it.
 HOME_SPOT = {
     "cs": {
         "stem": "/assets/video/rodinka-spot",
@@ -443,6 +445,8 @@ HOME_SPOT = {
         "title": "Rodina je ten nejkrásnější chaos.",
         "lead": "Jedno obyčejné ráno — od otázek na lednici po společný víkend.",
         "play": "Pusťte si Rodinku",
+        "cta": "Vyzkoušet Rodinku",
+        "cta_at": 43.5,
         "meta": "Video · 0:50 · se zvukem",
         "label": "Přehrát video o Rodince, 50 sekund se zvukem",
     },
@@ -452,6 +456,8 @@ HOME_SPOT = {
         "title": "Rodina je ten najkrajší chaos.",
         "lead": "Jedno obyčajné ráno — od otázok na chladničke po spoločný víkend.",
         "play": "Pustite si Rodinku",
+        "cta": "Vyskúšať Rodinku",
+        "cta_at": 42.9,
         "meta": "Video · 0:50 · so zvukom",
         "label": "Prehrať video o Rodinke, 50 sekúnd so zvukom",
     },
@@ -461,6 +467,8 @@ HOME_SPOT = {
         "title": "Family is the most beautiful chaos.",
         "lead": "One ordinary morning — from questions on the fridge to a weekend together.",
         "play": "Watch Rodinka",
+        "cta": "Try Rodinka",
+        "cta_at": 43.8,
         "meta": "Video · 0:50 · with sound",
         "label": "Play the Rodinka video, 50 seconds with sound",
     },
@@ -1453,7 +1461,8 @@ def render_home_spot(locale: str) -> str:
         <p class="section-lead reveal">{esc(spot["lead"])}</p>
         <div class="spot reveal">
           <div class="spot-frame">
-            <video class="spot-video" controls playsinline preload="none" aria-labelledby="spot-title" data-src-tall="{stem}-9x16.mp4"><source src="{stem}-16x9.mp4" type="video/mp4" /></video>
+            <video class="spot-video" controls playsinline preload="none" aria-labelledby="spot-title" data-src-tall="{stem}-9x16.mp4" data-cta-at="{spot["cta_at"]}"><source src="{stem}-16x9.mp4" type="video/mp4" /></video>
+            <a class="spot-cta" href="{APP_URL}" data-analytics-location="video" hidden><span>{esc(spot["cta"])}</span></a>
             <button class="spot-cover" type="button" aria-label="{esc(spot["label"])}">
               <picture><source media="{SPOT_TALL_MEDIA}" srcset="{stem}-9x16.webp" width="720" height="1280" /><img src="{stem}-16x9.webp" width="1600" height="900" alt="" loading="lazy" decoding="async" /></picture>
               <span class="spot-play" aria-hidden="true"><span class="spot-play-icon"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></svg></span><span><strong>{esc(spot["play"])}</strong><small>{esc(spot["meta"])}</small></span></span>
