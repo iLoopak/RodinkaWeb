@@ -61,9 +61,9 @@ Pro bezpečnou lokalizaci plochého marketingového exportu použijte `tools/com
 
 ### Promo video
 
-Všechny tři homepage mají pod stručnou odpovědí padesátivteřinový spot z `Rodinka/promo/rodinka-spot/video/`. Obsah sekce i použitý soubor (`stem`) spravuje `HOME_SPOT` v generátoru. Spot existuje s českým a anglickým voice-overem; slovenská homepage používá českou verzi a u tlačítka to uvádí. Soubory leží v `assets/video/` (anglické s příponou `-en`): 16:9 pro širší obrazovky, 9:16 pro telefony do 560 px. Video se stahuje až po kliknutí na plakát. Bez JavaScriptu se zobrazí běžný přehrávač s verzí 16:9.
+Všechny tři homepage mají pod stručnou odpovědí padesátivteřinový spot z `Rodinka/promo/rodinka-spot/video/`. Obsah sekce i použitý soubor (`stem`) spravuje `HOME_SPOT` v generátoru. Každý jazyk má vlastní verzi spotu s lokalizovaným voice-overem. Soubory leží v `assets/video/` (slovenské s příponou `-sk`, anglické `-en`): 16:9 pro širší obrazovky, 9:16 pro telefony do 560 px. Video se stahuje až po kliknutí na plakát. Bez JavaScriptu se zobrazí běžný přehrávač s verzí 16:9.
 
-Webové verze a WebP plakáty (snímek z 11,4 s) vznikly takto; pro 9:16 platí totéž se vstupem `rodinka-spot-1080x1920.mp4` a plakátem širokým 720 px, pro angličtinu vstupy `rodinka-spot-en-*` a výstupy `rodinka-spot-en-*`:
+Webové verze a WebP plakáty vznikly takto; pro 9:16 platí totéž se vstupem `rodinka-spot-1080x1920.mp4` a plakátem širokým 720 px, pro další jazyky vstupy i výstupy `rodinka-spot-sk-*` a `rodinka-spot-en-*`. Plakát je snímek, na kterém je celý titulek („Rodina je ten nejkrásnější chaos na světě.“) a všechny postavičky: 11,4 s u české a anglické verze, 11,02 s u slovenské, která běží o kousek dřív:
 
 ```bash
 ffmpeg -i rodinka-spot-1080p.mp4 -c:v libx264 -preset slow -crf 26 -r 30 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/rodinka-spot-16x9.mp4
