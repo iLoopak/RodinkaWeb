@@ -104,14 +104,14 @@ Kliknutí na označený odkaz do `https://app.mojerodinka.cz` vloží do `dataLa
 ```js
 {
   event: 'cta_app_click',
-  cta_location: 'header' | 'hero' | 'content' | 'footer',
+  cta_location: 'header' | 'hero' | 'content' | 'video' | 'footer',
   cta_text: 'lokalizovaný viditelný text odkazu',
   page_path: '/aktuální-cesta/',
   page_language: 'cs' | 'sk' | 'en'
 }
 ```
 
-Událost neobsahuje osobní údaje a navigaci neblokuje. Neznamená úspěšnou registraci, proto se z marketingového webu neposílá `sign_up`; ten patří až do aplikace po dokončeném založení účtu.
+Hodnotu `video` posílá odkaz přes tlačítko „Vyzkoušet Rodinku“ na konci promo videa na homepage. Odkaz je aktivní až od chvíle, kdy se tlačítko ve videu objeví. Událost neobsahuje osobní údaje a navigaci neblokuje. Neznamená úspěšnou registraci, proto se z marketingového webu neposílá `sign_up`; ten patří až do aplikace po dokončeném založení účtu.
 
 ### Ruční konfigurace GTM a GA4
 

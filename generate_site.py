@@ -21,7 +21,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260924a"
+ASSET_VERSION = "20260925a"
 
 # Self-hosted webfonts, built by tools/build_fonts.py. Both are preloaded because
 # every page renders body copy in DM Sans and the header brand plus the h1 in
@@ -435,7 +435,10 @@ HOME_BABY_STORY = {
 
 # The promo spot has a localized voice-over for each homepage. "stem" is the
 # file prefix in /assets/video/; phones get the 9:16 cut and poster,
-# everything else 16:9.
+# everything else 16:9. The spot ends on a "try Rodinka" pill drawn into the
+# picture, and script.js lays a real app link over it: "cta" is the pill's
+# label, "cta_from" the second it appears and "cta_width" its width in pixels
+# of the 1080 px cuts. Measure all three again whenever a spot is re-rendered.
 HOME_SPOT = {
     "cs": {
         "stem": "/assets/video/rodinka-spot",
@@ -445,6 +448,9 @@ HOME_SPOT = {
         "play": "Pusťte si Rodinku",
         "meta": "Video · 0:50 · se zvukem",
         "label": "Přehrát video o Rodince, 50 sekund se zvukem",
+        "cta": "Vyzkoušet Rodinku",
+        "cta_from": "43.4",
+        "cta_width": "540",
     },
     "sk": {
         "stem": "/assets/video/rodinka-spot-sk",
@@ -454,6 +460,9 @@ HOME_SPOT = {
         "play": "Pustite si Rodinku",
         "meta": "Video · 0:50 · so zvukom",
         "label": "Prehrať video o Rodinke, 50 sekúnd so zvukom",
+        "cta": "Vyskúšať Rodinku",
+        "cta_from": "42.9",
+        "cta_width": "510",
     },
     "en": {
         "stem": "/assets/video/rodinka-spot-en",
@@ -463,6 +472,9 @@ HOME_SPOT = {
         "play": "Watch Rodinka",
         "meta": "Video · 0:50 · with sound",
         "label": "Play the Rodinka video, 50 seconds with sound",
+        "cta": "Try Rodinka",
+        "cta_from": "43.8",
+        "cta_width": "372",
     },
 }
 SPOT_TALL_MEDIA = "(max-width: 560px)"
@@ -1454,6 +1466,7 @@ def render_home_spot(locale: str) -> str:
         <div class="spot reveal">
           <div class="spot-frame">
             <video class="spot-video" controls playsinline preload="none" aria-labelledby="spot-title" data-src-tall="{stem}-9x16.mp4"><source src="{stem}-16x9.mp4" type="video/mp4" /></video>
+            <a class="spot-cta" href="{APP_URL}" data-analytics-location="video" data-from="{spot["cta_from"]}" data-width="{spot["cta_width"]}" hidden>{esc(spot["cta"])}</a>
             <button class="spot-cover" type="button" aria-label="{esc(spot["label"])}">
               <picture><source media="{SPOT_TALL_MEDIA}" srcset="{stem}-9x16.webp" width="720" height="1280" /><img src="{stem}-16x9.webp" width="1600" height="900" alt="" loading="lazy" decoding="async" /></picture>
               <span class="spot-play" aria-hidden="true"><span class="spot-play-icon"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></svg></span><span><strong>{esc(spot["play"])}</strong><small>{esc(spot["meta"])}</small></span></span>
