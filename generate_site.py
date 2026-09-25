@@ -433,10 +433,9 @@ HOME_BABY_STORY = {
 }
 
 
-# The promo spot exists with a Czech and an English voice-over. Slovak visitors
-# understand Czech, so the Slovak homepage reuses the Czech cut and says so.
-# "stem" is the file prefix in /assets/video/; phones get the 9:16 cut and
-# poster, everything else 16:9.
+# The promo spot has a localized voice-over for each homepage. "stem" is the
+# file prefix in /assets/video/; phones get the 9:16 cut and poster,
+# everything else 16:9.
 HOME_SPOT = {
     "cs": {
         "stem": "/assets/video/rodinka-spot",
@@ -448,13 +447,13 @@ HOME_SPOT = {
         "label": "Přehrát video o Rodince, 50 sekund se zvukem",
     },
     "sk": {
-        "stem": "/assets/video/rodinka-spot",
+        "stem": "/assets/video/rodinka-spot-sk",
         "kicker": "RODINKA ZA 50 SEKÚND",
         "title": "Rodina je ten najkrajší chaos.",
         "lead": "Jedno obyčajné ráno — od otázok na chladničke po spoločný víkend.",
         "play": "Pustite si Rodinku",
-        "meta": "Video · 0:50 · v češtine",
-        "label": "Prehrať video o Rodinke, 50 sekúnd so zvukom, v češtine",
+        "meta": "Video · 0:50 · so zvukom",
+        "label": "Prehrať video o Rodinke, 50 sekúnd so zvukom",
     },
     "en": {
         "stem": "/assets/video/rodinka-spot-en",
