@@ -314,7 +314,7 @@ i.petal,i.avatar{font-style:normal}
 .mock-note b{color:var(--text-primary)}
 .mock-tips{display:grid;gap:8px;margin-top:12px}
 .mock-tip{padding:10px 12px;border:1px solid var(--border-subtle);border-radius:var(--radius-medium);background:var(--surface-paper)}
-.mock-tip.is-selected{border-color:var(--category-travel-border);box-shadow:inset 3px 0 0 var(--category-travel)}
+.mock-tip.is-selected{border-color:var(--category-travel-border)}
 .mock-tip-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .mock-tip strong{font-size:13px}
 .mock-tip small{display:block;color:var(--text-muted);font-size:10.5px}
