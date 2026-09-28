@@ -1,7 +1,7 @@
-"""Build the self-hosted WOFF2 webfonts in assets/fonts/ (optional helper).
+"""Build the self-hosted WOFF2 webfont in assets/fonts/ (optional helper).
 
-The generated files are committed, so the production site never needs this script.
-Run it only to refresh the fonts after changing the upstream version or the
+The generated file is committed, so the production site never needs this script.
+Run it only to refresh the font after changing the upstream version or the
 character set below:
 
     pip install fonttools brotli
@@ -9,23 +9,18 @@ character set below:
 
 Why the build looks the way it does
 -----------------------------------
-The site previously loaded DM Sans and Manrope from fonts.googleapis.com. To keep
-the typography byte-for-byte identical after self-hosting, this script reproduces
-exactly what the Google Fonts CSS API used to serve:
+The web speaks the app's typography: the Rodinka app sets every word in Manrope
+(500 body, 600 medium, 700 strong, 800 emphasis) with a system serif as the
+"family voice" accent. The marketing site used to pair DM Sans body copy with
+Manrope headings, which made the product screenshots and the page around them
+read as two different brands. The site now ships Manrope alone.
 
-* Same upstream releases: DM Sans 4.004 and Manrope 4.504.
-* DM Sans is a two-axis font (opsz 9-40, wght 100-1000). The Google Fonts API
-  pinned the optical size at 14 for the `css2?family=DM+Sans:wght@...` query the
-  site used, so this script pins opsz=14 too. Using the upstream default (opsz=9)
-  would render visibly different letterforms.
-* Manrope ships a single wght axis and was served unmodified.
-
-Two deliberate reductions keep the payload small without touching appearance:
-
-* The weight axis is clipped to the range the stylesheet actually asks for
-  (DM Sans 400-700, Manrope 700-800). Rendering inside that range is unchanged;
-  clipping just drops delta data the site can never reach. This is what makes
-  the variable fonts smaller than static instances would be.
+* Manrope 4.505 from the Google Fonts repo (4.504 was the pin while Manrope only
+  set headings; the bump came with the switch to Manrope for all text).
+* Manrope ships a single wght axis. It is clipped to the range the stylesheet
+  actually asks for (500-800). Rendering inside that range is unchanged;
+  clipping just drops delta data the site can never reach, which keeps one
+  variable file smaller than the static instances would be.
 * The character set is Latin-1 plus the Central European letters, so Czech and
   Slovak diacritics render from the webfont. See CHARACTER_SET below.
 """
@@ -73,22 +68,12 @@ CHARACTER_SET = (
 
 FONTS = (
     {
-        "name": "DM Sans",
-        "source": f"{UPSTREAM}/dmsans/DMSans%5Bopsz%2Cwght%5D.ttf",
-        "license": f"{UPSTREAM}/dmsans/OFL.txt",
-        "version": "Version 4.004",
-        # opsz 14 reproduces the instance the Google Fonts API served.
-        "location": {"opsz": 14, "wght": (400, 700)},
-        "output": "dm-sans-latin-ext-400-700.woff2",
-        "license_output": "OFL-DMSans.txt",
-    },
-    {
         "name": "Manrope",
         "source": f"{UPSTREAM}/manrope/Manrope%5Bwght%5D.ttf",
         "license": f"{UPSTREAM}/manrope/OFL.txt",
-        "version": "Version 4.504",
-        "location": {"wght": (700, 800)},
-        "output": "manrope-latin-ext-700-800.woff2",
+        "version": "Version 4.505",
+        "location": {"wght": (500, 800)},
+        "output": "manrope-latin-ext-500-800.woff2",
         "license_output": "OFL-Manrope.txt",
     },
 )
