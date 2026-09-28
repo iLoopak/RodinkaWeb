@@ -27,6 +27,7 @@ FAMILIES = {
     "app": {"cs": "/aplikace-pro-rodinu/", "sk": "/sk/aplikacia-pre-rodinu/", "en": "/en/family-organizer/"},
     "memories": {"cs": "/rodinne-vzpominky/", "sk": "/sk/rodinne-spomienky/", "en": "/en/family-memories/"},
     "documents": {"cs": "/hlidani-platnosti-dokladu/", "sk": "/sk/strazenie-platnosti-dokladov/", "en": "/en/document-expiry-reminders/"},
+    "trips": {"cs": "/rodinne-vylety/", "sk": "/sk/rodinne-vylety/", "en": "/en/family-trips/"},
 }
 
 EXPECTED = {
@@ -58,9 +59,9 @@ PRODUCT_ASSETS = {
     for locale in ("cs", "sk", "en")
 }
 
+# One variable Manrope carries every weight, exactly like the app's own UI.
 SELF_HOSTED_FONTS = {
-    "/assets/fonts/dm-sans-latin-ext-400-700.woff2",
-    "/assets/fonts/manrope-latin-ext-700-800.woff2",
+    "/assets/fonts/manrope-latin-ext-500-800.woff2",
 }
 
 # The fonts are self-hosted so the critical path is HTML -> font, with no
@@ -229,7 +230,7 @@ def main() -> int:
         if preloaded != SELF_HOSTED_FONTS:
             errors.append(
                 f"{path}: font preloads {sorted(preloaded)} != {sorted(SELF_HOSTED_FONTS)}; "
-                "preload exactly the two above-the-fold faces"
+                "preload exactly the one self-hosted face"
             )
         for href, attrs in parser.link_attrs:
             if attrs.get("rel") == "preload" and attrs.get("as") == "font":

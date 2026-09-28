@@ -18,7 +18,7 @@ Společná šablona, překlady a obsah stránek jsou v `generate_site.py`. Po ú
 python generate_site.py
 ```
 
-Skript znovu vytvoří 24 statických HTML stránek, `sitemap.xml` a experimentální `llms.txt`. Vygenerované soubory se commitují; Vercel proto nepotřebuje build command.
+Skript znovu vytvoří 33 statických HTML stránek (11 jazykových rodin × CS/SK/EN), `sitemap.xml` a experimentální `llms.txt`. Vygenerované soubory se commitují; Vercel proto nepotřebuje build command.
 
 ## SEO údržba
 
@@ -32,9 +32,20 @@ Skript znovu vytvoří 24 statických HTML stránek, `sitemap.xml` a experiment�
 - Viditelné produktové ukázky jsou optimalizované WebP soubory v `assets/product/`. Český základ používá název bez přípony jazyka, marketingově lokalizované varianty končí `-sk.webp` a `-en.webp`; samotné UI v telefonu zůstává věrnou českou produktovou ukázkou. Jejich přiřazení ke stránkám, lokalizované alternativní texty a popisky spravují `PRODUCT_PROOFS` a samostatné homepage story objekty v generátoru. Každá významová fotografie nebo obrazovka musí mít v HTML rozměry, užitečný lokalizovaný `alt` a viditelný kontext; nevkládejte screenshoty pouze jako CSS pozadí.
 - Každá indexovatelná stránka obsahuje nahoře krátkou přímou odpověď definovanou v `DIRECT_ANSWERS`. Při změně funkce upravte odpověď ve všech třech jazycích a držte ji konkrétní, faktickou a v souladu s viditelným produktem.
 - Favicon vychází z `favicon.svg`; raster fallbacky vytvoří `tools/generate_icons.ps1`.
-- Písma jsou self-hostovaná v `assets/fonts/` a web nesmí volat `fonts.googleapis.com` ani `fonts.gstatic.com`; SEO validace to hlídá. Každá rodina je jeden variabilní WOFF2 a `styles.css` z něj deklaruje jen ty váhy, které web používá (DM Sans 400/700, Manrope 700/800). Generátor preloaduje právě tyto dva soubory, protože obě rodiny jsou nad ohybem; další preload nepřidávejte. Licence OFL leží vedle fontů a musí zůstat commitnuté.
+- Písmo je self-hostované v `assets/fonts/` a web nesmí volat `fonts.googleapis.com` ani `fonts.gstatic.com`; SEO validace to hlídá. Stejně jako aplikace používá web pro veškerý text jen Manrope: jeden variabilní WOFF2 s osou váhy 500–800. Generátor preloaduje právě tento jeden soubor; další preload nepřidávejte. Serif (Georgia) je systémové písmo pro „hlas rodiny“ — claim, citát a pozdrav v ukázce aplikace — stejně jako v aplikaci. Licence OFL leží vedle fontu a musí zůstat commitnutá.
 - `llms.txt` je pouze neškodná experimentální pomůcka pro strojovou orientaci. Není SEO ranking faktor ani náhrada za sitemap, metadata, HTML obsah či strukturovaná data.
 - Po změně `styles.css` nebo `script.js` zvyšte `ASSET_VERSION` v generátoru, aby návštěvníci nedostali starou verzi z krátké cache.
+
+### Vzhled sladěný s aplikací
+
+Web přebírá vizuální systém aplikace Rodinka (`Rodinka/visual-identity.md` a `Rodinka/src/styles/tokens.css`), aby stránka a produktové ukázky na ní mluvily jedním jazykem:
+
+- Blok `:root` v `styles.css` je kopie sémantických tokenů aplikace (plochy, text, hranice, jediný accent `--interactive-primary`, vybraný stav, kategorie modulů, radiusy, stíny, pohyb) včetně tmavého motivu přes `prefers-color-scheme`. Při změně tokenů v aplikaci upravte stejné hodnoty i tady; nové lokální barvy nevymýšlejte.
+- Barva modulu (`data-tone`) odpovídá kategorii, kterou pro daný modul používá aplikace: úkoly zelená, aktivity levandulová, nákupy medová, doklady tlumená modrá, výlety přírodní zelená, jídla terakota.
+- Logo je port `FamilyMark` z aplikace (`family_mark*` v generátoru počítá stejné lístky jako `Rodinka/src/utils/familyMark.ts`). Ikony spodní navigace v ukázce jsou ikony aplikace.
+- Telefon v hero sekci, portrét rodiny a plán cesty jsou kresby skutečných komponent aplikace, ne screenshoty. Jsou vždy `aria-hidden` a stejnou informaci nese viditelný text vedle nich. Používají texty aplikace (Dnes, Dnešní Rodinka, Plány cest); když se v aplikaci změní, upravte `HOME_PHONE`, `TRIP_MOCK` a spol.
+- Sekce „S čím vám má Rodinka nejvíc pomáhat?“ zrcadlí sedm oblastí z úvodního průvodce aplikace (`HOME_FOCUS`) ve stejném pořadí a znění. Kroky „Jak začít“ odpovídají skutečnému průvodci (Rodina → S čím pomáhat → Portrét).
+- Tvrzení o funkcích musí odpovídat aktuálnímu stavu aplikace (runtime, ne roadmapě). Moment dne se nepropaguje, protože vyžaduje ručně udělené oprávnění rodiny; hlasové zadávání je vždy „na podporovaných zařízeních“.
 
 ### Přegenerování písem
 
@@ -45,7 +56,7 @@ pip install fonttools brotli
 python tools/build_fonts.py
 ```
 
-Skript reprodukuje přesně to, co dříve servírovalo Google Fonts: stejné upstream verze (DM Sans 4.004, Manrope 4.504) a u DM Sans optickou velikost zafixovanou na 14 — upstream default 9 by dal viditelně jiné tvary písmen. Osa váhy se ořízne na rozsah, který stylesheet skutečně používá, a znaková sada pokrývá latin-1 plus středoevropskou diakritiku, takže čeština i slovenština renderují z webfontu. Znak `→` v odkazech záměrně součástí není: nebyl ani v původní Google subsetě a vykresluje se systémovým písmem.
+Skript stahuje upstream Manrope 4.505 z repozitáře Google Fonts a ověřuje připnutou verzi. Osa váhy se ořízne na rozsah, který stylesheet skutečně používá (500–800), a znaková sada pokrývá latin-1 plus středoevropskou diakritiku, takže čeština i slovenština renderují z webfontu. Znak `→` v odkazech záměrně součástí není: nebyl ani v původní Google subsetě a vykresluje se systémovým písmem.
 
 ### Příprava produktových obrázků
 
