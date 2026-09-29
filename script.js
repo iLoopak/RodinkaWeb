@@ -254,3 +254,57 @@ if (spotVideo && spotCta) {
     if (!spotCta.hidden) placeSpotCta();
   });
 }
+
+// Každodenní Rodinka episodes. As with the spot, the poster is a button until
+// the first play, so the video is only downloaded when someone asks for it.
+const startShort = (short) => {
+  const video = short.querySelector('.short-video');
+  const cover = short.querySelector('.short-cover');
+  if (!video || !cover) return;
+  if (!cover.hidden) {
+    const poster = cover.querySelector('img');
+    video.poster = poster.currentSrc || poster.src;
+    video.controls = true;
+    cover.hidden = true;
+  }
+  video.play().catch(() => {});
+};
+
+document.querySelectorAll('.short').forEach((short) => {
+  const video = short.querySelector('.short-video');
+  const cover = short.querySelector('.short-cover');
+  if (!video || !cover) return;
+  video.controls = false;
+  cover.addEventListener('click', () => {
+    startShort(short);
+    video.focus({ preventScroll: true });
+  });
+});
+
+// The homepage lists the episodes beside one player: a pick puts its episode
+// in the player's place and starts it.
+const seriesPicks = document.querySelectorAll('.series-pick');
+
+seriesPicks.forEach((pick) => {
+  pick.addEventListener('click', () => {
+    const chosen = document.getElementById(pick.getAttribute('aria-controls'));
+    if (!chosen) return;
+    seriesPicks.forEach((other) => {
+      const short = document.getElementById(other.getAttribute('aria-controls'));
+      const isChosen = short === chosen;
+      other.setAttribute('aria-current', String(isChosen));
+      if (!short) return;
+      short.toggleAttribute('data-active', isChosen);
+      if (!isChosen) short.querySelector('.short-video')?.pause();
+    });
+    startShort(chosen);
+    chosen.scrollIntoView({ block: 'nearest' });
+  });
+});
+
+// One video at a time: starting any of them pauses the rest, the spot included.
+document.addEventListener('play', (event) => {
+  document.querySelectorAll('video').forEach((video) => {
+    if (video !== event.target) video.pause();
+  });
+}, true);

@@ -22,7 +22,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260929a"
+ASSET_VERSION = "20260929b"
 
 # Self-hosted webfont, built by tools/build_fonts.py. The app sets every word in
 # Manrope, so the site does too: one variable file (wght 500-800) carries body,
@@ -507,6 +507,82 @@ HOME_SPOT = {
     },
 }
 SPOT_TALL_MEDIA = "(max-width: 560px)"
+
+
+# "Každodenní Rodinka": the short 9:16 episodes from Rodinka/promo/rodinka-spot
+# (src/episodes/epNN). Each one sells a single everyday moment, so it plays on
+# the topic page whose problem it tells ("page", in the problem section) and all
+# of them play on the homepage, where "link" leads to the feature. "Co nás dnes
+# čeká?" is about the Today screen as a whole and has no topic page of its own.
+# The voices and the words drawn in the picture are Czech, so only the Czech
+# pages carry the series until localized renders exist. "stem" is the file name
+# in /assets/video/ (.mp4 and a 720 px .webp poster), "seconds" the rounded
+# running time; re-measure it whenever an episode is re-rendered.
+SERIES = {
+    "cs": {
+        "kicker": "KAŽDODENNÍ RODINKA",
+        "title": "Malé chvíle, které zná každá rodina",
+        "lead": "Kdo dnes vyzvedává, co máme koupit, kam pojedeme o víkendu — a co si chceme pamatovat. Sedm krátkých videí o tom, jak s tím pomáhá Rodinka.",
+        "list": "Videa ze série Každodenní Rodinka",
+        "play": "Přehrát video",
+        "meta": "{time} · se zvukem",
+        "label": "Přehrát video „{title}“, {seconds} sekund se zvukem",
+        "episodes": (
+            {
+                "stem": "kazdodenni-rodinka-01-kdo-dnes-vyzvedava",
+                "seconds": 17,
+                "page": "calendar",
+                "title": "Kdo dnes vyzvedává?",
+                "text": "Máma i táta počítají s tím, že Kubu ze školky vyzvedne ten druhý. V Rodince je u vyzvednutí rovnou vidět, kdo ho doprovází.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-02-co-mame-koupit",
+                "seconds": 16,
+                "page": "shopping",
+                "title": "Co máme koupit?",
+                "text": "Odpovědi z rodinného chatu chodí po jedné a máslo až u pokladny. Sdílený nákupní seznam je má pohromadě, roztříděné a k odškrtnutí.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-03-v-kolik-ma-krouzek",
+                "seconds": 14,
+                "page": "planner",
+                "title": "V kolik má dneska kroužek?",
+                "text": "Táta s klíči v ruce tipuje, jestli ve čtyři, nebo v pět. Denní linka na obrazovce Dnes ukáže, že Ema má judo v půl páté a kdo ji veze.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-04-kam-jsme-chteli-jet",
+                "seconds": 18,
+                "page": "trips",
+                "title": "Kam jsme to chtěli jet?",
+                "text": "Nápady na výlet leží v chatu, ve screenshotech i na babiččině pohlednici. V Rodince se sejdou v Zásobníku nápadů, kde si rodina jeden vybere a naplánuje.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-05-co-nas-dnes-ceka",
+                "seconds": 16,
+                "page": None,
+                "link": "planner",
+                "title": "Co nás dnes čeká?",
+                "text": "Obyčejné ráno u snídaně. Jeden pohled na obrazovku Dnes a všichni vědí, kdo co má, kdo koho vyzvedne a kde se večer sejdou.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-06-kde-jsme-to-resili",
+                "seconds": 14,
+                "page": "app",
+                "title": "Kde jsme to řešili?",
+                "text": "Babiččina sedmdesátka probraná v chatu, v kalendáři, na lepíku i v e-mailu. V Rodince z toho zůstane jedna obrazovka: oslava, dort a co ještě koupit.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-07-tohle-si-chceme-pamatovat",
+                "seconds": 25,
+                "page": "memories",
+                "title": "Tohle si chceme pamatovat.",
+                "text": "Kuba jede poprvé sám na kole a máma si fotku uloží do Rodinky. O rok později se k ní rodina vrátí na obrazovce Dnes v sekci V tento den.",
+            },
+        ),
+    },
+}
+SERIES_POSTER_WIDTH = 720
+SERIES_POSTER_HEIGHT = 1280
 
 
 
@@ -2127,6 +2203,71 @@ def render_home_spot(locale: str) -> str:
       </section>'''
 
 
+def series_time(seconds: int) -> str:
+    return f"{seconds // 60}:{seconds % 60:02d}"
+
+
+def render_short(episode: dict, locale: str, tone: str, link: str = "", attrs: str = "") -> str:
+    """One Každodenní Rodinka episode: a 9:16 frame whose poster is a play
+    button until the first click (the video is fetched only then), with the
+    episode's question and what happens in it underneath."""
+    series = SERIES[locale]
+    stem = f"/assets/video/{episode['stem']}"
+    label = series["label"].format(title=episode["title"], seconds=episode["seconds"])
+    meta = series["meta"].format(time=series_time(episode["seconds"]))
+    return f'''<figure class="short" data-tone="{tone}"{attrs}>
+          <div class="short-frame">
+            <video class="short-video" controls playsinline preload="none" aria-label="{esc(episode["title"])}"><source src="{stem}.mp4" type="video/mp4" /></video>
+            <button class="short-cover" type="button" aria-label="{esc(label)}">
+              <img src="{stem}.webp" width="{SERIES_POSTER_WIDTH}" height="{SERIES_POSTER_HEIGHT}" alt="" loading="lazy" decoding="async" />
+              <span class="short-play" aria-hidden="true"><span class="short-play-icon"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></svg></span><span><strong>{esc(series["play"])}</strong><small>{esc(meta)}</small></span></span>
+            </button>
+          </div>
+          <figcaption><strong>{esc(episode["title"])}</strong> {esc(episode["text"])}{link}</figcaption>
+        </figure>'''
+
+
+def topic_short(page_key: str, locale: str) -> str:
+    series = SERIES.get(locale)
+    episode = next((item for item in series["episodes"] if item["page"] == page_key), None) if series else None
+    if not episode:
+        return ""
+    return render_short(episode, locale, TOPIC_TONES[page_key][0])
+
+
+def render_series(locale: str) -> str:
+    """The whole series on the homepage: one player showing the chosen episode
+    and the list of episodes next to it. Without JavaScript the list is hidden
+    and every episode stays in the page as its own player."""
+    series = SERIES.get(locale)
+    if not series:
+        return ""
+    shorts, picks = [], ""
+    for index, episode in enumerate(series["episodes"]):
+        key = episode.get("link") or episode["page"]
+        panel = f"series-{index + 1:02d}"
+        active = index == 0
+        link = f' <a class="card-link" href="{PATHS[key][locale]}">{esc(LLMS_LABELS[locale][key])} <span aria-hidden="true">→</span></a>'
+        shorts.append(render_short(episode, locale, TOPIC_TONES[key][0], link, f' id="{panel}"{" data-active" if active else ""}'))
+        picks += (
+            f'<li><button class="series-pick" type="button" aria-controls="{panel}" aria-current="{"true" if active else "false"}">'
+            f'<span class="series-pick-text"><span class="series-question">{esc(episode["title"])}</span><span class="series-topic">{esc(LLMS_LABELS[locale][key])}</span></span>'
+            f'<span class="series-time"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" /></svg>{series_time(episode["seconds"])}</span></button></li>'
+        )
+    stage = "\n        ".join(shorts)
+    return f'''      <section class="section series-section" aria-labelledby="series-title">
+        <div class="section-inner">
+          <div class="section-head reveal"><p class="section-kicker">{esc(series["kicker"])}</p><h2 class="section-title" id="series-title">{esc(series["title"])}</h2><p class="section-lead">{esc(series["lead"])}</p></div>
+          <div class="series reveal">
+            <div class="series-stage">
+        {stage}
+            </div>
+            <ol class="series-list" aria-label="{esc(series["list"])}">{picks}</ol>
+          </div>
+        </div>
+      </section>'''
+
+
 def render_home(locale: str) -> str:
     data = HOME[locale]
     cfg = LOCALES[locale]
@@ -2151,6 +2292,7 @@ def render_home(locale: str) -> str:
 {render_direct_answer("home", locale)}
 {render_home_spot(locale)}
 {render_focus(locale)}
+{render_series(locale)}
 {render_start(locale)}
 {render_family_layer(locale)}
 {render_stories(locale)}
@@ -2172,12 +2314,16 @@ def render_topic(page_key: str, locale: str) -> str:
         f'<li><a href="{PATHS[key][locale]}"><strong>{esc(TOPICS[locale][key]["h1"])}</strong><span>{esc(TOPICS[locale][key]["card"])}</span><em>{esc(cfg["learn_more"])} →</em></a></li>'
         for key in RELATED[page_key]
     )
+    # The series episode about this topic tells the problem section's story, so
+    # it plays right next to it.
+    short = topic_short(page_key, locale)
+    problem_class = "content-section problem-section" + (" problem-section--short" if short else "")
     main = f'''      <article class="topic-page">
         <div class="topic-hero-wrap">
           <header class="topic-hero"><nav class="breadcrumbs" aria-label="{esc(cfg["breadcrumb"])}"><a href="{cfg["home_path"]}">{esc(cfg["home"])}</a><span aria-hidden="true">/</span><span aria-current="page">{esc(LLMS_LABELS[locale][page_key])}</span></nav><p class="section-kicker">{tone_icon(tone, glyph)}{esc(data["eyebrow"])}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions"><a class="button button-primary button-lg" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-pomaha">{esc(data["help_title"])} <span aria-hidden="true">↓</span></a></div></header>
         </div>
 {render_direct_answer(page_key, locale)}
-        <section class="content-section problem-section"><div class="section-copy"><p class="section-kicker">{esc(data["eyebrow"])}</p><h2>{esc(data["problem_title"])}</h2>{"".join(f"<p>{esc(paragraph)}</p>" for paragraph in data["problem"])}</div><div class="scenario-grid">{scenarios}</div></section>
+        <section class="{problem_class}"><div class="section-copy"><p class="section-kicker">{esc(data["eyebrow"])}</p><h2>{esc(data["problem_title"])}</h2>{"".join(f"<p>{esc(paragraph)}</p>" for paragraph in data["problem"])}</div>{short}<div class="scenario-grid">{scenarios}</div></section>
         <section class="help-section" id="jak-pomaha"><div class="section-copy"><p class="section-kicker">Rodinka</p><h2>{esc(data["help_title"])}</h2><p>{esc(data["help_intro"])}</p></div><ol class="help-steps">{steps}</ol></section>
         <section class="content-section answers-section"><div class="section-copy"><h2>{esc(data["answers_title"])}</h2></div><div class="answers-list">{answers}</div></section>
         <aside class="related-section" aria-labelledby="related-title"><p class="section-kicker">{esc(cfg["related_kicker"])}</p><h2 id="related-title">{esc(cfg["related"])}</h2><ul class="related-grid">{related}</ul></aside>

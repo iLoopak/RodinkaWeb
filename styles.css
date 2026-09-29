@@ -408,6 +408,53 @@ i.petal,i.avatar{font-style:normal}
 .spot-play strong{font-weight:800;font-size:15px}
 .spot-play small{margin-top:2px;color:#606962;font-size:12px}
 
+/* ------------------------------------------------------------------ series shorts (Každodenní Rodinka)
+   A 9:16 episode on a sheet of paper in its module's tone. Like the spot, the
+   poster is a button until the first play, so the video is fetched only then. */
+.short{width:100%;max-width:320px;margin:0;position:relative;isolation:isolate}
+.short::before{content:"";position:absolute;z-index:-1;top:0;left:0;width:100%;aspect-ratio:9/16;border:1px solid var(--tone-border);border-radius:26px;background:var(--tone-soft);transform:rotate(3deg) translate(10px,6px)}
+.short-frame{aspect-ratio:9/16;position:relative;overflow:hidden;border:1px solid var(--border-subtle);border-radius:24px;background:#efe7d8;box-shadow:var(--shadow-elevated)}
+.short-video{width:100%;height:100%;display:block;object-fit:cover;background:#efe7d8}
+.short-cover{width:100%;position:absolute;inset:0;padding:0;border:0;background:none;color:inherit;cursor:pointer}
+.short-cover[hidden],html:not(.js) .short-cover{display:none}
+.short-cover:focus-visible{outline:var(--focus-ring-outline);outline-offset:-4px;border-radius:24px}
+.short-cover img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .6s ease}
+.short-cover:hover img{transform:scale(1.02)}
+.short-play{position:absolute;left:50%;bottom:18px;padding:7px 18px 7px 7px;border-radius:99px;display:flex;align-items:center;gap:12px;background:#fffdf8;color:#243128;box-shadow:0 14px 34px rgba(36,49,40,.22);text-align:left;white-space:nowrap;transform:translateX(-50%)}
+.short-play-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#b0452f;transition:transform var(--motion-standard),background var(--motion-standard)}
+.short-play-icon svg{width:19px;height:19px;margin-left:3px;fill:#fffdf8}
+.short-cover:hover .short-play-icon{transform:scale(1.06);background:#943a27}
+.short-play strong,.short-play small{display:block}
+.short-play strong{font-weight:800;font-size:14px}
+.short-play small{margin-top:1px;color:#606962;font-size:11.5px}
+.short figcaption{margin:20px 4px 0;color:var(--text-muted);font-size:14px;line-height:1.6}
+.short figcaption strong{display:block;margin-bottom:4px;color:var(--text-primary);font:italic 400 21px/1.3 var(--font-family-accent)}
+.short figcaption .card-link{display:flex;width:fit-content;margin-top:2px}
+/* On a topic page the episode sits beside the problem it tells and spans the scenarios below. */
+.problem-section--short{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,320px);grid-template-rows:auto 1fr;column-gap:72px;align-items:start}
+.problem-section--short .section-copy{grid-column:1;grid-row:1}
+.problem-section--short .scenario-grid{grid-column:1;grid-row:2}
+.problem-section--short .short{grid-column:2;grid-row:1/span 2;justify-self:end}
+/* The homepage plays one episode at a time and lists the rest beside it. */
+.series{display:grid;grid-template-columns:minmax(0,340px) minmax(0,480px);justify-content:center;align-items:center;gap:48px 72px}
+.series-stage{display:grid;justify-items:center}
+.series .short{max-width:340px}
+.js .series-stage>.short:not([data-active]){display:none}
+.series-list{margin:0;padding:0;display:grid;gap:10px;list-style:none}
+.series-pick{width:100%;min-height:64px;display:flex;align-items:center;gap:16px;padding:12px 18px 12px 20px;border:1px solid var(--border-subtle);border-radius:var(--radius-medium);background:var(--surface-paper);color:var(--text-primary);text-align:left;cursor:pointer;transition:border-color var(--motion-fast) var(--motion-ease),background var(--motion-fast) var(--motion-ease)}
+.series-pick:hover{border-color:var(--interactive-primary-border)}
+.series-pick[aria-current="true"]{border-color:var(--interactive-primary-border);background:var(--interactive-primary-soft)}
+.series-pick-text{flex:1;min-width:0;display:grid;gap:1px}
+.series-question{font:italic 400 20px/1.3 var(--font-family-accent)}
+.series-topic{color:var(--text-muted);font-size:13px;font-weight:700}
+.series-time{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}
+.series-time svg{width:11px;height:11px;fill:currentColor}
+.series-pick[aria-current="true"] .series-time{color:var(--interactive-primary-hover)}
+/* Without JavaScript every episode stays a player of its own and the list goes. */
+html:not(.js) .series{grid-template-columns:1fr}
+html:not(.js) .series-stage{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:48px 32px}
+html:not(.js) .series-list{display:none}
+
 /* ------------------------------------------------------------------ topic pages */
 .topic-hero-wrap{background:var(--page-glow)}
 .topic-hero{width:min(960px,calc(100% - 48px));margin:auto;padding:40px 0 96px;text-align:center}
@@ -474,6 +521,10 @@ i.petal,i.avatar{font-style:normal}
   .proof-figure,.app-mock,.proof-section--reverse .proof-figure,.proof-section--reverse .app-mock{justify-self:center}
   .start-grid{grid-template-columns:1fr}
   .help-section{padding:44px;grid-template-columns:1fr;gap:32px}
+  .problem-section--short{grid-template-columns:1fr;grid-template-rows:none}
+  .problem-section--short .section-copy,.problem-section--short .scenario-grid,.problem-section--short .short{grid-column:auto;grid-row:auto}
+  .problem-section--short .short{justify-self:center;margin-top:48px}
+  .series{grid-template-columns:minmax(0,520px)}
   .scenario-grid,.related-grid,.trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .answer{grid-template-columns:1fr;gap:8px}
   .site-footer-inner{grid-template-columns:1fr 1fr}
@@ -514,6 +565,8 @@ i.petal,i.avatar{font-style:normal}
   .spot-frame{aspect-ratio:9/16;border-radius:22px}
   .spot-cover:focus-visible{border-radius:22px}
   .spot-play{left:50%;bottom:20px;transform:translateX(-50%)}
+  /* A whole episode fits on the screen, as the tall spot does. */
+  .short,.series .short{max-width:min(320px,calc(78svh * 9 / 16))}
 }
 @media (max-width:360px){
   .cookie-consent-actions{grid-template-columns:1fr}
