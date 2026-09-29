@@ -1,5 +1,42 @@
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.nav');
+const themeSwitcher = document.querySelector('[data-theme-switch]');
+
+if (themeSwitcher) {
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  let manualTheme = null;
+  try {
+    const savedTheme = window.localStorage.getItem('rodinka_theme');
+    if (savedTheme === 'light' || savedTheme === 'dark') manualTheme = savedTheme;
+  } catch (error) {
+    // The switch still works for this page when storage is unavailable.
+  }
+
+  const updateTheme = (theme) => {
+    document.documentElement.dataset.theme = theme;
+    themeSwitcher.setAttribute('aria-pressed', String(theme === 'dark'));
+    themeSwitcher.setAttribute('aria-label', theme === 'dark'
+      ? themeSwitcher.dataset.lightLabel
+      : themeSwitcher.dataset.darkLabel);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute(
+      'content', theme === 'dark' ? '#282b24' : '#fffdf8'
+    );
+  };
+
+  updateTheme(document.documentElement.dataset.theme);
+  themeSwitcher.addEventListener('click', () => {
+    manualTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    updateTheme(manualTheme);
+    try {
+      window.localStorage.setItem('rodinka_theme', manualTheme);
+    } catch (error) {
+      // The current page still honors the choice.
+    }
+  });
+  systemTheme.addEventListener('change', (event) => {
+    if (manualTheme === null) updateTheme(event.matches ? 'dark' : 'light');
+  });
+}
 
 if (menuButton && nav) {
   const closeMenu = () => {

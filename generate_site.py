@@ -22,7 +22,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260928c"
+ASSET_VERSION = "20260929a"
 
 # Self-hosted webfont, built by tools/build_fonts.py. The app sets every word in
 # Manrope, so the site does too: one variable file (wght 500-800) carries body,
@@ -53,6 +53,8 @@ LOCALES = {
         "related": "Související témata",
         "related_kicker": "DALŠÍ ČTENÍ",
         "language_label": "Jazyk webu",
+        "theme_light_label": "Přepnout na světlý režim",
+        "theme_dark_label": "Přepnout na tmavý režim",
         "footer_text": "Rodinný organizér pro kalendář, úkoly, nákupy, výlety i vzpomínky. Česky, slovensky a anglicky.",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikaci Rodinka",
@@ -83,6 +85,8 @@ LOCALES = {
         "related": "Súvisiace témy",
         "related_kicker": "ĎALŠIE ČÍTANIE",
         "language_label": "Jazyk webu",
+        "theme_light_label": "Prepnúť na svetlý režim",
+        "theme_dark_label": "Prepnúť na tmavý režim",
         "footer_text": "Rodinný organizér pre kalendár, úlohy, nákupy, výlety aj spomienky. Po česky, slovensky a anglicky.",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikácii Rodinka",
@@ -113,6 +117,8 @@ LOCALES = {
         "related": "Related topics",
         "related_kicker": "KEEP EXPLORING",
         "language_label": "Website language",
+        "theme_light_label": "Switch to light mode",
+        "theme_dark_label": "Switch to dark mode",
         "footer_text": "A family organizer for the calendar, chores, shopping, trips and memories. In Czech, Slovak and English.",
         "copyright": "© 2026 Rodinka",
         "app_label": "About the Rodinka app",
@@ -1589,8 +1595,16 @@ def head(page_key: str, locale: str, data: dict) -> str:
     <meta name="description" content="{esc(data["description"])}" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#fffdf8" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#282b24" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fffdf8" />
+    <script>
+      (function () {{
+        var choice;
+        try {{ choice = localStorage.getItem('rodinka_theme'); }} catch (error) {{}}
+        var dark = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#282b24' : '#fffdf8';
+      }})();
+    </script>
     <meta name="application-name" content="Rodinka" />
     <link rel="canonical" href="{canonical(path)}" />
 {alternates(page_key)}
@@ -1835,7 +1849,10 @@ def site_header(page_key: str, locale: str) -> str:
         <nav class="nav" id="main-navigation" aria-label="{esc(cfg["primary_nav"])}">
           {links}
           <a class="nav-cta" href="{APP_URL}" data-analytics-location="header">{esc(cfg["open_app"])} <span aria-hidden="true">→</span></a>
-          {language_switcher(page_key, locale)}
+          <div class="nav-preferences">
+            {language_switcher(page_key, locale)}
+            <button class="theme-switcher" type="button" data-theme-switch data-light-label="{esc(cfg['theme_light_label'])}" data-dark-label="{esc(cfg['theme_dark_label'])}" aria-label="{esc(cfg['theme_dark_label'])}" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+          </div>
         </nav>
       </div>
     </header>'''

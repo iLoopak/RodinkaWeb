@@ -37,8 +37,16 @@
     <meta name="description" content="Assign family chores, add a due date and make it clear who is handling what. A practical shared view for parents and children." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#fffdf8" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#282b24" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fffdf8" />
+    <script>
+      (function () {
+        var choice;
+        try { choice = localStorage.getItem('rodinka_theme'); } catch (error) {}
+        var dark = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#282b24' : '#fffdf8';
+      })();
+    </script>
     <meta name="application-name" content="Rodinka" />
     <link rel="canonical" href="https://mojerodinka.cz/en/family-chores/" />
     <link rel="alternate" hreflang="cs" href="https://mojerodinka.cz/ukoly-pro-rodinu/" />
@@ -66,7 +74,7 @@
     <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <link rel="preload" href="/assets/fonts/manrope-latin-ext-500-800.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/styles.css?v=20260928c" />
+    <link rel="stylesheet" href="/styles.css?v=20260929a" />
     <script>document.documentElement.classList.add('js');</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mojerodinka.cz/#website","url":"https://mojerodinka.cz/","name":"Rodinka","description":"Rodinka is a family organizer for a shared calendar, chores, shopping, meals, trips and family memories.","inLanguage":["cs","sk","en"]},{"@type":"WebApplication","@id":"https://mojerodinka.cz/#webapp","name":"Rodinka","url":"https://app.mojerodinka.cz","description":"Rodinka is a family organizer for a shared calendar, chores, shopping, meals, trips and family memories.","applicationCategory":"LifestyleApplication","operatingSystem":"Web","isPartOf":{"@id":"https://mojerodinka.cz/#website"}},{"@type":"WebPage","@id":"https://mojerodinka.cz/en/family-chores/#webpage","url":"https://mojerodinka.cz/en/family-chores/","name":"Family chores and household responsibilities | Rodinka","description":"Assign family chores, add a due date and make it clear who is handling what. A practical shared view for parents and children.","inLanguage":"en","isPartOf":{"@id":"https://mojerodinka.cz/#website"},"about":{"@id":"https://mojerodinka.cz/#webapp"},"primaryImageOfPage":{"@id":"https://mojerodinka.cz/og-image-en.png#image"}},{"@type":"ImageObject","@id":"https://mojerodinka.cz/og-image-en.png#image","url":"https://mojerodinka.cz/og-image-en.png","contentUrl":"https://mojerodinka.cz/og-image-en.png","width":1794,"height":877}]}</script>
   </head>
@@ -78,12 +86,15 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="site-header-inner">
-        <a class="brand" href="/en/" aria-label="Rodinka, Home"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.707 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.292 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a>
+        <a class="brand" href="/en/" aria-label="Rodinka, Home"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a>
         <button class="menu-button" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
         <nav class="nav" id="main-navigation" aria-label="Primary navigation">
           <a href="/en/family-calendar/">Calendar</a><a href="/en/family-chores/" aria-current="page">Chores</a><a href="/en/shared-shopping-list/">Shopping</a><a href="/en/meal-planning/">Meals</a><a href="/en/family-trips/">Trips</a><a href="/en/family-memories/">Memories</a>
           <a class="nav-cta" href="https://app.mojerodinka.cz" data-analytics-location="header">Open the app <span aria-hidden="true">→</span></a>
-          <div class="language-switcher" role="group" aria-label="Website language"><a href="/ukoly-pro-rodinu/" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a><span aria-hidden="true">·</span><a href="/sk/ulohy-pre-rodinu/" lang="sk" hreflang="sk" aria-label="Slovenčina">SK</a><span aria-hidden="true">·</span><a href="/en/family-chores/" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a></div>
+          <div class="nav-preferences">
+            <div class="language-switcher" role="group" aria-label="Website language"><a href="/ukoly-pro-rodinu/" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a><span aria-hidden="true">·</span><a href="/sk/ulohy-pre-rodinu/" lang="sk" hreflang="sk" aria-label="Slovenčina">SK</a><span aria-hidden="true">·</span><a href="/en/family-chores/" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a></div>
+            <button class="theme-switcher" type="button" data-theme-switch data-light-label="Switch to light mode" data-dark-label="Switch to dark mode" aria-label="Switch to dark mode" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+          </div>
         </nav>
       </div>
     </header>
@@ -108,7 +119,7 @@
     </main>
     <footer class="site-footer">
       <div class="site-footer-inner">
-        <div class="footer-brand"><a class="brand" href="/en/"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.707 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.292 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a><span class="serif">Keep the household running smoothly.</span><p>A family organizer for the calendar, chores, shopping, trips and memories. In Czech, Slovak and English.</p></div>
+        <div class="footer-brand"><a class="brand" href="/en/"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a><span class="serif">Keep the household running smoothly.</span><p>A family organizer for the calendar, chores, shopping, trips and memories. In Czech, Slovak and English.</p></div>
         <nav class="footer-nav" aria-label="Features"><h2>Features</h2><ul><li><a href="/en/family-planner/">Family planner</a></li><li><a href="/en/family-calendar/">Family calendar</a></li><li><a href="/en/family-chores/">Family chores</a></li><li><a href="/en/shared-shopping-list/">Shared shopping list</a></li><li><a href="/en/meal-planning/">Meal planning</a></li><li><a href="/en/family-trips/">Family trips</a></li><li><a href="/en/family-memories/">Family memories</a></li><li><a href="/en/document-expiry-reminders/">Document expiry reminders</a></li><li><a href="/en/preparing-for-a-baby/">Preparing for a baby</a></li></ul></nav>
         <nav class="footer-nav" aria-label="Rodinka"><h2>Rodinka</h2><ul><li><a href="/en/family-organizer/">About the Rodinka app</a></li><li><a href="https://app.mojerodinka.cz" data-analytics-location="footer">Open the app</a></li><li><a href="https://buymeacoffee.com/rodinka" target="_blank" rel="noopener">Support development</a></li><li><button class="footer-link" type="button" data-cookie-settings>Cookie settings</button></li></ul></nav>
       </div>
@@ -124,6 +135,6 @@
         <button class="consent-button consent-reject" type="button" data-consent-choice="denied">Reject</button>
       </div>
     </section>
-    <script src="/script.js?v=20260928c" defer></script>
+    <script src="/script.js?v=20260929a" defer></script>
   </body>
 </html>
