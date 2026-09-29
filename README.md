@@ -83,6 +83,27 @@ ffmpeg -ss 11.4 -i rodinka-spot-1080p.mp4 -frames:v 1 -vf scale=1600:-1 poster.p
 
 Lokální `python -m http.server` nepodporuje HTTP Range, takže v něm video nejde přetáčet; na Vercelu to funguje.
 
+### Série Každodenní Rodinka
+
+Sedm krátkých vertikálních dílů (9:16, 14–25 s) z `Rodinka/promo/rodinka-spot/` (`src/episodes/ep01`–`ep07`). Každý díl prodává jednu každodenní chvíli, proto hraje přímo u funkce, o které je: v sekci s popisem problému na odpovídající tematické stránce. Na homepage je pod sekcí „S čím vám má Rodinka nejvíc pomáhat?“ celá série jako jeden přehrávač se seznamem dílů; tam má domov i díl 05, který ukazuje obrazovku Dnes jako celek a vlastní stránku nemá.
+
+| Díl | Stránka | Plakát |
+| --- | --- | --- |
+| 01 Kdo dnes vyzvedává? | Rodinný kalendář | 1,2 s |
+| 02 Co máme koupit? | Sdílený nákupní seznam | 3,0 s |
+| 03 V kolik má dneska kroužek? | Rodinný plánovač (kroužky) | 1,0 s |
+| 04 Kam jsme to chtěli jet? | Rodinné výlety | 1,2 s |
+| 05 Co nás dnes čeká? | jen homepage (odkaz na plánovač) | 0,8 s |
+| 06 Kde jsme to řešili? | Aplikace pro rodinu | 1,1 s |
+| 07 Tohle si chceme pamatovat. | Rodinné vzpomínky | 7,4 s |
+
+Obsah, přiřazení ke stránkám (`page`, u dílu bez stránky `link`) a zaokrouhlenou délku (`seconds`) spravuje `SERIES` v generátoru. Hlas i texty v obraze jsou české, takže díly jsou zatím jen na českých stránkách; lokalizované rendery stačí přidat jako `SERIES["sk"]` a `SERIES["en"]`. Soubory leží v `assets/video/kazdodenni-rodinka-NN-*.mp4` s plakátem `.webp` širokým 720 px. Stejně jako u spotu se video stahuje až po kliknutí na plakát a naráz hraje vždy jen jedno video na stránce. Webové verze vznikly ze zdrojů `*-1080x1920.mp4` takto (plakát je snímek s úvodní otázkou dílu, u 07 polaroid s popiskem):
+
+```bash
+ffmpeg -i kazdodenni-rodinka-01-kdo-dnes-vyzvedava-1080x1920.mp4 -c:v libx264 -preset slow -crf 26 -r 30 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/kazdodenni-rodinka-01-kdo-dnes-vyzvedava.mp4
+ffmpeg -ss 1.2 -i kazdodenni-rodinka-01-kdo-dnes-vyzvedava-1080x1920.mp4 -frames:v 1 -vf scale=720:-1:flags=lanczos poster.png && cwebp -q 82 poster.png -o assets/video/kazdodenni-rodinka-01-kdo-dnes-vyzvedava.webp
+```
+
 ### IndexNow
 
 Automatické odesílání do IndexNow zatím není zapojené. U tohoto malého statického webu by kvůli několika stabilním URL přidalo klíč a nasazovací automatizaci bez jasného přínosu pro hlavní Google vyhledávání. Po významné změně odešlete sitemapu a reprezentativní URL přes Search Console; IndexNow lze později doplnit jako samostatný Vercel/CI krok, pokud bude důležitá rychlost objevení v podporovaných vyhledávačích.
