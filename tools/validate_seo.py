@@ -47,7 +47,7 @@ PRODUCT_BASE_ASSETS = {
     "/assets/product/rodinka-today-family-overview.webp",
     "/assets/product/rodinka-shared-family-calendar.webp",
     "/assets/product/rodinka-family-planning.webp",
-    "/assets/product/rodinka-family-activities.webp",
+    "/assets/product/rodinka-family-chores.webp",
     "/assets/product/rodinka-shared-shopping-list.webp",
     "/assets/product/rodinka-family-memories.webp",
     "/assets/product/rodinka-expected-child.webp",
@@ -73,7 +73,9 @@ PRIMARY_PROOF_BY_FAMILY = {
     "planner": "/assets/product/rodinka-family-planning.webp",
     "calendar": "/assets/product/rodinka-shared-family-calendar.webp",
     "shopping": "/assets/product/rodinka-shared-shopping-list.webp",
-    "app": "/assets/product/rodinka-family-activities.webp",
+    "chores": "/assets/product/rodinka-family-chores.webp",
+    "app": "/assets/product/rodinka-today-family-overview.webp",
+    "memories": "/assets/product/rodinka-family-memories.webp",
     "baby": "/assets/product/rodinka-expected-child.webp",
 }
 
