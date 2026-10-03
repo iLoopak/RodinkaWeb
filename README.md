@@ -29,7 +29,7 @@ Skript znovu vytvoří 33 statických HTML stránek (11 jazykových rodin × CS/
 - `sitemap.xml` se skládá pouze z canonical URL definovaných v generátoru. Nepřidávejte `changefreq`, priority ani data změn bez spolehlivého zdroje.
 - JSON-LD používá jeden stabilní `WebSite` a `WebApplication` identifikátor napříč jazyky. Nevkládejte hodnocení, recenze, počty uživatelů, ceny ani právní údaje, které nejsou ověřené na webu.
 - Sociální karty jsou lokální soubory `og-image.png`, `og-image-sk.png` a `og-image-en.png`. Při výměně zachovejte ostrý landscape obrázek, bezpečné okraje, čitelný lokalizovaný text, odpovídající `og:image:width`/`height` v generátoru a lokalizované alt texty.
-- Viditelné produktové ukázky jsou optimalizované WebP soubory v `assets/product/`. Český základ používá název bez přípony jazyka, marketingově lokalizované varianty končí `-sk.webp` a `-en.webp`; samotné UI v telefonu zůstává věrnou českou produktovou ukázkou. Jejich přiřazení ke stránkám, lokalizované alternativní texty a popisky spravují `PRODUCT_PROOFS` a samostatné homepage story objekty v generátoru. Každá významová fotografie nebo obrazovka musí mít v HTML rozměry, užitečný lokalizovaný `alt` a viditelný kontext; nevkládejte screenshoty pouze jako CSS pozadí.
+- Viditelné produktové ukázky jsou optimalizované WebP soubory v `assets/product/`. Český základ používá název bez přípony jazyka, lokalizované varianty končí `-sk.webp` a `-en.webp`. Obrázky převzaté ze store listingu mají v daném jazyce celý obsah včetně UI v telefonu; jen starší `rodinka-expected-child` má lokalizovaný pouze nadpis nad českou ukázkou. Všechny mají jednotný rámec 900 × 1951 px. Jejich přiřazení ke stránkám, lokalizované alternativní texty a popisky spravují `PRODUCT_PROOFS` a samostatné homepage story objekty v generátoru. Každá významová fotografie nebo obrazovka musí mít v HTML rozměry, užitečný lokalizovaný `alt` a viditelný kontext; nevkládejte screenshoty pouze jako CSS pozadí.
 - Každá indexovatelná stránka obsahuje nahoře krátkou přímou odpověď definovanou v `DIRECT_ANSWERS`. Při změně funkce upravte odpověď ve všech třech jazycích a držte ji konkrétní, faktickou a v souladu s viditelným produktem.
 - Favicon vychází z `favicon.svg`; raster fallbacky vytvoří `tools/generate_icons.ps1`.
 - Písmo je self-hostované v `assets/fonts/` a web nesmí volat `fonts.googleapis.com` ani `fonts.gstatic.com`; SEO validace to hlídá. Stejně jako aplikace používá web pro veškerý text jen Manrope: jeden variabilní WOFF2 s osou váhy 500–800. Generátor preloaduje právě tento jeden soubor; další preload nepřidávejte. Serif (Georgia) je systémové písmo pro „hlas rodiny“ — claim, citát a pozdrav v ukázce aplikace — stejně jako v aplikaci. Licence OFL leží vedle fontu a musí zůstat commitnutá.
@@ -60,15 +60,17 @@ Skript stahuje upstream Manrope 4.505 z repozitáře Google Fonts a ověřuje p�
 
 ### Příprava produktových obrázků
 
-Zdrojové marketingové PNG exporty nejsou součástí produkčního webu. Webové deriváty lze znovu vytvořit volitelným pomocným skriptem (vyžaduje Pillow):
+Zdrojové marketingové PNG exporty nejsou součástí produkčního webu. Zdrojem jsou store listing obrázky z aplikačního repozitáře, `Rodinka/promo/store-listing/app-store-6.9/` s podsložkami `cs/`, `sk/` a `en/`. Webové deriváty z nich vytvoří volitelný pomocný skript (vyžaduje Pillow):
 
 ```bash
-python tools/optimize_product_images.py "/cesta/ke/screenum"
+python tools/optimize_product_images.py ../Rodinka/promo/store-listing/app-store-6.9
 ```
 
-Skript vytváří maximálně 900 px široké WebP soubory. Vercel servíruje commitnuté výstupy přímo; optimalizace není součástí nasazení ani produkční build závislostí.
+Skript páruje exporty podle čísla na začátku názvu (`01` Dnes, `02` Kalendář, `03` Vzpomínky, `04` Plánovat, `05` Úkoly, `06` Nákup), takže lokalizované názvy souborů nevadí. Výstupem jsou WebP soubory 900 × 1951 px; exporty 1320 × 2868 jsou v této šířce o 4 px vyšší, proto skript ořízne spodní okraj, kde telefon stejně pokračuje mimo obraz. Vercel servíruje commitnuté výstupy přímo; optimalizace není součástí nasazení ani produkční build závislostí.
 
-Pro bezpečnou lokalizaci plochého marketingového exportu použijte `tools/composite_localized_product_header.py`: vezme pouze lokalizovaný nadpis a štítek z připraveného návrhu, zatímco logo, telefon a celé produktové UI zachová z českého základního WebP. Výsledkem je nový soubor, nikdy přepsání originálu.
+Store listing obsahuje i `07` Milníky, zatím jen česky. Na web se nedostal, protože SEO validace vyžaduje stejné produktové ukázky ve všech třech jazycích; po doplnění SK a EN verze ho lze přidat do skriptu i do generátoru. Obrázky jsou v `/assets/` cachované týden a jejich názvy nejsou verzované, takže vracející se návštěvník může po výměně ještě chvíli vidět starší verzi.
+
+`rodinka-expected-child` ve store listingu nemá obdobu a zůstává starším exportem. Pro bezpečnou lokalizaci takového plochého marketingového exportu použijte `tools/composite_localized_product_header.py`: vezme pouze lokalizovaný nadpis a štítek z připraveného návrhu, zatímco logo, telefon a celé produktové UI zachová z českého základního WebP. Výsledkem je nový soubor, nikdy přepsání originálu.
 
 ### Promo video
 
