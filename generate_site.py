@@ -16,13 +16,14 @@ ROOT = Path(__file__).resolve().parent
 SITE_URL = "https://mojerodinka.cz"
 APP_URL = "https://app.mojerodinka.cz"
 SUPPORT_URL = "https://buymeacoffee.com/rodinka"
+PRO_MEMBERSHIP_URL = "https://buymeacoffee.com/rodinka/membership"
 GTM_CONTAINER_ID = "GTM-5FM9NJHK"
 CONSENT_STORAGE_KEY = "rodinka_analytics_consent"
 CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20260929b"
+ASSET_VERSION = "20261010a"
 
 # Self-hosted webfont, built by tools/build_fonts.py. The app sets every word in
 # Manrope, so the site does too: one variable file (wght 500-800) carries body,
@@ -752,8 +753,8 @@ HOME_START = {
 
 
 # The layer beyond the core utilities. Claims are limited to what the app does
-# today: Rodinka Today has no streak, score or leaderboard by design, and Moment
-# dne needs a per-family entitlement granted by hand, so it is not marketed.
+# today: Rodinka Today has no streak, score or leaderboard by design. Moment
+# of the Day belongs to the separate optional Rodinka Pro block below.
 # Card: (tone, glyph, title, text, page).
 HOME_FAMILY_LAYER = {
     "cs": {
@@ -889,6 +890,34 @@ HOME_TRUST = {
             ("bell", "Reminders that respect the night", "Everyone sets their own quiet hours, reminder categories and a daily or weekly digest."),
             ("languages", "Czech, Slovak and English", "The interface comes in three languages, in light and dark themes, on phones, tablets and computers."),
         ),
+    },
+}
+
+
+HOME_PRO = {
+    "cs": {
+        "title": "Ještě o kousek víc pro vaši Rodinku",
+        "text": "Rodinka funguje skvěle i zdarma. S Rodinkou Pro získáte víc prostoru pro rodinné fotografie, Moment dne a možnosti, jak si Rodinku přizpůsobit podle sebe.",
+        "benefits": ("5 GB pro rodinné fotografie", "Moment dne", "Vlastní barvy členů a vzhled Rodinky"),
+        "support": "Rodinkou Pro zároveň podporujete další vývoj aplikace.",
+        "cta": "Zjistit víc",
+        "cta_note": "Členství na Buy Me a Coffee",
+    },
+    "sk": {
+        "title": "Ešte o kúsok viac pre vašu Rodinku",
+        "text": "Rodinka funguje skvele aj zadarmo. S Rodinkou Pro získate viac priestoru na rodinné fotografie, Moment dňa a možnosti, ako si Rodinku prispôsobiť podľa seba.",
+        "benefits": ("5 GB na rodinné fotografie", "Moment dňa", "Vlastné farby členov a vzhľad Rodinky"),
+        "support": "Rodinkou Pro zároveň podporujete ďalší vývoj aplikácie.",
+        "cta": "Zistiť viac",
+        "cta_note": "Členstvo na Buy Me a Coffee",
+    },
+    "en": {
+        "title": "A little more for your family",
+        "text": "Rodinka works great for free. Rodinka Pro adds more space for family photos, Moment of the Day, and more ways to make Rodinka feel like your own.",
+        "benefits": ("5 GB for family photos", "Moment of the Day", "Custom member colours and app accent"),
+        "support": "Rodinka Pro also helps support the continued development of the app.",
+        "cta": "Learn more",
+        "cta_note": "Membership on Buy Me a Coffee",
     },
 }
 
@@ -1954,7 +1983,7 @@ def site_footer(locale: str) -> str:
       <div class="site-footer-inner">
         <div class="footer-brand"><a class="brand" href="{cfg["home_path"]}">{STATIC_MARK}<span>Rodinka</span></a><span class="serif">{esc(cfg["claim"])}</span><p>{esc(cfg["footer_text"])}</p></div>
         <nav class="footer-nav" aria-label="{esc(cfg["features"])}"><h2>{esc(cfg["features"])}</h2><ul>{feature_links}</ul></nav>
-        <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{SUPPORT_URL}" target="_blank" rel="noopener">{esc(cfg["support_label"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
+        <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{cfg["home_path"]}#rodinka-pro">Rodinka Pro</a></li><li><a href="{SUPPORT_URL}" target="_blank" rel="noopener">{esc(cfg["support_label"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
       </div>
       <p class="copyright">{esc(cfg["copyright"])}</p>
     </footer>'''
@@ -2278,6 +2307,18 @@ def render_series(locale: str) -> str:
       </section>'''
 
 
+def render_home_pro(locale: str) -> str:
+    data = HOME_PRO[locale]
+    benefits = "".join(f'<li>{esc(benefit)}</li>' for benefit in data["benefits"])
+    return f'''      <section class="pro-section" id="rodinka-pro" aria-labelledby="pro-title">
+        <div class="pro-card surface">
+          <div class="pro-copy"><p class="section-kicker">Rodinka Pro</p><h2 id="pro-title">{esc(data["title"])}</h2><p>{esc(data["text"])}</p></div>
+          <ul class="pro-benefits">{benefits}</ul>
+          <div class="pro-footer"><p class="pro-support">{esc(data["support"])}</p><div class="pro-action"><a class="card-link" href="{PRO_MEMBERSHIP_URL}" target="_blank" rel="noopener">{esc(data["cta"])} <span aria-hidden="true">↗</span></a><small>{esc(data["cta_note"])}</small></div></div>
+        </div>
+      </section>'''
+
+
 def render_home(locale: str) -> str:
     data = HOME[locale]
     cfg = LOCALES[locale]
@@ -2309,6 +2350,7 @@ def render_home(locale: str) -> str:
 {render_trust(locale)}
 {render_directory(locale)}
       <section class="section band"><figure class="family-quote reveal">{STATIC_MARK}<blockquote><p>{esc(data["quote"])}</p></blockquote><figcaption>{esc(data["quote_by"])}</figcaption></figure></section>
+{render_home_pro(locale)}
       <section class="cta-section" id="vyzkouset"><div class="cta-card reveal"><p class="section-kicker">{esc(data["cta_kicker"])}</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="cta-secondary" href="{APP_URL}" data-analytics-location="content">{esc(data["login"])}</a></div><ol class="mini-journey">{journey}</ol><div class="install-options"><h3>{esc(data["install_title"])}</h3><p>{esc(data["install_text"])}</p><a class="store-link" href="https://get.microsoft.com/installer/download/9nbxf0lqbmbj?referrer=appbadge">{esc(data["store"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(data["fine_print"])}</small></div></section>'''
     return page_shell("home", locale, data, main)
 
