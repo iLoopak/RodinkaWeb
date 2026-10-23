@@ -380,6 +380,13 @@ i.petal,i.avatar{font-style:normal}
 .site-footer-inner{width:var(--page);margin:auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px;align-items:start}
 .footer-brand p{margin:12px 0 0;color:var(--text-muted);font-size:14px}
 .footer-brand .serif{display:block;margin-top:10px;color:var(--interactive-primary);font-size:19px}
+.footer-social{margin-top:24px}
+.footer-social h2{margin:0 0 10px;color:var(--text-muted);font-size:12px;font-weight:700}
+.footer-social ul{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.footer-social-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-width:44px;min-height:44px;padding:10px 12px;border:1px solid var(--border-subtle);border-radius:var(--radius-input);background:var(--surface-canvas);color:var(--text-muted);font-size:12px;font-weight:700;line-height:1.5;transition:background var(--motion-fast) var(--motion-ease),border-color var(--motion-fast) var(--motion-ease),color var(--motion-fast) var(--motion-ease)}
+.footer-social-link svg{width:20px;height:20px;flex:none}
+.footer-social-link:hover{background:var(--surface-subtle);border-color:var(--border-default);color:var(--text-primary)}
+.footer-social-link:focus-visible{border-radius:var(--radius-input)}
 .footer-nav h2{margin:4px 0 12px;color:var(--text-muted);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
 .footer-nav ul{margin:0;padding:0;display:grid;gap:2px;list-style:none}
 .footer-nav a,.footer-link{min-height:34px;display:inline-flex;align-items:center;color:var(--text-primary);font-size:14px;font-weight:600}
