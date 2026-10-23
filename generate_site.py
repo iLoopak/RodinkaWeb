@@ -16,6 +16,11 @@ ROOT = Path(__file__).resolve().parent
 SITE_URL = "https://mojerodinka.cz"
 APP_URL = "https://app.mojerodinka.cz"
 SUPPORT_URL = "https://buymeacoffee.com/rodinka"
+SOCIAL_PROFILES = (
+    ("Instagram", "https://www.instagram.com/mojerodinka.cz/", "social-instagram"),
+    ("Facebook", "https://www.facebook.com/profile.php?id=61595033996266", "social-facebook"),
+    ("YouTube", "https://www.youtube.com/@MojeRodinkaCz", "social-youtube"),
+)
 PRO_MEMBERSHIP_URL = "https://buymeacoffee.com/rodinka/membership"
 GTM_CONTAINER_ID = "GTM-5FM9NJHK"
 CONSENT_STORAGE_KEY = "rodinka_analytics_consent"
@@ -23,7 +28,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20261010a"
+ASSET_VERSION = "20261023a"
 
 # Self-hosted webfont, built by tools/build_fonts.py. The app sets every word in
 # Manrope, so the site does too: one variable file (wght 500-800) carries body,
@@ -57,6 +62,8 @@ LOCALES = {
         "theme_light_label": "Přepnout na světlý režim",
         "theme_dark_label": "Přepnout na tmavý režim",
         "footer_text": "Rodinný organizér pro kalendář, úkoly, nákupy, výlety i vzpomínky. Česky, slovensky a anglicky.",
+        "social_heading": "Sledujte Rodinku",
+        "new_tab": "otevře se v nové kartě",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikaci Rodinka",
         "support_label": "Podpořit vývoj",
@@ -89,6 +96,8 @@ LOCALES = {
         "theme_light_label": "Prepnúť na svetlý režim",
         "theme_dark_label": "Prepnúť na tmavý režim",
         "footer_text": "Rodinný organizér pre kalendár, úlohy, nákupy, výlety aj spomienky. Po česky, slovensky a anglicky.",
+        "social_heading": "Sledujte Rodinku",
+        "new_tab": "otvorí sa na novej karte",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikácii Rodinka",
         "support_label": "Podporiť vývoj",
@@ -121,6 +130,8 @@ LOCALES = {
         "theme_light_label": "Switch to light mode",
         "theme_dark_label": "Switch to dark mode",
         "footer_text": "A family organizer for the calendar, chores, shopping, trips and memories. In Czech, Slovak and English.",
+        "social_heading": "Follow Rodinka",
+        "new_tab": "opens in a new tab",
         "copyright": "© 2026 Rodinka",
         "app_label": "About the Rodinka app",
         "support_label": "Support development",
@@ -1879,6 +1890,9 @@ _PORTRAIT_SLOTS, _PORTRAIT_PETS = family_mark_row([member[2] for member in DEMO_
 DEMO_PORTRAIT = family_mark(_PORTRAIT_SLOTS, DEMO_FILLS, _PORTRAIT_PETS)
 
 ICONS = {
+    "social-instagram": '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>',
+    "social-facebook": '<path d="M14 22v-9h3l.5-4H14V7c0-1.1.3-2 2-2h2V1.4A26 26 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9Z" fill="currentColor" stroke="none"/>',
+    "social-youtube": '<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/>',
     # The app's navigation glyphs (Rodinka/src/components/icons/navigation).
     "today": '<path d="M4.75 10.25 12 4.5l7.25 5.75V18c0 .97-.78 1.75-1.75 1.75h-11c-.97 0-1.75-.78-1.75-1.75v-7.75Z"/><path d="M9.5 19.75v-5h5v5"/><circle cx="18.6" cy="6.1" r="1.7" fill="var(--nav-icon-accent)" stroke="none"/>',
     "calendar": '<rect x="4.25" y="5.75" width="15.5" height="14" rx="3.2"/><path d="M7.75 3.9v3.45M16.25 3.9v3.45M4.9 9.5h14.2"/><rect x="9.2" y="12.2" width="5.6" height="4.8" rx="1.4" fill="var(--nav-icon-accent)" stroke="none"/>',
@@ -1979,9 +1993,20 @@ FOOTER_KEYS = ("planner", "calendar", "chores", "shopping", "meals", "trips", "m
 def site_footer(locale: str) -> str:
     cfg = LOCALES[locale]
     feature_links = "".join(f'<li><a href="{PATHS[key][locale]}">{esc(LLMS_LABELS[locale][key])}</a></li>' for key in FOOTER_KEYS)
+    social_links = "".join(
+        f'<li><a class="footer-social-link" href="{esc(url)}" target="_blank" rel="noopener noreferrer">'
+        f'{icon(glyph)}<span>{esc(name)}</span><span class="visually-hidden"> ({esc(cfg["new_tab"])})</span></a></li>'
+        for name, url, glyph in SOCIAL_PROFILES
+    )
     return f'''    <footer class="site-footer">
       <div class="site-footer-inner">
-        <div class="footer-brand"><a class="brand" href="{cfg["home_path"]}">{STATIC_MARK}<span>Rodinka</span></a><span class="serif">{esc(cfg["claim"])}</span><p>{esc(cfg["footer_text"])}</p></div>
+        <div class="footer-brand">
+          <a class="brand" href="{cfg["home_path"]}">{STATIC_MARK}<span>Rodinka</span></a><span class="serif">{esc(cfg["claim"])}</span><p>{esc(cfg["footer_text"])}</p>
+          <div class="footer-social" role="group" aria-labelledby="footer-social-heading">
+            <h2 id="footer-social-heading">{esc(cfg["social_heading"])}</h2>
+            <ul role="list">{social_links}</ul>
+          </div>
+        </div>
         <nav class="footer-nav" aria-label="{esc(cfg["features"])}"><h2>{esc(cfg["features"])}</h2><ul>{feature_links}</ul></nav>
         <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{cfg["home_path"]}#rodinka-pro">Rodinka Pro</a></li><li><a href="{SUPPORT_URL}" target="_blank" rel="noopener">{esc(cfg["support_label"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
       </div>
