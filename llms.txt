@@ -1,11 +1,12 @@
 # Rodinka
 
-> Rodinka is a family organizer for a shared calendar, household chores, shopping lists, meal planning, family trips, family memories, document expiry reminders and practical preparation for a new family member. The product name is Rodinka. The canonical website is https://mojerodinka.cz/ and the web application is https://app.mojerodinka.cz.
+> Rodinka is a family organizer for a shared calendar, household chores, shopping lists, meal planning, family trips, family memories, document expiry reminders and practical preparation for a new family member. Grandparents and other helpers can confirm the sessions they accompany by link or sign in as helpers who see only those sessions; one account can belong to several families. The product name is Rodinka. The canonical website is https://mojerodinka.cz/ and the web application is https://app.mojerodinka.cz.
 
 ## Czech (default)
 - [Rodinka](https://mojerodinka.cz/)
 - [Rodinný plánovač](https://mojerodinka.cz/rodinny-planovac/)
 - [Rodinný kalendář](https://mojerodinka.cz/rodinny-kalendar/)
+- [Širší rodina a pomocníci](https://mojerodinka.cz/sirsi-rodina/)
 - [Úkoly pro rodinu](https://mojerodinka.cz/ukoly-pro-rodinu/)
 - [Sdílený nákupní seznam](https://mojerodinka.cz/sdileny-nakupni-seznam/)
 - [Plánování jídel](https://mojerodinka.cz/planovani-jidla/)
@@ -19,6 +20,7 @@
 - [Rodinka](https://mojerodinka.cz/sk/)
 - [Rodinný plánovač](https://mojerodinka.cz/sk/rodinny-planovac/)
 - [Rodinný kalendár](https://mojerodinka.cz/sk/rodinny-kalendar/)
+- [Širšia rodina a pomocníci](https://mojerodinka.cz/sk/sirsia-rodina/)
 - [Úlohy pre rodinu](https://mojerodinka.cz/sk/ulohy-pre-rodinu/)
 - [Zdieľaný nákupný zoznam](https://mojerodinka.cz/sk/zdielany-nakupny-zoznam/)
 - [Plánovanie jedál](https://mojerodinka.cz/sk/planovanie-jedal/)
@@ -32,6 +34,7 @@
 - [Rodinka](https://mojerodinka.cz/en/)
 - [Family planner](https://mojerodinka.cz/en/family-planner/)
 - [Family calendar](https://mojerodinka.cz/en/family-calendar/)
+- [Extended family and helpers](https://mojerodinka.cz/en/extended-family/)
 - [Family chores](https://mojerodinka.cz/en/family-chores/)
 - [Shared shopping list](https://mojerodinka.cz/en/shared-shopping-list/)
 - [Meal planning](https://mojerodinka.cz/en/meal-planning/)

@@ -28,6 +28,7 @@ FAMILIES = {
     "memories": {"cs": "/rodinne-vzpominky/", "sk": "/sk/rodinne-spomienky/", "en": "/en/family-memories/"},
     "documents": {"cs": "/hlidani-platnosti-dokladu/", "sk": "/sk/strazenie-platnosti-dokladov/", "en": "/en/document-expiry-reminders/"},
     "trips": {"cs": "/rodinne-vylety/", "sk": "/sk/rodinne-vylety/", "en": "/en/family-trips/"},
+    "circle": {"cs": "/sirsi-rodina/", "sk": "/sk/sirsia-rodina/", "en": "/en/extended-family/"},
 }
 
 EXPECTED = {

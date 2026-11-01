@@ -18,7 +18,7 @@ Společná šablona, překlady a obsah stránek jsou v `generate_site.py`. Po ú
 python generate_site.py
 ```
 
-Skript znovu vytvoří 33 statických HTML stránek (11 jazykových rodin × CS/SK/EN), `sitemap.xml` a experimentální `llms.txt`. Vygenerované soubory se commitují; Vercel proto nepotřebuje build command.
+Skript znovu vytvoří 36 statických HTML stránek (12 jazykových rodin × CS/SK/EN), `sitemap.xml` a experimentální `llms.txt`. Vygenerované soubory se commitují; Vercel proto nepotřebuje build command.
 
 ## SEO údržba
 
@@ -47,11 +47,23 @@ Web přebírá vizuální systém aplikace Rodinka (`Rodinka/visual-identity.md`
 - Sekce „S čím vám má Rodinka nejvíc pomáhat?“ zrcadlí sedm oblastí z úvodního průvodce aplikace (`HOME_FOCUS`) ve stejném pořadí a znění. Kroky „Jak začít“ odpovídají skutečnému průvodci (Rodina → S čím pomáhat → Portrét).
 - Tvrzení o funkcích musí odpovídat aktuálnímu stavu aplikace (runtime, ne roadmapě). Moment dne je součástí Rodinky Pro; hlasové zadávání je vždy „na podporovaných zařízeních“.
 
+### Širší rodina (generace G1–G4a)
+
+Web představuje možnosti, které aplikace přidala ve vlnách G1–G4a (`Rodinka/docs/generations/`): potvrzení doprovodu odkazem bez účtu (G1), pomocníky, kteří vidí jen své doprovody (G2), jeden účet ve více rodinách (G3) a předání dětského profilu vlastnímu účtu (G4a). Obsah žije na třech místech:
+
+- stránka `circle` (`/sirsi-rodina/`, `/sk/sirsia-rodina/`, `/en/extended-family/`) v `TOPICS` a `DIRECT_ANSWERS`, s kreslenou ukázkou veřejné pozvánky `INVITE_MOCK` (texty z `Rodinka/src/features/companions/companionInvitationCopy.ts`);
+- sekce „Rodina není jen jedna domácnost“ na homepage (`HOME_CIRCLE`, `render_circle`) mezi sérií videí a „Jak začít“;
+- krátké zmínky a otázky na stránkách kalendáře, plánovače, aplikace a vzpomínek, v bloku důvěry a v kartě dětí.
+
+Pravidla pro texty: G4a je **předání profilu, který zůstává dětský** (stejná pravidla viditelnosti, rodiče vidí totéž co dřív). Web nesmí slibovat převzetí do role dospělého ani samostatné soukromí dospělého dítěte (G4b, `ADULT_PRIVACY_PROPOSAL.md`). Pomocníkům aplikace zatím neposílá push a úkoly nevidí; upozornění jednoho zařízení chodí jen z jedné rodiny. Dostupnost v nativních aplikacích (Android/iOS) web neuvádí.
+
+Funkce byly ověřené v produkci 1. 11. 2026 (klient na `app.mojerodinka.cz` obsahuje trasy `/i`, `/helper`, `/takeover` a hlavičku rodiny; produkční databáze má příslušná RPC). Kdyby bylo potřeba obsah stáhnout, odeberte `circle` z `TOPIC_KEYS`, `FOOTER_KEYS`, `RELATED` a `FAMILIES` ve validátoru, vynechejte `render_circle` v `render_home` a vraťte doplněné otázky; pak přegenerujte web.
+
 ### Rodinka Pro
 
 Kompaktní blok na konci homepage, za rodinným citátem a před hlavním CTA „Začít zdarma“, spravují `HOME_PRO` a `render_home_pro` v generátoru. CS/SK/EN vysvětlují, že Rodinka funguje i zdarma a Pro přidává 5 GB pro rodinné fotografie, Moment dne, vlastní barvy členů a accent aplikace; vycházejí z aktuálního kontraktu `Rodinka/docs/FAMILY_ENTITLEMENTS.md`. Cena se neuvádí.
 
-Textový odkaz „Zjistit víc“ otevírá externí členství `PRO_MEMBERSHIP_URL` (`https://buymeacoffee.com/rodinka/membership`) v nové kartě s `rel="noopener"`. Dobrovolná podpora `SUPPORT_URL` zůstává samostatným tip jarem a Pro neuděluje. Patička všech stránek odkazuje na Pro blok lokalizované homepage (`#rodinka-pro`). Homepage nemá vlastní FAQ, takže kvůli jediné otázce nevzniká nová sekce ani `/pro` stránka. Analytics nadále označuje jen odkazy do aplikace; externí Pro CTA nepoužívá `cta_app_click`.
+Textový odkaz „Zjistit víc“ otevírá externí členství `PRO_MEMBERSHIP_URL` (`https://buymeacoffee.com/rodinka/membership`) v nové kartě s `rel="noopener"`. Dobrovolná podpora `SUPPORT_URL` zůstává samostatným tip jarem a Pro neuděluje. Patička všech stránek odkazuje na Pro blok lokalizované homepage (`#rodinka-pro`). Homepage nemá vlastní FAQ, takže kvůli jediné otázce nevzniká nová sekce ani `/pro` stránka. Na stránce širší rodiny je otázka „Je to součást Rodinky Pro?“ s odpovědí ne: G1–G4a fungují ve verzi zdarma. Analytics nadále označuje jen odkazy do aplikace; externí Pro CTA nepoužívá `cta_app_click`.
 
 ### Přegenerování písem
 
