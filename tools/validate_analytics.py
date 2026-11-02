@@ -19,6 +19,9 @@ GTM_ID = "GTM-5FM9NJHK"
 GA4_ID = "G-LMZQ91Y9NP"
 APP_ORIGIN = "https://app.mojerodinka.cz"
 ALLOWED_LOCATIONS = {"header", "hero", "content", "video", "footer"}
+# The app's public legal pages are linked as documents, not as app CTAs, so
+# they carry no analytics location and never send cta_app_click.
+APP_LEGAL_PATHS = {"/terms", "/privacy", "/support"}
 EXPECTED_COPY = {
     "cs": ("Povolit analytiku", "Odmítnout", "Nastavení cookies"),
     "sk": ("Povoliť analytiku", "Odmietnuť", "Nastavenie cookies"),
@@ -31,6 +34,7 @@ class AnalyticsParser(HTMLParser):
         super().__init__()
         self.language = ""
         self.app_links: list[dict[str, str]] = []
+        self.legal_links: list[dict[str, str]] = []
         self.has_consent_panel = False
         self.has_cookie_settings = False
 
@@ -45,7 +49,10 @@ class AnalyticsParser(HTMLParser):
         elif tag == "a" and attrs.get("href"):
             destination = urlparse(attrs["href"])
             if f"{destination.scheme}://{destination.netloc}" == APP_ORIGIN:
-                self.app_links.append(attrs)
+                if destination.path in APP_LEGAL_PATHS:
+                    self.legal_links.append(attrs)
+                else:
+                    self.app_links.append(attrs)
 
 
 def main() -> int:
@@ -82,6 +89,9 @@ def main() -> int:
 
         if not parser.app_links:
             errors.append(f"{relative}: no application CTA links found")
+        for attrs in parser.legal_links:
+            if "data-analytics-location" in attrs:
+                errors.append(f"{relative}: legal page link {attrs.get('href')!r} must not be tracked as an app CTA")
         for attrs in parser.app_links:
             location = attrs.get("data-analytics-location", "")
             if location not in ALLOWED_LOCATIONS:

@@ -29,7 +29,13 @@ FAMILIES = {
     "documents": {"cs": "/hlidani-platnosti-dokladu/", "sk": "/sk/strazenie-platnosti-dokladov/", "en": "/en/document-expiry-reminders/"},
     "trips": {"cs": "/rodinne-vylety/", "sk": "/sk/rodinne-vylety/", "en": "/en/family-trips/"},
     "circle": {"cs": "/sirsi-rodina/", "sk": "/sk/sirsia-rodina/", "en": "/en/extended-family/"},
+    "pricing": {"cs": "/pricing/", "sk": "/sk/pricing/", "en": "/en/pricing/"},
+    "refunds": {"cs": "/refund-policy/", "sk": "/sk/refund-policy/", "en": "/en/refund-policy/"},
 }
+
+# Paddle verification reads these pages and the app's legal pages they link to.
+POLICY_FAMILIES = {"pricing", "refunds"}
+APP_LEGAL_URLS = ("https://app.mojerodinka.cz/terms", "https://app.mojerodinka.cz/privacy")
 
 EXPECTED = {
     path: (family, locale)
@@ -292,6 +298,15 @@ def main() -> int:
             except json.JSONDecodeError as exc:
                 errors.append(f"{path}: invalid JSON-LD: {exc}")
 
+        # Every page reaches the existing Terms and Privacy through the footer;
+        # the policy pages must also name Paddle and the buyer portal.
+        for legal_url in APP_LEGAL_URLS:
+            if f'href="{legal_url}"' not in text:
+                errors.append(f"{path}: missing link to {legal_url}")
+        if family in POLICY_FAMILIES:
+            for token in ("Merchant of Record", 'href="https://paddle.net"', 'href="https://www.paddle.com/legal/refund-policy"'):
+                if token not in text:
+                    errors.append(f"{path}: policy page lacks {token!r}")
         if "lorem ipsum" in text.lower() or "example.com" in text.lower():
             errors.append(f"{path}: placeholder content found")
         if "https://app.mojerodinka.cz" not in text:

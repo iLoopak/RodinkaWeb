@@ -15,6 +15,8 @@
 - [Hlídání platnosti dokladů](https://mojerodinka.cz/hlidani-platnosti-dokladu/)
 - [Příprava na miminko](https://mojerodinka.cz/priprava-na-miminko/)
 - [Aplikace pro rodinu](https://mojerodinka.cz/aplikace-pro-rodinu/)
+- [Ceník](https://mojerodinka.cz/pricing/)
+- [Zásady refundací](https://mojerodinka.cz/refund-policy/)
 
 ## Slovak
 - [Rodinka](https://mojerodinka.cz/sk/)
@@ -29,6 +31,8 @@
 - [Stráženie platnosti dokladov](https://mojerodinka.cz/sk/strazenie-platnosti-dokladov/)
 - [Príprava na bábätko](https://mojerodinka.cz/sk/priprava-na-babatko/)
 - [Aplikácia pre rodinu](https://mojerodinka.cz/sk/aplikacia-pre-rodinu/)
+- [Cenník](https://mojerodinka.cz/sk/pricing/)
+- [Zásady refundácií](https://mojerodinka.cz/sk/refund-policy/)
 
 ## English
 - [Rodinka](https://mojerodinka.cz/en/)
@@ -43,3 +47,5 @@
 - [Document expiry reminders](https://mojerodinka.cz/en/document-expiry-reminders/)
 - [Preparing for a baby](https://mojerodinka.cz/en/preparing-for-a-baby/)
 - [Family organizer app](https://mojerodinka.cz/en/family-organizer/)
+- [Pricing](https://mojerodinka.cz/en/pricing/)
+- [Refund policy](https://mojerodinka.cz/en/refund-policy/)
