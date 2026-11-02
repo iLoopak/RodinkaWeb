@@ -15,13 +15,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SITE_URL = "https://mojerodinka.cz"
 APP_URL = "https://app.mojerodinka.cz"
-SUPPORT_URL = "https://buymeacoffee.com/rodinka"
 SOCIAL_PROFILES = (
     ("Instagram", "https://www.instagram.com/mojerodinka.cz/", "social-instagram"),
     ("Facebook", "https://www.facebook.com/profile.php?id=61595033996266", "social-facebook"),
     ("YouTube", "https://www.youtube.com/@MojeRodinkaCz", "social-youtube"),
 )
-PRO_MEMBERSHIP_URL = "https://buymeacoffee.com/rodinka/membership"
 GTM_CONTAINER_ID = "GTM-5FM9NJHK"
 CONSENT_STORAGE_KEY = "rodinka_analytics_consent"
 CONSENT_VERSION = 1
@@ -67,7 +65,6 @@ LOCALES = {
         "new_tab": "otevře se v nové kartě",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikaci Rodinka",
-        "support_label": "Podpořit vývoj",
         "cookie_settings": "Nastavení cookies",
         "consent_title": "Analytika webu",
         "consent_text": "Analytiku používáme, abychom porozuměli používání webu Rodinky a mohli ho zlepšovat. Spustí se až po vašem souhlasu.",
@@ -102,7 +99,6 @@ LOCALES = {
         "new_tab": "otvorí sa na novej karte",
         "copyright": "© 2026 Rodinka",
         "app_label": "O aplikácii Rodinka",
-        "support_label": "Podporiť vývoj",
         "cookie_settings": "Nastavenie cookies",
         "consent_title": "Analytika webu",
         "consent_text": "Analytiku používame, aby sme porozumeli používaniu webu Rodinky a mohli ho zlepšovať. Spustí sa až po vašom súhlase.",
@@ -137,7 +133,6 @@ LOCALES = {
         "new_tab": "opens in a new tab",
         "copyright": "© 2026 Rodinka",
         "app_label": "About the Rodinka app",
-        "support_label": "Support development",
         "cookie_settings": "Cookie settings",
         "consent_title": "Website analytics",
         "consent_text": "We use analytics to understand how Rodinka’s website is used and improve it. Analytics will only start after your consent.",
@@ -1028,28 +1023,22 @@ HOME_PRO = {
         "title": "Ještě o kousek víc pro vaši Rodinku",
         "text": "Rodinka funguje skvěle i zdarma. S Rodinkou Pro získáte víc prostoru pro rodinné fotografie, Moment dne a možnosti, jak si Rodinku přizpůsobit podle sebe.",
         "benefits": ("5 GB pro rodinné fotografie", "Moment dne", "Vlastní barvy členů a vzhled Rodinky"),
-        "support": "Rodinkou Pro zároveň podporujete další vývoj aplikace.",
-        "cta": "Zjistit víc",
-        "cta_note": "Členství na Buy Me a Coffee",
-        "pricing_link": "Ceník a podmínky",
+        "summary": "Od 149 Kč měsíčně, jedno předplatné pro celou rodinu. Zrušit ho můžete kdykoli.",
+        "cta": "Ceník a srovnání",
     },
     "sk": {
         "title": "Ešte o kúsok viac pre vašu Rodinku",
         "text": "Rodinka funguje skvele aj zadarmo. S Rodinkou Pro získate viac priestoru na rodinné fotografie, Moment dňa a možnosti, ako si Rodinku prispôsobiť podľa seba.",
         "benefits": ("5 GB na rodinné fotografie", "Moment dňa", "Vlastné farby členov a vzhľad Rodinky"),
-        "support": "Rodinkou Pro zároveň podporujete ďalší vývoj aplikácie.",
-        "cta": "Zistiť viac",
-        "cta_note": "Členstvo na Buy Me a Coffee",
-        "pricing_link": "Cenník a podmienky",
+        "summary": "Od 149 Kč mesačne, jedno predplatné pre celú rodinu. Zrušiť ho môžete kedykoľvek.",
+        "cta": "Cenník a porovnanie",
     },
     "en": {
         "title": "A little more for your family",
         "text": "Rodinka works great for free. Rodinka Pro adds more space for family photos, Moment of the Day, and more ways to make Rodinka feel like your own.",
         "benefits": ("5 GB for family photos", "Moment of the Day", "Custom member colours and app accent"),
-        "support": "Rodinka Pro also helps support the continued development of the app.",
-        "cta": "Learn more",
-        "cta_note": "Membership on Buy Me a Coffee",
-        "pricing_link": "Pricing and policies",
+        "summary": "From CZK 149 a month, one subscription for the whole family. Cancel at any time.",
+        "cta": "Pricing and comparison",
     },
 }
 
@@ -2202,7 +2191,7 @@ def site_footer(locale: str) -> str:
           </div>
         </div>
         <nav class="footer-nav" aria-label="{esc(cfg["features"])}"><h2>{esc(cfg["features"])}</h2><ul>{feature_links}</ul></nav>
-        <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{cfg["home_path"]}#rodinka-pro">Rodinka Pro</a></li><li><a href="{SUPPORT_URL}" target="_blank" rel="noopener">{esc(cfg["support_label"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
+        <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{cfg["home_path"]}#rodinka-pro">Rodinka Pro</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
         <nav class="footer-nav" aria-label="{esc(INFO_COMMON[locale]["legal_kicker"].capitalize())}"><h2>{esc(INFO_COMMON[locale]["legal_kicker"].capitalize())}</h2><ul>{footer_legal_links}</ul></nav>
       </div>
       <p class="copyright">{esc(cfg["copyright"])}</p>
@@ -2564,7 +2553,7 @@ def render_home_pro(locale: str) -> str:
         <div class="pro-card surface">
           <div class="pro-copy"><p class="section-kicker">Rodinka Pro</p><h2 id="pro-title">{esc(data["title"])}</h2><p>{esc(data["text"])}</p></div>
           <ul class="pro-benefits">{benefits}</ul>
-          <div class="pro-footer"><p class="pro-support">{esc(data["support"])}</p><div class="pro-action"><a class="card-link" href="{PRO_MEMBERSHIP_URL}" target="_blank" rel="noopener">{esc(data["cta"])} <span aria-hidden="true">↗</span></a><small>{esc(data["cta_note"])}</small><a class="card-link" href="{PATHS["pricing"][locale]}">{esc(data["pricing_link"])} <span aria-hidden="true">→</span></a></div></div>
+          <div class="pro-footer"><p class="pro-support">{esc(data["summary"])}</p><div class="pro-action"><a class="card-link" href="{PATHS["pricing"][locale]}">{esc(data["cta"])} <span aria-hidden="true">→</span></a></div></div>
         </div>
       </section>'''
 

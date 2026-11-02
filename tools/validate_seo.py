@@ -313,6 +313,11 @@ def main() -> int:
             for token in ("Merchant of Record", 'href="https://paddle.net"', 'href="https://www.paddle.com/legal/refund-policy"'):
                 if token not in text:
                     errors.append(f"{path}: policy page lacks {token!r}")
+        # Paddle's domain review rejected donations: no tip jar, membership
+        # platform or "support development" wording may come back.
+        for forbidden in ("buymeacoffee", "buy me a coffee", "podpořit vývoj", "podporiť vývoj", "support development", "podporujete", "donat", "darovat"):
+            if forbidden in text.lower():
+                errors.append(f"{path}: donation wording or link found: {forbidden!r}")
         if "lorem ipsum" in text.lower() or "example.com" in text.lower():
             errors.append(f"{path}: placeholder content found")
         if "https://app.mojerodinka.cz" not in text:
