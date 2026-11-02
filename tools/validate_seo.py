@@ -31,11 +31,14 @@ FAMILIES = {
     "circle": {"cs": "/sirsi-rodina/", "sk": "/sk/sirsia-rodina/", "en": "/en/extended-family/"},
     "pricing": {"cs": "/pricing/", "sk": "/sk/pricing/", "en": "/en/pricing/"},
     "refunds": {"cs": "/refund-policy/", "sk": "/sk/refund-policy/", "en": "/en/refund-policy/"},
+    "terms": {"cs": "/terms/", "sk": "/sk/terms/", "en": "/en/terms/"},
+    "privacy": {"cs": "/privacy/", "sk": "/sk/privacy/", "en": "/en/privacy/"},
 }
 
-# Paddle verification reads these pages and the app's legal pages they link to.
+# Paddle domain review reads pricing, refunds, terms and privacy on this domain;
+# every page must reach terms and privacy through normal links (the footer).
 POLICY_FAMILIES = {"pricing", "refunds"}
-APP_LEGAL_URLS = ("https://app.mojerodinka.cz/terms", "https://app.mojerodinka.cz/privacy")
+LEGAL_FAMILIES = ("terms", "privacy")
 
 EXPECTED = {
     path: (family, locale)
@@ -300,9 +303,12 @@ def main() -> int:
 
         # Every page reaches the existing Terms and Privacy through the footer;
         # the policy pages must also name Paddle and the buyer portal.
-        for legal_url in APP_LEGAL_URLS:
-            if f'href="{legal_url}"' not in text:
-                errors.append(f"{path}: missing link to {legal_url}")
+        for legal_family in LEGAL_FAMILIES:
+            legal_path = FAMILIES[legal_family][locale]
+            if family != legal_family and f'href="{legal_path}"' not in text:
+                errors.append(f"{path}: missing link to {legal_path}")
+        if family == "terms" and ("Merchant of Record" not in text and "merchant of record" not in text):
+            errors.append(f"{path}: terms do not name Paddle as merchant of record")
         if family in POLICY_FAMILIES:
             for token in ("Merchant of Record", 'href="https://paddle.net"', 'href="https://www.paddle.com/legal/refund-policy"'):
                 if token not in text:
@@ -311,7 +317,9 @@ def main() -> int:
             errors.append(f"{path}: placeholder content found")
         if "https://app.mojerodinka.cz" not in text:
             errors.append(f"{path}: missing CTA link to the web application")
-        if locale == "sk" and re.search(r"[řěů]", text, re.IGNORECASE):
+        # Czech proper names are allowed only when marked lang="cs".
+        slovak_text = re.sub(r'<span lang="cs">.*?</span>', "", text)
+        if locale == "sk" and re.search(r"[řěů]", slovak_text, re.IGNORECASE):
             errors.append(f"{path}: likely Czech text leaked into Slovak HTML")
 
         page_product_sources: set[str] = set()

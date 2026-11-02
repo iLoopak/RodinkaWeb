@@ -28,7 +28,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20261102a"
+ASSET_VERSION = "20261102b"
 
 # Self-hosted webfont, built by tools/build_fonts.py. The app sets every word in
 # Manrope, so the site does too: one variable file (wght 500-800) carries body,
@@ -163,6 +163,8 @@ PATHS = {
     # Paddle reviews these exact public paths; they keep one slug in every language.
     "pricing": {"cs": "/pricing/", "sk": "/sk/pricing/", "en": "/en/pricing/"},
     "refunds": {"cs": "/refund-policy/", "sk": "/sk/refund-policy/", "en": "/en/refund-policy/"},
+    "terms": {"cs": "/terms/", "sk": "/sk/terms/", "en": "/en/terms/"},
+    "privacy": {"cs": "/privacy/", "sk": "/sk/privacy/", "en": "/en/privacy/"},
 }
 
 
@@ -2639,7 +2641,7 @@ def write_page(path: Path, content: str) -> None:
 
 
 def render_sitemap() -> str:
-    page_order = ("home", *TOPIC_KEYS, *INFO_KEYS)
+    page_order = ("home", *TOPIC_KEYS, *INFO_KEYS, *LEGAL_KEYS)
     urls = "\n".join(
         f"  <url><loc>{canonical(PATHS[page_key][locale])}</loc></url>"
         for locale in ("cs", "sk", "en")
@@ -2655,9 +2657,9 @@ def render_sitemap() -> str:
 # Short labels for llms.txt, breadcrumbs and the footer. Kept next to the paths so
 # a new topic family cannot be added to PATHS and silently skipped here.
 LLMS_LABELS = {
-    "cs": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendář", "shopping": "Sdílený nákupní seznam", "chores": "Úkoly pro rodinu", "meals": "Plánování jídel", "trips": "Rodinné výlety", "memories": "Rodinné vzpomínky", "documents": "Hlídání platnosti dokladů", "baby": "Příprava na miminko", "app": "Aplikace pro rodinu", "circle": "Širší rodina a pomocníci", "pricing": "Ceník", "refunds": "Zásady refundací"},
-    "sk": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendár", "shopping": "Zdieľaný nákupný zoznam", "chores": "Úlohy pre rodinu", "meals": "Plánovanie jedál", "trips": "Rodinné výlety", "memories": "Rodinné spomienky", "documents": "Stráženie platnosti dokladov", "baby": "Príprava na bábätko", "app": "Aplikácia pre rodinu", "circle": "Širšia rodina a pomocníci", "pricing": "Cenník", "refunds": "Zásady refundácií"},
-    "en": {"home": "Rodinka", "planner": "Family planner", "calendar": "Family calendar", "shopping": "Shared shopping list", "chores": "Family chores", "meals": "Meal planning", "trips": "Family trips", "memories": "Family memories", "documents": "Document expiry reminders", "baby": "Preparing for a baby", "app": "Family organizer app", "circle": "Extended family and helpers", "pricing": "Pricing", "refunds": "Refund policy"},
+    "cs": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendář", "shopping": "Sdílený nákupní seznam", "chores": "Úkoly pro rodinu", "meals": "Plánování jídel", "trips": "Rodinné výlety", "memories": "Rodinné vzpomínky", "documents": "Hlídání platnosti dokladů", "baby": "Příprava na miminko", "app": "Aplikace pro rodinu", "circle": "Širší rodina a pomocníci", "pricing": "Ceník", "refunds": "Zásady refundací", "terms": "Podmínky používání", "privacy": "Zásady ochrany soukromí"},
+    "sk": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendár", "shopping": "Zdieľaný nákupný zoznam", "chores": "Úlohy pre rodinu", "meals": "Plánovanie jedál", "trips": "Rodinné výlety", "memories": "Rodinné spomienky", "documents": "Stráženie platnosti dokladov", "baby": "Príprava na bábätko", "app": "Aplikácia pre rodinu", "circle": "Širšia rodina a pomocníci", "pricing": "Cenník", "refunds": "Zásady refundácií", "terms": "Podmienky používania", "privacy": "Zásady ochrany súkromia"},
+    "en": {"home": "Rodinka", "planner": "Family planner", "calendar": "Family calendar", "shopping": "Shared shopping list", "chores": "Family chores", "meals": "Meal planning", "trips": "Family trips", "memories": "Family memories", "documents": "Document expiry reminders", "baby": "Preparing for a baby", "app": "Family organizer app", "circle": "Extended family and helpers", "pricing": "Pricing", "refunds": "Refund policy", "terms": "Terms of use", "privacy": "Privacy policy"},
 }
 
 LLMS_SECTIONS = (("cs", "Czech (default)"), ("sk", "Slovak"), ("en", "English"))
@@ -2668,7 +2670,7 @@ def render_llms_txt() -> str:
     for locale, heading in LLMS_SECTIONS:
         links = "\n".join(
             f'- [{LLMS_LABELS[locale][key]}]({canonical(PATHS[key][locale])})'
-            for key in ("home", *TOPIC_KEYS, *INFO_KEYS)
+            for key in ("home", *TOPIC_KEYS, *INFO_KEYS, *LEGAL_KEYS)
         )
         sections.append(f"## {heading}\n{links}")
     body = "\n\n".join(sections)
@@ -2689,9 +2691,10 @@ def render_llms_txt() -> str:
 # Terms and Privacy already live in the app and are only linked, never copied.
 
 INFO_KEYS = ("pricing", "refunds")
-
-TERMS_URL = f"{APP_URL}/terms"
-PRIVACY_URL = f"{APP_URL}/privacy"
+# Terms and Privacy are rendered from data/legal-content.json, a synced copy of
+# the app's own legal pages (tools/sync_legal_content.mjs); never edit it here.
+LEGAL_KEYS = ("terms", "privacy")
+LEGAL_CONTENT_FILE = ROOT / "data" / "legal-content.json"
 SUPPORT_PAGE_URL = f"{APP_URL}/support"
 PADDLE_REFUND_POLICY_URL = "https://www.paddle.com/legal/refund-policy"
 PADDLE_BUYER_URL = "https://paddle.net"
@@ -3074,12 +3077,10 @@ INFO_PAGES = {
 def info_link(key: str, locale: str) -> tuple[str, bool]:
     """Where a policy link points, and whether it leaves this website."""
     targets = {
-        "terms": (TERMS_URL, True),
-        "privacy": (PRIVACY_URL, True),
         "paddle_policy": (PADDLE_REFUND_POLICY_URL, True),
         "paddle_buyer": (PADDLE_BUYER_URL, True),
     }
-    if key in INFO_KEYS:
+    if key in INFO_KEYS or key in LEGAL_KEYS:
         return PATHS[key][locale], False
     return targets[key]
 
@@ -3154,16 +3155,133 @@ def render_info(page_key: str, locale: str) -> str:
     return page_shell(page_key, locale, data, main)
 
 
+LEGAL_META = {
+    "cs": {
+        "terms": {
+            "title": "Podmínky používání Rodinky a pravidla obsahu | Rodinka",
+            "description": "Podmínky používání Rodinky: provozovatel, Rodinka Free a Pro, platby přes Paddle, obnovení a zrušení předplatného, vrácení peněz a pravidla obsahu.",
+            "og_alt": "Rodinka – podmínky používání a pravidla obsahu",
+            "eyebrow": "PODMÍNKY",
+            "answer": ("Co upravují podmínky Rodinky?", "Kdo Rodinku provozuje, jak funguje verze Free a předplatné Rodinka Pro, že platby na webu zpracovává Paddle.com jako Merchant of Record, jak předplatné zrušit a požádat o vrácení peněz a jaký obsah do Rodinky nepatří."),
+        },
+        "privacy": {
+            "title": "Zásady ochrany osobních údajů Rodinky | Rodinka",
+            "description": "Jaké údaje Rodinka ukládá, proč a kdo k nim má přístup: rodinný prostor, zdravotní údaje, analytika, zpracovatelé včetně Paddle, uchování údajů a vaše práva.",
+            "og_alt": "Rodinka – zásady ochrany osobních údajů",
+            "eyebrow": "SOUKROMÍ",
+            "answer": ("Jak Rodinka zachází s osobními údaji?", "Rodinka ukládá jen údaje, které do ní rodina zadá, a technické údaje nutné k provozu. Analytika je ve výchozím stavu vypnutá, platební údaje zadáváte přímo Paddle a účet můžete kdykoli sami smazat v aplikaci."),
+        },
+    },
+    "sk": {
+        "terms": {
+            "title": "Podmienky používania Rodinky a pravidlá obsahu | Rodinka",
+            "description": "Podmienky používania Rodinky: prevádzkovateľ, Rodinka Free a Pro, platby cez Paddle, obnovenie a zrušenie predplatného, vrátenie peňazí a pravidlá obsahu.",
+            "og_alt": "Rodinka – podmienky používania a pravidlá obsahu",
+            "eyebrow": "PODMIENKY",
+            "answer": ("Čo upravujú podmienky Rodinky?", "Kto Rodinku prevádzkuje, ako funguje verzia Free a predplatné Rodinka Pro, že platby na webe spracúva Paddle.com ako Merchant of Record, ako predplatné zrušiť a požiadať o vrátenie peňazí a aký obsah do Rodinky nepatrí."),
+        },
+        "privacy": {
+            "title": "Zásady ochrany osobných údajov Rodinky | Rodinka",
+            "description": "Aké údaje Rodinka ukladá, prečo a kto k nim má prístup: rodinný priestor, zdravotné údaje, analytika, sprostredkovatelia vrátane Paddle, uchovávanie údajov a vaše práva.",
+            "og_alt": "Rodinka – zásady ochrany osobných údajov",
+            "eyebrow": "SÚKROMIE",
+            "answer": ("Ako Rodinka zaobchádza s osobnými údajmi?", "Rodinka ukladá iba údaje, ktoré do nej rodina zadá, a technické údaje nutné na prevádzku. Analytika je v predvolenom stave vypnutá, platobné údaje zadávate priamo Paddle a účet môžete kedykoľvek sami zmazať v aplikácii."),
+        },
+    },
+    "en": {
+        "terms": {
+            "title": "Rodinka terms of use and content guidelines | Rodinka",
+            "description": "Rodinka terms of use: the operator, Rodinka Free and Pro, payments through Paddle, subscription renewal and cancellation, refunds and content guidelines.",
+            "og_alt": "Rodinka – terms of use and content guidelines",
+            "eyebrow": "TERMS",
+            "answer": ("What do Rodinka’s terms cover?", "Who operates Rodinka, how Rodinka Free and the Rodinka Pro subscription work, that web payments are handled by Paddle.com as merchant of record, how to cancel and request a refund, and what content does not belong in Rodinka."),
+        },
+        "privacy": {
+            "title": "Rodinka privacy policy | Rodinka",
+            "description": "What Rodinka stores, why and who can see it: the shared family space, health data, analytics, processors including Paddle, retention and your rights.",
+            "og_alt": "Rodinka – privacy policy",
+            "eyebrow": "PRIVACY",
+            "answer": ("How does Rodinka handle personal data?", "Rodinka stores only what the family enters and the technical data needed to run the service. Analytics is off by default, you enter payment details directly with Paddle, and you can delete your account yourself in the app at any time."),
+        },
+    },
+}
+
+# Czech proper names inside Slovak legal text (the Czech data-protection
+# authority) are marked lang="cs" so screen readers and validators know.
+CZECH_NAMES = ("Úřad pro ochranu osobních údajů (ÚOOÚ)", "Úřad pro ochranu osobních údajů")
+
+
+def legal_text(value: str, locale: str) -> str:
+    text = esc(value)
+    if locale != "cs":
+        for name in CZECH_NAMES:
+            if name in text:
+                return text.replace(name, f'<span lang="cs">{name}</span>', 1)
+    return text
+
+
+def load_legal_content() -> dict:
+    return json.loads(LEGAL_CONTENT_FILE.read_text(encoding="utf-8"))
+
+
+def render_legal(page_key: str, locale: str, legal: dict) -> str:
+    content = legal["languages"][locale]
+    page = content[page_key]
+    meta = LEGAL_META[locale][page_key]
+    operator = legal["operator"]
+    cfg = LOCALES[locale]
+    data = {
+        "title": meta["title"],
+        "description": meta["description"],
+        "og_title": page["title"],
+        "og_description": meta["description"],
+        "og_alt": meta["og_alt"],
+    }
+    question, answer = meta["answer"]
+    sections = ""
+    for section in page["sections"]:
+        paragraphs = "".join(f"<p>{legal_text(paragraph, locale)}</p>" for paragraph in section["paragraphs"])
+        items = "".join(f"<li>{legal_text(item, locale)}</li>" for item in section["items"])
+        items_markup = f'<ul class="legal-list">{items}</ul>' if items else ""
+        sections += f'<article class="answer"><h3>{legal_text(section["heading"], locale)}</h3><div class="answer-body">{paragraphs}{items_markup}</div></article>'
+    operator_lines = [f"<p>{esc(operator['legalName'])}</p>"]
+    if operator["address"]:
+        operator_lines.append(f"<p>{esc(operator['address'])}</p>")
+    if operator["registrationNumber"]:
+        operator_lines.append(f"<p>{esc(content['registrationLabel'])}: {esc(operator['registrationNumber'])}</p>")
+    operator_lines.append(f'<p><a href="mailto:{esc(operator["contactEmail"])}">{esc(operator["contactEmail"])}</a></p>')
+    sections += f'<article class="answer" id="provozovatel"><h3>{esc(content["operatorHeading"])}</h3><div class="answer-body">{"".join(operator_lines)}</div></article>'
+    intro = f'<p class="topic-lead">{legal_text(page["intro"], locale)}</p>' if page["intro"] else ""
+    main = f'''      <article class="topic-page info-page legal-page">
+        <div class="topic-hero-wrap">
+          <header class="topic-hero"><nav class="breadcrumbs" aria-label="{esc(cfg["breadcrumb"])}"><a href="{cfg["home_path"]}">{esc(cfg["home"])}</a><span aria-hidden="true">/</span><span aria-current="page">{esc(LLMS_LABELS[locale][page_key])}</span></nav><p class="section-kicker">{esc(meta["eyebrow"])}</p><h1>{esc(page["title"])}</h1>{intro}<p class="legal-updated">{esc(content["lastUpdated"])}</p></header>
+        </div>
+      <section class="proof-section direct-answer proof-section--text" aria-labelledby="direct-answer-{page_key}">
+        <div class="proof-copy">
+          <p class="section-kicker">{ {"cs": "STRUČNÁ ODPOVĚĎ", "sk": "STRUČNÁ ODPOVEĎ", "en": "DIRECT ANSWER"}[locale] }</p>
+          <h2 id="direct-answer-{page_key}">{esc(question)}</h2>
+          <p>{esc(answer)}</p>
+        </div>
+      </section>
+        <section class="content-section answers-section"><div class="answers-list">{sections}</div></section>
+{render_info_links(page_key, locale)}
+      </article>'''
+    return page_shell(page_key, locale, data, main)
+
+
 def main() -> None:
+    legal = load_legal_content()
     for locale in ("cs", "sk", "en"):
         write_page(output_path(PATHS["home"][locale]), render_home(locale))
         for page_key in TOPIC_KEYS:
             write_page(output_path(PATHS[page_key][locale]), render_topic(page_key, locale))
         for page_key in INFO_KEYS:
             write_page(output_path(PATHS[page_key][locale]), render_info(page_key, locale))
+        for page_key in LEGAL_KEYS:
+            write_page(output_path(PATHS[page_key][locale]), render_legal(page_key, locale, legal))
     write_page(ROOT / "sitemap.xml", render_sitemap())
     write_page(ROOT / "llms.txt", render_llms_txt())
-    print(f"Generated {3 * (1 + len(TOPIC_KEYS) + len(INFO_KEYS))} localized HTML pages, sitemap.xml and llms.txt.")
+    print(f"Generated {3 * (1 + len(TOPIC_KEYS) + len(INFO_KEYS) + len(LEGAL_KEYS))} localized HTML pages, sitemap.xml and llms.txt.")
 
 
 if __name__ == "__main__":

@@ -18,7 +18,7 @@ Společná šablona, překlady a obsah stránek jsou v `generate_site.py`. Po ú
 python generate_site.py
 ```
 
-Skript znovu vytvoří 42 statických HTML stránek (14 jazykových rodin × CS/SK/EN: homepage, 11 tematických stránek, ceník a zásady refundací), `sitemap.xml` a experimentální `llms.txt`. Vygenerované soubory se commitují; Vercel proto nepotřebuje build command.
+Skript znovu vytvoří 48 statických HTML stránek (16 jazykových rodin × CS/SK/EN: homepage, 11 tematických stránek, ceník, zásady refundací, podmínky používání a zásady ochrany soukromí), `sitemap.xml` a experimentální `llms.txt`. Vygenerované soubory se commitují; Vercel proto nepotřebuje build command.
 
 ## SEO údržba
 
@@ -65,7 +65,7 @@ Kompaktní blok na konci homepage, za rodinným citátem a před hlavním CTA �
 
 Textový odkaz „Zjistit víc“ otevírá externí členství `PRO_MEMBERSHIP_URL` (`https://buymeacoffee.com/rodinka/membership`) v nové kartě s `rel="noopener"`. Dobrovolná podpora `SUPPORT_URL` zůstává samostatným tip jarem a Pro neuděluje. Patička všech stránek odkazuje na Pro blok lokalizované homepage (`#rodinka-pro`). Homepage nemá vlastní FAQ, takže kvůli jediné otázce nevzniká nová sekce ani `/pro` stránka. Na stránce širší rodiny je otázka „Je to součást Rodinky Pro?“ s odpovědí ne: G1–G4a fungují ve verzi zdarma. Analytics nadále označuje jen odkazy do aplikace; externí Pro CTA nepoužívá `cta_app_click`.
 
-### Ceník a zásady refundací (Paddle)
+### Ceník, refundace, podmínky a soukromí (Paddle)
 
 Veřejné stránky pro schválení Paddle Live spravují `INFO_KEYS`, `INFO_PAGES`, `INFO_COMMON`, `render_info` a `render_plans` v generátoru:
 
@@ -73,13 +73,15 @@ Veřejné stránky pro schválení Paddle Live spravují `INFO_KEYS`, `INFO_PAGE
 | --- | --- | --- | --- |
 | Ceník | `/pricing/` | `/sk/pricing/` | `/en/pricing/` |
 | Zásady refundací | `/refund-policy/` | `/sk/refund-policy/` | `/en/refund-policy/` |
+| Podmínky používání | `/terms/` | `/sk/terms/` | `/en/terms/` |
+| Zásady ochrany soukromí | `/privacy/` | `/sk/privacy/` | `/en/privacy/` |
 
 Cesty mají záměrně stejný anglický slug ve všech jazycích, protože je Paddle při ověření kontroluje přesně; canonical, reciproční `hreflang` a sitemap fungují stejně jako u ostatních stránek. Obě stránky mají jednu krátkou přímou odpověď, ale nemají produktovou ukázku ani JSON-LD `Offer` (ceny nejsou strukturovaná data).
 
 - **Obsah:** Free 200 MB; Pro 149 Kč měsíčně / 1 599 Kč ročně (CZK včetně DPH, jinde se částka může lišit) s 5 GB, Momentem dne, vlastními barvami členů a accentem a vlastním uspořádáním navigace. Výhody vycházejí z `Rodinka/docs/FAMILY_ENTITLEMENTS.md`, obnovování, zrušení a dopad refundace z `Rodinka/docs/PADDLE_BILLING.md` (plná refundace Pro odebere, částečná ne; zrušení ponechá Pro do konce zaplaceného období). Pravidla refundací shrnují oficiální [Paddle Refund Policy](https://www.paddle.com/legal/refund-policy) ve znění z 31. 3. 2026; při její změně upravte `INFO_PAGES` ve všech jazycích.
 - **CTA:** všechna nákupní CTA vedou do aplikace (`APP_URL`, `data-analytics-location`). Web sám žádný Paddle checkout ani token nemá; zda aplikace nabídne Paddle nebo starší členství, rozhoduje její flag `VITE_PADDLE_CHECKOUT_ENABLED`. Homepage Pro blok proto dál odkazuje na `PRO_MEMBERSHIP_URL` a jen přidává odkaz „Ceník a podmínky“. Po zapnutí Paddle Live a vypnutí BMC je potřeba odkaz na BMC samostatně odebrat.
-- **Podmínky a soukromí** se neduplikují: odkazuje se na existující `https://app.mojerodinka.cz/terms` a `/privacy`. Patička všech stránek má sloupec „Podmínky a zásady“ (ceník, refundace, podmínky, soukromí). Tyto odkazy nejsou CTA a nenesou `data-analytics-location`; `tools/validate_analytics.py` to hlídá a `tools/validate_seo.py` ověřuje, že je mají všechny stránky a že policy stránky odkazují na paddle.net a Paddle Refund Policy.
-- Údaje o provozovateli web neuvádí; patří do `/terms` v aplikaci (`Rodinka/src/features/legal/operator.ts`).
+- **Podmínky a soukromí** mají na webu vlastní stránky, protože je Paddle vyžaduje na ověřované doméně. Texty se ale nepíšou dvakrát: zdrojem pravdy zůstává aplikace (`Rodinka/src/features/legal/legalContent.ts` a `operator.ts`). `data/legal-content.json` je jejich synchronizovaná kopie s webovou variantou sekcí (platby přes Paddle; Android/iOS varianty se na web nedostanou) a vykreslují ji `LEGAL_KEYS`, `LEGAL_META` a `render_legal`. JSON neupravujte ručně; po změně právních textů v aplikaci spusťte `node tools/sync_legal_content.mjs ../Rodinka` (Node 22.13+) a pak generátor. Pole `source` v JSON uvádí commit aplikace, ze kterého kopie vznikla. Patička všech stránek má sloupec „Podmínky a zásady“ (ceník, refundace, podmínky, soukromí); `tools/validate_seo.py` hlídá, že na ně vede odkaz z každé stránky, že podmínky jmenují Merchant of Record a že české vlastní názvy ve slovenském textu jsou označené `lang="cs"`. Odkaz na podporu aplikace (`/support`) není CTA a nenese `data-analytics-location`, což hlídá `tools/validate_analytics.py`.
+- Údaje o provozovateli se berou jen z `operator.ts` v aplikaci; synchronizační skript odmítne kopii bez jména a kontaktu.
 
 ### Přegenerování písem
 

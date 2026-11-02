@@ -1,0 +1,731 @@
+{
+  "source": "iLoopak/Rodinka src/features/legal @ bdbbb65",
+  "operator": {
+    "legalName": "Lukáš Sitta",
+    "address": "",
+    "registrationNumber": "",
+    "contactEmail": "privacy@mojerodinka.cz"
+  },
+  "languages": {
+    "cs": {
+      "operatorHeading": "Provozovatel a kontakt",
+      "registrationLabel": "IČO",
+      "lastUpdated": "Poslední aktualizace: 2. 11. 2026",
+      "terms": {
+        "title": "Podmínky používání a pravidla obsahu",
+        "intro": "Tyto podmínky popisují, jak Rodinku používat, co do ní nepatří a jak funguje předplatné Rodinka Pro.",
+        "sections": [
+          {
+            "heading": "Služba a provozovatel",
+            "paragraphs": [
+              "Rodinku provozuje Lukáš Sitta. Tyto podmínky platí pro používání Rodinky na webu i v aplikacích. Kontakt na provozovatele najdete na konci stránky.",
+              "Rodinka je určená pro soukromou komunikaci uvnitř jedné rodiny. Konverzace nejsou veřejné a nelze v nich oslovit cizí lidi."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Rodinka Free a Rodinka Pro",
+            "paragraphs": [
+              "Rodinku lze používat zdarma. Rodinka Pro je dobrovolné předplatné pro celou rodinu: přidává 5 GB pro rodinné fotografie, Moment dne a možnosti přizpůsobení. Aktuální ceny a rozdíl mezi verzemi uvádí ceník na mojerodinka.cz/pricing.",
+              "Když Rodinka Pro skončí, data rodiny se nemažou; nové fotografie nad limit verze Free a nové Momenty dne už přidat nepůjde."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Platby na webu přes Paddle",
+            "paragraphs": [
+              "Objednávky na webu zpracovává náš online prodejce Paddle.com, který je u všech objednávek prodejcem (Merchant of Record). Paddle přijímá platbu, vystavuje doklad, odvádí daň a vyřizuje dotazy k platbám i vrácení peněz. Pro objednávku platí také podmínky Paddle pro kupující.",
+              "Předplatné koupené v App Store nebo Google Play se řídí pravidly daného obchodu."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Obnovení, zrušení a vrácení peněz",
+            "paragraphs": [
+              "Předplatné se automaticky obnovuje na další měsíc nebo rok, dokud ho nezrušíte. Zrušit ho můžete kdykoli na paddle.net nebo v aplikaci ve Více → Účet a rodina → Spravovat předplatné. Rodinka Pro pak zůstane aktivní do konce zaplaceného období. Smazání účtu předplatné samo nezruší.",
+              "O vrácení peněz žádáte u Paddle na paddle.net podle Zásad refundací na mojerodinka.cz/refund-policy a Paddle Refund Policy. Schválená plná refundace platby Rodinku Pro ukončí. Vaše zákonná práva spotřebitele tím nejsou dotčena."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Co do Rodinky nepatří",
+            "paragraphs": [
+              "Obsah, který do aplikace vložíte — zprávy, fotky, dokumenty i názvy záznamů — nesmí:"
+            ],
+            "items": [
+              "porušovat zákon,",
+              "ohrožovat děti nebo je jakkoli zneužívat,",
+              "obsahovat výhrůžky, obtěžování nebo zastrašování,",
+              "obsahovat nenávistný obsah namířený proti skupině lidí,",
+              "sdílet materiál, ke kterému nemáte práva."
+            ]
+          },
+          {
+            "heading": "Nahlášení obsahu",
+            "paragraphs": [
+              "U každé zprávy najdete v její nabídce možnost „Nahlásit zprávu“. Hlášení dostane provozovatel aplikace, který obsah posoudí a v případě porušení těchto pravidel jej odstraní nebo znepřístupní.",
+              "Hlášení označené jako ohrožení dítěte řešíme přednostně.",
+              "Nahlásit lze jen zprávu z konverzace, které se sami účastníte."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Odstranění obsahu",
+            "paragraphs": [
+              "Provozovatel může obsah porušující tato pravidla odstranit. Text zprávy už v aplikaci není dostupný a aplikace přestane poskytovat přístup k jejím přílohám; podkladové soubory jsou následně odstraněny v rámci moderace.",
+              "Svoje vlastní zprávy můžete kdykoli smazat sami."
+            ],
+            "items": []
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Zásady ochrany osobních údajů",
+        "intro": "Rodinka je aplikace pro organizaci rodiny. Tento dokument popisuje, jaké údaje aplikace skutečně ukládá, proč a kdo k nim má přístup.",
+        "sections": [
+          {
+            "heading": "Kdo je správcem údajů",
+            "paragraphs": [
+              "Správcem osobních údajů a provozovatelem Rodinky je Lukáš Sitta. Pro dotazy a žádosti týkající se soukromí napište na privacy@mojerodinka.cz."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Jaké údaje ukládáme",
+            "paragraphs": [
+              "Rodinka ukládá údaje, které do ní zadáte nebo v ní vytvoříte, a technické údaje nutné k provozu účtu, zabezpečení a jednotlivých funkcí:"
+            ],
+            "items": [
+              "Účet: e-mailová adresa a přihlašovací údaje zpracovávané službou Supabase Auth, případně přihlášení přes Google. Rodinné a profilové tabulky neukládají čitelné heslo.",
+              "Rodina: členství v domácnosti, role (správce, rodič, dítě), pozvánky.",
+              "Profily a fotografie: jméno, barva, volitelně profilová fotka a rodinná fotka.",
+              "Kalendář, úkoly a aktivity: události, jejich čas, místo, účastníci a přiřazení.",
+              "Zdravotní plánování: lékařské termíny a očkování — datum, typ, koho se týkají, doprovod a poznámka.",
+              "Dokumenty: evidence rodinných dokumentů, jejich platnosti a volitelné přílohy.",
+              "Místa: rodinná místa včetně adres a souřadnic.",
+              "Bezpečný příchod: které uložené rodinné místo jste ručně potvrdili jako místo příchodu a kdy, nebo — pouze pokud to sami zvolíte — jednorázově sdílená přesná poloha zařízení (zeměpisná šířka a délka, odhad přesnosti a volitelný čitelný popisek místa); případně rodinné místo a čas, do kdy chcete příchod potvrdit.",
+              "Jídelníček a nákupní seznam.",
+              "Zprávy: text zpráv, reakce a přílohy uvnitř vaší rodiny.",
+              "Poznámky ke členům rodiny: text, nepovinný název a volitelné údaje (název a hodnota), které dospělý člen zapíše k sobě nebo k jinému členovi rodiny, a nastavení, zda je poznámka soukromá, nebo sdílená s dospělými v rodině.",
+              "Notifikace: push endpoint prohlížeče nebo zařízení a vaše nastavení připomínek."
+            ]
+          },
+          {
+            "heading": "Proč údaje zpracováváme",
+            "paragraphs": [
+              "Podle účelu používáme následující právní základy:"
+            ],
+            "items": [
+              "Základní účet a rodinný organizér — poskytnutí služby, o kterou uživatel požádal.",
+              "Zabezpečení, prevence zneužití a nezbytná provozní ochrana — oprávněný zájem na bezpečném a spolehlivém provozu.",
+              "Volitelná analytika — souhlas.",
+              "Zdravotní údaje — výslovný souhlas.",
+              "Podpora, korespondence o soukromí a vyřízení žádostí — odpověď na žádost uživatele a oprávněný provozní zájem."
+            ]
+          },
+          {
+            "heading": "Zdravotní údaje",
+            "paragraphs": [
+              "Zdravotní plánovací údaje ukládáme až poté, co k tomu dáte výslovný souhlas. Bez něj aplikace zdravotní záznam neuloží — kontrolu provádí přímo databáze, ne jen uživatelské rozhraní.",
+              "Souhlas můžete kdykoli odvolat v Nastavení. Odvolání zablokuje budoucí ukládání a úpravy, ale samo o sobě už uložené záznamy automaticky nemaže. Zůstanou čitelné, dokud je nesmažete nebo nepožádáte o jejich výmaz na privacy@mojerodinka.cz.",
+              "Nejde o zdravotnickou dokumentaci ani o poskytování zdravotních služeb.",
+              "Pokud do poznámky ke členovi rodiny sami napíšete informaci o zdraví, uložíme ji jako součást poznámky a použijeme ji jen k tomu, abychom poznámku zobrazili vám a dospělým, se kterými ji sdílíte. Rodinka obsah poznámek nevyhodnocuje a poznámky nejsou zdravotní dokumentací."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Sdílený rodinný prostor a přístup",
+            "paragraphs": [
+              "Rodinka je sdílený rodinný prostor. Údaje, které zadáte o sobě nebo o dalších členech, mohou vidět ostatní členové podle své role, nastavení viditelnosti a typu záznamu. Dětské účty mají zdravotní záznamy ve výchozím stavu skryté.",
+              "Přístup vynucuje databáze na úrovni jednotlivých řádků a odvozuje ho z přihlášeného uživatele, nikoli z údajů poslaných aplikací.",
+              "Poznámky ke členům rodiny: soukromou poznámku vidí jen její autor, sdílenou mohou číst všichni dospělí členové rodiny. Upravit nebo smazat ji může jen autor. Dětské účty poznámky nevidí. Obsah poznámek se neposílá do analytiky, provozní diagnostiky ani oznámení."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Bezpečný příchod a jednorázové sdílení polohy",
+            "paragraphs": [
+              "V Bezpečném příchodu může člen rodiny ručně potvrdit, že dorazil na některé z uložených rodinných míst. Tento způsob polohu zařízení nepoužívá.",
+              "Pokud místo toho sami zvolíte „Sdílet aktuální polohu jednorázově“ a potvrdíte načtení polohy, aplikace jednou načte přesnou polohu zařízení a uloží zeměpisnou šířku, délku a údaj o přesnosti. Oprávnění k poloze si aplikace vyžádá až v tomto okamžiku. Nejde o průběžné sledování: Rodinka polohu nečte na pozadí ani opakovaně, nepoužívá geofencing a nevytváří historii polohy ani tras.",
+              "Aktuální potvrzení nebo polohu vidí samotný člen a aktivní dospělí členové téže rodiny. Ostatní děti v rodině je nevidí a jiné rodiny k nim nemají přístup.",
+              "Aby šel ukázat čitelný popisek místa, předají se načtené souřadnice přes náš server službě LocationIQ (viz Zpracovatelé) — hned po načtení, ještě než polohu s rodinou sdílíte.",
+              "Ukládá se jen aktuální stav: každé nové potvrzení předchozí nahradí a zrušením se stav smaže. Sdílená poloha vyprší nejpozději za 2 hodiny a nejpozději na konci dne rodiny, potvrzení uloženého místa nejpozději za 8 hodin a na konci dne. Po vypršení se už nikomu nezobrazí a z databáze se odstraní při dalším použití této funkce v rodině.",
+              "Pokud si sami zapnete „Dejte vědět po příchodu“, uloží se vybrané rodinné místo a čas, do kdy chcete příchod potvrdit. V ten čas vám aplikace připomene potvrzení; pokud nepřijde do 15 minut, dostanou aktivní dospělí členové rodiny obecné oznámení, že zatím nepřišlo. Polohu zařízení tato funkce nepoužívá. Uložené je vždy nejvýš jedno takové očekávání na člena: potvrzením příchodu na stejné místo nebo zrušením se smaže, nové nahradí předchozí a nejpozději 3 hodiny po zvoleném čase vyprší.",
+              "Bez připojení k internetu polohu sdílet nelze; aplikace ji neukládá do zařízení ani ji neodešle později."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Oznámení",
+            "paragraphs": [
+              "Oznámení na zamčené obrazovce nikdy neobsahují obsah zpráv, jméno odesílatele, zdravotní údaje ani názvy dokumentů. Zobrazí se pouze obecný text; podrobnosti uvidíte až po otevření aplikace.",
+              "Oznámení Bezpečného příchodu obsahují jen obecný text („Někdo z rodiny …“) — nikdy jméno, místo, čas, adresu ani souřadnice. Kdo a kde, uvidíte až po otevření přihlášené aplikace."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Analytika",
+            "paragraphs": [
+              "Analytika je ve výchozím stavu vypnutá. Dokud ji sami nezapnete, nestáhne se ani analytický nástroj a neodesílají se žádná data o používání.",
+              "Zdravotní údaje, obsah zpráv, dokumenty ani adresy se do analytiky neposílají nikdy.",
+              "Z Bezpečného příchodu se do analytiky nikdy neposílají přesné souřadnice, adresa, přesný údaj o přesnosti polohy, jména ani místa — jen obecné kategorie, například zda se polohu podařilo načíst."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Provozní diagnostika",
+            "paragraphs": [
+              "Pokud je při nasazení zapnuté sledování chyb, Sentry dostává technický záznam neočekávané chyby pro zlepšování stability a provozní diagnostiku: typ chyby, očištěný stack, verzi aplikace, platformu, stav připojení a očištěnou cestu obrazovky.",
+              "Rodinka do těchto záznamů záměrně neposílá jméno, e-mail, identifikátory uživatele, člena či rodiny ani obsah rodinných záznamů. Odstraňuje texty vlastních chyb, URL parametry, fragmenty a další nepotřebný kontext. Poskytovatel může při síťovém přenosu vidět IP adresu.",
+              "Provozní diagnostika je technicky oddělená od produktové analytiky PostHog a jejího přepínače souhlasu."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Zpracovatelé",
+            "paragraphs": [
+              "Na provozu se podílejí:"
+            ],
+            "items": [
+              "Supabase — databáze, přihlašování, úložiště souborů.",
+              "Vercel — hosting aplikace.",
+              "Resend — odesílání e-mailů k přihlášení a obnově hesla.",
+              "Proton Mail — podpora, korespondence o soukromí a žádosti subjektů údajů.",
+              "PostHog — analytika, pouze pokud ji zapnete.",
+              "Sentry — technické záznamy neočekávaných chyb, pokud je provozní diagnostika zapnutá při nasazení.",
+              "LocationIQ — napovídání adres při hledání místa a převod souřadnic načtených pro jednorázové sdílení polohy v Bezpečném příchodu na čitelný popisek místa či adresy (reverse geocoding); souřadnice se předávají přes náš server.",
+              "Google — pouze pokud si zvolíte přihlášení přes Google.",
+              "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — otevírají se jako externí odkaz, když si necháte zobrazit trasu.",
+              "Push služby prohlížečů a zařízení — doručení oznámení; jejich obsah je šifrovaný."
+            ]
+          },
+          {
+            "heading": "Platby a předplatné",
+            "paragraphs": [
+              "Předplatné Rodinka Pro na webu prodává Paddle.com jako prodejce (Merchant of Record). E-mail, platební a fakturační údaje zadáváte přímo Paddle, který je zpracovává podle svých zásad ochrany soukromí; Rodinka je nevidí.",
+              "Rodinka od Paddle dostává jen identifikátory zákazníka, objednávky a předplatného, stav plateb a refundací a zaplacené období, aby mohla Rodinku Pro zapnout celé rodině."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Mezinárodní zpracování",
+            "paragraphs": [
+              "Rodinka netvrdí, že veškeré zpracování zůstává jen v Evropské unii nebo Evropském hospodářském prostoru. Někteří poskytovatelé mohou podle své infrastruktury a provozního nastavení zpracovávat údaje i v dalších zemích. Konkrétní umístění a případné mechanismy přenosu se řídí nastavením a podmínkami daného poskytovatele."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Jak dlouho údaje uchováváme",
+            "paragraphs": [
+              "Běžný uživatelský obsah uchováváme po dobu používání Rodinky, dokud není konkrétní položka smazána nebo dokud nesmažete účet.",
+              "Některé záznamy o souhlasu, zabezpečení, moderaci a auditu mohou zůstat déle, pokud je to nutné k doložení souhlasu, ochraně služby nebo řešení bezpečnostního či moderátorského incidentu. Technické kopie a provozní záznamy poskytovatelů se řídí jejich nastavením; Rodinka pro ně neslibuje neověřenou pevnou dobu.",
+              "Bezpečný příchod uchovává jen aktuální stav s krátkou platností a bez historie — podrobnosti v části Bezpečný příchod a jednorázové sdílení polohy.",
+              "Poznámky ke členům rodiny uchováváme, dokud je autor nesmaže nebo dokud není trvale odstraněn autor, člen, kterého se poznámka týká, nebo celá rodina. Poznámky, které napsal odebraný člen nebo které se odebraného člena týkají, jsou skryté a zachované pro případné obnovení členství."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Uložení a zabezpečení",
+            "paragraphs": [
+              "Komunikace probíhá přes HTTPS. Obsah push oznámení je šifrovaný.",
+              "Pro offline provoz si aplikace ukládá kopii kalendáře, úkolů a nákupního seznamu přímo ve vašem zařízení. Přílohy dokumentů se do zařízení neukládají.",
+              "Při odhlášení se lokální kopie i uložené fotografie z tohoto zařízení odstraní."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Vaše práva a kontakt",
+            "paragraphs": [
+              "V aplikaci můžete kdykoli: zapnout nebo vypnout analytiku, upravit nebo vypnout oznámení, odvolat souhlas se zdravotními údaji a mazat jednotlivé záznamy, které jste vytvořili.",
+              "Podle okolností můžete požádat o přístup, opravu, výmaz, omezení zpracování, vznést námitku, získat kopii nebo přenositelnost údajů a odvolat souhlas tam, kde je zpracování založeno na souhlasu. Žádosti posílejte na privacy@mojerodinka.cz.",
+              "Účet smažete sami v aplikaci: Více → Účet a rodina → Smazat účet. Smazání proběhne hned po potvrzení a odhlásí vás na všech zařízeních; kopie v zálohách zmizí nejpozději do 30 dnů. Smaže se účet, váš profil v rodině, profilová fotka, nastavení, oznámení, soukromé poznámky, přání a vaše zprávy v soukromých konverzacích i s fotkami. Společné záznamy rodiny (kalendář, úkoly, nákup, vzpomínky a jejich fotky, záznamy dětí, skupinová konverzace) zůstanou ostatním členům bez vašeho jména. Jste-li posledním dospělým členem, smaže se celá rodina včetně dětských profilů a jejich přihlášení. Dětský účet smaže jen své přihlášení; profil dítěte zůstává rodičům. Zůstane jen záznam o tom, že ke smazání došlo (identifikátor účtu a čas, bez jména a e-mailu). Předplatné placené přes App Store nebo Google Play se smazáním účtu nezruší — zrušte ho v nastavení obchodu.",
+              "Hromadný export dat Rodinka v aplikaci nenabízí; žádost o kopii údajů vyřizujeme ručně.",
+              "Máte také právo podat stížnost u českého dozorového úřadu: Úřad pro ochranu osobních údajů (ÚOOÚ)."
+            ],
+            "items": []
+          }
+        ]
+      }
+    },
+    "sk": {
+      "operatorHeading": "Prevádzkovateľ a kontakt",
+      "registrationLabel": "IČO",
+      "lastUpdated": "Posledná aktualizácia: 2. 11. 2026",
+      "terms": {
+        "title": "Podmienky používania a pravidlá obsahu",
+        "intro": "Tieto podmienky opisujú, ako Rodinku používať, čo do nej nepatrí a ako funguje predplatné Rodinka Pro.",
+        "sections": [
+          {
+            "heading": "Služba a prevádzkovateľ",
+            "paragraphs": [
+              "Rodinku prevádzkuje Lukáš Sitta. Tieto podmienky platia pre používanie Rodinky na webe aj v aplikáciách. Kontakt na prevádzkovateľa nájdete na konci stránky.",
+              "Rodinka je určená na súkromnú komunikáciu vnútri jednej rodiny. Konverzácie nie sú verejné a nedá sa v nich osloviť cudzích ľudí."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Rodinka Free a Rodinka Pro",
+            "paragraphs": [
+              "Rodinku možno používať zadarmo. Rodinka Pro je dobrovoľné predplatné pre celú rodinu: pridáva 5 GB na rodinné fotografie, Moment dňa a možnosti prispôsobenia. Aktuálne ceny a rozdiel medzi verziami uvádza cenník na mojerodinka.cz/sk/pricing.",
+              "Keď Rodinka Pro skončí, dáta rodiny sa nemažú; nové fotografie nad limit verzie Free a nové Momenty dňa už pridať nepôjde."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Platby na webe cez Paddle",
+            "paragraphs": [
+              "Objednávky na webe spracúva náš online predajca Paddle.com, ktorý je pri všetkých objednávkach predajcom (Merchant of Record). Paddle prijíma platbu, vystavuje doklad, odvádza daň a vybavuje otázky k platbám aj vráteniu peňazí. Pre objednávku platia aj podmienky Paddle pre kupujúcich.",
+              "Predplatné kúpené v App Store alebo Google Play sa riadi pravidlami daného obchodu."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Obnovenie, zrušenie a vrátenie peňazí",
+            "paragraphs": [
+              "Predplatné sa automaticky obnovuje na ďalší mesiac alebo rok, kým ho nezrušíte. Zrušiť ho môžete kedykoľvek na paddle.net alebo v aplikácii vo Viac → Účet a rodina → Spravovať predplatné. Rodinka Pro potom zostane aktívna do konca zaplateného obdobia. Zmazanie účtu predplatné samo nezruší.",
+              "O vrátenie peňazí žiadate v Paddle na paddle.net podľa Zásad refundácií na mojerodinka.cz/sk/refund-policy a Paddle Refund Policy. Schválená plná refundácia platby Rodinku Pro ukončí. Vaše zákonné práva spotrebiteľa tým nie sú dotknuté."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Čo do Rodinky nepatrí",
+            "paragraphs": [
+              "Obsah, ktorý do aplikácie vložíte — správy, fotky, dokumenty aj názvy záznamov — nesmie:"
+            ],
+            "items": [
+              "porušovať zákon,",
+              "ohrozovať deti alebo ich akokoľvek zneužívať,",
+              "obsahovať vyhrážky, obťažovanie alebo zastrašovanie,",
+              "obsahovať nenávistný obsah namierený proti skupine ľudí,",
+              "zdieľať materiál, na ktorý nemáte práva."
+            ]
+          },
+          {
+            "heading": "Nahlásenie obsahu",
+            "paragraphs": [
+              "Pri každej správe nájdete v jej ponuke možnosť „Nahlásiť správu“. Hlásenie dostane prevádzkovateľ aplikácie, ktorý obsah posúdi a v prípade porušenia týchto pravidiel ho odstráni alebo znemožní k nemu prístup.",
+              "Hlásenia označené ako ohrozenie dieťaťa riešime prednostne.",
+              "Nahlásiť možno len správu z konverzácie, ktorej sa sami zúčastňujete."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Odstránenie obsahu",
+            "paragraphs": [
+              "Prevádzkovateľ môže obsah porušujúci tieto pravidlá odstrániť. Text správy už v aplikácii nie je dostupný a aplikácia prestane poskytovať prístup k jej prílohám; podkladové súbory sú následne odstránené v rámci moderovania.",
+              "Svoje vlastné správy môžete kedykoľvek zmazať sami."
+            ],
+            "items": []
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Zásady ochrany osobných údajov",
+        "intro": "Rodinka je aplikácia na organizáciu rodiny. Tento dokument popisuje, aké údaje aplikácia skutočne ukladá, prečo a kto k nim má prístup.",
+        "sections": [
+          {
+            "heading": "Kto je prevádzkovateľom údajov",
+            "paragraphs": [
+              "Prevádzkovateľom osobných údajov a prevádzkovateľom Rodinky je Lukáš Sitta. Pri otázkach a žiadostiach týkajúcich sa súkromia napíšte na privacy@mojerodinka.cz."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Aké údaje ukladáme",
+            "paragraphs": [
+              "Rodinka ukladá údaje, ktoré do nej zadáte alebo v nej vytvoríte, a technické údaje nutné na prevádzku účtu, zabezpečenie a jednotlivé funkcie:"
+            ],
+            "items": [
+              "Účet: e-mailová adresa a prihlasovacie údaje spracúvané službou Supabase Auth, prípadne prihlásenie cez Google. Rodinné a profilové tabuľky neukladajú čitateľné heslo.",
+              "Rodina: členstvo v domácnosti, roly (správca, rodič, dieťa), pozvánky.",
+              "Profily a fotografie: meno, farba, voliteľne profilová fotka a rodinná fotka.",
+              "Kalendár, úlohy a aktivity: udalosti, ich čas, miesto, účastníci a priradenia.",
+              "Zdravotné plánovanie: lekárske termíny a očkovania — dátum, typ, koho sa týkajú, sprievod a poznámka.",
+              "Dokumenty: evidencia rodinných dokumentov, ich platnosti a voliteľné prílohy.",
+              "Miesta: rodinné miesta vrátane adries a súradníc.",
+              "Bezpečný príchod: ktoré uložené rodinné miesto ste ručne potvrdili ako miesto príchodu a kedy, alebo — iba ak to sami zvolíte — jednorazovo zdieľaná presná poloha zariadenia (zemepisná šírka a dĺžka, odhad presnosti a voliteľný čitateľný popis miesta); prípadne rodinné miesto a čas, do kedy chcete príchod potvrdiť.",
+              "Jedálniček a nákupný zoznam.",
+              "Správy: text správ, reakcie a prílohy vnútri vašej rodiny.",
+              "Poznámky k členom rodiny: text, nepovinný názov a voliteľné údaje (názov a hodnota), ktoré dospelý člen zapíše k sebe alebo k inému členovi rodiny, a nastavenie, či je poznámka súkromná, alebo zdieľaná s dospelými v rodine.",
+              "Notifikácie: push endpoint prehliadača alebo zariadenia a vaše nastavenie pripomienok."
+            ]
+          },
+          {
+            "heading": "Prečo údaje spracúvame",
+            "paragraphs": [
+              "Podľa účelu používame nasledujúce právne základy:"
+            ],
+            "items": [
+              "Základný účet a rodinný organizér — poskytnutie služby, o ktorú používateľ požiadal.",
+              "Zabezpečenie, prevencia zneužitia a nevyhnutná prevádzková ochrana — oprávnený záujem na bezpečnej a spoľahlivej prevádzke.",
+              "Voliteľná analytika — súhlas.",
+              "Zdravotné údaje — výslovný súhlas.",
+              "Podpora, korešpondencia o súkromí a vybavenie žiadostí — odpoveď na žiadosť používateľa a oprávnený prevádzkový záujem."
+            ]
+          },
+          {
+            "heading": "Zdravotné údaje",
+            "paragraphs": [
+              "Zdravotné plánovacie údaje ukladáme až potom, čo na to dáte výslovný súhlas. Bez neho aplikácia zdravotný záznam neuloží — kontrolu vykonáva priamo databáza, nielen používateľské rozhranie.",
+              "Súhlas môžete kedykoľvek odvolať v Nastaveniach. Odvolanie zablokuje budúce ukladanie a úpravy, ale samo osebe už uložené záznamy automaticky nemaže. Zostanú čitateľné, kým ich nezmažete alebo nepožiadate o ich výmaz na privacy@mojerodinka.cz.",
+              "Nejde o zdravotnícku dokumentáciu ani o poskytovanie zdravotných služieb.",
+              "Ak do poznámky k členovi rodiny sami napíšete informáciu o zdraví, uložíme ju ako súčasť poznámky a použijeme ju iba na to, aby sme poznámku zobrazili vám a dospelým, s ktorými ju zdieľate. Rodinka obsah poznámok nevyhodnocuje a poznámky nie sú zdravotnou dokumentáciou."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Zdieľaný rodinný priestor a prístup",
+            "paragraphs": [
+              "Rodinka je zdieľaný rodinný priestor. Údaje, ktoré zadáte o sebe alebo o ďalších členoch, môžu vidieť ostatní členovia podľa svojej roly, nastavenia viditeľnosti a typu záznamu. Detské účty majú zdravotné záznamy v predvolenom stave skryté.",
+              "Prístup vynucuje databáza na úrovni jednotlivých riadkov a odvodzuje ho od prihláseného používateľa, nie od údajov poslaných aplikáciou.",
+              "Poznámky k členom rodiny: súkromnú poznámku vidí iba jej autor, zdieľanú môžu čítať všetci dospelí členovia rodiny. Upraviť alebo zmazať ju môže iba autor. Detské účty poznámky nevidia. Obsah poznámok sa neposiela do analytiky, prevádzkovej diagnostiky ani oznámení."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Bezpečný príchod a jednorazové zdieľanie polohy",
+            "paragraphs": [
+              "V Bezpečnom príchode môže člen rodiny ručne potvrdiť, že dorazil na niektoré z uložených rodinných miest. Tento spôsob polohu zariadenia nepoužíva.",
+              "Ak namiesto toho sami zvolíte „Zdieľať aktuálnu polohu jednorazovo“ a potvrdíte načítanie polohy, aplikácia raz načíta presnú polohu zariadenia a uloží zemepisnú šírku, dĺžku a údaj o presnosti. Povolenie na polohu si aplikácia vyžiada až v tomto okamihu. Nejde o priebežné sledovanie: Rodinka polohu nečíta na pozadí ani opakovane, nepoužíva geofencing a nevytvára históriu polohy ani trás.",
+              "Aktuálne potvrdenie alebo polohu vidí samotný člen a aktívni dospelí členovia tej istej rodiny. Ostatné deti v rodine ich nevidia a iné rodiny k nim nemajú prístup.",
+              "Aby sa dal ukázať čitateľný popis miesta, načítané súradnice sa odovzdajú cez náš server službe LocationIQ (pozri Sprostredkovatelia) — hneď po načítaní, ešte predtým, ako polohu s rodinou zdieľate.",
+              "Ukladá sa iba aktuálny stav: každé nové potvrdenie predchádzajúce nahradí a zrušením sa stav zmaže. Zdieľaná poloha vyprší najneskôr za 2 hodiny a najneskôr na konci dňa rodiny, potvrdenie uloženého miesta najneskôr za 8 hodín a na konci dňa. Po vypršaní sa už nikomu nezobrazí a z databázy sa odstráni pri ďalšom použití tejto funkcie v rodine.",
+              "Ak si sami zapnete „Dajte vedieť po príchode“, uloží sa vybrané rodinné miesto a čas, do kedy chcete príchod potvrdiť. V tom čase vám aplikácia pripomenie potvrdenie; ak nepríde do 15 minút, dostanú aktívni dospelí členovia rodiny všeobecné oznámenie, že zatiaľ neprišlo. Polohu zariadenia táto funkcia nepoužíva. Uložené je vždy najviac jedno takéto očakávanie na člena: potvrdením príchodu na rovnaké miesto alebo zrušením sa zmaže, nové nahradí predchádzajúce a najneskôr 3 hodiny po zvolenom čase vyprší.",
+              "Bez pripojenia na internet polohu zdieľať nemožno; aplikácia ju neukladá do zariadenia ani ju neodošle neskôr."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Oznámenia",
+            "paragraphs": [
+              "Oznámenia na zamknutej obrazovke nikdy neobsahujú obsah správ, meno odosielateľa, zdravotné údaje ani názvy dokumentov. Zobrazí sa iba všeobecný text; podrobnosti uvidíte až po otvorení aplikácie.",
+              "Oznámenia Bezpečného príchodu obsahujú iba všeobecný text („Niekto z rodiny …“) — nikdy meno, miesto, čas, adresu ani súradnice. Kto a kde, uvidíte až po otvorení prihlásenej aplikácie."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Analytika",
+            "paragraphs": [
+              "Analytika je v predvolenom stave vypnutá. Kým ju sami nezapnete, nestiahne sa ani analytický nástroj a neodosielajú sa žiadne údaje o používaní.",
+              "Zdravotné údaje, obsah správ, dokumenty ani adresy sa do analytiky neposielajú nikdy.",
+              "Z Bezpečného príchodu sa do analytiky nikdy neposielajú presné súradnice, adresa, presný údaj o presnosti polohy, mená ani miesta — iba všeobecné kategórie, napríklad či sa polohu podarilo načítať."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Prevádzková diagnostika",
+            "paragraphs": [
+              "Ak je pri nasadení zapnuté sledovanie chýb, Sentry dostáva technický záznam neočakávanej chyby na zlepšovanie stability a prevádzkovú diagnostiku: typ chyby, očistený stack, verziu aplikácie, platformu, stav pripojenia a očistenú cestu obrazovky.",
+              "Rodinka do týchto záznamov zámerne neposiela meno, e-mail, identifikátory používateľa, člena či rodiny ani obsah rodinných záznamov. Odstraňuje texty vlastných chýb, URL parametre, fragmenty a ďalší nepotrebný kontext. Poskytovateľ môže pri sieťovom prenose vidieť IP adresu.",
+              "Prevádzková diagnostika je technicky oddelená od produktovej analytiky PostHog a jej prepínača súhlasu."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Sprostredkovatelia",
+            "paragraphs": [
+              "Na prevádzke sa podieľajú:"
+            ],
+            "items": [
+              "Supabase — databáza, prihlasovanie, úložisko súborov.",
+              "Vercel — hosting aplikácie.",
+              "Resend — odosielanie e-mailov na prihlásenie a obnovu hesla.",
+              "Proton Mail — podpora, korešpondencia o súkromí a žiadosti dotknutých osôb.",
+              "PostHog — analytika, iba ak ju zapnete.",
+              "Sentry — technické záznamy neočakávaných chýb, ak je prevádzková diagnostika zapnutá pri nasadení.",
+              "LocationIQ — napovedanie adries pri hľadaní miesta a prevod súradníc načítaných na jednorazové zdieľanie polohy v Bezpečnom príchode na čitateľný popis miesta či adresy (reverse geocoding); súradnice sa odovzdávajú cez náš server.",
+              "Google — iba ak si zvolíte prihlásenie cez Google.",
+              "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — otvárajú sa ako externý odkaz, keď si necháte zobraziť trasu.",
+              "Push služby prehliadačov a zariadení — doručenie oznámení; ich obsah je šifrovaný."
+            ]
+          },
+          {
+            "heading": "Platby a predplatné",
+            "paragraphs": [
+              "Predplatné Rodinka Pro na webe predáva Paddle.com ako predajca (Merchant of Record). E-mail, platobné a fakturačné údaje zadávate priamo Paddle, ktorý ich spracúva podľa svojich zásad ochrany súkromia; Rodinka ich nevidí.",
+              "Rodinka od Paddle dostáva iba identifikátory zákazníka, objednávky a predplatného, stav platieb a refundácií a zaplatené obdobie, aby mohla Rodinku Pro zapnúť celej rodine."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Medzinárodné spracúvanie",
+            "paragraphs": [
+              "Rodinka netvrdí, že všetko spracúvanie zostáva len v Európskej únii alebo Európskom hospodárskom priestore. Niektorí poskytovatelia môžu podľa svojej infraštruktúry a prevádzkového nastavenia spracúvať údaje aj v ďalších krajinách. Konkrétne umiestnenie a prípadné mechanizmy prenosu sa riadia nastavením a podmienkami daného poskytovateľa."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Ako dlho údaje uchovávame",
+            "paragraphs": [
+              "Bežný používateľský obsah uchovávame počas používania Rodinky, kým nie je konkrétna položka zmazaná alebo kým nezmažete účet.",
+              "Niektoré záznamy o súhlase, zabezpečení, moderovaní a audite môžu zostať dlhšie, ak je to nutné na preukázanie súhlasu, ochranu služby alebo riešenie bezpečnostného či moderátorského incidentu. Technické kópie a prevádzkové záznamy poskytovateľov sa riadia ich nastavením; Rodinka pre ne nesľubuje neoverenú pevnú dobu.",
+              "Bezpečný príchod uchováva iba aktuálny stav s krátkou platnosťou a bez histórie — podrobnosti v časti Bezpečný príchod a jednorazové zdieľanie polohy.",
+              "Poznámky k členom rodiny uchovávame, kým ich autor nezmaže alebo kým nie je natrvalo odstránený autor, člen, ktorého sa poznámka týka, alebo celá rodina. Poznámky, ktoré napísal odobraný člen alebo ktoré sa odobraného člena týkajú, sú skryté a zachované pre prípadné obnovenie členstva."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Uloženie a zabezpečenie",
+            "paragraphs": [
+              "Komunikácia prebieha cez HTTPS. Obsah push oznámení je šifrovaný.",
+              "Na offline prevádzku si aplikácia ukladá kópiu kalendára, úloh a nákupného zoznamu priamo vo vašom zariadení. Prílohy dokumentov sa do zariadenia neukladajú.",
+              "Pri odhlásení sa lokálna kópia aj uložené fotografie z tohto zariadenia odstránia."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Vaše práva a kontakt",
+            "paragraphs": [
+              "V aplikácii môžete kedykoľvek: zapnúť alebo vypnúť analytiku, upraviť alebo vypnúť oznámenia, odvolať súhlas so zdravotnými údajmi a mazať jednotlivé záznamy, ktoré ste vytvorili.",
+              "Podľa okolností môžete požiadať o prístup, opravu, výmaz, obmedzenie spracúvania, vzniesť námietku, získať kópiu alebo prenosnosť údajov a odvolať súhlas tam, kde je spracúvanie založené na súhlase. Žiadosti posielajte na privacy@mojerodinka.cz.",
+              "Účet zmažete sami v aplikácii: Viac → Účet a rodina → Zmazať účet. Zmazanie prebehne hneď po potvrdení a odhlási vás na všetkých zariadeniach; kópie v zálohách zmiznú najneskôr do 30 dní. Zmaže sa účet, váš profil v rodine, profilová fotka, nastavenia, oznámenia, súkromné poznámky, priania a vaše správy v súkromných konverzáciách aj s fotkami. Spoločné záznamy rodiny (kalendár, úlohy, nákup, spomienky a ich fotky, záznamy detí, skupinová konverzácia) zostanú ostatným členom bez vášho mena. Ak ste posledným dospelým členom, zmaže sa celá rodina vrátane detských profilov a ich prihlásení. Detský účet zmaže iba svoje prihlásenie; profil dieťaťa zostáva rodičom. Zostane iba záznam o tom, že k zmazaniu došlo (identifikátor účtu a čas, bez mena a e-mailu). Predplatné platené cez App Store alebo Google Play sa zmazaním účtu nezruší — zrušte ho v nastaveniach obchodu.",
+              "Hromadný export údajov Rodinka v aplikácii neponúka; žiadosť o kópiu údajov vybavujeme ručne.",
+              "Máte tiež právo podať sťažnosť u českého dozorného úradu: Úřad pro ochranu osobních údajů (ÚOOÚ)."
+            ],
+            "items": []
+          }
+        ]
+      }
+    },
+    "en": {
+      "operatorHeading": "Operator and contact",
+      "registrationLabel": "Company number",
+      "lastUpdated": "Last updated: 2 November 2026",
+      "terms": {
+        "title": "Terms of use and content guidelines",
+        "intro": "These terms describe how to use Rodinka, what does not belong in it and how the Rodinka Pro subscription works.",
+        "sections": [
+          {
+            "heading": "The service and its operator",
+            "paragraphs": [
+              "Rodinka is operated by Lukáš Sitta. These terms apply to using Rodinka on the web and in the apps. The operator’s contact details are at the end of this page.",
+              "Rodinka is for private communication inside a single family. Conversations are not public and you cannot contact strangers through them."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Rodinka Free and Rodinka Pro",
+            "paragraphs": [
+              "Rodinka can be used for free. Rodinka Pro is an optional subscription for the whole family: it adds 5 GB for family photos, Moment of the Day and personalisation. Current prices and the difference between the plans are on the pricing page at mojerodinka.cz/en/pricing.",
+              "When Rodinka Pro ends, family data is not deleted; you just cannot add new photos beyond the Free limit or new Moments of the Day."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Payments on the web through Paddle",
+            "paragraphs": [
+              "Our order process on the web is conducted by our online reseller Paddle.com. Paddle.com is the merchant of record for all our orders. Paddle takes the payment, issues the receipt, handles tax and answers payment and refund enquiries. Paddle’s buyer terms also apply to your order.",
+              "A subscription bought through the App Store or Google Play follows that store’s rules."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Renewal, cancellation and refunds",
+            "paragraphs": [
+              "Your subscription renews automatically for another month or year until you cancel it. You can cancel at any time at paddle.net or in the app under More → Account and family → Manage subscription. Rodinka Pro then stays active until the end of the paid period. Deleting your account does not cancel the subscription by itself.",
+              "You request refunds from Paddle at paddle.net under the Refund policy at mojerodinka.cz/en/refund-policy and the Paddle Refund Policy. An approved full refund of a payment ends Rodinka Pro. Your statutory consumer rights are not affected."
+            ],
+            "items": []
+          },
+          {
+            "heading": "What does not belong in Rodinka",
+            "paragraphs": [
+              "Content you put into the app — messages, photos, documents and record titles — must not:"
+            ],
+            "items": [
+              "break the law,",
+              "endanger or exploit children in any way,",
+              "contain threats, harassment or intimidation,",
+              "contain hateful content directed at a group of people,",
+              "share material you do not have the rights to."
+            ]
+          },
+          {
+            "heading": "Reporting content",
+            "paragraphs": [
+              "Every message has a \"Report message\" option in its menu. Reports go to the app operator, who reviews the content and removes or disables it if it breaks these guidelines.",
+              "Reports marked as child safety are handled with priority.",
+              "You can only report a message from a conversation you are part of."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Content removal",
+            "paragraphs": [
+              "The operator may remove content that breaks these guidelines. The message text is no longer available in the app and the app stops providing access to its attachments; the underlying stored files are subsequently removed as part of moderation.",
+              "You can always delete your own messages yourself."
+            ],
+            "items": []
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Privacy policy",
+        "intro": "Rodinka is a family organiser. This document describes what the app actually stores, why, and who can see it.",
+        "sections": [
+          {
+            "heading": "Who controls your data",
+            "paragraphs": [
+              "The controller of personal data and operator of Rodinka is Lukáš Sitta. For privacy questions and requests, email privacy@mojerodinka.cz."
+            ],
+            "items": []
+          },
+          {
+            "heading": "What we store",
+            "paragraphs": [
+              "Rodinka stores data you enter or create, together with technical data needed to run the account securely and provide its features:"
+            ],
+            "items": [
+              "Account: email address and authentication credentials handled by Supabase Auth, or Google sign-in if you choose it. Family and profile tables do not store a readable password.",
+              "Family: household membership, roles (admin, parent, child), invitations.",
+              "Profiles and photos: name, colour, optionally a profile photo and a family photo.",
+              "Calendar, tasks and activities: events, their time, place, participants and assignments.",
+              "Health planning: medical appointments and vaccinations — date, type, who they concern, who accompanies, and any note.",
+              "Documents: family document records, their expiry dates and optional attachments.",
+              "Places: family places including addresses and coordinates.",
+              "Safe arrival: which saved family place you confirmed arriving at, and when — or, only if you choose it, a one-time snapshot of your device’s precise location (latitude, longitude, an accuracy estimate and an optional readable place label); and, if you set one, the family place and time by which you mean to confirm your arrival.",
+              "Meal plans and the shopping list.",
+              "Messages: message text, reactions and attachments within your family.",
+              "Notes about family members: text, an optional title and optional details (a name and a value) that an adult member writes about themselves or another family member, and whether the note is private or shared with the adults in the family.",
+              "Notifications: your browser or device push endpoint and your reminder settings."
+            ]
+          },
+          {
+            "heading": "Why we process data",
+            "paragraphs": [
+              "We use the following legal bases according to the purpose:"
+            ],
+            "items": [
+              "Core account and family-organiser functions — providing the service the user requested.",
+              "Security, abuse prevention and necessary operational protection — legitimate interest in running a secure and reliable service.",
+              "Optional analytics — consent.",
+              "Health information — express consent.",
+              "Support, privacy correspondence and requests — responding to the user request and legitimate operational interest."
+            ]
+          },
+          {
+            "heading": "Health information",
+            "paragraphs": [
+              "Health planning details are stored only after you give express consent. Without it the app will not store a health record — the check is enforced by the database, not only by the interface.",
+              "You can withdraw consent at any time in Settings. Withdrawing blocks future storing and editing, but does not automatically erase records already stored. They remain readable until you delete them or request deletion at privacy@mojerodinka.cz.",
+              "This is not medical documentation and not the provision of healthcare services.",
+              "If you choose to write health information into a note about a family member, we store it as part of that note and use it only to show the note to you and to the adults you share it with. Rodinka does not evaluate the content of notes, and notes are not medical documentation."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Shared family space and access",
+            "paragraphs": [
+              "Rodinka is a shared family space. Information you enter about yourself or other members may be visible to other family members according to their role, the visibility setting and the record type. Children’s accounts cannot see health records by default.",
+              "Access is enforced by the database at row level and derived from the signed-in user, never from values sent by the app.",
+              "Notes about family members: only the author can see a private note; every adult member of the family can read a shared one. Only the author can edit or delete it. Children’s accounts cannot see notes. The content of notes is never sent to analytics, operational diagnostics or notifications."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Safe arrival and one-time location sharing",
+            "paragraphs": [
+              "In Safe arrival, a family member can confirm by hand that they have arrived at one of the family’s saved places. This way of confirming does not use the device’s location.",
+              "If you instead choose “Share my current location once” and confirm reading it, the app reads your device’s precise location once and stores the latitude, longitude and an accuracy estimate. The app requests location permission only at that moment. This is not ongoing tracking: Rodinka does not read your location in the background or repeatedly, does not use geofencing and keeps no location or route history.",
+              "The current confirmation or location is visible to the member themselves and to the active adult members of the same family. Other children in the family cannot see it, and other families have no access to it.",
+              "To show a readable place label, the coordinates are passed through our server to LocationIQ (see Processors) right after they are read, before you share them with your family.",
+              "Only the current state is kept: each new confirmation replaces the previous one, and cancelling it deletes it. A shared location expires after 2 hours at most and at the end of the family’s day at the latest; a saved-place confirmation after 8 hours at most and at the end of the day. Once expired it is no longer shown to anyone, and it is removed from the database the next time the feature is used in the family.",
+              "If you switch on “Check in when you arrive” yourself, the chosen family place and the time by which you mean to confirm your arrival are stored. At that time the app reminds you to confirm; if no confirmation comes within 15 minutes, the family’s active adult members get a generic notification that it has not come yet. This does not use your device’s location. At most one such expectation is kept per member: confirming your arrival at the same place or cancelling deletes it, a new one replaces the previous one, and it expires 3 hours after the chosen time at the latest.",
+              "Without an internet connection the location cannot be shared; the app neither stores it on the device nor sends it later."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Notifications",
+            "paragraphs": [
+              "Lock-screen notifications never contain message content, sender names, health details or document names. Only generic wording is shown; the details appear once you open the app.",
+              "Safe arrival notifications carry only generic wording (“Someone in your family …”) — never a name, place, time, address or coordinates. Who and where is shown only once you open the signed-in app."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Analytics",
+            "paragraphs": [
+              "Analytics is off by default. Until you turn it on, the analytics tool is not even downloaded and no usage data is sent.",
+              "Health data, message content, documents and addresses are never sent to analytics.",
+              "Safe arrival never sends precise coordinates, addresses, the exact accuracy of a location, names or places to analytics — only general categories, such as whether a location could be read."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Operational diagnostics",
+            "paragraphs": [
+              "When error monitoring is enabled for a deployment, Sentry receives a technical record of an unexpected error to improve stability and support operational diagnostics: error type, sanitized stack, application release, platform, connectivity state and sanitized screen path.",
+              "Rodinka deliberately excludes names, email addresses, user, member and family identifiers, and the contents of family records from these reports. It removes custom error messages, URL queries and fragments, and other unnecessary context. The provider may see an IP address during network transport.",
+              "Operational diagnostics are technically separate from PostHog product analytics and its consent switch."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Processors",
+            "paragraphs": [
+              "The following services are involved in running Rodinka:"
+            ],
+            "items": [
+              "Supabase — database, authentication, file storage.",
+              "Vercel — application hosting.",
+              "Resend — sending sign-in and password reset emails.",
+              "Proton Mail — support and privacy correspondence, including data-subject requests.",
+              "PostHog — analytics, only if you enable it.",
+              "Sentry — technical records of unexpected errors when operational diagnostics are enabled for the deployment.",
+              "LocationIQ — address suggestions when searching for a place, and turning the coordinates read for a one-time Safe arrival location share into a readable place or address label (reverse geocoding); the coordinates are passed through our server.",
+              "Google — only if you choose Google sign-in.",
+              "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — opened as an external link when you ask for directions.",
+              "Browser and device push services — notification delivery; the payload is encrypted."
+            ]
+          },
+          {
+            "heading": "Payments and subscriptions",
+            "paragraphs": [
+              "On the web, the Rodinka Pro subscription is sold by Paddle.com as merchant of record. You enter your email, payment and billing details directly with Paddle, which processes them under its own privacy policy; Rodinka never sees them.",
+              "Rodinka receives from Paddle only customer, order and subscription identifiers, payment and refund status and the paid period, so it can switch Rodinka Pro on for the whole family."
+            ],
+            "items": []
+          },
+          {
+            "heading": "International processing",
+            "paragraphs": [
+              "Rodinka does not claim that all processing remains only in the European Union or European Economic Area. Depending on provider infrastructure and deployment settings, some providers may process data in other countries. The exact locations and any transfer mechanisms depend on the relevant provider configuration and terms."
+            ],
+            "items": []
+          },
+          {
+            "heading": "How long we keep data",
+            "paragraphs": [
+              "Ordinary user content is kept while Rodinka is used, until the item is deleted or you delete your account.",
+              "Some consent, security, moderation and audit records may remain longer where necessary to document consent, protect the service or handle a security or moderation incident. Provider-side technical copies and operational logs follow provider settings; Rodinka does not promise an unverified fixed period for them.",
+              "Safe arrival keeps only a short-lived current state and no history — see Safe arrival and one-time location sharing above.",
+              "Notes about family members are kept until the author deletes them, or until the author, the member the note is about or the whole family is permanently removed. Notes written by or about a member who has been removed from the family are hidden and kept in case the membership is restored."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Storage and security",
+            "paragraphs": [
+              "All communication uses HTTPS. Push notification payloads are encrypted.",
+              "For offline use the app keeps a copy of your calendar, tasks and shopping list on your device. Document attachments are never stored on the device.",
+              "Signing out removes the local copy and any cached photos from that device."
+            ],
+            "items": []
+          },
+          {
+            "heading": "Your rights and contact",
+            "paragraphs": [
+              "In the app you can at any time: turn analytics on or off, adjust or disable notifications, withdraw health data consent, and delete individual records you created.",
+              "Depending on the circumstances, you may request access, correction, deletion, restriction, object to processing, receive a copy or portability of your data, and withdraw consent where processing is based on consent. Send requests to privacy@mojerodinka.cz.",
+              "You can delete your account yourself in the app: More → Account and family → Delete account. Deletion happens as soon as you confirm and signs you out on every device; copies in backups disappear within 30 days. It deletes the account, your family profile, profile photo, settings, notifications, private notes, wishes and your messages in private conversations, including their photos. Shared family records (calendar, tasks, shopping, memories and their photos, children’s records, the family group chat) stay with the other members, without your name. If you are the last adult in the family, the whole family is deleted, including the children’s profiles and their sign-ins. A child’s account deletes only its own sign-in; the child’s profile stays with the parents. Only a record that the deletion took place is kept (the account identifier and time, without your name or e-mail). A subscription paid through the App Store or Google Play is not cancelled by deleting your account — cancel it in the store’s settings.",
+              "Rodinka does not offer a bulk data export inside the app; requests for a copy of your data are handled manually.",
+              "You may also lodge a complaint with the Czech supervisory authority, the Office for Personal Data Protection (Úřad pro ochranu osobních údajů, ÚOOÚ)."
+            ],
+            "items": []
+          }
+        ]
+      }
+    }
+  }
+}
