@@ -406,7 +406,7 @@ i.petal,i.avatar{font-style:normal}
 
 /* ------------------------------------------------------------------ footer */
 .site-footer{padding:52px 0 40px;border-top:1px solid var(--border-subtle);background:var(--surface-paper)}
-.site-footer-inner{width:var(--page);margin:auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px;align-items:start}
+.site-footer-inner{width:var(--page);margin:auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:48px;align-items:start}
 .footer-brand p{margin:12px 0 0;color:var(--text-muted);font-size:14px}
 .footer-brand .serif{display:block;margin-top:10px;color:var(--interactive-primary);font-size:19px}
 .footer-social{margin-top:24px}
@@ -536,6 +536,33 @@ html:not(.js) .series-list{display:none}
 .answer h3{margin:0;font-weight:800;font-size:19px;line-height:1.4}
 .answer p{margin:0;color:var(--text-muted);font-size:16px;line-height:1.75}
 .related-section{padding-top:56px;border-top:1px solid var(--border-subtle)}
+/* ------------------------------------------------------------------ pricing and refund policy */
+.plans-section{padding-bottom:40px}
+.plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px;max-width:1000px}
+.plan-card{padding:30px;display:flex;flex-direction:column}
+.plan-card--pro{border-color:var(--interactive-primary-border)}
+.plan-card h3{margin:0 0 14px;font-weight:800;font-size:22px;line-height:1.3}
+.plan-price{margin:0;display:flex;align-items:baseline;flex-wrap:wrap;gap:8px}
+.plan-price strong{font-weight:800;font-size:34px;line-height:1.15;letter-spacing:-.02em}
+.plan-price span{color:var(--text-muted);font-size:15px;font-weight:700}
+.plan-price--alt{margin-top:4px}
+.plan-price--alt strong{font-size:24px}
+.plan-text{margin:12px 0 0;color:var(--text-muted);font-size:15px;line-height:1.6}
+.plan-features{margin:20px 0 0;padding-left:20px;display:grid;gap:10px;font-size:15px;line-height:1.55}
+.plan-features li::marker{color:var(--interactive-primary)}
+.plan-action{margin-top:auto;padding-top:24px}
+.plan-action small{display:block;margin-top:10px;color:var(--text-muted);font-size:13px;line-height:1.5}
+.plan-note{max-width:780px;margin:20px 0 0;color:var(--text-muted);font-size:14px;line-height:1.65}
+.answer-body{display:grid;gap:12px}
+.info-support{margin:24px 0 0}
+.legal-links{margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 32px;list-style:none;max-width:780px}
+.legal-links a{min-height:44px;display:inline-flex;align-items:center;gap:6px;color:var(--interactive-primary);font-weight:700}
+.legal-links a:hover{text-decoration:underline;text-underline-offset:3px}
+.legal-updated{margin:20px 0 0;color:var(--text-muted);font-size:13px}
+.legal-list{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--text-muted);font-size:16px;line-height:1.7}
+.legal-list li::marker{color:var(--interactive-primary)}
+.legal-page .answer-body a{color:var(--interactive-primary);font-weight:700}
+.topic-hero .legal-updated{margin-top:16px}
 .related-section>h2{margin-bottom:32px}
 .related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
 .related-grid a{height:100%;display:block;padding:22px;border:1px solid var(--border-subtle);border-radius:var(--radius-large);background:var(--surface-paper);transition:border-color var(--motion-fast) var(--motion-ease)}
@@ -596,7 +623,9 @@ html:not(.js) .series-list{display:none}
   .hero-visual::after{transform:translate(-120px,150px) rotate(-14deg)}
   .direct-answer,.topic-page .direct-answer{margin-top:-24px}
   .proof-section,.proof-section--reverse{padding:28px 20px;border-radius:24px;gap:28px}
-  .focus-grid,.layer-grid,.scenario-grid,.related-grid,.directory-list,.trust-grid,.mini-journey{grid-template-columns:1fr}
+  .focus-grid,.layer-grid,.scenario-grid,.related-grid,.directory-list,.trust-grid,.mini-journey,.plan-grid,.legal-links{grid-template-columns:1fr}
+  .plan-card{padding:24px 20px}
+  .plan-action .button{width:100%;white-space:normal}
   .layer-card{padding:22px;grid-template-columns:1fr;gap:14px}
   .circle-cards{grid-template-columns:1fr}
   .pro-card{padding:28px 20px;grid-template-columns:1fr;gap:20px}
