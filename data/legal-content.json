@@ -1,16 +1,22 @@
 {
-  "source": "iLoopak/Rodinka src/features/legal @ bdbbb65",
+  "source": "iLoopak/Rodinka src/features/legal @ 6ac50011",
   "operator": {
     "legalName": "Lukáš Sitta",
-    "address": "",
-    "registrationNumber": "",
-    "contactEmail": "privacy@mojerodinka.cz"
+    "address": "Podlesí I 5311, 760 05 Zlín",
+    "registrationNumber": "08328455",
+    "contactEmail": "privacy@mojerodinka.cz",
+    "contactPhone": "777 980 293",
+    "businessRegister": "Magistrát města Zlína",
+    "vatRegistered": false
   },
   "languages": {
     "cs": {
       "operatorHeading": "Provozovatel a kontakt",
       "registrationLabel": "IČO",
-      "lastUpdated": "Poslední aktualizace: 2. 11. 2026",
+      "businessRegisterLabel": "OSVČ zapsaná v živnostenském rejstříku; evidující úřad",
+      "phoneLabel": "Telefon",
+      "notVatRegistered": "Provozovatel není plátcem DPH.",
+      "lastUpdated": "Poslední aktualizace: 5. 11. 2026",
       "terms": {
         "title": "Podmínky používání a pravidla obsahu",
         "intro": "Tyto podmínky popisují, jak Rodinku používat, co do ní nepatří a jak funguje předplatné Rodinka Pro.",
@@ -18,34 +24,181 @@
           {
             "heading": "Služba a provozovatel",
             "paragraphs": [
-              "Rodinku provozuje Lukáš Sitta. Tyto podmínky platí pro používání Rodinky na webu i v aplikacích. Kontakt na provozovatele najdete na konci stránky.",
-              "Rodinka je určená pro soukromou komunikaci uvnitř jedné rodiny. Konverzace nejsou veřejné a nelze v nich oslovit cizí lidi."
+              "Rodinku poskytuje Lukáš Sitta, OSVČ. Úplné identifikační a kontaktní údaje jsou na konci stránky. Tyto podmínky se vztahují na webovou i nativní aplikaci.",
+              "Rodinka je průběžně poskytovaná digitální služba pro organizaci rodiny: sdílený kalendář, úkoly, nákupy, plánování, soukromé zprávy a rodinné záznamy. Rodinný prostor není veřejná sociální síť. Zdravotní funkce slouží k plánování, neposkytují zdravotní péči.",
+              "Potřebujete podporovaný aktuální prohlížeč nebo kompatibilní aplikaci pro Android či iOS a internetové připojení pro účet a synchronizaci. Kalendář, úkoly a nákupy mají omezený offline režim; nákup, ověření předplatného a některé další funkce vyžadují připojení. Instalujte dostupné aktualizace potřebné pro bezpečnost a funkčnost služby."
             ],
-            "items": []
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Účet a vznik smluvního vztahu",
+            "paragraphs": [
+              "Založením účtu nebo přijetím pozvánky žádáte provozovatele o zpřístupnění Rodinky; vztah pro používání bezplatné služby vzniká zpřístupněním účtu. Dětské profily a spravované dětské účty zřizuje dospělý člen rodiny. Placené Pro objednává dospělý.",
+              "Registrace, pozvánka ani zobrazení této stránky nejsou objednávkou placeného Pro. Placené předplatné vzniká až samostatným potvrzením objednávky v dostupném prodejním kanálu a jejím přijetím podle pravidel tohoto kanálu. Před potvrzením musí být uveden produkt, celková cena včetně příslušných daní, období a pravidla obnovování; doklad a potvrzení poskytuje daný kanál."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "Rodinka Free a Rodinka Pro",
             "paragraphs": [
-              "Rodinku lze používat zdarma. Rodinka Pro je dobrovolné předplatné pro celou rodinu: přidává 5 GB pro rodinné fotografie, Moment dne a možnosti přizpůsobení. Aktuální ceny a rozdíl mezi verzemi uvádí ceník na mojerodinka.cz/pricing.",
-              "Když Rodinka Pro skončí, data rodiny se nemažou; nové fotografie nad limit verze Free a nové Momenty dne už přidat nepůjde."
+              "Free je bezplatný základní rodinný organizér s úložištěm 200 MiB. Pro rozšiřuje úložiště na 5 GiB a přidává Moment dne, personalizaci a další funkce označené Pro, například rodinnou ročenku, Rodinný týden a vytváření scénářů a příprav. Pro se vztahuje na konkrétní rodinu; další rodina pod stejným účtem ho automaticky nezískává.",
+              "Po skončení Pro se rodinné záznamy a fotografie jen kvůli skončení předplatného automaticky nemažou. Platí limit Free, proto nad něj nelze přidávat nové soubory; nové Momenty dne a funkce vyžadující aktivní Pro nejsou dostupné. Existující přípravy lze dál číst, upravovat a dokončovat. Již uložené PDF ročenky se nemění. Smazání účtu nebo rodiny má samostatná pravidla níže a v zásadách soukromí."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
+            "id": "availability",
+            "heading": "Dostupnost, délka a obnovování Pro",
+            "paragraphs": [
+              "Nové nákupy Pro se zavádějí postupně. Popis prodejního kanálu na této stránce neznamená, že je právě spuštěný. Nákup je dostupný jen tehdy, když aplikace zobrazí konkrétní nabídku a příslušný kanál umožní její potvrzení. Pokud nabídka není dostupná, samotné tyto podmínky nákup neumožňují.",
+              "Pokud je nabídnuto předplatné, zvolíte měsíční nebo roční období za cenu uvedenou před nákupem. Opakuje se a automaticky se účtuje další období, dokud nevypnete obnovování. Zrušení obnovování ponechává přístup do konce zaplaceného období; běžné zrušení samo nevrací již zaplacenou cenu. Odstoupení, reklamace a případné vrácení peněz jsou samostatná práva.",
+              "Odinstalování aplikace ani smazání účtu předplatné nezruší. Předplatné spravujte ve stejném kanálu a pod účtem, kterým bylo zakoupeno. Technická podpora Rodinky vám pomůže určit kanál; nemusíte kupovat Pro podruhé."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "paddle",
             "heading": "Platby na webu přes Paddle",
             "paragraphs": [
-              "Objednávky na webu zpracovává náš online prodejce Paddle.com, který je u všech objednávek prodejcem (Merchant of Record). Paddle přijímá platbu, vystavuje doklad, odvádí daň a vyřizuje dotazy k platbám i vrácení peněz. Pro objednávku platí také podmínky Paddle pro kupující.",
-              "Předplatné koupené v App Store nebo Google Play se řídí pravidly daného obchodu."
+              "Pokud je spuštěn webový nákup přes Paddle.com, je Paddle pro tuto objednávku prodejcem (Merchant of Record), ne jen platební bránou. Přijímá platbu, vystavuje doklad a řeší příslušné daně a platební refundace. Poskytovatelem aplikace zůstává provozovatel Rodinky. Konkrétní smluvní subjekt Paddle uvádí objednávka a doklad; platí také podmínky Paddle pro kupující.",
+              "Existující předplatné Paddle zrušíte v zákaznickém portálu přes paddle.net nebo přes dostupnou správu předplatného v účtu Rodinky. O vrácení peněz požádejte Paddle; lze kontaktovat i podporu Rodinky. Schválená plná refundace příslušné platby může ukončit Pro, pokud rodina nemá jiný aktivní nárok. Zákonná práva mají přednost před obchodními refund pravidly."
             ],
-            "items": []
+            "items": [],
+            "links": [
+              {
+                "label": "Podpora plateb a správa Paddle",
+                "href": "https://paddle.net/"
+              },
+              {
+                "label": "Podmínky Paddle pro kupující",
+                "href": "https://www.paddle.com/legal/checkout-buyer-terms"
+              }
+            ]
           },
           {
-            "heading": "Obnovení, zrušení a vrácení peněz",
+            "id": "google-play",
+            "heading": "Platby přes Google Play",
             "paragraphs": [
-              "Předplatné se automaticky obnovuje na další měsíc nebo rok, dokud ho nezrušíte. Zrušit ho můžete kdykoli na paddle.net nebo v aplikaci ve Více → Účet a rodina → Spravovat předplatné. Rodinka Pro pak zůstane aktivní do konce zaplaceného období. Smazání účtu předplatné samo nezruší.",
-              "O vrácení peněz žádáte u Paddle na paddle.net podle Zásad refundací na mojerodinka.cz/refund-policy a Paddle Refund Policy. Schválená plná refundace platby Rodinku Pro ukončí. Vaše zákonná práva spotřebitele tím nejsou dotčena."
+              "Pokud aplikace pro Android nabízí nákup Pro, používá Google Play Billing. Google Play zajišťuje objednání, účtování a správu předplatného; poskytovatelem Rodinky je její provozovatel. Prodávajícího pro konkrétní transakci určují podmínky obchodu, informace před nákupem a doklad. Google může podle země vystupovat jako prodávající nebo jako zástupce poskytovatele; netvrdíme, že je vždy prodávajícím samotné služby.",
+              "Obnovování zrušíte v Google Play → Platby a předplatná → Předplatná, pod účtem použitým při nákupu. Lze využít i dostupnou správu předplatného v účtu Rodinky. O refundaci požádejte postupem Google Play; s vadou služby nebo uplatněním zákonných práv se můžete obrátit také na provozovatele Rodinky."
             ],
-            "items": []
+            "items": [],
+            "links": [
+              {
+                "label": "Zrušení předplatného v Google Play",
+                "href": "https://support.google.com/googleplay/answer/7018481"
+              },
+              {
+                "label": "Vrácení peněz v Google Play",
+                "href": "https://support.google.com/googleplay/answer/2479637"
+              }
+            ]
+          },
+          {
+            "id": "app-store",
+            "heading": "Platby přes App Store",
+            "paragraphs": [
+              "Pokud aplikace pro iOS nabízí nákup Pro, používá nákup v aplikaci přes Apple App Store. Apple zajišťuje účtování a správu předplatného; poskytovatelem aplikace je provozovatel Rodinky. Smluvní subjekt a roli Apple pro danou transakci určují podmínky Apple, informace před nákupem a doklad. Pro používání iOS aplikace platí také licence uvedená u aplikace v App Store.",
+              "Obnovování zrušíte v Nastavení zařízení → účet Apple → Předplatná, pod účtem použitým při nákupu. Lze využít i dostupnou správu předplatného v účtu Rodinky. O refundaci požádejte Apple přes reportaproblem.apple.com. S vadou aplikace nebo uplatněním zákonných práv vám pomůže i provozovatel Rodinky."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Zrušení předplatného Apple",
+                "href": "https://support.apple.com/118428"
+              },
+              {
+                "label": "Vrácení peněz Apple",
+                "href": "https://support.apple.com/118223"
+              }
+            ]
+          },
+          {
+            "id": "legacy-bmc",
+            "heading": "Dřívější předplatné Buy Me a Coffee",
+            "paragraphs": [
+              "Buy Me a Coffee (BMC) je pouze dřívější kanál pro existující předplatitele. Nové členství přes BMC Rodinka nenabízí. Existující předplatné může pokračovat a obnovovat se podle svého sjednaného období; BMC zajišťuje členskou a platební infrastrukturu, poskytovatelem služby zůstává provozovatel Rodinky.",
+              "Existující členství spravujte po přihlášení do účtu BMC v části Memberships nebo přes dostupné tlačítko správy v účtu Rodinky na webu. Zrušením zastavíte další obnovu, zaplacené období tím běžně nezaniká. Reklamaci nebo žádost o refundaci lze poslat provozovateli na kontakty níže; platební postup se řídí také pravidly BMC. Nejde o nabídku nového nákupu."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal",
+            "heading": "Zákonné odstoupení a vrácení peněz",
+            "paragraphs": [
+              "Spotřebitel má při uzavření smlouvy na dálku zpravidla právo odstoupit bez udání důvodu do 14 dnů od jejího uzavření. Samotná aktivace Pro ani použití aplikace automaticky neznamená ztrátu tohoto práva. Obchodní pravidla obchodu nemohou omezit vaše zákonná práva.",
+              "U průběžně poskytované digitální služby může předčasné zahájení vyžadovat vaši výslovnou žádost a řádné poučení. Poměrnou úhradu již poskytnuté služby při odstoupení lze požadovat jen při splnění zákonných podmínek. Výjimka pro digitální obsah nedodaný na hmotném nosiči vyžaduje zejména předchozí výslovný souhlas, poučení a potvrzení; tyto podmínky samy takový souhlas ani žádost nenahrazují.",
+              "Rozhodnutí odstoupit zašlete jednoznačným prohlášením na e-mail nebo poštovní adresu provozovatele níže, případně prodávajícímu uvedenému na dokladu. Uveďte účet, datum a identifikaci objednávky a prodejní kanál. Stačí prohlášení odeslat ve lhůtě. Podpora Rodinky pomůže s předáním platebního požadavku správnému subjektu. Při platném zákonném odstoupení se platby vracejí bez zbytečného odkladu, nejpozději do 14 dnů od oznámení odstoupení, stejným platebním prostředkem, pokud se nedohodnete jinak; případná zákonná poměrná úhrada tím není dotčena."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal-model",
+            "heading": "Vzor oznámení o odstoupení",
+            "paragraphs": [
+              "Tento vzor je dobrovolný. Adresát: provozovatel uvedený na konci stránky, případně prodávající z dokladu. Oznamuji, že odstupuji od smlouvy o předplatném Rodinka Pro. Datum objednání: …; číslo objednávky a kanál nákupu: …; jméno a adresa spotřebitele: …; e-mail účtu: …; datum oznámení: …; podpis spotřebitele pouze při zaslání na papíře."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "defects",
+            "heading": "Vady digitální služby a aktualizace",
+            "paragraphs": [
+              "Máte zákonná práva z vadného plnění. Služba musí odpovídat smlouvě a zákonným požadavkům na funkčnost, dostupnost, bezpečnost a potřebné aktualizace. U průběžného poskytování odpovídáme za vady, které se vyskytnou nebo projeví za trvání závazku.",
+              "Při vadě můžete požadovat její bezplatné odstranění v přiměřené době a bez značných obtíží. Jestliže náprava není možná, neproběhne řádně, vada se opakuje nebo je dostatečně závažná, můžete za zákonných podmínek žádat přiměřenou slevu nebo odstoupit. Tato práva nevylučujeme paušálním omezením odpovědnosti ani tvrzením, že služba je bez záruky."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "complaints",
+            "heading": "Jak podat reklamaci",
+            "paragraphs": [
+              "Reklamaci funkčnosti nebo dostupnosti Rodinky pošlete na privacy@mojerodinka.cz nebo na poštovní adresu níže. Popište vadu, kdy nastala a jaké řešení požadujete; pro dohledání pomůže e-mail účtu, verze aplikace a případně číslo objednávky. Neposílejte heslo ani zbytečné zdravotní nebo rodinné údaje.",
+              "Přijetí a obsah reklamace potvrdíme, sdělíme způsob vyřízení a po vyřízení výsledek, případně odůvodnění zamítnutí. Reklamaci digitální služby vyřídíme v přiměřené době s ohledem na její povahu a účel a budeme vás informovat. Zákonné nároky z prodlení nebo vad zůstávají zachované. Platební reklamaci směřujte také na prodávajícího z dokladu; pomůžeme určit správný kontakt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "adr",
+            "heading": "Mimosoudní řešení sporů",
+            "paragraphs": [
+              "Pokud spotřebitelský spor ze smlouvy s provozovatelem nevyřešíme přímo, můžete se u úplatné služby obrátit na Českou obchodní inspekci (ČOI), subjekt mimosoudního řešení spotřebitelských sporů. Návrh se podává nejpozději do jednoho roku od prvního uplatnění práva u podnikatele. ADR usiluje o dohodu a neomezuje přístup k soudu.",
+              "U samostatného platebního vztahu s jiným prodávajícím se příslušnost a postup řídí také jeho podmínkami a použitelným právem."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "ČOI: informace a podání návrhu ADR",
+                "href": "https://coi.gov.cz/informace-o-adr/"
+              }
+            ]
+          },
+          {
+            "heading": "Ukončení účtu nebo služby",
+            "paragraphs": [
+              "Účet můžete smazat v jeho nastavení; přesný postup a dopady na sdílená rodinná data popisují zásady soukromí. Předem si uložte důležité podklady a samostatně zrušte obnovování předplatného v původním kanálu. Hromadný export v aplikaci není; o kopii údajů můžete požádat podporu.",
+              "O plánovaném ukončení celé služby nebo zásadním omezení placeného plnění vás informujeme s přiměřeným předstihem a poskytneme možnost požádat o vydání dostupných dat. Nevyčerpané zaplacené plnění a případné vrácení ceny vyřešíme podle zákonných práv a příslušného prodejního kanálu. Nutný bezprostřední bezpečnostní zásah může vyžadovat rychlé omezení; tím se nevylučují práva spotřebitele."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Zákonná práva a změny podmínek",
+            "paragraphs": [
+              "Nic v těchto podmínkách neomezuje kogentní práva spotřebitele, včetně práv podle českého a použitelného evropského práva. U spotřebitele z jiné země zůstává zachovaná povinná ochrana, kterou mu přiznává použitelné právo.",
+              "Aktuální znění a datum jsou na této veřejné stránce. Podstatné změny ovlivňující existující smlouvu oznámíme předem; nové znění samo zpětně nemění sjednané placené období ani zákonná práva. Tato stránka nezavádí souhlas s budoucím nákupem nebo se zánikem práva odstoupit."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "Co do Rodinky nepatří",
@@ -58,7 +211,8 @@
               "obsahovat výhrůžky, obtěžování nebo zastrašování,",
               "obsahovat nenávistný obsah namířený proti skupině lidí,",
               "sdílet materiál, ke kterému nemáte práva."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Nahlášení obsahu",
@@ -67,7 +221,8 @@
               "Hlášení označené jako ohrožení dítěte řešíme přednostně.",
               "Nahlásit lze jen zprávu z konverzace, které se sami účastníte."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Odstranění obsahu",
@@ -75,7 +230,8 @@
               "Provozovatel může obsah porušující tato pravidla odstranit. Text zprávy už v aplikaci není dostupný a aplikace přestane poskytovat přístup k jejím přílohám; podkladové soubory jsou následně odstraněny v rámci moderace.",
               "Svoje vlastní zprávy můžete kdykoli smazat sami."
             ],
-            "items": []
+            "items": [],
+            "links": []
           }
         ]
       },
@@ -88,7 +244,8 @@
             "paragraphs": [
               "Správcem osobních údajů a provozovatelem Rodinky je Lukáš Sitta. Pro dotazy a žádosti týkající se soukromí napište na privacy@mojerodinka.cz."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Jaké údaje ukládáme",
@@ -108,7 +265,8 @@
               "Zprávy: text zpráv, reakce a přílohy uvnitř vaší rodiny.",
               "Poznámky ke členům rodiny: text, nepovinný název a volitelné údaje (název a hodnota), které dospělý člen zapíše k sobě nebo k jinému členovi rodiny, a nastavení, zda je poznámka soukromá, nebo sdílená s dospělými v rodině.",
               "Notifikace: push endpoint prohlížeče nebo zařízení a vaše nastavení připomínek."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Proč údaje zpracováváme",
@@ -121,7 +279,8 @@
               "Volitelná analytika — souhlas.",
               "Zdravotní údaje — výslovný souhlas.",
               "Podpora, korespondence o soukromí a vyřízení žádostí — odpověď na žádost uživatele a oprávněný provozní zájem."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Zdravotní údaje",
@@ -131,7 +290,8 @@
               "Nejde o zdravotnickou dokumentaci ani o poskytování zdravotních služeb.",
               "Pokud do poznámky ke členovi rodiny sami napíšete informaci o zdraví, uložíme ji jako součást poznámky a použijeme ji jen k tomu, abychom poznámku zobrazili vám a dospělým, se kterými ji sdílíte. Rodinka obsah poznámek nevyhodnocuje a poznámky nejsou zdravotní dokumentací."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Sdílený rodinný prostor a přístup",
@@ -140,7 +300,8 @@
               "Přístup vynucuje databáze na úrovni jednotlivých řádků a odvozuje ho z přihlášeného uživatele, nikoli z údajů poslaných aplikací.",
               "Poznámky ke členům rodiny: soukromou poznámku vidí jen její autor, sdílenou mohou číst všichni dospělí členové rodiny. Upravit nebo smazat ji může jen autor. Dětské účty poznámky nevidí. Obsah poznámek se neposílá do analytiky, provozní diagnostiky ani oznámení."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Bezpečný příchod a jednorázové sdílení polohy",
@@ -153,7 +314,8 @@
               "Pokud si sami zapnete „Dejte vědět po příchodu“, uloží se vybrané rodinné místo a čas, do kdy chcete příchod potvrdit. V ten čas vám aplikace připomene potvrzení; pokud nepřijde do 15 minut, dostanou aktivní dospělí členové rodiny obecné oznámení, že zatím nepřišlo. Polohu zařízení tato funkce nepoužívá. Uložené je vždy nejvýš jedno takové očekávání na člena: potvrzením příchodu na stejné místo nebo zrušením se smaže, nové nahradí předchozí a nejpozději 3 hodiny po zvoleném čase vyprší.",
               "Bez připojení k internetu polohu sdílet nelze; aplikace ji neukládá do zařízení ani ji neodešle později."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Oznámení",
@@ -161,7 +323,8 @@
               "Oznámení na zamčené obrazovce nikdy neobsahují obsah zpráv, jméno odesílatele, zdravotní údaje ani názvy dokumentů. Zobrazí se pouze obecný text; podrobnosti uvidíte až po otevření aplikace.",
               "Oznámení Bezpečného příchodu obsahují jen obecný text („Někdo z rodiny …“) — nikdy jméno, místo, čas, adresu ani souřadnice. Kdo a kde, uvidíte až po otevření přihlášené aplikace."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Analytika",
@@ -170,7 +333,8 @@
               "Zdravotní údaje, obsah zpráv, dokumenty ani adresy se do analytiky neposílají nikdy.",
               "Z Bezpečného příchodu se do analytiky nikdy neposílají přesné souřadnice, adresa, přesný údaj o přesnosti polohy, jména ani místa — jen obecné kategorie, například zda se polohu podařilo načíst."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Provozní diagnostika",
@@ -179,7 +343,8 @@
               "Rodinka do těchto záznamů záměrně neposílá jméno, e-mail, identifikátory uživatele, člena či rodiny ani obsah rodinných záznamů. Odstraňuje texty vlastních chyb, URL parametry, fragmenty a další nepotřebný kontext. Poskytovatel může při síťovém přenosu vidět IP adresu.",
               "Provozní diagnostika je technicky oddělená od produktové analytiky PostHog a jejího přepínače souhlasu."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Zpracovatelé",
@@ -197,22 +362,53 @@
               "Google — pouze pokud si zvolíte přihlášení přes Google.",
               "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — otevírají se jako externí odkaz, když si necháte zobrazit trasu.",
               "Push služby prohlížečů a zařízení — doručení oznámení; jejich obsah je šifrovaný."
-            ]
+            ],
+            "links": []
           },
           {
-            "heading": "Platby a předplatné",
+            "heading": "Platby na webu a Paddle",
             "paragraphs": [
-              "Předplatné Rodinka Pro na webu prodává Paddle.com jako prodejce (Merchant of Record). E-mail, platební a fakturační údaje zadáváte přímo Paddle, který je zpracovává podle svých zásad ochrany soukromí; Rodinka je nevidí.",
-              "Rodinka od Paddle dostává jen identifikátory zákazníka, objednávky a předplatného, stav plateb a refundací a zaplacené období, aby mohla Rodinku Pro zapnout celé rodině."
+              "Pokud je dostupný webový nákup Pro přes Paddle.com, platební a fakturační údaje zadáváte Paddle jako prodejci (Merchant of Record), podle jeho zásad soukromí; Rodinka neukládá údaje vaší platební karty.",
+              "Pro ověření Rodinka zpracovává identifikátory zákazníka, transakce a předplatného, stav plateb a refundací a zaplacené období. Popis integrace neznamená, že je nákup právě spuštěný."
             ],
-            "items": []
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "google-play",
+            "heading": "Platby přes Google Play",
+            "paragraphs": [
+              "Pokud je dostupný nákup v Androidu, platební údaje zpracovává Google Play podle svých zásad soukromí. Rodinka neukládá údaje platební karty.",
+              "K ověření Rodinka dostává identifikátor nákupu a produktu, stav předplatného a dobu platnosti. Dostupnost nákupu závisí na konkrétní nabídce v aplikaci."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "app-store",
+            "heading": "Platby přes App Store",
+            "paragraphs": [
+              "Pokud je dostupný nákup v iOS, platební údaje zpracovává Apple podle svých zásad soukromí. Rodinka neukládá údaje platební karty.",
+              "K ověření Rodinka dostává identifikátory transakce a produktu, stav předplatného, automatické obnovování a dobu platnosti. Dostupnost nákupu závisí na konkrétní nabídce v aplikaci."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Dřívější členství BMC",
+            "paragraphs": [
+              "Pro existující předplatitele Buy Me a Coffee Rodinka zpracovává identifikaci členství, platební události, zaplacené období a e-mail potřebný pro dřívější párování. BMC zpracovává platby podle svých zásad. Nové členství tímto kanálem Rodinka nenabízí."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "Mezinárodní zpracování",
             "paragraphs": [
               "Rodinka netvrdí, že veškeré zpracování zůstává jen v Evropské unii nebo Evropském hospodářském prostoru. Někteří poskytovatelé mohou podle své infrastruktury a provozního nastavení zpracovávat údaje i v dalších zemích. Konkrétní umístění a případné mechanismy přenosu se řídí nastavením a podmínkami daného poskytovatele."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Jak dlouho údaje uchováváme",
@@ -222,7 +418,8 @@
               "Bezpečný příchod uchovává jen aktuální stav s krátkou platností a bez historie — podrobnosti v části Bezpečný příchod a jednorázové sdílení polohy.",
               "Poznámky ke členům rodiny uchováváme, dokud je autor nesmaže nebo dokud není trvale odstraněn autor, člen, kterého se poznámka týká, nebo celá rodina. Poznámky, které napsal odebraný člen nebo které se odebraného člena týkají, jsou skryté a zachované pro případné obnovení členství."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Uložení a zabezpečení",
@@ -231,7 +428,8 @@
               "Pro offline provoz si aplikace ukládá kopii kalendáře, úkolů a nákupního seznamu přímo ve vašem zařízení. Přílohy dokumentů se do zařízení neukládají.",
               "Při odhlášení se lokální kopie i uložené fotografie z tohoto zařízení odstraní."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Vaše práva a kontakt",
@@ -242,7 +440,8 @@
               "Hromadný export dat Rodinka v aplikaci nenabízí; žádost o kopii údajů vyřizujeme ručně.",
               "Máte také právo podat stížnost u českého dozorového úřadu: Úřad pro ochranu osobních údajů (ÚOOÚ)."
             ],
-            "items": []
+            "items": [],
+            "links": []
           }
         ]
       }
@@ -250,7 +449,10 @@
     "sk": {
       "operatorHeading": "Prevádzkovateľ a kontakt",
       "registrationLabel": "IČO",
-      "lastUpdated": "Posledná aktualizácia: 2. 11. 2026",
+      "businessRegisterLabel": "SZČO zapísaná v českom živnostenskom registri; evidujúci úrad",
+      "phoneLabel": "Telefón",
+      "notVatRegistered": "Prevádzkovateľ nie je platiteľom DPH.",
+      "lastUpdated": "Posledná aktualizácia: 5. 11. 2026",
       "terms": {
         "title": "Podmienky používania a pravidlá obsahu",
         "intro": "Tieto podmienky opisujú, ako Rodinku používať, čo do nej nepatrí a ako funguje predplatné Rodinka Pro.",
@@ -258,34 +460,181 @@
           {
             "heading": "Služba a prevádzkovateľ",
             "paragraphs": [
-              "Rodinku prevádzkuje Lukáš Sitta. Tieto podmienky platia pre používanie Rodinky na webe aj v aplikáciách. Kontakt na prevádzkovateľa nájdete na konci stránky.",
-              "Rodinka je určená na súkromnú komunikáciu vnútri jednej rodiny. Konverzácie nie sú verejné a nedá sa v nich osloviť cudzích ľudí."
+              "Rodinku poskytuje Lukáš Sitta, SZČO v Česku. Úplné identifikačné a kontaktné údaje sú na konci stránky. Tieto podmienky sa vzťahujú na webovú aj natívnu aplikáciu.",
+              "Rodinka je priebežne poskytovaná digitálna služba na organizáciu rodiny: zdieľaný kalendár, úlohy, nákupy, plánovanie, súkromné správy a rodinné záznamy. Rodinný priestor nie je verejná sociálna sieť. Zdravotné funkcie slúžia na plánovanie, neposkytujú zdravotnú starostlivosť.",
+              "Potrebujete podporovaný aktuálny prehliadač alebo kompatibilnú aplikáciu pre Android či iOS a internet na účet a synchronizáciu. Kalendár, úlohy a nákupy majú obmedzený offline režim; nákup, overenie predplatného a niektoré ďalšie funkcie vyžadujú pripojenie. Inštalujte dostupné aktualizácie potrebné na bezpečnosť a funkčnosť služby."
             ],
-            "items": []
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Účet a vznik zmluvného vzťahu",
+            "paragraphs": [
+              "Založením účtu alebo prijatím pozvánky žiadate prevádzkovateľa o sprístupnenie Rodinky; vzťah na používanie bezplatnej služby vzniká sprístupnením účtu. Detské profily a spravované detské účty zriaďuje dospelý člen rodiny. Platené Pro objednáva dospelý.",
+              "Registrácia, pozvánka ani zobrazenie tejto stránky nie sú objednávkou plateného Pro. Platené predplatné vzniká až samostatným potvrdením objednávky v dostupnom predajnom kanáli a jej prijatím podľa jeho pravidiel. Pred potvrdením musí byť uvedený produkt, celková cena vrátane príslušných daní, obdobie a pravidlá obnovovania; doklad a potvrdenie poskytuje daný kanál."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "Rodinka Free a Rodinka Pro",
             "paragraphs": [
-              "Rodinku možno používať zadarmo. Rodinka Pro je dobrovoľné predplatné pre celú rodinu: pridáva 5 GB na rodinné fotografie, Moment dňa a možnosti prispôsobenia. Aktuálne ceny a rozdiel medzi verziami uvádza cenník na mojerodinka.cz/sk/pricing.",
-              "Keď Rodinka Pro skončí, dáta rodiny sa nemažú; nové fotografie nad limit verzie Free a nové Momenty dňa už pridať nepôjde."
+              "Free je bezplatný základný rodinný organizér s úložiskom 200 MiB. Pro rozširuje úložisko na 5 GiB a pridáva Moment dňa, personalizáciu a ďalšie funkcie označené Pro, napríklad rodinnú ročenku, Rodinný týždeň a vytváranie scenárov a príprav. Pro sa vzťahuje na konkrétnu rodinu; ďalšia rodina pod rovnakým účtom ho automaticky nezískava.",
+              "Po skončení Pro sa rodinné záznamy a fotografie len pre skončenie predplatného automaticky nemažú. Platí limit Free, preto nad neho nemožno pridávať nové súbory; nové Momenty dňa a funkcie vyžadujúce aktívne Pro nie sú dostupné. Existujúce prípravy možno ďalej čítať, upravovať a dokončovať. Už uložené PDF ročenky sa nemení. Zmazanie účtu alebo rodiny má samostatné pravidlá nižšie a v zásadách súkromia."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
+            "id": "availability",
+            "heading": "Dostupnosť, dĺžka a obnovovanie Pro",
+            "paragraphs": [
+              "Nové nákupy Pro sa zavádzajú postupne. Opis predajného kanála na tejto stránke neznamená, že je práve spustený. Nákup je dostupný len vtedy, keď aplikácia zobrazí konkrétnu ponuku a príslušný kanál umožní jej potvrdenie. Ak ponuka nie je dostupná, samotné tieto podmienky nákup neumožňujú.",
+              "Ak je ponúknuté predplatné, zvolíte mesačné alebo ročné obdobie za cenu uvedenú pred nákupom. Opakuje sa a automaticky sa účtuje ďalšie obdobie, kým nevypnete obnovovanie. Zrušenie obnovovania ponecháva prístup do konca zaplateného obdobia; bežné zrušenie samo nevracia už zaplatenú cenu. Odstúpenie, reklamácia a prípadné vrátenie peňazí sú samostatné práva.",
+              "Odinštalovanie aplikácie ani zmazanie účtu predplatné nezruší. Predplatné spravujte v rovnakom kanáli a pod účtom, ktorým bolo zakúpené. Technická podpora Rodinky vám pomôže určiť kanál; nemusíte kupovať Pro druhýkrát."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "paddle",
             "heading": "Platby na webe cez Paddle",
             "paragraphs": [
-              "Objednávky na webe spracúva náš online predajca Paddle.com, ktorý je pri všetkých objednávkach predajcom (Merchant of Record). Paddle prijíma platbu, vystavuje doklad, odvádza daň a vybavuje otázky k platbám aj vráteniu peňazí. Pre objednávku platia aj podmienky Paddle pre kupujúcich.",
-              "Predplatné kúpené v App Store alebo Google Play sa riadi pravidlami daného obchodu."
+              "Ak je spustený webový nákup cez Paddle.com, Paddle je pre túto objednávku predajcom (Merchant of Record), nie iba platobnou bránou. Prijíma platbu, vystavuje doklad a rieši príslušné dane a platobné refundácie. Poskytovateľom aplikácie zostáva prevádzkovateľ Rodinky. Konkrétny zmluvný subjekt Paddle uvádza objednávka a doklad; platia aj podmienky Paddle pre kupujúcich.",
+              "Existujúce predplatné Paddle zrušíte v zákazníckom portáli cez paddle.net alebo cez dostupnú správu predplatného v účte Rodinky. O vrátenie peňazí požiadajte Paddle; možno kontaktovať aj podporu Rodinky. Schválená plná refundácia príslušnej platby môže ukončiť Pro, ak rodina nemá iný aktívny nárok. Zákonné práva majú prednosť pred obchodnými pravidlami refundácií."
             ],
-            "items": []
+            "items": [],
+            "links": [
+              {
+                "label": "Podpora platieb a správa Paddle",
+                "href": "https://paddle.net/"
+              },
+              {
+                "label": "Podmienky Paddle pre kupujúcich",
+                "href": "https://www.paddle.com/legal/checkout-buyer-terms"
+              }
+            ]
           },
           {
-            "heading": "Obnovenie, zrušenie a vrátenie peňazí",
+            "id": "google-play",
+            "heading": "Platby cez Google Play",
             "paragraphs": [
-              "Predplatné sa automaticky obnovuje na ďalší mesiac alebo rok, kým ho nezrušíte. Zrušiť ho môžete kedykoľvek na paddle.net alebo v aplikácii vo Viac → Účet a rodina → Spravovať predplatné. Rodinka Pro potom zostane aktívna do konca zaplateného obdobia. Zmazanie účtu predplatné samo nezruší.",
-              "O vrátenie peňazí žiadate v Paddle na paddle.net podľa Zásad refundácií na mojerodinka.cz/sk/refund-policy a Paddle Refund Policy. Schválená plná refundácia platby Rodinku Pro ukončí. Vaše zákonné práva spotrebiteľa tým nie sú dotknuté."
+              "Ak aplikácia pre Android ponúka nákup Pro, používa Google Play Billing. Google Play zabezpečuje objednanie, účtovanie a správu predplatného; poskytovateľom Rodinky je jej prevádzkovateľ. Predajcu konkrétnej transakcie určujú podmienky obchodu, informácie pred nákupom a doklad. Google môže podľa krajiny vystupovať ako predajca alebo zástupca poskytovateľa; netvrdíme, že je vždy predajcom samotnej služby.",
+              "Obnovovanie zrušíte v Google Play → Platby a predplatné → Predplatné, pod účtom použitým pri nákupe. Možno využiť aj dostupnú správu predplatného v účte Rodinky. O refundáciu požiadajte postupom Google Play; s vadou služby alebo uplatnením zákonných práv sa môžete obrátiť aj na prevádzkovateľa Rodinky."
             ],
-            "items": []
+            "items": [],
+            "links": [
+              {
+                "label": "Zrušenie predplatného v Google Play",
+                "href": "https://support.google.com/googleplay/answer/7018481"
+              },
+              {
+                "label": "Vrátenie peňazí v Google Play",
+                "href": "https://support.google.com/googleplay/answer/2479637"
+              }
+            ]
+          },
+          {
+            "id": "app-store",
+            "heading": "Platby cez App Store",
+            "paragraphs": [
+              "Ak aplikácia pre iOS ponúka nákup Pro, používa nákup v aplikácii cez Apple App Store. Apple zabezpečuje účtovanie a správu predplatného; poskytovateľom aplikácie je prevádzkovateľ Rodinky. Zmluvný subjekt a rolu Apple pre danú transakciu určujú podmienky Apple, informácie pred nákupom a doklad. Na používanie iOS aplikácie sa vzťahuje aj licencia uvedená pri aplikácii v App Store.",
+              "Obnovovanie zrušíte v Nastaveniach zariadenia → účet Apple → Predplatné, pod účtom použitým pri nákupe. Možno využiť aj dostupnú správu predplatného v účte Rodinky. O refundáciu požiadajte Apple cez reportaproblem.apple.com. S vadou aplikácie alebo uplatnením zákonných práv vám pomôže aj prevádzkovateľ Rodinky."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Zrušenie predplatného Apple",
+                "href": "https://support.apple.com/118428"
+              },
+              {
+                "label": "Vrátenie peňazí Apple",
+                "href": "https://support.apple.com/118223"
+              }
+            ]
+          },
+          {
+            "id": "legacy-bmc",
+            "heading": "Predchádzajúce predplatné Buy Me a Coffee",
+            "paragraphs": [
+              "Buy Me a Coffee (BMC) je iba predchádzajúci kanál pre existujúcich predplatiteľov. Nové členstvo cez BMC Rodinka neponúka. Existujúce predplatné môže pokračovať a obnovovať sa podľa dohodnutého obdobia; BMC zabezpečuje členskú a platobnú infraštruktúru, poskytovateľom služby zostáva prevádzkovateľ Rodinky.",
+              "Existujúce členstvo spravujte po prihlásení do účtu BMC v časti Memberships alebo cez dostupné tlačidlo správy v účte Rodinky na webe. Zrušením zastavíte ďalšiu obnovu, zaplatené obdobie tým bežne nezaniká. Reklamáciu alebo žiadosť o refundáciu možno poslať prevádzkovateľovi na kontakty nižšie; platobný postup sa riadi aj pravidlami BMC. Nejde o ponuku nového nákupu."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal",
+            "heading": "Zákonné odstúpenie a vrátenie peňazí",
+            "paragraphs": [
+              "Spotrebiteľ má pri uzavretí zmluvy na diaľku spravidla právo odstúpiť bez uvedenia dôvodu do 14 dní od jej uzavretia. Samotná aktivácia Pro ani použitie aplikácie automaticky neznamená stratu tohto práva. Obchodné pravidlá obchodu nemôžu obmedziť vaše zákonné práva.",
+              "Pri priebežne poskytovanej digitálnej službe môže predčasné začatie vyžadovať vašu výslovnú žiadosť a riadne poučenie. Pomernú úhradu už poskytnutej služby pri odstúpení možno požadovať len pri splnení zákonných podmienok. Výnimka pre digitálny obsah nedodaný na hmotnom nosiči vyžaduje najmä predchádzajúci výslovný súhlas, poučenie a potvrdenie; tieto podmienky samy taký súhlas ani žiadosť nenahrádzajú.",
+              "Rozhodnutie odstúpiť zašlite jednoznačným vyhlásením na e-mail alebo poštovú adresu prevádzkovateľa nižšie, prípadne predajcovi uvedenému na doklade. Uveďte účet, dátum a identifikáciu objednávky a predajný kanál. Stačí vyhlásenie odoslať v lehote. Podpora Rodinky pomôže s odovzdaním platobnej požiadavky správnemu subjektu. Pri platnom zákonnom odstúpení sa platby vracajú bez zbytočného odkladu, najneskôr do 14 dní od oznámenia odstúpenia, rovnakým platobným prostriedkom, ak sa nedohodnete inak; prípadná zákonná pomerná úhrada tým nie je dotknutá."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal-model",
+            "heading": "Vzor oznámenia o odstúpení",
+            "paragraphs": [
+              "Tento vzor je dobrovoľný. Adresát: prevádzkovateľ uvedený na konci stránky, prípadne predajca z dokladu. Oznamujem, že odstupujem od zmluvy o predplatnom Rodinka Pro. Dátum objednania: …; číslo objednávky a kanál nákupu: …; meno a adresa spotrebiteľa: …; e-mail účtu: …; dátum oznámenia: …; podpis spotrebiteľa iba pri zaslaní na papieri."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "defects",
+            "heading": "Vady digitálnej služby a aktualizácie",
+            "paragraphs": [
+              "Máte zákonné práva z vadného plnenia. Služba musí zodpovedať zmluve a zákonným požiadavkám na funkčnosť, dostupnosť, bezpečnosť a potrebné aktualizácie. Pri priebežnom poskytovaní zodpovedáme za vady, ktoré sa vyskytnú alebo prejavia počas trvania záväzku.",
+              "Pri vade môžete požadovať jej bezplatné odstránenie v primeranej dobe a bez značných ťažkostí. Ak náprava nie je možná, neprebehne riadne, vada sa opakuje alebo je dostatočne závažná, môžete za zákonných podmienok žiadať primeranú zľavu alebo odstúpiť. Tieto práva nevylučujeme paušálnym obmedzením zodpovednosti ani tvrdením, že služba je bez záruky."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "complaints",
+            "heading": "Ako podať reklamáciu",
+            "paragraphs": [
+              "Reklamáciu funkčnosti alebo dostupnosti Rodinky pošlite na privacy@mojerodinka.cz alebo na poštovú adresu nižšie. Opíšte vadu, kedy nastala a aké riešenie požadujete; na dohľadanie pomôže e-mail účtu, verzia aplikácie a prípadne číslo objednávky. Neposielajte heslo ani zbytočné zdravotné alebo rodinné údaje.",
+              "Prijatie a obsah reklamácie potvrdíme, oznámime spôsob vybavenia a po vybavení výsledok, prípadne odôvodnenie zamietnutia. Reklamáciu digitálnej služby vybavíme v primeranej dobe s ohľadom na jej povahu a účel a budeme vás informovať. Zákonné nároky z omeškania alebo vád zostávajú zachované. Platobnú reklamáciu smerujte aj na predajcu z dokladu; pomôžeme určiť správny kontakt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "adr",
+            "heading": "Mimosúdne riešenie sporov",
+            "paragraphs": [
+              "Ak spotrebiteľský spor zo zmluvy s prevádzkovateľom nevyriešime priamo, môžete sa pri platenej službe obrátiť na Českú obchodnú inšpekciu (ČOI), subjekt mimosúdneho riešenia spotrebiteľských sporov. Návrh sa podáva najneskôr do jedného roka od prvého uplatnenia práva u podnikateľa. ADR sa usiluje o dohodu a neobmedzuje prístup k súdu.",
+              "Pri samostatnom platobnom vzťahu s iným predajcom sa príslušnosť a postup riadia aj jeho podmienkami a použiteľným právom."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "ČOI: informácie a podanie návrhu ADR",
+                "href": "https://coi.gov.cz/informace-o-adr/"
+              }
+            ]
+          },
+          {
+            "heading": "Ukončenie účtu alebo služby",
+            "paragraphs": [
+              "Účet môžete zmazať v jeho nastaveniach; presný postup a dopady na zdieľané rodinné údaje opisujú zásady súkromia. Vopred si uložte dôležité podklady a samostatne zrušte obnovovanie predplatného v pôvodnom kanáli. Hromadný export v aplikácii nie je; o kópiu údajov môžete požiadať podporu.",
+              "O plánovanom ukončení celej služby alebo zásadnom obmedzení plateného plnenia vás informujeme s primeraným predstihom a poskytneme možnosť požiadať o vydanie dostupných údajov. Nevyčerpané zaplatené plnenie a prípadné vrátenie ceny vyriešime podľa zákonných práv a príslušného predajného kanála. Nutný bezprostredný bezpečnostný zásah môže vyžadovať rýchle obmedzenie; tým sa nevylučujú práva spotrebiteľa."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Zákonné práva a zmeny podmienok",
+            "paragraphs": [
+              "Nič v týchto podmienkach neobmedzuje kogentné práva spotrebiteľa vrátane práv podľa českého a použiteľného európskeho práva. Pri spotrebiteľovi z inej krajiny zostáva zachovaná povinná ochrana, ktorú mu priznáva použiteľné právo.",
+              "Aktuálne znenie a dátum sú na tejto verejnej stránke. Podstatné zmeny ovplyvňujúce existujúcu zmluvu oznámime vopred; nové znenie samo spätne nemení dohodnuté platené obdobie ani zákonné práva. Táto stránka nezavádza súhlas s budúcim nákupom alebo so zánikom práva odstúpiť."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "Čo do Rodinky nepatrí",
@@ -298,7 +647,8 @@
               "obsahovať vyhrážky, obťažovanie alebo zastrašovanie,",
               "obsahovať nenávistný obsah namierený proti skupine ľudí,",
               "zdieľať materiál, na ktorý nemáte práva."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Nahlásenie obsahu",
@@ -307,7 +657,8 @@
               "Hlásenia označené ako ohrozenie dieťaťa riešime prednostne.",
               "Nahlásiť možno len správu z konverzácie, ktorej sa sami zúčastňujete."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Odstránenie obsahu",
@@ -315,7 +666,8 @@
               "Prevádzkovateľ môže obsah porušujúci tieto pravidlá odstrániť. Text správy už v aplikácii nie je dostupný a aplikácia prestane poskytovať prístup k jej prílohám; podkladové súbory sú následne odstránené v rámci moderovania.",
               "Svoje vlastné správy môžete kedykoľvek zmazať sami."
             ],
-            "items": []
+            "items": [],
+            "links": []
           }
         ]
       },
@@ -328,7 +680,8 @@
             "paragraphs": [
               "Prevádzkovateľom osobných údajov a prevádzkovateľom Rodinky je Lukáš Sitta. Pri otázkach a žiadostiach týkajúcich sa súkromia napíšte na privacy@mojerodinka.cz."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Aké údaje ukladáme",
@@ -348,7 +701,8 @@
               "Správy: text správ, reakcie a prílohy vnútri vašej rodiny.",
               "Poznámky k členom rodiny: text, nepovinný názov a voliteľné údaje (názov a hodnota), ktoré dospelý člen zapíše k sebe alebo k inému členovi rodiny, a nastavenie, či je poznámka súkromná, alebo zdieľaná s dospelými v rodine.",
               "Notifikácie: push endpoint prehliadača alebo zariadenia a vaše nastavenie pripomienok."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Prečo údaje spracúvame",
@@ -361,7 +715,8 @@
               "Voliteľná analytika — súhlas.",
               "Zdravotné údaje — výslovný súhlas.",
               "Podpora, korešpondencia o súkromí a vybavenie žiadostí — odpoveď na žiadosť používateľa a oprávnený prevádzkový záujem."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Zdravotné údaje",
@@ -371,7 +726,8 @@
               "Nejde o zdravotnícku dokumentáciu ani o poskytovanie zdravotných služieb.",
               "Ak do poznámky k členovi rodiny sami napíšete informáciu o zdraví, uložíme ju ako súčasť poznámky a použijeme ju iba na to, aby sme poznámku zobrazili vám a dospelým, s ktorými ju zdieľate. Rodinka obsah poznámok nevyhodnocuje a poznámky nie sú zdravotnou dokumentáciou."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Zdieľaný rodinný priestor a prístup",
@@ -380,7 +736,8 @@
               "Prístup vynucuje databáza na úrovni jednotlivých riadkov a odvodzuje ho od prihláseného používateľa, nie od údajov poslaných aplikáciou.",
               "Poznámky k členom rodiny: súkromnú poznámku vidí iba jej autor, zdieľanú môžu čítať všetci dospelí členovia rodiny. Upraviť alebo zmazať ju môže iba autor. Detské účty poznámky nevidia. Obsah poznámok sa neposiela do analytiky, prevádzkovej diagnostiky ani oznámení."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Bezpečný príchod a jednorazové zdieľanie polohy",
@@ -393,7 +750,8 @@
               "Ak si sami zapnete „Dajte vedieť po príchode“, uloží sa vybrané rodinné miesto a čas, do kedy chcete príchod potvrdiť. V tom čase vám aplikácia pripomenie potvrdenie; ak nepríde do 15 minút, dostanú aktívni dospelí členovia rodiny všeobecné oznámenie, že zatiaľ neprišlo. Polohu zariadenia táto funkcia nepoužíva. Uložené je vždy najviac jedno takéto očakávanie na člena: potvrdením príchodu na rovnaké miesto alebo zrušením sa zmaže, nové nahradí predchádzajúce a najneskôr 3 hodiny po zvolenom čase vyprší.",
               "Bez pripojenia na internet polohu zdieľať nemožno; aplikácia ju neukladá do zariadenia ani ju neodošle neskôr."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Oznámenia",
@@ -401,7 +759,8 @@
               "Oznámenia na zamknutej obrazovke nikdy neobsahujú obsah správ, meno odosielateľa, zdravotné údaje ani názvy dokumentov. Zobrazí sa iba všeobecný text; podrobnosti uvidíte až po otvorení aplikácie.",
               "Oznámenia Bezpečného príchodu obsahujú iba všeobecný text („Niekto z rodiny …“) — nikdy meno, miesto, čas, adresu ani súradnice. Kto a kde, uvidíte až po otvorení prihlásenej aplikácie."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Analytika",
@@ -410,7 +769,8 @@
               "Zdravotné údaje, obsah správ, dokumenty ani adresy sa do analytiky neposielajú nikdy.",
               "Z Bezpečného príchodu sa do analytiky nikdy neposielajú presné súradnice, adresa, presný údaj o presnosti polohy, mená ani miesta — iba všeobecné kategórie, napríklad či sa polohu podarilo načítať."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Prevádzková diagnostika",
@@ -419,7 +779,8 @@
               "Rodinka do týchto záznamov zámerne neposiela meno, e-mail, identifikátory používateľa, člena či rodiny ani obsah rodinných záznamov. Odstraňuje texty vlastných chýb, URL parametre, fragmenty a ďalší nepotrebný kontext. Poskytovateľ môže pri sieťovom prenose vidieť IP adresu.",
               "Prevádzková diagnostika je technicky oddelená od produktovej analytiky PostHog a jej prepínača súhlasu."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Sprostredkovatelia",
@@ -437,22 +798,53 @@
               "Google — iba ak si zvolíte prihlásenie cez Google.",
               "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — otvárajú sa ako externý odkaz, keď si necháte zobraziť trasu.",
               "Push služby prehliadačov a zariadení — doručenie oznámení; ich obsah je šifrovaný."
-            ]
+            ],
+            "links": []
           },
           {
-            "heading": "Platby a predplatné",
+            "heading": "Platby na webe a Paddle",
             "paragraphs": [
-              "Predplatné Rodinka Pro na webe predáva Paddle.com ako predajca (Merchant of Record). E-mail, platobné a fakturačné údaje zadávate priamo Paddle, ktorý ich spracúva podľa svojich zásad ochrany súkromia; Rodinka ich nevidí.",
-              "Rodinka od Paddle dostáva iba identifikátory zákazníka, objednávky a predplatného, stav platieb a refundácií a zaplatené obdobie, aby mohla Rodinku Pro zapnúť celej rodine."
+              "Ak je dostupný webový nákup Pro cez Paddle.com, platobné a fakturačné údaje zadávate Paddle ako predajcovi (Merchant of Record), podľa jeho zásad súkromia; Rodinka neukladá údaje vašej platobnej karty.",
+              "Na overenie Rodinka spracúva identifikátory zákazníka, transakcie a predplatného, stav platieb a refundácií a zaplatené obdobie. Opis integrácie neznamená, že je nákup práve spustený."
             ],
-            "items": []
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "google-play",
+            "heading": "Platby cez Google Play",
+            "paragraphs": [
+              "Ak je dostupný nákup v Androide, platobné údaje spracúva Google Play podľa svojich zásad súkromia. Rodinka neukladá údaje platobnej karty.",
+              "Na overenie Rodinka dostáva identifikátor nákupu a produktu, stav predplatného a dobu platnosti. Dostupnosť nákupu závisí od konkrétnej ponuky v aplikácii."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "app-store",
+            "heading": "Platby cez App Store",
+            "paragraphs": [
+              "Ak je dostupný nákup v iOS, platobné údaje spracúva Apple podľa svojich zásad súkromia. Rodinka neukladá údaje platobnej karty.",
+              "Na overenie Rodinka dostáva identifikátory transakcie a produktu, stav predplatného, automatické obnovovanie a dobu platnosti. Dostupnosť nákupu závisí od konkrétnej ponuky v aplikácii."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Predchádzajúce členstvo BMC",
+            "paragraphs": [
+              "Pre existujúcich predplatiteľov Buy Me a Coffee Rodinka spracúva identifikáciu členstva, platobné udalosti, zaplatené obdobie a e-mail potrebný na predchádzajúce párovanie. BMC spracúva platby podľa svojich zásad. Nové členstvo týmto kanálom Rodinka neponúka."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "Medzinárodné spracúvanie",
             "paragraphs": [
               "Rodinka netvrdí, že všetko spracúvanie zostáva len v Európskej únii alebo Európskom hospodárskom priestore. Niektorí poskytovatelia môžu podľa svojej infraštruktúry a prevádzkového nastavenia spracúvať údaje aj v ďalších krajinách. Konkrétne umiestnenie a prípadné mechanizmy prenosu sa riadia nastavením a podmienkami daného poskytovateľa."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Ako dlho údaje uchovávame",
@@ -462,7 +854,8 @@
               "Bezpečný príchod uchováva iba aktuálny stav s krátkou platnosťou a bez histórie — podrobnosti v časti Bezpečný príchod a jednorazové zdieľanie polohy.",
               "Poznámky k členom rodiny uchovávame, kým ich autor nezmaže alebo kým nie je natrvalo odstránený autor, člen, ktorého sa poznámka týka, alebo celá rodina. Poznámky, ktoré napísal odobraný člen alebo ktoré sa odobraného člena týkajú, sú skryté a zachované pre prípadné obnovenie členstva."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Uloženie a zabezpečenie",
@@ -471,7 +864,8 @@
               "Na offline prevádzku si aplikácia ukladá kópiu kalendára, úloh a nákupného zoznamu priamo vo vašom zariadení. Prílohy dokumentov sa do zariadenia neukladajú.",
               "Pri odhlásení sa lokálna kópia aj uložené fotografie z tohto zariadenia odstránia."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Vaše práva a kontakt",
@@ -482,7 +876,8 @@
               "Hromadný export údajov Rodinka v aplikácii neponúka; žiadosť o kópiu údajov vybavujeme ručne.",
               "Máte tiež právo podať sťažnosť u českého dozorného úradu: Úřad pro ochranu osobních údajů (ÚOOÚ)."
             ],
-            "items": []
+            "items": [],
+            "links": []
           }
         ]
       }
@@ -490,7 +885,10 @@
     "en": {
       "operatorHeading": "Operator and contact",
       "registrationLabel": "Company number",
-      "lastUpdated": "Last updated: 2 November 2026",
+      "businessRegisterLabel": "Czech sole trader registered in the Trade Register; registering authority",
+      "phoneLabel": "Telephone",
+      "notVatRegistered": "The operator is not registered for VAT.",
+      "lastUpdated": "Last updated: 5 November 2026",
       "terms": {
         "title": "Terms of use and content guidelines",
         "intro": "These terms describe how to use Rodinka, what does not belong in it and how the Rodinka Pro subscription works.",
@@ -498,34 +896,181 @@
           {
             "heading": "The service and its operator",
             "paragraphs": [
-              "Rodinka is operated by Lukáš Sitta. These terms apply to using Rodinka on the web and in the apps. The operator’s contact details are at the end of this page.",
-              "Rodinka is for private communication inside a single family. Conversations are not public and you cannot contact strangers through them."
+              "Rodinka is provided by Lukáš Sitta, a Czech sole trader. Full identification and contact details appear at the end of this page. These terms cover the web and native apps.",
+              "Rodinka is an ongoing digital service for family organisation: a shared calendar, tasks, shopping, planning, private messages and family records. The family space is not a public social network. Health features support planning and do not provide healthcare.",
+              "You need a supported current browser or a compatible Android or iOS app, with internet access for your account and synchronisation. Calendar, tasks and shopping have limited offline support; purchases, subscription verification and some other features require a connection. Install available updates needed for the security and functionality of the service."
             ],
-            "items": []
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Accounts and contract formation",
+            "paragraphs": [
+              "Creating an account or accepting an invitation requests access to Rodinka from its operator; the relationship for the free service starts when account access is provided. An adult family member creates child profiles and managed child accounts. An adult orders paid Pro.",
+              "Registration, an invitation or viewing this page does not order paid Pro. A paid subscription requires a separate order confirmation in an available sales channel and acceptance under that channel’s rules. The product, total price including applicable taxes, period and renewal rules must be provided before confirmation; that channel supplies the receipt and confirmation."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "Rodinka Free and Rodinka Pro",
             "paragraphs": [
-              "Rodinka can be used for free. Rodinka Pro is an optional subscription for the whole family: it adds 5 GB for family photos, Moment of the Day and personalisation. Current prices and the difference between the plans are on the pricing page at mojerodinka.cz/en/pricing.",
-              "When Rodinka Pro ends, family data is not deleted; you just cannot add new photos beyond the Free limit or new Moments of the Day."
+              "Free provides the basic family organiser at no charge with 200 MiB of storage. Pro increases storage to 5 GiB and adds Moment of the Day, personalisation and other features marked Pro, such as the family yearbook, Family Week and creating scenarios and preparations. Pro covers a specific family; another family under the same account does not automatically receive it.",
+              "Family records and photos are not automatically deleted just because Pro ends. The Free limit applies, so new files cannot be added above it; new Moments of the Day and features requiring active Pro become unavailable. Existing preparations remain readable, editable and completable. Already saved yearbook PDFs are unaffected. Account or family deletion has separate rules below and in the Privacy Policy."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
+            "id": "availability",
+            "heading": "Pro availability, duration and renewal",
+            "paragraphs": [
+              "New Pro purchases are being introduced gradually. Describing a sales channel here does not mean it has launched. A purchase is available only when the app displays a specific offer and the relevant channel allows you to confirm it. Without an available offer, these terms alone do not enable a purchase.",
+              "Where a subscription is offered, you choose a monthly or yearly period at the price shown before purchase. It repeats and charges automatically for the next period until renewal is turned off. Cancelling renewal keeps access until the end of the paid period; ordinary cancellation alone does not refund an already paid price. Withdrawal, defect claims and any refund are separate rights.",
+              "Uninstalling the app or deleting your account does not cancel a subscription. Manage it in the original channel using the account that made the purchase. Rodinka support can help identify the channel; you do not need to buy Pro a second time."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "paddle",
             "heading": "Payments on the web through Paddle",
             "paragraphs": [
-              "Our order process on the web is conducted by our online reseller Paddle.com. Paddle.com is the merchant of record for all our orders. Paddle takes the payment, issues the receipt, handles tax and answers payment and refund enquiries. Paddle’s buyer terms also apply to your order.",
-              "A subscription bought through the App Store or Google Play follows that store’s rules."
+              "If web purchases through Paddle.com are enabled, Paddle is the seller (Merchant of Record) for that order, rather than merely a payment gateway. It collects payment, issues receipts and handles applicable taxes and payment refunds. Rodinka’s operator remains the app provider. The order and receipt identify the relevant Paddle entity; Paddle’s buyer terms also apply.",
+              "Cancel an existing Paddle subscription through the customer portal at paddle.net or available subscription management in your Rodinka account. Request a refund from Paddle; you may also contact Rodinka support. An approved full refund of the relevant payment may end Pro if the family has no other active entitlement. Statutory rights take precedence over commercial refund policies."
             ],
-            "items": []
+            "items": [],
+            "links": [
+              {
+                "label": "Paddle payment support and management",
+                "href": "https://paddle.net/"
+              },
+              {
+                "label": "Paddle buyer terms",
+                "href": "https://www.paddle.com/legal/checkout-buyer-terms"
+              }
+            ]
           },
           {
-            "heading": "Renewal, cancellation and refunds",
+            "id": "google-play",
+            "heading": "Payments through Google Play",
             "paragraphs": [
-              "Your subscription renews automatically for another month or year until you cancel it. You can cancel at any time at paddle.net or in the app under More → Account and family → Manage subscription. Rodinka Pro then stays active until the end of the paid period. Deleting your account does not cancel the subscription by itself.",
-              "You request refunds from Paddle at paddle.net under the Refund policy at mojerodinka.cz/en/refund-policy and the Paddle Refund Policy. An approved full refund of a payment ends Rodinka Pro. Your statutory consumer rights are not affected."
+              "If the Android app offers Pro purchases, it uses Google Play Billing. Google Play handles ordering, billing and subscription management; Rodinka’s operator provides the service. The store terms, pre-purchase information and receipt identify the seller for the transaction. Depending on the country, Google may be the seller or an agent for the provider; we do not claim it always sells the service itself.",
+              "Cancel renewal in Google Play → Payments and subscriptions → Subscriptions, using the purchasing account. You may also use available subscription management in your Rodinka account. Follow Google Play’s process to request a refund; you may also contact Rodinka’s operator about service defects or statutory rights."
             ],
-            "items": []
+            "items": [],
+            "links": [
+              {
+                "label": "Cancel a Google Play subscription",
+                "href": "https://support.google.com/googleplay/answer/7018481"
+              },
+              {
+                "label": "Google Play refunds",
+                "href": "https://support.google.com/googleplay/answer/2479637"
+              }
+            ]
+          },
+          {
+            "id": "app-store",
+            "heading": "Payments through the App Store",
+            "paragraphs": [
+              "If the iOS app offers Pro purchases, it uses in-app purchases through Apple’s App Store. Apple handles billing and subscription management; Rodinka’s operator is the app provider. Apple’s terms, pre-purchase information and receipt determine the relevant Apple entity and its role in the transaction. The licence listed for the app in the App Store also applies to use of the iOS app.",
+              "Cancel renewal in device Settings → Apple Account → Subscriptions, using the purchasing account. You may also use available subscription management in your Rodinka account. Request a refund from Apple through reportaproblem.apple.com. Rodinka’s operator can also help with app defects and statutory rights."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Cancel an Apple subscription",
+                "href": "https://support.apple.com/118428"
+              },
+              {
+                "label": "Apple refunds",
+                "href": "https://support.apple.com/118223"
+              }
+            ]
+          },
+          {
+            "id": "legacy-bmc",
+            "heading": "Previous Buy Me a Coffee subscriptions",
+            "paragraphs": [
+              "Buy Me a Coffee (BMC) is a previous channel for existing subscribers only. Rodinka does not offer new BMC memberships. An existing subscription may continue and renew for its agreed period; BMC provides membership and payment infrastructure while Rodinka’s operator remains the service provider.",
+              "Manage an existing membership by signing in to your BMC account under Memberships or using the available management button in your Rodinka account on the web. Cancellation stops the next renewal and ordinarily preserves the paid period. Send a defect claim or refund request to the operator using the contacts below; payment processing also follows BMC’s rules. This is not an offer of a new purchase."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal",
+            "heading": "Statutory withdrawal and refunds",
+            "paragraphs": [
+              "A consumer concluding a distance contract generally has 14 days from its conclusion to withdraw without giving a reason. Activating Pro or using the app does not automatically remove that right. Store commercial policies cannot restrict your statutory rights.",
+              "Early performance of an ongoing digital service may require your express request and proper information. A proportionate payment for service already supplied upon withdrawal is due only where the legal conditions are met. The exception for digital content supplied without a tangible medium requires, in particular, prior express consent, information and confirmation; these terms alone do not replace such consent or a request.",
+              "Send an unambiguous withdrawal statement to the operator’s email or postal address below, or to the seller identified on your receipt. Identify your account, order date and reference, and sales channel. Sending the statement within the time limit is sufficient. Rodinka support can help direct a payment request to the appropriate party. For valid statutory withdrawal, payments are refunded without undue delay and no later than 14 days after notice, using the same payment method unless otherwise agreed; any lawful proportionate service charge is unaffected."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal-model",
+            "heading": "Model withdrawal notice",
+            "paragraphs": [
+              "Use of this model is optional. To: the operator identified at the end of this page, or the seller on the receipt. I hereby withdraw from my Rodinka Pro subscription contract. Order date: …; order reference and sales channel: …; consumer name and address: …; account email: …; notice date: …; consumer signature only if sent on paper."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "defects",
+            "heading": "Digital service defects and updates",
+            "paragraphs": [
+              "You have statutory remedies for lack of conformity. The service must meet the contract and legal requirements for functionality, availability, security and necessary updates. For ongoing supply, we are responsible for defects arising or becoming apparent during the contractual period.",
+              "You may request a defect to be remedied free of charge within a reasonable time and without significant inconvenience. If remedy is impossible, unsuccessful, the defect recurs or is sufficiently serious, you may seek an appropriate price reduction or terminate under the applicable legal conditions. We do not exclude these rights through a blanket liability cap or an assertion that the service has no warranty."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "complaints",
+            "heading": "How to make a defect claim",
+            "paragraphs": [
+              "Send claims about Rodinka’s functionality or availability to privacy@mojerodinka.cz or the postal address below. Describe the defect, when it occurred and your requested remedy; your account email, app version and any order reference help us locate it. Do not send passwords or unnecessary health or family information.",
+              "We will confirm receipt and the substance of the claim, explain its handling and provide the outcome or reasons for rejection. Digital service claims will be resolved within a reasonable time considering the nature and purpose of the service, and we will keep you informed. Statutory remedies for delay or defects remain available. Direct payment claims also to the seller on your receipt; we can help identify the appropriate contact."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "adr",
+            "heading": "Alternative dispute resolution",
+            "paragraphs": [
+              "If we cannot resolve a consumer dispute under a contract with the operator directly, for a paid service you may contact the Czech Trade Inspection Authority (Česká obchodní inspekce, ČOI), an alternative consumer dispute resolution body. Submit a proposal within one year of first asserting your claim with the trader. ADR seeks an agreement and does not restrict access to courts.",
+              "For a separate payment relationship with another seller, jurisdiction and procedure also depend on that seller’s terms and applicable law."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "ČOI: ADR information and submission",
+                "href": "https://coi.gov.cz/informace-o-adr/"
+              }
+            ]
+          },
+          {
+            "heading": "Ending an account or the service",
+            "paragraphs": [
+              "You can delete your account in its settings; the Privacy Policy explains the exact steps and effects on shared family data. Save important material beforehand and separately cancel subscription renewal in the original channel. The app has no bulk export; you can request a copy of your data from support.",
+              "We will give reasonable advance notice of a planned shutdown of the service or substantial limitation of paid supply, with an opportunity to request available data. Unused paid service and any refund will be handled in accordance with statutory rights and the relevant sales channel. An urgent security intervention may require immediate restriction; consumer rights remain unaffected."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Statutory rights and changes to these terms",
+            "paragraphs": [
+              "Nothing in these terms limits mandatory consumer rights, including those under Czech and applicable European law. Consumers in other countries retain the mandatory protection afforded by the applicable law.",
+              "The current text and date appear on this public page. Material changes affecting an existing contract will be notified in advance; a new text does not itself retrospectively change an agreed paid period or statutory rights. This page does not establish consent to a future purchase or loss of the right of withdrawal."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "What does not belong in Rodinka",
@@ -538,7 +1083,8 @@
               "contain threats, harassment or intimidation,",
               "contain hateful content directed at a group of people,",
               "share material you do not have the rights to."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Reporting content",
@@ -547,7 +1093,8 @@
               "Reports marked as child safety are handled with priority.",
               "You can only report a message from a conversation you are part of."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Content removal",
@@ -555,7 +1102,8 @@
               "The operator may remove content that breaks these guidelines. The message text is no longer available in the app and the app stops providing access to its attachments; the underlying stored files are subsequently removed as part of moderation.",
               "You can always delete your own messages yourself."
             ],
-            "items": []
+            "items": [],
+            "links": []
           }
         ]
       },
@@ -568,7 +1116,8 @@
             "paragraphs": [
               "The controller of personal data and operator of Rodinka is Lukáš Sitta. For privacy questions and requests, email privacy@mojerodinka.cz."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "What we store",
@@ -588,7 +1137,8 @@
               "Messages: message text, reactions and attachments within your family.",
               "Notes about family members: text, an optional title and optional details (a name and a value) that an adult member writes about themselves or another family member, and whether the note is private or shared with the adults in the family.",
               "Notifications: your browser or device push endpoint and your reminder settings."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Why we process data",
@@ -601,7 +1151,8 @@
               "Optional analytics — consent.",
               "Health information — express consent.",
               "Support, privacy correspondence and requests — responding to the user request and legitimate operational interest."
-            ]
+            ],
+            "links": []
           },
           {
             "heading": "Health information",
@@ -611,7 +1162,8 @@
               "This is not medical documentation and not the provision of healthcare services.",
               "If you choose to write health information into a note about a family member, we store it as part of that note and use it only to show the note to you and to the adults you share it with. Rodinka does not evaluate the content of notes, and notes are not medical documentation."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Shared family space and access",
@@ -620,7 +1172,8 @@
               "Access is enforced by the database at row level and derived from the signed-in user, never from values sent by the app.",
               "Notes about family members: only the author can see a private note; every adult member of the family can read a shared one. Only the author can edit or delete it. Children’s accounts cannot see notes. The content of notes is never sent to analytics, operational diagnostics or notifications."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Safe arrival and one-time location sharing",
@@ -633,7 +1186,8 @@
               "If you switch on “Check in when you arrive” yourself, the chosen family place and the time by which you mean to confirm your arrival are stored. At that time the app reminds you to confirm; if no confirmation comes within 15 minutes, the family’s active adult members get a generic notification that it has not come yet. This does not use your device’s location. At most one such expectation is kept per member: confirming your arrival at the same place or cancelling deletes it, a new one replaces the previous one, and it expires 3 hours after the chosen time at the latest.",
               "Without an internet connection the location cannot be shared; the app neither stores it on the device nor sends it later."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Notifications",
@@ -641,7 +1195,8 @@
               "Lock-screen notifications never contain message content, sender names, health details or document names. Only generic wording is shown; the details appear once you open the app.",
               "Safe arrival notifications carry only generic wording (“Someone in your family …”) — never a name, place, time, address or coordinates. Who and where is shown only once you open the signed-in app."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Analytics",
@@ -650,7 +1205,8 @@
               "Health data, message content, documents and addresses are never sent to analytics.",
               "Safe arrival never sends precise coordinates, addresses, the exact accuracy of a location, names or places to analytics — only general categories, such as whether a location could be read."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Operational diagnostics",
@@ -659,7 +1215,8 @@
               "Rodinka deliberately excludes names, email addresses, user, member and family identifiers, and the contents of family records from these reports. It removes custom error messages, URL queries and fragments, and other unnecessary context. The provider may see an IP address during network transport.",
               "Operational diagnostics are technically separate from PostHog product analytics and its consent switch."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Processors",
@@ -677,22 +1234,53 @@
               "Google — only if you choose Google sign-in.",
               "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — opened as an external link when you ask for directions.",
               "Browser and device push services — notification delivery; the payload is encrypted."
-            ]
+            ],
+            "links": []
           },
           {
-            "heading": "Payments and subscriptions",
+            "heading": "Web payments and Paddle",
             "paragraphs": [
-              "On the web, the Rodinka Pro subscription is sold by Paddle.com as merchant of record. You enter your email, payment and billing details directly with Paddle, which processes them under its own privacy policy; Rodinka never sees them.",
-              "Rodinka receives from Paddle only customer, order and subscription identifiers, payment and refund status and the paid period, so it can switch Rodinka Pro on for the whole family."
+              "If Pro web purchases through Paddle.com are available, you provide payment and billing details to Paddle as seller (Merchant of Record), under its privacy policy; Rodinka does not store your payment card details.",
+              "For verification, Rodinka processes customer, transaction and subscription identifiers, payment and refund status, and the paid period. Describing the integration does not mean purchases have launched."
             ],
-            "items": []
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "google-play",
+            "heading": "Payments through Google Play",
+            "paragraphs": [
+              "If Android purchases are available, Google Play processes payment details under its privacy policy. Rodinka does not store payment card details.",
+              "For verification, Rodinka receives purchase and product identifiers, subscription status and validity. Purchase availability depends on the specific offer in the app."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "app-store",
+            "heading": "Payments through the App Store",
+            "paragraphs": [
+              "If iOS purchases are available, Apple processes payment details under its privacy policy. Rodinka does not store payment card details.",
+              "For verification, Rodinka receives transaction and product identifiers, subscription status, automatic renewal and validity. Purchase availability depends on the specific offer in the app."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Previous BMC memberships",
+            "paragraphs": [
+              "For existing Buy Me a Coffee subscribers, Rodinka processes membership identification, payment events, the paid period and the email needed for previous matching. BMC processes payments under its own policies. Rodinka does not offer new memberships through this channel."
+            ],
+            "items": [],
+            "links": []
           },
           {
             "heading": "International processing",
             "paragraphs": [
               "Rodinka does not claim that all processing remains only in the European Union or European Economic Area. Depending on provider infrastructure and deployment settings, some providers may process data in other countries. The exact locations and any transfer mechanisms depend on the relevant provider configuration and terms."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "How long we keep data",
@@ -702,7 +1290,8 @@
               "Safe arrival keeps only a short-lived current state and no history — see Safe arrival and one-time location sharing above.",
               "Notes about family members are kept until the author deletes them, or until the author, the member the note is about or the whole family is permanently removed. Notes written by or about a member who has been removed from the family are hidden and kept in case the membership is restored."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Storage and security",
@@ -711,7 +1300,8 @@
               "For offline use the app keeps a copy of your calendar, tasks and shopping list on your device. Document attachments are never stored on the device.",
               "Signing out removes the local copy and any cached photos from that device."
             ],
-            "items": []
+            "items": [],
+            "links": []
           },
           {
             "heading": "Your rights and contact",
@@ -722,7 +1312,8 @@
               "Rodinka does not offer a bulk data export inside the app; requests for a copy of your data are handled manually.",
               "You may also lodge a complaint with the Czech supervisory authority, the Office for Personal Data Protection (Úřad pro ochranu osobních údajů, ÚOOÚ)."
             ],
-            "items": []
+            "items": [],
+            "links": []
           }
         ]
       }
