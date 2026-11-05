@@ -1,5 +1,5 @@
 {
-  "source": "iLoopak/Rodinka src/features/legal @ 6ac50011",
+  "source": "iLoopak/Rodinka src/features/legal @ 4e64e51a",
   "operator": {
     "legalName": "Lukáš Sitta",
     "address": "Podlesí I 5311, 760 05 Zlín",
@@ -43,8 +43,8 @@
           {
             "heading": "Rodinka Free a Rodinka Pro",
             "paragraphs": [
-              "Free je bezplatný základní rodinný organizér s úložištěm 200 MiB. Pro rozšiřuje úložiště na 5 GiB a přidává Moment dne, personalizaci a další funkce označené Pro, například rodinnou ročenku, Rodinný týden a vytváření scénářů a příprav. Pro se vztahuje na konkrétní rodinu; další rodina pod stejným účtem ho automaticky nezískává.",
-              "Po skončení Pro se rodinné záznamy a fotografie jen kvůli skončení předplatného automaticky nemažou. Platí limit Free, proto nad něj nelze přidávat nové soubory; nové Momenty dne a funkce vyžadující aktivní Pro nejsou dostupné. Existující přípravy lze dál číst, upravovat a dokončovat. Již uložené PDF ročenky se nemění. Smazání účtu nebo rodiny má samostatná pravidla níže a v zásadách soukromí."
+              "Free je bezplatný základní rodinný organizér s prostorem 200 MiB pro rodinné fotografie. Pro rozšiřuje úložiště na 5 GiB a přidává Moment dne, personalizaci a další funkce označené Pro, například rodinnou ročenku, Rodinný týden a vytváření scénářů a příprav. Pro se vztahuje na konkrétní rodinu; další rodina pod stejným účtem ho automaticky nezískává.",
+              "Po skončení Pro se rodinné záznamy a fotografie jen kvůli skončení předplatného automaticky nemažou. Platí limit Free, proto nad něj nelze přidávat nové fotografie; nové Momenty dne a funkce vyžadující aktivní Pro nejsou dostupné. Existující přípravy lze dál číst, upravovat a dokončovat. Již uložené PDF ročenky se nemění. Smazání účtu nebo rodiny má samostatná pravidla níže a v zásadách soukromí."
             ],
             "items": [],
             "links": []
@@ -479,8 +479,8 @@
           {
             "heading": "Rodinka Free a Rodinka Pro",
             "paragraphs": [
-              "Free je bezplatný základný rodinný organizér s úložiskom 200 MiB. Pro rozširuje úložisko na 5 GiB a pridáva Moment dňa, personalizáciu a ďalšie funkcie označené Pro, napríklad rodinnú ročenku, Rodinný týždeň a vytváranie scenárov a príprav. Pro sa vzťahuje na konkrétnu rodinu; ďalšia rodina pod rovnakým účtom ho automaticky nezískava.",
-              "Po skončení Pro sa rodinné záznamy a fotografie len pre skončenie predplatného automaticky nemažú. Platí limit Free, preto nad neho nemožno pridávať nové súbory; nové Momenty dňa a funkcie vyžadujúce aktívne Pro nie sú dostupné. Existujúce prípravy možno ďalej čítať, upravovať a dokončovať. Už uložené PDF ročenky sa nemení. Zmazanie účtu alebo rodiny má samostatné pravidlá nižšie a v zásadách súkromia."
+              "Free je bezplatný základný rodinný organizér s priestorom 200 MiB na rodinné fotografie. Pro rozširuje úložisko na 5 GiB a pridáva Moment dňa, personalizáciu a ďalšie funkcie označené Pro, napríklad rodinnú ročenku, Rodinný týždeň a vytváranie scenárov a príprav. Pro sa vzťahuje na konkrétnu rodinu; ďalšia rodina pod rovnakým účtom ho automaticky nezískava.",
+              "Po skončení Pro sa rodinné záznamy a fotografie len pre skončenie predplatného automaticky nemažú. Platí limit Free, preto nad neho nemožno pridávať nové fotografie; nové Momenty dňa a funkcie vyžadujúce aktívne Pro nie sú dostupné. Existujúce prípravy možno ďalej čítať, upravovať a dokončovať. Už uložené PDF ročenky sa nemení. Zmazanie účtu alebo rodiny má samostatné pravidlá nižšie a v zásadách súkromia."
             ],
             "items": [],
             "links": []
@@ -915,8 +915,8 @@
           {
             "heading": "Rodinka Free and Rodinka Pro",
             "paragraphs": [
-              "Free provides the basic family organiser at no charge with 200 MiB of storage. Pro increases storage to 5 GiB and adds Moment of the Day, personalisation and other features marked Pro, such as the family yearbook, Family Week and creating scenarios and preparations. Pro covers a specific family; another family under the same account does not automatically receive it.",
-              "Family records and photos are not automatically deleted just because Pro ends. The Free limit applies, so new files cannot be added above it; new Moments of the Day and features requiring active Pro become unavailable. Existing preparations remain readable, editable and completable. Already saved yearbook PDFs are unaffected. Account or family deletion has separate rules below and in the Privacy Policy."
+              "Free provides the basic family organiser at no charge with 200 MiB for family photos. Pro increases storage to 5 GiB and adds Moment of the Day, personalisation and other features marked Pro, such as the family yearbook, Family Week and creating scenarios and preparations. Pro covers a specific family; another family under the same account does not automatically receive it.",
+              "Family records and photos are not automatically deleted just because Pro ends. The Free limit applies, so new photos cannot be added above it; new Moments of the Day and features requiring active Pro become unavailable. Existing preparations remain readable, editable and completable. Already saved yearbook PDFs are unaffected. Account or family deletion has separate rules below and in the Privacy Policy."
             ],
             "items": [],
             "links": []
