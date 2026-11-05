@@ -1,0 +1,27 @@
+name: Marketing quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  generated-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify generated output is committed
+        run: |
+          python generate_site.py
+          git diff --exit-code
+      - name: Validate SEO, analytics and legal content
+        run: |
+          python tools/validate_seo.py
+          python tools/validate_analytics.py
+          python tools/validate_legal.py

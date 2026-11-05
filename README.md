@@ -1,5 +1,7 @@
 # Rodinka marketingový web
 
+**Stav: CURRENT.** Pravidla zdroje a ověření generovaného webu.
+
 Statický vícejazyčný web bez produkčního build procesu a bez aplikačních závislostí. Vercel servíruje commitnuté HTML, CSS, JavaScript a obrázky přímo z repozitáře.
 
 ## Lokální spuštění
@@ -18,11 +20,11 @@ Společná šablona, překlady a obsah stránek jsou v `generate_site.py`. Po ú
 python generate_site.py
 ```
 
-Skript znovu vytvoří 48 statických HTML stránek (16 jazykových rodin × CS/SK/EN: homepage, 11 tematických stránek, ceník, zásady refundací, podmínky používání a zásady ochrany soukromí), `sitemap.xml` a experimentální `llms.txt`. Vygenerované soubory se commitují; Vercel proto nepotřebuje build command.
+Skript vytvoří lokalizované HTML, `sitemap.xml` a experimentální `llms.txt`. Vygenerované soubory se commitují; Vercel proto nepotřebuje build command.
 
 ## SEO údržba
 
-- Canonical host je výhradně `https://mojerodinka.cz`. Ve Vercelu musí být apex doména nastavena jako Primary; `www` má trvale přesměrovat na variantu bez `www`.
+- Canonical marketingových stránek je `https://mojerodinka.cz`; právní deriváty mají canonical na aplikaci podle pravidel níže. Ve Vercelu musí být apex doména nastavena jako Primary; `www` má trvale přesměrovat na variantu bez `www`.
 - Čeština zůstává v rootu, slovenština pod `/sk/` a angličtina pod `/en/`. Každá lokalizovaná stránka má vlastní canonical a kompletní reciproční `hreflang` včetně `x-default` na českou verzi.
 - Každá indexovatelná stránka musí mít unikátní lokalizovaný `title`, meta description, jeden `h1`, OG/Twitter text a viditelný obsah odpovídající danému vyhledávacímu záměru.
 - Novou stránku přidejte jako jednu jazykovou rodinu do `PATHS` a do všech tří částí `TOPICS`, její klíč zařaďte do `TOPIC_KEYS`, doplňte související stránky v `RELATED`, krátký popisek do `LLMS_LABELS` a `DIRECT_ANSWERS` a rodinu přidejte i do `FAMILIES` v `tools/validate_seo.py`. Tím se zapojí do generování, sitemap i tematického přehledu; vždy ještě ověřte, že má přirozený kontextový odkaz a není osiřelá. Potom spusťte generátor a SEO validaci.
@@ -59,31 +61,62 @@ Pravidla pro texty: G4a je **předání profilu, který zůstává dětský** (s
 
 Funkce byly ověřené v produkci 1. 11. 2026 (klient na `app.mojerodinka.cz` obsahuje trasy `/i`, `/helper`, `/takeover` a hlavičku rodiny; produkční databáze má příslušná RPC). Kdyby bylo potřeba obsah stáhnout, odeberte `circle` z `TOPIC_KEYS`, `FOOTER_KEYS`, `RELATED` a `FAMILIES` ve validátoru, vynechejte `render_circle` v `render_home` a vraťte doplněné otázky; pak přegenerujte web.
 
-### Rodinka Pro
+### Rodinka Pro a dostupnost nákupů
 
-Kompaktní blok na konci homepage, za rodinným citátem a před hlavním CTA „Začít zdarma“, spravují `HOME_PRO` a `render_home_pro` v generátoru. CS/SK/EN vysvětlují, že Rodinka funguje i zdarma a Pro přidává Rodinný týden, Rodinné scénáře a přípravy, Navrhnout nákup, Navrhnout jídelníček, Rodinnou ročenku, 5 GB pro rodinné fotografie, Moment dne, vlastní barvy členů a accent aplikace; vycházejí z aktuálního kontraktu `Rodinka/docs/FAMILY_ENTITLEMENTS.md` a modulových dokumentů `FAMILY_WEEK.md`, `FAMILY_SCENARIOS.md`, `SHOPPING_LIST.md`, `MEAL_PLANNING.md` a `YEARBOOK.md`.
+**CURRENT — stav k 5. 11. 2026.** Free je bezplatný rodinný organizér s 200 MiB.
+Pro pro konkrétní rodinu přidává 5 GiB, Moment dne, personalizaci a nástroje
+podle aktuálních capabilities aplikace. Nové nákupy se připravují; jejich
+skutečnou dostupnost určuje nabídka v aplikaci a provider/serverové brány.
+Existující předplatné může dál pokračovat. Marketing nezapíná žádný checkout.
 
-Nové Pro nástroje (Rodinka PR 702, 704, 706 a 708) se na webu objevují na čtyřech místech: v bloku `HOME_PRO`, v ceníku (`INFO_PAGES` → `pricing`: seznam výhod, „Rozdíl mezi Free a Pro“ a co zůstane po skončení Pro) a jako jedna otázka na stránkách plánovače (týden a scénáře), nákupu, jídel, vzpomínek (ročenka) a výletů (balicí seznam ze scénáře). Pravidla pro texty: jde o nástroje pro dospělé; Free funkce Pro nijak neomezuje (ceník proto netvrdí, že Free a Pro mají stejné funkce, ale že Pro nic z Free neubírá); návrhy nákupu a jídelníčku vznikají jen z dat rodiny, nic se neuloží bez potvrzení a navržené jídlo je „navržené“, dokud ho někdo nepotvrdí; web neslibuje AI, recepty ani dietní doporučení. Rodinný týden sám nic nevytváří. Ročenka je PDF pro obrazovku nebo tisk (spadávka, ořezové značky), ne tištěná kniha na objednávku. Po skončení Pro lze rozpracované přípravy dokončit a uložená PDF zůstávají. Přítomnost tras `/family-week`, `/scenarios` a `/memories/yearbook` v produkčním klientu byla ověřena 4. 11. 2026. Cena se v bloku neuvádí; blok odkazuje na samostatný ceník (viz níže).
+Na výslovné rozhodnutí vlastníka z 5. 11. 2026 se placené ceny zatím nikde
+nezveřejňují, ani na homepage, v metadatech, sociálních náhledech nebo JSON-LD.
+`HOME_PRO`, `INFO_PAGES` a `render_plans` popisují funkce a dostupnost, nikoli
+aktuálně prodejný ceník. Znovuzavedení částek vyžaduje potvrzení vlastníkem
+pro skutečné produkty a kanály; SEO guard hlídá návrat dosavadních částek.
+Úložiště používá přesné jednotky MiB/GiB podle aplikace.
 
-Textový odkaz „Ceník a srovnání“ vede na lokalizovaný ceník (`/pricing/`); blok uvádí jen výchozí cenu „od 149 Kč měsíčně“. Web neodkazuje na žádnou membership ani donation platformu: Paddle při kontrole domény 11/2026 zamítl web mimo jiné kvůli kategorii *Donations* (odkazy „Podpořit vývoj“ a členství na Buy Me a Coffee). `tools/validate_seo.py` proto selže na odkaz na Buy Me a Coffee nebo na formulace typu „podpořit vývoj“ či „donate“. Patička všech stránek odkazuje na Pro blok lokalizované homepage (`#rodinka-pro`). Na stránce širší rodiny je otázka „Je to součást Rodinky Pro?“ s odpovědí ne: G1–G4a fungují ve verzi zdarma. Analytics označuje jen odkazy do aplikace (`cta_app_click`).
+### Podmínky, soukromí a refundace
 
-### Ceník, refundace, podmínky a soukromí (Paddle)
+Autoritativní veřejné dokumenty jsou `https://app.mojerodinka.cz/terms` a
+`https://app.mojerodinka.cz/privacy`, pro SK/EN s `?lang=sk` a `?lang=en`.
+Patička a právní odkazy vedou přímo tam. Marketingové `/terms/`, `/privacy/`
+a jejich lokalizace zůstávají čitelné HTML deriváty pro ověřování domény;
+canonical, hreflang, OG URL a viditelný odkaz ukazují na aplikaci. Tyto
+nekanonické kopie nejsou v marketingové sitemap. Nevzniká druhý autorský text.
 
-Veřejné stránky pro schválení Paddle Live spravují `INFO_KEYS`, `INFO_PAGES`, `INFO_COMMON`, `render_info` a `render_plans` v generátoru:
+`data/legal-content.json` je generovaný snapshot `legalContent.ts` a
+`operator.ts` aplikace. Podmínky veřejně uvádějí Paddle, Google Play, Apple
+a BMC pouze jako historický kanál. BMC není nákupní ani donation odkaz;
+SEO guard povoluje jeho název jen v informativním právním kontextu a dál
+zakazuje odkazy na jeho nákup/donation stránky. Obsah nevytváří tvrzení,
+že všechny prodejní kanály už běží.
 
-| Stránka | CS | SK | EN |
-| --- | --- | --- | --- |
-| Ceník | `/pricing/` | `/sk/pricing/` | `/en/pricing/` |
-| Zásady refundací | `/refund-policy/` | `/sk/refund-policy/` | `/en/refund-policy/` |
-| Podmínky používání | `/terms/` | `/sk/terms/` | `/en/terms/` |
-| Zásady ochrany soukromí | `/privacy/` | `/sk/privacy/` | `/en/privacy/` |
+`/refund-policy/` a lokalizace přebírají z téhož snapshotu celé relevantní
+sekce podle stabilních `id`: kanály, obnovování, zákonné odstoupení, vzor,
+vady, reklamace a ADR. Pravidla se nepřepisují ručně do `INFO_PAGES`.
+Komerční refundace nejsou zaměněné se zákonnými právy ani s běžným zrušením.
+Kontakty a status neplátce DPH jsou převzaté z vlastníkem potvrzeného
+`operator.ts`; telefon je text bez `tel:` s vypnutou autodetekcí.
 
-Cesty mají záměrně stejný anglický slug ve všech jazycích, protože je Paddle při ověření kontroluje přesně; canonical, reciproční `hreflang` a sitemap fungují stejně jako u ostatních stránek. Obě stránky mají jednu krátkou přímou odpověď, ale nemají produktovou ukázku ani JSON-LD `Offer` (ceny nejsou strukturovaná data).
+Po změně v aplikaci synchronizujte z konkrétního čistého/commitnutého checkoutu:
 
-- **Obsah:** Free 200 MB; Pro 149 Kč měsíčně / 1 599 Kč ročně (CZK včetně DPH, jinde se částka může lišit) s 5 GB, Momentem dne, vlastními barvami členů a accentem a vlastním uspořádáním navigace. Výhody vycházejí z `Rodinka/docs/FAMILY_ENTITLEMENTS.md`, obnovování, zrušení a dopad refundace z `Rodinka/docs/PADDLE_BILLING.md` (plná refundace Pro odebere, částečná ne; zrušení ponechá Pro do konce zaplaceného období). Pravidla refundací shrnují oficiální [Paddle Refund Policy](https://www.paddle.com/legal/refund-policy) ve znění z 31. 3. 2026; při její změně upravte `INFO_PAGES` ve všech jazycích.
-- **CTA:** všechna nákupní CTA vedou do aplikace (`APP_URL`, `data-analytics-location`). Web sám žádný Paddle checkout ani token nemá; zda aplikace nabídne nákup, rozhoduje její flag `VITE_PADDLE_CHECKOUT_ENABLED`.
-- **Podmínky a soukromí** mají na webu vlastní stránky, protože je Paddle vyžaduje na ověřované doméně. Texty se ale nepíšou dvakrát: zdrojem pravdy zůstává aplikace (`Rodinka/src/features/legal/legalContent.ts` a `operator.ts`). `data/legal-content.json` je jejich synchronizovaná kopie s webovou variantou sekcí (platby přes Paddle; Android/iOS varianty se na web nedostanou) a vykreslují ji `LEGAL_KEYS`, `LEGAL_META` a `render_legal`. JSON neupravujte ručně; po změně právních textů v aplikaci spusťte `node tools/sync_legal_content.mjs ../Rodinka` (Node 22.13+) a pak generátor. Pole `source` v JSON uvádí commit aplikace, ze kterého kopie vznikla. Patička všech stránek má sloupec „Podmínky a zásady“ (ceník, refundace, podmínky, soukromí); `tools/validate_seo.py` hlídá, že na ně vede odkaz z každé stránky, že podmínky jmenují Merchant of Record a že české vlastní názvy ve slovenském textu jsou označené `lang="cs"`. Odkaz na podporu aplikace (`/support`) není CTA a nenese `data-analytics-location`, což hlídá `tools/validate_analytics.py`.
-- Údaje o provozovateli se berou jen z `operator.ts` v aplikaci; synchronizační skript odmítne kopii bez jména a kontaktu.
+```bash
+node tools/sync_legal_content.mjs ../Rodinka
+node tools/sync_legal_content.mjs ../Rodinka --check
+python generate_site.py
+python tools/validate_seo.py
+python tools/validate_analytics.py
+python tools/validate_legal.py
+```
+
+`source` uvádí commit aplikace. `--check` odmítá drift vůči zvolenému checkoutu;
+`validate_legal.py` ověřuje skutečně vygenerované odstavce, odkazy, kontakty
+a společné spotřebitelské sekce. Publikujte odpovídající verzi aplikace dříve
+než marketing, aby kanonické odkazy vedly na nové texty. Odborné posouzení
+checkout souhlasů a online funkce odstoupení vlastní audit v aplikaci
+`docs/audits/TERMS_TRADER_AUDIT_2026-11-05.md`; změna webu tento launch gate
+nenahrazuje.
 
 ### Přegenerování písem
 
@@ -153,6 +186,7 @@ Automatické odesílání do IndexNow zatím není zapojené. U tohoto malého s
 ```bash
 python tools/validate_seo.py
 python tools/validate_analytics.py
+python tools/validate_legal.py
 ```
 
 Po změně JSON-LD otestujte reprezentativní URL ve [Schema.org Validatoru](https://validator.schema.org/) a v [Google Rich Results Testu](https://search.google.com/test/rich-results). Rich result není cílem ani zárukou; test má zachytit chybný zápis.

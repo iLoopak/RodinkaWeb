@@ -1018,29 +1018,45 @@ HOME_TRUST = {
 }
 
 
-HOME_PRO = {
-    "cs": {
-        "title": "Ještě o kousek víc pro vaši Rodinku",
-        "text": "Rodinka funguje skvěle i zdarma. Rodinka Pro k ní přidává pomocníky, kteří ušetří plánování: Rodinný týden, opakovatelné přípravy na cesty a akce, návrh nákupu a jídelníčku z vašich vlastních rodinných dat a Rodinnou ročenku. K tomu víc místa na fotografie, Moment dne a vlastní vzhled.",
-        "benefits": ("Rodinný týden: co je potřeba dořešit, na jednom místě", "Rodinné scénáře a přípravy na cesty, výlety i oslavy", "Návrh nákupu a jídelníčku podle toho, co doma opravdu kupujete a vaříte", "Rodinná ročenka jako PDF k tisku", "5 GB pro rodinné fotografie a Moment dne", "Vlastní barvy členů a vzhled Rodinky"),
-        "summary": "Od 149 Kč měsíčně, jedno předplatné pro celou rodinu. Zrušit ho můžete kdykoli.",
-        "cta": "Ceník a srovnání",
-    },
-    "sk": {
-        "title": "Ešte o kúsok viac pre vašu Rodinku",
-        "text": "Rodinka funguje skvele aj zadarmo. Rodinka Pro k nej pridáva pomocníkov, ktorí ušetria plánovanie: Rodinný týždeň, opakovateľné prípravy na cesty a akcie, návrh nákupu a jedálnička z vašich vlastných rodinných údajov a Rodinnú ročenku. K tomu viac miesta na fotografie, Moment dňa a vlastný vzhľad.",
-        "benefits": ("Rodinný týždeň: čo treba doriešiť, na jednom mieste", "Rodinné scenáre a prípravy na cesty, výlety aj oslavy", "Návrh nákupu a jedálnička podľa toho, čo doma naozaj kupujete a varíte", "Rodinná ročenka ako PDF na tlač", "5 GB na rodinné fotografie a Moment dňa", "Vlastné farby členov a vzhľad Rodinky"),
-        "summary": "Od 149 Kč mesačne, jedno predplatné pre celú rodinu. Zrušiť ho môžete kedykoľvek.",
-        "cta": "Cenník a porovnanie",
-    },
-    "en": {
-        "title": "A little more for your family",
-        "text": "Rodinka works great for free. Rodinka Pro adds helpers that take the work out of planning: the Family week, reusable preparations for trips and events, suggested shopping and meal plans built from your own family data, and the Family yearbook. Plus more space for photos, Moment of the Day and your own look.",
-        "benefits": ("Family week: everything that still needs sorting, in one place", "Family scenarios and preparations for trips, outings and celebrations", "Suggested items and meal plans based on what you actually buy and cook", "Family yearbook as a print-ready PDF", "5 GB for family photos and Moment of the Day", "Custom member colours and app accent"),
-        "summary": "From CZK 149 a month, one subscription for the whole family. Cancel at any time.",
-        "cta": "Pricing and comparison",
-    },
-}
+HOME_PRO = {'cs': {'title': 'Ještě o kousek víc pro vaši Rodinku',
+        'text': 'Rodinka funguje skvěle i zdarma. Rodinka Pro k ní přidává pomocníky, kteří ušetří plánování: Rodinný týden, '
+                'opakovatelné přípravy na cesty a akce, návrh nákupu a jídelníčku z vašich vlastních rodinných dat a Rodinnou '
+                'ročenku. K tomu víc místa na fotografie, Moment dne a vlastní vzhled.',
+        'benefits': ('Rodinný týden: co je potřeba dořešit, na jednom místě',
+                     'Rodinné scénáře a přípravy na cesty, výlety i oslavy',
+                     'Návrh nákupu a jídelníčku podle toho, co doma opravdu kupujete a vaříte',
+                     'Rodinná ročenka jako PDF k tisku',
+                     '5 GiB pro rodinné fotografie a Moment dne',
+                     'Vlastní barvy členů a vzhled Rodinky'),
+        'summary': 'Pro platí pro konkrétní rodinu. Nové nákupy připravujeme; případnou cenu uvidíte až v dostupné nabídce v '
+                   'aplikaci.',
+        'cta': 'Srovnání Free a Pro'},
+ 'sk': {'title': 'Ešte o kúsok viac pre vašu Rodinku',
+        'text': 'Rodinka funguje skvele aj zadarmo. Rodinka Pro k nej pridáva pomocníkov, ktorí ušetria plánovanie: Rodinný '
+                'týždeň, opakovateľné prípravy na cesty a akcie, návrh nákupu a jedálnička z vašich vlastných rodinných údajov a '
+                'Rodinnú ročenku. K tomu viac miesta na fotografie, Moment dňa a vlastný vzhľad.',
+        'benefits': ('Rodinný týždeň: čo treba doriešiť, na jednom mieste',
+                     'Rodinné scenáre a prípravy na cesty, výlety aj oslavy',
+                     'Návrh nákupu a jedálnička podľa toho, čo doma naozaj kupujete a varíte',
+                     'Rodinná ročenka ako PDF na tlač',
+                     '5 GiB na rodinné fotografie a Moment dňa',
+                     'Vlastné farby členov a vzhľad Rodinky'),
+        'summary': 'Pro platí pre konkrétnu rodinu. Nové nákupy pripravujeme; prípadnú cenu uvidíte až v dostupnej ponuke v '
+                   'aplikácii.',
+        'cta': 'Porovnanie Free a Pro'},
+ 'en': {'title': 'A little more for your family',
+        'text': 'Rodinka works great for free. Rodinka Pro adds helpers that take the work out of planning: the Family week, '
+                'reusable preparations for trips and events, suggested shopping and meal plans built from your own family data, '
+                'and the Family yearbook. Plus more space for photos, Moment of the Day and your own look.',
+        'benefits': ('Family week: everything that still needs sorting, in one place',
+                     'Family scenarios and preparations for trips, outings and celebrations',
+                     'Suggested items and meal plans based on what you actually buy and cook',
+                     'Family yearbook as a print-ready PDF',
+                     '5 GiB for family photos and Moment of the Day',
+                     'Custom member colours and app accent'),
+        'summary': 'Pro covers a specific family. New purchases are being prepared; any price will appear with an available '
+                   'in-app offer.',
+        'cta': 'Compare Free and Pro'}}
 
 
 HOME = {
@@ -1732,6 +1748,11 @@ def esc(value: object) -> str:
 
 
 def canonical(path: str) -> str:
+    for key in ("terms", "privacy"):
+        for locale, legal_path in PATHS[key].items():
+            if path == legal_path:
+                suffix = "" if locale == "cs" else f"?lang={locale}"
+                return f"{APP_URL}/{key}{suffix}"
     return f"{SITE_URL}{path}"
 
 
@@ -1888,6 +1909,7 @@ def head(page_key: str, locale: str, data: dict) -> str:
     )
     return f'''  <head>
     <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 {analytics_head()}
     <title>{esc(data["title"])}</title>
@@ -2135,7 +2157,8 @@ def language_switcher(page_key: str, locale: str) -> str:
     links = []
     for code in ("cs", "sk", "en"):
         current = ' aria-current="page"' if code == locale else ""
-        links.append(f'<a href="{PATHS[page_key][code]}" lang="{code}" hreflang="{code}" aria-label="{names[code]}"{current}>{labels[code]}</a>')
+        href = canonical(PATHS[page_key][code]) if page_key in LEGAL_KEYS else PATHS[page_key][code]
+        links.append(f'<a href="{href}" lang="{code}" hreflang="{code}" aria-label="{names[code]}"{current}>{labels[code]}</a>')
     return f'<div class="language-switcher" role="group" aria-label="{esc(LOCALES[locale]["language_label"])}">' + '<span aria-hidden="true">·</span>'.join(links) + "</div>"
 
 
@@ -2630,7 +2653,7 @@ def write_page(path: Path, content: str) -> None:
 
 
 def render_sitemap() -> str:
-    page_order = ("home", *TOPIC_KEYS, *INFO_KEYS, *LEGAL_KEYS)
+    page_order = ("home", *TOPIC_KEYS, *INFO_KEYS)
     urls = "\n".join(
         f"  <url><loc>{canonical(PATHS[page_key][locale])}</loc></url>"
         for locale in ("cs", "sk", "en")
@@ -2688,394 +2711,295 @@ SUPPORT_PAGE_URL = f"{APP_URL}/support"
 PADDLE_REFUND_POLICY_URL = "https://www.paddle.com/legal/refund-policy"
 PADDLE_BUYER_URL = "https://paddle.net"
 
-PRO_PRICES = {"monthly": "149 Kč", "yearly": "1 599 Kč"}
 
-INFO_COMMON = {
-    "cs": {
-        "legal_kicker": "PODMÍNKY A ZÁSADY",
-        "legal_title": "Všechny podmínky na jednom místě",
-        "links": {
-            "pricing": "Ceník Rodinky",
-            "refunds": "Zásady refundací",
-            "terms": "Podmínky používání",
-            "privacy": "Zásady ochrany soukromí",
-            "paddle_policy": "Paddle Refund Policy",
-            "paddle_buyer": "paddle.net – správa objednávek a refundace",
-        },
-        "updated": "Poslední aktualizace: 2. 11. 2026",
-    },
-    "sk": {
-        "legal_kicker": "PODMIENKY A ZÁSADY",
-        "legal_title": "Všetky podmienky na jednom mieste",
-        "links": {
-            "pricing": "Cenník Rodinky",
-            "refunds": "Zásady refundácií",
-            "terms": "Podmienky používania",
-            "privacy": "Zásady ochrany súkromia",
-            "paddle_policy": "Paddle Refund Policy",
-            "paddle_buyer": "paddle.net – správa objednávok a refundácie",
-        },
-        "updated": "Posledná aktualizácia: 2. 11. 2026",
-    },
-    "en": {
-        "legal_kicker": "TERMS AND POLICIES",
-        "legal_title": "Every policy in one place",
-        "links": {
-            "pricing": "Rodinka pricing",
-            "refunds": "Refund policy",
-            "terms": "Terms of use",
-            "privacy": "Privacy policy",
-            "paddle_policy": "Paddle Refund Policy",
-            "paddle_buyer": "paddle.net – manage orders and refunds",
-        },
-        "updated": "Last updated: 2 November 2026",
-    },
-}
+INFO_COMMON = {'cs': {'legal_kicker': 'PODMÍNKY A ZÁSADY',
+        'legal_title': 'Všechny podmínky na jednom místě',
+        'links': {'pricing': 'Ceník Rodinky',
+                  'refunds': 'Zásady refundací',
+                  'terms': 'Podmínky používání',
+                  'privacy': 'Zásady ochrany soukromí',
+                  'paddle_policy': 'Paddle Refund Policy',
+                  'paddle_buyer': 'paddle.net – správa objednávek a refundace'},
+        'updated': 'Poslední aktualizace: 5. 11. 2026'},
+ 'sk': {'legal_kicker': 'PODMIENKY A ZÁSADY',
+        'legal_title': 'Všetky podmienky na jednom mieste',
+        'links': {'pricing': 'Cenník Rodinky',
+                  'refunds': 'Zásady refundácií',
+                  'terms': 'Podmienky používania',
+                  'privacy': 'Zásady ochrany súkromia',
+                  'paddle_policy': 'Paddle Refund Policy',
+                  'paddle_buyer': 'paddle.net – správa objednávok a refundácie'},
+        'updated': 'Posledná aktualizácia: 5. 11. 2026'},
+ 'en': {'legal_kicker': 'TERMS AND POLICIES',
+        'legal_title': 'Every policy in one place',
+        'links': {'pricing': 'Rodinka pricing',
+                  'refunds': 'Refund policy',
+                  'terms': 'Terms of use',
+                  'privacy': 'Privacy policy',
+                  'paddle_policy': 'Paddle Refund Policy',
+                  'paddle_buyer': 'paddle.net – manage orders and refunds'},
+        'updated': 'Last updated: 5 November 2026'}}
 
-INFO_PAGES = {
-    "cs": {
-        "pricing": {
-            "title": "Ceník Rodinky – Free zdarma, Pro od 149 Kč | Rodinka",
-            "description": "Rodinka Free je zdarma s 200 MB na rodinné fotky. Rodinka Pro za 149 Kč měsíčně nebo 1 599 Kč ročně přidává Rodinný týden, přípravy, návrhy nákupu a jídelníčku, ročenku a 5 GB.",
-            "og_title": "Ceník Rodinky: Free a Rodinka Pro",
-            "og_description": "Rodinka je zdarma pro celou rodinu. Rodinka Pro za 149 Kč měsíčně nebo 1 599 Kč ročně přidává 5 GB pro fotografie a další výhody.",
-            "og_alt": "Rodinka – ceník verze Free a Rodinka Pro",
-            "eyebrow": "CENÍK",
-            "h1": "Ceník Rodinky",
-            "lead": "Rodinku může celá rodina používat zdarma. Rodinka Pro je dobrovolné předplatné pro rodiny, které chtějí pomocníky pro plánování týdne, ročenku a víc místa na fotografie.",
-            "answer": (
-                "Kolik stojí Rodinka?",
-                "Rodinka Free je zdarma a má 200 MB pro rodinné fotografie. Rodinka Pro stojí 149 Kč měsíčně nebo 1 599 Kč ročně, přidává Rodinný týden, Rodinné scénáře a přípravy, návrh nákupu a jídelníčku, Rodinnou ročenku, 5 GB úložiště, Moment dne a možnosti přizpůsobení a platí pro celou rodinu. Ceny v Kč jsou včetně DPH.",
-            ),
-            "plans_title": "Vyberte, co vaší rodině sedí",
-            "free": {
-                "name": "Rodinka Free",
-                "price": "0 Kč",
-                "period": "zdarma",
-                "text": "Pro každou rodinu, bez platební karty.",
-                "features": (
-                    "Sdílený kalendář, úkoly, nákupy, jídla, výlety, vzpomínky a hlídání dokladů",
-                    "Účty pro dospělé i děti a zapojení širší rodiny",
-                    "200 MB pro rodinné fotografie",
-                ),
-                "cta": "Začít zdarma",
-            },
-            "pro": {
-                "name": "Rodinka Pro",
-                "monthly": "měsíčně",
-                "yearly": "ročně",
-                "yearly_note": "Roční předplatné vyjde o 189 Kč levněji než 12 měsíčních plateb.",
-                "text": "Jedno předplatné pro celou rodinu.",
-                "features": (
-                    "Vše z Rodinky Free",
-                    "Rodinný týden a Rodinné scénáře s přípravami",
-                    "Navrhnout nákup a Navrhnout jídelníček",
-                    "Rodinná ročenka k tisku",
-                    "5 GB pro rodinné fotografie",
-                    "Moment dne",
-                    "Vlastní barvy členů a rodinný accent",
-                    "Vlastní uspořádání hlavní navigace",
-                ),
-                "cta": "Získat Rodinku Pro v aplikaci",
-                "cta_note": "Předplatné sjednává dospělý člen rodiny po přihlášení do aplikace.",
-            },
-            "price_note": "Ceny jsou uvedené v českých korunách včetně DPH. V jiných zemích a měnách se výsledná částka může lišit; konečnou cenu včetně daně uvidíte vždy před zaplacením.",
-            "sections": (
-                ("Rozdíl mezi Free a Pro", (
-                    "Kalendář, úkoly, nákupy, jídla, výlety, vzpomínky, doklady i zapojení širší rodiny máte ve verzi Free a Rodinka Pro je nijak neomezuje. Pro k nim přidává pomocníky pro dospělé: Rodinný týden s přehledem toho, co je v týdnu potřeba dořešit, Rodinné scénáře a z nich přípravy na cesty a akce, návrh nákupu podle vašich posledních nákupů, návrh jídelníčku z vaší knihovny jídel a Rodinnou ročenku jako PDF k tisku. Navíc 5 GB místa na fotografie místo 200 MB, Moment dne a možnost přizpůsobit si barvy a hlavní navigaci.",
-                    "Návrhy nákupu a jídelníčku vznikají jen z dat vaší rodiny a nic se neuloží, dokud je nepotvrdíte. Totéž můžete ve verzi Free přidat ručně.",
-                    "Rodinka Pro patří celé rodině. Stačí, když ji sjedná jeden dospělý, a výhody mají všichni členové této rodiny.",
-                    "Když Rodinka Pro skončí, nic se nemaže. Fotografie i uložené Momenty dne zůstanou a jdou dál prohlížet i mazat. Jen nové fotografie nad limit 200 MB a nové Momenty dne už přidat nepůjde a vlastní barvy se přestanou používat.",
-                    "Rozpracované přípravy můžete po skončení Pro dál odškrtávat, upravovat a dokončit a už uložené PDF ročenky zůstávají vaše. Nové přípravy, úpravy scénářů, Rodinný týden, návrhy nákupu a jídelníčku i nový export ročenky vyžadují Rodinku Pro.",
-                )),
-                ("Automatické obnovování", (
-                    "Předplatné se automaticky obnovuje na další měsíc nebo rok, dokud ho nezrušíte. Platbu za každé další období zpracuje Paddle uloženou platební metodou.",
-                )),
-                ("Zrušení předplatného", (
-                    "Předplatné můžete kdykoli zrušit na paddle.net nebo v aplikaci: dospělý, který předplatné sjednal, najde ve Více → Účet a rodina tlačítko Spravovat předplatné.",
-                    "Zrušení zastaví další platby. Rodinka Pro zůstane aktivní do konce už zaplaceného období. Smazání účtu v Rodince předplatné samo nezruší.",
-                )),
-                ("Platba přes Paddle", (
-                    "Objednávky zpracovává náš online prodejce Paddle.com, který je u všech objednávek prodejcem (Merchant of Record). Paddle přijímá platbu, vystavuje doklad, odvádí daň a vyřizuje dotazy k platbám i vrácení peněz.",
-                    "Zrušení předplatného a vrácení peněz jsou dvě různé věci. Jak o vrácení peněz požádat, popisují Zásady refundací.",
-                )),
-            ),
-            "cta_title": "Začněte zdarma, Pro můžete přidat kdykoli",
-            "cta_text": "Rodinka se otevře v prohlížeči. Bez platební karty a bez instalace.",
-        },
-        "refunds": {
-            "title": "Zásady refundací předplatného Rodinka Pro | Rodinka",
-            "description": "Jak zrušit předplatné Rodinka Pro, jak požádat o vrácení peněz přes Paddle na paddle.net a co se stane s Rodinkou Pro po schválené refundaci.",
-            "og_title": "Zásady refundací Rodinky Pro",
-            "og_description": "Předplatné Rodinka Pro prodává Paddle.com jako Merchant of Record. O vrácení peněz žádáte na paddle.net do 14 dnů od platby.",
-            "og_alt": "Rodinka – zásady refundací předplatného Rodinka Pro",
-            "eyebrow": "REFUNDACE",
-            "h1": "Zásady refundací",
-            "lead": "Předplatné Rodinka Pro prodává Paddle.com jako Merchant of Record. O vrácení peněz proto žádáte u Paddle, podle jeho zásad a vašich zákonných práv.",
-            "answer": (
-                "Jak požádám o vrácení peněz za Rodinku Pro?",
-                "Na paddle.net vyhledejte svou objednávku a požádejte o vrácení peněz, nebo použijte odkaz v e-mailovém potvrzení platby od Paddle. Žádost podejte do 14 dnů od platby. O refundaci rozhoduje Paddle podle své Refund Policy a platných spotřebitelských práv.",
-            ),
-            "sections": (
-                ("Kdo je prodejce", (
-                    "Objednávky Rodinky Pro zpracovává náš online prodejce Paddle.com, který je u všech objednávek prodejcem (Merchant of Record). Paddle přijímá platbu, vystavuje doklad, odvádí daň a vyřizuje dotazy k platbám i žádosti o vrácení peněz.",
-                )),
-                ("Zrušení předplatného není refundace", (
-                    "Zrušení zastaví budoucí platby. Rodinka Pro zůstane aktivní do konce období, které už máte zaplacené, a pak skončí. Zrušením se peníze za běžící období nevracejí.",
-                    "Refundace je vrácení peněz za konkrétní platbu. Pokud Paddle schválí plnou refundaci platby, Rodinka Pro tím skončí dřív, i když zaplacené období ještě neuplynulo. Částečná refundace přístup k Rodince Pro nemění.",
-                    "Refundace sama nemusí předplatné zrušit. Pokud nechcete platit za další období, zrušte předplatné také – na paddle.net nebo v aplikaci ve Více → Účet a rodina → Spravovat předplatné.",
-                )),
-                ("Jak požádat o vrácení peněz", (
-                    "Na paddle.net vyhledejte objednávku a zvolte možnost požádat o vrácení peněz (Request refund).",
-                    "Nebo použijte odkaz v potvrzení platby, které vám Paddle poslal e-mailem.",
-                    "Spotřebitelé z EU mohou využít i tlačítko pro odstoupení v zákaznickém portálu Paddle, kam vede odkaz ze stejného e-mailu.",
-                    "Žádost podejte do 14 dnů od data platby.",
-                )),
-                ("Kdy Paddle peníze vrací", (
-                    "Paddle může peníze vrátit, pokud o to požádáte do 14 dnů od platby. Podání žádosti v této lhůtě vrácení samo nezaručuje; o žádosti rozhoduje Paddle podle své Refund Policy. Paddle může žádost odmítnout při podvodu nebo zneužívání refundací.",
-                    "Spotřebitelé v EU, EHP, Švýcarsku a Spojeném království mají u digitálního obsahu a služeb zákonné právo odstoupit od smlouvy do 14 dnů. Podle Paddle se týká první platby předplatného a uplatníte ho žádostí do 14 dnů od data platby. Lhůty pro spotřebitele v dalších zemích uvádí Paddle Refund Policy.",
-                    "Tyto zásady neomezují vaše zákonná práva, například když služba nefunguje nebo neodpovídá popisu.",
-                )),
-                ("Technické potíže", (
-                    "Když Rodinka Pro nefunguje, jak má, napište nám nejdřív přes stránku Podpora v aplikaci. Pomůžeme to vyřešit; pokud se to nepodaří, můžete se obrátit na podporu Paddle.",
-                )),
-                ("Platné znění", (
-                    "Tato stránka shrnuje, jak vrácení peněz u Rodinky Pro funguje. Pravidla pro vrácení peněz stanoví Paddle Refund Policy; pokud by se od ní toto shrnutí lišilo, platí znění Paddle.",
-                )),
-            ),
-            "cta_title": "Rodinka zůstává zdarma",
-            "cta_text": "Bez předplatného můžete Rodinku dál používat ve verzi Free.",
-        },
-    },
-    "sk": {
-        "pricing": {
-            "title": "Cenník Rodinky – Free zadarmo, Pro od 149 Kč | Rodinka",
-            "description": "Rodinka Free je zadarmo s 200 MB na rodinné fotky. Rodinka Pro za 149 Kč mesačne alebo 1 599 Kč ročne pridáva Rodinný týždeň, prípravy, návrhy nákupu a jedálnička, ročenku a 5 GB.",
-            "og_title": "Cenník Rodinky: Free a Rodinka Pro",
-            "og_description": "Rodinka je zadarmo pre celú rodinu. Rodinka Pro za 149 Kč mesačne alebo 1 599 Kč ročne pridáva 5 GB na fotografie a ďalšie výhody.",
-            "og_alt": "Rodinka – cenník verzie Free a Rodinka Pro",
-            "eyebrow": "CENNÍK",
-            "h1": "Cenník Rodinky",
-            "lead": "Rodinku môže celá rodina používať zadarmo. Rodinka Pro je dobrovoľné predplatné pre rodiny, ktoré chcú viac miesta na fotografie a pár vecí navyše.",
-            "answer": (
-                "Koľko stojí Rodinka?",
-                "Rodinka Free je zadarmo a má 200 MB na rodinné fotografie. Rodinka Pro stojí 149 Kč mesačne alebo 1 599 Kč ročne, pridáva Rodinný týždeň, Rodinné scenáre a prípravy, návrh nákupu a jedálnička, Rodinnú ročenku, 5 GB úložiska, Moment dňa a možnosti prispôsobenia a platí pre celú rodinu. Ceny v českých korunách sú vrátane DPH.",
-            ),
-            "plans_title": "Vyberte, čo vašej rodine sedí",
-            "free": {
-                "name": "Rodinka Free",
-                "price": "0 Kč",
-                "period": "zadarmo",
-                "text": "Pre každú rodinu, bez platobnej karty.",
-                "features": (
-                    "Zdieľaný kalendár, úlohy, nákupy, jedlá, výlety, spomienky a stráženie dokladov",
-                    "Účty pre dospelých aj deti a zapojenie širšej rodiny",
-                    "200 MB na rodinné fotografie",
-                ),
-                "cta": "Začať zadarmo",
-            },
-            "pro": {
-                "name": "Rodinka Pro",
-                "monthly": "mesačne",
-                "yearly": "ročne",
-                "yearly_note": "Ročné predplatné vyjde o 189 Kč lacnejšie ako 12 mesačných platieb.",
-                "text": "Jedno predplatné pre celú rodinu.",
-                "features": (
-                    "Všetko z Rodinky Free",
-                    "Rodinný týždeň a Rodinné scenáre s prípravami",
-                    "Navrhnúť nákup a Navrhnúť jedálniček",
-                    "Rodinná ročenka na tlač",
-                    "5 GB na rodinné fotografie",
-                    "Moment dňa",
-                    "Vlastné farby členov a rodinný accent",
-                    "Vlastné usporiadanie hlavnej navigácie",
-                ),
-                "cta": "Získať Rodinku Pro v aplikácii",
-                "cta_note": "Predplatné uzatvára dospelý člen rodiny po prihlásení do aplikácie.",
-            },
-            "price_note": "Ceny sú uvedené v českých korunách vrátane DPH. V iných krajinách a menách sa výsledná suma môže líšiť; konečnú cenu vrátane dane uvidíte vždy pred zaplatením.",
-            "sections": (
-                ("Rozdiel medzi Free a Pro", (
-                    "Kalendár, úlohy, nákupy, jedlá, výlety, spomienky, doklady aj zapojenie širšej rodiny máte vo verzii Free a Rodinka Pro ich nijako neobmedzuje. Pro k nim pridáva pomocníkov pre dospelých: Rodinný týždeň s prehľadom toho, čo treba v týždni doriešiť, Rodinné scenáre a z nich prípravy na cesty a akcie, návrh nákupu podľa vašich posledných nákupov, návrh jedálnička z vašej knižnice jedál a Rodinnú ročenku ako PDF na tlač. Navyše 5 GB miesta na fotografie namiesto 200 MB, Moment dňa a možnosť prispôsobiť si farby a hlavnú navigáciu.",
-                    "Návrhy nákupu a jedálnička vznikajú len z údajov vašej rodiny a nič sa neuloží, kým ich nepotvrdíte. To isté môžete vo verzii Free pridať ručne.",
-                    "Rodinka Pro patrí celej rodine. Stačí, keď ju uzatvorí jeden dospelý, a výhody majú všetci členovia tejto rodiny.",
-                    "Keď Rodinka Pro skončí, nič sa nemaže. Fotografie aj uložené Momenty dňa zostanú a dajú sa ďalej prezerať aj mazať. Iba nové fotografie nad limit 200 MB a nové Momenty dňa už pridať nepôjde a vlastné farby sa prestanú používať.",
-                    "Rozpracované prípravy môžete po skončení Pro ďalej odškrtávať, upravovať a dokončiť a už uložené PDF ročenky zostávajú vaše. Nové prípravy, úpravy scenárov, Rodinný týždeň, návrhy nákupu a jedálnička aj nový export ročenky vyžadujú Rodinku Pro.",
-                )),
-                ("Automatické obnovovanie", (
-                    "Predplatné sa automaticky obnovuje na ďalší mesiac alebo rok, kým ho nezrušíte. Platbu za každé ďalšie obdobie spracuje Paddle uloženou platobnou metódou.",
-                )),
-                ("Zrušenie predplatného", (
-                    "Predplatné môžete kedykoľvek zrušiť na paddle.net alebo v aplikácii: dospelý, ktorý predplatné uzatvoril, nájde vo Viac → Účet a rodina tlačidlo Spravovať predplatné.",
-                    "Zrušenie zastaví ďalšie platby. Rodinka Pro zostane aktívna do konca už zaplateného obdobia. Zmazanie účtu v Rodinke predplatné samo nezruší.",
-                )),
-                ("Platba cez Paddle", (
-                    "Objednávky spracúva náš online predajca Paddle.com, ktorý je pri všetkých objednávkach predajcom (Merchant of Record). Paddle prijíma platbu, vystavuje doklad, odvádza daň a vybavuje otázky k platbám aj vráteniu peňazí.",
-                    "Zrušenie predplatného a vrátenie peňazí sú dve rôzne veci. Ako o vrátenie peňazí požiadať, opisujú Zásady refundácií.",
-                )),
-            ),
-            "cta_title": "Začnite zadarmo, Pro môžete pridať kedykoľvek",
-            "cta_text": "Rodinka sa otvorí v prehliadači. Bez platobnej karty a bez inštalácie.",
-        },
-        "refunds": {
-            "title": "Zásady refundácií predplatného Rodinka Pro | Rodinka",
-            "description": "Ako zrušiť predplatné Rodinka Pro, ako požiadať o vrátenie peňazí cez Paddle na paddle.net a čo sa stane s Rodinkou Pro po schválenej refundácii.",
-            "og_title": "Zásady refundácií Rodinky Pro",
-            "og_description": "Predplatné Rodinka Pro predáva Paddle.com ako Merchant of Record. O vrátenie peňazí žiadate na paddle.net do 14 dní od platby.",
-            "og_alt": "Rodinka – zásady refundácií predplatného Rodinka Pro",
-            "eyebrow": "REFUNDÁCIE",
-            "h1": "Zásady refundácií",
-            "lead": "Predplatné Rodinka Pro predáva Paddle.com ako Merchant of Record. O vrátenie peňazí preto žiadate v Paddle, podľa jeho zásad a vašich zákonných práv.",
-            "answer": (
-                "Ako požiadam o vrátenie peňazí za Rodinku Pro?",
-                "Na paddle.net vyhľadajte svoju objednávku a požiadajte o vrátenie peňazí, alebo použite odkaz v e-mailovom potvrdení platby od Paddle. Žiadosť podajte do 14 dní od platby. O refundácii rozhoduje Paddle podľa svojej Refund Policy a platných spotrebiteľských práv.",
-            ),
-            "sections": (
-                ("Kto je predajca", (
-                    "Objednávky Rodinky Pro spracúva náš online predajca Paddle.com, ktorý je pri všetkých objednávkach predajcom (Merchant of Record). Paddle prijíma platbu, vystavuje doklad, odvádza daň a vybavuje otázky k platbám aj žiadosti o vrátenie peňazí.",
-                )),
-                ("Zrušenie predplatného nie je refundácia", (
-                    "Zrušenie zastaví budúce platby. Rodinka Pro zostane aktívna do konca obdobia, ktoré už máte zaplatené, a potom skončí. Zrušením sa peniaze za bežiace obdobie nevracajú.",
-                    "Refundácia je vrátenie peňazí za konkrétnu platbu. Ak Paddle schváli plnú refundáciu platby, Rodinka Pro tým skončí skôr, aj keď zaplatené obdobie ešte neuplynulo. Čiastočná refundácia prístup k Rodinke Pro nemení.",
-                    "Refundácia sama nemusí predplatné zrušiť. Ak nechcete platiť za ďalšie obdobie, zrušte predplatné tiež – na paddle.net alebo v aplikácii vo Viac → Účet a rodina → Spravovať predplatné.",
-                )),
-                ("Ako požiadať o vrátenie peňazí", (
-                    "Na paddle.net vyhľadajte objednávku a zvoľte možnosť požiadať o vrátenie peňazí (Request refund).",
-                    "Alebo použite odkaz v potvrdení platby, ktoré vám Paddle poslal e-mailom.",
-                    "Spotrebitelia z EÚ môžu využiť aj tlačidlo na odstúpenie v zákazníckom portáli Paddle, kam vedie odkaz z toho istého e-mailu.",
-                    "Žiadosť podajte do 14 dní od dátumu platby.",
-                )),
-                ("Kedy Paddle peniaze vracia", (
-                    "Paddle môže peniaze vrátiť, ak o to požiadate do 14 dní od platby. Podanie žiadosti v tejto lehote vrátenie samo nezaručuje; o žiadosti rozhoduje Paddle podľa svojej Refund Policy. Paddle môže žiadosť odmietnuť pri podvode alebo zneužívaní refundácií.",
-                    "Spotrebitelia v EÚ, EHP, Švajčiarsku a Spojenom kráľovstve majú pri digitálnom obsahu a službách zákonné právo odstúpiť od zmluvy do 14 dní. Podľa Paddle sa týka prvej platby predplatného a uplatníte ho žiadosťou do 14 dní od dátumu platby. Lehoty pre spotrebiteľov v ďalších krajinách uvádza Paddle Refund Policy.",
-                    "Tieto zásady neobmedzujú vaše zákonné práva, napríklad keď služba nefunguje alebo nezodpovedá popisu.",
-                )),
-                ("Technické problémy", (
-                    "Keď Rodinka Pro nefunguje, ako má, napíšte nám najskôr cez stránku Podpora v aplikácii. Pomôžeme to vyriešiť; ak sa to nepodarí, môžete sa obrátiť na podporu Paddle.",
-                )),
-                ("Platné znenie", (
-                    "Táto stránka zhŕňa, ako vrátenie peňazí pri Rodinke Pro funguje. Pravidlá vrátenia peňazí stanovuje Paddle Refund Policy; ak by sa od nej toto zhrnutie líšilo, platí znenie Paddle.",
-                )),
-            ),
-            "cta_title": "Rodinka zostáva zadarmo",
-            "cta_text": "Bez predplatného môžete Rodinku ďalej používať vo verzii Free.",
-        },
-    },
-    "en": {
-        "pricing": {
-            "title": "Rodinka pricing – Free, and Pro from CZK 149 | Rodinka",
-            "description": "Rodinka Free costs nothing and includes 200 MB for family photos. Rodinka Pro, CZK 149 a month or CZK 1,599 a year, adds the Family week, preparations, suggested shopping and meals, a yearbook and 5 GB.",
-            "og_title": "Rodinka pricing: Free and Rodinka Pro",
-            "og_description": "Rodinka is free for the whole family. Rodinka Pro, CZK 149 a month or CZK 1,599 a year, adds 5 GB for photos and more.",
-            "og_alt": "Rodinka – Free and Rodinka Pro pricing",
-            "eyebrow": "PRICING",
-            "h1": "Rodinka pricing",
-            "lead": "Your whole family can use Rodinka for free. Rodinka Pro is an optional subscription for families who want more room for photos and a few extras.",
-            "answer": (
-                "How much does Rodinka cost?",
-                "Rodinka Free costs nothing and includes 200 MB for family photos. Rodinka Pro costs CZK 149 a month or CZK 1,599 a year, adds the Family week, Family scenarios and preparations, suggested shopping and meal plans, the Family yearbook, 5 GB of storage, Moment of the Day and personalisation, and covers the whole family. Prices in CZK include VAT.",
-            ),
-            "plans_title": "Choose what suits your family",
-            "free": {
-                "name": "Rodinka Free",
-                "price": "CZK 0",
-                "period": "free",
-                "text": "For every family, no payment card needed.",
-                "features": (
-                    "Shared calendar, chores, shopping, meals, trips, memories and document reminders",
-                    "Accounts for adults and children, and room for the extended family",
-                    "200 MB for family photos",
-                ),
-                "cta": "Start for free",
-            },
-            "pro": {
-                "name": "Rodinka Pro",
-                "monthly": "per month",
-                "yearly": "per year",
-                "yearly_note": "The yearly plan costs CZK 189 less than 12 monthly payments.",
-                "text": "One subscription for the whole family.",
-                "features": (
-                    "Everything in Rodinka Free",
-                    "Family week and Family scenarios with preparations",
-                    "Suggest items and Suggest a meal plan",
-                    "Family yearbook ready to print",
-                    "5 GB for family photos",
-                    "Moment of the Day",
-                    "Custom member colours and family accent",
-                    "Your own main navigation layout",
-                ),
-                "cta": "Get Rodinka Pro in the app",
-                "cta_note": "An adult family member subscribes after signing in to the app.",
-            },
-            "price_note": "Prices are shown in Czech koruna (CZK) and include VAT. In other countries and currencies the final amount may differ; you always see the final price including tax before you pay.",
-            "sections": (
-                ("Free and Pro compared", (
-                    "Calendar, chores, shopping, meals, trips, memories, documents and the extended family are all in Rodinka Free, and Rodinka Pro does not limit them. Pro adds helpers for the adults: the Family week, an overview of what still needs sorting that week; Family scenarios and the preparations you make from them for trips and events; suggested items based on your recent shopping; a suggested meal plan from your own meal library; and the Family yearbook as a print-ready PDF. On top of that come 5 GB for photos instead of 200 MB, Moment of the Day, and the option to personalise colours and the main navigation.",
-                    "Shopping and meal suggestions come only from your own family data, and nothing is saved until you confirm it. In Rodinka Free you can add the same things by hand.",
-                    "Rodinka Pro belongs to the whole family. One adult subscribes and every member of that family gets the benefits.",
-                    "When Rodinka Pro ends, nothing is deleted. Photos and saved Moments of the Day stay, and you can still view and delete them. You just cannot add new photos beyond the 200 MB limit or new Moments of the Day, and custom colours stop being applied.",
-                    "Preparations already in progress can still be ticked off, edited and closed after Pro ends, and yearbook PDFs you have saved stay yours. New preparations, scenario edits, the Family week, shopping and meal suggestions and new yearbook exports need Rodinka Pro.",
-                )),
-                ("Automatic renewal", (
-                    "Your subscription renews automatically for another month or year until you cancel it. Paddle charges each new period to your saved payment method.",
-                )),
-                ("Cancelling", (
-                    "You can cancel at any time at paddle.net or in the app: the adult who subscribed finds Manage subscription under More → Account and family.",
-                    "Cancelling stops future payments. Rodinka Pro stays active until the end of the period you have already paid for. Deleting your Rodinka account does not cancel the subscription by itself.",
-                )),
-                ("Payment through Paddle", (
-                    "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle takes the payment, issues the receipt, handles tax and answers payment and refund enquiries.",
-                    "Cancelling and getting a refund are two different things. The Refund policy explains how to ask for your money back.",
-                )),
-            ),
-            "cta_title": "Start for free and add Pro whenever you like",
-            "cta_text": "Rodinka opens in your browser. No payment card, nothing to install.",
-        },
-        "refunds": {
-            "title": "Rodinka Pro subscription refund policy | Rodinka",
-            "description": "How to cancel Rodinka Pro, how to request a refund from Paddle at paddle.net, and what happens to Rodinka Pro after an approved refund.",
-            "og_title": "Rodinka Pro refund policy",
-            "og_description": "Rodinka Pro is sold by Paddle.com as Merchant of Record. Request a refund at paddle.net within 14 days of payment.",
-            "og_alt": "Rodinka – Rodinka Pro subscription refund policy",
-            "eyebrow": "REFUNDS",
-            "h1": "Refund policy",
-            "lead": "Rodinka Pro is sold by Paddle.com as Merchant of Record. That is why you request refunds from Paddle, under its policy and your statutory rights.",
-            "answer": (
-                "How do I get a refund for Rodinka Pro?",
-                "Look up your order at paddle.net and request a refund, or use the link in the payment confirmation email from Paddle. Make the request within 14 days of payment. Paddle decides on refunds under its Refund Policy and applicable consumer rights.",
-            ),
-            "sections": (
-                ("Who the seller is", (
-                    "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle takes the payment, issues the receipt, handles tax and deals with payment questions and refund requests.",
-                )),
-                ("Cancelling is not a refund", (
-                    "Cancelling stops future payments. Rodinka Pro stays active until the end of the period you have already paid for, then ends. Cancelling does not refund the current period.",
-                    "A refund returns the money for a specific payment. If Paddle approves a full refund of a payment, Rodinka Pro ends early, even if the paid period has not run out. A partial refund does not change your access to Rodinka Pro.",
-                    "A refund does not necessarily cancel the subscription. If you do not want to pay for the next period, cancel the subscription as well – at paddle.net or in the app under More → Account and family → Manage subscription.",
-                )),
-                ("How to request a refund", (
-                    "Look up your order at paddle.net and choose Request refund.",
-                    "Or use the link in the payment confirmation Paddle sent you by email.",
-                    "EU consumers can also use the withdrawal button in Paddle’s customer portal, linked from the same email.",
-                    "Make your request within 14 days of the payment date.",
-                )),
-                ("When Paddle refunds", (
-                    "Paddle may refund a payment if you ask within 14 days of it. Asking within that period does not by itself guarantee a refund; Paddle decides under its Refund Policy. Paddle may decline requests involving fraud or refund abuse.",
-                    "Consumers in the EU, EEA, Switzerland and the United Kingdom have a statutory right to withdraw from digital content and services within 14 days. According to Paddle it covers the first subscription payment, and you use it by requesting a refund within 14 days of the payment date. The periods for consumers in other countries are set out in the Paddle Refund Policy.",
-                    "This policy does not limit your statutory rights, for example when the service does not work or is not as described.",
-                )),
-                ("Technical problems", (
-                    "If Rodinka Pro does not work as it should, please contact us first through the Support page in the app. We will help you sort it out; if we cannot, you can contact Paddle support.",
-                )),
-                ("Which text applies", (
-                    "This page summarises how refunds for Rodinka Pro work. Refunds are governed by the Paddle Refund Policy; if this summary ever differs from it, Paddle’s text applies.",
-                )),
-            ),
-            "cta_title": "Rodinka stays free",
-            "cta_text": "Without a subscription you can keep using Rodinka Free.",
-        },
-    },
-}
+
+INFO_PAGES = {'cs': {'pricing': {'title': 'Rodinka Free a Pro – srovnání funkcí | Rodinka',
+                    'description': 'Rodinka Free je zdarma s 200 MiB úložiště. Pro přidává plánování, rodinnou ročenku a 5 GiB. '
+                                   'Nové nákupy připravujeme; cenu uvidíte u dostupné nabídky.',
+                    'og_title': 'Rodinka Free a Pro – srovnání funkcí',
+                    'og_description': 'Rodinka Free je zdarma s 200 MiB úložiště. Pro přidává plánování, rodinnou ročenku a 5 '
+                                      'GiB. Nové nákupy připravujeme; cenu uvidíte u dostupné nabídky.',
+                    'og_alt': 'Rodinka – ceník verze Free a Rodinka Pro',
+                    'eyebrow': 'CENÍK',
+                    'h1': 'Ceník Rodinky',
+                    'lead': 'Rodinku může celá rodina používat zdarma. Pro rozšiřuje plánování a úložiště. Nové nákupy '
+                            'připravujeme a nemusí být dostupné pro každou platformu.',
+                    'answer': ('Jak se liší Free a Pro?',
+                               'Free je bezplatný rodinný organizér s 200 MiB. Pro přidává další funkce a 5 GiB pro konkrétní '
+                               'rodinu. Nové nákupy se zavádějí postupně; dostupnost a konečnou cenu uvidíte až u skutečné '
+                               'nabídky v aplikaci. Existující předplatné pokračuje podle svého prodejního kanálu.'),
+                    'plans_title': 'Vyberte, co vaší rodině sedí',
+                    'free': {'name': 'Rodinka Free',
+                             'price': '0 Kč',
+                             'period': 'zdarma',
+                             'text': 'Pro každou rodinu, bez platební karty.',
+                             'features': ('Sdílený kalendář, úkoly, nákupy, jídla, výlety, vzpomínky a hlídání dokladů',
+                                          'Účty pro dospělé i děti a zapojení širší rodiny',
+                                          '200 MiB pro rodinné fotografie'),
+                             'cta': 'Začít zdarma'},
+                    'pro': {'name': 'Rodinka Pro',
+                            'text': 'Jedno předplatné pro celou rodinu.',
+                            'features': ('Vše z Rodinky Free',
+                                         'Rodinný týden a Rodinné scénáře s přípravami',
+                                         'Navrhnout nákup a Navrhnout jídelníček',
+                                         'Rodinná ročenka k tisku',
+                                         '5 GiB pro rodinné fotografie',
+                                         'Moment dne',
+                                         'Vlastní barvy členů a rodinný accent',
+                                         'Vlastní uspořádání hlavní navigace'),
+                            'cta': 'Otevřít aplikaci',
+                            'cta_note': 'Dospělý může objednat Pro jen tehdy, když aplikace zobrazí dostupnou nabídku s cenou a '
+                                        'podmínkami.',
+                            'price_status': 'Nové nákupy připravujeme'},
+                    'price_note': 'Ceny zatím nezveřejňujeme. Před případným potvrzením nákupu uvidíte konečnou cenu včetně '
+                                  'příslušných daní, období a pravidla obnovování v konkrétním kanálu.',
+                    'sections': (('Rozdíl mezi Free a Pro',
+                                  ('Kalendář, úkoly, nákupy, jídla, výlety, vzpomínky, doklady i zapojení širší rodiny máte ve '
+                                   'verzi Free a Rodinka Pro je nijak neomezuje. Pro k nim přidává pomocníky pro dospělé: '
+                                   'Rodinný týden s přehledem toho, co je v týdnu potřeba dořešit, Rodinné scénáře a z nich '
+                                   'přípravy na cesty a akce, návrh nákupu podle vašich posledních nákupů, návrh jídelníčku z '
+                                   'vaší knihovny jídel a Rodinnou ročenku jako PDF k tisku. Navíc 5 GiB místa na fotografie '
+                                   'místo 200 MiB, Moment dne a možnost přizpůsobit si barvy a hlavní navigaci.',
+                                   'Návrhy nákupu a jídelníčku vznikají jen z dat vaší rodiny a nic se neuloží, dokud je '
+                                   'nepotvrdíte. Totéž můžete ve verzi Free přidat ručně.',
+                                   'Rodinka Pro patří celé rodině. Stačí, když ji sjedná jeden dospělý, a výhody mají všichni '
+                                   'členové této rodiny.',
+                                   'Když Rodinka Pro skončí, nic se nemaže. Fotografie i uložené Momenty dne zůstanou a jdou dál '
+                                   'prohlížet i mazat. Jen nové fotografie nad limit 200 MiB a nové Momenty dne už přidat nepůjde '
+                                   'a vlastní barvy se přestanou používat.',
+                                   'Rozpracované přípravy můžete po skončení Pro dál odškrtávat, upravovat a dokončit a už '
+                                   'uložené PDF ročenky zůstávají vaše. Nové přípravy, úpravy scénářů, Rodinný týden, návrhy '
+                                   'nákupu a jídelníčku i nový export ročenky vyžadují Rodinku Pro.')),
+                                 ('Dostupnost a prodejní kanály',
+                                  ('Pokud je nákup spuštěný, web používá Paddle jako prodejce (Merchant of Record), Android '
+                                   'Google Play a iOS Apple App Store. BMC zůstává pouze pro existující předplatitele. '
+                                   'Podrobnosti, smluvní role a postupy pro každý kanál jsou v podmínkách používání.',)),
+                                 ('Obnovování a zrušení',
+                                  ('Existující předplatné spravujte v kanálu a účtu původního nákupu. Vypnutí obnovy běžně '
+                                   'ponechává Pro do konce zaplaceného období; smazání účtu ani odinstalování platby nezruší. '
+                                   'Odstoupení, reklamace a refundace jsou samostatná práva.',))),
+                    'cta_title': 'Začněte zdarma, nové nákupy Pro připravujeme',
+                    'cta_text': 'Rodinka se otevře v prohlížeči. Bez platební karty a bez instalace.'},
+        'refunds': {'title': 'Zásady refundací předplatného Rodinka Pro | Rodinka',
+                    'description': 'Zrušení, odstoupení, reklamace a vrácení peněz za Pro podle původního kanálu: Paddle, Google '
+                                   'Play, App Store nebo dřívější BMC.',
+                    'og_title': 'Zásady refundací Rodinky Pro',
+                    'og_description': 'Zrušení, odstoupení, reklamace a vrácení peněz za Pro podle původního kanálu: Paddle, '
+                                      'Google Play, App Store nebo dřívější BMC.',
+                    'og_alt': 'Rodinka – zásady refundací předplatného Rodinka Pro',
+                    'eyebrow': 'REFUNDACE',
+                    'h1': 'Zásady refundací',
+                    'lead': 'Zrušení, odstoupení, reklamace a vrácení peněz za Pro podle původního kanálu: Paddle, Google Play, '
+                            'App Store nebo dřívější BMC.',
+                    'answer': ('Kde požádat o zrušení nebo vrácení peněz?',
+                               'Použijte původní kanál nákupu: Paddle, Google Play, Apple App Store nebo existující členství '
+                               'BMC. S reklamací služby a zákonným odstoupením pomůže i provozovatel Rodinky. Pravidla níže '
+                               'přebíráme ze společných podmínek; komerční refundace neomezují zákonná práva.'),
+                    'sections': (),
+                    'cta_title': 'Rodinka zůstává zdarma',
+                    'cta_text': 'Bez předplatného můžete Rodinku dál používat ve verzi Free.'}},
+ 'sk': {'pricing': {'title': 'Rodinka Free a Pro – porovnanie funkcií | Rodinka',
+                    'description': 'Rodinka Free je zadarmo s 200 MiB úložiska. Pro pridáva plánovanie, rodinnú ročenku a 5 GiB. '
+                                   'Nové nákupy pripravujeme; cenu uvidíte pri dostupnej ponuke.',
+                    'og_title': 'Rodinka Free a Pro – porovnanie funkcií',
+                    'og_description': 'Rodinka Free je zadarmo s 200 MiB úložiska. Pro pridáva plánovanie, rodinnú ročenku a 5 '
+                                      'GiB. Nové nákupy pripravujeme; cenu uvidíte pri dostupnej ponuke.',
+                    'og_alt': 'Rodinka – cenník verzie Free a Rodinka Pro',
+                    'eyebrow': 'CENNÍK',
+                    'h1': 'Cenník Rodinky',
+                    'lead': 'Rodinku môže celá rodina používať zadarmo. Pro rozširuje plánovanie a úložisko. Nové nákupy '
+                            'pripravujeme a nemusia byť dostupné pre každú platformu.',
+                    'answer': ('Ako sa líšia Free a Pro?',
+                               'Free je bezplatný rodinný organizér s 200 MiB. Pro pridáva ďalšie funkcie a 5 GiB pre konkrétnu '
+                               'rodinu. Nové nákupy sa zavádzajú postupne; dostupnosť a konečnú cenu uvidíte až pri skutočnej '
+                               'ponuke v aplikácii. Existujúce predplatné pokračuje podľa svojho predajného kanála.'),
+                    'plans_title': 'Vyberte, čo vašej rodine sedí',
+                    'free': {'name': 'Rodinka Free',
+                             'price': '0 Kč',
+                             'period': 'zadarmo',
+                             'text': 'Pre každú rodinu, bez platobnej karty.',
+                             'features': ('Zdieľaný kalendár, úlohy, nákupy, jedlá, výlety, spomienky a stráženie dokladov',
+                                          'Účty pre dospelých aj deti a zapojenie širšej rodiny',
+                                          '200 MiB na rodinné fotografie'),
+                             'cta': 'Začať zadarmo'},
+                    'pro': {'name': 'Rodinka Pro',
+                            'text': 'Jedno predplatné pre celú rodinu.',
+                            'features': ('Všetko z Rodinky Free',
+                                         'Rodinný týždeň a Rodinné scenáre s prípravami',
+                                         'Navrhnúť nákup a Navrhnúť jedálniček',
+                                         'Rodinná ročenka na tlač',
+                                         '5 GiB na rodinné fotografie',
+                                         'Moment dňa',
+                                         'Vlastné farby členov a rodinný accent',
+                                         'Vlastné usporiadanie hlavnej navigácie'),
+                            'cta': 'Otvoriť aplikáciu',
+                            'cta_note': 'Dospelý môže objednať Pro len vtedy, keď aplikácia zobrazí dostupnú ponuku s cenou a '
+                                        'podmienkami.',
+                            'price_status': 'Nové nákupy pripravujeme'},
+                    'price_note': 'Ceny zatiaľ nezverejňujeme. Pred prípadným potvrdením nákupu uvidíte konečnú cenu vrátane '
+                                  'príslušných daní, obdobie a pravidlá obnovovania v konkrétnom kanáli.',
+                    'sections': (('Rozdiel medzi Free a Pro',
+                                  ('Kalendár, úlohy, nákupy, jedlá, výlety, spomienky, doklady aj zapojenie širšej rodiny máte '
+                                   'vo verzii Free a Rodinka Pro ich nijako neobmedzuje. Pro k nim pridáva pomocníkov pre '
+                                   'dospelých: Rodinný týždeň s prehľadom toho, čo treba v týždni doriešiť, Rodinné scenáre a z '
+                                   'nich prípravy na cesty a akcie, návrh nákupu podľa vašich posledných nákupov, návrh '
+                                   'jedálnička z vašej knižnice jedál a Rodinnú ročenku ako PDF na tlač. Navyše 5 GiB miesta na '
+                                   'fotografie namiesto 200 MiB, Moment dňa a možnosť prispôsobiť si farby a hlavnú navigáciu.',
+                                   'Návrhy nákupu a jedálnička vznikajú len z údajov vašej rodiny a nič sa neuloží, kým ich '
+                                   'nepotvrdíte. To isté môžete vo verzii Free pridať ručne.',
+                                   'Rodinka Pro patrí celej rodine. Stačí, keď ju uzatvorí jeden dospelý, a výhody majú všetci '
+                                   'členovia tejto rodiny.',
+                                   'Keď Rodinka Pro skončí, nič sa nemaže. Fotografie aj uložené Momenty dňa zostanú a dajú sa '
+                                   'ďalej prezerať aj mazať. Iba nové fotografie nad limit 200 MiB a nové Momenty dňa už pridať '
+                                   'nepôjde a vlastné farby sa prestanú používať.',
+                                   'Rozpracované prípravy môžete po skončení Pro ďalej odškrtávať, upravovať a dokončiť a už '
+                                   'uložené PDF ročenky zostávajú vaše. Nové prípravy, úpravy scenárov, Rodinný týždeň, návrhy '
+                                   'nákupu a jedálnička aj nový export ročenky vyžadujú Rodinku Pro.')),
+                                 ('Dostupnosť a predajné kanály',
+                                  ('Ak je nákup spustený, web používa Paddle ako predajcu (Merchant of Record), Android Google '
+                                   'Play a iOS Apple App Store. BMC zostáva iba pre existujúcich predplatiteľov. Podrobnosti, '
+                                   'zmluvné roly a postupy pre každý kanál sú v podmienkach používania.',)),
+                                 ('Obnovovanie a zrušenie',
+                                  ('Existujúce predplatné spravujte v kanáli a účte pôvodného nákupu. Vypnutie obnovy bežne '
+                                   'ponecháva Pro do konca zaplateného obdobia; zmazanie účtu ani odinštalovanie platby nezruší. '
+                                   'Odstúpenie, reklamácia a refundácia sú samostatné práva.',))),
+                    'cta_title': 'Začnite zadarmo, nové nákupy Pro pripravujeme',
+                    'cta_text': 'Rodinka sa otvorí v prehliadači. Bez platobnej karty a bez inštalácie.'},
+        'refunds': {'title': 'Zásady refundácií predplatného Rodinka Pro | Rodinka',
+                    'description': 'Zrušenie, odstúpenie, reklamácia a vrátenie peňazí za Pro podľa pôvodného kanála: Paddle, '
+                                   'Google Play, App Store alebo predchádzajúce BMC.',
+                    'og_title': 'Zásady refundácií Rodinky Pro',
+                    'og_description': 'Zrušenie, odstúpenie, reklamácia a vrátenie peňazí za Pro podľa pôvodného kanála: Paddle, '
+                                      'Google Play, App Store alebo predchádzajúce BMC.',
+                    'og_alt': 'Rodinka – zásady refundácií predplatného Rodinka Pro',
+                    'eyebrow': 'REFUNDÁCIE',
+                    'h1': 'Zásady refundácií',
+                    'lead': 'Zrušenie, odstúpenie, reklamácia a vrátenie peňazí za Pro podľa pôvodného kanála: Paddle, Google '
+                            'Play, App Store alebo predchádzajúce BMC.',
+                    'answer': ('Kde požiadať o zrušenie alebo vrátenie peňazí?',
+                               'Použite pôvodný kanál nákupu: Paddle, Google Play, Apple App Store alebo existujúce členstvo '
+                               'BMC. S reklamáciou služby a zákonným odstúpením pomôže aj prevádzkovateľ Rodinky. Pravidlá '
+                               'nižšie preberáme zo spoločných podmienok; komerčné refundácie neobmedzujú zákonné práva.'),
+                    'sections': (),
+                    'cta_title': 'Rodinka zostáva zadarmo',
+                    'cta_text': 'Bez predplatného môžete Rodinku ďalej používať vo verzii Free.'}},
+ 'en': {'pricing': {'title': 'Rodinka Free and Pro – feature comparison | Rodinka',
+                    'description': 'Rodinka Free costs nothing and includes 200 MiB. Pro adds planning, a family yearbook and 5 '
+                                   'GiB. New purchases are being prepared; prices appear with available offers.',
+                    'og_title': 'Rodinka Free and Pro – feature comparison',
+                    'og_description': 'Rodinka Free costs nothing and includes 200 MiB. Pro adds planning, a family yearbook and '
+                                      '5 GiB. New purchases are being prepared; prices appear with available offers.',
+                    'og_alt': 'Rodinka – Free and Rodinka Pro pricing',
+                    'eyebrow': 'PRICING',
+                    'h1': 'Rodinka pricing',
+                    'lead': 'The whole family can use Rodinka for free. Pro extends planning and storage. New purchases are '
+                            'being prepared and may not be available on every platform.',
+                    'answer': ('How do Free and Pro differ?',
+                               'Free is a family organiser at no charge with 200 MiB. Pro adds features and 5 GiB for a specific '
+                               'family. New purchases are being introduced gradually; availability and the final price appear '
+                               'only with an actual in-app offer. Existing subscriptions continue through their original sales '
+                               'channel.'),
+                    'plans_title': 'Choose what suits your family',
+                    'free': {'name': 'Rodinka Free',
+                             'price': 'CZK 0',
+                             'period': 'free',
+                             'text': 'For every family, no payment card needed.',
+                             'features': ('Shared calendar, chores, shopping, meals, trips, memories and document reminders',
+                                          'Accounts for adults and children, and room for the extended family',
+                                          '200 MiB for family photos'),
+                             'cta': 'Start for free'},
+                    'pro': {'name': 'Rodinka Pro',
+                            'text': 'One subscription for the whole family.',
+                            'features': ('Everything in Rodinka Free',
+                                         'Family week and Family scenarios with preparations',
+                                         'Suggest items and Suggest a meal plan',
+                                         'Family yearbook ready to print',
+                                         '5 GiB for family photos',
+                                         'Moment of the Day',
+                                         'Custom member colours and family accent',
+                                         'Your own main navigation layout'),
+                            'cta': 'Open the app',
+                            'cta_note': 'An adult can order Pro only when the app displays an available offer with its price and '
+                                        'terms.',
+                            'price_status': 'New purchases are being prepared'},
+                    'price_note': 'Prices are not published yet. Before confirming any purchase, the relevant channel will show '
+                                  'the final price including applicable taxes, the period and renewal rules.',
+                    'sections': (('Free and Pro compared',
+                                  ('Calendar, chores, shopping, meals, trips, memories, documents and the extended family are '
+                                   'all in Rodinka Free, and Rodinka Pro does not limit them. Pro adds helpers for the adults: '
+                                   'the Family week, an overview of what still needs sorting that week; Family scenarios and the '
+                                   'preparations you make from them for trips and events; suggested items based on your recent '
+                                   'shopping; a suggested meal plan from your own meal library; and the Family yearbook as a '
+                                   'print-ready PDF. On top of that come 5 GiB for photos instead of 200 MiB, Moment of the Day, '
+                                   'and the option to personalise colours and the main navigation.',
+                                   'Shopping and meal suggestions come only from your own family data, and nothing is saved '
+                                   'until you confirm it. In Rodinka Free you can add the same things by hand.',
+                                   'Rodinka Pro belongs to the whole family. One adult subscribes and every member of that '
+                                   'family gets the benefits.',
+                                   'When Rodinka Pro ends, nothing is deleted. Photos and saved Moments of the Day stay, and you '
+                                   'can still view and delete them. You just cannot add new photos beyond the 200 MiB limit or '
+                                   'new Moments of the Day, and custom colours stop being applied.',
+                                   'Preparations already in progress can still be ticked off, edited and closed after Pro ends, '
+                                   'and yearbook PDFs you have saved stay yours. New preparations, scenario edits, the Family '
+                                   'week, shopping and meal suggestions and new yearbook exports need Rodinka Pro.')),
+                                 ('Availability and sales channels',
+                                  ('If purchases are enabled, the web uses Paddle as seller (Merchant of Record), Android uses '
+                                   'Google Play and iOS uses Apple’s App Store. BMC is for existing subscribers only. The Terms '
+                                   'of Use explain each channel’s contractual roles and procedures.',)),
+                                 ('Renewal and cancellation',
+                                  ('Manage an existing subscription through the original purchasing channel and account. Turning '
+                                   'off renewal ordinarily preserves Pro until the end of the paid period; deleting the account '
+                                   'or uninstalling the app does not stop payments. Withdrawal, defect claims and refunds are '
+                                   'separate rights.',))),
+                    'cta_title': 'Start for free; new Pro purchases are being prepared',
+                    'cta_text': 'Rodinka opens in your browser. No payment card, nothing to install.'},
+        'refunds': {'title': 'Rodinka Pro subscription refund policy | Rodinka',
+                    'description': 'Pro cancellation, withdrawal, defect claims and refunds through the original channel: '
+                                   'Paddle, Google Play, App Store or previous BMC memberships.',
+                    'og_title': 'Rodinka Pro refund policy',
+                    'og_description': 'Pro cancellation, withdrawal, defect claims and refunds through the original channel: '
+                                      'Paddle, Google Play, App Store or previous BMC memberships.',
+                    'og_alt': 'Rodinka – Rodinka Pro subscription refund policy',
+                    'eyebrow': 'REFUNDS',
+                    'h1': 'Refund policy',
+                    'lead': 'Pro cancellation, withdrawal, defect claims and refunds through the original channel: Paddle, '
+                            'Google Play, App Store or previous BMC memberships.',
+                    'answer': ('Where do I request cancellation or a refund?',
+                               'Use the original purchase channel: Paddle, Google Play, Apple’s App Store or an existing BMC '
+                               'membership. Rodinka’s operator can also help with service defects and statutory withdrawal. The '
+                               'rules below come from the shared Terms of Use; commercial refunds do not restrict statutory '
+                               'rights.'),
+                    'sections': (),
+                    'cta_title': 'Rodinka stays free',
+                    'cta_text': 'Without a subscription you can keep using Rodinka Free.'}}}
 
 
 def info_link(key: str, locale: str) -> tuple[str, bool]:
@@ -3084,7 +3008,9 @@ def info_link(key: str, locale: str) -> tuple[str, bool]:
         "paddle_policy": (PADDLE_REFUND_POLICY_URL, True),
         "paddle_buyer": (PADDLE_BUYER_URL, True),
     }
-    if key in INFO_KEYS or key in LEGAL_KEYS:
+    if key in LEGAL_KEYS:
+        return canonical(PATHS[key][locale]), False
+    if key in INFO_KEYS:
         return PATHS[key][locale], False
     return targets[key]
 
@@ -3110,13 +3036,11 @@ def render_plans(locale: str) -> str:
     free, pro = data["free"], data["pro"]
     free_features = "".join(f"<li>{esc(item)}</li>" for item in free["features"])
     pro_features = "".join(f"<li>{esc(item)}</li>" for item in pro["features"])
-    monthly = PRO_PRICES["monthly"] if locale != "en" else "CZK 149"
-    yearly = PRO_PRICES["yearly"] if locale != "en" else "CZK 1,599"
     return f'''        <section class="content-section plans-section" id="plany" aria-labelledby="plans-title">
           <div class="section-copy"><h2 id="plans-title">{esc(data["plans_title"])}</h2></div>
           <div class="plan-grid">
             <article class="plan-card surface" aria-labelledby="plan-free"><h3 id="plan-free">{esc(free["name"])}</h3><p class="plan-price"><strong>{esc(free["price"])}</strong> <span>{esc(free["period"])}</span></p><p class="plan-text">{esc(free["text"])}</p><ul class="plan-features">{free_features}</ul><div class="plan-action"><a class="button button-secondary" href="{APP_URL}" data-analytics-location="content">{esc(free["cta"])} <span aria-hidden="true">→</span></a></div></article>
-            <article class="plan-card plan-card--pro surface" aria-labelledby="plan-pro"><h3 id="plan-pro">{esc(pro["name"])}</h3><p class="plan-price"><strong>{esc(monthly)}</strong> <span>{esc(pro["monthly"])}</span></p><p class="plan-price plan-price--alt"><strong>{esc(yearly)}</strong> <span>{esc(pro["yearly"])}</span></p><p class="plan-text">{esc(pro["yearly_note"])} {esc(pro["text"])}</p><ul class="plan-features">{pro_features}</ul><div class="plan-action"><a class="button button-primary" href="{APP_URL}" data-analytics-location="content">{esc(pro["cta"])} <span aria-hidden="true">→</span></a><small>{esc(pro["cta_note"])}</small></div></article>
+            <article class="plan-card plan-card--pro surface" aria-labelledby="plan-pro"><h3 id="plan-pro">{esc(pro["name"])}</h3><p class="plan-price"><strong>{esc(pro["price_status"])}</strong></p><p class="plan-text">{esc(pro["text"])}</p><ul class="plan-features">{pro_features}</ul><div class="plan-action"><a class="button button-primary" href="{APP_URL}" data-analytics-location="content">{esc(pro["cta"])} <span aria-hidden="true">→</span></a><small>{esc(pro["cta_note"])}</small></div></article>
           </div>
           <p class="plan-note">{esc(data["price_note"])}</p>
         </section>'''
@@ -3134,7 +3058,11 @@ def render_info(page_key: str, locale: str) -> str:
         actions = f'<a class="button button-primary button-lg" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#plany">{esc(data["plans_title"])} <span aria-hidden="true">↓</span></a>'
         plans = render_plans(locale)
     else:
-        actions = f'<a class="button button-primary button-lg" href="{PADDLE_BUYER_URL}" target="_blank" rel="noopener">paddle.net <span aria-hidden="true">↗</span><span class="visually-hidden"> ({esc(cfg["new_tab"])})</span></a><a class="text-link" href="{PADDLE_REFUND_POLICY_URL}" target="_blank" rel="noopener">Paddle Refund Policy <span aria-hidden="true">↗</span><span class="visually-hidden"> ({esc(cfg["new_tab"])})</span></a>'
+        terms_url, _ = info_link("terms", locale)
+        actions = f'<a class="button button-primary button-lg" href="{terms_url}">{esc(INFO_COMMON[locale]["links"]["terms"])}</a>'
+        refund_ids = {"availability", "paddle", "google-play", "app-store", "legacy-bmc", "withdrawal", "withdrawal-model", "defects", "complaints", "adr"}
+        shared = load_legal_content()["languages"][locale]["terms"]["sections"]
+        sections = render_legal_sections([section for section in shared if section.get("id") in refund_ids], locale)
         plans = ""
     support = ""
     if page_key == "refunds":
@@ -3159,60 +3087,62 @@ def render_info(page_key: str, locale: str) -> str:
     return page_shell(page_key, locale, data, main)
 
 
-LEGAL_META = {
-    "cs": {
-        "terms": {
-            "title": "Podmínky používání Rodinky a pravidla obsahu | Rodinka",
-            "description": "Podmínky používání Rodinky: provozovatel, Rodinka Free a Pro, platby přes Paddle, obnovení a zrušení předplatného, vrácení peněz a pravidla obsahu.",
-            "og_alt": "Rodinka – podmínky používání a pravidla obsahu",
-            "eyebrow": "PODMÍNKY",
-            "answer": ("Co upravují podmínky Rodinky?", "Kdo Rodinku provozuje, jak funguje verze Free a předplatné Rodinka Pro, že platby na webu zpracovává Paddle.com jako Merchant of Record, jak předplatné zrušit a požádat o vrácení peněz a jaký obsah do Rodinky nepatří."),
-        },
-        "privacy": {
-            "title": "Zásady ochrany osobních údajů Rodinky | Rodinka",
-            "description": "Jaké údaje Rodinka ukládá, proč a kdo k nim má přístup: rodinný prostor, zdravotní údaje, analytika, zpracovatelé včetně Paddle, uchování údajů a vaše práva.",
-            "og_alt": "Rodinka – zásady ochrany osobních údajů",
-            "eyebrow": "SOUKROMÍ",
-            "answer": ("Jak Rodinka zachází s osobními údaji?", "Rodinka ukládá jen údaje, které do ní rodina zadá, a technické údaje nutné k provozu. Analytika je ve výchozím stavu vypnutá, platební údaje zadáváte přímo Paddle a účet můžete kdykoli sami smazat v aplikaci."),
-        },
-    },
-    "sk": {
-        "terms": {
-            "title": "Podmienky používania Rodinky a pravidlá obsahu | Rodinka",
-            "description": "Podmienky používania Rodinky: prevádzkovateľ, Rodinka Free a Pro, platby cez Paddle, obnovenie a zrušenie predplatného, vrátenie peňazí a pravidlá obsahu.",
-            "og_alt": "Rodinka – podmienky používania a pravidlá obsahu",
-            "eyebrow": "PODMIENKY",
-            "answer": ("Čo upravujú podmienky Rodinky?", "Kto Rodinku prevádzkuje, ako funguje verzia Free a predplatné Rodinka Pro, že platby na webe spracúva Paddle.com ako Merchant of Record, ako predplatné zrušiť a požiadať o vrátenie peňazí a aký obsah do Rodinky nepatrí."),
-        },
-        "privacy": {
-            "title": "Zásady ochrany osobných údajov Rodinky | Rodinka",
-            "description": "Aké údaje Rodinka ukladá, prečo a kto k nim má prístup: rodinný priestor, zdravotné údaje, analytika, sprostredkovatelia vrátane Paddle, uchovávanie údajov a vaše práva.",
-            "og_alt": "Rodinka – zásady ochrany osobných údajov",
-            "eyebrow": "SÚKROMIE",
-            "answer": ("Ako Rodinka zaobchádza s osobnými údajmi?", "Rodinka ukladá iba údaje, ktoré do nej rodina zadá, a technické údaje nutné na prevádzku. Analytika je v predvolenom stave vypnutá, platobné údaje zadávate priamo Paddle a účet môžete kedykoľvek sami zmazať v aplikácii."),
-        },
-    },
-    "en": {
-        "terms": {
-            "title": "Rodinka terms of use and content guidelines | Rodinka",
-            "description": "Rodinka terms of use: the operator, Rodinka Free and Pro, payments through Paddle, subscription renewal and cancellation, refunds and content guidelines.",
-            "og_alt": "Rodinka – terms of use and content guidelines",
-            "eyebrow": "TERMS",
-            "answer": ("What do Rodinka’s terms cover?", "Who operates Rodinka, how Rodinka Free and the Rodinka Pro subscription work, that web payments are handled by Paddle.com as merchant of record, how to cancel and request a refund, and what content does not belong in Rodinka."),
-        },
-        "privacy": {
-            "title": "Rodinka privacy policy | Rodinka",
-            "description": "What Rodinka stores, why and who can see it: the shared family space, health data, analytics, processors including Paddle, retention and your rights.",
-            "og_alt": "Rodinka – privacy policy",
-            "eyebrow": "PRIVACY",
-            "answer": ("How does Rodinka handle personal data?", "Rodinka stores only what the family enters and the technical data needed to run the service. Analytics is off by default, you enter payment details directly with Paddle, and you can delete your account yourself in the app at any time."),
-        },
-    },
-}
+LEGAL_META = {'cs': {'terms': {'title': 'Podmínky používání Rodinky a pravidla obsahu | Rodinka',
+                  'description': 'Provozovatel, Free a Pro, podmíněná dostupnost platebních kanálů, odstoupení, reklamace a '
+                                 'spotřebitelská práva. Autoritativní znění je v aplikaci Rodinka.',
+                  'og_alt': 'Rodinka – podmínky používání a pravidla obsahu',
+                  'eyebrow': 'PODMÍNKY',
+                  'answer': ('Co upravují podmínky Rodinky?',
+                             'Provozovatel, Free a Pro, podmíněná dostupnost platebních kanálů, odstoupení, reklamace a '
+                             'spotřebitelská práva. Autoritativní znění je v aplikaci Rodinka.')},
+        'privacy': {'title': 'Zásady ochrany osobních údajů Rodinky | Rodinka',
+                    'description': 'Jaké údaje Rodinka ukládá, proč a kdo k nim má přístup: rodinný prostor, zdravotní údaje, '
+                                   'analytika, zpracovatelé včetně Paddle, uchování údajů a vaše práva.',
+                    'og_alt': 'Rodinka – zásady ochrany osobních údajů',
+                    'eyebrow': 'SOUKROMÍ',
+                    'answer': ('Jak Rodinka zachází s osobními údaji?',
+                               'Rodinka ukládá jen údaje, které do ní rodina zadá, a technické údaje nutné k provozu. Analytika '
+                               'je ve výchozím stavu vypnutá, platební údaje zadáváte přímo Paddle a účet můžete kdykoli sami '
+                               'smazat v aplikaci.')}},
+ 'sk': {'terms': {'title': 'Podmienky používania Rodinky a pravidlá obsahu | Rodinka',
+                  'description': 'Prevádzkovateľ, Free a Pro, podmienená dostupnosť platobných kanálov, odstúpenie, reklamácie a '
+                                 'spotrebiteľské práva. Autoritatívne znenie je v aplikácii Rodinka.',
+                  'og_alt': 'Rodinka – podmienky používania a pravidlá obsahu',
+                  'eyebrow': 'PODMIENKY',
+                  'answer': ('Čo upravujú podmienky Rodinky?',
+                             'Prevádzkovateľ, Free a Pro, podmienená dostupnosť platobných kanálov, odstúpenie, reklamácie a '
+                             'spotrebiteľské práva. Autoritatívne znenie je v aplikácii Rodinka.')},
+        'privacy': {'title': 'Zásady ochrany osobných údajov Rodinky | Rodinka',
+                    'description': 'Aké údaje Rodinka ukladá, prečo a kto k nim má prístup: rodinný priestor, zdravotné údaje, '
+                                   'analytika, sprostredkovatelia vrátane Paddle, uchovávanie údajov a vaše práva.',
+                    'og_alt': 'Rodinka – zásady ochrany osobných údajov',
+                    'eyebrow': 'SÚKROMIE',
+                    'answer': ('Ako Rodinka zaobchádza s osobnými údajmi?',
+                               'Rodinka ukladá iba údaje, ktoré do nej rodina zadá, a technické údaje nutné na prevádzku. '
+                               'Analytika je v predvolenom stave vypnutá, platobné údaje zadávate priamo Paddle a účet môžete '
+                               'kedykoľvek sami zmazať v aplikácii.')}},
+ 'en': {'terms': {'title': 'Rodinka terms of use and content guidelines | Rodinka',
+                  'description': 'The operator, Free and Pro, conditional channel availability, withdrawal, defect claims and '
+                                 'consumer rights. The authoritative text is in the Rodinka app.',
+                  'og_alt': 'Rodinka – terms of use and content guidelines',
+                  'eyebrow': 'TERMS',
+                  'answer': ('What do Rodinka’s terms cover?',
+                             'The operator, Free and Pro, conditional channel availability, withdrawal, defect claims and '
+                             'consumer rights. The authoritative text is in the Rodinka app.')},
+        'privacy': {'title': 'Rodinka privacy policy | Rodinka',
+                    'description': 'What Rodinka stores, why and who can see it: the shared family space, health data, '
+                                   'analytics, processors including Paddle, retention and your rights.',
+                    'og_alt': 'Rodinka – privacy policy',
+                    'eyebrow': 'PRIVACY',
+                    'answer': ('How does Rodinka handle personal data?',
+                               'Rodinka stores only what the family enters and the technical data needed to run the service. '
+                               'Analytics is off by default, you enter payment details directly with Paddle, and you can delete '
+                               'your account yourself in the app at any time.')}}}
+
 
 # Czech proper names inside Slovak legal text (the Czech data-protection
 # authority) are marked lang="cs" so screen readers and validators know.
-CZECH_NAMES = ("Úřad pro ochranu osobních údajů (ÚOOÚ)", "Úřad pro ochranu osobních údajů")
+CZECH_NAMES = ("Úřad pro ochranu osobních údajů (ÚOOÚ)", "Úřad pro ochranu osobních údajů", "Magistrát města Zlína")
 
 
 def legal_text(value: str, locale: str) -> str:
@@ -3226,6 +3156,18 @@ def legal_text(value: str, locale: str) -> str:
 
 def load_legal_content() -> dict:
     return json.loads(LEGAL_CONTENT_FILE.read_text(encoding="utf-8"))
+
+
+def render_legal_sections(sections: list[dict], locale: str) -> str:
+    result = ""
+    for section in sections:
+        paragraphs = "".join(f"<p>{legal_text(paragraph, locale)}</p>" for paragraph in section["paragraphs"])
+        items = "".join(f"<li>{legal_text(item, locale)}</li>" for item in section["items"])
+        links = "".join(f'<li><a href="{esc(link["href"])}">{esc(link["label"])}</a></li>' for link in section.get("links", []))
+        items_markup = f'<ul class="legal-list">{items}</ul>' if items else ""
+        links_markup = f'<ul class="legal-links">{links}</ul>' if links else ""
+        result += f'<article class="answer"><h3>{legal_text(section["heading"], locale)}</h3><div class="answer-body">{paragraphs}{items_markup}{links_markup}</div></article>'
+    return result
 
 
 def render_legal(page_key: str, locale: str, legal: dict) -> str:
@@ -3242,20 +3184,23 @@ def render_legal(page_key: str, locale: str, legal: dict) -> str:
         "og_alt": meta["og_alt"],
     }
     question, answer = meta["answer"]
-    sections = ""
-    for section in page["sections"]:
-        paragraphs = "".join(f"<p>{legal_text(paragraph, locale)}</p>" for paragraph in section["paragraphs"])
-        items = "".join(f"<li>{legal_text(item, locale)}</li>" for item in section["items"])
-        items_markup = f'<ul class="legal-list">{items}</ul>' if items else ""
-        sections += f'<article class="answer"><h3>{legal_text(section["heading"], locale)}</h3><div class="answer-body">{paragraphs}{items_markup}</div></article>'
+    sections = render_legal_sections(page["sections"], locale)
     operator_lines = [f"<p>{esc(operator['legalName'])}</p>"]
     if operator["address"]:
         operator_lines.append(f"<p>{esc(operator['address'])}</p>")
     if operator["registrationNumber"]:
         operator_lines.append(f"<p>{esc(content['registrationLabel'])}: {esc(operator['registrationNumber'])}</p>")
+    if operator.get("businessRegister"):
+        operator_lines.append(f'<p>{esc(content["businessRegisterLabel"])}: {legal_text(operator["businessRegister"], locale)}</p>')
+    if operator.get("vatRegistered") is False:
+        operator_lines.append(f'<p>{esc(content["notVatRegistered"])}</p>')
+    if operator.get("contactPhone"):
+        operator_lines.append(f'<p>{esc(content["phoneLabel"])}: {esc(operator["contactPhone"])}</p>')
     operator_lines.append(f'<p><a href="mailto:{esc(operator["contactEmail"])}">{esc(operator["contactEmail"])}</a></p>')
     sections += f'<article class="answer" id="provozovatel"><h3>{esc(content["operatorHeading"])}</h3><div class="answer-body">{"".join(operator_lines)}</div></article>'
+    canonical_label = {"cs": "Aktuální dokument v aplikaci Rodinka", "sk": "Aktuálny dokument v aplikácii Rodinka", "en": "Current document in the Rodinka app"}[locale]
     intro = f'<p class="topic-lead">{legal_text(page["intro"], locale)}</p>' if page["intro"] else ""
+    intro += f'<p><a href="{canonical(PATHS[page_key][locale])}">{esc(canonical_label)}</a></p>'
     main = f'''      <article class="topic-page info-page legal-page">
         <div class="topic-hero-wrap">
           <header class="topic-hero"><nav class="breadcrumbs" aria-label="{esc(cfg["breadcrumb"])}"><a href="{cfg["home_path"]}">{esc(cfg["home"])}</a><span aria-hidden="true">/</span><span aria-current="page">{esc(LLMS_LABELS[locale][page_key])}</span></nav><p class="section-kicker">{esc(meta["eyebrow"])}</p><h1>{esc(page["title"])}</h1>{intro}<p class="legal-updated">{esc(content["lastUpdated"])}</p></header>

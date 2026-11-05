@@ -15,6 +15,14 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://mojerodinka.cz"
+APP = "https://app.mojerodinka.cz"
+
+
+def canonical_url(family: str, locale: str) -> str:
+    if family in ("terms", "privacy"):
+        suffix = "" if locale == "cs" else f"?lang={locale}"
+        return f"{APP}/{family}{suffix}"
+    return f"{SITE}{FAMILIES[family][locale]}"
 
 FAMILIES = {
     "home": {"cs": "/", "sk": "/sk/", "en": "/en/"},
@@ -249,7 +257,7 @@ def main() -> int:
                 if attrs.get("type") != "font/woff2" or "crossorigin" not in attrs:
                     errors.append(f"{path}: {href} preload needs type=\"font/woff2\" and crossorigin")
 
-        expected_canonical = f"{SITE}{path}"
+        expected_canonical = canonical_url(family, locale)
         if parser.canonical != expected_canonical:
             errors.append(f"{path}: canonical {parser.canonical!r} != {expected_canonical!r}")
         missing_meta = sorted(META_REQUIRED - parser.meta.keys())
@@ -269,8 +277,8 @@ def main() -> int:
             if parser.meta.get("og:image:width") != str(width) or parser.meta.get("og:image:height") != str(height):
                 errors.append(f"{path}: social image dimensions do not match the PNG")
 
-        expected_alternates = {code: f"{SITE}{href}" for code, href in FAMILIES[family].items()}
-        expected_alternates["x-default"] = f"{SITE}{FAMILIES[family]['cs']}"
+        expected_alternates = {code: canonical_url(family, code) for code in FAMILIES[family]}
+        expected_alternates["x-default"] = canonical_url(family, 'cs')
         if parser.alternates != expected_alternates:
             errors.append(f"{path}: hreflang set is not complete and reciprocal")
 
@@ -304,7 +312,7 @@ def main() -> int:
         # Every page reaches the existing Terms and Privacy through the footer;
         # the policy pages must also name Paddle and the buyer portal.
         for legal_family in LEGAL_FAMILIES:
-            legal_path = FAMILIES[legal_family][locale]
+            legal_path = canonical_url(legal_family, locale)
             if family != legal_family and f'href="{legal_path}"' not in text:
                 errors.append(f"{path}: missing link to {legal_path}")
         if family == "terms" and ("Merchant of Record" not in text and "merchant of record" not in text):
@@ -316,8 +324,13 @@ def main() -> int:
         # Paddle's domain review rejected donations: no tip jar, membership
         # platform or "support development" wording may come back.
         for forbidden in ("buymeacoffee", "buy me a coffee", "podpořit vývoj", "podporiť vývoj", "support development", "podporujete", "donat", "darovat"):
-            if forbidden in text.lower():
+            historical_channel = forbidden in ("buymeacoffee", "buy me a coffee") and family in (*LEGAL_FAMILIES, "refunds")
+            if forbidden in text.lower() and not historical_channel:
                 errors.append(f"{path}: donation wording or link found: {forbidden!r}")
+        if re.search(r'href=["\'][^"\']*buymeacoffee', text, re.IGNORECASE):
+            errors.append(f"{path}: BMC purchase/donation links are not allowed")
+        if re.search(r'149\s*(?:Kč|CZK)|1[ ,]?599|CZK\s*149', text):
+            errors.append(f"{path}: unpublished paid Pro prices found")
         if "lorem ipsum" in text.lower() or "example.com" in text.lower():
             errors.append(f"{path}: placeholder content found")
         if "https://app.mojerodinka.cz" not in text:
@@ -370,7 +383,8 @@ def main() -> int:
     if description_duplicates:
         errors.append(f"Duplicate descriptions: {description_duplicates}")
 
-    orphaned = set(EXPECTED) - linked_pages
+    # Legal mirrors intentionally point readers to the app's canonical text.
+    orphaned = {path for path, (family, _) in EXPECTED.items() if family not in LEGAL_FAMILIES} - linked_pages
     if orphaned:
         errors.append(f"Pages not reached by normal HTML links: {sorted(orphaned)}")
 
@@ -392,7 +406,7 @@ def main() -> int:
         sitemap_root = ET.parse(ROOT / "sitemap.xml").getroot()
         namespace = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         sitemap_urls = {url.text or "" for url in sitemap_root.findall("s:url/s:loc", namespace)}
-        expected_urls = {f"{SITE}{path}" for path in EXPECTED}
+        expected_urls = {f"{SITE}{path}" for path, (family, _) in EXPECTED.items() if family not in LEGAL_FAMILIES}
         if sitemap_urls != expected_urls:
             errors.append("sitemap.xml does not exactly match canonical page URLs")
     except (ET.ParseError, OSError) as exc:

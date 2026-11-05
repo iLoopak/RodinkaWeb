@@ -17,8 +17,8 @@
 - [Aplikace pro rodinu](https://mojerodinka.cz/aplikace-pro-rodinu/)
 - [Ceník](https://mojerodinka.cz/pricing/)
 - [Zásady refundací](https://mojerodinka.cz/refund-policy/)
-- [Podmínky používání](https://mojerodinka.cz/terms/)
-- [Zásady ochrany soukromí](https://mojerodinka.cz/privacy/)
+- [Podmínky používání](https://app.mojerodinka.cz/terms)
+- [Zásady ochrany soukromí](https://app.mojerodinka.cz/privacy)
 
 ## Slovak
 - [Rodinka](https://mojerodinka.cz/sk/)
@@ -35,8 +35,8 @@
 - [Aplikácia pre rodinu](https://mojerodinka.cz/sk/aplikacia-pre-rodinu/)
 - [Cenník](https://mojerodinka.cz/sk/pricing/)
 - [Zásady refundácií](https://mojerodinka.cz/sk/refund-policy/)
-- [Podmienky používania](https://mojerodinka.cz/sk/terms/)
-- [Zásady ochrany súkromia](https://mojerodinka.cz/sk/privacy/)
+- [Podmienky používania](https://app.mojerodinka.cz/terms?lang=sk)
+- [Zásady ochrany súkromia](https://app.mojerodinka.cz/privacy?lang=sk)
 
 ## English
 - [Rodinka](https://mojerodinka.cz/en/)
@@ -53,5 +53,5 @@
 - [Family organizer app](https://mojerodinka.cz/en/family-organizer/)
 - [Pricing](https://mojerodinka.cz/en/pricing/)
 - [Refund policy](https://mojerodinka.cz/en/refund-policy/)
-- [Terms of use](https://mojerodinka.cz/en/terms/)
-- [Privacy policy](https://mojerodinka.cz/en/privacy/)
+- [Terms of use](https://app.mojerodinka.cz/terms?lang=en)
+- [Privacy policy](https://app.mojerodinka.cz/privacy?lang=en)

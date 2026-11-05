@@ -15,7 +15,8 @@ import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 
-const appRoot = resolve(process.argv[2] ?? '../Rodinka')
+const check = process.argv.includes('--check')
+const appRoot = resolve(process.argv.slice(2).find((arg) => arg !== '--check') ?? '../Rodinka')
 const legalDir = join(appRoot, 'src/features/legal')
 const out = resolve(import.meta.dirname, '../data/legal-content.json')
 const work = mkdtempSync(join(tmpdir(), 'rodinka-legal-'))
@@ -37,11 +38,14 @@ try {
     intro: page.intro ?? '',
     sections: page.sections
       .filter((section) => !section.audience || section.audience.includes('web'))
-      .map(({ heading, paragraphs, items }) => ({ heading, paragraphs, items: items ?? [] })),
+      .map(({ id, heading, paragraphs, items, links }) => ({ id, heading, paragraphs, items: items ?? [], links: links ?? [] })),
   })
   const languages = Object.fromEntries(Object.entries(LEGAL_CONTENT).map(([language, value]) => [language, {
     operatorHeading: value.operatorHeading,
     registrationLabel: value.registrationLabel,
+    businessRegisterLabel: value.businessRegisterLabel,
+    phoneLabel: value.phoneLabel,
+    notVatRegistered: value.notVatRegistered,
     lastUpdated: value.lastUpdated,
     terms: forWeb(value.terms),
     privacy: forWeb(value.privacy),
@@ -49,7 +53,7 @@ try {
   for (const language of ['cs', 'sk', 'en']) {
     if (!languages[language]) throw new Error(`Missing ${language} legal content`)
   }
-  if (!OPERATOR.legalName?.trim() || !OPERATOR.contactEmail?.trim()) {
+  if (!['legalName', 'address', 'registrationNumber', 'contactEmail', 'contactPhone', 'businessRegister'].every((key) => OPERATOR[key]?.trim())) {
     throw new Error('Operator details are not published in the app; refusing to sync.')
   }
 
@@ -59,8 +63,14 @@ try {
     operator: OPERATOR,
     languages,
   }
-  writeFileSync(out, `${JSON.stringify(payload, null, 2)}\n`)
-  console.log(`Wrote ${out} from ${payload.source}.`)
+  const serialized = `${JSON.stringify(payload, null, 2)}\n`
+  if (check) {
+    if (readFileSync(out, 'utf8') !== serialized) throw new Error('Legal snapshot differs from the selected app checkout; sync it before publishing.')
+    console.log('Legal snapshot matches the selected app source.')
+  } else {
+    writeFileSync(out, serialized)
+    console.log(`Wrote ${out} from ${payload.source}.`)
+  }
 } finally {
   rmSync(work, { recursive: true, force: true })
 }
