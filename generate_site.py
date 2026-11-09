@@ -11,6 +11,8 @@ import json
 import math
 from pathlib import Path
 
+import comparisons as cmp
+
 
 ROOT = Path(__file__).resolve().parent
 SITE_URL = "https://mojerodinka.cz"
@@ -26,12 +28,17 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20261102b"
+ASSET_VERSION = "20261109a"
 
 # Self-hosted webfont, built by tools/build_fonts.py. The app sets every word in
 # Manrope, so the site does too: one variable file (wght 500-800) carries body,
 # headings and the brand, and it is the only font preload.
 MANROPE_WOFF2 = "/assets/fonts/manrope-latin-ext-500-800.woff2"
+
+# The comparison section: a hub, one page per competitor and an editorial guide.
+# Copy and verified facts live in comparisons.py; this file only renders them.
+VS_KEYS = tuple(f"vs_{key}" for key in cmp.COMPETITOR_ORDER)
+COMPARE_KEYS = ("compare", *VS_KEYS, "best")
 
 TOPIC_KEYS = ("planner", "calendar", "circle", "chores", "shopping", "meals", "trips", "memories", "documents", "baby", "app")
 
@@ -155,6 +162,11 @@ PATHS = {
     "documents": {"cs": "/hlidani-platnosti-dokladu/", "sk": "/sk/strazenie-platnosti-dokladov/", "en": "/en/document-expiry-reminders/"},
     "trips": {"cs": "/rodinne-vylety/", "sk": "/sk/rodinne-vylety/", "en": "/en/family-trips/"},
     "circle": {"cs": "/sirsi-rodina/", "sk": "/sk/sirsia-rodina/", "en": "/en/extended-family/"},
+    "compare": {"cs": "/srovnani/", "sk": "/sk/porovnanie/", "en": "/en/compare/"},
+    "vs_familia": {"cs": "/srovnani/rodinka-vs-familia/", "sk": "/sk/porovnanie/rodinka-vs-familia/", "en": "/en/compare/rodinka-vs-familia/"},
+    "vs_familywall": {"cs": "/srovnani/rodinka-vs-familywall/", "sk": "/sk/porovnanie/rodinka-vs-familywall/", "en": "/en/compare/rodinka-vs-familywall/"},
+    "vs_cozi": {"cs": "/srovnani/rodinka-vs-cozi/", "sk": "/sk/porovnanie/rodinka-vs-cozi/", "en": "/en/compare/rodinka-vs-cozi/"},
+    "best": {"cs": "/nejlepsi-rodinne-planovace/", "sk": "/sk/najlepsie-rodinne-planovace/", "en": "/en/best-family-planner-apps/"},
     # Paddle reviews these exact public paths; they keep one slug in every language.
     "pricing": {"cs": "/pricing/", "sk": "/sk/pricing/", "en": "/en/pricing/"},
     "refunds": {"cs": "/refund-policy/", "sk": "/sk/refund-policy/", "en": "/en/refund-policy/"},
@@ -164,7 +176,7 @@ PATHS = {
 
 
 RELATED = {
-    "planner": ("calendar", "circle", "app"),
+    "planner": ("calendar", "circle", "best"),
     "calendar": ("planner", "circle", "chores"),
     "circle": ("calendar", "planner", "memories"),
     "shopping": ("meals", "planner", "app"),
@@ -174,7 +186,7 @@ RELATED = {
     "memories": ("trips", "baby", "circle"),
     "documents": ("trips", "calendar", "app"),
     "baby": ("memories", "planner", "app"),
-    "app": ("planner", "circle", "memories"),
+    "app": ("planner", "circle", "compare"),
 }
 
 
@@ -1824,6 +1836,8 @@ def schema(page_key: str, locale: str, name: str, description: str) -> str:
             },
         ],
     }
+    if page_key in COMPARE_KEYS:
+        graph["@graph"].extend(comparison_schema_nodes(page_key, locale, name, description))
     proof = PRODUCT_PROOFS.get(page_key)
     if proof:
         proof_url = canonical(localized_product_src(proof["src"], locale))
@@ -1931,7 +1945,7 @@ def head(page_key: str, locale: str, data: dict) -> str:
 {alternates(page_key)}
     <meta property="og:title" content="{esc(data["og_title"])}" />
     <meta property="og:description" content="{esc(data["og_description"])}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="{"article" if page_key in (*VS_KEYS, "best") else "website"}" />
     <meta property="og:url" content="{canonical(path)}" />
     <meta property="og:site_name" content="Rodinka" />
     <meta property="og:locale" content="{cfg["og_locale"]}" />
@@ -2116,6 +2130,7 @@ ICONS = {
     "people": '<circle cx="9" cy="8.5" r="3"/><path d="M3.8 19c.6-3 2.6-4.8 5.2-4.8s4.6 1.8 5.2 4.8"/><circle cx="16.6" cy="9.6" r="2.4"/><path d="M15.6 14.4c2.4-.2 4.2 1.4 4.7 4.1"/>',
     "homes": '<path d="M3.5 11.2 8 7.5l4.5 3.7V19h-9v-7.8Z"/><path d="M12.5 9.6 16 6.8l4.5 3.7V19h-8"/><path d="M6.5 19v-3.5h3V19"/>',
     "sprout": '<path d="M12 20v-8"/><path d="M12 12c0-3.6-2.4-5.8-6.5-5.8 0 3.8 2.4 5.8 6.5 5.8Z"/><path d="M12 10.5c0-3 2-5 5.6-5 0 3.2-2 5-5.6 5Z"/><path d="M8 20h8"/>',
+    "compare": '<rect x="3.5" y="5" width="7.5" height="14" rx="2.2"/><rect x="13" y="5" width="7.5" height="14" rx="2.2"/><path d="M6 9.5h2.5M6 13h2.5M15.5 9.5h2.5M15.5 13h2.5"/>',
     "gift": '<rect x="4" y="9" width="16" height="11" rx="2.2"/><path d="M3.5 9h17M12 9v11"/><path d="M12 9c-1.6-3.2-5.4-3.4-5.4-1.2C6.6 9 9.2 9 12 9Zm0 0c1.6-3.2 5.4-3.4 5.4-1.2 0 1.2-2.6 1.2-5.4 1.2Z"/>',
 }
 
@@ -2214,7 +2229,7 @@ def site_footer(locale: str) -> str:
           </div>
         </div>
         <nav class="footer-nav" aria-label="{esc(cfg["features"])}"><h2>{esc(cfg["features"])}</h2><ul>{feature_links}</ul></nav>
-        <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{cfg["home_path"]}#rodinka-pro">Rodinka Pro</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
+        <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{cfg["home_path"]}#rodinka-pro">Rodinka Pro</a></li><li><a href="{PATHS["compare"][locale]}">{esc(LLMS_LABELS[locale]["compare"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
         <nav class="footer-nav" aria-label="{esc(INFO_COMMON[locale]["legal_kicker"].capitalize())}"><h2>{esc(INFO_COMMON[locale]["legal_kicker"].capitalize())}</h2><ul>{footer_legal_links}</ul></nav>
       </div>
       <p class="copyright">{esc(cfg["copyright"])}</p>
@@ -2625,10 +2640,7 @@ def render_topic(page_key: str, locale: str) -> str:
     scenarios = "".join(f'<article class="scenario-card"><h3>{esc(title)}</h3><p>{esc(text)}</p></article>' for title, text in data["scenarios"])
     steps = "".join(f'<li><span>{i}</span><div><h3>{esc(title)}</h3><p>{esc(text)}</p></div></li>' for i, (title, text) in enumerate(data["steps"], 1))
     answers = "".join(f'<article class="answer"><h3>{esc(question)}</h3><p>{esc(answer)}</p></article>' for question, answer in data["answers"])
-    related = "".join(
-        f'<li><a href="{PATHS[key][locale]}"><strong>{esc(TOPICS[locale][key]["h1"])}</strong><span>{esc(TOPICS[locale][key]["card"])}</span><em>{esc(cfg["learn_more"])} →</em></a></li>'
-        for key in RELATED[page_key]
-    )
+    related = "".join(related_card(key, locale) for key in RELATED[page_key])
     # The series episode about this topic tells the problem section's story, so
     # it plays right next to it.
     short = topic_short(page_key, locale)
@@ -2647,13 +2659,299 @@ def render_topic(page_key: str, locale: str) -> str:
     return page_shell(page_key, locale, data, main)
 
 
+# ---------------------------------------------------------------------------
+# Comparison section. Facts and copy come from comparisons.py; these functions
+# only lay them out with the topic pages' building blocks.
+
+DIRECT_ANSWER_LABELS = {"cs": "STRUČNÁ ODPOVĚĎ", "sk": "STRUČNÁ ODPOVEĎ", "en": "DIRECT ANSWER"}
+
+
+def compare_copy(page_key: str, locale: str) -> dict:
+    """The localized copy of one page in the comparison section."""
+    if page_key == "compare":
+        return cmp.HUB[locale]
+    if page_key == "best":
+        return cmp.GUIDE[locale]
+    return cmp.COMPARISON_PAGES[page_key.removeprefix("vs_")][locale]
+
+
+def compare_card(page_key: str, locale: str) -> tuple[str, str]:
+    """Heading and one-line teaser for a card that links to a comparison page."""
+    common = cmp.COMMON[locale]
+    if page_key == "compare":
+        return cmp.HUB[locale]["h1"], common["hub_card"]
+    if page_key == "best":
+        return cmp.GUIDE[locale]["h1"], common["guide_card"]
+    page = compare_copy(page_key, locale)
+    return page["h1"], page["card"]
+
+
+def related_card(key: str, locale: str) -> str:
+    cfg = LOCALES[locale]
+    if key in COMPARE_KEYS:
+        heading, teaser = compare_card(key, locale)
+    else:
+        heading, teaser = TOPICS[locale][key]["h1"], TOPICS[locale][key]["card"]
+    return f'<li><a href="{PATHS[key][locale]}"><strong>{esc(heading)}</strong><span>{esc(teaser)}</span><em>{esc(cfg["learn_more"])} →</em></a></li>'
+
+
+def breadcrumb_trail(page_key: str, locale: str) -> list[tuple[str, str]]:
+    trail = [(LOCALES[locale]["home"], PATHS["home"][locale]), (cmp.COMMON[locale]["section"], PATHS["compare"][locale])]
+    if page_key != "compare":
+        name = compare_copy(page_key, locale)["h1"] if page_key in VS_KEYS else LLMS_LABELS[locale][page_key]
+        trail.append((name, PATHS[page_key][locale]))
+    return trail
+
+
+def render_breadcrumbs(page_key: str, locale: str) -> str:
+    trail = breadcrumb_trail(page_key, locale)
+    parts = [f'<a href="{path}">{esc(name)}</a>' for name, path in trail[:-1]]
+    parts.append(f'<span aria-current="page">{esc(trail[-1][0])}</span>')
+    separator = '<span aria-hidden="true">/</span>'
+    return f'<nav class="breadcrumbs" aria-label="{esc(LOCALES[locale]["breadcrumb"])}">{separator.join(parts)}</nav>'
+
+
+def comparison_schema_nodes(page_key: str, locale: str, name: str, description: str) -> list[dict]:
+    url = canonical(PATHS[page_key][locale])
+    rodinka = {"@type": "Organization", "@id": f"{SITE_URL}/#organization", "name": "Rodinka", "url": f"{SITE_URL}/"}
+    nodes: list[dict] = [
+        {
+            "@type": "BreadcrumbList",
+            "@id": f"{url}#breadcrumb",
+            "itemListElement": [
+                {"@type": "ListItem", "position": index, "name": crumb, "item": canonical(path)}
+                for index, (crumb, path) in enumerate(breadcrumb_trail(page_key, locale), 1)
+            ],
+        },
+        rodinka,
+    ]
+    if page_key == "compare":
+        nodes.append({
+            "@type": "ItemList",
+            "@id": f"{url}#comparisons",
+            "name": cmp.HUB[locale]["list_title"],
+            "itemListElement": [
+                {"@type": "ListItem", "position": index, "name": compare_card(key, locale)[0], "url": canonical(PATHS[key][locale])}
+                for index, key in enumerate((*VS_KEYS, "best"), 1)
+            ],
+        })
+        return nodes
+    competitors = [cmp.COMPETITORS[page_key.removeprefix("vs_")]] if page_key in VS_KEYS else [cmp.COMPETITORS[key] for key in cmp.COMPETITOR_ORDER]
+    nodes.append({
+        "@type": "Article",
+        "@id": f"{url}#article",
+        "headline": compare_copy(page_key, locale)["h1"],
+        "name": name,
+        "description": description,
+        "inLanguage": LOCALES[locale]["lang"],
+        "datePublished": cmp.VERIFIED_ON,
+        "dateModified": cmp.VERIFIED_ON,
+        "author": {"@id": rodinka["@id"]},
+        "publisher": {"@id": rodinka["@id"]},
+        "mainEntityOfPage": {"@id": f"{url}#webpage"},
+        "image": {"@id": f"{og_image_url(locale)}#image"},
+        "about": {"@id": f"{SITE_URL}/#webapp"},
+        "mentions": [
+            {"@type": "SoftwareApplication", "name": item["name"], "url": item["site"], "applicationCategory": "LifestyleApplication"}
+            for item in competitors
+        ],
+    })
+    return nodes
+
+
+def compare_direct_answer(page_key: str, locale: str) -> str:
+    question, answer = compare_copy(page_key, locale)["answer"]
+    return f'''      <section class="proof-section direct-answer proof-section--text" aria-labelledby="direct-answer-{page_key}">
+        <div class="proof-copy">
+          <p class="section-kicker">{DIRECT_ANSWER_LABELS[locale]}</p>
+          <h2 id="direct-answer-{page_key}">{esc(question)}</h2>
+          <p>{esc(answer)}</p>
+        </div>
+      </section>'''
+
+
+def compare_disclosure(locale: str) -> str:
+    common = cmp.COMMON[locale]
+    verified = common["verified"].format(date=cmp.VERIFIED_LABEL[locale])
+    return f'''        <aside class="compare-disclosure" aria-labelledby="compare-disclosure-title"><h2 id="compare-disclosure-title">{esc(common["disclosure_title"])}</h2><p>{esc(common["disclosure"])} <time datetime="{cmp.VERIFIED_ON}">{esc(verified)}</time></p><a class="card-link" href="{SUPPORT_PAGE_URL}" target="_blank" rel="noopener">{esc(common["support"])} <span aria-hidden="true">↗</span><span class="visually-hidden"> ({esc(LOCALES[locale]["new_tab"])})</span></a></aside>'''
+
+
+def compare_hero(page_key: str, locale: str, anchor: str, anchor_label: str) -> str:
+    data = compare_copy(page_key, locale)
+    cfg = LOCALES[locale]
+    eyebrow = data.get("eyebrow") or cmp.COMMON[locale]["section"].upper()
+    return f'''        <div class="topic-hero-wrap">
+          <header class="topic-hero">{render_breadcrumbs(page_key, locale)}<p class="section-kicker">{tone_icon("calendar", "compare")}{esc(eyebrow)}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions"><a class="button button-primary button-lg" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#{anchor}">{esc(anchor_label)} <span aria-hidden="true">↓</span></a></div></header>
+        </div>'''
+
+
+def compare_cta(page_key: str, locale: str) -> str:
+    data = compare_copy(page_key, locale)
+    cfg = LOCALES[locale]
+    return f'''      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(cfg["cta_note"])}</small></div></section>'''
+
+
+def status_badge(status: str, locale: str) -> str:
+    if status == "info":
+        return ""
+    return f'<span class="status-badge" data-status="{status}">{esc(cmp.STATUS_LABELS[locale][status])}</span>'
+
+
+def render_compare_table(competitor: str, locale: str, source_numbers: dict[str, int]) -> str:
+    data = cmp.COMPETITORS[competitor]
+    common = cmp.COMMON[locale]
+    name = data["name"]
+    body = []
+    for area, status, note, sources in data["rows"]:
+        own_status, own_note = cmp.RODINKA[area]
+        refs = "".join(
+            f'<a class="source-ref" href="#zdroj-{competitor}-{key}" aria-label="{esc(common["source_ref"])} {source_numbers[key]}">{source_numbers[key]}</a>'
+            for key in sources
+        )
+        body.append(
+            f'<tr><th scope="row">{esc(cmp.AREAS[area][locale])}</th>'
+            f'<td data-label="Rodinka">{status_badge(own_status, locale)}<p>{esc(own_note[locale])}</p></td>'
+            f'<td data-label="{esc(name)}">{status_badge(status, locale)}<p>{esc(note[locale])} <span class="source-refs">{refs}</span></p></td></tr>'
+        )
+    return f'''        <section class="content-section compare-table-section" id="tabulka" aria-labelledby="compare-table-title">
+          <div class="section-copy"><h2 id="compare-table-title">{esc(common["table_title"])}</h2><p>{esc(common["legend"])}</p></div>
+          <table class="compare-table">
+            <caption class="visually-hidden">{esc(common["table_caption"].format(name=name))}</caption>
+            <thead><tr><th scope="col">{esc(common["area"])}</th><th scope="col">Rodinka</th><th scope="col">{esc(name)}</th></tr></thead>
+            <tbody>{"".join(body)}</tbody>
+          </table>
+        </section>'''
+
+
+def compare_list(items: tuple[str, ...]) -> str:
+    return "".join(f"<li>{esc(item)}</li>" for item in items)
+
+
+def render_sources(competitor: str, locale: str, source_numbers: dict[str, int]) -> str:
+    data = cmp.COMPETITORS[competitor]
+    common = cmp.COMMON[locale]
+    verified = common["verified"].format(date=cmp.VERIFIED_LABEL[locale])
+    items = "".join(
+        f'<li id="zdroj-{competitor}-{key}" value="{source_numbers[key]}"><a href="{esc(url)}" rel="noopener" lang="en">{esc(label)}</a></li>'
+        for key, (url, label) in data["sources"].items()
+        if key in source_numbers
+    )
+    return f'''        <section class="content-section compare-sources" aria-labelledby="sources-title">
+          <div class="section-copy"><h2 id="sources-title">{esc(common["sources_title"])}</h2><p>{esc(common["sources_intro"].format(name=data["name"]))} <time datetime="{cmp.VERIFIED_ON}">{esc(verified)}</time></p></div>
+          <ol class="source-list">{items}</ol>
+        </section>'''
+
+
+def render_comparison(competitor: str, locale: str) -> str:
+    page_key = f"vs_{competitor}"
+    data = cmp.COMPARISON_PAGES[competitor][locale]
+    common = cmp.COMMON[locale]
+    cfg = LOCALES[locale]
+    name = cmp.COMPETITORS[competitor]["name"]
+    # Number the sources in the order the table first cites them.
+    source_numbers: dict[str, int] = {}
+    for _, _, _, sources in cmp.COMPETITORS[competitor]["rows"]:
+        for key in sources:
+            source_numbers.setdefault(key, len(source_numbers) + 1)
+    scenarios = "".join(f'<article class="scenario-card"><h3>{esc(title)}</h3><p>{esc(text)}</p></article>' for title, text in data["scenarios"])
+    answers = "".join(f'<article class="answer"><h3>{esc(question)}</h3><p>{esc(answer)}</p></article>' for question, answer in data["faq"])
+    verdict = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in data["verdict"])
+    own_pricing, other_pricing = data["pricing"]
+    others = [key for key in (*VS_KEYS, "best", "compare") if key != page_key]
+    related = "".join(related_card(key, locale) for key in others[:3])
+    main = f'''      <article class="topic-page compare-page">
+{compare_hero(page_key, locale, "tabulka", common["table_title"])}
+{compare_direct_answer(page_key, locale)}
+{compare_disclosure(locale)}
+        <section class="content-section" aria-labelledby="fit-title">
+          <div class="section-copy"><h2 id="fit-title">{esc(common["fit_title"])}</h2></div>
+          <div class="compare-pair">
+            <article class="compare-card surface is-rodinka"><h3>{esc(common["fit_rodinka"])}</h3><ul>{compare_list(data["fit_rodinka"])}</ul></article>
+            <article class="compare-card surface"><h3>{esc(common["fit_comp"].format(name=name))}</h3><ul>{compare_list(data["fit_comp"])}</ul></article>
+          </div>
+        </section>
+{render_compare_table(competitor, locale, source_numbers)}
+        <section class="content-section" aria-labelledby="scenarios-title"><div class="section-copy"><h2 id="scenarios-title">{esc(common["scenarios_title"])}</h2></div><div class="scenario-grid">{scenarios}</div></section>
+        <section class="content-section" aria-labelledby="pros-title">
+          <div class="section-copy"><h2 id="pros-title">{esc(common["pros_title"])}</h2></div>
+          <div class="compare-pair">
+            <article class="compare-card surface is-rodinka"><h3>Rodinka</h3><h4>{esc(common["pros"])}</h4><ul class="is-pros">{compare_list(data["rodinka_pros"])}</ul><h4>{esc(common["cons"])}</h4><ul class="is-cons">{compare_list(data["rodinka_cons"])}</ul></article>
+            <article class="compare-card surface"><h3>{esc(name)}</h3><h4>{esc(common["pros"])}</h4><ul class="is-pros">{compare_list(data["comp_pros"])}</ul><h4>{esc(common["cons"])}</h4><ul class="is-cons">{compare_list(data["comp_cons"])}</ul></article>
+          </div>
+        </section>
+        <section class="content-section" aria-labelledby="pricing-title">
+          <div class="section-copy"><h2 id="pricing-title">{esc(common["pricing_title"])}</h2></div>
+          <div class="compare-pair">
+            <article class="compare-card surface is-rodinka"><h3>Rodinka</h3><p>{esc(own_pricing)}</p><a class="card-link" href="{PATHS["pricing"][locale]}">{esc(INFO_COMMON[locale]["links"]["pricing"])} <span aria-hidden="true">→</span></a></article>
+            <article class="compare-card surface"><h3>{esc(name)}</h3><p>{esc(other_pricing)}</p></article>
+          </div>
+        </section>
+        <section class="content-section answers-section" aria-labelledby="faq-title"><div class="section-copy"><h2 id="faq-title">{esc(common["faq_title"])}</h2></div><div class="answers-list">{answers}</div></section>
+        <section class="content-section compare-verdict" aria-labelledby="verdict-title"><div class="section-copy"><h2 id="verdict-title">{esc(common["verdict_title"])}</h2>{verdict}</div></section>
+{render_sources(competitor, locale, source_numbers)}
+        <aside class="related-section" aria-labelledby="related-title"><p class="section-kicker">{esc(cfg["related_kicker"])}</p><h2 id="related-title">{esc(common["more_title"])}</h2><ul class="related-grid">{related}</ul></aside>
+      </article>
+{compare_cta(page_key, locale)}'''
+    return page_shell(page_key, locale, data, main)
+
+
+def render_compare_hub(locale: str) -> str:
+    data = cmp.HUB[locale]
+    common = cmp.COMMON[locale]
+    cards = "".join(
+        f'<li><a href="{PATHS[key][locale]}"><strong>{esc(heading)}</strong><span>{esc(teaser)}</span></a></li>'
+        for key in (*VS_KEYS, "best")
+        for heading, teaser in (compare_card(key, locale),)
+    )
+    method = "".join(f'<article class="scenario-card"><h3>{esc(title)}</h3><p>{esc(text)}</p></article>' for title, text in data["method"])
+    main = f'''      <article class="topic-page compare-page">
+{compare_hero("compare", locale, "srovnani-seznam", data["list_title"])}
+{compare_direct_answer("compare", locale)}
+        <section class="content-section" id="srovnani-seznam" aria-labelledby="compare-list-title"><div class="section-copy"><h2 id="compare-list-title">{esc(data["list_title"])}</h2></div><ul class="directory-list compare-directory">{cards}</ul></section>
+        <section class="content-section" aria-labelledby="method-title"><div class="section-copy"><h2 id="method-title">{esc(data["method_title"])}</h2></div><div class="scenario-grid compare-method">{method}</div></section>
+{compare_disclosure(locale)}
+      </article>
+{compare_cta("compare", locale)}'''
+    return page_shell("compare", locale, data, main)
+
+
+def render_guide(locale: str) -> str:
+    data = cmp.GUIDE[locale]
+    cfg = LOCALES[locale]
+    common = cmp.COMMON[locale]
+    criteria = "".join(f'<li><span>{i}</span><div><h3>{esc(title)}</h3><p>{esc(text)}</p></div></li>' for i, (title, text) in enumerate(data["criteria"], 1))
+    apps = []
+    for key in ("rodinka", *cmp.COMPETITOR_ORDER):
+        fit, watch = data["apps"][key]
+        name = "Rodinka" if key == "rodinka" else cmp.COMPETITORS[key]["name"]
+        if key == "rodinka":
+            link = f'<a class="card-link" href="{PATHS["app"][locale]}">{esc(cfg["app_label"])} <span aria-hidden="true">→</span></a>'
+        else:
+            link = f'<a class="card-link" href="{PATHS[f"vs_{key}"][locale]}">{esc(common["read_compare"])}: Rodinka vs {esc(name)} <span aria-hidden="true">→</span></a>'
+        classes = "compare-card surface" + (" is-rodinka" if key == "rodinka" else "")
+        apps.append(f'<article class="{classes}"><h3>{esc(name)}</h3><p><strong>{esc(data["fit_label"])}</strong> {esc(fit)}</p><p><strong>{esc(data["watch_label"])}</strong> {esc(watch)}</p>{link}</article>')
+    answers = "".join(f'<article class="answer"><h3>{esc(question)}</h3><p>{esc(answer)}</p></article>' for question, answer in data["faq"])
+    related = "".join(related_card(key, locale) for key in ("compare", "planner", "calendar"))
+    main = f'''      <article class="topic-page compare-page">
+{compare_hero("best", locale, "jak-vybrat", data["criteria_title"])}
+{compare_direct_answer("best", locale)}
+        <section class="help-section" id="jak-vybrat"><div class="section-copy"><h2>{esc(data["criteria_title"])}</h2></div><ol class="help-steps">{criteria}</ol></section>
+        <section class="content-section" aria-labelledby="apps-title"><div class="section-copy"><h2 id="apps-title">{esc(data["apps_title"])}</h2><p>{esc(data["apps_intro"])}</p></div><div class="compare-pair compare-apps">{"".join(apps)}</div></section>
+{compare_disclosure(locale)}
+        <section class="content-section answers-section" aria-labelledby="faq-title"><div class="section-copy"><h2 id="faq-title">{esc(common["faq_title"])}</h2></div><div class="answers-list">{answers}</div></section>
+        <aside class="related-section" aria-labelledby="related-title"><p class="section-kicker">{esc(cfg["related_kicker"])}</p><h2 id="related-title">{esc(cfg["related"])}</h2><ul class="related-grid">{related}</ul></aside>
+      </article>
+{compare_cta("best", locale)}'''
+    return page_shell("best", locale, data, main)
+
+
 def write_page(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8", newline="\n")
 
 
 def render_sitemap() -> str:
-    page_order = ("home", *TOPIC_KEYS, *INFO_KEYS)
+    page_order = ("home", *TOPIC_KEYS, *COMPARE_KEYS, *INFO_KEYS)
     urls = "\n".join(
         f"  <url><loc>{canonical(PATHS[page_key][locale])}</loc></url>"
         for locale in ("cs", "sk", "en")
@@ -2669,9 +2967,9 @@ def render_sitemap() -> str:
 # Short labels for llms.txt, breadcrumbs and the footer. Kept next to the paths so
 # a new topic family cannot be added to PATHS and silently skipped here.
 LLMS_LABELS = {
-    "cs": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendář", "shopping": "Sdílený nákupní seznam", "chores": "Úkoly pro rodinu", "meals": "Plánování jídel", "trips": "Rodinné výlety", "memories": "Rodinné vzpomínky", "documents": "Hlídání platnosti dokladů", "baby": "Příprava na miminko", "app": "Aplikace pro rodinu", "circle": "Širší rodina a pomocníci", "pricing": "Ceník", "refunds": "Zásady refundací", "terms": "Podmínky používání", "privacy": "Zásady ochrany soukromí"},
-    "sk": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendár", "shopping": "Zdieľaný nákupný zoznam", "chores": "Úlohy pre rodinu", "meals": "Plánovanie jedál", "trips": "Rodinné výlety", "memories": "Rodinné spomienky", "documents": "Stráženie platnosti dokladov", "baby": "Príprava na bábätko", "app": "Aplikácia pre rodinu", "circle": "Širšia rodina a pomocníci", "pricing": "Cenník", "refunds": "Zásady refundácií", "terms": "Podmienky používania", "privacy": "Zásady ochrany súkromia"},
-    "en": {"home": "Rodinka", "planner": "Family planner", "calendar": "Family calendar", "shopping": "Shared shopping list", "chores": "Family chores", "meals": "Meal planning", "trips": "Family trips", "memories": "Family memories", "documents": "Document expiry reminders", "baby": "Preparing for a baby", "app": "Family organizer app", "circle": "Extended family and helpers", "pricing": "Pricing", "refunds": "Refund policy", "terms": "Terms of use", "privacy": "Privacy policy"},
+    "cs": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendář", "shopping": "Sdílený nákupní seznam", "chores": "Úkoly pro rodinu", "meals": "Plánování jídel", "trips": "Rodinné výlety", "memories": "Rodinné vzpomínky", "documents": "Hlídání platnosti dokladů", "baby": "Příprava na miminko", "app": "Aplikace pro rodinu", "circle": "Širší rodina a pomocníci", "compare": "Srovnání rodinných plánovačů", "vs_familia": "Rodinka vs Familia", "vs_familywall": "Rodinka vs FamilyWall", "vs_cozi": "Rodinka vs Cozi", "best": "Jak vybrat rodinný plánovač", "pricing": "Ceník", "refunds": "Zásady refundací", "terms": "Podmínky používání", "privacy": "Zásady ochrany soukromí"},
+    "sk": {"home": "Rodinka", "planner": "Rodinný plánovač", "calendar": "Rodinný kalendár", "shopping": "Zdieľaný nákupný zoznam", "chores": "Úlohy pre rodinu", "meals": "Plánovanie jedál", "trips": "Rodinné výlety", "memories": "Rodinné spomienky", "documents": "Stráženie platnosti dokladov", "baby": "Príprava na bábätko", "app": "Aplikácia pre rodinu", "circle": "Širšia rodina a pomocníci", "compare": "Porovnanie rodinných plánovačov", "vs_familia": "Rodinka vs Familia", "vs_familywall": "Rodinka vs FamilyWall", "vs_cozi": "Rodinka vs Cozi", "best": "Ako vybrať rodinný plánovač", "pricing": "Cenník", "refunds": "Zásady refundácií", "terms": "Podmienky používania", "privacy": "Zásady ochrany súkromia"},
+    "en": {"home": "Rodinka", "planner": "Family planner", "calendar": "Family calendar", "shopping": "Shared shopping list", "chores": "Family chores", "meals": "Meal planning", "trips": "Family trips", "memories": "Family memories", "documents": "Document expiry reminders", "baby": "Preparing for a baby", "app": "Family organizer app", "circle": "Extended family and helpers", "compare": "Family planner comparison", "vs_familia": "Rodinka vs Familia", "vs_familywall": "Rodinka vs FamilyWall", "vs_cozi": "Rodinka vs Cozi", "best": "How to choose a family planner", "pricing": "Pricing", "refunds": "Refund policy", "terms": "Terms of use", "privacy": "Privacy policy"},
 }
 
 LLMS_SECTIONS = (("cs", "Czech (default)"), ("sk", "Slovak"), ("en", "English"))
@@ -2682,7 +2980,7 @@ def render_llms_txt() -> str:
     for locale, heading in LLMS_SECTIONS:
         links = "\n".join(
             f'- [{LLMS_LABELS[locale][key]}]({canonical(PATHS[key][locale])})'
-            for key in ("home", *TOPIC_KEYS, *INFO_KEYS, *LEGAL_KEYS)
+            for key in ("home", *TOPIC_KEYS, *COMPARE_KEYS, *INFO_KEYS, *LEGAL_KEYS)
         )
         sections.append(f"## {heading}\n{links}")
     body = "\n\n".join(sections)
@@ -3224,13 +3522,17 @@ def main() -> None:
         write_page(output_path(PATHS["home"][locale]), render_home(locale))
         for page_key in TOPIC_KEYS:
             write_page(output_path(PATHS[page_key][locale]), render_topic(page_key, locale))
+        write_page(output_path(PATHS["compare"][locale]), render_compare_hub(locale))
+        for competitor in cmp.COMPETITOR_ORDER:
+            write_page(output_path(PATHS[f"vs_{competitor}"][locale]), render_comparison(competitor, locale))
+        write_page(output_path(PATHS["best"][locale]), render_guide(locale))
         for page_key in INFO_KEYS:
             write_page(output_path(PATHS[page_key][locale]), render_info(page_key, locale))
         for page_key in LEGAL_KEYS:
             write_page(output_path(PATHS[page_key][locale]), render_legal(page_key, locale, legal))
     write_page(ROOT / "sitemap.xml", render_sitemap())
     write_page(ROOT / "llms.txt", render_llms_txt())
-    print(f"Generated {3 * (1 + len(TOPIC_KEYS) + len(INFO_KEYS) + len(LEGAL_KEYS))} localized HTML pages, sitemap.xml and llms.txt.")
+    print(f"Generated {3 * (1 + len(TOPIC_KEYS) + len(COMPARE_KEYS) + len(INFO_KEYS) + len(LEGAL_KEYS))} localized HTML pages, sitemap.xml and llms.txt.")
 
 
 if __name__ == "__main__":

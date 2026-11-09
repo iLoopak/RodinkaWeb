@@ -660,3 +660,68 @@ html:not(.js) .series-list{display:none}
   .js .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* ------------------------------------------------------------------ comparison section
+   Hub, "Rodinka vs …" pages and the selection guide. Built from the topic page
+   blocks and the app's tokens; the table turns into stacked cards on phones so
+   the page never scrolls sideways. */
+.compare-disclosure{width:min(1000px,var(--page));margin:32px auto 0;padding:22px 26px;border:1px dashed var(--border-default);border-radius:var(--radius-large);background:var(--surface-subtle)}
+.compare-disclosure h2{margin:0 0 6px;font-weight:800;font-size:16px;line-height:1.4}
+.compare-disclosure p{margin:0;color:var(--text-muted);font-size:15px;line-height:1.65}
+.compare-disclosure time{color:var(--text-primary);font-weight:700}
+.compare-disclosure .card-link{margin-top:6px}
+.compare-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.compare-card{padding:26px 28px;min-width:0}
+.compare-card.is-rodinka{border-color:var(--interactive-primary-border)}
+.compare-card h3{margin:0 0 12px;font-weight:800;font-size:19px;line-height:1.35}
+.compare-card h4{margin:18px 0 8px;color:var(--text-muted);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.compare-card ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:15px;line-height:1.6}
+.compare-card ul li::marker{color:var(--interactive-primary)}
+.compare-card ul.is-cons li::marker{color:var(--text-faint)}
+.compare-card p{margin:0 0 10px;color:var(--text-muted);font-size:15px;line-height:1.7}
+.compare-card p strong{color:var(--text-primary)}
+.compare-table{width:100%;margin-top:32px;border-collapse:separate;border-spacing:0;border:1px solid var(--border-subtle);border-radius:var(--radius-large);background:var(--surface-paper);box-shadow:var(--shadow-low);overflow:hidden;table-layout:fixed}
+.compare-table th,.compare-table td{padding:16px 18px;border-bottom:1px solid var(--border-subtle);text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.compare-table tbody tr:last-child>*{border-bottom:0}
+.compare-table thead th{background:var(--surface-subtle);font-weight:800;font-size:14px}
+.compare-table thead th:first-child{width:24%}
+.compare-table tbody th{font-weight:800;font-size:15px;line-height:1.45}
+.compare-table td p{margin:6px 0 0;color:var(--text-muted);font-size:14px;line-height:1.6}
+.status-badge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border:1px solid var(--border-subtle);border-radius:999px;background:var(--surface-subtle);color:var(--text-primary);font-size:13px;font-weight:800;line-height:1.4}
+.status-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--text-faint);flex:none}
+.status-badge[data-status="yes"]{border-color:var(--category-tasks-border);background:var(--category-tasks-soft);color:var(--category-tasks)}
+.status-badge[data-status="yes"]::before{background:var(--category-tasks)}
+.status-badge[data-status="paid"]{border-color:var(--category-family-border);background:var(--category-family-soft);color:var(--category-family)}
+.status-badge[data-status="paid"]::before{background:var(--category-family)}
+.status-badge[data-status="limited"]{border-color:var(--category-meals-border);background:var(--category-meals-soft);color:var(--category-meals)}
+.status-badge[data-status="limited"]::before{background:var(--category-meals)}
+.status-badge[data-status="unverified"]{border-style:dashed;background:transparent;color:var(--text-muted)}
+.status-badge[data-status="unverified"]::before{background:transparent;border:1.5px solid var(--text-faint)}
+.source-refs{white-space:nowrap}
+.source-ref{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-left:3px;padding:0 5px;border:1px solid var(--border-subtle);border-radius:6px;color:var(--interactive-primary);font-size:12px;font-weight:800;vertical-align:1px}
+.source-ref:hover{border-color:var(--interactive-primary-border);background:var(--interactive-primary-soft)}
+.source-list{margin:28px 0 0;padding-left:28px;display:grid;gap:10px;max-width:780px;font-size:15px;line-height:1.6}
+.source-list a{color:var(--interactive-primary);font-weight:700;overflow-wrap:anywhere}
+.source-list a:hover{text-decoration:underline;text-underline-offset:3px}
+.source-list li:target{background:var(--interactive-primary-soft);border-radius:8px}
+.compare-sources time{color:var(--text-primary);font-weight:700}
+.compare-verdict .section-copy p{color:var(--text-primary)}
+.compare-directory{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:32px}
+.compare-method{grid-template-columns:repeat(2,minmax(0,1fr))}
+.compare-page .help-section{margin-top:88px}
+@media (max-width:760px){
+  .compare-pair,.compare-directory,.compare-method{grid-template-columns:1fr}
+  .compare-card{padding:22px}
+  /* Each table row becomes a card: the area as its heading, then one block per app. */
+  .compare-table,.compare-table tbody,.compare-table tr,.compare-table th,.compare-table td{display:block;width:100%}
+  .compare-table{border:0;background:none;box-shadow:none;border-radius:0}
+  .compare-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .compare-table tbody{display:grid;gap:12px}
+  .compare-table tr{border:1px solid var(--border-subtle);border-radius:var(--radius-medium);background:var(--surface-paper);box-shadow:var(--shadow-low);overflow:hidden}
+  .compare-table tbody th{padding:14px 16px;background:var(--surface-subtle)}
+  .compare-table td{padding:12px 16px}
+  .compare-table tbody tr>*{border-bottom:1px solid var(--border-subtle)}
+  .compare-table tbody tr>*:last-child{border-bottom:0}
+  .compare-table td::before{content:attr(data-label);display:block;margin-bottom:6px;font-weight:800;font-size:13px}
+  .compare-disclosure{width:calc(100% - 32px);padding:18px}
+}
