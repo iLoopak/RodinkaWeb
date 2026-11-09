@@ -37,6 +37,11 @@ FAMILIES = {
     "documents": {"cs": "/hlidani-platnosti-dokladu/", "sk": "/sk/strazenie-platnosti-dokladov/", "en": "/en/document-expiry-reminders/"},
     "trips": {"cs": "/rodinne-vylety/", "sk": "/sk/rodinne-vylety/", "en": "/en/family-trips/"},
     "circle": {"cs": "/sirsi-rodina/", "sk": "/sk/sirsia-rodina/", "en": "/en/extended-family/"},
+    "compare": {"cs": "/srovnani/", "sk": "/sk/porovnanie/", "en": "/en/compare/"},
+    "vs_familia": {"cs": "/srovnani/rodinka-vs-familia/", "sk": "/sk/porovnanie/rodinka-vs-familia/", "en": "/en/compare/rodinka-vs-familia/"},
+    "vs_familywall": {"cs": "/srovnani/rodinka-vs-familywall/", "sk": "/sk/porovnanie/rodinka-vs-familywall/", "en": "/en/compare/rodinka-vs-familywall/"},
+    "vs_cozi": {"cs": "/srovnani/rodinka-vs-cozi/", "sk": "/sk/porovnanie/rodinka-vs-cozi/", "en": "/en/compare/rodinka-vs-cozi/"},
+    "best": {"cs": "/nejlepsi-rodinne-planovace/", "sk": "/sk/najlepsie-rodinne-planovace/", "en": "/en/best-family-planner-apps/"},
     "pricing": {"cs": "/pricing/", "sk": "/sk/pricing/", "en": "/en/pricing/"},
     "refunds": {"cs": "/refund-policy/", "sk": "/sk/refund-policy/", "en": "/en/refund-policy/"},
     "terms": {"cs": "/terms/", "sk": "/sk/terms/", "en": "/en/terms/"},
@@ -46,6 +51,12 @@ FAMILIES = {
 # Paddle domain review reads pricing, refunds, terms and privacy on this domain;
 # every page must reach terms and privacy through normal links (the footer).
 POLICY_FAMILIES = {"pricing", "refunds"}
+
+# Comparison section: every page names its publisher and the verification date,
+# carries breadcrumbs, and articles cite their sources.
+COMPARE_FAMILIES = {"compare", "vs_familia", "vs_familywall", "vs_cozi", "best"}
+VS_FAMILIES = {"vs_familia", "vs_familywall", "vs_cozi"}
+UNVERIFIED_LABEL = {"cs": "Nepodařilo se ověřit", "sk": "Nepodarilo sa overiť", "en": "Could not verify"}
 LEGAL_FAMILIES = ("terms", "privacy")
 
 EXPECTED = {
@@ -195,6 +206,48 @@ def internal_path(href: str) -> str | None:
     return None
 
 
+def check_comparison_page(path: str, family: str, locale: str, text: str, parser: PageParser) -> list[str]:
+    errors: list[str] = []
+    graph = []
+    try:
+        graph = json.loads(parser.jsonld[0]).get("@graph", []) if parser.jsonld else []
+    except json.JSONDecodeError:
+        pass  # Reported by the general JSON-LD check.
+    by_type = {item.get("@type"): item for item in graph}
+    crumbs = by_type.get("BreadcrumbList", {}).get("itemListElement", [])
+    if not crumbs or crumbs[-1].get("item") != canonical_url(family, locale):
+        errors.append(f"{path}: BreadcrumbList must end at the page's canonical URL")
+    if not crumbs or crumbs[0].get("item") != canonical_url("home", locale):
+        errors.append(f"{path}: BreadcrumbList must start at the localized homepage")
+    if 'class="breadcrumbs"' not in text:
+        errors.append(f"{path}: visible breadcrumbs missing")
+    if 'class="compare-disclosure"' not in text or 'datetime="' not in text:
+        errors.append(f"{path}: publisher disclosure with a verification date missing")
+    if family in VS_FAMILIES | {"best"}:
+        article = by_type.get("Article")
+        if not article or not article.get("dateModified") or article.get("mainEntityOfPage", {}).get("@id") != f"{canonical_url(family, locale)}#webpage":
+            errors.append(f"{path}: Article structured data missing or not tied to the page")
+        if parser.meta.get("og:type") != "article":
+            errors.append(f"{path}: og:type should be article")
+    if family in VS_FAMILIES:
+        if '<table class="compare-table">' not in text or "<caption" not in text:
+            errors.append(f"{path}: comparison table with a caption missing")
+        if 'class="source-list"' not in text:
+            errors.append(f"{path}: sources list missing")
+        cited = set(re.findall(r'href="#(zdroj-[a-z0-9_-]+)"', text))
+        if not cited or not cited <= set(parser.ids):
+            errors.append(f"{path}: source references point to missing sources")
+        if UNVERIFIED_LABEL[locale] not in text:
+            errors.append(f"{path}: expected at least one honestly unverified row")
+        if text.count('class="answer"') < 4:
+            errors.append(f"{path}: FAQ needs at least four questions")
+    # No scores or fabricated reviews in the comparison section.
+    for token in ('"aggregateRating"', '"review"', '"ratingValue"', "★"):
+        if token in text:
+            errors.append(f"{path}: scores or ratings are not allowed: {token}")
+    return errors
+
+
 def png_dimensions(path: Path) -> tuple[int, int]:
     data = path.read_bytes()[:24]
     if data[:8] != b"\x89PNG\r\n\x1a\n":
@@ -308,6 +361,9 @@ def main() -> int:
                         errors.append(f"{path}: JSON-LD lacks the visible primary product ImageObject")
             except json.JSONDecodeError as exc:
                 errors.append(f"{path}: invalid JSON-LD: {exc}")
+
+        if family in COMPARE_FAMILIES:
+            errors.extend(check_comparison_page(path, family, locale, text, parser))
 
         # Every page reaches the existing Terms and Privacy through the footer;
         # the policy pages must also name Paddle and the buyer portal.

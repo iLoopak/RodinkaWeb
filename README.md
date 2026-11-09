@@ -76,6 +76,30 @@ aktuálně prodejný ceník. Znovuzavedení částek vyžaduje potvrzení vlastn
 pro skutečné produkty a kanály; SEO guard hlídá návrat dosavadních částek.
 Úložiště používá přesné jednotky MiB/GiB podle aplikace.
 
+### Srovnání rodinných plánovačů
+
+**CURRENT — ověřeno 9. 11. 2026.** Sekce pomáhá rodičům vybrat aplikaci a férově ukazuje Rodinku vedle konkurence:
+
+| Stránka | CS | SK | EN |
+| --- | --- | --- | --- |
+| Přehled srovnání | `/srovnani/` | `/sk/porovnanie/` | `/en/compare/` |
+| Rodinka vs Familia | `/srovnani/rodinka-vs-familia/` | `/sk/porovnanie/rodinka-vs-familia/` | `/en/compare/rodinka-vs-familia/` |
+| Rodinka vs FamilyWall | `/srovnani/rodinka-vs-familywall/` | `/sk/porovnanie/rodinka-vs-familywall/` | `/en/compare/rodinka-vs-familywall/` |
+| Rodinka vs Cozi | `/srovnani/rodinka-vs-cozi/` | `/sk/porovnanie/rodinka-vs-cozi/` | `/en/compare/rodinka-vs-cozi/` |
+| Průvodce výběrem | `/nejlepsi-rodinne-planovace/` | `/sk/najlepsie-rodinne-planovace/` | `/en/best-family-planner-apps/` |
+
+Obsah je oddělený od šablon: fakta, zdroje i texty jsou v `comparisons.py`, generátor je jen vykresluje (`render_compare_hub`, `render_comparison`, `render_guide`). Další aplikaci přidáte jedním záznamem v `COMPETITORS` a `COMPARISON_PAGES`, klíčem v `COMPETITOR_ORDER`, cestou `vs_<klíč>` v `PATHS`, popiskem v `LLMS_LABELS` a rodinou ve `FAMILIES` validátoru.
+
+Pravidla obsahu:
+
+- Strana Rodinky (`RODINKA`) popisuje vydanou aplikaci, ne roadmapu ani funkce za vypnutým flagem. Propojení s externími kalendáři, nativní aplikace ve storech ani Bezpečný příchod se jako dostupné neuvádějí.
+- Tvrzení o konkurenci pocházejí jen z jejích oficiálních webů. Každý řádek tabulky cituje zdroje a celá sada nese `VERIFIED_ON`. Nenalezená funkce je `unverified` („Nepodařilo se ověřit“); `no` jen tehdy, když to konkurent sám uvádí (text pak začíná „Podle…“).
+- Ceny jen s ověřenou měnou, intervalem a podmínkami. Částky uvedené jen se symbolem `$` bez kódu měny se nezveřejňují; ceny Rodinky Pro také ne (viz výše).
+- Bez skóre, hodnocení a log konkurence. Každá stránka viditelně uvádí, že srovnání publikuje Rodinka, a nabízí kontakt na podporu pro opravy.
+- Při aktualizaci znovu ověřte zdroje, upravte `VERIFIED_ON` a `VERIFIED_LABEL` a spusťte generátor, validace a `python -m unittest discover -s tools -p "test_*.py"`.
+
+JSON-LD stránek sekce přidává `BreadcrumbList`, u srovnání a průvodce `Article` (vydavatel Rodinka, `dateModified` = datum ověření), u přehledu `ItemList`. FAQ je jen viditelné; `FAQPage` záměrně nepoužíváme, protože o FAQ rich results Google rozhoduje sám a obsahu nepřidávají hodnotu.
+
 ### Podmínky, soukromí a refundace
 
 Autoritativní veřejné dokumenty jsou `https://app.mojerodinka.cz/terms` a
@@ -187,6 +211,7 @@ Automatické odesílání do IndexNow zatím není zapojené. U tohoto malého s
 python tools/validate_seo.py
 python tools/validate_analytics.py
 python tools/validate_legal.py
+python -m unittest discover -s tools -p "test_*.py"
 ```
 
 Po změně JSON-LD otestujte reprezentativní URL ve [Schema.org Validatoru](https://validator.schema.org/) a v [Google Rich Results Testu](https://search.google.com/test/rich-results). Rich result není cílem ani zárukou; test má zachytit chybný zápis.

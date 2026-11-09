@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Consent Mode defaults must be queued before Google Tag Manager loads. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+      window.rodinkaConsent = { key: "rodinka_analytics_consent", version: 1, analytics: "denied" };
+      (function () {
+        var analyticsConsent = "denied";
+        try {
+          var savedConsent = JSON.parse(window.localStorage.getItem(window.rodinkaConsent.key));
+          if (savedConsent && savedConsent.version === window.rodinkaConsent.version &&
+              (savedConsent.analytics === "granted" || savedConsent.analytics === "denied")) {
+            analyticsConsent = savedConsent.analytics;
+          }
+        } catch (error) {}
+        window.rodinkaConsent.analytics = analyticsConsent;
+        window.gtag("consent", "default", {
+          analytics_storage: analyticsConsent,
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FM9NJHK');</script>
+    <!-- End Google Tag Manager -->
+    <title>Porovnanie rodinných plánovačov: Rodinka, Familia, FamilyWall, Cozi | Rodinka</title>
+    <meta name="description" content="Férové porovnanie rodinných plánovačov a zdieľaných rodinných kalendárov. Rodinka vedľa aplikácií Familia, FamilyWall a Cozi, so zdrojmi a dátumom overenia." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fffdf8" />
+    <script>
+      (function () {
+        var choice;
+        try { choice = localStorage.getItem('rodinka_theme'); } catch (error) {}
+        var dark = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#282b24' : '#fffdf8';
+      })();
+    </script>
+    <meta name="application-name" content="Rodinka" />
+    <link rel="canonical" href="https://mojerodinka.cz/sk/porovnanie/" />
+    <link rel="alternate" hreflang="cs" href="https://mojerodinka.cz/srovnani/" />
+    <link rel="alternate" hreflang="sk" href="https://mojerodinka.cz/sk/porovnanie/" />
+    <link rel="alternate" hreflang="en" href="https://mojerodinka.cz/en/compare/" />
+    <link rel="alternate" hreflang="x-default" href="https://mojerodinka.cz/srovnani/" />
+    <meta property="og:title" content="Porovnanie rodinných plánovačov" />
+    <meta property="og:description" content="Rodinka vedľa aplikácií Familia, FamilyWall a Cozi: funkcie, platformy a ceny podľa oficiálnych zdrojov." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mojerodinka.cz/sk/porovnanie/" />
+    <meta property="og:site_name" content="Rodinka" />
+    <meta property="og:locale" content="sk_SK" />
+    <meta property="og:locale:alternate" content="cs_CZ" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image" content="https://mojerodinka.cz/og-image-sk.png" />
+    <meta property="og:image:width" content="1794" />
+    <meta property="og:image:height" content="877" />
+    <meta property="og:image:alt" content="Porovnanie rodinných plánovačov od Rodinky" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Porovnanie rodinných plánovačov" />
+    <meta name="twitter:description" content="Rodinka vedľa aplikácií Familia, FamilyWall a Cozi: funkcie, platformy a ceny podľa oficiálnych zdrojov." />
+    <meta name="twitter:image" content="https://mojerodinka.cz/og-image-sk.png" />
+    <meta name="twitter:image:alt" content="Porovnanie rodinných plánovačov od Rodinky" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="preload" href="/assets/fonts/manrope-latin-ext-500-800.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css?v=20261109a" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mojerodinka.cz/#website","url":"https://mojerodinka.cz/","name":"Rodinka","description":"Rodinka je rodinný plánovač pre zdieľaný kalendár, úlohy, nákupy, jedlá, výlety a rodinné spomienky — pre rodičov, deti aj tých, ktorí rodine pomáhajú.","inLanguage":["cs","sk","en"]},{"@type":"WebApplication","@id":"https://mojerodinka.cz/#webapp","name":"Rodinka","url":"https://app.mojerodinka.cz","description":"Rodinka je rodinný plánovač pre zdieľaný kalendár, úlohy, nákupy, jedlá, výlety a rodinné spomienky — pre rodičov, deti aj tých, ktorí rodine pomáhajú.","applicationCategory":"LifestyleApplication","operatingSystem":"Web","isPartOf":{"@id":"https://mojerodinka.cz/#website"}},{"@type":"WebPage","@id":"https://mojerodinka.cz/sk/porovnanie/#webpage","url":"https://mojerodinka.cz/sk/porovnanie/","name":"Porovnanie rodinných plánovačov: Rodinka, Familia, FamilyWall, Cozi | Rodinka","description":"Férové porovnanie rodinných plánovačov a zdieľaných rodinných kalendárov. Rodinka vedľa aplikácií Familia, FamilyWall a Cozi, so zdrojmi a dátumom overenia.","inLanguage":"sk","isPartOf":{"@id":"https://mojerodinka.cz/#website"},"about":{"@id":"https://mojerodinka.cz/#webapp"},"primaryImageOfPage":{"@id":"https://mojerodinka.cz/og-image-sk.png#image"}},{"@type":"ImageObject","@id":"https://mojerodinka.cz/og-image-sk.png#image","url":"https://mojerodinka.cz/og-image-sk.png","contentUrl":"https://mojerodinka.cz/og-image-sk.png","width":1794,"height":877},{"@type":"BreadcrumbList","@id":"https://mojerodinka.cz/sk/porovnanie/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Domov","item":"https://mojerodinka.cz/sk/"},{"@type":"ListItem","position":2,"name":"Porovnanie","item":"https://mojerodinka.cz/sk/porovnanie/"}]},{"@type":"Organization","@id":"https://mojerodinka.cz/#organization","name":"Rodinka","url":"https://mojerodinka.cz/"},{"@type":"ItemList","@id":"https://mojerodinka.cz/sk/porovnanie/#comparisons","name":"Porovnania podľa aplikácie","itemListElement":[{"@type":"ListItem","position":1,"name":"Rodinka vs Familia","url":"https://mojerodinka.cz/sk/porovnanie/rodinka-vs-familia/"},{"@type":"ListItem","position":2,"name":"Rodinka vs FamilyWall","url":"https://mojerodinka.cz/sk/porovnanie/rodinka-vs-familywall/"},{"@type":"ListItem","position":3,"name":"Rodinka vs Cozi","url":"https://mojerodinka.cz/sk/porovnanie/rodinka-vs-cozi/"},{"@type":"ListItem","position":4,"name":"Najlepší rodinný plánovač je ten, ktorý rodina naozaj používa","url":"https://mojerodinka.cz/sk/najlepsie-rodinne-planovace/"}]}]}</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FM9NJHK"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a class="skip-link" href="#main">Preskočiť na obsah</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/sk/" aria-label="Rodinka, Domov"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a>
+        <button class="menu-button" type="button" aria-label="Ponuka" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
+        <nav class="nav" id="main-navigation" aria-label="Hlavná navigácia">
+          <a href="/sk/rodinny-kalendar/">Kalendár</a><a href="/sk/ulohy-pre-rodinu/">Úlohy</a><a href="/sk/zdielany-nakupny-zoznam/">Nákupy</a><a href="/sk/planovanie-jedal/">Jedlá</a><a href="/sk/rodinne-vylety/">Výlety</a><a href="/sk/rodinne-spomienky/">Spomienky</a>
+          <a class="nav-cta" href="https://app.mojerodinka.cz" data-analytics-location="header">Otvoriť aplikáciu <span aria-hidden="true">→</span></a>
+          <div class="nav-preferences">
+            <div class="language-switcher" role="group" aria-label="Jazyk webu"><a href="/srovnani/" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a><span aria-hidden="true">·</span><a href="/sk/porovnanie/" lang="sk" hreflang="sk" aria-label="Slovenčina" aria-current="page">SK</a><span aria-hidden="true">·</span><a href="/en/compare/" lang="en" hreflang="en" aria-label="English">EN</a></div>
+            <button class="theme-switcher" type="button" data-theme-switch data-light-label="Prepnúť na svetlý režim" data-dark-label="Prepnúť na tmavý režim" aria-label="Prepnúť na tmavý režim" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <article class="topic-page compare-page">
+        <div class="topic-hero-wrap">
+          <header class="topic-hero"><nav class="breadcrumbs" aria-label="Cesta na webe"><a href="/sk/">Domov</a><span aria-hidden="true">/</span><span aria-current="page">Porovnanie</span></nav><p class="section-kicker"><span class="tone-icon" data-tone="calendar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="7.5" height="14" rx="2.2"/><rect x="13" y="5" width="7.5" height="14" rx="2.2"/><path d="M6 9.5h2.5M6 13h2.5M15.5 9.5h2.5M15.5 13h2.5"/></svg></span>POROVNANIE APLIKÁCIÍ</p><h1>Porovnanie rodinných plánovačov</h1><p class="topic-lead">Každá rodina potrebuje od plánovača niečo iné. Tu nájdete Rodinku vedľa ďalších aplikácií pre rodinu: čo vedia, pre koho sa hodia a kde má ktorá svoje obmedzenia.</p><div class="hero-actions"><a class="button button-primary button-lg" href="https://app.mojerodinka.cz" data-analytics-location="hero">Začať zadarmo <span aria-hidden="true">→</span></a><a class="text-link" href="#srovnani-seznam">Porovnania podľa aplikácie <span aria-hidden="true">↓</span></a></div></header>
+        </div>
+      <section class="proof-section direct-answer proof-section--text" aria-labelledby="direct-answer-compare">
+        <div class="proof-copy">
+          <p class="section-kicker">STRUČNÁ ODPOVEĎ</p>
+          <h2 id="direct-answer-compare">Ako vybrať medzi Rodinkou, Familiou, FamilyWall a Cozi?</h2>
+          <p>Rozhoduje hlavne to, čo doma riešite najčastejšie. Rodinka sa sústreďuje na každodennú prevádzku celej rodiny po slovensky a po česky: kalendár so sprievodom, úlohy s odmenami pre deti, nákupy, jedlá, výlety a spomienky. Familia stavia na rýchlom zadávaní s pomocou AI, FamilyWall pridáva zdieľanie polohy a Cozi prepojenie s ďalšími kalendármi. Každé porovnanie uvádza zdroje a dátum overenia.</p>
+        </div>
+      </section>
+        <section class="content-section" id="srovnani-seznam" aria-labelledby="compare-list-title"><div class="section-copy"><h2 id="compare-list-title">Porovnania podľa aplikácie</h2></div><ul class="directory-list compare-directory"><li><a href="/sk/porovnanie/rodinka-vs-familia/"><strong>Rodinka vs Familia</strong><span>Rýchle zadávanie s AI, alebo spoločný prehľad celej domácnosti.</span></a></li><li><a href="/sk/porovnanie/rodinka-vs-familywall/"><strong>Rodinka vs FamilyWall</strong><span>Rodinný plánovač po slovensky, alebo rodinná sieť so správami a polohou.</span></a></li><li><a href="/sk/porovnanie/rodinka-vs-cozi/"><strong>Rodinka vs Cozi</strong><span>Rodinný kalendár s prepojením iných kalendárov, alebo plánovač po slovensky s detskými účtami.</span></a></li><li><a href="/sk/najlepsie-rodinne-planovace/"><strong>Najlepší rodinný plánovač je ten, ktorý rodina naozaj používa</strong><span>Na čo sa pri výbere rodinného plánovača pozerať a pre akú rodinu sa hodí ktorá aplikácia.</span></a></li></ul></section>
+        <section class="content-section" aria-labelledby="method-title"><div class="section-copy"><h2 id="method-title">Ako porovnávame</h2></div><div class="scenario-grid compare-method"><article class="scenario-card"><h3>Len oficiálne zdroje</h3><p>Pri ostatných aplikáciách čerpáme z ich webov a nápovedy, nie z recenzií ani dohadov. Každý riadok tabuľky odkazuje na zdroj.</p></article><article class="scenario-card"><h3>Neoverené neznamená chýbajúce</h3><p>Keď informáciu nenájdeme, napíšeme „Nepodarilo sa overiť“. Neprítomnosť na webe nevydávame za absenciu funkcie.</p></article><article class="scenario-card"><h3>Rodinka bez prikrášľovania</h3><p>Pri Rodinke uvádzame len to, čo je v aplikácii dnes, vrátane vecí, ktoré zatiaľ nevie.</p></article><article class="scenario-card"><h3>Bez bodovania</h3><p>Nedávame skóre ani hviezdičky. Opisujeme rozdiely a rozhodnutie nechávame na vás.</p></article></div></section>
+        <aside class="compare-disclosure" aria-labelledby="compare-disclosure-title"><h2 id="compare-disclosure-title">Kto porovnanie pripravil</h2><p>Porovnanie pripravila a zverejňuje Rodinka, teda jedna z porovnávaných aplikácií. Pri ostatných aplikáciách vychádzame len z ich oficiálnych webov a čo sa overiť nepodarilo, výslovne tak označujeme. Keď nájdete nepresnosť, napíšte nám a opravíme ju. <time datetime="2026-11-09">Naposledy overené 9. 11. 2026.</time></p><a class="card-link" href="https://app.mojerodinka.cz/support" target="_blank" rel="noopener">Napísať podpore Rodinky <span aria-hidden="true">↗</span><span class="visually-hidden"> (otvorí sa na novej karte)</span></a></aside>
+      </article>
+      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>Vyskúšajte, či Rodinka sedí vašej rodine.</h2><p>Založenie je zadarmo a bez platobnej karty. Začnite jednou vecou, napríklad spoločným kalendárom, a uvidíte, či vám vyhovuje.</p><div class="cta-actions"><a class="app-cta" href="https://app.mojerodinka.cz" data-analytics-location="content">Začať zadarmo <span aria-hidden="true">→</span></a></div><small class="form-note">Otvorí sa Rodinka v prehliadači. Bez platobnej karty a bez inštalácie.</small></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="/sk/"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a><span class="serif">Nech doma všetko klape.</span><p>Rodinný plánovač pre kalendár, úlohy, nákupy, výlety aj spomienky — pre celú rodinu aj tých, ktorí jej pomáhajú. Po česky, slovensky a anglicky.</p>
+          <div class="footer-social" role="group" aria-labelledby="footer-social-heading">
+            <h2 id="footer-social-heading">Sledujte Rodinku</h2>
+            <ul role="list"><li><a class="footer-social-link" href="https://www.instagram.com/mojerodinka.cz/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span><span class="visually-hidden"> (otvorí sa na novej karte)</span></a></li><li><a class="footer-social-link" href="https://www.facebook.com/profile.php?id=61595033996266" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 22v-9h3l.5-4H14V7c0-1.1.3-2 2-2h2V1.4A26 26 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9Z" fill="currentColor" stroke="none"/></svg><span>Facebook</span><span class="visually-hidden"> (otvorí sa na novej karte)</span></a></li><li><a class="footer-social-link" href="https://www.youtube.com/@MojeRodinkaCz" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg><span>YouTube</span><span class="visually-hidden"> (otvorí sa na novej karte)</span></a></li></ul>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Funkcie"><h2>Funkcie</h2><ul><li><a href="/sk/rodinny-planovac/">Rodinný plánovač</a></li><li><a href="/sk/rodinny-kalendar/">Rodinný kalendár</a></li><li><a href="/sk/ulohy-pre-rodinu/">Úlohy pre rodinu</a></li><li><a href="/sk/zdielany-nakupny-zoznam/">Zdieľaný nákupný zoznam</a></li><li><a href="/sk/planovanie-jedal/">Plánovanie jedál</a></li><li><a href="/sk/rodinne-vylety/">Rodinné výlety</a></li><li><a href="/sk/rodinne-spomienky/">Rodinné spomienky</a></li><li><a href="/sk/strazenie-platnosti-dokladov/">Stráženie platnosti dokladov</a></li><li><a href="/sk/priprava-na-babatko/">Príprava na bábätko</a></li><li><a href="/sk/sirsia-rodina/">Širšia rodina a pomocníci</a></li></ul></nav>
+        <nav class="footer-nav" aria-label="Rodinka"><h2>Rodinka</h2><ul><li><a href="/sk/aplikacia-pre-rodinu/">O aplikácii Rodinka</a></li><li><a href="https://app.mojerodinka.cz" data-analytics-location="footer">Otvoriť aplikáciu</a></li><li><a href="/sk/#rodinka-pro">Rodinka Pro</a></li><li><a href="/sk/porovnanie/">Porovnanie rodinných plánovačov</a></li><li><button class="footer-link" type="button" data-cookie-settings>Nastavenie cookies</button></li></ul></nav>
+        <nav class="footer-nav" aria-label="Podmienky a zásady"><h2>Podmienky a zásady</h2><ul><li><a href="/sk/pricing/">Cenník Rodinky</a></li><li><a href="/sk/refund-policy/">Zásady refundácií</a></li><li><a href="https://app.mojerodinka.cz/terms?lang=sk">Podmienky používania</a></li><li><a href="https://app.mojerodinka.cz/privacy?lang=sk">Zásady ochrany súkromia</a></li></ul></nav>
+      </div>
+      <p class="copyright">© 2026 Rodinka</p>
+    </footer>
+    <section class="cookie-consent" data-cookie-consent hidden role="region" aria-live="polite" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description">
+      <div class="cookie-consent-copy">
+        <h2 id="cookie-consent-title">Analytika webu</h2>
+        <p id="cookie-consent-description">Analytiku používame, aby sme porozumeli používaniu webu Rodinky a mohli ho zlepšovať. Spustí sa až po vašom súhlase.</p>
+      </div>
+      <div class="cookie-consent-actions">
+        <button class="consent-button consent-allow" type="button" data-consent-choice="granted">Povoliť analytiku</button>
+        <button class="consent-button consent-reject" type="button" data-consent-choice="denied">Odmietnuť</button>
+      </div>
+    </section>
+    <script src="/script.js?v=20261109a" defer></script>
+  </body>
+</html>
