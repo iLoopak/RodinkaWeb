@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parents[1]
 # the bottom edge is trimmed: the phone runs off the canvas there anyway.
 SIZE = (900, 1951)
 QUALITY = 86
-LOCALES = ("cs", "sk", "en")
+LOCALES = ("cs", "sk", "en", "de", "pl")
 SOURCES = {
     "01": "rodinka-today-family-overview",
     "02": "rodinka-shared-family-calendar",
@@ -56,7 +56,14 @@ def optimize(source: Path, destination: Path) -> tuple[int, int]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("source_dir", type=Path, help="Store listing folder with cs/, sk/ and en/ subfolders")
+    parser.add_argument("source_dir", type=Path, help="Store listing folder with one subfolder per language (cs/, sk/, en/, de/, pl/)")
+    parser.add_argument(
+        "--locales",
+        nargs="+",
+        choices=LOCALES,
+        default=list(LOCALES),
+        help="Only convert these languages (default: all)",
+    )
     parser.add_argument(
         "--output-dir",
         type=Path,
@@ -65,7 +72,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    for locale in LOCALES:
+    for locale in args.locales:
         for prefix, stem in SOURCES.items():
             source = find_source(args.source_dir / locale, prefix)
             suffix = "" if locale == "cs" else f"-{locale}"

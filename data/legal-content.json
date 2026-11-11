@@ -1,5 +1,5 @@
 {
-  "source": "iLoopak/Rodinka src/features/legal @ cd13d4c5",
+  "source": "iLoopak/Rodinka src/features/legal @ 5881506",
   "operator": {
     "legalName": "Lukáš Sitta",
     "address": "Podlesí I 5311, 760 05 Zlín",
@@ -1311,6 +1311,878 @@
               "You can delete your account yourself in the app: More → Account and family → Delete account. Deletion happens as soon as you confirm and signs you out on every device; copies in backups disappear within 30 days. It deletes the account, your family profile, profile photo, settings, notifications, private notes, wishes and your messages in private conversations, including their photos. Shared family records (calendar, tasks, shopping, memories and their photos, children’s records, the family group chat) stay with the other members, without your name. If you are the last adult in the family, the whole family is deleted, including the children’s profiles and their sign-ins. A child’s account deletes only its own sign-in; the child’s profile stays with the parents. Only a record that the deletion took place is kept (the account identifier and time, without your name or e-mail). A subscription paid through the App Store or Google Play is not cancelled by deleting your account — cancel it in the store’s settings.",
               "Rodinka does not offer a bulk data export inside the app; requests for a copy of your data are handled manually.",
               "You may also lodge a complaint with the Czech supervisory authority, the Office for Personal Data Protection (Úřad pro ochranu osobních údajů, ÚOOÚ)."
+            ],
+            "items": [],
+            "links": []
+          }
+        ]
+      }
+    },
+    "de": {
+      "operatorHeading": "Anbieter und Kontakt",
+      "registrationLabel": "Unternehmensnummer",
+      "businessRegisterLabel": "Einzelunternehmer, eingetragen im Gewerberegister; Registerbehörde",
+      "phoneLabel": "Telefon",
+      "notVatRegistered": "Der Anbieter ist nicht umsatzsteuerpflichtig.",
+      "lastUpdated": "Zuletzt aktualisiert: 10. November 2026",
+      "terms": {
+        "title": "Nutzungsbedingungen und Inhaltsregeln",
+        "intro": "Diese Bedingungen erklären die Nutzung von Rodinka, welche Inhalte nicht hineingehören und wie das Rodinka-Pro-Abonnement funktioniert.",
+        "sections": [
+          {
+            "heading": "Dienst und Anbieter",
+            "paragraphs": [
+              "Rodinka wird von Lukáš Sitta, einem tschechischen Einzelunternehmer, bereitgestellt. Vollständige Angaben und Kontaktdaten findest du am Ende dieser Seite. Diese Bedingungen gelten für Web- und native Apps.",
+              "Rodinka ist ein fortlaufender digitaler Familienorganisator: gemeinsamer Kalender, Aufgaben, Einkäufe, Planung, private Nachrichten und Familieneinträge. Der Familienbereich ist kein öffentliches soziales Netzwerk. Gesundheitsfunktionen dienen der Planung und bieten keine Gesundheitsversorgung.",
+              "Du benötigst einen unterstützten aktuellen Browser oder eine kompatible Android- oder iOS-App sowie Internetzugang für dein Konto und die Synchronisierung. Kalender, Aufgaben und Einkäufe bieten eingeschränkte Offline-Funktionen; Käufe, Abonnementprüfung und einige weitere Funktionen benötigen eine Verbindung. Installiere verfügbare Updates, die für Sicherheit und Funktionsfähigkeit erforderlich sind."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Konten und Vertragsschluss",
+            "paragraphs": [
+              "Mit der Kontoerstellung oder Annahme einer Einladung beantragst du beim Anbieter den Zugang zu Rodinka; das Vertragsverhältnis für den kostenlosen Dienst beginnt mit der Bereitstellung des Kontozugangs. Ein erwachsenes Familienmitglied erstellt Kinderprofile und verwaltete Kinderkonten. Ein erwachsenes Familienmitglied bestellt Rodinka Pro.",
+              "Eine Registrierung, Einladung oder der Besuch dieser Seite bestellt kein kostenpflichtiges Pro. Ein kostenpflichtiges Abonnement setzt eine gesonderte Bestellbestätigung in einem verfügbaren Vertriebskanal und die Annahme nach dessen Regeln voraus. Produkt, Gesamtpreis einschließlich anwendbarer Steuern, Laufzeit und Verlängerungsregeln müssen vor der Bestätigung angegeben werden; der jeweilige Kanal stellt Beleg und Bestätigung bereit."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Rodinka Free und Rodinka Pro",
+            "paragraphs": [
+              "Free bietet den grundlegenden Familienorganisator kostenlos mit 200 MiB Speicher für Familienfotos. Pro erhöht den Speicher auf 5 GiB und ergänzt Moment des Tages, Personalisierung sowie weitere als Pro gekennzeichnete Funktionen, etwa das Familienjahrbuch, die Familienwoche und das Erstellen von Szenarien und Vorbereitungen. Pro gilt für eine bestimmte Familie; eine weitere Familie desselben Kontos erhält es nicht automatisch.",
+              "Familieneinträge und Fotos werden nicht automatisch gelöscht, nur weil Pro endet. Es gilt dann das Free-Limit; oberhalb davon können keine neuen Fotos hinzugefügt werden. Neue Momente des Tages und Funktionen, die aktives Pro voraussetzen, sind nicht verfügbar. Bereits vorhandene Vorbereitungen bleiben lesbar, bearbeitbar und abschließbar. Schon gespeicherte Jahrbuch-PDFs bleiben davon unberührt. Für Konto- oder Familienlöschung gelten die gesonderten Regeln weiter unten und in den Datenschutzhinweisen."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "availability",
+            "heading": "Verfügbarkeit, Laufzeit und Verlängerung von Pro",
+            "paragraphs": [
+              "Neue Pro-Käufe werden schrittweise eingeführt. Die Beschreibung eines Vertriebskanals bedeutet nicht, dass er bereits gestartet ist. Ein Kauf ist nur möglich, wenn die App ein konkretes Angebot anzeigt und der jeweilige Kanal die Bestätigung zulässt. Ohne verfügbares Angebot ermöglichen diese Bedingungen allein keinen Kauf.",
+              "Wenn ein Abonnement angeboten wird, wählst du vor dem Kauf einen monatlichen oder jährlichen Zeitraum zum angezeigten Preis. Das Abonnement verlängert sich automatisch und der nächste Zeitraum wird berechnet, bis du die Verlängerung ausschaltest. Bei Kündigung der Verlängerung bleibt der Zugang bis zum Ende des bezahlten Zeitraums bestehen; eine gewöhnliche Kündigung erstattet keinen bereits bezahlten Preis. Widerruf, Mängelansprüche und Erstattungen sind davon getrennte Rechte.",
+              "Die Deinstallation der App oder die Löschung deines Kontos beendet kein Abonnement. Verwalte es im ursprünglichen Vertriebskanal mit dem Konto, über das der Kauf erfolgte. Der Rodinka-Support kann dir helfen, den Kanal zu finden; du musst Pro nicht ein zweites Mal kaufen."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "paddle",
+            "heading": "Webzahlungen über Paddle",
+            "paragraphs": [
+              "Wenn Webkäufe über Paddle.com aktiviert sind, ist Paddle für diese Bestellung der Verkäufer (Merchant of Record) und nicht nur ein Zahlungsdienstleister. Paddle nimmt Zahlungen entgegen, stellt Belege aus und kümmert sich um anwendbare Steuern und Erstattungen. Anbieter von Rodinka bleibt der Betreiber. Bestellung und Beleg nennen die zuständige Paddle-Gesellschaft; außerdem gelten Paddles Käuferbedingungen.",
+              "Kündige ein bestehendes Paddle-Abonnement über das Kundenportal unter paddle.net oder die verfügbare Abonnementverwaltung in deinem Rodinka-Konto. Beantrage eine Erstattung bei Paddle; du kannst dich auch an den Rodinka-Support wenden. Eine genehmigte vollständige Erstattung kann Pro beenden, wenn die Familie keinen anderen aktiven Anspruch hat. Gesetzliche Rechte haben Vorrang vor freiwilligen Erstattungsrichtlinien."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Paddle-Zahlungssupport und Verwaltung",
+                "href": "https://paddle.net/"
+              },
+              {
+                "label": "Käuferbedingungen von Paddle",
+                "href": "https://www.paddle.com/legal/checkout-buyer-terms"
+              }
+            ]
+          },
+          {
+            "id": "google-play",
+            "heading": "Zahlungen über Google Play",
+            "paragraphs": [
+              "Wenn die Android-App Pro-Käufe anbietet, verwendet sie Google Play Billing. Google Play wickelt Bestellung, Abrechnung und Abonnementverwaltung ab; der Betreiber von Rodinka stellt den Dienst bereit. Store-Bedingungen, Informationen vor dem Kauf und Beleg nennen den Verkäufer. Je nach Land kann Google selbst Verkäufer oder Vertreter des Anbieters sein; wir behaupten nicht, dass Google den Dienst immer selbst verkauft.",
+              "Kündige die Verlängerung in Google Play → Zahlungen und Abos → Abos mit dem Konto, das den Kauf getätigt hat. Du kannst auch die verfügbare Abonnementverwaltung in deinem Rodinka-Konto nutzen. Erstattungen beantragst du nach dem Verfahren von Google Play; bei Mängeln oder gesetzlichen Ansprüchen kannst du dich auch an den Betreiber von Rodinka wenden."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Google-Play-Abo kündigen",
+                "href": "https://support.google.com/googleplay/answer/7018481"
+              },
+              {
+                "label": "Erstattungen bei Google Play",
+                "href": "https://support.google.com/googleplay/answer/2479637"
+              }
+            ]
+          },
+          {
+            "id": "app-store",
+            "heading": "Zahlungen über den App Store",
+            "paragraphs": [
+              "Wenn die iOS-App Pro-Käufe anbietet, nutzt sie In-App-Käufe über Apples App Store. Apple wickelt Abrechnung und Abonnementverwaltung ab; der Betreiber von Rodinka stellt die App bereit. Apples Bedingungen, Informationen vor dem Kauf und Beleg bestimmen die zuständige Apple-Gesellschaft und deren Rolle. Für die Nutzung der iOS-App gilt auch die im App Store aufgeführte Lizenz.",
+              "Kündige die Verlängerung in den Geräteeinstellungen → Apple Account → Abonnements mit dem Konto, das den Kauf getätigt hat. Du kannst auch die verfügbare Abonnementverwaltung in deinem Rodinka-Konto nutzen. Eine Erstattung beantragst du bei Apple unter reportaproblem.apple.com. Der Betreiber von Rodinka hilft auch bei App-Mängeln und gesetzlichen Ansprüchen."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Apple-Abo kündigen",
+                "href": "https://support.apple.com/118428"
+              },
+              {
+                "label": "Erstattungen bei Apple",
+                "href": "https://support.apple.com/118223"
+              }
+            ]
+          },
+          {
+            "id": "legacy-bmc",
+            "heading": "Frühere Buy-Me-a-Coffee-Abonnements",
+            "paragraphs": [
+              "Buy Me a Coffee (BMC) ist ein früherer Vertriebskanal ausschließlich für bestehende Abonnenten. Rodinka bietet dort keine neuen Mitgliedschaften an. Ein bestehendes Abonnement kann für die vereinbarte Laufzeit weiterlaufen und verlängert werden; BMC stellt die Mitgliedschafts- und Zahlungsinfrastruktur bereit, während der Betreiber von Rodinka weiterhin der Dienstanbieter ist.",
+              "Verwalte eine bestehende Mitgliedschaft, indem du dich bei BMC unter „Memberships“ anmeldest oder die verfügbare Verwaltungsoption in deinem Rodinka-Konto im Web nutzt. Eine Kündigung stoppt die nächste Verlängerung und lässt den bezahlten Zeitraum gewöhnlich bestehen. Mängel- oder Erstattungsanfragen richtest du an den Betreiber über die unten angegebenen Kontakte; für die Zahlungsabwicklung gelten außerdem die Regeln von BMC. Dies ist kein Angebot für einen neuen Kauf."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal",
+            "heading": "Gesetzlicher Widerruf und Erstattungen",
+            "paragraphs": [
+              "Verbraucher können einen im Fernabsatz geschlossenen Vertrag grundsätzlich innerhalb von 14 Tagen ab Vertragsschluss ohne Angabe von Gründen widerrufen. Die Aktivierung von Pro oder Nutzung der App hebt dieses Recht nicht automatisch auf. Freiwillige Store-Regeln dürfen deine gesetzlichen Rechte nicht einschränken.",
+              "Der vorzeitige Beginn eines fortlaufenden digitalen Dienstes kann deine ausdrückliche Aufforderung und ordnungsgemäße Information voraussetzen. Ein anteiliger Betrag für bereits bereitgestellte Leistungen ist bei Widerruf nur dann geschuldet, wenn die gesetzlichen Voraussetzungen erfüllt sind. Die Ausnahme für digitale Inhalte ohne körperlichen Datenträger setzt insbesondere eine vorherige ausdrückliche Zustimmung, Information und Bestätigung voraus; diese Bedingungen ersetzen weder eine solche Zustimmung noch eine entsprechende Aufforderung.",
+              "Sende eine eindeutige Widerrufserklärung an die unten angegebene E-Mail- oder Postadresse des Betreibers oder an den Verkäufer auf deinem Beleg. Gib dein Konto, Bestelldatum, Referenz und Vertriebskanal an. Es genügt, die Erklärung innerhalb der Frist abzusenden. Der Rodinka-Support kann helfen, eine Zahlungsanfrage an die zuständige Stelle weiterzuleiten. Bei einem gültigen gesetzlichen Widerruf werden Zahlungen unverzüglich und spätestens binnen 14 Tagen nach Eingang der Mitteilung mit demselben Zahlungsmittel erstattet, sofern nichts anderes vereinbart ist; eine gesetzlich zulässige anteilige Vergütung bleibt davon unberührt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal-model",
+            "heading": "Muster-Widerrufserklärung",
+            "paragraphs": [
+              "Die Verwendung dieses Musters ist freiwillig. An: den am Ende dieser Seite genannten Betreiber oder den Verkäufer auf dem Beleg. Hiermit widerrufe ich den Vertrag über mein Rodinka-Pro-Abonnement. Bestelldatum: …; Bestellreferenz und Vertriebskanal: …; Name und Anschrift der Verbraucherin oder des Verbrauchers: …; E-Mail-Adresse des Kontos: …; Datum der Mitteilung: …; Unterschrift nur bei Mitteilung auf Papier."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "defects",
+            "heading": "Mängel digitaler Dienste und Updates",
+            "paragraphs": [
+              "Bei Vertragswidrigkeit hast du gesetzliche Abhilferechte. Der Dienst muss den vertraglichen und gesetzlichen Anforderungen an Funktionalität, Verfügbarkeit, Sicherheit und erforderliche Updates entsprechen. Bei fortlaufender Bereitstellung haften wir für Mängel, die während der Vertragslaufzeit auftreten oder erkennbar werden.",
+              "Du kannst eine kostenlose Behebung innerhalb angemessener Frist und ohne erhebliche Unannehmlichkeiten verlangen. Ist die Behebung unmöglich, erfolglos, tritt der Mangel erneut auf oder ist er hinreichend schwerwiegend, kannst du unter den gesetzlichen Voraussetzungen eine angemessene Preisminderung oder Vertragsbeendigung verlangen. Wir schließen diese Rechte weder durch eine pauschale Haftungsbegrenzung noch mit der Behauptung aus, der Dienst habe keine Gewährleistung."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "complaints",
+            "heading": "Mängel melden",
+            "paragraphs": [
+              "Melde Probleme mit Funktion oder Verfügbarkeit von Rodinka an privacy@mojerodinka.cz oder die unten angegebene Postanschrift. Beschreibe den Mangel, wann er auftrat und welche Abhilfe du wünschst. Deine Konto-E-Mail, App-Version und eine Bestellreferenz helfen uns bei der Zuordnung. Sende keine Passwörter und keine unnötigen Gesundheits- oder Familienangaben.",
+              "Wir bestätigen den Eingang und Inhalt deiner Meldung, erläutern die Bearbeitung und teilen das Ergebnis oder die Gründe für eine Ablehnung mit. Mängel digitaler Dienste beheben wir unter Berücksichtigung von Art und Zweck des Dienstes innerhalb angemessener Frist und halten dich auf dem Laufenden. Gesetzliche Rechte bei Verzögerung oder Mängeln bleiben bestehen. Zahlungsbezogene Ansprüche richte bitte auch an den Verkäufer auf deinem Beleg; wir helfen, die zuständige Kontaktstelle zu finden."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "adr",
+            "heading": "Außergerichtliche Streitbeilegung",
+            "paragraphs": [
+              "Können wir einen Verbraucherstreit aus einem Vertrag mit dem Betreiber nicht direkt lösen, kannst du dich bei einem kostenpflichtigen Dienst an die Tschechische Handelsinspektion (Česká obchodní inspekce, ČOI) als Stelle für alternative Streitbeilegung wenden. Reiche den Antrag innerhalb eines Jahres ein, nachdem du deinen Anspruch erstmals beim Händler geltend gemacht hast. Die Streitbeilegung soll eine Einigung ermöglichen und schränkt den Zugang zu Gerichten nicht ein.",
+              "Bei einem gesonderten Zahlungsverhältnis mit einem anderen Verkäufer hängen Zuständigkeit und Verfahren zusätzlich von dessen Bedingungen und dem anwendbaren Recht ab."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "ČOI: Informationen und Antrag zur Streitbeilegung",
+                "href": "https://coi.gov.cz/informace-o-adr/"
+              }
+            ]
+          },
+          {
+            "heading": "Konto oder Dienst beenden",
+            "paragraphs": [
+              "Du kannst dein Konto in den Einstellungen löschen; die Datenschutzhinweise beschreiben die genauen Schritte und Folgen für geteilte Familiendaten. Sichere wichtige Unterlagen vorher und kündige die Abonnementverlängerung separat im ursprünglichen Vertriebskanal. Einen Gesamtexport bietet die App nicht an; beim Support kannst du eine Kopie deiner Daten anfragen.",
+              "Eine geplante Einstellung des Dienstes oder wesentliche Einschränkung eines bezahlten Angebots kündigen wir mit angemessenem Vorlauf an und geben Gelegenheit, verfügbare Daten anzufordern. Nicht genutzte bezahlte Leistungen und Erstattungen richten sich nach den gesetzlichen Rechten und dem jeweiligen Vertriebskanal. Eine dringende Sicherheitsmaßnahme kann eine sofortige Einschränkung erfordern; Verbraucherrechte bleiben unberührt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Gesetzliche Rechte und Änderungen dieser Bedingungen",
+            "paragraphs": [
+              "Diese Bedingungen schränken keine zwingenden Verbraucherrechte ein, auch nicht die nach tschechischem und anwendbarem europäischem Recht. Verbraucher in anderen Ländern behalten den zwingenden Schutz des jeweils anwendbaren Rechts.",
+              "Der aktuelle Text und sein Datum stehen auf dieser öffentlichen Seite. Wesentliche Änderungen eines bestehenden Vertrags kündigen wir im Voraus an. Ein neuer Text ändert weder rückwirkend einen vereinbarten bezahlten Zeitraum noch gesetzliche Rechte. Diese Seite begründet weder eine Zustimmung zu einem künftigen Kauf noch den Verlust des Widerrufsrechts."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Was nicht in Rodinka gehört",
+            "paragraphs": [
+              "Inhalte, die du in die App einfügst – Nachrichten, Fotos, Dokumente und Eintragstitel – dürfen nicht:"
+            ],
+            "items": [
+              "gegen das Gesetz verstoßen,",
+              "Kinder gefährden oder in irgendeiner Weise ausbeuten,",
+              "Drohungen, Belästigung oder Einschüchterung enthalten,",
+              "Hass gegen eine Personengruppe ausdrücken,",
+              "Material enthalten, an dem du keine Rechte hast."
+            ],
+            "links": []
+          },
+          {
+            "heading": "Inhalte melden",
+            "paragraphs": [
+              "Jede Nachricht bietet im Menü die Option „Nachricht melden“. Meldungen gehen an den App-Betreiber, der den Inhalt prüft und ihn entfernt oder sperrt, wenn er gegen diese Regeln verstößt.",
+              "Meldungen zur Sicherheit von Kindern werden vorrangig bearbeitet.",
+              "Du kannst nur Nachrichten aus einer Unterhaltung melden, an der du beteiligt bist."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Inhalte entfernen",
+            "paragraphs": [
+              "Der Betreiber kann Inhalte entfernen, die gegen diese Regeln verstoßen. Der Nachrichtentext ist dann in der App nicht mehr verfügbar, und die App bietet keinen Zugriff mehr auf Anhänge; die gespeicherten Dateien werden anschließend im Rahmen der Moderation entfernt.",
+              "Eigene Nachrichten kannst du jederzeit selbst löschen."
+            ],
+            "items": [],
+            "links": []
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Datenschutzhinweise",
+        "intro": "Hier erklären wir, welche Daten Rodinka verarbeitet, wofür wir sie verwenden und welche Möglichkeiten du hast.",
+        "sections": [
+          {
+            "heading": "Wer für deine Daten verantwortlich ist",
+            "paragraphs": [
+              "Verantwortlicher für personenbezogene Daten und Anbieter von Rodinka ist Lukáš Sitta. Bei Fragen zum Datenschutz oder für Anfragen schreibe an privacy@mojerodinka.cz."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Welche Daten wir speichern",
+            "paragraphs": [
+              "Rodinka speichert die Daten, die du eingibst oder erstellst, sowie technische Daten, die für den sicheren Betrieb des Kontos und die Funktionen erforderlich sind:"
+            ],
+            "items": [
+              "Konto: E-Mail-Adresse und Authentifizierungsdaten, die Supabase Auth verarbeitet, oder die Google-Anmeldung, falls du sie auswählst. Familien- und Profiltabellen enthalten kein lesbares Passwort.",
+              "Familie: Haushaltszugehörigkeit, Rollen (Admin, Elternteil, Kind) und Einladungen.",
+              "Profile und Fotos: Name, Farbe sowie optional ein Profilfoto und ein Familienfoto.",
+              "Kalender, Aufgaben und Aktivitäten: Termine mit Uhrzeit, Ort, Teilnehmenden und Zuständigkeiten.",
+              "Gesundheitsplanung: Arzttermine und Impfungen mit Datum, Typ, betroffener Person, Begleitung und einer optionalen Notiz.",
+              "Dokumente: Dokumenteinträge der Familie, Ablaufdaten und optionale Anhänge.",
+              "Orte: Familienorte einschließlich Adressen und Koordinaten.",
+              "Sichere Ankunft: An welchem gespeicherten Familienort du deine Ankunft bestätigt hast und wann – oder, nur wenn du es ausdrücklich auswählst, eine einmalige Momentaufnahme deines genauen Gerätestandorts (Breiten- und Längengrad, geschätzte Genauigkeit und optional eine lesbare Ortsangabe); außerdem gegebenenfalls den Familienort und die Uhrzeit, bis zu der du deine Ankunft bestätigen möchtest.",
+              "Essenspläne und Einkaufsliste.",
+              "Nachrichten: Nachrichtentext, Reaktionen und Anhänge innerhalb deiner Familie.",
+              "Notizen über Familienmitglieder: Text, optionaler Titel und optionale Details (Name und Wert), die ein erwachsenes Familienmitglied über sich selbst oder ein anderes Mitglied schreibt, sowie die Information, ob die Notiz privat oder mit den Erwachsenen der Familie geteilt ist.",
+              "Benachrichtigungen: Push-Adresse deines Browsers oder Geräts und deine Erinnerungseinstellungen."
+            ],
+            "links": []
+          },
+          {
+            "heading": "Warum wir Daten verarbeiten",
+            "paragraphs": [
+              "Je nach Zweck stützen wir die Verarbeitung auf folgende Rechtsgrundlagen:"
+            ],
+            "items": [
+              "Grundlegende Konto- und Familienorganisatorfunktionen – Bereitstellung des angeforderten Dienstes.",
+              "Sicherheit, Missbrauchsverhinderung und notwendiger Betriebsschutz – berechtigtes Interesse an einem sicheren und zuverlässigen Dienst.",
+              "Optionale Analytik – Einwilligung.",
+              "Gesundheitsdaten – ausdrückliche Einwilligung.",
+              "Support, Datenschutzkorrespondenz und Anfragen – Beantwortung deiner Anfrage und berechtigtes betriebliches Interesse."
+            ],
+            "links": []
+          },
+          {
+            "heading": "Gesundheitsdaten",
+            "paragraphs": [
+              "Gesundheitsplanungsdaten werden erst gespeichert, nachdem du ausdrücklich eingewilligt hast. Ohne Einwilligung speichert die App keinen Gesundheitseintrag. Die Datenbank erzwingt diese Prüfung; die Benutzeroberfläche allein tut es nicht.",
+              "Du kannst deine Einwilligung jederzeit in den Einstellungen widerrufen. Der Widerruf verhindert künftiges Speichern und Bearbeiten, löscht aber bereits gespeicherte Einträge nicht automatisch. Sie bleiben lesbar, bis du sie selbst löschst oder ihre Löschung unter privacy@mojerodinka.cz beantragst.",
+              "Dies ist keine medizinische Dokumentation und keine Gesundheitsdienstleistung.",
+              "Wenn du Gesundheitsinformationen in eine Notiz über ein Familienmitglied schreibst, speichern wir sie als Teil der Notiz und zeigen diese nur dir und den Erwachsenen, mit denen du sie teilst. Rodinka wertet Notizen nicht aus; sie sind keine medizinische Dokumentation."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Gemeinsamer Familienbereich und Zugriff",
+            "paragraphs": [
+              "Rodinka ist ein gemeinsamer Familienbereich. Angaben über dich oder andere Mitglieder können abhängig von Rolle, Sichtbarkeitseinstellung und Eintragstyp für andere Familienmitglieder sichtbar sein. Kinderkonten können standardmäßig keine Gesundheitsdaten sehen.",
+              "Der Datenbankzugriff wird auf Zeilenebene anhand der angemeldeten Person erzwungen und niemals anhand von Werten, die die App übermittelt.",
+              "Notizen über Familienmitglieder: Eine private Notiz kann nur die verfassende Person sehen; eine geteilte Notiz können alle erwachsenen Familienmitglieder lesen. Nur die verfassende Person kann sie bearbeiten oder löschen. Kinderkonten können Notizen nicht sehen. Notizinhalte werden niemals an Analytik, Betriebsdiagnostik oder Benachrichtigungen übermittelt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Sichere Ankunft und einmalige Standortfreigabe",
+            "paragraphs": [
+              "Unter „Sichere Ankunft“ kann ein Familienmitglied manuell bestätigen, dass es an einem gespeicherten Familienort angekommen ist. Bei dieser Bestätigung wird der Gerätestandort nicht verwendet.",
+              "Wenn du stattdessen „Meinen aktuellen Standort einmal teilen“ auswählst und die Abfrage bestätigst, liest die App einmalig den genauen Standort deines Geräts und speichert Breiten- und Längengrad sowie eine Schätzung der Genauigkeit. Die App fragt die Standortberechtigung erst in diesem Moment an. Es findet keine laufende Ortung statt: Rodinka liest deinen Standort weder im Hintergrund noch wiederholt aus, verwendet kein Geofencing und speichert keinen Standort- oder Routenverlauf.",
+              "Die aktuelle Bestätigung oder der Standort ist für das Mitglied selbst und die aktiven erwachsenen Mitglieder derselben Familie sichtbar. Andere Kinder der Familie können ihn nicht sehen; andere Familien haben keinen Zugriff.",
+              "Für eine lesbare Ortsangabe werden die Koordinaten direkt nach dem Auslesen und noch vor der Freigabe an die Familie über unseren Server an LocationIQ übermittelt (siehe „Auftragsverarbeiter“).",
+              "Gespeichert wird nur der aktuelle Stand: Jede neue Bestätigung ersetzt die vorherige, und beim Widerruf wird sie gelöscht. Ein geteilter Standort läuft spätestens nach 2 Stunden und spätestens am Ende des Familientages ab; eine Bestätigung an einem gespeicherten Ort spätestens nach 8 Stunden und am Tagesende. Nach dem Ablauf wird sie niemandem mehr angezeigt und beim nächsten Verwenden der Funktion in der Familie aus der Datenbank entfernt.",
+              "Wenn du selbst „Nach der Ankunft Bescheid geben“ aktivierst, werden der ausgewählte Familienort und die Uhrzeit gespeichert, bis zu der du deine Ankunft bestätigen möchtest. Zu diesem Zeitpunkt erinnert dich die App an die Bestätigung. Geht innerhalb von 15 Minuten keine Bestätigung ein, erhalten die aktiven erwachsenen Familienmitglieder eine allgemeine Benachrichtigung darüber, dass sie noch aussteht. Dafür wird der Gerätestandort nicht verwendet. Pro Mitglied ist höchstens eine solche Erwartung gespeichert: Die Bestätigung der Ankunft am selben Ort oder ein Abbruch löscht sie; eine neue Erwartung ersetzt die vorherige. Sie läuft spätestens 3 Stunden nach der gewählten Uhrzeit ab.",
+              "Ohne Internetverbindung kann der Standort nicht geteilt werden. Die App speichert ihn weder auf dem Gerät noch sendet sie ihn später."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Benachrichtigungen",
+            "paragraphs": [
+              "Benachrichtigungen auf dem Sperrbildschirm enthalten niemals Nachrichteninhalte, Absendernamen, Gesundheitsdetails oder Dokumentnamen. Angezeigt wird nur ein allgemeiner Hinweis; Details erscheinen erst, wenn du die App öffnest.",
+              "Benachrichtigungen zur sicheren Ankunft enthalten nur allgemeine Formulierungen („Jemand aus deiner Familie …“) – niemals Namen, Orte, Uhrzeiten, Adressen oder Koordinaten. Wer wo ist, wird erst nach dem Öffnen der angemeldeten App angezeigt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Analytik",
+            "paragraphs": [
+              "Analytik ist standardmäßig ausgeschaltet. Bis du sie aktivierst, wird das Analysetool nicht einmal heruntergeladen und es werden keine Nutzungsdaten gesendet.",
+              "Gesundheitsdaten, Nachrichteninhalte, Dokumente und Adressen werden niemals an die Analytik übermittelt.",
+              "Bei der sicheren Ankunft werden niemals genaue Koordinaten, Adressen, die exakte Standortgenauigkeit, Namen oder Orte an die Analytik gesendet – nur allgemeine Kategorien, etwa ob ein Standort ausgelesen werden konnte."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Betriebsdiagnostik",
+            "paragraphs": [
+              "Wenn die Fehlerüberwachung für eine Bereitstellung aktiviert ist, erhält Sentry einen technischen Datensatz zu einem unerwarteten Fehler, damit Stabilität und Betriebsdiagnostik verbessert werden können: Fehlertyp, bereinigter Stacktrace, App-Version, Plattform, Verbindungsstatus und bereinigter Bildschirmpfad.",
+              "Rodinka schließt Namen, E-Mail-Adressen, Nutzer-, Mitglieder- und Familienkennungen sowie Inhalte von Familieneinträgen bewusst aus. Benutzerdefinierte Fehlermeldungen, URL-Abfragen und Fragmente sowie weitere unnötige Kontextdaten werden entfernt. Der Anbieter kann während der Netzwerkübertragung eine IP-Adresse sehen.",
+              "Betriebsdiagnostik ist technisch von der Produktanalytik von PostHog und deren Einwilligungsschalter getrennt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Auftragsverarbeiter",
+            "paragraphs": [
+              "Folgende Dienste sind am Betrieb von Rodinka beteiligt:"
+            ],
+            "items": [
+              "Supabase – Datenbank, Authentifizierung und Dateispeicher.",
+              "Vercel – Hosting der Anwendung.",
+              "Resend – Versand von Anmelde- und Passwort-Zurücksetzen-E-Mails.",
+              "Proton Mail – Support- und Datenschutzkorrespondenz einschließlich Betroffenenanfragen.",
+              "PostHog – Analytik, nur wenn du sie aktivierst.",
+              "Sentry – technische Datensätze unerwarteter Fehler, wenn die Betriebsdiagnostik für die Bereitstellung aktiviert ist.",
+              "LocationIQ – Adressvorschläge bei der Ortssuche und Umwandlung der für eine einmalige Standortfreigabe zur sicheren Ankunft ausgelesenen Koordinaten in einen lesbaren Orts- oder Adressnamen (Reverse Geocoding); die Koordinaten werden über unseren Server übermittelt.",
+              "Google – nur wenn du die Google-Anmeldung auswählst.",
+              "Mapy.com, OpenStreetMap, Apple Karten und Google Maps – werden als externer Link geöffnet, wenn du eine Wegbeschreibung anforderst.",
+              "Browser- und Geräte-Pushdienste – Zustellung von Benachrichtigungen; die Nutzlast ist verschlüsselt."
+            ],
+            "links": []
+          },
+          {
+            "heading": "Webzahlungen über Paddle",
+            "paragraphs": [
+              "Wenn Pro-Käufe im Web über Paddle.com verfügbar sind, erhält Paddle deine Zahlungs- und Rechnungsdaten als Verkäufer (Merchant of Record) gemäß seiner Datenschutzerklärung. Rodinka speichert keine Zahlungskartendaten.",
+              "Zur Prüfung verarbeitet Rodinka Kunden-, Transaktions- und Abonnementkennungen, Zahlungs- und Erstattungsstatus sowie den bezahlten Zeitraum. Die Beschreibung der Integration bedeutet nicht, dass Käufe bereits gestartet sind."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "google-play",
+            "heading": "Zahlungen über Google Play",
+            "paragraphs": [
+              "Wenn Android-Käufe verfügbar sind, verarbeitet Google Play die Zahlungsdaten gemäß seiner Datenschutzerklärung. Rodinka speichert keine Zahlungskartendaten.",
+              "Zur Prüfung erhält Rodinka Kauf- und Produktkennungen, Abonnementstatus und Gültigkeit. Ob ein Kauf möglich ist, hängt vom konkreten Angebot in der App ab."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "app-store",
+            "heading": "Zahlungen über den App Store",
+            "paragraphs": [
+              "Wenn iOS-Käufe verfügbar sind, verarbeitet Apple die Zahlungsdaten gemäß seiner Datenschutzerklärung. Rodinka speichert keine Zahlungskartendaten.",
+              "Zur Prüfung erhält Rodinka Transaktions- und Produktkennungen, Abonnementstatus, Informationen zur automatischen Verlängerung und zur Gültigkeit. Ob ein Kauf möglich ist, hängt vom konkreten Angebot in der App ab."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Frühere BMC-Mitgliedschaften",
+            "paragraphs": [
+              "Für bestehende Abonnements von Buy Me a Coffee verarbeitet Rodinka die Mitgliedskennung, Zahlungsereignisse, den bezahlten Zeitraum und die für den früheren Abgleich benötigte E-Mail-Adresse. BMC verarbeitet Zahlungen nach eigenen Richtlinien. Neue Mitgliedschaften über diesen Kanal bietet Rodinka nicht an."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Internationale Verarbeitung",
+            "paragraphs": [
+              "Rodinka behauptet nicht, dass sämtliche Verarbeitung ausschließlich in der Europäischen Union oder im Europäischen Wirtschaftsraum stattfindet. Abhängig von der Infrastruktur der Anbieter und den Bereitstellungseinstellungen können manche Anbieter Daten in anderen Ländern verarbeiten. Die genauen Standorte und etwaige Übermittlungsmechanismen richten sich nach der jeweiligen Anbieterkonfiguration und den Vertragsbedingungen."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Wie lange wir Daten speichern",
+            "paragraphs": [
+              "Gewöhnliche Nutzerinhalte werden gespeichert, solange Rodinka verwendet wird, bis der jeweilige Eintrag oder dein Konto gelöscht wird.",
+              "Einige Einwilligungs-, Sicherheits-, Moderations- und Prüfprotokolle können länger gespeichert werden, wenn dies erforderlich ist, um Einwilligungen nachzuweisen, den Dienst zu schützen oder einen Sicherheits- oder Moderationsvorfall zu bearbeiten. Technische Kopien und Betriebsprotokolle auf Anbieterseite richten sich nach den Einstellungen des jeweiligen Anbieters; Rodinka verspricht dafür keine ungeprüfte feste Aufbewahrungsdauer.",
+              "Bei der sicheren Ankunft wird nur ein kurzlebiger aktueller Stand und kein Verlauf gespeichert – siehe oben „Sichere Ankunft und einmalige Standortfreigabe“.",
+              "Notizen über Familienmitglieder bleiben gespeichert, bis die verfassende Person sie löscht oder die verfassende Person, die betroffene Person oder die gesamte Familie endgültig entfernt wird. Notizen von oder über ein entferntes Familienmitglied werden ausgeblendet und für den Fall einer Wiederherstellung der Mitgliedschaft aufbewahrt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Speicherung und Sicherheit",
+            "paragraphs": [
+              "Die gesamte Kommunikation erfolgt über HTTPS. Nutzlasten von Push-Benachrichtigungen sind verschlüsselt.",
+              "Für die Offline-Nutzung speichert die App eine Kopie deines Kalenders, deiner Aufgaben und deiner Einkaufsliste auf dem Gerät. Dokumentanhänge werden niemals auf dem Gerät gespeichert.",
+              "Beim Abmelden werden die lokale Kopie und zwischengespeicherte Fotos von diesem Gerät entfernt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Deine Rechte und Kontakt",
+            "paragraphs": [
+              "In der App kannst du jederzeit Analytik ein- oder ausschalten, Benachrichtigungen anpassen oder deaktivieren, deine Einwilligung zu Gesundheitsdaten widerrufen und einzelne von dir erstellte Einträge löschen.",
+              "Je nach Umständen kannst du Auskunft, Berichtigung, Löschung oder Einschränkung verlangen, der Verarbeitung widersprechen, eine Kopie oder Übertragbarkeit deiner Daten erhalten und eine Einwilligung widerrufen, wenn die Verarbeitung darauf beruht. Anfragen richtest du an privacy@mojerodinka.cz.",
+              "Du kannst dein Konto selbst in der App löschen: Mehr → Konto und Familie → Konto löschen. Die Löschung erfolgt nach deiner Bestätigung und meldet dich auf allen Geräten ab; Sicherungskopien verschwinden innerhalb von 30 Tagen. Gelöscht werden das Konto, dein Familienprofil, Profilfoto, Einstellungen, Benachrichtigungen, private Notizen, Wünsche und deine Nachrichten in privaten Unterhaltungen einschließlich ihrer Fotos. Geteilte Familieneinträge (Kalender, Aufgaben, Einkäufe, Erinnerungen und deren Fotos, Einträge der Kinder sowie der Familiengruppenchat) bleiben den anderen Mitgliedern ohne deinen Namen erhalten. Bist du der letzte erwachsene Mensch in der Familie, wird die gesamte Familie einschließlich der Kinderprofile und ihrer Anmeldungen gelöscht. Bei einem Kinderkonto wird nur die Anmeldung gelöscht; das Profil des Kindes bleibt bei den Eltern. Aufbewahrt wird nur ein Nachweis der Löschung (Konto-ID und Zeitpunkt, ohne Namen oder E-Mail-Adresse). Ein über App Store oder Google Play bezahltes Abonnement wird durch die Kontolöschung nicht beendet – kündige es in den Einstellungen des Stores.",
+              "Rodinka bietet in der App keinen Gesamtexport der Daten an; Anfragen nach einer Datenkopie werden manuell bearbeitet.",
+              "Du kannst dich außerdem bei der tschechischen Datenschutzaufsichtsbehörde, dem Amt für den Schutz personenbezogener Daten (Úřad pro ochranu osobních údajů, ÚOOÚ), beschweren."
+            ],
+            "items": [],
+            "links": []
+          }
+        ]
+      }
+    },
+    "pl": {
+      "operatorHeading": "Usługodawca i kontakt",
+      "registrationLabel": "Numer identyfikacyjny",
+      "businessRegisterLabel": "Jednoosobowa działalność gospodarcza wpisana do rejestru działalności; organ prowadzący rejestr",
+      "phoneLabel": "Telefon",
+      "notVatRegistered": "Usługodawca nie jest płatnikiem VAT.",
+      "lastUpdated": "Ostatnia aktualizacja: 10 listopada 2026 r.",
+      "terms": {
+        "title": "Warunki korzystania i zasady dotyczące treści",
+        "intro": "Warunki opisują korzystanie z Rodinki, treści, których nie należy w niej umieszczać, oraz działanie subskrypcji Rodinka Pro.",
+        "sections": [
+          {
+            "heading": "Usługa i jej usługodawca",
+            "paragraphs": [
+              "Rodinkę udostępnia Lukáš Sitta, czeski przedsiębiorca prowadzący jednoosobową działalność gospodarczą. Pełne dane identyfikacyjne i kontaktowe znajdują się na końcu tej strony. Warunki dotyczą aplikacji internetowej i natywnych.",
+              "Rodinka to ciągła usługa cyfrowa do organizacji życia rodzinnego: wspólny kalendarz, zadania, zakupy, planowanie, prywatne wiadomości i wpisy rodzinne. Przestrzeń rodzinna nie jest publicznym portalem społecznościowym. Funkcje zdrowotne służą planowaniu i nie zapewniają opieki zdrowotnej.",
+              "Potrzebujesz aktualnej, obsługiwanej przeglądarki albo zgodnej aplikacji Android lub iOS oraz internetu do konta i synchronizacji. Kalendarz, zadania i zakupy mają ograniczone wsparcie offline; zakupy, weryfikacja subskrypcji i niektóre inne funkcje wymagają połączenia. Instaluj dostępne aktualizacje niezbędne dla bezpieczeństwa i działania usługi."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Konta i zawarcie umowy",
+            "paragraphs": [
+              "Tworząc konto lub przyjmując zaproszenie, prosisz usługodawcę o dostęp do Rodinki; umowa dotycząca bezpłatnej usługi rozpoczyna się w chwili przyznania dostępu do konta. Dorosły członek rodziny tworzy profile dzieci i zarządzane konta dzieci. Dorosły zamawia Rodinka Pro.",
+              "Rejestracja, zaproszenie ani przeglądanie tej strony nie zamawiają płatnej wersji Pro. Płatna subskrypcja wymaga osobnego potwierdzenia zamówienia w dostępnym kanale sprzedaży i akceptacji jego zasad. Przed potwierdzeniem kanał musi podać produkt, całkowitą cenę z należnymi podatkami, okres i zasady odnowienia, a następnie wystawić potwierdzenie i dowód zakupu."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Rodinka Free i Rodinka Pro",
+            "paragraphs": [
+              "Free zapewnia podstawowy organizator rodzinny bez opłat i 200 MiB na zdjęcia rodzinne. Pro zwiększa miejsce do 5 GiB i dodaje Chwilę dnia, personalizację oraz inne funkcje oznaczone jako Pro, na przykład rocznik rodzinny, Rodzinny tydzień oraz tworzenie scenariuszy i przygotowań. Pro obejmuje konkretną rodzinę; inna rodzina na tym samym koncie nie otrzymuje go automatycznie.",
+              "Wpisy rodzinne i zdjęcia nie są automatycznie usuwane po zakończeniu Pro. Obowiązuje limit Free, więc nie można dodawać zdjęć ponad ten limit; nowe Chwile dnia i funkcje wymagające aktywnego Pro stają się niedostępne. Istniejące przygotowania można nadal czytać, edytować i kończyć. Zapisane pliki PDF rocznika pozostają bez zmian. Usunięcie konta lub rodziny podlega osobnym zasadom poniżej i w Polityce prywatności."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "availability",
+            "heading": "Dostępność, czas trwania i odnowienie Pro",
+            "paragraphs": [
+              "Nowe zakupy Pro są wprowadzane stopniowo. Opis kanału sprzedaży nie oznacza, że został już uruchomiony. Zakup jest możliwy tylko wtedy, gdy aplikacja pokazuje konkretną ofertę, a dany kanał umożliwia jej potwierdzenie. Sam opis w tych warunkach nie włącza sprzedaży.",
+              "Jeśli subskrypcja jest oferowana, przed zakupem wybierasz okres miesięczny lub roczny w cenie pokazanej w ofercie. Subskrypcja odnawia się automatycznie i pobiera opłatę za kolejny okres, dopóki nie wyłączysz odnowienia. Po anulowaniu odnowienia dostęp trwa do końca opłaconego okresu; zwykłe anulowanie nie zwraca już pobranej opłaty. Odstąpienie od umowy, reklamacje i zwroty to odrębne uprawnienia.",
+              "Odinstalowanie aplikacji ani usunięcie konta nie anuluje subskrypcji. Zarządzaj nią w pierwotnym kanale zakupu, na koncie użytym do zakupu. Wsparcie Rodinki może pomóc ustalić kanał; nie musisz kupować Pro ponownie."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "paddle",
+            "heading": "Płatności internetowe przez Paddle",
+            "paragraphs": [
+              "Jeśli zakupy internetowe przez Paddle.com są włączone, Paddle jest sprzedawcą (Merchant of Record) danego zamówienia, a nie tylko pośrednikiem płatności. Przyjmuje płatności, wystawia potwierdzenia i obsługuje należne podatki oraz zwroty. Operatorem Rodinki pozostaje jej usługodawca. Zamówienie i potwierdzenie wskazują właściwy podmiot Paddle; obowiązują także warunki dla kupujących Paddle.",
+              "Dotychczasową subskrypcję Paddle anuluj w portalu klienta pod adresem paddle.net lub w dostępnej sekcji zarządzania subskrypcją na koncie Rodinki. O zwrot poproś Paddle; możesz też skontaktować się ze wsparciem Rodinki. Zatwierdzony pełny zwrot danej płatności może zakończyć Pro, jeśli rodzina nie ma innego aktywnego uprawnienia. Prawa ustawowe mają pierwszeństwo przed komercyjnymi zasadami zwrotu."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Wsparcie i zarządzanie płatnościami Paddle",
+                "href": "https://paddle.net/"
+              },
+              {
+                "label": "Warunki Paddle dla kupujących",
+                "href": "https://www.paddle.com/legal/checkout-buyer-terms"
+              }
+            ]
+          },
+          {
+            "id": "google-play",
+            "heading": "Płatności przez Google Play",
+            "paragraphs": [
+              "Jeśli aplikacja Android oferuje zakup Pro, korzysta z Google Play Billing. Google Play obsługuje zamówienie, płatności i zarządzanie subskrypcją; usługodawca Rodinki zapewnia usługę. Warunki sklepu, informacje przed zakupem i potwierdzenie wskazują sprzedawcę. W zależności od kraju Google może być sprzedawcą albo działać w imieniu dostawcy; nie twierdzimy, że zawsze sam sprzedaje usługę.",
+              "Odnowienie anuluj w Google Play → Płatności i subskrypcje → Subskrypcje, używając konta, z którego dokonano zakupu. Możesz też skorzystać z zarządzania subskrypcją na koncie Rodinki, jeśli jest dostępne. O zwrot poproś zgodnie z procedurą Google Play; w sprawie wad usługi lub praw ustawowych możesz skontaktować się także z usługodawcą Rodinki."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Anulowanie subskrypcji Google Play",
+                "href": "https://support.google.com/googleplay/answer/7018481"
+              },
+              {
+                "label": "Zwroty Google Play",
+                "href": "https://support.google.com/googleplay/answer/2479637"
+              }
+            ]
+          },
+          {
+            "id": "app-store",
+            "heading": "Płatności przez App Store",
+            "paragraphs": [
+              "Jeśli aplikacja iOS oferuje zakup Pro, korzysta z zakupów w aplikacji w App Store firmy Apple. Apple obsługuje płatności i zarządzanie subskrypcją; usługodawca Rodinki dostarcza aplikację. Warunki Apple, informacje przed zakupem i potwierdzenie określają właściwy podmiot Apple i jego rolę w transakcji. Do korzystania z aplikacji iOS stosuje się także licencja wskazana w App Store.",
+              "Odnowienie anuluj w Ustawieniach urządzenia → Konto Apple → Subskrypcje, używając konta, z którego dokonano zakupu. Możesz też skorzystać z zarządzania subskrypcją na koncie Rodinki, jeśli jest dostępne. O zwrot poproś Apple przez reportaproblem.apple.com. Usługodawca Rodinki może pomóc w sprawach wad aplikacji i praw ustawowych."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "Anulowanie subskrypcji Apple",
+                "href": "https://support.apple.com/118428"
+              },
+              {
+                "label": "Zwroty Apple",
+                "href": "https://support.apple.com/118223"
+              }
+            ]
+          },
+          {
+            "id": "legacy-bmc",
+            "heading": "Wcześniejsze subskrypcje Buy Me a Coffee",
+            "paragraphs": [
+              "Buy Me a Coffee (BMC) to wcześniejszy kanał dostępny tylko dla obecnych subskrybentów. Rodinka nie oferuje nowych członkostw BMC. Istniejąca subskrypcja może trwać i odnawiać się przez uzgodniony okres; BMC zapewnia infrastrukturę członkostw i płatności, a usługodawcą Rodinki pozostaje jej operator.",
+              "Zarządzaj istniejącym członkostwem, logując się na konto BMC w sekcji Memberships albo używając dostępnej opcji zarządzania na koncie Rodinki w przeglądarce. Anulowanie zatrzymuje kolejne odnowienie i zwykle pozostawia dostęp do końca opłaconego okresu. Reklamację dotyczącą wady lub wniosek o zwrot wyślij do operatora na adresy podane poniżej; płatności podlegają także zasadom BMC. Nie jest to oferta nowego zakupu."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal",
+            "heading": "Ustawowe prawo odstąpienia i zwroty",
+            "paragraphs": [
+              "Konsument zawierający umowę na odległość ma zasadniczo 14 dni od jej zawarcia na odstąpienie bez podania przyczyny. Aktywowanie Pro ani korzystanie z aplikacji nie powoduje automatycznej utraty tego prawa. Zasady handlowe sklepu nie mogą ograniczać praw ustawowych.",
+              "Rozpoczęcie świadczenia ciągłej usługi cyfrowej przed upływem terminu może wymagać Twojego wyraźnego żądania i właściwego poinformowania. Opłata proporcjonalna za usługę już świadczoną przy odstąpieniu jest należna wyłącznie po spełnieniu warunków prawnych. Wyjątek dotyczący treści cyfrowych dostarczanych bez nośnika wymaga w szczególności wcześniejszej wyraźnej zgody, informacji i potwierdzenia; same warunki nie zastępują takiej zgody ani żądania.",
+              "Wyraźne oświadczenie o odstąpieniu wyślij na adres e-mail lub adres pocztowy operatora podany poniżej albo do sprzedawcy wskazanego na potwierdzeniu zakupu. Podaj konto, datę zamówienia, numer referencyjny i kanał sprzedaży. Wystarczy wysłać oświadczenie przed upływem terminu. Wsparcie Rodinki może pomóc przekazać wniosek płatniczy do właściwego podmiotu. Przy skutecznym odstąpieniu płatności zostaną zwrócone bez zbędnej zwłoki, najpóźniej w ciągu 14 dni od otrzymania oświadczenia, tą samą metodą płatności, chyba że uzgodniono inaczej; zgodna z prawem opłata proporcjonalna pozostaje bez zmian."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "withdrawal-model",
+            "heading": "Wzór oświadczenia o odstąpieniu",
+            "paragraphs": [
+              "Skorzystanie ze wzoru jest dobrowolne. Do: operatora wskazanego na końcu strony lub sprzedawcy z potwierdzenia. Niniejszym odstępuję od umowy subskrypcji Rodinka Pro. Data zamówienia: …; numer zamówienia i kanał sprzedaży: …; imię i nazwisko oraz adres konsumenta: …; e-mail konta: …; data oświadczenia: …; podpis konsumenta tylko przy wysyłce papierowej."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "defects",
+            "heading": "Wady usługi cyfrowej i aktualizacje",
+            "paragraphs": [
+              "W przypadku braku zgodności z umową przysługują Ci ustawowe środki ochrony. Usługa musi spełniać wymagania umowne i prawne dotyczące funkcjonalności, dostępności, bezpieczeństwa i niezbędnych aktualizacji. Przy świadczeniu ciągłym odpowiadamy za wady, które pojawią się lub ujawnią w okresie umowy.",
+              "Możesz zażądać bezpłatnego usunięcia wady w rozsądnym terminie i bez znacznych niedogodności. Jeśli naprawa jest niemożliwa, nieskuteczna, wada się powtarza lub jest dostatecznie poważna, możesz na warunkach ustawowych żądać odpowiedniego obniżenia ceny albo odstąpić od umowy. Nie wyłączamy tych praw ogólnym ograniczeniem odpowiedzialności ani stwierdzeniem, że usługa nie jest objęta ochroną."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "complaints",
+            "heading": "Jak zgłosić reklamację",
+            "paragraphs": [
+              "Reklamacje dotyczące działania lub dostępności Rodinki wyślij na privacy@mojerodinka.cz albo adres pocztowy podany poniżej. Opisz wadę, kiedy wystąpiła i jakiego rozwiązania oczekujesz; adres e-mail konta, wersja aplikacji i numer zamówienia pomogą nam ją odnaleźć. Nie wysyłaj haseł ani zbędnych informacji o zdrowiu lub rodzinie.",
+              "Potwierdzimy otrzymanie i treść reklamacji, wyjaśnimy sposób jej obsługi i przekażemy wynik albo powody odmowy. Wady usług cyfrowych usuniemy w rozsądnym terminie, z uwzględnieniem charakteru i celu usługi, oraz będziemy informować Cię o postępach. Ustawowe środki ochrony w przypadku opóźnienia lub wady pozostają dostępne. Reklamacje płatności skieruj również do sprzedawcy z potwierdzenia; możemy pomóc ustalić właściwy kontakt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "adr",
+            "heading": "Pozasądowe rozwiązywanie sporów",
+            "paragraphs": [
+              "Jeśli nie uda się bezpośrednio rozwiązać sporu konsumenckiego z umowy z operatorem, w sprawie płatnej usługi możesz skontaktować się z Czeską Inspekcją Handlową (Česká obchodní inspekce, ČOI), podmiotem prowadzącym pozasądowe rozwiązywanie sporów konsumenckich. Wniosek złóż w ciągu roku od pierwszego zgłoszenia roszczenia przedsiębiorcy. Postępowanie ma doprowadzić do porozumienia i nie ogranicza dostępu do sądu.",
+              "W przypadku odrębnej relacji płatniczej z innym sprzedawcą właściwość i procedura zależą także od jego warunków i obowiązującego prawa."
+            ],
+            "items": [],
+            "links": [
+              {
+                "label": "ČOI: informacje o ADR i złożenie wniosku",
+                "href": "https://coi.gov.cz/informace-o-adr/"
+              }
+            ]
+          },
+          {
+            "heading": "Zakończenie konta lub usługi",
+            "paragraphs": [
+              "Możesz usunąć konto w ustawieniach; Polityka prywatności opisuje dokładne kroki i wpływ na wspólne dane rodziny. Wcześniej zapisz ważne materiały i osobno anuluj odnowienie subskrypcji w pierwotnym kanale. Aplikacja nie ma zbiorczego eksportu; kopię danych możesz zamówić przez wsparcie.",
+              "O planowanym wyłączeniu usługi lub istotnym ograniczeniu płatnego świadczenia poinformujemy z odpowiednim wyprzedzeniem, umożliwiając zamówienie dostępnych danych. Niewykorzystana płatna usługa i zwroty są rozliczane zgodnie z prawami ustawowymi i zasadami kanału zakupu. Pilna interwencja bezpieczeństwa może wymagać natychmiastowego ograniczenia usługi; prawa konsumenta pozostają bez zmian."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Prawa ustawowe i zmiany warunków",
+            "paragraphs": [
+              "Żadne postanowienie tych warunków nie ogranicza bezwzględnie obowiązujących praw konsumenta, w tym wynikających z prawa czeskiego i właściwego prawa europejskiego. Konsumenci w innych krajach zachowują ochronę wymaganą przez obowiązujące tam prawo.",
+              "Aktualna treść i data znajdują się na tej publicznej stronie. O istotnych zmianach istniejącej umowy poinformujemy z wyprzedzeniem; nowy tekst nie zmienia wstecznie uzgodnionego opłaconego okresu ani praw ustawowych. Ta strona nie stanowi zgody na przyszły zakup ani utraty prawa odstąpienia."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Czego nie należy umieszczać w Rodince",
+            "paragraphs": [
+              "Treści dodawane do aplikacji — wiadomości, zdjęcia, dokumenty i tytuły wpisów — nie mogą:"
+            ],
+            "items": [
+              "naruszać prawa,",
+              "zagrażać dzieciom ani ich wykorzystywać w jakikolwiek sposób,",
+              "zawierać gróźb, nękania ani zastraszania,",
+              "zawierać nienawiści skierowanej do grupy osób,",
+              "udostępniać materiałów, do których nie masz praw."
+            ],
+            "links": []
+          },
+          {
+            "heading": "Zgłaszanie treści",
+            "paragraphs": [
+              "W menu każdej wiadomości znajduje się opcja „Zgłoś wiadomość”. Zgłoszenie trafia do operatora aplikacji, który sprawdza treść i usuwa ją lub blokuje, jeśli narusza te zasady.",
+              "Zgłoszenia dotyczące bezpieczeństwa dzieci rozpatrujemy priorytetowo.",
+              "Możesz zgłosić tylko wiadomość z rozmowy, w której uczestniczysz."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Usuwanie treści",
+            "paragraphs": [
+              "Operator może usunąć treści naruszające te zasady. Tekst wiadomości przestaje być dostępny w aplikacji, a aplikacja przestaje udostępniać załączniki; zapisane pliki są następnie usuwane w ramach moderacji.",
+              "Własne wiadomości możesz w każdej chwili usunąć samodzielnie."
+            ],
+            "items": [],
+            "links": []
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Polityka prywatności",
+        "intro": "Wyjaśniamy tutaj, jakie dane przetwarza Rodinka, w jakim celu i jakie masz możliwości.",
+        "sections": [
+          {
+            "heading": "Kto odpowiada za Twoje dane",
+            "paragraphs": [
+              "Administratorem danych osobowych i usługodawcą Rodinki jest Lukáš Sitta. W sprawach prywatności i wniosków napisz na adres privacy@mojerodinka.cz."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Jakie dane przechowujemy",
+            "paragraphs": [
+              "Rodinka przechowuje dane, które wpisujesz lub tworzysz, oraz dane techniczne potrzebne do bezpiecznego działania konta i udostępniania funkcji:"
+            ],
+            "items": [
+              "Konto: adres e-mail i dane uwierzytelniające obsługiwane przez Supabase Auth albo logowanie Google, jeśli je wybierzesz. Tabele rodziny i profilu nie przechowują hasła w czytelnej postaci.",
+              "Rodzina: członkostwo w gospodarstwie domowym, role (administrator, rodzic, dziecko) i zaproszenia.",
+              "Profile i zdjęcia: imię i nazwisko, kolor oraz opcjonalne zdjęcie profilowe i rodzinne.",
+              "Kalendarz, zadania i aktywności: wydarzenia, ich godziny, miejsca, uczestnicy i przypisania.",
+              "Planowanie zdrowia: wizyty lekarskie i szczepienia — data, typ, osoba, której dotyczą, osoba towarzysząca i ewentualna notatka.",
+              "Dokumenty: rodzinne wpisy dokumentów, ich daty ważności i opcjonalne załączniki.",
+              "Miejsca: miejsca rodzinne, w tym adresy i współrzędne.",
+              "Bezpieczne dotarcie: informacja, w którym zapisanym miejscu rodzinnym potwierdzono dotarcie i kiedy — albo, tylko jeśli wybierzesz tę opcję, jednorazowy odczyt dokładnej lokalizacji urządzenia (szerokość i długość geograficzna, szacowana dokładność oraz opcjonalna czytelna nazwa miejsca); a także, jeśli ją ustawisz, miejsce rodzinne i godzinę, do której chcesz potwierdzić dotarcie.",
+              "Plany posiłków i lista zakupów.",
+              "Wiadomości: treść wiadomości, reakcje i załączniki w rodzinie.",
+              "Notatki o członkach rodziny: treść, opcjonalny tytuł i opcjonalne szczegóły (nazwa i wartość), które dorosły członek zapisuje o sobie lub innej osobie z rodziny, oraz informacja, czy notatka jest prywatna, czy udostępniona dorosłym członkom rodziny.",
+              "Powiadomienia: adres push przeglądarki lub urządzenia oraz ustawienia przypomnień."
+            ],
+            "links": []
+          },
+          {
+            "heading": "Dlaczego przetwarzamy dane",
+            "paragraphs": [
+              "W zależności od celu stosujemy następujące podstawy prawne:"
+            ],
+            "items": [
+              "Podstawowe funkcje konta i organizatora rodzinnego — świadczenie usługi, o którą prosisz.",
+              "Bezpieczeństwo, zapobieganie nadużyciom i niezbędna ochrona operacyjna — prawnie uzasadniony interes w prowadzeniu bezpiecznej i niezawodnej usługi.",
+              "Opcjonalna analityka — zgoda.",
+              "Dane dotyczące zdrowia — wyraźna zgoda.",
+              "Wsparcie, korespondencja dotycząca prywatności i wnioski — odpowiedź na Twoje żądanie i uzasadniony interes operacyjny."
+            ],
+            "links": []
+          },
+          {
+            "heading": "Dane dotyczące zdrowia",
+            "paragraphs": [
+              "Dane planowania zdrowia zapisujemy dopiero po uzyskaniu Twojej wyraźnej zgody. Bez niej aplikacja nie zapisze wpisu zdrowotnego. Wymóg ten sprawdza baza danych, a nie tylko interfejs.",
+              "Zgodę możesz wycofać w dowolnym momencie w Ustawieniach. Wycofanie blokuje przyszłe zapisywanie i edycję, ale nie usuwa automatycznie już zapisanych wpisów. Pozostaną dostępne do odczytu, dopóki ich nie usuniesz lub nie poprosisz o usunięcie pod adresem privacy@mojerodinka.cz.",
+              "Nie jest to dokumentacja medyczna ani świadczenie usług opieki zdrowotnej.",
+              "Jeśli wpiszesz informacje o zdrowiu do notatki o członku rodziny, przechowujemy je jako część tej notatki i pokazujemy ją tylko Tobie oraz dorosłym, którym ją udostępniasz. Rodinka nie ocenia treści notatek; notatki nie są dokumentacją medyczną."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Wspólna przestrzeń rodzinna i dostęp",
+            "paragraphs": [
+              "Rodinka jest wspólną przestrzenią rodzinną. Informacje wpisane o sobie lub innych członkach mogą być widoczne dla rodziny zależnie od roli, ustawienia widoczności i rodzaju wpisu. Konta dzieci domyślnie nie widzą danych zdrowotnych.",
+              "Dostęp egzekwuje baza danych na poziomie poszczególnych wierszy na podstawie zalogowanego użytkownika, a nie wartości przesłanych przez aplikację.",
+              "Notatki o członkach rodziny: prywatną notatkę widzi tylko jej autor, a udostępnioną mogą czytać wszyscy dorośli członkowie rodziny. Tylko autor może ją edytować lub usunąć. Konta dzieci nie widzą notatek. Treści notatek nigdy nie są wysyłane do analityki, diagnostyki operacyjnej ani powiadomień."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Bezpieczne dotarcie i jednorazowe udostępnienie lokalizacji",
+            "paragraphs": [
+              "W sekcji Bezpieczne dotarcie członek rodziny może ręcznie potwierdzić przybycie do jednego z zapisanych miejsc rodzinnych. To potwierdzenie nie korzysta z lokalizacji urządzenia.",
+              "Jeśli zamiast tego wybierzesz „Udostępnij moją bieżącą lokalizację raz” i potwierdzisz odczyt, aplikacja jednorazowo odczyta dokładną lokalizację urządzenia i zapisze szerokość oraz długość geograficzną i szacowaną dokładność. O pozwolenie na dostęp do lokalizacji prosi dopiero w tej chwili. Nie jest to ciągłe śledzenie: Rodinka nie odczytuje lokalizacji w tle ani wielokrotnie, nie korzysta z geofencingu i nie zapisuje historii lokalizacji ani tras.",
+              "Bieżące potwierdzenie lub lokalizację widzi sam członek oraz aktywni dorośli członkowie tej samej rodziny. Inne dzieci w rodzinie jej nie widzą, a inne rodziny nie mają do niej dostępu.",
+              "Aby wyświetlić czytelną nazwę miejsca, zaraz po odczycie i przed udostępnieniem lokalizacji rodzinie współrzędne są przekazywane przez nasz serwer do LocationIQ (zob. Podmioty przetwarzające).",
+              "Przechowujemy tylko bieżący stan: każde nowe potwierdzenie zastępuje poprzednie, a anulowanie je usuwa. Udostępniona lokalizacja wygasa najpóźniej po 2 godzinach i najpóźniej z końcem dnia rodzinnego; potwierdzenie zapisanego miejsca — najpóźniej po 8 godzinach i z końcem dnia. Po wygaśnięciu nie jest już nikomu wyświetlane i zostaje usunięte z bazy przy następnym użyciu tej funkcji w rodzinie.",
+              "Jeśli samodzielnie włączysz „Daj znać po dotarciu”, zapiszemy wybrane miejsce rodzinne i godzinę, do której chcesz potwierdzić dotarcie. O tej godzinie aplikacja przypomni Ci o potwierdzeniu. Jeśli w ciągu 15 minut nie otrzymamy potwierdzenia, aktywni dorośli członkowie rodziny dostaną ogólne powiadomienie o jego braku. Ta funkcja nie korzysta z lokalizacji urządzenia. Dla jednego członka przechowujemy najwyżej jedno takie oczekiwanie: potwierdzenie dotarcia do tego samego miejsca lub anulowanie je usuwa, a nowe oczekiwanie zastępuje poprzednie. Wygasa najpóźniej 3 godziny po wybranej godzinie.",
+              "Bez połączenia z internetem nie można udostępnić lokalizacji; aplikacja nie zapisuje jej na urządzeniu ani nie wysyła później."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Powiadomienia",
+            "paragraphs": [
+              "Powiadomienia na ekranie blokady nigdy nie zawierają treści wiadomości, nazw nadawców, informacji o zdrowiu ani nazw dokumentów. Wyświetlany jest tylko ogólny komunikat; szczegóły pojawiają się po otwarciu aplikacji.",
+              "Powiadomienia o bezpiecznym dotarciu zawierają wyłącznie ogólne sformułowanie („Ktoś z Twojej rodziny…”), nigdy imię, miejsce, godzinę, adres ani współrzędne. Informacje o tym, kto i gdzie jest, są widoczne dopiero po otwarciu zalogowanej aplikacji."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Analityka",
+            "paragraphs": [
+              "Analityka jest domyślnie wyłączona. Dopóki jej nie włączysz, narzędzie analityczne nie jest nawet pobierane i nie wysyłamy danych o korzystaniu z aplikacji.",
+              "Dane zdrowotne, treści wiadomości, dokumenty i adresy nigdy nie są przesyłane do analityki.",
+              "Bezpieczne dotarcie nigdy nie wysyła do analityki dokładnych współrzędnych, adresów, dokładnej informacji o precyzji lokalizacji, imion ani miejsc — tylko ogólne kategorie, na przykład informację, czy lokalizację udało się odczytać."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Diagnostyka operacyjna",
+            "paragraphs": [
+              "Gdy dla wdrożenia włączono monitorowanie błędów, Sentry otrzymuje techniczny zapis nieoczekiwanego błędu, aby poprawiać stabilność i wspierać diagnostykę operacyjną: typ błędu, oczyszczony stos wywołań, wersję aplikacji, platformę, stan połączenia i oczyszczoną ścieżkę ekranu.",
+              "Rodinka celowo nie przekazuje w tych raportach imion, adresów e-mail, identyfikatorów użytkowników, członków i rodzin ani treści wpisów rodzinnych. Usuwa własne komunikaty błędów, zapytania i fragmenty adresów URL oraz zbędny kontekst. Podczas transmisji sieciowej dostawca może zobaczyć adres IP.",
+              "Diagnostyka operacyjna jest technicznie oddzielona od analityki produktu PostHog i jej przełącznika zgody."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Podmioty przetwarzające",
+            "paragraphs": [
+              "W działaniu Rodinki uczestniczą następujące usługi:"
+            ],
+            "items": [
+              "Supabase — baza danych, uwierzytelnianie i przechowywanie plików.",
+              "Vercel — hosting aplikacji.",
+              "Resend — wysyłanie wiadomości logowania i resetowania hasła.",
+              "Proton Mail — korespondencja dotycząca wsparcia i prywatności, w tym wnioski osób, których dane dotyczą.",
+              "PostHog — analityka, tylko jeśli ją włączysz.",
+              "Sentry — techniczne zapisy nieoczekiwanych błędów, gdy diagnostyka operacyjna jest włączona dla wdrożenia.",
+              "LocationIQ — podpowiedzi adresów podczas wyszukiwania miejsca oraz zamiana współrzędnych odczytanych przy jednorazowym udostępnianiu lokalizacji na czytelną nazwę miejsca lub adres (geokodowanie odwrotne); współrzędne przechodzą przez nasz serwer.",
+              "Google — tylko jeśli wybierzesz logowanie przez Google.",
+              "Mapy.com, OpenStreetMap, Apple Maps i Google Maps — otwierane jako link zewnętrzny na Twoje żądanie wyznaczenia trasy.",
+              "Usługi push przeglądarki i urządzenia — dostarczanie powiadomień; ich ładunek jest szyfrowany."
+            ],
+            "links": []
+          },
+          {
+            "heading": "Płatności internetowe przez Paddle",
+            "paragraphs": [
+              "Jeśli zakupy Pro przez Paddle.com są dostępne, Paddle otrzymuje Twoje dane płatnicze i rozliczeniowe jako sprzedawca (Merchant of Record), zgodnie z własną polityką prywatności. Rodinka nie przechowuje danych karty płatniczej.",
+              "Na potrzeby weryfikacji Rodinka przetwarza identyfikatory klienta, transakcji i subskrypcji, status płatności i zwrotów oraz opłacony okres. Opis integracji nie oznacza, że sprzedaż już się rozpoczęła."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "google-play",
+            "heading": "Płatności przez Google Play",
+            "paragraphs": [
+              "Jeśli zakupy w wersji Android są dostępne, Google Play przetwarza dane płatnicze zgodnie z własną polityką prywatności. Rodinka nie przechowuje danych kart płatniczych.",
+              "Do weryfikacji Rodinka otrzymuje identyfikatory zakupu i produktu, status subskrypcji oraz okres jej ważności. Dostępność zakupów zależy od konkretnej oferty w aplikacji."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "id": "app-store",
+            "heading": "Płatności przez App Store",
+            "paragraphs": [
+              "Jeśli zakupy w wersji iOS są dostępne, Apple przetwarza dane płatnicze zgodnie z własną polityką prywatności. Rodinka nie przechowuje danych kart płatniczych.",
+              "Do weryfikacji Rodinka otrzymuje identyfikatory transakcji i produktów, status subskrypcji, informację o automatycznym odnowieniu i okresie ważności. Dostępność zakupów zależy od konkretnej oferty w aplikacji."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Wcześniejsze członkostwa BMC",
+            "paragraphs": [
+              "W przypadku dotychczasowych subskrybentów Buy Me a Coffee Rodinka przetwarza identyfikator członkostwa, zdarzenia płatnicze, opłacony okres i adres e-mail potrzebny do wcześniejszego dopasowania. BMC obsługuje płatności zgodnie z własnymi zasadami. Rodinka nie oferuje nowych członkostw tym kanałem."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Przetwarzanie międzynarodowe",
+            "paragraphs": [
+              "Rodinka nie twierdzi, że wszystkie operacje przetwarzania odbywają się wyłącznie na terenie Unii Europejskiej lub Europejskiego Obszaru Gospodarczego. W zależności od infrastruktury dostawcy i ustawień wdrożenia niektórzy dostawcy mogą przetwarzać dane w innych krajach. Dokładne lokalizacje i mechanizmy transferu zależą od konfiguracji danego dostawcy i jego warunków."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Jak długo przechowujemy dane",
+            "paragraphs": [
+              "Zwykłe treści użytkownika przechowujemy tak długo, jak korzystasz z Rodinki, do czasu usunięcia wpisu lub konta.",
+              "Niektóre zapisy zgód, bezpieczeństwa, moderacji i audytu mogą być przechowywane dłużej, jeśli jest to konieczne do udokumentowania zgody, ochrony usługi lub obsługi incydentu bezpieczeństwa bądź moderacji. Kopie techniczne i dzienniki operacyjne po stronie dostawców podlegają ich ustawieniom; Rodinka nie obiecuje niezweryfikowanego, stałego okresu ich przechowywania.",
+              "Bezpieczne dotarcie przechowuje tylko krótkotrwały bieżący stan, bez historii — zob. powyżej „Bezpieczne dotarcie i jednorazowe udostępnienie lokalizacji”.",
+              "Notatki o członkach rodziny przechowujemy do czasu ich usunięcia przez autora albo trwałego usunięcia autora, osoby, której notatka dotyczy, lub całej rodziny. Notatki utworzone przez członka usuniętego z rodziny lub dotyczące takiego członka są ukrywane i przechowywane na wypadek przywrócenia członkostwa."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Przechowywanie i bezpieczeństwo",
+            "paragraphs": [
+              "Cała komunikacja odbywa się przez HTTPS. Ładunki powiadomień push są szyfrowane.",
+              "Do działania offline aplikacja przechowuje na urządzeniu kopię kalendarza, zadań i listy zakupów. Załączniki do dokumentów nigdy nie są zapisywane na urządzeniu.",
+              "Wylogowanie usuwa z urządzenia lokalną kopię i zapisane w pamięci podręcznej zdjęcia."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
+            "heading": "Twoje prawa i kontakt",
+            "paragraphs": [
+              "W aplikacji możesz w każdej chwili włączyć lub wyłączyć analitykę, zmienić ustawienia powiadomień lub je wyłączyć, wycofać zgodę na dane zdrowotne i usunąć poszczególne utworzone przez siebie wpisy.",
+              "W zależności od okoliczności możesz zażądać dostępu, sprostowania, usunięcia lub ograniczenia danych, wnieść sprzeciw wobec przetwarzania, otrzymać kopię danych lub przenieść je, a także wycofać zgodę, jeśli to ona jest podstawą przetwarzania. Wnioski wyślij na adres privacy@mojerodinka.cz.",
+              "Możesz samodzielnie usunąć konto w aplikacji: Więcej → Konto i rodzina → Usuń konto. Usunięcie następuje po potwierdzeniu i wylogowuje Cię ze wszystkich urządzeń; kopie zapasowe znikają w ciągu 30 dni. Usuwane są konto, profil rodzinny, zdjęcie profilowe, ustawienia, powiadomienia, prywatne notatki, życzenia oraz Twoje wiadomości w prywatnych rozmowach wraz ze zdjęciami. Wspólne wpisy rodzinne (kalendarz, zadania, zakupy, wspomnienia i ich zdjęcia, wpisy dzieci oraz rodzinny czat grupowy) pozostają u pozostałych członków, bez Twojego imienia i nazwiska. Jeśli jesteś ostatnią dorosłą osobą w rodzinie, usuwana jest cała rodzina, w tym profile dzieci i ich logowania. Usunięcie konta dziecka kasuje tylko jego dane logowania; profil dziecka pozostaje przy rodzicach. Zachowujemy jedynie informację o usunięciu (identyfikator konta i czas, bez imienia i nazwiska ani adresu e-mail). Usunięcie konta nie anuluje subskrypcji opłaconej przez App Store lub Google Play — anuluj ją w ustawieniach sklepu.",
+              "Rodinka nie oferuje w aplikacji zbiorczego eksportu danych; wnioski o kopię danych obsługujemy ręcznie.",
+              "Możesz także złożyć skargę do czeskiego organu nadzorczego — Urzędu Ochrony Danych Osobowych (Úřad pro ochranu osobních údajů, ÚOOÚ)."
             ],
             "items": [],
             "links": []
