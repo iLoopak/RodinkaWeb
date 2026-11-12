@@ -785,3 +785,443 @@ TOPICS = {
 }
 
 LLMS_LABELS = {"home": "Rodinka", "planner": "Planer rodzinny", "calendar": "Kalendarz rodzinny", "shopping": "Wspólna lista zakupów", "chores": "Obowiązki domowe", "meals": "Planowanie posiłków", "trips": "Rodzinne wycieczki", "memories": "Rodzinne wspomnienia", "documents": "Ważność dokumentów", "baby": "Przygotowanie na dziecko", "app": "Aplikacja dla rodziny", "circle": "Dalsza rodzina i pomocnicy", "compare": "Porównanie planerów rodzinnych", "vs_familia": "Rodinka vs Familia", "vs_familywall": "Rodinka vs FamilyWall", "vs_cozi": "Rodinka vs Cozi", "best": "Jak wybrać planer rodzinny", "pricing": "Cennik", "refunds": "Zasady zwrotów", "terms": "Warunki korzystania", "privacy": "Polityka prywatności"}
+
+INFO_COMMON = {
+    "legal_kicker": "WARUNKI I ZASADY",
+    "legal_title": "Wszystkie warunki w jednym miejscu",
+    "links": {
+        "pricing": "Cennik Rodinki",
+        "refunds": "Zasady zwrotów",
+        "terms": "Warunki korzystania",
+        "privacy": "Polityka prywatności",
+        "paddle_policy": "Paddle Refund Policy",
+        "paddle_buyer": "paddle.net – zarządzanie zamówieniami i zwrotami",
+    },
+    "updated": "Ostatnia aktualizacja: 5 listopada 2026",
+}
+
+INFO_PAGES = {
+    "pricing": {
+        "title": "Rodinka Free i Pro – porównanie funkcji | Rodinka",
+        "description": "Rodinka Free jest bezpłatna i ma 200 MiB. Pro dodaje planowanie, rodzinny rocznik i 5 GiB. Nowe zakupy są w przygotowaniu; ceny pojawią się przy dostępnych ofertach.",
+        "og_title": "Rodinka Free i Pro – porównanie funkcji",
+        "og_description": "Rodinka Free jest bezpłatna i ma 200 MiB. Pro dodaje planowanie, rodzinny rocznik i 5 GiB. Nowe zakupy są w przygotowaniu; ceny pojawią się przy dostępnych ofertach.",
+        "og_alt": "Rodinka – cennik Free i Rodinka Pro",
+        "eyebrow": "CENNIK",
+        "h1": "Cennik Rodinki",
+        "lead": "Cała rodzina może korzystać z Rodinki za darmo. Pro rozszerza planowanie i miejsce na dane. Nowe zakupy są w przygotowaniu i mogą nie być dostępne na każdej platformie.",
+        "answer": (
+            "Czym różni się Free od Pro?",
+            "Free to bezpłatny organizer rodzinny z 200 MiB. Pro dodaje funkcje i 5 GiB dla konkretnej rodziny. Nowe zakupy wprowadzamy stopniowo; dostępność i ostateczna cena pojawią się dopiero przy rzeczywistej ofercie w aplikacji. Istniejące subskrypcje działają dalej w pierwotnym kanale sprzedaży.",
+        ),
+        "plans_title": "Wybierzcie, co pasuje waszej rodzinie",
+        "free": {
+            "name": "Rodinka Free",
+            "price": "0 CZK",
+            "period": "za darmo",
+            "text": "Dla każdej rodziny, bez karty płatniczej.",
+            "features": (
+                "Wspólny kalendarz, obowiązki, zakupy, posiłki, wycieczki, wspomnienia i przypomnienia o dokumentach",
+                "Konta dla dorosłych i dzieci oraz miejsce dla dalszej rodziny",
+                "200 MiB na rodzinne zdjęcia",
+            ),
+            "cta": "Zacznij za darmo",
+        },
+        "pro": {
+            "name": "Rodinka Pro",
+            "text": "Jedna subskrypcja dla całej rodziny.",
+            "features": (
+                "Wszystko z Rodinki Free",
+                "Rodzinny tydzień i scenariusze rodzinne z przygotowaniami",
+                "Podpowiedź pozycji i propozycja planu posiłków",
+                "Rodzinny rocznik gotowy do druku",
+                "5 GiB na rodzinne zdjęcia",
+                "Chwila dnia",
+                "Własne kolory członków i akcent rodziny",
+                "Własny układ głównej nawigacji",
+            ),
+            "cta": "Otwórz aplikację",
+            "cta_note": "Dorosły może zamówić Pro tylko wtedy, gdy aplikacja pokaże dostępną ofertę z ceną i warunkami.",
+            "price_status": "Nowe zakupy są w przygotowaniu",
+        },
+        "price_note": "Ceny nie są jeszcze opublikowane. Przed potwierdzeniem zakupu dany kanał pokaże ostateczną cenę z należnymi podatkami, okres i zasady odnowienia.",
+        "sections": (
+            ("Porównanie Free i Pro", (
+                "Kalendarz, obowiązki, zakupy, posiłki, wycieczki, wspomnienia, dokumenty i dalsza rodzina są w Rodince Free, a Rodinka Pro ich nie ogranicza. Pro dodaje pomocników dla dorosłych: Rodzinny tydzień, czyli przegląd tego, co jeszcze trzeba załatwić w danym tygodniu; scenariusze rodzinne i tworzone z nich przygotowania do wycieczek i wydarzeń; podpowiedzi pozycji na podstawie ostatnich zakupów; propozycję planu posiłków z waszej biblioteki dań; oraz Rodzinny rocznik jako PDF gotowy do druku. Do tego 5 GiB na zdjęcia zamiast 200 MiB, Chwila dnia i możliwość dopasowania kolorów i głównej nawigacji.",
+                "Podpowiedzi zakupów i posiłków powstają wyłącznie z danych waszej rodziny i nic nie zostanie zapisane, dopóki tego nie potwierdzicie. W Rodince Free możecie dodać to samo ręcznie.",
+                "Rodinka Pro należy do całej rodziny. Jeden dorosły wykupuje subskrypcję, a korzyści dostają wszyscy członkowie tej rodziny.",
+                "Gdy Rodinka Pro się kończy, nic nie zostaje usunięte. Zdjęcia i zapisane Chwile dnia zostają i nadal można je oglądać i usuwać. Nie można tylko dodawać nowych zdjęć ponad limit 200 MiB ani nowych Chwil dnia, a własne kolory przestają być stosowane.",
+                "Rozpoczęte przygotowania można po zakończeniu Pro nadal odhaczać, edytować i zamykać, a zapisane pliki PDF rocznika zostają wasze. Nowe przygotowania, zmiany scenariuszy, Rodzinny tydzień, podpowiedzi zakupów i posiłków oraz nowe eksporty rocznika wymagają Rodinki Pro.",
+            )),
+            ("Dostępność i kanały sprzedaży", (
+                "Jeśli zakupy są włączone, w wersji webowej sprzedawcą jest Paddle (Merchant of Record), na Androidzie Google Play, a na iOS App Store firmy Apple. BMC jest wyłącznie dla dotychczasowych subskrybentów. Warunki korzystania wyjaśniają role umowne i procedury każdego kanału.",
+            )),
+            ("Odnowienie i anulowanie", (
+                "Istniejącą subskrypcją zarządzasz przez pierwotny kanał zakupu i konto. Wyłączenie odnowienia zwykle zachowuje Pro do końca opłaconego okresu; usunięcie konta ani odinstalowanie aplikacji nie zatrzymuje płatności. Odstąpienie od umowy, reklamacje i zwroty to odrębne prawa.",
+            )),
+        ),
+        "cta_title": "Zacznij za darmo; nowe zakupy Pro są w przygotowaniu",
+        "cta_text": "Rodinka otworzy się w przeglądarce. Bez karty płatniczej i bez instalacji.",
+    },
+    "refunds": {
+        "title": "Zasady zwrotów subskrypcji Rodinka Pro | Rodinka",
+        "description": "Anulowanie, odstąpienie, reklamacje i zwroty Pro przez pierwotny kanał: Paddle, Google Play, App Store lub wcześniejsze członkostwa BMC.",
+        "og_title": "Zasady zwrotów Rodinka Pro",
+        "og_description": "Anulowanie, odstąpienie, reklamacje i zwroty Pro przez pierwotny kanał: Paddle, Google Play, App Store lub wcześniejsze członkostwa BMC.",
+        "og_alt": "Rodinka – zasady zwrotów subskrypcji Rodinka Pro",
+        "eyebrow": "ZWROTY",
+        "h1": "Zasady zwrotów",
+        "lead": "Anulowanie, odstąpienie, reklamacje i zwroty Pro przez pierwotny kanał: Paddle, Google Play, App Store lub wcześniejsze członkostwa BMC.",
+        "answer": (
+            "Gdzie zgłosić anulowanie lub zwrot?",
+            "Skorzystaj z pierwotnego kanału zakupu: Paddle, Google Play, App Store firmy Apple albo istniejącego członkostwa BMC. Operator Rodinki pomoże też przy wadach usługi i ustawowym odstąpieniu od umowy. Poniższe zasady pochodzą ze wspólnych Warunków korzystania; zwroty handlowe nie ograniczają praw ustawowych.",
+        ),
+        "sections": (),
+        "cta_title": "Rodinka pozostaje bezpłatna",
+        "cta_text": "Bez subskrypcji nadal możesz korzystać z Rodinki Free.",
+    },
+}
+
+LEGAL_META = {
+    "terms": {
+        "title": "Warunki korzystania z Rodinki i zasady dotyczące treści | Rodinka",
+        "description": "Operator, Free i Pro, warunkowa dostępność kanałów płatności, odstąpienie, reklamacje i prawa konsumenta. Wiążąca wersja znajduje się w aplikacji Rodinka.",
+        "og_alt": "Rodinka – warunki korzystania i zasady dotyczące treści",
+        "eyebrow": "WARUNKI",
+        "answer": (
+            "Co regulują warunki Rodinki?",
+            "Operator, Free i Pro, warunkowa dostępność kanałów płatności, odstąpienie, reklamacje i prawa konsumenta. Wiążąca wersja znajduje się w aplikacji Rodinka.",
+        ),
+    },
+    "privacy": {
+        "title": "Polityka prywatności Rodinki | Rodinka",
+        "description": "Jakie dane przechowuje Rodinka, dlaczego i kto ma do nich dostęp: przestrzeń rodziny, dane o zdrowiu, analityka, podmioty przetwarzające, w tym Paddle, okres przechowywania i Twoje prawa.",
+        "og_alt": "Rodinka – polityka prywatności",
+        "eyebrow": "PRYWATNOŚĆ",
+        "answer": (
+            "Jak Rodinka postępuje z danymi osobowymi?",
+            "Rodinka przechowuje tylko dane, które wpisze rodzina, i dane techniczne niezbędne do działania usługi. Analityka jest domyślnie wyłączona, dane płatnicze podajesz bezpośrednio Paddle, a konto możesz w każdej chwili usunąć samodzielnie w aplikacji.",
+        ),
+    },
+}
+
+
+# ---------------------------------------------------------------------------
+# Comparison section (comparisons.py). Facts about other apps keep exactly the
+# meaning of the verified Czech/English text; only the language changes.
+
+CMP_VERIFIED_LABEL = "9 listopada 2026"
+CMP_NO_PREFIX = "Według "
+
+CMP_STATUS_LABELS = {"yes": "Tak", "paid": "W płatnej wersji", "limited": "Częściowo", "no": "Nie", "unverified": "Nie udało się zweryfikować"}
+
+CMP_AREAS = {
+    "calendar": "Wspólny kalendarz rodzinny", "recurring": "Powtarzające się zajęcia i zadania", "shopping": "Listy zakupów",
+    "meals": "Planowanie posiłków", "chores": "Obowiązki domowe", "kids": "Profile dzieci i kieszonkowe", "pets": "Zwierzęta",
+    "memories": "Wspomnienia i kamienie milowe", "trips": "Rodzinne wycieczki", "documents": "Dokumenty", "chat": "Wiadomości w rodzinie",
+    "location": "Udostępnianie lokalizacji", "roles": "Uprawnienia i współpraca", "ai": "Szybkie dodawanie i podpowiedzi",
+    "calendar_sync": "Łączenie innych kalendarzy", "platforms": "Web, PWA, iOS i Android", "offline": "Praca offline",
+    "languages": "Czeski i słowacki", "ads": "Reklamy", "plans": "Plany bezpłatne i płatne",
+}
+
+CMP_RODINKA = {
+    "calendar": "Widok miesiąca, tygodnia i listy. Każde wydarzenie pokazuje, kogo dotyczy i kto się nim zajmuje.",
+    "recurring": "Powtarzające się zajęcia i zadania. Zmiana jednego terminu nie zmienia reszty serii.",
+    "shopping": "Jedna wspólna lista podzielona na kategorie; pozycje można odhaczać bez zasięgu.",
+    "meals": "Plan tygodniowy, biblioteka posiłków, rodzinne głosowanie i składniki prosto na listę zakupów.",
+    "chores": "Zadanie ma osobę, termin i opcjonalnie powtarzanie. Dziecko odhacza, dorosły potwierdza.",
+    "kids": "Logowanie dziecka bez adresu e-mail, nagrody za zadania, kieszonkowe i cele oszczędnościowe.",
+    "pets": "Profil zwierzaka, rutyny opieki i wizyty u weterynarza z historią.",
+    "memories": "Jedna wspólna kronika: kamienie milowe, wspomnienia ze zdjęciami i powiedzonka dzieci na jednej osi czasu.",
+    "trips": "Pomysły na wycieczki zapisane z linku, plan wycieczki i rodzinne głosowanie; wybrany pomysł trafia do kalendarza.",
+    "documents": "Dokumenty z przypomnieniami o końcu ważności, widoczne tylko dla dorosłych.",
+    "chat": "Wiadomości rodzinne i prywatne, w których można udostępnić zadanie lub pozycję z listy zakupów. Tylko online.",
+    "location": "Rodinka nie udostępnia lokalizacji. Rodzinne miejsca służą do planowania i nawigacji.",
+    "roles": "Role dorosłych i dzieci. Dzieci nie widzą dokumentów ani ustawień rodziny; pomocnik widzi tylko terminy, w których się opiekuje.",
+    "ai": "Wprowadzanie głosowe zadań i zakupów na obsługiwanych urządzeniach. Rodinka Pro podpowiada zakupy i posiłki na podstawie danych waszej rodziny.",
+    "calendar_sync": "Rodinka nie łączy się jeszcze z kalendarzami Google, Apple ani Outlook.",
+    "platforms": "Aplikacja webowa na telefon, tablet i komputer, którą można dodać do ekranu głównego (PWA). Na Windows także w Microsoft Store.",
+    "offline": "Dzisiaj, kalendarz, obowiązki i zakupy można edytować offline; posiłki, wspomnienia i wycieczki da się przeglądać.",
+    "languages": "Cały interfejs po czesku, słowacku, angielsku, niemiecku i polsku.",
+    "ads": "Bez reklam, także w wersji bezpłatnej.",
+    "plans": "Free jest bezpłatna i nie wymaga karty (200 MiB na zdjęcia). Pro dla całej rodziny dodaje kolejne narzędzia i 5 GiB; ceny nie są jeszcze opublikowane.",
+}
+
+CMP_COMPETITOR_NOTES = {
+    "familia": {
+        "calendar": "Plany, przypomnienia i rodzinne daty; według strony Familia nie jest klasycznym kalendarzem.",
+        "recurring": "Zadanie może mieć powtarzający się harmonogram i przypomnienia.",
+        "chores": "Rodzinne zadania i obowiązki, każde z osobą odpowiedzialną.",
+        "shopping": "Strona wspomina o zakupach spożywczych i osobnych listach obok zadań.",
+        "meals": "Na stronie Familii nie znaleźliśmy planowania posiłków ani przepisów.",
+        "kids": "Na stronie nie znaleźliśmy profili dzieci, nagród ani kieszonkowego.",
+        "memories": "Wpisy mogą mieć załączone zdjęcia (1 w Free, do 9 w Smart). Nie znaleźliśmy rodzinnej kroniki ani kamieni milowych.",
+        "roles": "Zadania mają osobę przypisaną. Na stronie nie znaleźliśmy ról ani uprawnień członków rodziny.",
+        "ai": "Dodawanie głosem, tekstem lub zdjęciem tworzy szkice do sprawdzenia. 10 kredytów miesięcznie w Free, bez limitu w ramach uczciwego użytkowania w Smart.",
+        "calendar_sync": "Łączy się z Kalendarzem Google. Na stronie nie znaleźliśmy Apple ani Outlooka.",
+        "platforms": "Aplikacje na iPhone’a, iPada i Androida. Wersja webowa wymaga Smart i sparowania kodem QR z telefonu.",
+        "offline": "Na stronie nie znaleźliśmy informacji o pracy offline.",
+        "languages": "Między innymi czeski. Słowackiego nie udało się zweryfikować.",
+        "plans": "Free jest bezpłatny; Smart to miesięczna subskrypcja dla całej rodziny. Strona podaje cenę ze znakiem $ bez kodu waluty, a ceny w App Store różnią się w zależności od kraju, więc nie podajemy kwoty.",
+    },
+    "familywall": {
+        "calendar": "Wspólny kalendarz na terminy, zajęcia i wizyty całej rodziny.",
+        "recurring": "Plan zajęć na powtarzające się lub naprzemienne tygodnie jest częścią Premium. Na stronie nie znaleźliśmy ogólnych powtarzających się wydarzeń ani zadań.",
+        "shopping": "Listy zakupów udostępniane całej rodzinie.",
+        "meals": "Planer posiłków i przepisy, w tym import z internetu; według centrum pomocy FamilyWall część Premium.",
+        "chores": "Wspólne lub prywatne listy zadań przypisane członkom rodziny, w tym listy obowiązków dla dzieci.",
+        "kids": "Nie znaleźliśmy osobnych profili dzieci, nagród ani kieszonkowego. Premium zawiera budżet domowy.",
+        "memories": "Rodzinna galeria zdjęć i filmów; Premium dodaje miejsce. Nie znaleźliśmy kamieni milowych.",
+        "documents": "Udostępnianie dokumentów w Premium.",
+        "location": "Lokalizacje na mapie i powiadomienia o przybyciu i wyjściu; strona nie jest spójna co do tego, co jest w Free, a co w Premium.",
+        "chat": "Rodzinny komunikator; wiadomości audio i wideo w Premium.",
+        "roles": "Każdy członek wybiera, kto widzi jego lokalizację. Na stronie nie znaleźliśmy ról dorosłych i dzieci.",
+        "calendar_sync": "Import kalendarzy Google i Outlook oraz wyświetlanie wydarzeń w Kalendarzu Google, w Premium.",
+        "platforms": "Web, iPhone, iPad i Android.",
+        "offline": "Listy można przeglądać i odhaczać offline w sklepie. Pracy offline innych części nie udało się zweryfikować.",
+        "languages": "Czeskiego ani słowackiego nie udało się zweryfikować; centrum pomocy jest po angielsku, francusku, niemiecku, portugalsku i hiszpańsku.",
+        "ads": "Bez reklam, według strony.",
+        "plans": "Bezpłatna podstawa; Premium dla całej rodziny, miesięcznie lub rocznie, z 30-dniowym okresem próbnym. Strona podaje cenę ze znakiem $ bez kodu waluty, więc nie podajemy kwoty.",
+    },
+    "cozi": {
+        "calendar": "Wspólny kalendarz rodzinny dla maksymalnie 12 członków.",
+        "recurring": "Powtarzające się wydarzenia; obowiązki powtarzają się codziennie lub co tydzień.",
+        "shopping": "Listy zakupów udostępniane wszystkim na koncie.",
+        "meals": "Skrzynka z przepisami, planowanie posiłków i składniki na listę. Planer posiłków z AI w wyższym planie Max.",
+        "chores": "Cozi Chores: każda osoba ma własną listę obowiązków (w aplikacjach mobilnych).",
+        "kids": "Na stronie nie znaleźliśmy osobnych profili dzieci, nagród ani kieszonkowego.",
+        "memories": "Według FAQ do wydarzeń i list nie można dołączać obrazów ani plików. Nie znaleźliśmy dziennika ani kamieni milowych.",
+        "roles": "Według FAQ Cozi nie ma ograniczonego dostępu: wszyscy na koncie mogą wszystko przeglądać, dodawać, edytować i usuwać.",
+        "calendar_sync": "Kalendarze Google, Apple, Outlook i inne wyświetlane w Cozi oraz Cozi wysyłane do innych kalendarzy; w obu przypadkach tylko do odczytu.",
+        "platforms": "Web, iPhone i Android.",
+        "offline": "Listy zakupów można odhaczać offline. Pracy offline innych części nie udało się zweryfikować.",
+        "languages": "Czeskiego ani słowackiego nie udało się zweryfikować.",
+        "ads": "Wersja bezpłatna wyświetla reklamy; Cozi Gold jest bez reklam.",
+        "plans": "Bezpłatnie z reklamami. Cozi Gold kosztuje 39 USD rocznie za całe konto; dwutygodniowy okres próbny dotyczy tylko rejestracji w wersji webowej. Wyższy plan Max dodaje funkcje AI.",
+    },
+}
+
+CMP_COMMON = {
+    "section": "Porównanie",
+    "disclosure_title": "Kto napisał to porównanie",
+    "disclosure": "To porównanie pisze i publikuje Rodinka, jedna z porównywanych aplikacji. W przypadku pozostałych aplikacji opieramy się wyłącznie na ich oficjalnych stronach, a to, czego nie udało się zweryfikować, tak oznaczamy. Jeśli zauważysz nieścisłość, daj nam znać, a ją poprawimy.",
+    "verified": "Ostatnio sprawdzono {date}.",
+    "support": "Skontaktuj się z pomocą Rodinki",
+    "area": "Obszar",
+    "table_title": "Funkcje obok siebie",
+    "table_caption": "Porównanie funkcji Rodinki i {name}",
+    "legend": "„Nie udało się zweryfikować” oznacza, że nie znaleźliśmy informacji na oficjalnej stronie, a nie, że funkcji nie ma. Liczby odsyłają do źródeł na końcu strony.",
+    "fit_title": "Która aplikacja pasuje do jakiej rodziny",
+    "fit_rodinka": "Rodinka pasuje do was, jeśli…",
+    "fit_comp": "{name} pasuje do was, jeśli…",
+    "scenarios_title": "Jak to wygląda w zwykłym tygodniu",
+    "pros_title": "Mocne strony i ograniczenia",
+    "pros": "Mocne strony",
+    "cons": "Ograniczenia",
+    "pricing_title": "Platformy i ceny",
+    "faq_title": "Najczęstsze pytania",
+    "verdict_title": "Którą wybrać",
+    "sources_title": "Źródła i weryfikacja",
+    "sources_intro": "Informacje o {name} pochodzą z tych oficjalnych stron. Informacje o Rodince opisują obecnie wydaną aplikację, a nie plany.",
+    "source_ref": "źródło",
+    "more_title": "Więcej porównań",
+    "guide_card": "Na co zwrócić uwagę przy wyborze planera rodzinnego i która aplikacja pasuje do jakiej rodziny.",
+    "hub_card": "Wszystkie porównania Rodinki z innymi planerami rodzinnymi w jednym miejscu.",
+    "read_compare": "Przeczytaj porównanie",
+}
+
+CMP_HUB = {
+    "title": "Porównanie planerów rodzinnych: Rodinka, Familia, FamilyWall, Cozi | Rodinka",
+    "description": "Uczciwe porównanie planerów rodzinnych i aplikacji ze wspólnym kalendarzem rodzinnym. Rodinka obok Familii, FamilyWall i Cozi, ze źródłami i datą weryfikacji.",
+    "og_title": "Porównanie planerów rodzinnych",
+    "og_description": "Rodinka obok Familii, FamilyWall i Cozi: funkcje, platformy i ceny z oficjalnych źródeł.",
+    "og_alt": "Porównanie planerów rodzinnych przygotowane przez Rodinkę",
+    "eyebrow": "PORÓWNAJ APLIKACJE",
+    "h1": "Porównanie planerów rodzinnych",
+    "lead": "Każda rodzina potrzebuje od planera czegoś innego. Tutaj znajdziesz Rodinkę obok innych aplikacji – organizerów rodzinnych: co każda potrafi, do kogo pasuje i gdzie są jej granice.",
+    "answer": (
+        "Jak wybrać między Rodinką, Familią, FamilyWall i Cozi?",
+        "Najbardziej zależy to od tego, czym wasza rodzina zajmuje się najczęściej. Rodinka skupia się na codziennym życiu rodziny po czesku, słowacku, angielsku, niemiecku i polsku: kalendarz, który pokazuje, kto kogo zawozi, zadania z nagrodami dla dzieci, zakupy, posiłki, wycieczki i wspomnienia. Familia stawia na szybkie dodawanie z pomocą AI, FamilyWall dodaje udostępnianie lokalizacji, a Cozi łączy inne kalendarze. Każde porównanie podaje źródła i datę ich sprawdzenia.",
+    ),
+    "method_title": "Jak porównujemy",
+    "method": (
+        ("Tylko oficjalne źródła", "W przypadku innych aplikacji korzystamy z ich własnych stron i centrów pomocy, nie z recenzji ani domysłów. Każdy wiersz tabeli odsyła do źródła."),
+        ("Niezweryfikowane to nie brakujące", "Gdy czegoś nie znajdziemy, piszemy „Nie udało się zweryfikować”. Milczenia strony nigdy nie traktujemy jako braku funkcji."),
+        ("Rodinka taka, jaka jest", "W przypadku Rodinki podajemy tylko to, co aplikacja potrafi dziś, łącznie z tym, czego jeszcze nie potrafi."),
+        ("Bez punktacji", "Nie przyznajemy ocen ani gwiazdek. Opisujemy różnice, a decyzję zostawiamy Tobie."),
+    ),
+    "list_title": "Porównania według aplikacji",
+    "cta_title": "Sprawdź, czy Rodinka pasuje do waszej rodziny.",
+    "cta_text": "Rejestracja jest bezpłatna i nie wymaga karty płatniczej. Zacznij od jednej rzeczy, na przykład wspólnego kalendarza, i zobacz, jak się sprawdza.",
+}
+
+CMP_GUIDE = {
+    "title": "Najlepsze aplikacje dla rodziny: jak wybrać planer rodzinny | Rodinka",
+    "description": "Jak wybrać planer rodzinny albo aplikację ze wspólnym kalendarzem rodzinnym. Sześć pytań, które pomagają podjąć decyzję, i przegląd Rodinki, Familii, FamilyWall i Cozi.",
+    "og_title": "Jak wybrać najlepszą aplikację – organizer rodzinny",
+    "og_description": "Sześć pytań przy wyborze planera rodzinnego i krótki przegląd Rodinki, Familii, FamilyWall i Cozi.",
+    "og_alt": "Poradnik wyboru planera rodzinnego od Rodinki",
+    "eyebrow": "WYBÓR PLANERA",
+    "h1": "Najlepszy planer rodzinny to ten, z którego wasza rodzina naprawdę korzysta",
+    "lead": "Nie ma jednego zwycięzcy. Rodzina z dwójką dzieci w wieku szkolnym i babcią, która pomaga przy opiece, potrzebuje czegoś innego niż para, która chce głównie wspólnego kalendarza. Ten poradnik pomoże ustalić, czego potrzebujecie od aplikacji.",
+    "answer": (
+        "Jaka jest najlepsza aplikacja do organizacji życia rodzinnego?",
+        "Taka, z której naprawdę będą korzystać wszyscy dorośli, a z czasem także dzieci. Zanim porównacie aplikacje, ustalcie, czy potrzebujecie głównie wspólnego kalendarza rodzinnego, czy pełnego planera z obowiązkami, zakupami i posiłkami, czy mają uczestniczyć dzieci i dziadkowie oraz jakie języki i urządzenia są ważne. Z tego wynika właściwa aplikacja.",
+    ),
+    "criteria_title": "Sześć pytań przed wyborem",
+    "criteria": (
+        ("Kto ma uczestniczyć?", "Tylko dwoje dorosłych, czy także dzieci, dziadkowie albo niania? Sprawdźcie, czy aplikacja obsługuje konta dzieci i czy pomocnicy mogą widzieć tylko część planu."),
+        ("Co zabiera wam najwięcej czasu?", "Zajęcia i odbiory, zakupy, gotowanie, obowiązki? Wybierzcie aplikację, która dobrze rozwiązuje wasz najczęstszy problem, a nie tę z najdłuższą listą funkcji."),
+        ("Czy potrzebujecie w niej innych kalendarzy?", "Jeśli kalendarz służbowy jest w Google lub Outlooku i chcecie go widzieć obok planu rodziny, sprawdźcie, czy i jak aplikacja się z nim łączy."),
+        ("Jaki język i jakie urządzenia?", "Czy dziadkom będzie wygodnie w tym języku? Czy aplikacja działa na każdym telefonie w domu i na komputerze?"),
+        ("Co się dzieje bez zasięgu?", "Zakupy w supermarkecie w piwnicy albo zadanie w samochodzie. Sprawdźcie, które części działają offline."),
+        ("Co jest za darmo, a co płatne?", "Zobaczcie, co zawiera wersja bezpłatna, czy płatny plan obejmuje rodzinę czy osobę, oraz w jakiej walucie i jakim okresie jest rozliczany."),
+    ),
+    "apps_title": "Aplikacje w skrócie",
+    "apps_intro": "Informacje o pozostałych aplikacjach pochodzą z ich oficjalnych stron. Szczegóły i źródła są w poszczególnych porównaniach.",
+    "fit_label": "Dobrze pasuje, jeśli",
+    "watch_label": "Pamiętajcie, że",
+    "apps": {
+        "rodinka": ("chcecie jednej przestrzeni na codzienne życie rodziny po czesku, słowacku, angielsku, niemiecku albo polsku: kalendarz, który pokazuje, kto kogo zawozi, zadania z nagrodami i kieszonkowym dla dzieci, zakupy, posiłki, wycieczki, zwierzęta i wspomnienia. Uczestniczyć mogą też dziadkowie i pomocnicy.", "nie łączy jeszcze kalendarzy Google ani Outlook, a na telefonie działa jako aplikacja webowa dodana do ekranu głównego."),
+        "familia": ("chcecie dodawać zadania i plany jak najszybciej głosem, tekstem lub zdjęciem i tylko sprawdzać wynik. Familia ma też wersję czeską.", "wersja webowa wymaga płatnego planu Smart, a na jej stronie nie znaleźliśmy planowania posiłków ani profili dzieci."),
+        "familywall": ("obok kalendarza i list chcecie też rodzinnego komunikatora, galerii zdjęć i udostępniania lokalizacji.", "planer posiłków i łączenie kalendarzy są w Premium, a czeskiego ani słowackiego nie udało się zweryfikować."),
+        "cozi": ("potrzebujecie głównie kalendarza i list, chcecie widzieć też kalendarze służbowe i szkolne i odpowiada wam angielski.", "wersja bezpłatna wyświetla reklamy i według FAQ Cozi nie można ograniczyć, co widzi każda osoba na rodzinnym koncie."),
+    },
+    "faq": (
+        ("Potrzebuję kalendarza rodzinnego czy pełnego planera rodzinnego?", "Jeśli chodzi wam tylko o terminy, wystarczy wspólny kalendarz rodzinny. Gdy dochodzą obowiązki, zakupy i posiłki, planer oszczędza przełączania między kilkoma aplikacjami i czatami."),
+        ("Czy nie wystarczy udostępniony Kalendarz Google?", "Dla dwojga dorosłych często tak. Aplikacje rodzinne dodają to, czego brakuje zwykłemu kalendarzowi: konta dzieci, rodzinne obowiązki, listę zakupów czy informację, kto zabiera dziecko i dokąd."),
+        ("Czy dzieci powinny korzystać z aplikacji rodzinnej?", "Od wieku szkolnego to pomaga: dziecko widzi swoje plany i zadania bez pytania. Ważne, by aplikacja pozwalała dzieciom widzieć tylko to, co jest dla nich przeznaczone."),
+        ("Ile kosztuje planer rodzinny?", "Każda aplikacja w tym przeglądzie ma wersję bezpłatną. Plany płatne różnią się zawartością, walutą i sposobem płatności, dlatego porównujemy je w poszczególnych porównaniach."),
+    ),
+    "cta_title": "Wypróbujcie Rodinkę przez tydzień.",
+    "cta_text": "Dodajcie swoje zajęcia, kilka obowiązków i zakupy i zobaczcie, czy wspólny przegląd pomaga. Rodinka Free jest bezpłatna i nie wymaga karty.",
+}
+
+CMP_PAGES = {
+    "familia": {
+        "title": "Rodinka vs Familia: porównanie planerów rodzinnych | Rodinka",
+        "description": "Familia czy Rodinka: szybkie dodawanie z pomocą AI czy całe życie rodziny z dziećmi, posiłkami i wycieczkami? Porównanie funkcji, platform i cen ze źródłami.",
+        "og_title": "Rodinka vs Familia",
+        "og_description": "Dwa planery rodzinne w porównaniu: czym się różnią i do jakiej rodziny pasuje każdy z nich.",
+        "og_alt": "Porównanie aplikacji Rodinka i Familia",
+        "h1": "Rodinka vs Familia",
+        "lead": "Obie aplikacje chcą ułatwić planowanie w rodzinie. Familia stawia na szybkie dodawanie zadań z pomocą AI; Rodinka na jeden wspólny przegląd całego domu, łącznie z dziećmi, posiłkami, wycieczkami i wspomnieniami.",
+        "card": "Szybkie dodawanie z pomocą AI czy jeden przegląd całego domu.",
+        "answer": (
+            "Jaka jest główna różnica między Rodinką a Familią?",
+            "Familia jest zbudowana pod szybkie dodawanie: z głosu, tekstu lub zdjęcia powstaje szkic zadania lub planu, który tylko potwierdzasz, i łączy się z Kalendarzem Google. Rodinka obejmuje więcej rodzinnego życia: kalendarz, który pokazuje, kto kogo zawozi, konta dzieci z nagrodami i kieszonkowym, planowanie posiłków, zakupy, wycieczki, zwierzęta i wspomnienia, i działa w przeglądarce oraz offline. Innych kalendarzy jeszcze nie łączy.",
+        ),
+        "fit_rodinka": ("chcecie mieć kalendarz, obowiązki, zakupy, posiłki i wycieczki w jednej przestrzeni rodziny,", "dzieci mają uczestniczyć z własnym logowaniem i nagrodami albo kieszonkowym,", "chcecie korzystać z aplikacji w przeglądarce na komputerze bez płatnego planu."),
+        "fit_comp": ("dużo dodajecie w biegu i lubicie dyktować albo fotografować notatki,", "chcecie mieć zadania i plany połączone z Kalendarzem Google,", "korzystacie głównie z aplikacji na iPhonie albo Androidzie."),
+        "scenarios": (
+            ("Kartka ze żłobka", "W Familii robisz zdjęcie kartki i dostajesz szkic do sprawdzenia. W Rodince sam wpisujesz datę i od razu zaznaczasz, kogo dotyczy i kto zabierze dziecko."),
+            ("Tydzień gotowania", "W Rodince planujecie posiłki na tydzień, rodzina może głosować, a brakujące składniki jednym krokiem trafiają na listę zakupów. Planowania posiłków na stronie Familii nie znaleźliśmy."),
+            ("Obowiązki dla dzieci", "W Rodince dziecko ma własne logowanie, odhacza zadanie i po potwierdzeniu przez dorosłego dostaje nagrodę albo kieszonkowe. W przypadku Familii nie udało się zweryfikować profili dzieci ani nagród."),
+        ),
+        "rodinka_pros": ("Obejmuje życie rodziny od kalendarza po wspomnienia i zwierzęta", "Konta dzieci z ograniczonym widokiem, nagrodami i kieszonkowym", "Bezpłatna wersja webowa, części działają offline"),
+        "rodinka_cons": ("Brak jeszcze połączenia z kalendarzami Google, Apple czy Outlook", "Brak dodawania z pomocą AI ze zdjęć czy tekstu"),
+        "comp_pros": ("Szybkie dodawanie głosem, tekstem lub zdjęciem", "Połączenie z Kalendarzem Google", "Aplikacje na iPhone’a, iPada i Androida, z wersją czeską"),
+        "comp_cons": ("Wersja webowa tylko z płatnym Smart i sparowaniem z telefonu", "Free zawiera 10 kredytów AI miesięcznie i jeden załącznik na wpis"),
+        "pricing": (
+            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; na Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna i nie wymaga karty płatniczej. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane, a ewentualna oferta pojawi się w aplikacji.",
+            "Familia oferuje aplikacje na iPhone’a, iPada i Androida; wersja webowa jest częścią planu Smart. Free jest bezpłatny, a Smart to miesięczna subskrypcja dla całej rodziny. Strona podaje cenę ze znakiem $ bez kodu waluty i zaznacza, że ceny w App Store różnią się w zależności od kraju, więc nie podajemy kwoty.",
+        ),
+        "faq": (
+            ("Czy Rodinka jest alternatywą dla Familii?", "Tak, jeśli chcecie planera rodzinnego, który obejmuje też dzieci, posiłki, wycieczki i wspomnienia. Jeśli najważniejsze jest dodawanie z pomocą AI i połączenie z Kalendarzem Google, lepiej sprawdzi się Familia."),
+            ("Jakie języki obsługują obie aplikacje?", "Cały interfejs Rodinki jest po czesku, słowacku, angielsku, niemiecku i polsku. Familia podaje na swojej stronie między innymi czeski; słowackiego nie udało się zweryfikować."),
+            ("Czy muszę płacić za korzystanie na komputerze?", "W Rodince nie: wersja webowa to główny sposób korzystania i jest częścią Rodinki Free. Według cennika Familii jej wersja webowa jest częścią planu Smart."),
+            ("Czy zobaczę swój Kalendarz Google w Rodince?", "Jeszcze nie. Rodinka obecnie nie łączy zewnętrznych kalendarzy; rodzinne terminy dodajecie bezpośrednio. Familia oferuje połączenie z Kalendarzem Google."),
+            ("Czy dzieci dostają własne konto?", "W Rodince tak: dziecko loguje się bez adresu e-mail i widzi tylko swoje zadania, listę zakupów i kalendarz. Na stronie Familii nie znaleźliśmy informacji o kontach dzieci."),
+        ),
+        "verdict": (
+            "Jeśli chcecie przede wszystkim jak najszybciej przenieść sprawy z głowy do aplikacji, a wasz kalendarz jest w Google, wypróbujcie Familię.",
+            "Jeśli chcecie, żeby cała rodzina, łącznie z dziećmi i dziadkami, widziała ten sam plan i załatwiała w nim także zakupy, posiłki i wycieczki, wypróbujcie Rodinkę. Obie mają wersję bezpłatną, więc możecie je przetestować obok siebie.",
+        ),
+        "cta_title": "Wypróbujcie Rodinkę w prawdziwym tygodniu.",
+        "cta_text": "Załóżcie rodzinę za darmo, dodajcie pierwsze zajęcia i zadanie i sami zobaczcie, co lepiej wam pasuje.",
+    },
+    "familywall": {
+        "title": "Alternatywa dla FamilyWall: Rodinka vs FamilyWall | Rodinka",
+        "description": "Szukasz alternatywy dla FamilyWall? Rodinka i FamilyWall w porównaniu: wspólny kalendarz rodzinny, obowiązki, posiłki, dzieci, lokalizacja, platformy i ceny z oficjalnych źródeł.",
+        "og_title": "Rodinka vs FamilyWall",
+        "og_description": "Planer rodzinny czy rodzinna sieć z wiadomościami i lokalizacją? Uczciwe porównanie ze źródłami.",
+        "og_alt": "Porównanie aplikacji Rodinka i FamilyWall",
+        "h1": "Rodinka vs FamilyWall",
+        "lead": "FamilyWall to aplikacja rodzinna z kalendarzem, listami, komunikatorem, galerią i udostępnianiem lokalizacji. Rodinka skupia się na codziennym planowaniu domu po czesku, słowacku, angielsku, niemiecku i polsku, z kontami dzieci, posiłkami, wycieczkami i wspomnieniami.",
+        "card": "Planer rodzinny czy rodzinna sieć z wiadomościami i lokalizacją.",
+        "answer": (
+            "Jaka jest główna różnica między Rodinką a FamilyWall?",
+            "FamilyWall łączy wspólny kalendarz i listy z rodzinnym komunikatorem, galerią zdjęć i udostępnianiem lokalizacji; planer posiłków, dokumenty i połączenie z kalendarzami Google i Outlook są w Premium. Rodinka w wersji bezpłatnej oferuje kalendarz, który pokazuje, kto kogo zawozi, zadania z nagrodami i kieszonkowym dla dzieci, planowanie posiłków, wycieczki, zwierzęta i wspólną kronikę, z całym interfejsem po czesku, słowacku, angielsku, niemiecku i polsku. Nie udostępnia lokalizacji i nie łączy jeszcze innych kalendarzy.",
+        ),
+        "fit_rodinka": ("chcecie planować w rodzinie we własnym języku, także z dziadkami,", "chcecie dać dzieciom własne konto z zadaniami, nagrodami i kieszonkowym,", "planujecie posiłki i wycieczki i nie chcecie za to płatnego planu."),
+        "fit_comp": ("chcecie udostępniać lokalizację w rodzinie i dostawać powiadomienia o przybyciu do domu czy szkoły,", "wasza rodzina pisze i dzieli się zdjęciami i filmami w jednej aplikacji,", "potrzebujecie służbowego kalendarza Google lub Outlook obok rodzinnego."),
+        "scenarios": (
+            ("Kto odbiera z treningu", "W Rodince trening pokazuje, kogo dotyczy i kto zabiera dziecko, a babcia może potwierdzić linkiem bez konta. W FamilyWall termin jest we wspólnym kalendarzu i według strony widać, gdzie kto jest."),
+            ("Tydzień posiłków", "W Rodince plan posiłków z głosowaniem i składnikami na listę zakupów jest częścią wersji bezpłatnej. W FamilyWall planer posiłków z przepisami według centrum pomocy należy do Premium."),
+            ("Paszporty przed wakacjami", "Rodinka przypomina z wyprzedzeniem o końcu ważności dokumentów, a widzą je tylko dorośli. FamilyWall oferuje udostępnianie dokumentów w Premium; przypomnień o ważności na stronie nie znaleźliśmy."),
+        ),
+        "rodinka_pros": ("Cały interfejs po czesku, słowacku, angielsku, niemiecku i polsku", "Konta dzieci z nagrodami, kieszonkowym i ograniczonym widokiem", "Planowanie posiłków, wycieczki, zwierzęta i kronika w wersji bezpłatnej"),
+        "rodinka_cons": ("Brak udostępniania lokalizacji", "Brak jeszcze połączenia z kalendarzami Google, Apple czy Outlook", "Na telefonie działa jako aplikacja webowa dodana do ekranu głównego"),
+        "comp_pros": ("Rodzinny komunikator i galeria zdjęć i filmów", "Udostępnianie lokalizacji z powiadomieniami o przybyciu i wyjściu", "Aplikacje na iPhone’a, iPada i Androida oraz web, według strony bez reklam"),
+        "comp_cons": ("Planer posiłków, dokumenty i łączenie kalendarzy są w Premium", "Czeskiego ani słowackiego nie udało się zweryfikować"),
+        "pricing": (
+            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; na Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna, nie wymaga karty płatniczej i zawiera kalendarz, obowiązki, zakupy, posiłki, wycieczki, wspomnienia i dokumenty. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane.",
+            "FamilyWall jest dostępny w przeglądarce, na iPhonie, iPadzie i Androidzie. Podstawa jest bezpłatna; Premium obejmuje całą rodzinę, można je opłacać miesięcznie lub rocznie i zaczyna się 30-dniowym okresem próbnym. Subskrypcję można wykupić przez Google Play, App Store albo stronę. Strona podaje cenę ze znakiem $ bez kodu waluty, więc jej nie podajemy.",
+        ),
+        "faq": (
+            ("Czy Rodinka to dobra alternatywa dla FamilyWall?", "Jeśli chcecie planera rodzinnego z kontami dzieci, posiłkami i wycieczkami w wersji bezpłatnej, tak. Jeśli potrzebujecie udostępniania lokalizacji albo rodzinnego komunikatora z wideo, Rodinka tego nie zastąpi."),
+            ("Czy Rodinka udostępnia lokalizację jak FamilyWall?", "Nie. Rodinka nie udostępnia lokalizacji członków rodziny. Rodzinne miejsca służą do planowania i otwierania nawigacji tam, gdzie coś się dzieje."),
+            ("Czy FamilyWall jest dostępny po czesku?", "Czeskiego ani słowackiego nie udało się zweryfikować na oficjalnej stronie FamilyWall. Jego centrum pomocy jest po angielsku, francusku, niemiecku, portugalsku i hiszpańsku."),
+            ("Jak przenieść kalendarz z FamilyWall do Rodinki?", "Rodinka nie oferuje jeszcze automatycznego importu. Powtarzające się terminy, jak zajęcia, wystarczy dodać raz z powtarzaniem, a jednorazowe wydarzenia na bieżąco."),
+            ("Które funkcje FamilyWall są płatne?", "Według centrum pomocy FamilyWall należą do nich planer posiłków, udostępnianie dokumentów, budżet, plany zajęć, połączenie z kalendarzami Google i Outlook, rozszerzona lokalizacja i dodatkowe miejsce."),
+        ),
+        "verdict": (
+            "Jeśli zależy wam na tym, by widzieć, gdzie są członkowie rodziny, i chcecie w tej samej aplikacji pisać i dzielić się zdjęciami, FamilyWall to dobry wybór.",
+            "Jeśli chcecie przede wszystkim wspólnie planować tydzień, włączyć dzieci z ich własnymi zadaniami i mieć posiłki i wycieczki bez płatnego planu, wypróbujcie Rodinkę.",
+        ),
+        "cta_title": "Wypróbujcie Rodinkę jako planer rodzinny.",
+        "cta_text": "Za darmo i bez karty. Dodajcie swoje zajęcia, obowiązki i zakupy i zobaczcie, czy wspólny przegląd się u was sprawdza.",
+    },
+    "cozi": {
+        "title": "Alternatywa dla Cozi: Rodinka vs Cozi | Rodinka",
+        "description": "Szukasz alternatywy dla Cozi? Rodinka i Cozi w porównaniu: wspólny kalendarz rodzinny, zakupy, posiłki, dzieci, uprawnienia, łączenie kalendarzy i ceny ze źródłami.",
+        "og_title": "Rodinka vs Cozi",
+        "og_description": "Uznany kalendarz rodzinny, który łączy inne kalendarze, czy planer rodzinny z kontami dzieci? Porównanie ze źródłami.",
+        "og_alt": "Porównanie aplikacji Rodinka i Cozi",
+        "h1": "Rodinka vs Cozi",
+        "lead": "Cozi to uznany organizer rodzinny z kalendarzem, listami i skrzynką z przepisami, który potrafi też wyświetlać inne kalendarze. Rodinka to planer rodzinny po czesku, słowacku, angielsku, niemiecku i polsku, który obok kalendarza i zakupów obejmuje też dzieci, wycieczki, zwierzęta i wspomnienia.",
+        "card": "Kalendarz rodzinny, który pokazuje inne kalendarze, czy planer z kontami dzieci.",
+        "answer": (
+            "Jaka jest główna różnica między Rodinką a Cozi?",
+            "Cozi oferuje wspólny kalendarz dla maksymalnie 12 członków, listy zakupów, obowiązki i skrzynkę z przepisami oraz potrafi wyświetlać kalendarze Google, Apple i Outlook; wersja bezpłatna pokazuje reklamy, a według FAQ wszyscy widzą i edytują wszystko. Rodinka ma role dorosłych i dzieci, konta dzieci z nagrodami i kieszonkowym, planowanie posiłków, wycieczki i rodzinną kronikę, nie ma reklam, a obok angielskiego działa też po czesku, słowacku, niemiecku i polsku. Innych kalendarzy jeszcze nie łączy.",
+        ),
+        "fit_rodinka": ("chcecie aplikacji bez reklam, we własnym języku,", "chcecie, żeby dzieci widziały tylko to, co jest dla nich, i zdobywały nagrody za zadania,", "chcecie mieć w tym samym miejscu także wycieczki, zwierzęta, dokumenty i rodzinne wspomnienia."),
+        "fit_comp": ("potrzebujecie kalendarzy służbowych, szkolnych czy sportowych obok rodzinnego,", "odpowiada wam angielski i lubicie uznaną aplikację z długą historią,", "nie przeszkadza wam, że wszyscy na koncie mają taki sam pełny dostęp."),
+        "scenarios": (
+            ("Semestr zajęć", "W Cozi dodajesz powtarzające się wydarzenie i możesz włączyć szkolny kalendarz do rodzinnego widoku. W Rodince dodajesz zajęcia z powtarzaniem, wybierasz dziecko i opiekuna, a pojedynczy termin zmieniasz bez ruszania serii."),
+            ("Dziecko z własnym telefonem", "W Rodince dziecko loguje się bez adresu e-mail i widzi tylko swoje zadania, zakupy i kalendarz, a nie dokumenty czy ustawienia rodziny. Według FAQ Cozi wszyscy na koncie mają pełny dostęp do wszystkich danych."),
+            ("Zakupy bez zasięgu", "Obie aplikacje podają, że listę zakupów można odhaczać offline. Rodinka obsługuje offline także zadania, kalendarz i ekran Dzisiaj."),
+        ),
+        "rodinka_pros": ("Bez reklam, z całym interfejsem po czesku, słowacku, angielsku, niemiecku i polsku", "Role dorosłych i dzieci, konta dzieci z nagrodami i kieszonkowym", "Wycieczki, zwierzęta, dokumenty i rodzinna kronika w jednym miejscu"),
+        "rodinka_cons": ("Brak jeszcze połączenia z kalendarzami Google, Apple czy Outlook", "Na telefonie działa jako aplikacja webowa dodana do ekranu głównego"),
+        "comp_pros": ("Wyświetla w Cozi kalendarze Google, Apple, Outlook i inne", "Kalendarz, listy, obowiązki i skrzynka z przepisami w wersji bezpłatnej", "Aplikacje na iPhone’a i Androida oraz wersja webowa"),
+        "comp_cons": ("Wersja bezpłatna wyświetla reklamy", "Według FAQ brak ograniczenia dostępu dla poszczególnych członków", "Czeskiego ani słowackiego nie udało się zweryfikować"),
+        "pricing": (
+            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; na Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna, nie ma reklam i nie wymaga karty płatniczej. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane.",
+            "Cozi jest dostępne w przeglądarce, na iPhonie i Androidzie. Wersja bezpłatna utrzymuje się z reklam. Według FAQ Cozi Gold kosztuje 39 USD rocznie i obejmuje wszystkich na koncie; daje między innymi brak reklam, widok miesiąca na telefonie, wyszukiwanie i więcej przypomnień. Dwutygodniowy okres próbny dotyczy tylko subskrypcji rozpoczętych w wersji webowej. Wyższy plan Max dodaje funkcje AI.",
+        ),
+        "faq": (
+            ("Czy Rodinka jest alternatywą dla Cozi?", "Tak, jeśli chcecie planera rodzinnego bez reklam, z kontami dzieci, także w innym języku niż angielski. Jeśli niezbędne jest widzenie kalendarzy służbowych czy szkolnych w kalendarzu rodzinnym, Cozi już to potrafi, a Rodinka jeszcze nie."),
+            ("Czy Cozi jest dostępne po polsku?", "Innych języków niż angielski, na przykład czeskiego czy słowackiego, nie udało się zweryfikować na oficjalnej stronie Cozi. Cały interfejs Rodinki jest po czesku, słowacku, angielsku, niemiecku i polsku."),
+            ("Czy w Rodince mogę ograniczyć, co widzą dzieci?", "Tak. Konto dziecka nie widzi dokumentów ani ustawień rodziny, a pomocnik, na przykład babcia czy dziadek, widzi tylko terminy, na które go wybierzecie. Według FAQ Cozi nie oferuje takich ograniczeń."),
+            ("Ile kosztuje Cozi Gold?", "Według FAQ Cozi 39 USD rocznie za całe konto (sprawdzono 9 listopada 2026). Rodinka Free jest bezpłatna; ceny Rodinki Pro nie są jeszcze opublikowane."),
+            ("Czy mogę dodać zdjęcie do wspomnienia albo wydarzenia?", "W Rodince tak: wspomnienia i kamienie milowe mają zdjęcia we wspólnej kronice. Według FAQ Cozi obecnie nie obsługuje dołączania obrazów ani plików do wydarzeń czy list."),
+        ),
+        "verdict": (
+            "Jeśli wasza rodzina funkcjonuje po angielsku i potrzebujecie kalendarzy służbowych i szkolnych obok rodzinnego planu, Cozi to sprawdzony wybór.",
+            "Jeśli chcecie włączyć dzieci z własnym kontem, mieć aplikację bez reklam i trzymać w niej także wycieczki, zwierzęta i rodzinne wspomnienia, wypróbujcie Rodinkę.",
+        ),
+        "cta_title": "Wypróbujcie Rodinkę – bez reklam i bez karty.",
+        "cta_text": "Załóżcie rodzinę, dodajcie pierwsze zajęcia i zakupy i zobaczcie, czy Rodinka wam pasuje.",
+    },
+}
