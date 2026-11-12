@@ -725,3 +725,24 @@ html:not(.js) .series-list{display:none}
   .compare-table td::before{content:attr(data-label);display:block;margin-bottom:6px;font-weight:800;font-size:13px}
   .compare-disclosure{width:calc(100% - 32px);padding:18px}
 }
+
+/* Official store artwork keeps its own colors, proportions and clear space. */
+.store-cta{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;max-width:100%}
+.store-buttons{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;max-width:100%}
+.store-badge{display:flex;align-items:center;justify-content:center;min-height:84px;flex-shrink:0;border-radius:var(--radius-small)}
+.store-badge img{display:block;width:auto;max-width:100%;height:64px;object-fit:contain}
+.store-badge--android img{height:84px}
+.store-badge:hover{opacity:.85}
+.store-badge:active{opacity:.7}
+.store-badge:focus-visible,.web-app-link:focus-visible,.nav-download:focus-visible,.nav-login:focus-visible{outline:3px solid var(--interactive-primary);outline-offset:4px}
+.web-app-link{display:inline-flex;align-items:center;min-height:44px;color:var(--text-muted);font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.web-app-link:hover{color:var(--text-primary)}
+.hero-actions>.store-cta{flex-basis:100%}
+.cta-actions>.store-cta{align-items:center}
+.cta-actions .store-buttons,.footer-download .store-buttons{justify-content:center}
+.nav>a.nav-download{color:var(--interactive-primary);font-weight:800}
+.nav-login{color:var(--text-muted);font-size:14px}
+.footer-download{width:var(--page);margin:0 auto 40px;text-align:center;scroll-margin-top:100px}
+.footer-download h2{font-size:24px;margin:0 0 12px}
+.footer-download>.store-cta{align-items:center}
+@media(min-width:600px){.store-buttons{gap:8px 24px}}

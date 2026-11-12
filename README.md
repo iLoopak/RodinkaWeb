@@ -10,7 +10,7 @@ Statický vícejazyčný web bez produkčního build procesu a bez aplikačních
 python -m http.server 4173
 ```
 
-Poté otevřete `http://localhost:4173/`. Hlavní CTA a přihlášení vedou na `https://app.mojerodinka.cz`.
+Poté otevřete `http://localhost:4173/`. Hlavní CTA vedou do App Storu a Google Play. Přihlášení a sekundární webová alternativa vedou na `https://app.mojerodinka.cz`.
 
 ## Generování stránek
 
@@ -93,7 +93,7 @@ Obsah je oddělený od šablon: fakta, zdroje i texty jsou v `comparisons.py`, g
 
 Pravidla obsahu:
 
-- Strana Rodinky (`RODINKA`) popisuje vydanou aplikaci, ne roadmapu ani funkce za vypnutým flagem. Propojení s externími kalendáři, nativní aplikace ve storech ani Bezpečný příchod se jako dostupné neuvádějí.
+- Strana Rodinky (`RODINKA`) popisuje vydanou aplikaci, ne roadmapu ani funkce za vypnutým flagem. Propojení s externími kalendáři, Bezpečný příchod se jako dostupný neuvádí. Dostupnost mobilních aplikací potvrzují store odkazy v `STORE_URLS`.
 - Tvrzení o konkurenci pocházejí jen z jejích oficiálních webů. Každý řádek tabulky cituje zdroje a celá sada nese `VERIFIED_ON`. Nenalezená funkce je `unverified` („Nepodařilo se ověřit“); `no` jen tehdy, když to konkurent sám uvádí (text pak začíná „Podle…“).
 - Ceny jen s ověřenou měnou, intervalem a podmínkami. Částky uvedené jen se symbolem `$` bez kódu měny se nezveřejňují; ceny Rodinky Pro také ne (viz výše).
 - Bez skóre, hodnocení a log konkurence. Každá stránka viditelně uvádí, že srovnání publikuje Rodinka, a nabízí kontakt na podporu pro opravy.
@@ -229,40 +229,36 @@ Consent Mode se inicializuje synchronně před GTM. `analytics_storage`, `ad_sto
 
 Hodnota `analytics` může být `granted` nebo `denied`. Neplatná, stará nebo nedostupná hodnota úložiště se bezpečně vyhodnotí jako chybějící souhlas a zobrazí se panel. Nastavení lze kdykoli znovu otevřít odkazem v patičce.
 
-### dataLayer událost
+### Store-first CTA a měření
 
-Kliknutí na označený odkaz do `https://app.mojerodinka.cz` vloží do `dataLayer` jedinou vlastní marketingovou událost:
+`generate_site.py` centralizuje `STORE_URLS`, lokalizované texty `STORE_COPY` a komponentu `store_buttons(locale, placement)`. Oficiální lokální assety a jejich zdroje jsou v `assets/stores/README.md`. Obě platformy jsou vždy viditelné; nedochází k detekci zařízení ani přesměrování. App Store URL ponechává ověřený `/cz/` storefront pro všechny jazyky.
+
+Hero, závěrečné CTA, tematické a srovnávací stránky, Free plán a patička nabízejí oba obchody. Navigace a kompaktní/video CTA odkazují na společnou nabídku `#download`. Přihlášení a správa existujícího Pro účtu zůstávají webové. Pod badges je slabší textový odkaz na plnohodnotnou webovou verzi. JSON-LD zachovává stabilní WebApplication a přidává iOS/Android MobileApplication s ověřenými installUrl.
+
+Delegovaný click handler vloží právě jednu událost pouze při `analytics === 'granted'`. Bez souhlasu, po odmítnutí a po odvolání neukládá ani zpětně nepřehrává konverze:
 
 ```js
-{
-  event: 'cta_app_click',
-  cta_location: 'header' | 'hero' | 'content' | 'video' | 'footer',
-  cta_text: 'lokalizovaný viditelný text odkazu',
-  page_path: '/aktuální-cesta/',
-  page_language: 'cs' | 'sk' | 'en'
-}
+{ event: 'store_cta_click', platform: 'ios' /* nebo android */, placement: 'hero', locale: 'cs' }
+{ event: 'web_app_cta_click', placement: 'header', locale: 'cs' }
 ```
 
-Hodnotu `video` posílá odkaz přes tlačítko „Vyzkoušet Rodinku“ na konci promo videa na homepage. Odkaz je aktivní až od chvíle, kdy se tlačítko ve videu objeví. Událost neobsahuje osobní údaje a navigaci neblokuje. Neznamená úspěšnou registraci, proto se z marketingového webu neposílá `sign_up`; ten patří až do aplikace po dokončeném založení účtu.
+Placement: `hero`, `header`, `footer`, `pricing`, `content`. Locale: `cs`, `sk`, `en`, `de`, `pl`. Interní odkazy na nabídku stažení nejsou konverzemi. Právní a podpůrné odkazy se neměří. Starý `cta_app_click` se již neposílá. Události vyjadřují kliknutí, nikoli instalaci nebo registraci.
 
 ### Ruční konfigurace GTM a GA4
 
-V Google Tag Manageru zbývá provést následující kroky:
+Web načítá pouze stávající GTM container, nikoli další GA4 instalaci. Stávající pokročilý Consent Mode zůstává zachovaný. K jeho omezeným signálům se bez souhlasu nepřidávají konverzní události.
 
-1. V containeru `GTM-5FM9NJHK` otevřete **Tags → New → Google Tag**, nastavte Tag ID na `G-LMZQ91Y9NP` a jako trigger zvolte **Initialization – All Pages**. Zapněte odesílání automatického `page_view`; další běžné interakce nechte na GA4 Enhanced Measurement.
-2. V **Advanced settings → Consent settings** ověřte, že Google Tag uvádí vestavěnou kontrolu `analytics_storage`. U **Additional Consent Checks** zvolte **No additional consent required**; Google Tag má vlastní podporu Consent Mode a při `denied` nesmí ukládat ani číst analytické cookies. Reklamní souhlasy zůstávají vždy `denied`.
-3. V **Variables → User-Defined Variables → New → Data Layer Variable** vytvořte čtyři proměnné (Data Layer Variable Version 2): `DLV - cta_location` → `cta_location`, `DLV - cta_text` → `cta_text`, `DLV - page_path` → `page_path`, `DLV - page_language` → `page_language`.
-4. V **Triggers → New → Custom Event** vytvořte trigger s názvem například `CE - cta_app_click`, Event name přesně `cta_app_click`, který se spouští na **All Custom Events** tohoto názvu.
-5. V **Tags → New → Google Analytics: GA4 Event** (nebo aktuálním ekvivalentu Google Tag eventu) zvolte Google Tag `G-LMZQ91Y9NP`, Event Name `cta_app_click` a přidejte parametry `cta_location`, `cta_text`, `page_path`, `page_language` s hodnotami z odpovídajících DLV proměnných. Připojte trigger `CE - cta_app_click`.
-6. Také u event tagu zkontrolujte vestavěnou podporu `analytics_storage` a nastavte **No additional consent required**. Nepřidávejte výjimkové consent triggery ani druhou přímou GA4 instalaci; vestavěná kontrola Google tagů reaguje na příkazy `default` a `update` z webu.
-7. Zapněte **Admin → Container Settings → Enable consent overview**, v náhledu ověřte výchozí i aktualizovaný stav a teprve potom container publikujte.
-8. V GA4 otevřete **Admin → Data streams → Web → Enhanced measurement** a ponechte zapnuté alespoň Page views. V **Admin → Data display → Custom definitions** vytvořte event-scoped custom dimensions pro `cta_location`, `cta_text` a `page_language` se stejně pojmenovanými event parameters. `page_path` už GA4 poskytuje jako vestavěnou dimenzi Page path, proto ji znovu neregistrujte. `cta_app_click` bez dalšího obchodního rozhodnutí neoznačujte jako `sign_up` ani jako key event.
+V containeru `GTM-5FM9NJHK` před nasazením změny:
 
-Jde o pokročilý Consent Mode: GTM se načte i při `denied` a Google Tag může odeslat omezené cookieless consent signály, ale nesmí ukládat ani číst analytické cookies. Pokud právní posouzení vyžaduje nulový přenos dat Googlu před souhlasem, je potřeba samostatně přejít na Basic Consent Mode a změnit strategii spouštění tagů.
+1. Nahraďte trigger/tag `cta_app_click` dvěma Custom Event triggery `store_cta_click` a `web_app_cta_click`.
+2. Pro každou událost nastavte jeden GA4 event tag u stávajícího Google Tag `G-LMZQ91Y9NP`; použijte stejné jméno události a Data Layer Variables `platform`, `placement`, `locale` (platform pouze pro store událost).
+3. U event tagů vyžadujte `analytics_storage` jako additional consent check. Odstraňte případné obecné click triggery, které by tyto konverze odesílaly podruhé. Enhanced Measurement `click` může existovat jako samostatná obecná outbound událost; nepřevádějte jej zároveň na stejné konverze.
+4. V GA4 případně registrujte event-scoped dimenze `platform`, `placement`, `locale`. Kliknutí automaticky neoznačujte jako `sign_up`.
+5. V GTM Preview a GA4 DebugView ověřte nový návštěvník → odmítnutí → souhlas → odvolání, reload a obě platformy ve všech jazycích. Bez souhlasu musí chybět obě vlastní konverzní události; po souhlasu jedno kliknutí znamená jednu událost.
 
-### Produkční ověření
+Do produkčního GTM nebylo z repozitáře zasahováno. Samotný dataLayer push nezaručuje doručení do GA4 bez výše uvedené konfigurace.
 
-V **Preview** režimu GTM / Tag Assistant ověřte, že Consent tab ukazuje výchozí `denied`, po povolení okamžité `granted` pouze pro `analytics_storage` a po odmítnutí opět `denied`. V GA4 **Realtime** a **DebugView** zkontrolujte page view po povolení a `cta_app_click` se všemi čtyřmi parametry. Otestujte novou návštěvu, obě volby, reload, znovuotevření z patičky a CTA alespoň na CS/SK/EN homepage, v hlavičce a na jedné obsahové stránce.
+Kontroly: `python generate_site.py`, `python tools/validate_seo.py`, `python tools/validate_analytics.py`, `python tools/validate_legal.py`, `python -m unittest discover -s tools -p "test_*.py"`, `node --check script.js`, `node tools/test_cta_analytics.cjs`. Projekt nemá samostatný TypeScript typecheck ani lint/build balíček; buildem je generátor a jeho validátory.
 
 ## Google Search Console
 

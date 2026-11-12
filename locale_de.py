@@ -940,7 +940,7 @@ CMP_RODINKA = {
     "roles": "Rollen für Erwachsene und Kinder. Kinder sehen weder Dokumente noch Familieneinstellungen; eine helfende Person sieht nur die Termine, bei denen sie begleitet.",
     "ai": "Spracheingabe für Aufgaben und Einkäufe auf unterstützten Geräten. Rodinka Pro schlägt Einkäufe und Essen aus den Daten eurer eigenen Familie vor.",
     "calendar_sync": "Rodinka verbindet sich noch nicht mit Google-, Apple- oder Outlook-Kalendern.",
-    "platforms": "Eine Web-App für Handy, Tablet und Computer, die du zum Startbildschirm hinzufügen kannst (PWA). Unter Windows auch im Microsoft Store.",
+    "platforms": "Für iOS im App Store und für Android bei Google Play. Die vollwertige Web-App funktioniert auf Handy, Tablet und Computer, auch als PWA. Unter Windows auch im Microsoft Store.",
     "offline": "Heute, Kalender, Aufgaben und Einkauf lassen sich offline bearbeiten; Essen, Erinnerungen und Ausflüge bleiben lesbar.",
     "languages": "Die ganze Oberfläche auf Tschechisch, Slowakisch, Englisch, Deutsch und Polnisch.",
     "ads": "Keine Werbung, auch nicht in der kostenlosen Version.",
