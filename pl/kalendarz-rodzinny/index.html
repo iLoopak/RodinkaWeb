@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Consent Mode defaults must be queued before Google Tag Manager loads. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+      window.rodinkaConsent = { key: "rodinka_analytics_consent", version: 1, analytics: "denied" };
+      (function () {
+        var analyticsConsent = "denied";
+        try {
+          var savedConsent = JSON.parse(window.localStorage.getItem(window.rodinkaConsent.key));
+          if (savedConsent && savedConsent.version === window.rodinkaConsent.version &&
+              (savedConsent.analytics === "granted" || savedConsent.analytics === "denied")) {
+            analyticsConsent = savedConsent.analytics;
+          }
+        } catch (error) {}
+        window.rodinkaConsent.analytics = analyticsConsent;
+        window.gtag("consent", "default", {
+          analytics_storage: analyticsConsent,
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FM9NJHK');</script>
+    <!-- End Google Tag Manager -->
+    <title>Wspólny kalendarz rodzinny dla rodziców i dzieci | Rodinka</title>
+    <meta name="description" content="Wspólny kalendarz rodzinny na szkołę, zajęcia, wizyty i odbiory. Wszyscy widzą, co się dzieje i kto się tym zajmuje." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fffdf8" />
+    <script>
+      (function () {
+        var choice;
+        try { choice = localStorage.getItem('rodinka_theme'); } catch (error) {}
+        var dark = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#282b24' : '#fffdf8';
+      })();
+    </script>
+    <meta name="application-name" content="Rodinka" />
+    <link rel="canonical" href="https://mojerodinka.cz/pl/kalendarz-rodzinny/" />
+    <link rel="alternate" hreflang="cs" href="https://mojerodinka.cz/rodinny-kalendar/" />
+    <link rel="alternate" hreflang="sk" href="https://mojerodinka.cz/sk/rodinny-kalendar/" />
+    <link rel="alternate" hreflang="en" href="https://mojerodinka.cz/en/family-calendar/" />
+    <link rel="alternate" hreflang="de" href="https://mojerodinka.cz/de/familienkalender/" />
+    <link rel="alternate" hreflang="pl" href="https://mojerodinka.cz/pl/kalendarz-rodzinny/" />
+    <link rel="alternate" hreflang="x-default" href="https://mojerodinka.cz/rodinny-kalendar/" />
+    <meta property="og:title" content="Kalendarz rodzinny, który odpowiada na pytanie „kto dziś odbiera?”" />
+    <meta property="og:description" content="Szkoła, zajęcia, wizyty, odwiedziny i opiekunowie w jednym kalendarzu dla całego domu." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mojerodinka.cz/pl/kalendarz-rodzinny/" />
+    <meta property="og:site_name" content="Rodinka" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:locale:alternate" content="cs_CZ" />
+    <meta property="og:locale:alternate" content="sk_SK" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:image" content="https://mojerodinka.cz/og-image-pl.png" />
+    <meta property="og:image:width" content="1794" />
+    <meta property="og:image:height" content="877" />
+    <meta property="og:image:alt" content="Wspólny kalendarz rodzinny w Rodince z wydarzeniami i szczegółami odbioru" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kalendarz rodzinny, który odpowiada na pytanie „kto dziś odbiera?”" />
+    <meta name="twitter:description" content="Szkoła, zajęcia, wizyty, odwiedziny i opiekunowie w jednym kalendarzu dla całego domu." />
+    <meta name="twitter:image" content="https://mojerodinka.cz/og-image-pl.png" />
+    <meta name="twitter:image:alt" content="Wspólny kalendarz rodzinny w Rodince z wydarzeniami i szczegółami odbioru" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="preload" href="/assets/fonts/manrope-latin-ext-500-800.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css?v=20261112a" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mojerodinka.cz/#website","url":"https://mojerodinka.cz/","name":"Rodinka","description":"Rodinka to planer rodzinny ze wspólnym kalendarzem, obowiązkami, zakupami, posiłkami, wycieczkami i rodzinnymi wspomnieniami – dla rodziców, dzieci i wszystkich, którzy pomagają rodzinie.","inLanguage":["cs","sk","en","de","pl"]},{"@type":"WebApplication","@id":"https://mojerodinka.cz/#webapp","name":"Rodinka","url":"https://app.mojerodinka.cz","description":"Rodinka to planer rodzinny ze wspólnym kalendarzem, obowiązkami, zakupami, posiłkami, wycieczkami i rodzinnymi wspomnieniami – dla rodziców, dzieci i wszystkich, którzy pomagają rodzinie.","applicationCategory":"LifestyleApplication","operatingSystem":"Web","isPartOf":{"@id":"https://mojerodinka.cz/#website"}},{"@type":"WebPage","@id":"https://mojerodinka.cz/pl/kalendarz-rodzinny/#webpage","url":"https://mojerodinka.cz/pl/kalendarz-rodzinny/","name":"Wspólny kalendarz rodzinny dla rodziców i dzieci | Rodinka","description":"Wspólny kalendarz rodzinny na szkołę, zajęcia, wizyty i odbiory. Wszyscy widzą, co się dzieje i kto się tym zajmuje.","inLanguage":"pl","isPartOf":{"@id":"https://mojerodinka.cz/#website"},"about":{"@id":"https://mojerodinka.cz/#webapp"},"primaryImageOfPage":{"@id":"https://mojerodinka.cz/og-image-pl.png#image"},"associatedMedia":{"@id":"https://mojerodinka.cz/assets/product/rodinka-shared-family-calendar-pl.webp#product-image"}},{"@type":"ImageObject","@id":"https://mojerodinka.cz/og-image-pl.png#image","url":"https://mojerodinka.cz/og-image-pl.png","contentUrl":"https://mojerodinka.cz/og-image-pl.png","width":1794,"height":877},{"@type":"ImageObject","@id":"https://mojerodinka.cz/assets/product/rodinka-shared-family-calendar-pl.webp#product-image","url":"https://mojerodinka.cz/assets/product/rodinka-shared-family-calendar-pl.webp","contentUrl":"https://mojerodinka.cz/assets/product/rodinka-shared-family-calendar-pl.webp","encodingFormat":"image/webp","width":900,"height":1951,"name":"Widok miesiąca we wspólnym kalendarzu rodzinnym Rodinki, w którym każdy członek rodziny ma swój kolor","caption":"W widoku miesiąca kolorowe kropki pokazują, kto którego dnia ma plany, a pod siatką widać rozkład wybranego dnia.","inLanguage":"pl"}]}</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FM9NJHK"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/pl/" aria-label="Rodinka, Strona główna"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a>
+        <button class="menu-button" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
+        <nav class="nav" id="main-navigation" aria-label="Główna nawigacja">
+          <a href="/pl/kalendarz-rodzinny/" aria-current="page">Kalendarz</a><a href="/pl/obowiazki-domowe/">Obowiązki</a><a href="/pl/wspolna-lista-zakupow/">Zakupy</a><a href="/pl/planowanie-posilkow/">Posiłki</a><a href="/pl/rodzinne-wycieczki/">Wycieczki</a><a href="/pl/rodzinne-wspomnienia/">Wspomnienia</a>
+          <a class="nav-cta" href="https://app.mojerodinka.cz" data-analytics-location="header">Otwórz aplikację <span aria-hidden="true">→</span></a>
+          <div class="nav-preferences">
+            <div class="language-switcher" role="group" aria-label="Język strony"><a href="/rodinny-kalendar/" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a><span aria-hidden="true">·</span><a href="/sk/rodinny-kalendar/" lang="sk" hreflang="sk" aria-label="Slovenčina">SK</a><span aria-hidden="true">·</span><a href="/en/family-calendar/" lang="en" hreflang="en" aria-label="English">EN</a><span aria-hidden="true">·</span><a href="/de/familienkalender/" lang="de" hreflang="de" aria-label="Deutsch">DE</a><span aria-hidden="true">·</span><a href="/pl/kalendarz-rodzinny/" lang="pl" hreflang="pl" aria-label="Polski" aria-current="page">PL</a></div>
+            <button class="theme-switcher" type="button" data-theme-switch data-light-label="Przełącz na tryb jasny" data-dark-label="Przełącz na tryb ciemny" aria-label="Przełącz na tryb ciemny" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <article class="topic-page">
+        <div class="topic-hero-wrap">
+          <header class="topic-hero"><nav class="breadcrumbs" aria-label="Ścieżka nawigacji"><a href="/pl/">Strona główna</a><span aria-hidden="true">/</span><span aria-current="page">Kalendarz rodzinny</span></nav><p class="section-kicker"><span class="tone-icon" data-tone="calendar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4.25" y="5.75" width="15.5" height="14" rx="3.2"/><path d="M7.75 3.9v3.45M16.25 3.9v3.45M4.9 9.5h14.2"/><rect x="9.2" y="12.2" width="5.6" height="4.8" rx="1.4" fill="var(--nav-icon-accent)" stroke="none"/></svg></span>TERMINARZ DLA CAŁEGO DOMU</p><h1>Wspólny kalendarz rodzinny ze wszystkimi praktycznymi szczegółami</h1><p class="topic-lead">Kiedy jest szkolny koncert, kto wiezie na basen i czy sobotnia wizyta jest potwierdzona? Kalendarz rodzinny trzyma razem terminy i ustalenia, żeby każdy mógł sam sprawdzić.</p><div class="hero-actions"><a class="button button-primary button-lg" href="https://app.mojerodinka.cz" data-analytics-location="hero">Zacznij za darmo <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-pomaha">Jak działa wspólny kalendarz rodzinny w Rodince <span aria-hidden="true">↓</span></a></div></header>
+        </div>
+      <section class="proof-section direct-answer" aria-labelledby="direct-answer-calendar">
+        <div class="proof-copy">
+          <p class="section-kicker">KRÓTKA ODPOWIEDŹ</p>
+          <h2 id="direct-answer-calendar">Jak rodzice mogą dzielić rodzinny kalendarz?</h2>
+          <p>Dorośli korzystają w Rodince z jednej wspólnej przestrzeni rodziny i dodają wydarzenia do tego samego kalendarza. Przy zajęciach, wizycie u lekarza czy wycieczce data, uczestnicy i opiekun są razem. Oboje rodzice widzą zmianę bez przepisywania jej między osobnymi kalendarzami, a urodziny i rocznice pojawiają się jako spokojna warstwa, która nie blokuje czasu.</p>
+        </div>
+        <figure class="proof-figure">
+          <img class="proof-image" src="/assets/product/rodinka-shared-family-calendar-pl.webp" width="900" height="1951" loading="lazy" decoding="async" alt="Widok miesiąca we wspólnym kalendarzu rodzinnym Rodinki, w którym każdy członek rodziny ma swój kolor" />
+          <figcaption>W widoku miesiąca kolorowe kropki pokazują, kto którego dnia ma plany, a pod siatką widać rozkład wybranego dnia.</figcaption>
+        </figure>
+      </section>
+        <section class="content-section problem-section"><div class="section-copy"><p class="section-kicker">TERMINARZ DLA CAŁEGO DOMU</p><h2>Data i godzina to często tylko połowa planu</h2><p>Rodzinny terminarz to nie tylko lista spotkań. Zajęcia dzieci potrzebują też miejsca, właściwego dziecka i jasno określonego dorosłego, który je zawiezie. Jeśli połowa tych informacji zostaje na czacie, kalendarz nie spełni swojej roli.</p><p>Wspólny widok musi działać przy szybkim porannym sprawdzeniu i przy planowaniu tygodnia. Regularne zajęcia dodaje się raz, wyjątki widzą wszyscy i nikt nie prowadzi osobnej wersji rodzinnego planu.</p></div><div class="scenario-grid"><article class="scenario-card"><h3>Zajęcia dzieci</h3><p>Basen, lekcje muzyki i treningi z godziną, miejscem, dzieckiem i tym, kto je zawozi.</p></article><article class="scenario-card"><h3>Szkoła i wizyty</h3><p>Wywiadówki, badania kontrolne i dni wolne nie leżą już tylko w skrzynce jednego rodzica.</p></article><article class="scenario-card"><h3>Weekendy i odwiedziny</h3><p>Urodziny i czas u dziadków są widoczne, zanim powstanie inny plan.</p></article></div></section>
+        <section class="help-section" id="jak-pomaha"><div class="section-copy"><p class="section-kicker">Rodinka</p><h2>Jak działa wspólny kalendarz rodzinny w Rodince</h2><p>Wydarzenia są w tej samej przestrzeni rodziny, więc każdy zaproszony dorosły widzi aktualny plan, zamiast czekać na zrzut ekranu czy przekazaną wiadomość.</p></div><ol class="help-steps"><li><span>1</span><div><h3>Dodaj całe wydarzenie</h3><p>Zapisz godzinę, miejsce i członka rodziny, którego dotyczy. Regularne zajęcia ustaw jako powtarzające się, żeby nie wpisywać ich co tydzień.</p></div></li><li><span>2</span><div><h3>Oddziel, kogo dotyczy i kto się zajmuje</h3><p>Wydarzenie pokazuje uczestnika – dziecko, które idzie na basen – osobno od dorosłego, który je zawozi. To dwie różne informacje i Rodinka ich nie łączy w jedną.</p></div></li><li><span>3</span><div><h3>Przejrzyj rodzinny tydzień</h3><p>Przełączaj między miesiącem, tygodniem i listą pogrupowaną według pilności. Gdy którykolwiek dorosły coś planuje, wszyscy widzą te same rodzinne zobowiązania.</p></div></li><li><span>4</span><div><h3>Ważne dni pojawią się same</h3><p>Urodziny w rodzinie, rocznice i wasze własne ważne dni pojawiają się w kalendarzu jako spokojna warstwa, która nie blokuje czasu, a Rodinka może przypomnieć o tych istotnych z wyprzedzeniem.</p></div></li></ol></section>
+        <section class="content-section answers-section"><div class="section-copy"><h2>Pytania rodzin o wspólne kalendarze</h2></div><div class="answers-list"><article class="answer"><h3>Jak rodzice mogą dzielić kalendarz rodzinny?</h3><p>Załóżcie jedną przestrzeń rodziny i zaproście drugiego dorosłego. Dodawajcie tam wspólne wydarzenia i zapisujcie, kto zabiera dzieci, gdy ma to wpływ na plan.</p></article><article class="answer"><h3>Jak zorganizować zajęcia dzieci?</h3><p>Przy każdych zajęciach zapiszcie dzień, godzinę, miejsce, dziecko i opiekuna. Regularne terminy powtarzajcie, a wyjątki edytujcie pojedynczo, żeby widok tygodnia był aktualny.</p></article><article class="answer"><h3>Co, jeśli tylko przez jeden tydzień wiezie ktoś inny?</h3><p>Zmień opiekuna przy tym jednym terminie. Powtarzające się zajęcia pozostają bez zmian, więc jeden wyjątek nie oznacza dzielenia serii ani tworzenia jej od nowa.</p></article><article class="answer"><h3>Czy obowiązki powinny trafiać do kalendarza rodzinnego?</h3><p>Wydarzenie służy temu, co dzieje się o określonej porze. Przygotowania, jak kupno prezentu czy oddanie formularza, lepiej działają jako osobne zadanie z osobą i terminem.</p></article><article class="answer"><h3>Czy kalendarz ostrzega o kolizjach?</h3><p>Tak, gdy jeden członek rodziny miałby dwa zobowiązania naraz – na przykład zajęcia i wizytę u lekarza. Dwoje dzieci na dwóch zajęciach jednocześnie to nie kolizja, o ile każde zabiera ktoś inny. Ostrzeżenie nigdy nie blokuje zapisu.</p></article><article class="answer"><h3>Czy babcia może potwierdzić odbiór bez konta?</h3><p>Tak. Do terminu, na który dzieci zabiera ktoś spoza rodziny, utwórz link i wyślij mu go. Zobaczy godzinę, miejsce i Twoje wskazówki, odpowie jednym stuknięciem, a przy terminie zobaczysz, że jest potwierdzony.</p></article></div></section>
+        <aside class="related-section" aria-labelledby="related-title"><p class="section-kicker">CZYTAJ DALEJ</p><h2 id="related-title">Powiązane tematy</h2><ul class="related-grid"><li><a href="/pl/planer-rodzinny/"><strong>Planer rodzinny na wszystko, o czym trzeba pamiętać w domu</strong><span>Jeden wspólny przegląd terminów, obowiązków, zakupów i posiłków.</span><em>Dowiedz się więcej →</em></a></li><li><a href="/pl/dalsza-rodzina/"><strong>Dla rodziców, dzieci i wszystkich bliskich rodzinie</strong><span>Dziadkowie, niania i inne bliskie osoby widzą tylko terminy, które ich dotyczą.</span><em>Dowiedz się więcej →</em></a></li><li><a href="/pl/obowiazki-domowe/"><strong>Obowiązki rodzinne, które nie żyją w głowie jednego rodzica</strong><span>Konkretne obowiązki, jasno określona osoba i termin dla dorosłych i dzieci.</span><em>Dowiedz się więcej →</em></a></li></ul></aside>
+      </article>
+      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>Udostępnijcie plan bez kolejnej wiadomości.</h2><p>Dodaj w Rodince pierwsze rodzinne wydarzenie i zapisz, kto zajmuje się praktyczną stroną.</p><div class="cta-actions"><a class="app-cta" href="https://app.mojerodinka.cz" data-analytics-location="content">Zacznij za darmo <span aria-hidden="true">→</span></a></div><small class="form-note">Rodinka otworzy się w przeglądarce. Bez karty płatniczej i bez instalacji.</small></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="/pl/"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a><span class="serif">Żeby w domu wszystko grało.</span><p>Planer rodzinny na kalendarz, obowiązki, zakupy, wycieczki i wspomnienia – dla całej rodziny i tych, którzy jej pomagają. Po czesku, słowacku, angielsku, niemiecku i polsku.</p>
+          <div class="footer-social" role="group" aria-labelledby="footer-social-heading">
+            <h2 id="footer-social-heading">Obserwuj Rodinkę</h2>
+            <ul role="list"><li><a class="footer-social-link" href="https://www.instagram.com/mojerodinka.cz/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li><li><a class="footer-social-link" href="https://www.facebook.com/profile.php?id=61595033996266" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 22v-9h3l.5-4H14V7c0-1.1.3-2 2-2h2V1.4A26 26 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9Z" fill="currentColor" stroke="none"/></svg><span>Facebook</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li><li><a class="footer-social-link" href="https://www.youtube.com/@MojeRodinkaCz" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg><span>YouTube</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li></ul>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Funkcje"><h2>Funkcje</h2><ul><li><a href="/pl/planer-rodzinny/">Planer rodzinny</a></li><li><a href="/pl/kalendarz-rodzinny/">Kalendarz rodzinny</a></li><li><a href="/pl/obowiazki-domowe/">Obowiązki domowe</a></li><li><a href="/pl/wspolna-lista-zakupow/">Wspólna lista zakupów</a></li><li><a href="/pl/planowanie-posilkow/">Planowanie posiłków</a></li><li><a href="/pl/rodzinne-wycieczki/">Rodzinne wycieczki</a></li><li><a href="/pl/rodzinne-wspomnienia/">Rodzinne wspomnienia</a></li><li><a href="/pl/waznosc-dokumentow/">Ważność dokumentów</a></li><li><a href="/pl/przygotowanie-na-dziecko/">Przygotowanie na dziecko</a></li><li><a href="/pl/dalsza-rodzina/">Dalsza rodzina i pomocnicy</a></li></ul></nav>
+        <nav class="footer-nav" aria-label="Rodinka"><h2>Rodinka</h2><ul><li><a href="/pl/aplikacja-dla-rodziny/">O aplikacji Rodinka</a></li><li><a href="https://app.mojerodinka.cz" data-analytics-location="footer">Otwórz aplikację</a></li><li><a href="/pl/#rodinka-pro">Rodinka Pro</a></li><li><a href="/pl/porownanie/">Porównanie planerów rodzinnych</a></li><li><button class="footer-link" type="button" data-cookie-settings>Ustawienia cookies</button></li></ul></nav>
+        <nav class="footer-nav" aria-label="Warunki i zasady"><h2>Warunki i zasady</h2><ul><li><a href="/pl/pricing/">Cennik Rodinki</a></li><li><a href="/pl/refund-policy/">Zasady zwrotów</a></li><li><a href="https://app.mojerodinka.cz/terms?lang=pl">Warunki korzystania</a></li><li><a href="https://app.mojerodinka.cz/privacy?lang=pl">Polityka prywatności</a></li></ul></nav>
+      </div>
+      <p class="copyright">© 2026 Rodinka</p>
+    </footer>
+    <section class="cookie-consent" data-cookie-consent hidden role="region" aria-live="polite" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description">
+      <div class="cookie-consent-copy">
+        <h2 id="cookie-consent-title">Analityka strony</h2>
+        <p id="cookie-consent-description">Korzystamy z analityki, aby zrozumieć, jak używana jest strona Rodinki, i ją ulepszać. Uruchomi się dopiero po Twojej zgodzie.</p>
+      </div>
+      <div class="cookie-consent-actions">
+        <button class="consent-button consent-allow" type="button" data-consent-choice="granted">Zezwól na analitykę</button>
+        <button class="consent-button consent-reject" type="button" data-consent-choice="denied">Odrzuć</button>
+      </div>
+    </section>
+    <script src="/script.js?v=20261112a" defer></script>
+  </body>
+</html>

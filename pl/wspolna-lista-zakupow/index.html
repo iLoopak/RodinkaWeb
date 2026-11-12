@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Consent Mode defaults must be queued before Google Tag Manager loads. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+      window.rodinkaConsent = { key: "rodinka_analytics_consent", version: 1, analytics: "denied" };
+      (function () {
+        var analyticsConsent = "denied";
+        try {
+          var savedConsent = JSON.parse(window.localStorage.getItem(window.rodinkaConsent.key));
+          if (savedConsent && savedConsent.version === window.rodinkaConsent.version &&
+              (savedConsent.analytics === "granted" || savedConsent.analytics === "denied")) {
+            analyticsConsent = savedConsent.analytics;
+          }
+        } catch (error) {}
+        window.rodinkaConsent.analytics = analyticsConsent;
+        window.gtag("consent", "default", {
+          analytics_storage: analyticsConsent,
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FM9NJHK');</script>
+    <!-- End Google Tag Manager -->
+    <title>Wspólna rodzinna lista zakupów, zawsze aktualna | Rodinka</title>
+    <meta name="description" content="Wspólna lista zakupów, którą wszyscy uzupełniają i odhaczają w sklepie. Koniec z rozproszonymi wiadomościami i zapomnianymi karteczkami." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fffdf8" />
+    <script>
+      (function () {
+        var choice;
+        try { choice = localStorage.getItem('rodinka_theme'); } catch (error) {}
+        var dark = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#282b24' : '#fffdf8';
+      })();
+    </script>
+    <meta name="application-name" content="Rodinka" />
+    <link rel="canonical" href="https://mojerodinka.cz/pl/wspolna-lista-zakupow/" />
+    <link rel="alternate" hreflang="cs" href="https://mojerodinka.cz/sdileny-nakupni-seznam/" />
+    <link rel="alternate" hreflang="sk" href="https://mojerodinka.cz/sk/zdielany-nakupny-zoznam/" />
+    <link rel="alternate" hreflang="en" href="https://mojerodinka.cz/en/shared-shopping-list/" />
+    <link rel="alternate" hreflang="de" href="https://mojerodinka.cz/de/gemeinsame-einkaufsliste/" />
+    <link rel="alternate" hreflang="pl" href="https://mojerodinka.cz/pl/wspolna-lista-zakupow/" />
+    <link rel="alternate" hreflang="x-default" href="https://mojerodinka.cz/sdileny-nakupni-seznam/" />
+    <meta property="og:title" content="Jedna domowa lista zakupów, zawsze pod ręką" />
+    <meta property="og:description" content="Dopisz, co kończy się w domu, i rób zakupy z tej samej aktualnej listy." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mojerodinka.cz/pl/wspolna-lista-zakupow/" />
+    <meta property="og:site_name" content="Rodinka" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:locale:alternate" content="cs_CZ" />
+    <meta property="og:locale:alternate" content="sk_SK" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:image" content="https://mojerodinka.cz/og-image-pl.png" />
+    <meta property="og:image:width" content="1794" />
+    <meta property="og:image:height" content="877" />
+    <meta property="og:image:alt" content="Wspólna rodzinna lista zakupów w Rodince na artykuły spożywcze i domowe" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jedna domowa lista zakupów, zawsze pod ręką" />
+    <meta name="twitter:description" content="Dopisz, co kończy się w domu, i rób zakupy z tej samej aktualnej listy." />
+    <meta name="twitter:image" content="https://mojerodinka.cz/og-image-pl.png" />
+    <meta name="twitter:image:alt" content="Wspólna rodzinna lista zakupów w Rodince na artykuły spożywcze i domowe" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="preload" href="/assets/fonts/manrope-latin-ext-500-800.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css?v=20261112a" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mojerodinka.cz/#website","url":"https://mojerodinka.cz/","name":"Rodinka","description":"Rodinka to planer rodzinny ze wspólnym kalendarzem, obowiązkami, zakupami, posiłkami, wycieczkami i rodzinnymi wspomnieniami – dla rodziców, dzieci i wszystkich, którzy pomagają rodzinie.","inLanguage":["cs","sk","en","de","pl"]},{"@type":"WebApplication","@id":"https://mojerodinka.cz/#webapp","name":"Rodinka","url":"https://app.mojerodinka.cz","description":"Rodinka to planer rodzinny ze wspólnym kalendarzem, obowiązkami, zakupami, posiłkami, wycieczkami i rodzinnymi wspomnieniami – dla rodziców, dzieci i wszystkich, którzy pomagają rodzinie.","applicationCategory":"LifestyleApplication","operatingSystem":"Web","isPartOf":{"@id":"https://mojerodinka.cz/#website"}},{"@type":"WebPage","@id":"https://mojerodinka.cz/pl/wspolna-lista-zakupow/#webpage","url":"https://mojerodinka.cz/pl/wspolna-lista-zakupow/","name":"Wspólna rodzinna lista zakupów, zawsze aktualna | Rodinka","description":"Wspólna lista zakupów, którą wszyscy uzupełniają i odhaczają w sklepie. Koniec z rozproszonymi wiadomościami i zapomnianymi karteczkami.","inLanguage":"pl","isPartOf":{"@id":"https://mojerodinka.cz/#website"},"about":{"@id":"https://mojerodinka.cz/#webapp"},"primaryImageOfPage":{"@id":"https://mojerodinka.cz/og-image-pl.png#image"},"associatedMedia":{"@id":"https://mojerodinka.cz/assets/product/rodinka-shared-shopping-list-pl.webp#product-image"}},{"@type":"ImageObject","@id":"https://mojerodinka.cz/og-image-pl.png#image","url":"https://mojerodinka.cz/og-image-pl.png","contentUrl":"https://mojerodinka.cz/og-image-pl.png","width":1794,"height":877},{"@type":"ImageObject","@id":"https://mojerodinka.cz/assets/product/rodinka-shared-shopping-list-pl.webp#product-image","url":"https://mojerodinka.cz/assets/product/rodinka-shared-shopping-list-pl.webp","contentUrl":"https://mojerodinka.cz/assets/product/rodinka-shared-shopping-list-pl.webp","encodingFormat":"image/webp","width":900,"height":1951,"name":"Wspólna lista zakupów w Rodince z pozycjami w kategoriach, ilościami oraz tym, kto je dodał i kto je kupi","caption":"Lista jest zsynchronizowana i podzielona na kategorie; przy każdej pozycji widać ilość, kto ją dodał i kto ją kupi.","inLanguage":"pl"}]}</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FM9NJHK"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/pl/" aria-label="Rodinka, Strona główna"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a>
+        <button class="menu-button" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
+        <nav class="nav" id="main-navigation" aria-label="Główna nawigacja">
+          <a href="/pl/kalendarz-rodzinny/">Kalendarz</a><a href="/pl/obowiazki-domowe/">Obowiązki</a><a href="/pl/wspolna-lista-zakupow/" aria-current="page">Zakupy</a><a href="/pl/planowanie-posilkow/">Posiłki</a><a href="/pl/rodzinne-wycieczki/">Wycieczki</a><a href="/pl/rodzinne-wspomnienia/">Wspomnienia</a>
+          <a class="nav-cta" href="https://app.mojerodinka.cz" data-analytics-location="header">Otwórz aplikację <span aria-hidden="true">→</span></a>
+          <div class="nav-preferences">
+            <div class="language-switcher" role="group" aria-label="Język strony"><a href="/sdileny-nakupni-seznam/" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a><span aria-hidden="true">·</span><a href="/sk/zdielany-nakupny-zoznam/" lang="sk" hreflang="sk" aria-label="Slovenčina">SK</a><span aria-hidden="true">·</span><a href="/en/shared-shopping-list/" lang="en" hreflang="en" aria-label="English">EN</a><span aria-hidden="true">·</span><a href="/de/gemeinsame-einkaufsliste/" lang="de" hreflang="de" aria-label="Deutsch">DE</a><span aria-hidden="true">·</span><a href="/pl/wspolna-lista-zakupow/" lang="pl" hreflang="pl" aria-label="Polski" aria-current="page">PL</a></div>
+            <button class="theme-switcher" type="button" data-theme-switch data-light-label="Przełącz na tryb jasny" data-dark-label="Przełącz na tryb ciemny" aria-label="Przełącz na tryb ciemny" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <article class="topic-page">
+        <div class="topic-hero-wrap">
+          <header class="topic-hero"><nav class="breadcrumbs" aria-label="Ścieżka nawigacji"><a href="/pl/">Strona główna</a><span aria-hidden="true">/</span><span aria-current="page">Wspólna lista zakupów</span></nav><p class="section-kicker"><span class="tone-icon" data-tone="family" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 9.5h15l-1.5 8.2a2.2 2.2 0 0 1-2.2 1.8H8.2A2.2 2.2 0 0 1 6 17.7L4.5 9.5Z"/><path d="m9 9.5 2.2-5M15 9.5l-2.2-5M9.5 13.5v2.5M14.5 13.5v2.5"/></svg></span>ZAKUPY BEZ ZGUBIONYCH WIADOMOŚCI</p><h1>Wspólna lista zakupów, którą uzupełnia cała rodzina</h1><p class="topic-lead">Mleko skończyło się rano, ktoś wspomniał o chlebie na czacie, a karteczka z lodówki została w domu. Wspólna lista łapie pozycję, gdy tylko ktoś sobie o niej przypomni – i jest aktualna także w sklepie.</p><div class="hero-actions"><a class="button button-primary button-lg" href="https://app.mojerodinka.cz" data-analytics-location="hero">Zacznij za darmo <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-pomaha">Jak prowadzić wspólną listę zakupów w Rodince <span aria-hidden="true">↓</span></a></div></header>
+        </div>
+      <section class="proof-section direct-answer" aria-labelledby="direct-answer-shopping">
+        <div class="proof-copy">
+          <p class="section-kicker">KRÓTKA ODPOWIEDŹ</p>
+          <h2 id="direct-answer-shopping">Jak prowadzić wspólną listę zakupów dla całego domu?</h2>
+          <p>Rodinka daje domowi jedną wspólną listę zakupów, którą domownicy uzupełniają, gdy coś się kończy. Podczas zakupów odhacza się pozycje na tej samej liście, więc wszyscy widzą aktualny stan. Nie trzeba przed każdym wyjściem do sklepu wysyłać nowej wersji.</p>
+        </div>
+        <figure class="proof-figure">
+          <img class="proof-image" src="/assets/product/rodinka-shared-shopping-list-pl.webp" width="900" height="1951" loading="lazy" decoding="async" alt="Wspólna lista zakupów w Rodince z pozycjami w kategoriach, ilościami oraz tym, kto je dodał i kto je kupi" />
+          <figcaption>Lista jest zsynchronizowana i podzielona na kategorie; przy każdej pozycji widać ilość, kto ją dodał i kto ją kupi.</figcaption>
+        </figure>
+      </section>
+        <section class="content-section problem-section"><div class="section-copy"><p class="section-kicker">ZAKUPY BEZ ZGUBIONYCH WIADOMOŚCI</p><h2>Zebranie listy bywa trudniejsze niż same zakupy</h2><p>Kupienie jedzenia jest proste. Ustalenie, czego naprawdę brakuje, czy ktoś już to dopisał i kto idzie do sklepu – to jest chaotyczna część. Kartka działa tylko tam, gdzie leży, a wiadomość na czacie szybko ginie.</p><p>Przy jednej domowej liście mniej ważne jest, kto ostatecznie zrobi zakupy. Każdy może dopisywać pozycje, kupione są odhaczane, a to, co zostało, czeka na następny raz.</p></div><div class="scenario-grid"><article class="scenario-card"><h3>Coś właśnie się skończyło</h3><p>Ostatnie mleko czy proszek do prania trafia na listę od razu, a nie podczas pospiesznego testu pamięci później.</p></article><article class="scenario-card"><h3>W sklepie bez zasięgu</h3><p>Lista działa, nawet gdy telefon nie ma sygnału. Odhaczone pozycje zsynchronizują się, gdy wróci połączenie.</p></article><article class="scenario-card"><h3>Zakupy robi ktoś inny</h3><p>Partner, który wstępuje do sklepu w drodze do domu, otwiera tę samą listę bez proszenia o aktualną wiadomość.</p></article></div></section>
+        <section class="help-section" id="jak-pomaha"><div class="section-copy"><p class="section-kicker">Rodinka</p><h2>Jak prowadzić wspólną listę zakupów w Rodince</h2><p>Lista należy do przestrzeni waszej rodziny, więc zaproszeni domownicy mogą ją otwierać i uzupełniać na telefonie i komputerze.</p></div><ol class="help-steps"><li><span>1</span><div><h3>Dodawaj pozycje pisząc albo głosem</h3><p>Zapisz pozycję, gdy tylko ją zauważysz. Na obsługiwanych urządzeniach nie musisz pisać: powiedz, co się skończyło, a Rodinka zamieni to w pozycje, które przejrzysz, poprawisz i potwierdzisz, zanim cokolwiek zostanie dodane.</p></div></li><li><span>2</span><div><h3>Kupujcie z tej samej wersji, z zasięgiem lub bez</h3><p>Odhaczaj w sklepie. Pozostali widzą, co już jest, i nie dopisują ani nie kupują tego drugi raz, a lista działa offline, dopóki nie wróci połączenie.</p></div></li><li><span>3</span><div><h3>Połącz zakupy z posiłkami</h3><p>Gdy wybieracie kolacje na tydzień, dopiszcie potrzebne składniki, żeby plan posiłków był wykonalny.</p></div></li></ol></section>
+        <section class="content-section answers-section"><div class="section-copy"><h2>Praktyczne pytania o wspólne listy zakupów</h2></div><div class="answers-list"><article class="answer"><h3>Jak udostępnić listę zakupów partnerowi?</h3><p>Korzystajcie z jednej listy we wspólnej przestrzeni rodziny. Oboje możecie dopisywać i odhaczać pozycje, więc nie trzeba wysyłać nowej wersji przed każdymi zakupami.</p></article><article class="answer"><h3>Czy aplikacja jest lepsza niż papierowa lista?</h3><p>Kartka przy lodówce jest szybka. Wspólna cyfrowa lista jest dostępna także poza domem i może ją uzupełniać kilka osób, co pomaga, gdy zakupy robią różni członkowie rodziny.</p></article><article class="answer"><h3>Czy mogę podyktować listę zakupów?</h3><p>Na obsługiwanych urządzeniach tak. Mówisz, czego brakuje, Rodinka zamienia to w osobne pozycje i pokazuje je do potwierdzenia – dopiero wtedy zostaną dodane. To, co rozpoznała źle, możesz najpierw poprawić lub usunąć, a nagranie ani transkrypcja nie są przechowywane.</p></article><article class="answer"><h3>Czy lista działa bez zasięgu?</h3><p>Tak. Lista zakupów jest zbudowana do pracy offline: w sklepie możesz dalej dodawać i odhaczać pozycje, a zmiany zsynchronizują się, gdy telefon znów połączy się z siecią.</p></article><article class="answer"><h3>Czy Rodinka może podpowiedzieć, co kupić?</h3><p>Z Rodinką Pro tak. Podpowiedź pozycji sprawdza, co kupiliście co najmniej dwa razy w ostatnich 30 dniach, i proponuje rzeczy, które mogą być znów potrzebne według waszego rytmu. Pomija to, co już jest na liście albo zostało kupione przed chwilą. Nic nie zostanie dodane, dopóki nie potwierdzisz, a ilości możesz najpierw zmienić.</p></article></div></section>
+        <aside class="related-section" aria-labelledby="related-title"><p class="section-kicker">CZYTAJ DALEJ</p><h2 id="related-title">Powiązane tematy</h2><ul class="related-grid"><li><a href="/pl/planowanie-posilkow/"><strong>Tygodniowe planowanie posiłków dopasowane do prawdziwego życia rodziny</strong><span>Prosty plan kolacji dopasowany do tygodnia i zakupów, których wymaga.</span><em>Dowiedz się więcej →</em></a></li><li><a href="/pl/planer-rodzinny/"><strong>Planer rodzinny na wszystko, o czym trzeba pamiętać w domu</strong><span>Jeden wspólny przegląd terminów, obowiązków, zakupów i posiłków.</span><em>Dowiedz się więcej →</em></a></li><li><a href="/pl/aplikacja-dla-rodziny/"><strong>Aplikacja dla rodziny na terminy, obowiązki, zakupy i posiłki</strong><span>Kalendarz, domowe obowiązki, zakupy i posiłki w jednej przestrzeni rodziny.</span><em>Dowiedz się więcej →</em></a></li></ul></aside>
+      </article>
+      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>Następne zakupy mogą zacząć się bez szukania na czacie.</h2><p>Otwórz wspólną listę w Rodince i dopisz pierwszą rzecz, która się wam kończy.</p><div class="cta-actions"><a class="app-cta" href="https://app.mojerodinka.cz" data-analytics-location="content">Zacznij za darmo <span aria-hidden="true">→</span></a></div><small class="form-note">Rodinka otworzy się w przeglądarce. Bez karty płatniczej i bez instalacji.</small></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="/pl/"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a><span class="serif">Żeby w domu wszystko grało.</span><p>Planer rodzinny na kalendarz, obowiązki, zakupy, wycieczki i wspomnienia – dla całej rodziny i tych, którzy jej pomagają. Po czesku, słowacku, angielsku, niemiecku i polsku.</p>
+          <div class="footer-social" role="group" aria-labelledby="footer-social-heading">
+            <h2 id="footer-social-heading">Obserwuj Rodinkę</h2>
+            <ul role="list"><li><a class="footer-social-link" href="https://www.instagram.com/mojerodinka.cz/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li><li><a class="footer-social-link" href="https://www.facebook.com/profile.php?id=61595033996266" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 22v-9h3l.5-4H14V7c0-1.1.3-2 2-2h2V1.4A26 26 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9Z" fill="currentColor" stroke="none"/></svg><span>Facebook</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li><li><a class="footer-social-link" href="https://www.youtube.com/@MojeRodinkaCz" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg><span>YouTube</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li></ul>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Funkcje"><h2>Funkcje</h2><ul><li><a href="/pl/planer-rodzinny/">Planer rodzinny</a></li><li><a href="/pl/kalendarz-rodzinny/">Kalendarz rodzinny</a></li><li><a href="/pl/obowiazki-domowe/">Obowiązki domowe</a></li><li><a href="/pl/wspolna-lista-zakupow/">Wspólna lista zakupów</a></li><li><a href="/pl/planowanie-posilkow/">Planowanie posiłków</a></li><li><a href="/pl/rodzinne-wycieczki/">Rodzinne wycieczki</a></li><li><a href="/pl/rodzinne-wspomnienia/">Rodzinne wspomnienia</a></li><li><a href="/pl/waznosc-dokumentow/">Ważność dokumentów</a></li><li><a href="/pl/przygotowanie-na-dziecko/">Przygotowanie na dziecko</a></li><li><a href="/pl/dalsza-rodzina/">Dalsza rodzina i pomocnicy</a></li></ul></nav>
+        <nav class="footer-nav" aria-label="Rodinka"><h2>Rodinka</h2><ul><li><a href="/pl/aplikacja-dla-rodziny/">O aplikacji Rodinka</a></li><li><a href="https://app.mojerodinka.cz" data-analytics-location="footer">Otwórz aplikację</a></li><li><a href="/pl/#rodinka-pro">Rodinka Pro</a></li><li><a href="/pl/porownanie/">Porównanie planerów rodzinnych</a></li><li><button class="footer-link" type="button" data-cookie-settings>Ustawienia cookies</button></li></ul></nav>
+        <nav class="footer-nav" aria-label="Warunki i zasady"><h2>Warunki i zasady</h2><ul><li><a href="/pl/pricing/">Cennik Rodinki</a></li><li><a href="/pl/refund-policy/">Zasady zwrotów</a></li><li><a href="https://app.mojerodinka.cz/terms?lang=pl">Warunki korzystania</a></li><li><a href="https://app.mojerodinka.cz/privacy?lang=pl">Polityka prywatności</a></li></ul></nav>
+      </div>
+      <p class="copyright">© 2026 Rodinka</p>
+    </footer>
+    <section class="cookie-consent" data-cookie-consent hidden role="region" aria-live="polite" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description">
+      <div class="cookie-consent-copy">
+        <h2 id="cookie-consent-title">Analityka strony</h2>
+        <p id="cookie-consent-description">Korzystamy z analityki, aby zrozumieć, jak używana jest strona Rodinki, i ją ulepszać. Uruchomi się dopiero po Twojej zgodzie.</p>
+      </div>
+      <div class="cookie-consent-actions">
+        <button class="consent-button consent-allow" type="button" data-consent-choice="granted">Zezwól na analitykę</button>
+        <button class="consent-button consent-reject" type="button" data-consent-choice="denied">Odrzuć</button>
+      </div>
+    </section>
+    <script src="/script.js?v=20261112a" defer></script>
+  </body>
+</html>

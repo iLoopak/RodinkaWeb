@@ -150,9 +150,9 @@ RODINKA = {
         "Today, the calendar, chores and shopping can be edited offline; meals, memories and trips stay readable.",
     )),
     "languages": ("info", t(
-        "Celé rozhraní česky, slovensky a anglicky.",
-        "Celé rozhranie po česky, slovensky a anglicky.",
-        "The whole interface in Czech, Slovak and English.",
+        "Celé rozhraní česky, slovensky, anglicky, německy a polsky.",
+        "Celé rozhranie po česky, slovensky, anglicky, nemecky a poľsky.",
+        "The whole interface in Czech, Slovak, English, German and Polish.",
     )),
     "ads": ("info", t(
         "Bez reklam, i ve verzi zdarma.",
@@ -1296,3 +1296,35 @@ COMPARISON_PAGES["cozi"] = {
         "cta_text": "Create your family, add the first activity and the shopping, and see whether Rodinka suits you.",
     },
 }
+
+
+# ---------------------------------------------------------------------------
+# German and Polish copy of this section lives in locale_de.py and locale_pl.py.
+# The facts above stay the single source; those modules only translate them.
+
+def install_locale(code: str, module) -> None:
+    VERIFIED_LABEL[code] = module.CMP_VERIFIED_LABEL
+    STATUS_LABELS[code] = module.CMP_STATUS_LABELS
+    for area, label in module.CMP_AREAS.items():
+        AREAS[area][code] = label
+    for area, note in module.CMP_RODINKA.items():
+        RODINKA[area][1][code] = note
+    for key, notes in module.CMP_COMPETITOR_NOTES.items():
+        for area, _, note, _ in COMPETITORS[key]["rows"]:
+            note[code] = notes[area]
+    COMMON[code] = module.CMP_COMMON
+    HUB[code] = module.CMP_HUB
+    GUIDE[code] = module.CMP_GUIDE
+    for key, page in module.CMP_PAGES.items():
+        COMPARISON_PAGES[key][code] = page
+
+
+def _install_translations() -> None:
+    import locale_de
+    import locale_pl
+
+    install_locale("de", locale_de)
+    install_locale("pl", locale_pl)
+
+
+_install_translations()

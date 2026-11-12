@@ -24,7 +24,7 @@ def normalized(value):
 errors = []
 refund_ids = {'availability', 'paddle', 'google-play', 'app-store', 'legacy-bmc',
               'withdrawal', 'withdrawal-model', 'defects', 'complaints', 'adr'}
-for locale in ('cs', 'sk', 'en'):
+for locale in ('cs', 'sk', 'en', 'de', 'pl'):
     prefix = '' if locale == 'cs' else locale + '/'
     content = DATA['languages'][locale]
     for key in ('terms', 'privacy', 'refund-policy'):
@@ -51,4 +51,4 @@ for locale in ('cs', 'sk', 'en'):
 
 if errors:
     raise SystemExit('\n'.join(errors))
-print('Legal validation passed: shared CS/SK/EN text, consumer rights, links and trader identity.')
+print('Legal validation passed: shared CS/SK/EN/DE/PL text, consumer rights, links and trader identity.')

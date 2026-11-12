@@ -14,6 +14,14 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+import locale_de  # noqa: E402
+import locale_pl  # noqa: E402
+
+# Website languages. German and Polish slugs live next to their copy in
+# locale_de.py / locale_pl.py; they are merged into FAMILIES below.
+LOCALES = ("cs", "sk", "en", "de", "pl")
 SITE = "https://mojerodinka.cz"
 APP = "https://app.mojerodinka.cz"
 
@@ -56,8 +64,12 @@ POLICY_FAMILIES = {"pricing", "refunds"}
 # carries breadcrumbs, and articles cite their sources.
 COMPARE_FAMILIES = {"compare", "vs_familia", "vs_familywall", "vs_cozi", "best"}
 VS_FAMILIES = {"vs_familia", "vs_familywall", "vs_cozi"}
-UNVERIFIED_LABEL = {"cs": "Nepodařilo se ověřit", "sk": "Nepodarilo sa overiť", "en": "Could not verify"}
+UNVERIFIED_LABEL = {"cs": "Nepodařilo se ověřit", "sk": "Nepodarilo sa overiť", "en": "Could not verify", "de": "Nicht überprüfbar", "pl": "Nie udało się zweryfikować"}
 LEGAL_FAMILIES = ("terms", "privacy")
+
+for _code, _module in (("de", locale_de), ("pl", locale_pl)):
+    for _family, _path in _module.PATHS.items():
+        FAMILIES[_family][_code] = _path
 
 EXPECTED = {
     path: (family, locale)
@@ -85,7 +97,7 @@ PRODUCT_BASE_ASSETS = {
 PRODUCT_ASSETS = {
     base if locale == "cs" else f"{base.removesuffix('.webp')}-{locale}.webp"
     for base in PRODUCT_BASE_ASSETS
-    for locale in ("cs", "sk", "en")
+    for locale in LOCALES
 }
 
 # One variable Manrope carries every weight, exactly like the app's own UI.
@@ -116,7 +128,7 @@ def localized_product_path(base: str, locale: str) -> str:
 
 
 def base_product_path(src: str) -> str:
-    return re.sub(r"-(?:sk|en)\.webp$", ".webp", src)
+    return re.sub(r"-(?:sk|en|de|pl)\.webp$", ".webp", src)
 
 
 def file_for_path(path: str) -> Path:
@@ -318,10 +330,10 @@ def main() -> int:
             errors.append(f"{path}: missing metadata {missing_meta}")
         if parser.meta.get("og:url") != expected_canonical:
             errors.append(f"{path}: og:url does not match canonical")
-        expected_og_locale = {"cs": "cs_CZ", "sk": "sk_SK", "en": "en_US"}[locale]
+        expected_og_locale = {"cs": "cs_CZ", "sk": "sk_SK", "en": "en_US", "de": "de_DE", "pl": "pl_PL"}[locale]
         if parser.meta.get("og:locale") != expected_og_locale:
             errors.append(f"{path}: incorrect og:locale")
-        expected_og_image = f"{SITE}/" + {"cs": "og-image.png", "sk": "og-image-sk.png", "en": "og-image-en.png"}[locale]
+        expected_og_image = f"{SITE}/" + ("og-image.png" if locale == "cs" else f"og-image-{locale}.png")
         if parser.meta.get("og:image") != expected_og_image or parser.meta.get("twitter:image") != expected_og_image:
             errors.append(f"{path}: social image is not localized for {locale}")
         image_file = ROOT / urlparse(expected_og_image).path.lstrip("/")
@@ -445,11 +457,11 @@ def main() -> int:
         errors.append(f"Pages not reached by normal HTML links: {sorted(orphaned)}")
 
     for family in FAMILIES:
-        variants = [product_sources_by_variant.get((family, locale), set()) for locale in ("cs", "sk", "en")]
+        variants = [product_sources_by_variant.get((family, locale), set()) for locale in LOCALES]
         if not all(sources == variants[0] for sources in variants[1:]):
             errors.append(f"{family}: localized pages do not publish the same product screenshots")
     for (family, src), alt_values in localized_alts.items():
-        if len(alt_values) != 3:
+        if len(alt_values) != len(LOCALES):
             errors.append(f"{family}: product screenshot {src} does not have distinct localized alt text")
     if published_product_sources != PRODUCT_ASSETS:
         errors.append(
@@ -477,7 +489,7 @@ def main() -> int:
     except (json.JSONDecodeError, OSError) as exc:
         errors.append(f"Invalid vercel.json: {exc}")
 
-    for asset in ("styles.css", "script.js", "favicon.svg", "favicon-96.png", "apple-touch-icon.png", "og-image.png", "og-image-sk.png", "og-image-en.png", *sorted(path.lstrip("/") for path in PRODUCT_ASSETS)):
+    for asset in ("styles.css", "script.js", "favicon.svg", "favicon-96.png", "apple-touch-icon.png", "og-image.png", *(f"og-image-{code}.png" for code in LOCALES if code != "cs"), *sorted(path.lstrip("/") for path in PRODUCT_ASSETS)):
         if not (ROOT / asset).is_file():
             errors.append(f"Missing shared asset: {asset}")
 
@@ -487,7 +499,7 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print(f"SEO validation passed for {len(pages)} pages in 3 languages.")
+    print(f"SEO validation passed for {len(pages)} pages in {len(LOCALES)} languages.")
     print("Titles, descriptions, H1s, canonicals, hreflang, JSON-LD, sitemap and internal links are consistent.")
     return 0
 

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Consent Mode defaults must be queued before Google Tag Manager loads. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+      window.rodinkaConsent = { key: "rodinka_analytics_consent", version: 1, analytics: "denied" };
+      (function () {
+        var analyticsConsent = "denied";
+        try {
+          var savedConsent = JSON.parse(window.localStorage.getItem(window.rodinkaConsent.key));
+          if (savedConsent && savedConsent.version === window.rodinkaConsent.version &&
+              (savedConsent.analytics === "granted" || savedConsent.analytics === "denied")) {
+            analyticsConsent = savedConsent.analytics;
+          }
+        } catch (error) {}
+        window.rodinkaConsent.analytics = analyticsConsent;
+        window.gtag("consent", "default", {
+          analytics_storage: analyticsConsent,
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FM9NJHK');</script>
+    <!-- End Google Tag Manager -->
+    <title>Planujcie rodzinne wycieczki i wakacje razem | Rodinka</title>
+    <meta name="description" content="Zapisujcie pomysły na wycieczki z dziećmi, zamieniajcie je w plan wycieczki i pozwólcie rodzinie głosować. Wybrany pomysł trafi do kalendarza, a wycieczka stanie się wspomnieniem." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fffdf8" />
+    <script>
+      (function () {
+        var choice;
+        try { choice = localStorage.getItem('rodinka_theme'); } catch (error) {}
+        var dark = choice === 'dark' || (choice !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#282b24' : '#fffdf8';
+      })();
+    </script>
+    <meta name="application-name" content="Rodinka" />
+    <link rel="canonical" href="https://mojerodinka.cz/pl/rodzinne-wycieczki/" />
+    <link rel="alternate" hreflang="cs" href="https://mojerodinka.cz/rodinne-vylety/" />
+    <link rel="alternate" hreflang="sk" href="https://mojerodinka.cz/sk/rodinne-vylety/" />
+    <link rel="alternate" hreflang="en" href="https://mojerodinka.cz/en/family-trips/" />
+    <link rel="alternate" hreflang="de" href="https://mojerodinka.cz/de/familienausfluege/" />
+    <link rel="alternate" hreflang="pl" href="https://mojerodinka.cz/pl/rodzinne-wycieczki/" />
+    <link rel="alternate" hreflang="x-default" href="https://mojerodinka.cz/rodinne-vylety/" />
+    <meta property="og:title" content="Rodzinne wycieczki, w których każdy ma głos" />
+    <meta property="og:description" content="Pula pomysłów, plany wycieczek, głosowanie i kalendarz – od pierwszego pomysłu do wspólnego wspomnienia." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mojerodinka.cz/pl/rodzinne-wycieczki/" />
+    <meta property="og:site_name" content="Rodinka" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:locale:alternate" content="cs_CZ" />
+    <meta property="og:locale:alternate" content="sk_SK" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:image" content="https://mojerodinka.cz/og-image-pl.png" />
+    <meta property="og:image:width" content="1794" />
+    <meta property="og:image:height" content="877" />
+    <meta property="og:image:alt" content="Planowanie rodzinnych wycieczek i głosowanie nad pomysłami w aplikacji Rodinka" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rodzinne wycieczki, w których każdy ma głos" />
+    <meta name="twitter:description" content="Pula pomysłów, plany wycieczek, głosowanie i kalendarz – od pierwszego pomysłu do wspólnego wspomnienia." />
+    <meta name="twitter:image" content="https://mojerodinka.cz/og-image-pl.png" />
+    <meta name="twitter:image:alt" content="Planowanie rodzinnych wycieczek i głosowanie nad pomysłami w aplikacji Rodinka" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="preload" href="/assets/fonts/manrope-latin-ext-500-800.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css?v=20261112a" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mojerodinka.cz/#website","url":"https://mojerodinka.cz/","name":"Rodinka","description":"Rodinka to planer rodzinny ze wspólnym kalendarzem, obowiązkami, zakupami, posiłkami, wycieczkami i rodzinnymi wspomnieniami – dla rodziców, dzieci i wszystkich, którzy pomagają rodzinie.","inLanguage":["cs","sk","en","de","pl"]},{"@type":"WebApplication","@id":"https://mojerodinka.cz/#webapp","name":"Rodinka","url":"https://app.mojerodinka.cz","description":"Rodinka to planer rodzinny ze wspólnym kalendarzem, obowiązkami, zakupami, posiłkami, wycieczkami i rodzinnymi wspomnieniami – dla rodziców, dzieci i wszystkich, którzy pomagają rodzinie.","applicationCategory":"LifestyleApplication","operatingSystem":"Web","isPartOf":{"@id":"https://mojerodinka.cz/#website"}},{"@type":"WebPage","@id":"https://mojerodinka.cz/pl/rodzinne-wycieczki/#webpage","url":"https://mojerodinka.cz/pl/rodzinne-wycieczki/","name":"Planujcie rodzinne wycieczki i wakacje razem | Rodinka","description":"Zapisujcie pomysły na wycieczki z dziećmi, zamieniajcie je w plan wycieczki i pozwólcie rodzinie głosować. Wybrany pomysł trafi do kalendarza, a wycieczka stanie się wspomnieniem.","inLanguage":"pl","isPartOf":{"@id":"https://mojerodinka.cz/#website"},"about":{"@id":"https://mojerodinka.cz/#webapp"},"primaryImageOfPage":{"@id":"https://mojerodinka.cz/og-image-pl.png#image"}},{"@type":"ImageObject","@id":"https://mojerodinka.cz/og-image-pl.png#image","url":"https://mojerodinka.cz/og-image-pl.png","contentUrl":"https://mojerodinka.cz/og-image-pl.png","width":1794,"height":877}]}</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FM9NJHK"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/pl/" aria-label="Rodinka, Strona główna"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a>
+        <button class="menu-button" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
+        <nav class="nav" id="main-navigation" aria-label="Główna nawigacja">
+          <a href="/pl/kalendarz-rodzinny/">Kalendarz</a><a href="/pl/obowiazki-domowe/">Obowiązki</a><a href="/pl/wspolna-lista-zakupow/">Zakupy</a><a href="/pl/planowanie-posilkow/">Posiłki</a><a href="/pl/rodzinne-wycieczki/" aria-current="page">Wycieczki</a><a href="/pl/rodzinne-wspomnienia/">Wspomnienia</a>
+          <a class="nav-cta" href="https://app.mojerodinka.cz" data-analytics-location="header">Otwórz aplikację <span aria-hidden="true">→</span></a>
+          <div class="nav-preferences">
+            <div class="language-switcher" role="group" aria-label="Język strony"><a href="/rodinne-vylety/" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a><span aria-hidden="true">·</span><a href="/sk/rodinne-vylety/" lang="sk" hreflang="sk" aria-label="Slovenčina">SK</a><span aria-hidden="true">·</span><a href="/en/family-trips/" lang="en" hreflang="en" aria-label="English">EN</a><span aria-hidden="true">·</span><a href="/de/familienausfluege/" lang="de" hreflang="de" aria-label="Deutsch">DE</a><span aria-hidden="true">·</span><a href="/pl/rodzinne-wycieczki/" lang="pl" hreflang="pl" aria-label="Polski" aria-current="page">PL</a></div>
+            <button class="theme-switcher" type="button" data-theme-switch data-light-label="Przełącz na tryb jasny" data-dark-label="Przełącz na tryb ciemny" aria-label="Przełącz na tryb ciemny" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <article class="topic-page">
+        <div class="topic-hero-wrap">
+          <header class="topic-hero"><nav class="breadcrumbs" aria-label="Ścieżka nawigacji"><a href="/pl/">Strona główna</a><span aria-hidden="true">/</span><span aria-current="page">Rodzinne wycieczki</span></nav><p class="section-kicker"><span class="tone-icon" data-tone="travel" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5.5 4.5 7.2v11.3L9 16.8l6 1.7 4.5-1.7V5.5L15 7.2 9 5.5Z"/><path d="M9 5.5v11.3M15 7.2v11.3"/></svg></span>WYCIECZKI I WAKACJE</p><h1>Rodzinne wycieczki od pierwszego pomysłu do wspólnego wspomnienia</h1><p class="topic-lead">Pomysł z zamkiem przyszedł na czacie, wieża widokowa siedzi w zakładkach jednego z rodziców, a zoo czeka na „jak będziemy mieli czas”. Rodinka daje pomysłom na wycieczki jedno miejsce, z którego naprawdę można wyruszyć – a dokąd, decyduje cała rodzina.</p><div class="hero-actions"><a class="button button-primary button-lg" href="https://app.mojerodinka.cz" data-analytics-location="hero">Zacznij za darmo <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-pomaha">Jak Rodinka pomaga w rodzinnych wycieczkach <span aria-hidden="true">↓</span></a></div></header>
+        </div>
+      <section class="proof-section direct-answer" aria-labelledby="direct-answer-trips">
+        <div class="proof-copy">
+          <p class="section-kicker">KRÓTKA ODPOWIEDŹ</p>
+          <h2 id="direct-answer-trips">Jak zaplanować rodzinną wycieczkę, w której każdy ma głos?</h2>
+          <p>W Rodince rodzina zbiera pomysły na wycieczki i wakacje, gdy tylko się pojawią – wystarczy wkleić link. Z kilku pomysłów powstaje plan wycieczki, każdy w rodzinie głosuje na poszczególne propozycje, a dorosły jednym krokiem zamienia wybrany pomysł w wydarzenie w kalendarzu. Po wycieczce może z niej powstać rodzinne wspomnienie.</p>
+        </div>
+        <figure class="app-mock">
+          <div aria-hidden="true"><div class="mock-card"><p class="mock-kicker">Plan wycieczki</p><p class="mock-title">Jesienny weekend</p><div class="mock-pills"><span>17–18 paź</span><span>Vysočina</span><span class="is-pinned">Przypięte do Dzisiaj</span></div><p class="mock-note"><b>Klára:</b> Bierzemy Badego?</p><div class="mock-tips"><div class="mock-tip is-selected"><div class="mock-tip-head"><div><strong>Zamek Pernštejn</strong><small>Nedvědice</small></div><span class="mock-tip-badge">Wybrane</span></div><div class="mock-votes"><span class="is-mine">👍 3</span><span>😐 1</span><span>👎 0</span></div></div><div class="mock-tip"><div class="mock-tip-head"><div><strong>Wieża widokowa Harusův kopec</strong><small>Nové Město na Moravě</small></div></div><div class="mock-votes"><span>👍 2</span><span>😐 1</span><span>👎 1</span></div></div><div class="mock-tip"><div class="mock-tip-head"><div><strong>Zoo Jihlava</strong><small>Jihlava</small></div></div><div class="mock-votes"><span>👍 1</span><span>😐 2</span><span>👎 1</span></div></div></div></div></div>
+          <figcaption class="mock-caption">Plan wycieczki: termin, okolica, pomysły i głosy całej rodziny. Wybrany pomysł staje się wydarzeniem w rodzinnym kalendarzu.</figcaption>
+        </figure>
+      </section>
+        <section class="content-section problem-section"><div class="section-copy"><p class="section-kicker">WYCIECZKI I WAKACJE</p><h2>Pomysłów jest mnóstwo. Muszą tylko dotrwać do weekendu</h2><p>Pomysły na wycieczki pojawiają się przypadkiem: link od znajomych, artykuł, wskazówka pod szkołą. Gdy w końcu przychodzi wolna sobota, nikt nie pamięta, dokąd chcieliście pojechać, i decyzja zaczyna się od zera.</p><p>Rodzinna wycieczka to też nie decyzja jednej osoby. Dzieci chcą do zoo, jedno z rodziców na zamek, a drugie musi wiedzieć, czy zmieści się to w jeden dzień. Wspólna pula pomysłów i proste głosowanie zamieniają kłótnię w samochodzie w plan ustalony wcześniej.</p></div><div class="scenario-grid"><article class="scenario-card"><h3>Pomysł z linku</h3><p>Ktoś przysyła link do ciekawego miejsca. Wklej go do Rodinki, a pomysł dostanie tytuł, podgląd i miejsce na mapie.</p></article><article class="scenario-card"><h3>Wolny weekend</h3><p>Z kilku pomysłów powstaje plan wycieczki z przybliżonym terminem, a rodzina głosuje, co jej się podoba.</p></article><article class="scenario-card"><h3>Po powrocie</h3><p>Stuknij Odwiedzone i zamień wycieczkę w rodzinne wspomnienie ze zdjęciem i datą.</p></article></div></section>
+        <section class="help-section" id="jak-pomaha"><div class="section-copy"><p class="section-kicker">Rodinka</p><h2>Jak Rodinka pomaga w rodzinnych wycieczkach</h2><p>Pomysły i plany wycieczek to jedno miejsce dla całej rodziny. Wszyscy je widzą i mogą reagować; planowanie i dodawanie do kalendarza zostaje w rękach dorosłych.</p></div><ol class="help-steps"><li><span>1</span><div><h3>Zapisuj pomysły na bieżąco</h3><p>Jednodniowy wypad albo wakacje, z linkiem, miejscem i krótką notatką. Pulę pomysłów przeglądasz jako karty albo na mapie, a gdy nikt nie może się zdecydować, Rodinka wylosuje pomysł.</p></div></li><li><span>2</span><div><h3>Stwórz plan wycieczki</h3><p>Plan ma nazwę, przybliżony termin, okolicę i wybrane pomysły. Jeden pomysł może należeć do kilku planów, a aktywny plan możesz przypiąć do ekranu Dzisiaj.</p></div></li><li><span>3</span><div><h3>Niech rodzina zagłosuje</h3><p>Każdy ocenia pomysły w planie: podoba mi się, obojętnie albo nie podoba mi się. Dorosły jednym krokiem zamienia wybrany pomysł w wydarzenie w rodzinnym kalendarzu.</p></div></li><li><span>4</span><div><h3>Zachowaj to, co przeżyliście</h3><p>Po wycieczce oznacz ją jako Odwiedzone, a Rodinka zaproponuje zapisanie jej jako rodzinnego wspomnienia – z wypełnionym już tytułem, datą i miejscem.</p></div></li></ol></section>
+        <section class="content-section answers-section"><div class="section-copy"><h2>Częste pytania o planowanie rodzinnych wycieczek</h2></div><div class="answers-list"><article class="answer"><h3>Jak wybrać wycieczkę, z której wszyscy będą zadowoleni?</h3><p>Zbierzcie z wyprzedzeniem kilka pomysłów i pozwólcie wszystkim zagłosować. Gdy decyzja nie spoczywa na jednej osobie, wycieczka częściej pasuje i dzieciom, i dorosłym – a dyskusja nie przenosi się do samochodu.</p></article><article class="answer"><h3>Gdzie trzymać pomysły na wycieczki z dziećmi?</h3><p>W jednym miejscu, które widzi cała rodzina. W Rodince wklejony link zapisuje pomysł z podglądem, więc pomysły nie giną na czacie ani w zakładkach jednego telefonu.</p></article><article class="answer"><h3>Czy Rodinka zajmuje się trasą, rezerwacjami albo transportem?</h3><p>Nie. Plan wycieczki jest celowo lekki: termin, okolica, pomysły i głosy. Nie ma harmonogramu godzina po godzinie, rezerwacji ani biletów – ale wybrany pomysł staje się zwykłym wydarzeniem w rodzinnym kalendarzu.</p></article><article class="answer"><h3>Czy dzieci też mogą głosować?</h3><p>Tak. Pomysły i plany widzi cała rodzina, a każdy członek z własnym logowaniem może głosować i reagować na pomysły w planie. Tworzenie, edycja i dodawanie do kalendarza zostają w rękach dorosłych.</p></article><article class="answer"><h3>Jak pamiętać, co spakować?</h3><p>W Rodince Pro zapisujecie listę rzeczy do spakowania jako scenariusz rodzinny, na przykład z gotowych wzorów Jednodniowa wycieczka albo Weekendowy wyjazd. Przed wyjazdem zamieniacie go w przygotowania, przypinacie do wydarzenia i dorośli odhaczają je razem; zapisana lista działa też bez połączenia. Przy każdej pozycji widać, dla kogo jest i kto ją przygotowuje.</p></article></div></section>
+        <aside class="related-section" aria-labelledby="related-title"><p class="section-kicker">CZYTAJ DALEJ</p><h2 id="related-title">Powiązane tematy</h2><ul class="related-grid"><li><a href="/pl/rodzinne-wspomnienia/"><strong>Rodzinne wspomnienia i kamienie milowe, które nie przepadną</strong><span>Kamienie milowe dzieci, skarby i rodzinne chwile na jednej osi czasu.</span><em>Dowiedz się więcej →</em></a></li><li><a href="/pl/kalendarz-rodzinny/"><strong>Wspólny kalendarz rodzinny ze wszystkimi praktycznymi szczegółami</strong><span>Szkoła, zajęcia, odwiedziny i odbiory w jednym wspólnym kalendarzu.</span><em>Dowiedz się więcej →</em></a></li><li><a href="/pl/waznosc-dokumentow/"><strong>Ważność paszportów i dowodów osobistych całej rodziny</strong><span>Paszporty, dowody osobiste i inne dokumenty z datą ważności i przypomnieniem na czas.</span><em>Dowiedz się więcej →</em></a></li></ul></aside>
+      </article>
+      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>Zapisz pierwsze miejsce, które chcielibyście odwiedzić.</h2><p>Otwórz w Rodince Pomysły na wycieczki i wklej link do miejsca, w które chętnie byś pojechał.</p><div class="cta-actions"><a class="app-cta" href="https://app.mojerodinka.cz" data-analytics-location="content">Zacznij za darmo <span aria-hidden="true">→</span></a></div><small class="form-note">Rodinka otworzy się w przeglądarce. Bez karty płatniczej i bez instalacji.</small></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="/pl/"><svg class="family-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M -7.452 0 A 7.452 12.195 0 0 1 7.452 0 L 7.452 1.22 A 6.707 10.976 0 0 1 0.745 12.195 L -0.745 12.195 A 6.707 10.976 0 0 1 -7.452 1.22 Z" transform="translate(13.708 32) rotate(-14)" fill="#e9785e"/><path d="M -8.13 0 A 8.13 18.293 0 0 1 8.13 0 L 8.13 1.829 A 7.317 16.463 0 0 1 0.813 18.293 L -0.813 18.293 A 7.317 16.463 0 0 1 -8.13 1.829 Z" transform="translate(32 32) rotate(0)" fill="#f2c85b"/><path d="M -7.452 0 A 7.452 14.227 0 0 1 7.452 0 L 7.452 1.423 A 6.707 12.805 0 0 1 0.745 14.227 L -0.745 14.227 A 6.707 12.805 0 0 1 -7.452 1.423 Z" transform="translate(50.293 32) rotate(12)" fill="#8bc6ad"/></svg><span>Rodinka</span></a><span class="serif">Żeby w domu wszystko grało.</span><p>Planer rodzinny na kalendarz, obowiązki, zakupy, wycieczki i wspomnienia – dla całej rodziny i tych, którzy jej pomagają. Po czesku, słowacku, angielsku, niemiecku i polsku.</p>
+          <div class="footer-social" role="group" aria-labelledby="footer-social-heading">
+            <h2 id="footer-social-heading">Obserwuj Rodinkę</h2>
+            <ul role="list"><li><a class="footer-social-link" href="https://www.instagram.com/mojerodinka.cz/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li><li><a class="footer-social-link" href="https://www.facebook.com/profile.php?id=61595033996266" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 22v-9h3l.5-4H14V7c0-1.1.3-2 2-2h2V1.4A26 26 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9Z" fill="currentColor" stroke="none"/></svg><span>Facebook</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li><li><a class="footer-social-link" href="https://www.youtube.com/@MojeRodinkaCz" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg><span>YouTube</span><span class="visually-hidden"> (otwiera się w nowej karcie)</span></a></li></ul>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Funkcje"><h2>Funkcje</h2><ul><li><a href="/pl/planer-rodzinny/">Planer rodzinny</a></li><li><a href="/pl/kalendarz-rodzinny/">Kalendarz rodzinny</a></li><li><a href="/pl/obowiazki-domowe/">Obowiązki domowe</a></li><li><a href="/pl/wspolna-lista-zakupow/">Wspólna lista zakupów</a></li><li><a href="/pl/planowanie-posilkow/">Planowanie posiłków</a></li><li><a href="/pl/rodzinne-wycieczki/">Rodzinne wycieczki</a></li><li><a href="/pl/rodzinne-wspomnienia/">Rodzinne wspomnienia</a></li><li><a href="/pl/waznosc-dokumentow/">Ważność dokumentów</a></li><li><a href="/pl/przygotowanie-na-dziecko/">Przygotowanie na dziecko</a></li><li><a href="/pl/dalsza-rodzina/">Dalsza rodzina i pomocnicy</a></li></ul></nav>
+        <nav class="footer-nav" aria-label="Rodinka"><h2>Rodinka</h2><ul><li><a href="/pl/aplikacja-dla-rodziny/">O aplikacji Rodinka</a></li><li><a href="https://app.mojerodinka.cz" data-analytics-location="footer">Otwórz aplikację</a></li><li><a href="/pl/#rodinka-pro">Rodinka Pro</a></li><li><a href="/pl/porownanie/">Porównanie planerów rodzinnych</a></li><li><button class="footer-link" type="button" data-cookie-settings>Ustawienia cookies</button></li></ul></nav>
+        <nav class="footer-nav" aria-label="Warunki i zasady"><h2>Warunki i zasady</h2><ul><li><a href="/pl/pricing/">Cennik Rodinki</a></li><li><a href="/pl/refund-policy/">Zasady zwrotów</a></li><li><a href="https://app.mojerodinka.cz/terms?lang=pl">Warunki korzystania</a></li><li><a href="https://app.mojerodinka.cz/privacy?lang=pl">Polityka prywatności</a></li></ul></nav>
+      </div>
+      <p class="copyright">© 2026 Rodinka</p>
+    </footer>
+    <section class="cookie-consent" data-cookie-consent hidden role="region" aria-live="polite" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description">
+      <div class="cookie-consent-copy">
+        <h2 id="cookie-consent-title">Analityka strony</h2>
+        <p id="cookie-consent-description">Korzystamy z analityki, aby zrozumieć, jak używana jest strona Rodinki, i ją ulepszać. Uruchomi się dopiero po Twojej zgodzie.</p>
+      </div>
+      <div class="cookie-consent-actions">
+        <button class="consent-button consent-allow" type="button" data-consent-choice="granted">Zezwól na analitykę</button>
+        <button class="consent-button consent-reject" type="button" data-consent-choice="denied">Odrzuć</button>
+      </div>
+    </section>
+    <script src="/script.js?v=20261112a" defer></script>
+  </body>
+</html>

@@ -26,6 +26,8 @@ EXPECTED_COPY = {
     "cs": ("Povolit analytiku", "Odmítnout", "Nastavení cookies"),
     "sk": ("Povoliť analytiku", "Odmietnuť", "Nastavenie cookies"),
     "en": ("Allow analytics", "Reject", "Cookie settings"),
+    "de": ("Analyse erlauben", "Ablehnen", "Cookie-Einstellungen"),
+    "pl": ("Zezwól na analitykę", "Odrzuć", "Ustawienia cookies"),
 }
 
 
