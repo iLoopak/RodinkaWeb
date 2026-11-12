@@ -29,7 +29,7 @@ LOCALE = {
     "language_label": "Język strony",
     "theme_light_label": "Przełącz na tryb jasny",
     "theme_dark_label": "Przełącz na tryb ciemny",
-    "footer_text": "Planer rodzinny na kalendarz, obowiązki, zakupy, wycieczki i wspomnienia – dla całej rodziny i tych, którzy jej pomagają. Po czesku, słowacku, angielsku, niemiecku i polsku.",
+    "footer_text": "Planer rodzinny z kalendarzem, obowiązkami, zakupami, wycieczkami i wspomnieniami – dla całej rodziny i tych, którzy jej pomagają. Po czesku, słowacku, angielsku, niemiecku i polsku.",
     "cta_note": "Rodinka otworzy się w przeglądarce. Bez karty płatniczej i bez instalacji.",
     "social_heading": "Obserwuj Rodinkę",
     "new_tab": "otwiera się w nowej karcie",
@@ -75,7 +75,7 @@ LANGUAGE_SWITCH = ("PL", "Polski")
 DIRECT_ANSWERS = {
     "home": (
         "Czym jest Rodinka i jak pomaga zorganizować życie rodzinne?",
-        "Rodinka to planer rodzinny, w którym dom ma wspólny kalendarz, obowiązki, listę zakupów i plan posiłków – a do tego wycieczki, rodzinne wspomnienia i pilnowanie ważności dokumentów. Dorośli pracują na tym samym aktualnym przeglądzie, a dzieci mogą mieć własne logowanie ze swoimi obowiązkami. Dołączyć może też babcia czy niania: zobaczą tylko te terminy, na które wybierzecie je jako opiekunów.",
+        "Rodinka to planer rodzinny, w którym dom ma wspólny kalendarz, obowiązki, listę zakupów i plan posiłków – a do tego wycieczki, rodzinne wspomnienia i pilnowanie ważności dokumentów. Dorośli korzystają z tego samego aktualnego widoku, a dzieci mogą mieć własne logowanie ze swoimi obowiązkami. Dołączyć może też babcia czy niania: zobaczą tylko te terminy, przy których będą pomagać jako opiekunki.",
     ),
     "planner": (
         "Jak działa planer rodzinny?",
@@ -91,11 +91,11 @@ DIRECT_ANSWERS = {
     ),
     "chores": (
         "Jak podzielić obowiązki domowe między członków rodziny?",
-        "Zacznij od konkretnych zadań i każdemu przypisz osobę oraz realny termin. Rodinka utrzymuje tę umowę na widoku całego domu, więc lista nie żyje tylko w głowie jednego rodzica. Dzieci mogą przejmować proste obowiązki dopasowane do wieku.",
+        "Zacznij od konkretnych zadań i każdemu przypisz osobę oraz realny termin. Rodinka pokazuje te ustalenia wszystkim domownikom, więc lista nie żyje tylko w głowie jednego rodzica. Dzieci mogą przejmować proste obowiązki dopasowane do wieku.",
     ),
     "meals": (
         "Jak zaplanować posiłki rodziny na cały tydzień?",
-        "Zacznij od rodzinnego kalendarza i dopasuj posiłki do czasu, jaki masz w każdy dzień. Rodinka trzyma tygodniowy plan posiłków obok reszty planu rodziny, a brakujące składniki trafiają na wspólną listę zakupów. Jeden luźny wieczór zostawia miejsce na resztki albo niespodziewaną zmianę.",
+        "Zacznij od rodzinnego kalendarza i dopasuj posiłki do czasu, jaki masz każdego dnia. Rodinka trzyma tygodniowy plan posiłków obok reszty planu rodziny, a brakujące składniki trafiają na wspólną listę zakupów. Jeden luźny wieczór zostawia miejsce na resztki albo niespodziewaną zmianę.",
     ),
     "app": (
         "Jaka aplikacja pomaga zorganizować życie rodzinne?",
@@ -111,7 +111,7 @@ DIRECT_ANSWERS = {
     ),
     "baby": (
         "Jak partnerzy mogą razem przygotować się na dziecko?",
-        "Rodinka łączy lekką drogę tydzień po tygodniu, praktyczne przygotowania i wybór imienia w jednej wspólnej przestrzeni rodziny. Oboje rodzice widzą, co jest już gotowe, co chcą jeszcze załatwić i jakie imiona rozważają. To nie jest medyczny tracker ciąży; to pomoc w tym, by rodzina wspólnie zorganizowała się przed przyjściem dziecka na świat.",
+        "Rodinka łączy prosty przewodnik tydzień po tygodniu, praktyczne przygotowania i wybór imienia w jednej wspólnej przestrzeni rodziny. Oboje rodzice widzą, co jest już gotowe, co chcą jeszcze załatwić i jakie imiona rozważają. To nie jest medyczny tracker ciąży; to pomoc w tym, by rodzina wspólnie zorganizowała się przed przyjściem dziecka na świat.",
     ),
     "circle": (
         "Jak dziadkowie lub niania mogą dołączyć do planu rodziny?",
@@ -142,7 +142,7 @@ PRODUCT_PROOFS = {
     ),
     "chores": (
         "Ekran Zadania w Rodince z szybkimi zadaniami i obowiązkami przypisanymi dzieciom, w tym powtarzaniem i nagrodą",
-        "Zadanie ma osobę, powtarzanie i w razie potrzeby nagrodę. Dziecko je odhacza, rodzic potwierdza wykonanie, a kwota zostaje dopisana.",
+        "Zadanie ma przypisaną osobę, opcję powtarzania i ewentualną nagrodę. Dziecko je odhacza, rodzic potwierdza wykonanie, a kwota zostaje dopisana.",
     ),
     "app": (
         "Ekran Dzisiaj w Rodince ze wspólnym programem całej rodziny, zajęciami i obowiązkami w jednym miejscu",
@@ -154,7 +154,7 @@ PRODUCT_PROOFS = {
     ),
     "baby": (
         "Dwa telefony z funkcją Dziecko w drodze w Rodince, przeglądem przygotowań i wspólnym wyborem imienia",
-        "Rodinka łączy lekką drogę tydzień po tygodniu, praktyczne przygotowania i wspólny wybór imienia.",
+        "Rodinka łączy prosty przewodnik tydzień po tygodniu, praktyczne przygotowania i wspólny wybór imienia.",
     ),
 }
 
@@ -170,7 +170,7 @@ HOME_MEMORY_STORY = {
 HOME_BABY_STORY = {
     "kicker": "NOWY ROZDZIAŁ WASZEJ RODZINY",
     "title": "Dziecko w drodze? Przygotujcie się razem.",
-    "text": "Od lekkiej drogi tydzień po tygodniu, przez praktyczne przygotowania, po imiona, które podobają się wam obojgu – Rodinka pomaga rodzicom mieć kolejny rozdział w jednym wspólnym miejscu.",
+    "text": "Od prostego przewodnika tydzień po tygodniu, przez praktyczne przygotowania, po imiona, które podobają się wam obojgu – Rodinka pomaga rodzicom zorganizować przygotowania do kolejnego rozdziału w jednym miejscu.",
     "link": "Przygotowanie na dziecko",
     "alt": "Dwa telefony z drogą do narodzin dziecka w Rodince, praktycznymi przygotowaniami i wspólnym wyborem imienia",
     "caption": "Funkcja Dziecko w drodze daje dorosłym jeden wspólny przegląd rodzinnych przygotowań przed przyjściem dziecka na świat.",
@@ -184,7 +184,7 @@ HOME_PHONE = {
     "program": "Dzisiejszy program",
     "rows": (
         ("7:45", "Żłobek", "Tobiáš · opiekun Martin"),
-        ("15:00", "Pływanie", "Ema · opiekun Klára"),
+        ("15:00", "Pływanie", "Ema · opiekunka Klára"),
         ("18:30", "Kolacja: risotto", "Gotuje Martin"),
     ),
     "dinner": "kolacja",
@@ -202,7 +202,7 @@ HOME_FOCUS = {
     "lead": "Rodinka pyta o to zaraz po założeniu rodziny. Siedem obszarów, jeden wspólny dom – zacznij od tego, który u was powoduje najwięcej zamieszania.",
     "cards": (
         ("calendar", "calendar", "Czas rodziny i kalendarz", "Jeden kalendarz dla całej rodziny w widoku miesiąca, tygodnia i listy. Przy każdym wpisie widać, kogo dotyczy i kto się nim zajmuje. Urodziny i święta pojawiają się same.", ("Powtarzanie", "Opiekunowie", "Ważne dni"), (("calendar", "Kalendarz rodzinny"),)),
-        ("tasks", "chores", "Dom i obowiązki", "Zadania z osobą i terminem, jednorazowe lub powtarzane. Dziecko odhacza, dorosły potwierdza, a nagroda albo kieszonkowe zostaje dopisane.", ("Kieszonkowe", "Potwierdzanie", "Dyktowanie"), (("chores", "Obowiązki domowe"),)),
+        ("tasks", "chores", "Dom i obowiązki", "Zadania z osobą i terminem, jednorazowe lub powtarzane. Dziecko odhacza, dorosły potwierdza, a kwota nagrody lub kieszonkowego zostaje dopisana.", ("Kieszonkowe", "Potwierdzanie", "Dyktowanie"), (("chores", "Obowiązki domowe"),)),
         ("family", "shopping", "Zakupy", "Jedna lista, którą wszyscy uzupełniają, także głosem. W sklepie działa bez zasięgu, a składniki z planu posiłków trafiają na nią jednym krokiem.", ("Offline", "Kategorie", "Plan posiłków"), (("shopping", "Lista zakupów"), ("meals", "Planowanie posiłków"))),
         ("activities", "school", "Szkoła i zajęcia", "Zajęcia dodajesz raz, z miejscem i płatnością. Gdy w tym tygodniu wiezie ktoś inny, zmieniasz tylko ten jeden termin. Rodinka ostrzeże, gdy jedna osoba ma dwa zobowiązania naraz.", ("Płatności", "Rodzinne miejsca", "Ostrzeżenia o kolizjach"), (("planner", "Planer rodzinny"),)),
         ("travel", "trips", "Wycieczki i wakacje", "Pomysły na miejsca, które chcecie odwiedzić, zapisujesz, gdy tylko się pojawią – wystarczy wkleić link. Powstaje z nich plan wycieczki, rodzina głosuje, a wybrany pomysł trafia do kalendarza.", ("Głosowanie", "Mapa pomysłów", "Plany wycieczek"), (("trips", "Rodzinne wycieczki"),)),
@@ -243,7 +243,7 @@ HOME_FAMILY_LAYER = {
 TRIP_MOCK = {
     "kicker": "Plan wycieczki",
     "title": "Jesienny weekend",
-    "pills": ("17–18 paź", "Vysočina", "Przypięte do Dzisiaj"),
+    "pills": ("17–18 paź.", "Vysočina", "Przypięte do Dzisiaj"),
     "note": "Bierzemy Badego?",
     "tips": (
         ("Zamek Pernštejn", "Nedvědice", (3, 1, 0)),
@@ -282,27 +282,27 @@ HOME_CIRCLE = {
 
 INVITE_MOCK = {
     "kicker": "Zaproszenie do opieki",
-    "greeting": "Cześć Jana",
+    "greeting": "Cześć, Jano!",
     "invited_by": "Klára prosi Cię o opiekę.",
     "title": "Pływanie",
     "rows": (
         ("Kiedy", "Wtorek, 6 października · 15:00"),
         ("Gdzie", "Basen Lužánky, Brno"),
-        ("Nad kim będziesz się opiekować", "Ema"),
+        ("Kim będziesz się opiekować", "Ema"),
         ("Wskazówki", "Strój kąpielowy i ręcznik są w niebieskim plecaku."),
     ),
     "confirm": "Tak, przyjdę",
     "decline": "Nie mogę",
     "privacy": "Tę stronę widzi tylko osoba mająca link. Konto w Rodince nie jest potrzebne.",
     "echo_label": "W kalendarzu Kláry",
-    "echo": ("15:00", "Pływanie", "Ema · opiekun Jana", "potwierdzono"),
+    "echo": ("15:00", "Pływanie", "Ema · opiekunka Jana", "potwierdzono"),
     "caption": "Babcia otwiera link w telefonie i odpowiada jednym stuknięciem. Rodzice od razu widzą, że termin jest potwierdzony.",
 }
 
 HOME_TRUST = {
     "kicker": "PRYWATNOŚĆ I NIEZAWODNOŚĆ",
     "title": "Sprawy rodzinne zostają w rodzinie",
-    "lead": "Rodinka powstała dla prawdziwych domów: z dziećmi, słabym zasięgiem i szczegółami, które nie należą do nikogo innego.",
+    "lead": "Rodinka powstała dla prawdziwych domów: z dziećmi, słabym zasięgiem i szczegółami, które są ich prywatną sprawą.",
     "items": (
         ("lock", "Każda rodzina ma własną zamkniętą przestrzeń", "Dane każdej rodziny są oddzielone bezpośrednio w bazie danych. Jeśli należysz do kilku rodzin, ich informacje nigdy się nie mieszają, a pomocnik widzi tylko swoje terminy."),
         ("shield", "Dzieci widzą tylko to, co do nich należy", "Konto dziecka nie widzi dokumentów ani administracji rodziny – ani w interfejsie, ani w bazie danych."),
@@ -315,7 +315,7 @@ HOME_TRUST = {
 
 HOME_PRO = {
     "title": "Jeszcze trochę więcej dla waszej Rodinki",
-    "text": "Rodinka świetnie działa za darmo. Rodinka Pro dodaje pomocników, którzy zdejmują z was pracę planowania: Rodzinny tydzień, przygotowania do wycieczek i wydarzeń wielokrotnego użytku, proponowane zakupy i plany posiłków na podstawie danych waszej rodziny oraz Rodzinny rocznik. Do tego więcej miejsca na zdjęcia, Chwila dnia i własny wygląd.",
+    "text": "Rodinka świetnie działa za darmo. Rodinka Pro dodaje narzędzia, które ułatwiają wam planowanie: Rodzinny tydzień, przygotowania do wycieczek i wydarzeń, z których można korzystać wielokrotnie, proponowane zakupy i plany posiłków na podstawie danych waszej rodziny oraz Rodzinny rocznik. Do tego więcej miejsca na zdjęcia, Chwila dnia i własny wygląd.",
     "benefits": (
         "Rodzinny tydzień: wszystko, co jeszcze trzeba załatwić, w jednym miejscu",
         "Scenariusze rodzinne i przygotowania do wycieczek, wyjazdów i uroczystości",
@@ -344,7 +344,7 @@ HOME = {
     "directory_kicker": "WSZYSTKIE TEMATY",
     "directory_title": "Przewodnik po tym, czym zajmuje się wasz dom",
     "directory_lead": "Każda strona omawia jeden obszar Rodinki: jak działa, komu pomaga i o co rodziny pytają najczęściej.",
-    "quote": "Rodinka nie jest o idealnie zorganizowanym życiu. Chodzi o to, żeby organizacja nie spoczywała na jednej osobie.",
+    "quote": "W Rodince nie chodzi o idealnie zorganizowane życie. Chodzi o to, żeby organizacja nie spoczywała na jednej osobie.",
     "quote_by": "Stworzona dla prawdziwych domów",
     "cta_kicker": "MOŻESZ ZACZĄĆ OD RAZU",
     "cta_title": "Dajcie rodzinnemu chaosowi wspólny dom.",
@@ -370,7 +370,7 @@ TOPICS = {
         "lead": "Zajęcia, odbiory, zakupy, kolacje i obowiązki łatwo rozpraszają się po kalendarzach, czatach i karteczkach na lodówce. Wspólny planer rodzinny daje wszystkim jedno pewne miejsce, do którego można zajrzeć.",
         "problem_title": "Organizacja życia rodzinnego nie powinna być niewidzialną pracą jednej osoby",
         "problem": (
-            "W wielu domach jeden rodzic trzyma w głowie terminarz i listę spraw do załatwienia. Reszta dopytuje, a odpowiedź znów szuka się w wiadomościach. Rzadko brakuje dobrej woli; informacje po prostu nie mają wspólnego domu.",
+            "W wielu domach jeden rodzic trzyma w głowie terminarz i listę spraw do załatwienia. Reszta dopytuje, a odpowiedzi znów trzeba szukać w wiadomościach. Rzadko brakuje dobrej woli; informacje po prostu nie mają wspólnego domu.",
             "Dobry planer ma zmniejszać administrację, a nie jej przysparzać. W kilka sekund powinien odpowiedzieć, kto dziś odbiera dzieci, kiedy zaczyna się trening, czego brakuje w domu i jakie kolacje są zaplanowane na ten tydzień.",
         ),
         "scenarios": (
@@ -382,7 +382,7 @@ TOPICS = {
         "help_intro": "Zacznij od jednego obszaru, a kolejne dodawaj dopiero wtedy, gdy staną się przydatne. Wszystko pozostaje połączone w tej samej przestrzeni rodziny.",
         "steps": (
             ("Dzielcie ten sam terminarz", "Kalendarz rodzinny łączy wspólne i indywidualne wydarzenia i pokazuje, kto zajmuje się praktycznymi szczegółami."),
-            ("Zamieńcie luźne zamiary w jasne zadania", "Daj zadaniu osobę i termin, żeby „trzeba by to zrobić” stało się zrozumiałą umową."),
+            ("Zamieńcie luźne zamiary w jasne zadania", "Przypisz zadaniu osobę i termin, żeby „trzeba by to zrobić” zamieniło się w jasne ustalenia."),
             ("Domowe podstawy pod ręką", "Lista zakupów i plan posiłków leżą obok terminarza – na sprawy, którymi rodzina zajmuje się co tydzień."),
         ),
         "answers_title": "Częste pytania o planery rodzinne",
@@ -408,7 +408,7 @@ TOPICS = {
         "lead": "Kiedy jest szkolny koncert, kto wiezie na basen i czy sobotnia wizyta jest potwierdzona? Kalendarz rodzinny trzyma razem terminy i ustalenia, żeby każdy mógł sam sprawdzić.",
         "problem_title": "Data i godzina to często tylko połowa planu",
         "problem": (
-            "Rodzinny terminarz to nie tylko lista spotkań. Zajęcia dzieci potrzebują też miejsca, właściwego dziecka i jasno określonego dorosłego, który je zawiezie. Jeśli połowa tych informacji zostaje na czacie, kalendarz nie spełni swojej roli.",
+            "Rodzinny terminarz to nie tylko lista spotkań. Przy zajęciach dzieci trzeba też podać miejsce, wskazać, które dziecko w nich uczestniczy, i wyznaczyć dorosłego, który je zawiezie. Jeśli połowa tych informacji zostaje na czacie, kalendarz nie spełni swojej roli.",
             "Wspólny widok musi działać przy szybkim porannym sprawdzeniu i przy planowaniu tygodnia. Regularne zajęcia dodaje się raz, wyjątki widzą wszyscy i nikt nie prowadzi osobnej wersji rodzinnego planu.",
         ),
         "scenarios": (
@@ -420,8 +420,8 @@ TOPICS = {
         "help_intro": "Wydarzenia są w tej samej przestrzeni rodziny, więc każdy zaproszony dorosły widzi aktualny plan, zamiast czekać na zrzut ekranu czy przekazaną wiadomość.",
         "steps": (
             ("Dodaj całe wydarzenie", "Zapisz godzinę, miejsce i członka rodziny, którego dotyczy. Regularne zajęcia ustaw jako powtarzające się, żeby nie wpisywać ich co tydzień."),
-            ("Oddziel, kogo dotyczy i kto się zajmuje", "Wydarzenie pokazuje uczestnika – dziecko, które idzie na basen – osobno od dorosłego, który je zawozi. To dwie różne informacje i Rodinka ich nie łączy w jedną."),
-            ("Przejrzyj rodzinny tydzień", "Przełączaj między miesiącem, tygodniem i listą pogrupowaną według pilności. Gdy którykolwiek dorosły coś planuje, wszyscy widzą te same rodzinne zobowiązania."),
+            ("Wskaż osobno uczestnika i opiekuna", "Wydarzenie pokazuje uczestnika – dziecko, które idzie na basen – osobno od dorosłego, który je zawozi. To dwie różne informacje i Rodinka ich nie łączy w jedną."),
+            ("Przejrzyj rodzinny tydzień", "Przełączaj się między widokiem miesiąca, tygodnia i listą pogrupowaną według pilności. Gdy którykolwiek dorosły coś planuje, wszyscy widzą te same rodzinne zobowiązania."),
             ("Ważne dni pojawią się same", "Urodziny w rodzinie, rocznice i wasze własne ważne dni pojawiają się w kalendarzu jako spokojna warstwa, która nie blokuje czasu, a Rodinka może przypomnieć o tych istotnych z wyprzedzeniem."),
         ),
         "answers_title": "Pytania rodzin o wspólne kalendarze",
@@ -449,7 +449,7 @@ TOPICS = {
         "problem_title": "Pomoc w rodzinie wciąż ustala się przez telefon",
         "problem": (
             "Z partnerem dzielisz kalendarz, ale babcia dowiaduje się o zmianie przez telefon, a niania z wiadomości, która ginie w natłoku. Gdy rodzic wychodzi z pracy, często nie wie, czy odbiór naprawdę jest aktualny.",
-            "Danie dziadkom całego rodzinnego kalendarza też nie jest rozwiązaniem. Nie chcą przewijać zakupów, obowiązków i wiadomości, a wy nie chcecie dzielić się wszystkim. Potrzebują widzieć swoje terminy i dać znać, czy dadzą radę.",
+            "Danie dziadkom całego rodzinnego kalendarza też nie jest rozwiązaniem. Nie chcą przewijać zakupów, obowiązków i wiadomości, a wy nie chcecie dzielić się wszystkim. Muszą widzieć swoje terminy i móc dać znać, czy dadzą radę.",
         ),
         "scenarios": (
             ("Środy u babci", "Babcia dostaje link do odbioru, potwierdza go, a Ty widzisz jej odpowiedź prosto przy terminie."),
@@ -467,7 +467,7 @@ TOPICS = {
         "answers_title": "Pytania o dalszą rodzinę i pomocników",
         "answers": (
             ("Czy babcia potrzebuje konta w Rodince?", "Nie. Do potwierdzenia jednego terminu wystarczy link, który otworzy się w jej telefonie bez logowania. Jeśli pomaga regularnie, może założyć własne konto i widzieć wszystkie swoje terminy razem."),
-            ("Czy ktoś spoza rodziny może pomagać przy dzieciach?", "Tak. Zapisz nianię, sąsiadkę czy rodzica kolegi wśród waszych osób i wybierz go jako opiekuna. Nie staje się członkiem rodziny: dostaje albo link, albo dostęp pomocnika do swoich terminów."),
+            ("Czy ktoś spoza rodziny może pomagać przy dzieciach?", "Tak. Dodaj do waszych kontaktów nianię, sąsiadkę lub rodzica kolegi i wyznacz tę osobę do opieki nad dziećmi. Nie staje się członkiem rodziny: dostaje albo link, albo dostęp pomocnika do swoich terminów."),
             ("Co widzi pomocnik?", "Tylko terminy, na które wybierzecie go jako opiekuna: tytuł, datę i godzinę, miejsce, imiona dzieci, którymi się opiekuje, i to, czy termin jest potwierdzony. Nigdy nie widzi rodzinnego kalendarza, obowiązków, zakupów, wiadomości, notatek ani dokumentów. Gdy odbierzesz mu dostęp, terminy od razu znikną."),
             ("Kto może zobaczyć link z zaproszeniem do opieki?", "Każdy, komu go wyślesz, więc wysyłaj go tylko osobie, dla której jest przeznaczony. Strona pokazuje tytuł, datę i godzinę, miejsce z adresem, wasze imiona i Twoje wskazówki; imiona dzieci tylko wtedy, gdy na to pozwolisz. Link jest ważny najwyżej do tygodnia po terminie i w każdej chwili możesz go anulować."),
             ("Czy mogę należeć do więcej niż jednej rodziny?", "Tak. Jedno konto może należeć do kilku rodzin. W jednej możesz być rodzicem, w innej dzieckiem albo kolejnym dorosłym. Informacje rodzin nigdy się nie mieszają, a przełączasz się między nimi w nagłówku. Na razie powiadomienia na jednym urządzeniu przychodzą z rodziny, dla której je włączono."),
@@ -486,22 +486,22 @@ TOPICS = {
         "og_alt": "Obowiązki rodzinne i domowe zadania przydzielone w Rodince",
         "eyebrow": "KTO CZYM ZAJMUJE SIĘ W DOMU",
         "h1": "Obowiązki rodzinne, które nie żyją w głowie jednego rodzica",
-        "lead": "Umówić dentystę, oddać książki do biblioteki, wynieść śmieci do segregacji czy spakować się na wycieczkę. Gdy zadanie ma osobę i termin, dom nie musi działać na ciągłych przypomnieniach.",
+        "lead": "Umówić wizytę u dentysty, oddać książki do biblioteki, wynieść śmieci do segregacji czy spakować się na wycieczkę. Gdy zadanie ma osobę i termin, dom nie musi działać na ciągłych przypomnieniach.",
         "problem_title": "„Trzeba to zrobić” to nie przydzielone zadanie",
         "problem": (
             "Prace domowe często widać dopiero wtedy, gdy nie są zrobione. Pracę organizacyjną jeszcze łatwiej przeoczyć: termin zapisów na obóz, prezent urodzinowy czy telefon do serwisu. Jeśli jedna osoba trzyma wszystkie te szczegóły, dźwiga też większość obciążenia psychicznego.",
-            "Lista rodzinnych zadań nie jest oceną wyników domu. To prosta umowa: co trzeba zrobić, kto to wziął i do kiedy jest ważne. Gdy zadanie jest zrobione, nie trzeba kolejnej wiadomości z pytaniem.",
+            "Lista rodzinnych zadań nie służy do oceniania domowników. To proste ustalenia: co trzeba zrobić, kto się tym zajmie i do kiedy. Gdy zadanie jest zrobione, nie trzeba kolejnej wiadomości z pytaniem.",
         ),
         "scenarios": (
             ("Drobne codzienne obowiązki", "Segregacja śmieci, zmywanie czy pakowanie plecaka – każde z krótkim, jasnym opisem, kiedy jest zrobione."),
-            ("Niewidzialna praca organizacyjna", "Telefon do lekarza, opłata za zajęcia czy kupno prezentu dostaje osobę i termin."),
+            ("Niewidzialna praca organizacyjna", "Każdej sprawie, takiej jak telefon do lekarza, opłata za zajęcia czy kupno prezentu, przypisujecie osobę i termin."),
             ("Obowiązki dla dzieci", "Dziecko może mieć własne logowanie, w którym widzi tylko swoje zadania. Zadanie może mieć nagrodę albo kieszonkowe, a dorosły potwierdza wykonanie."),
         ),
         "help_title": "Jak podzielić obowiązki domowe w rodzinie",
         "help_intro": "Rodinka zamienia luźne domowe zamiary w małe, konkretne kroki, które wszyscy widzą we wspólnym przeglądzie.",
         "steps": (
             ("Nazwij efekt", "Zamiast „ogarnąć szkołę” napisz „wysłać formularz na wycieczkę”. Konkretne zadanie jasno pokazuje, co znaczy „zrobione”."),
-            ("Wybierz osobę i datę", "Nie zostawiajcie każdego zadania wspólnym, dopóki nie zrobi go najbardziej uważna osoba. Ustalcie odpowiedzialność, póki potrzeba jest jasna."),
+            ("Wybierz osobę i datę", "Nie zostawiajcie każdego zadania bez przypisanej osoby, czekając, aż zrobi je ktoś najbardziej uważny. Ustalcie odpowiedzialność, póki potrzeba jest jasna."),
             ("Powtarzalne niech powtarza się samo", "Wynoszenie śmieci w każdy wtorek ustawiasz raz. Jednorazowa notatka bez terminu i stały cotygodniowy obowiązek to tu ten sam rodzaj zadania."),
             ("Zrobione może wyjść z głowy", "Wszyscy widzą, że zadanie jest wykonane, a tam, gdzie jest nagroda, dorosły potwierdza i kwota zostaje dopisana."),
         ),
@@ -509,7 +509,7 @@ TOPICS = {
         "answers": (
             ("Jak sprawiedliwie podzielić prace domowe?", "Wliczcie planowanie, telefony i pilnowanie terminów tak samo jak widoczne sprzątanie. Potem bierzcie pod uwagę czas i wysiłek psychiczny, nie tylko liczbę punktów na osobę."),
             ("Jak dawać obowiązki dzieciom?", "Wybierzcie coś odpowiedniego do wieku, konkretnego i wykonalnego do jasno określonej pory. Chodzi o udział i nawyk pomagania, nie o idealny wynik."),
-            ("Jak sobie przypominać bez kłótni?", "Ustalcie osobę odpowiedzialną i umieśćcie zadanie we wspólnym miejscu. Przypomnienie odnosi się wtedy do tej samej widocznej umowy, zamiast tego, że jedna osoba zarządza drugą."),
+            ("Jak sobie przypominać bez kłótni?", "Ustalcie osobę odpowiedzialną i umieśćcie zadanie we wspólnym miejscu. Przypomnienie odnosi się wtedy do tych samych widocznych ustaleń, zamiast stawiać jedną osobę w roli nadzorcy drugiej."),
             ("Jak działają nagrody i kieszonkowe?", "Zadanie może mieć nagrodę i wymagać zatwierdzenia przez dorosłego. Dziecko je odhacza, rodzic potwierdza, a kwota zostaje dopisana. Regularne kieszonkowe może zależeć od wykonania uzgodnionych obowiązków."),
             ("Czy szybkie zadanie można podyktować?", "Na obsługiwanych urządzeniach tak – prosto z ekranu Dzisiaj. Mówisz, co trzeba zrobić, Rodinka zamienia to w szkice zadań i pokazuje je do edycji. Nic nie zostanie utworzone, dopóki nie potwierdzisz."),
         ),
@@ -539,7 +539,7 @@ TOPICS = {
         "help_title": "Jak prowadzić wspólną listę zakupów w Rodince",
         "help_intro": "Lista należy do przestrzeni waszej rodziny, więc zaproszeni domownicy mogą ją otwierać i uzupełniać na telefonie i komputerze.",
         "steps": (
-            ("Dodawaj pozycje pisząc albo głosem", "Zapisz pozycję, gdy tylko ją zauważysz. Na obsługiwanych urządzeniach nie musisz pisać: powiedz, co się skończyło, a Rodinka zamieni to w pozycje, które przejrzysz, poprawisz i potwierdzisz, zanim cokolwiek zostanie dodane."),
+            ("Dodawaj pozycje tekstowo lub głosowo", "Zapisz pozycję, gdy tylko ją zauważysz. Na obsługiwanych urządzeniach nie musisz pisać: powiedz, co się skończyło, a Rodinka zamieni to w pozycje, które przejrzysz, poprawisz i potwierdzisz, zanim cokolwiek zostanie dodane."),
             ("Kupujcie z tej samej wersji, z zasięgiem lub bez", "Odhaczaj w sklepie. Pozostali widzą, co już jest, i nie dopisują ani nie kupują tego drugi raz, a lista działa offline, dopóki nie wróci połączenie."),
             ("Połącz zakupy z posiłkami", "Gdy wybieracie kolacje na tydzień, dopiszcie potrzebne składniki, żeby plan posiłków był wykonalny."),
         ),
@@ -547,7 +547,7 @@ TOPICS = {
         "answers": (
             ("Jak udostępnić listę zakupów partnerowi?", "Korzystajcie z jednej listy we wspólnej przestrzeni rodziny. Oboje możecie dopisywać i odhaczać pozycje, więc nie trzeba wysyłać nowej wersji przed każdymi zakupami."),
             ("Czy aplikacja jest lepsza niż papierowa lista?", "Kartka przy lodówce jest szybka. Wspólna cyfrowa lista jest dostępna także poza domem i może ją uzupełniać kilka osób, co pomaga, gdy zakupy robią różni członkowie rodziny."),
-            ("Czy mogę podyktować listę zakupów?", "Na obsługiwanych urządzeniach tak. Mówisz, czego brakuje, Rodinka zamienia to w osobne pozycje i pokazuje je do potwierdzenia – dopiero wtedy zostaną dodane. To, co rozpoznała źle, możesz najpierw poprawić lub usunąć, a nagranie ani transkrypcja nie są przechowywane."),
+            ("Czy mogę podyktować listę zakupów?", "Na obsługiwanych urządzeniach tak. Mówisz, czego brakuje, Rodinka zamienia to w osobne pozycje i pokazuje je do potwierdzenia – dopiero wtedy zostaną dodane. To, co rozpoznała źle, możesz najpierw poprawić lub usunąć, przy czym ani nagranie, ani transkrypcja nie są przechowywane."),
             ("Czy lista działa bez zasięgu?", "Tak. Lista zakupów jest zbudowana do pracy offline: w sklepie możesz dalej dodawać i odhaczać pozycje, a zmiany zsynchronizują się, gdy telefon znów połączy się z siecią."),
             ("Czy Rodinka może podpowiedzieć, co kupić?", "Z Rodinką Pro tak. Podpowiedź pozycji sprawdza, co kupiliście co najmniej dwa razy w ostatnich 30 dniach, i proponuje rzeczy, które mogą być znów potrzebne według waszego rytmu. Pomija to, co już jest na liście albo zostało kupione przed chwilą. Nic nie zostanie dodane, dopóki nie potwierdzisz, a ilości możesz najpierw zmienić."),
         ),
@@ -563,16 +563,16 @@ TOPICS = {
         "og_alt": "Tygodniowe planowanie rodzinnych posiłków w organizerze Rodinka",
         "eyebrow": "MNIEJ DECYZJI O KOLACJI NA OSTATNIĄ CHWILĘ",
         "h1": "Tygodniowe planowanie posiłków dopasowane do prawdziwego życia rodziny",
-        "lead": "Niektóre dni dają czas na gotowanie, inne kończą się późno po zajęciach dzieci. Tygodniowy plan posiłków nie musi być idealny – wystarczy, że z wyprzedzeniem rozstrzygnie kilka wieczorów i ułatwi kolejne zakupy.",
+        "lead": "Niektóre dni dają czas na gotowanie, inne kończą się późno po zajęciach dzieci. Tygodniowy plan posiłków nie musi być idealny – wystarczy, że z wyprzedzeniem ustalicie kilka kolacji i ułatwicie sobie kolejne zakupy.",
         "problem_title": "Najtrudniejsze bywa decydowanie, nie gotowanie",
         "problem": (
             "„Co na kolację?” pada zwykle wtedy, gdy wszyscy są głodni i nie mają czasu. Bez luźnego planu rodzina robi zakupy w pośpiechu, przydatnych składników brakuje, a inne jedzenie się marnuje.",
-            "Rodzinny plan posiłków powinien podążać za kształtem tygodnia. Zabiegane popołudnia wymagają czegoś szybkiego, spokojniejszy dzień zmieści dłuższy przepis. Gdy plany się zmieniają, wystarczy poprawić przegląd – to nie jest porażka systemu.",
+            "Rodzinny plan posiłków powinien pasować do rytmu tygodnia. W zabiegane popołudnia przyda się coś szybkiego, a w spokojniejszy dzień można wybrać danie wymagające więcej czasu. Gdy plany się zmieniają, wystarczy poprawić plan posiłków – to nie jest porażka systemu.",
         ),
         "scenarios": (
             ("Dzień pełen zajęć", "Na wieczór, kiedy wszyscy wracają późno, zaplanowana jest szybka kolacja."),
             ("Wspólne gotowanie w weekend", "Rodzina widzi, gdzie jest miejsce na ulubione danie albo gotowanie z dziećmi."),
-            ("Lista zakupów z powodem", "Zaplanowane kolacje zamieniają się w konkretne składniki obok zwykłych domowych zakupów."),
+            ("Lista zakupów wynikająca z planu posiłków", "Zaplanowane kolacje zamieniają się w konkretne składniki obok zwykłych domowych zakupów."),
         ),
         "help_title": "Jak zaplanować tydzień posiłków w Rodince",
         "help_intro": "To nie jest szczegółowy program dietetyczny. Rodinka łączy prosty plan kolacji z zakupami, których wymaga.",
@@ -585,7 +585,7 @@ TOPICS = {
         "answers_title": "Częste pytania o planowanie posiłków w rodzinie",
         "answers": (
             ("Jak zaplanować posiłki na cały tydzień?", "Zacznij od rodzinnego terminarza i wybierz główne posiłki według czasu na ich przygotowanie. Zostaw jeden wieczór na resztki albo niespodziewaną zmianę."),
-            ("Jak cała rodzina może pomóc w wyborze posiłków?", "Rodinka może otworzyć głosowanie nad posiłkiem: wypisujesz propozycje, a każdy członek rodziny, także dzieci, oddaje głos. Decyzja nie spoczywa na jednej osobie, a plan częściej się udaje."),
+            ("Jak cała rodzina może pomóc w wyborze posiłków?", "Rodinka może rozpocząć głosowanie nad posiłkiem: wypisujesz propozycje, a każdy członek rodziny, także dzieci, oddaje głos. Decyzja nie spoczywa na jednej osobie, a plan częściej się udaje."),
             ("Jak połączyć plan posiłków z listą zakupów?", "Przejrzyj główne składniki każdego zaplanowanego dania i dopisz brakujące do wspólnej listy. Przed zakupami jeszcze raz zajrzyj do szafek, żeby uniknąć dubli."),
             ("Czy Rodinka może zaproponować plan posiłków na tydzień?", "Z Rodinką Pro tak. Propozycja planu posiłków wypełnia puste miejsca w waszym tygodniu daniami z rodzinnej biblioteki, stawiając na różnorodność, ulubione lub szybkie dania, i nie powtarza posiłku zbyt szybko. Każde miejsce możesz zamienić albo usunąć. Zapisana propozycja pozostaje proponowana i trafia do kalendarza dopiero po Twoim potwierdzeniu. Rodinka nie wymyśla przepisów ani nie udziela porad dietetycznych."),
         ),
@@ -643,7 +643,7 @@ TOPICS = {
         "lead": "Pierwszy krok, świadectwo, kamyk z wakacji, zdjęcie, z którego wszyscy wciąż się śmieją. Większość z tego trafia do galerii jednego z rodziców, między tysiące innych zdjęć. Rodinka daje tym chwilom wspólny dom, do którego dociera cała rodzina.",
         "problem_title": "Wspomnienia nie giną naraz",
         "problem": (
-            "Zdjęć przybywa szybciej, niż ktokolwiek zdąży je uporządkować. Po dwóch latach pierwszy krok leży za wakacjami, świętami i kilkuset przypadkowymi ujęciami – a historię za zdjęciem zna tylko ten, kto je zrobił. Drugi rodzic często nie ma do niego dostępu.",
+            "Zdjęć przybywa szybciej, niż ktokolwiek zdąży je uporządkować. Po dwóch latach pierwszy krok leży za wakacjami, świętami i kilkuset przypadkowymi ujęciami – a historię związaną ze zdjęciem zna tylko ten, kto je zrobił. Drugi rodzic często nie ma do niego dostępu.",
             "Pamięć rodziny nie potrzebuje kolejnej galerii. Potrzebuje kilku zdań obok zdjęcia, daty, imienia osoby, do której należy, i jednego miejsca, do którego się wraca. Dlatego Rodinka prowadzi wspomnienia jako wspólną kronikę, a nie magazyn plików.",
         ),
         "scenarios": (
@@ -664,7 +664,7 @@ TOPICS = {
             ("Czy kamienie milowe pokazują, czy dziecko jest do przodu, czy w tyle?", "Nie. Kamień milowy zapisuje coś, co się wydarzyło; nie mówi, kiedy dziecko powinno coś umieć. Nie ma oczekiwanego wieku, normy ani porównywania dzieci, a Rodinka nigdy nie oznacza kamienia milowego jako brakującego."),
             ("Czy dzieci też widzą wspomnienia?", "Tak, kronikę może czytać cała rodzina. Tworzenie i edycja zostają w rękach dorosłych, więc dziecko może ją przeglądać bez zmieniania czegokolwiek."),
             ("Co dzieje się ze wspomnieniami, gdy dziecko dorośnie?", "Zostają tam, gdzie są. Gdy dziecko zaczyna korzystać z własnego konta, przekazujecie mu profil z całą historią: kamienie milowe, skarby i wspomnienia o nim zostają w tej samej rodzinnej kronice."),
-            ("Czy możemy zamienić rodzinne wspomnienia w książkę?", "Z Rodinką Pro tak. Rodzinny rocznik zbiera rok wspomnień, Chwil dnia, kamieni milowych i powiedzonek dzieci, skarbów i zakończonych wycieczek w książkę w trzech stylach. Możecie zmieniać kolejność stron, edytować teksty i kadry zdjęć, a wynik zapisać jako PDF na ekran albo do druku ze spadami i znacznikami cięcia. Dorośli tworzą rocznik z menu ⋮ we Wspomnieniach."),
+            ("Czy możemy zamienić rodzinne wspomnienia w książkę?", "Z Rodinką Pro tak. Rodzinny rocznik łączy wspomnienia z całego roku, Chwile dnia, kamienie milowe i powiedzonka dzieci, skarby oraz zakończone wycieczki w książkę, dla której możecie wybrać jeden z trzech stylów. Możecie zmieniać kolejność stron, edytować teksty i kadry zdjęć, a wynik zapisać jako PDF na ekran albo do druku ze spadami i znacznikami cięcia. Dorośli tworzą rocznik z menu ⋮ we Wspomnieniach."),
         ),
         "card": "Kamienie milowe dzieci, skarby i rodzinne chwile na jednej osi czasu.",
         "cta_title": "Dajcie rodzinnym wspomnieniom wspólny dom.",
@@ -681,7 +681,7 @@ TOPICS = {
         "lead": "Paszportu nie wyrobi się z dnia na dzień. A jednak większość domów odkrywa datę ważności dopiero po zarezerwowaniu wakacji. W czteroosobowej rodzinie to osiem dokumentów i osiem różnych dat, których nikt nie pilnuje.",
         "problem_title": "Termin, o którym nikt nie pamięta na czas",
         "problem": (
-            "Dokumenty mają niewygodną cechę: między wyrobieniem a kolejną potrzebą mija pięć albo dziesięć lat. Przypomnienie w kalendarzu tyle nie przetrwa, telefon się zmienia, a kartki w szufladzie nikt nie czyta. Dlatego daty ważności załatwia się zwykle pod presją.",
+            "Dokumenty mają niewygodną cechę: między wyrobieniem a kolejną potrzebą mija pięć albo dziesięć lat. Przypomnienie w kalendarzu tyle nie przetrwa, telefon się zmienia, a kartki w szufladzie nikt nie czyta. Dlatego odnowieniem dokumentów zajmujemy się zwykle pod presją czasu.",
             "Wystarczą dwie informacje – do kogo należy dokument i kiedy traci ważność – o ile pilnuje ich coś innego niż Twoja pamięć. Rodinka trzyma je przy rodzinie, a nie przy jednej osobie, i odzywa się, zanim będzie za późno.",
         ),
         "scenarios": (
@@ -693,12 +693,12 @@ TOPICS = {
         "help_intro": "Dokumenty są dostępne tylko dla dorosłych członków rodziny. Wszystko kręci się wokół jednego pytania: co wkrótce straci ważność i do kogo należy?",
         "steps": (
             ("Zapisz dokument", "Nazwa, właściciel i data ważności. Data wydania i notatka, gdzie dokument fizycznie leży, są opcjonalne."),
-            ("Niech przypomni", "Domyślnie przypomnienie przychodzi 180, 90, 30 i 7 dni przed końcem ważności oraz w sam dzień; gdy dokument już wygasł, Rodinka przypomina raz w tygodniu. Wyprzedzenie możesz zmienić, a przypomnienia respektują ciszę nocną."),
+            ("Niech przypomni", "Domyślnie przypomnienie przychodzi 180, 90, 30 i 7 dni przed końcem ważności oraz w dniu jej upływu; gdy dokument już wygasł, Rodinka przypomina raz w tygodniu. Wyprzedzenie możesz zmienić, a przypomnienia respektują ciszę nocną."),
             ("Zobacz, jak się sprawy mają", "Dokumenty są pogrupowane według tego, co wkrótce wygasa, co już wygasło i co jest jeszcze w porządku."),
         ),
         "answers_title": "Częste pytania o dokumenty i przypomnienia",
         "answers": (
-            ("Z jakim wyprzedzeniem powinno przyjść przypomnienie?", "Przy paszporcie czy dowodzie warto wiedzieć kilka miesięcy wcześniej – wyrobienie trwa swoje, a przed latem kolejki się wydłużają. Rodinka odzywa się wcześnie, a nie w ostatnim tygodniu."),
+            ("Z jakim wyprzedzeniem powinno przyjść przypomnienie?", "Przy paszporcie czy dowodzie warto wiedzieć kilka miesięcy wcześniej – wyrobienie dokumentu wymaga czasu, a przed latem kolejki się wydłużają. Rodinka odzywa się wcześnie, a nie w ostatnim tygodniu."),
             ("Czy dzieci widzą dokumenty?", "Nie. Dokumenty w Rodince są dostępne tylko dla dorosłych członków rodziny; konto dziecka nie otworzy tej części aplikacji."),
             ("Czy muszę wgrywać skan każdego dokumentu?", "Nie. Do pilnowania ważności wystarczy nazwa, właściciel i data – skan jest opcjonalny. Rodinka ma przypominać o terminie, a nie zastępować miejsca, w którym trzymacie same dokumenty."),
         ),
@@ -708,17 +708,17 @@ TOPICS = {
     },
     "baby": {
         "title": "Wspólne przygotowania na dziecko | Rodinka",
-        "description": "Przygotujcie się na dziecko razem – z lekką drogą tydzień po tygodniu, praktycznymi listami i wspólnym wyborem imienia w organizerze rodzinnym Rodinka.",
+        "description": "Przygotujcie się na dziecko razem – z prostym przewodnikiem tydzień po tygodniu, praktycznymi listami i wspólnym wyborem imienia w organizerze rodzinnym Rodinka.",
         "og_title": "Dziecko w drodze? Przygotujcie się razem.",
         "og_description": "Droga tydzień po tygodniu, praktyczne przygotowania i wspólny wybór imienia w jednej przestrzeni rodziny.",
         "og_alt": "Droga do narodzin dziecka w Rodince z listami przygotowań i wspólnym wyborem imienia",
         "eyebrow": "DZIECKO W DRODZE",
         "h1": "Przygotujcie się na dziecko razem, krok po kroku",
-        "lead": "Łagodna droga tydzień po tygodniu, praktyczne przygotowania i wspólne miejsce na możliwe imiona. Rodinka trzyma organizację razem, zanim nowy członek rodziny pojawi się na świecie.",
+        "lead": "Prosty przewodnik tydzień po tygodniu, praktyczne przygotowania i wspólne miejsce na propozycje imion. Rodinka pomaga uporządkować przygotowania, zanim nowy członek rodziny pojawi się na świecie.",
         "problem_title": "Przygotowania łatwo rozpraszają się po notatkach, czatach i kilku listach",
         "problem": (
             "Wyposażenie na podróż może być w jednej notatce, rzeczy na pierwszy tydzień na innej liście, a jeden ważny szczegół tylko w głowie któregoś z rodziców. Możliwe imiona giną między zwykłymi wiadomościami, a żadne z was nie ma jasnego obrazu tego, co już jest gotowe.",
-            "Wspólna przestrzeń to nie kolejny obowiązkowy plan. Daje obojgu rodzicom spokojne miejsce na sprawy, które chcą załatwić razem – w kolejności i tempie, które pasują ich rodzinie.",
+            "Wspólna przestrzeń to nie kolejny obowiązkowy plan. Daje obojgu rodzicom spokojne miejsce na sprawy, które chcą załatwić razem – w kolejności i tempie, które odpowiadają potrzebom ich rodziny.",
         ),
         "scenarios": (
             ("Listy w zbyt wielu miejscach", "Pomysły na podróż, sen i pierwsze dni mogą być razem, zamiast rozproszone po kartkach, notatkach i czacie."),
@@ -726,7 +726,7 @@ TOPICS = {
             ("Co już załatwiliśmy?", "Oboje rodzice widzą ten sam przegląd i mogą kontynuować tam, gdzie skończyło drugie."),
         ),
         "help_title": "Jak Rodinka pomaga przygotować się na dziecko",
-        "help_intro": "Dziecko w drodze to przestrzeń organizacyjna w Rodince, a nie aplikacja zdrowotna ani do śledzenia ciąży. Daje lekką orientację i praktyczne miejsce na wspólne przygotowania.",
+        "help_intro": "Dziecko w drodze to przestrzeń organizacyjna w Rodince, a nie aplikacja zdrowotna ani do śledzenia ciąży. Pomaga rozeznać się w przygotowaniach i daje praktyczne miejsce do ich wspólnego planowania.",
         "steps": (
             ("Droga tydzień po tygodniu", "Przybliżony tydzień, prosty postęp i wybrane momenty pomagają umieścić przygotowania w czasie. To nie jest pomiar medyczny, monitorowanie ani porada zdrowotna."),
             ("Przygotowania według tematów", "Przeglądaj opcjonalne pomysły na podróż, sen, karmienie i karmienie piersią, higienę i przewijanie, ubranka, dom, szpital i pierwsze dni albo formalności. Pozycja z listy może też stać się zwykłym zadaniem, pozycją na liście zakupów albo wydarzeniem, więc przygotowania nie utkną na osobnej liście."),
@@ -734,7 +734,7 @@ TOPICS = {
         ),
         "answers_title": "Częste pytania o przygotowania na dziecko",
         "answers": (
-            ("Czy Rodinka to tracker ciąży?", "Nie. Rodinka nie zastępuje aplikacji medycznej, opieki specjalistów ani porady lekarza. Pomaga rodzinie zorganizować praktyczne przygotowania z lekką, przybliżoną drogą."),
+            ("Czy Rodinka to tracker ciąży?", "Nie. Rodinka nie zastępuje aplikacji medycznej, opieki specjalistów ani porady lekarza. Pomaga rodzinie zorganizować praktyczne przygotowania, dając jej ogólną orientację w kolejnych etapach."),
             ("Czy musimy przejść całą listę?", "Nie. To opcjonalna inspiracja i przegląd, a nie obowiązkowy plan zakupów. Każda rodzina może zostawić tylko to, co pasuje do jej potrzeb."),
             ("Czy możemy wybrać imię razem?", "Tak. Możecie zbierać możliwe imiona, oznaczać ulubione i zapisywać preferencje każdego z dorosłych, nie zamieniając wyboru w ranking."),
             ("Czy dzieci automatycznie zobaczą te informacje?", "Nie. Dziecko w drodze jest dla dorosłych w rodzinie, więc przygotowania i wrażliwe informacje zostają w ich wspólnej przestrzeni dorosłych."),
@@ -744,13 +744,13 @@ TOPICS = {
         "cta_text": "Otwórz Rodinkę, dodaj oczekiwane dziecko i zacznij od tego, co chcielibyście mieć gotowe najpierw.",
     },
     "app": {
-        "title": "Aplikacja – organizer rodzinny na kalendarz, obowiązki i listy | Rodinka",
+        "title": "Aplikacja – organizer rodzinny z kalendarzem, obowiązkami i listami | Rodinka",
         "description": "Rodinka to aplikacja – organizer rodzinny, która łączy wspólny kalendarz, obowiązki domowe, listy zakupów i planowanie posiłków w jednym praktycznym miejscu.",
-        "og_title": "Jeden organizer rodzinny na szczegóły codziennego życia w domu",
+        "og_title": "Jeden organizer rodzinny do codziennych spraw domowych",
         "og_description": "Dajcie terminom, obowiązkom, zakupom i posiłkom wspólny dom, zamiast rozpraszać je po czatach i notatkach.",
-        "og_alt": "Aplikacja Rodinka – organizer rodzinny na wspólne terminy i domowe zadania",
-        "eyebrow": "APLIKACJA NA CODZIENNĄ PRACĘ W ŻYCIU RODZINY",
-        "h1": "Aplikacja dla rodziny na terminy, obowiązki, zakupy i posiłki",
+        "og_alt": "Aplikacja Rodinka – organizer rodzinny do planowania wspólnych terminów i domowych zadań",
+        "eyebrow": "APLIKACJA DO ORGANIZACJI CODZIENNEGO ŻYCIA RODZINY",
+        "h1": "Aplikacja dla rodziny do planowania terminów, obowiązków, zakupów i posiłków",
         "lead": "Kalendarz trzyma terminy, ale nie zawsze zakupy. Czat trzyma rozmowy, ale szczegół sprzed tygodnia trudno w nim znaleźć. Rodinka łączy praktyczne części życia rodzinnego, żeby każdy wiedział, gdzie szukać.",
         "problem_title": "Rodziny potrzebują mniej miejsc do szukania, nie więcej",
         "problem": (
@@ -774,8 +774,8 @@ TOPICS = {
         "answers": (
             ("Co powinna umieć aplikacja – organizer rodzinny?", "Powinna obsługiwać wspólne sytuacje, którymi wasz dom zajmuje się najczęściej, dobrze działać na telefonie i komputerze i pozwalać kilku osobom korzystać z tych samych aktualnych informacji."),
             ("Czy Rodinka zastępuje rodzinny czat grupowy?", "Nie. Czat świetnie nadaje się do rozmów. Rodinka jest punktem odniesienia dla terminów, zadań i list, które chcecie później znaleźć bez przewijania historii wiadomości."),
-            ("Czy musimy korzystać z każdej funkcji?", "Wcale nie. Zacznijcie od obszaru, który dziś wywołuje najwięcej powtarzających się pytań. Kolejną część dodajcie dopiero wtedy, gdy rozwiąże prawdziwą potrzebę waszego domu."),
-            ("Czy Rodinka działa bez internetu?", "W dużej mierze tak. Dzisiaj, kalendarz, obowiązki i listę zakupów można używać i zmieniać offline, a zmiany zsynchronizują się po połączeniu. Plan posiłków, wspomnienia i pomysły na wycieczki da się przeglądać; wiadomości i zapiski zdrowotne wymagają połączenia."),
+            ("Czy musimy korzystać z każdej funkcji?", "Wcale nie. Zacznijcie od obszaru, który dziś wywołuje najwięcej powtarzających się pytań. Kolejną część dodajcie dopiero wtedy, gdy odpowie na rzeczywistą potrzebę waszego domu."),
+            ("Czy Rodinka działa bez internetu?", "W dużej mierze tak. Z ekranu Dzisiaj, kalendarza, obowiązków i listy zakupów można korzystać offline i wprowadzać w nich zmiany, a zmiany zsynchronizują się po połączeniu. Plan posiłków, wspomnienia i pomysły na wycieczki da się przeglądać; wiadomości i zapiski zdrowotne wymagają połączenia."),
             ("Czy dziadkowie też mogą korzystać z Rodinki?", "Tak, i nie muszą przy tym widzieć całej rodziny. Zaproście dziadków jako członków rodziny albo udostępnijcie im tylko terminy, na które zabierają dzieci: linkiem, który potwierdzą, albo jako pomocnikom z własnym logowaniem."),
         ),
         "card": "Kalendarz, domowe obowiązki, zakupy i posiłki w jednej przestrzeni rodziny.",
@@ -847,7 +847,7 @@ INFO_PAGES = {
         "price_note": "Ceny nie są jeszcze opublikowane. Przed potwierdzeniem zakupu dany kanał pokaże ostateczną cenę z należnymi podatkami, okres i zasady odnowienia.",
         "sections": (
             ("Porównanie Free i Pro", (
-                "Kalendarz, obowiązki, zakupy, posiłki, wycieczki, wspomnienia, dokumenty i dalsza rodzina są w Rodince Free, a Rodinka Pro ich nie ogranicza. Pro dodaje pomocników dla dorosłych: Rodzinny tydzień, czyli przegląd tego, co jeszcze trzeba załatwić w danym tygodniu; scenariusze rodzinne i tworzone z nich przygotowania do wycieczek i wydarzeń; podpowiedzi pozycji na podstawie ostatnich zakupów; propozycję planu posiłków z waszej biblioteki dań; oraz Rodzinny rocznik jako PDF gotowy do druku. Do tego 5 GiB na zdjęcia zamiast 200 MiB, Chwila dnia i możliwość dopasowania kolorów i głównej nawigacji.",
+                "Kalendarz, obowiązki, zakupy, posiłki, wycieczki, wspomnienia, dokumenty i dalsza rodzina są w Rodince Free, a Rodinka Pro ich nie ogranicza. Pro dodaje narzędzia dla dorosłych: Rodzinny tydzień, czyli przegląd tego, co jeszcze trzeba załatwić w danym tygodniu; scenariusze rodzinne i tworzone z nich przygotowania do wycieczek i wydarzeń; podpowiedzi pozycji na podstawie ostatnich zakupów; propozycję planu posiłków z waszej biblioteki dań; oraz Rodzinny rocznik jako PDF gotowy do druku. Do tego 5 GiB na zdjęcia zamiast 200 MiB, Chwila dnia i możliwość dopasowania kolorów i głównej nawigacji.",
                 "Podpowiedzi zakupów i posiłków powstają wyłącznie z danych waszej rodziny i nic nie zostanie zapisane, dopóki tego nie potwierdzicie. W Rodince Free możecie dodać to samo ręcznie.",
                 "Rodinka Pro należy do całej rodziny. Jeden dorosły wykupuje subskrypcję, a korzyści dostają wszyscy członkowie tej rodziny.",
                 "Gdy Rodinka Pro się kończy, nic nie zostaje usunięte. Zdjęcia i zapisane Chwile dnia zostają i nadal można je oglądać i usuwać. Nie można tylko dodawać nowych zdjęć ponad limit 200 MiB ani nowych Chwil dnia, a własne kolory przestają być stosowane.",
@@ -937,10 +937,10 @@ CMP_RODINKA = {
     "documents": "Dokumenty z przypomnieniami o końcu ważności, widoczne tylko dla dorosłych.",
     "chat": "Wiadomości rodzinne i prywatne, w których można udostępnić zadanie lub pozycję z listy zakupów. Tylko online.",
     "location": "Rodinka nie udostępnia lokalizacji. Rodzinne miejsca służą do planowania i nawigacji.",
-    "roles": "Role dorosłych i dzieci. Dzieci nie widzą dokumentów ani ustawień rodziny; pomocnik widzi tylko terminy, w których się opiekuje.",
+    "roles": "Role dorosłych i dzieci. Dzieci nie widzą dokumentów ani ustawień rodziny; pomocnik widzi tylko terminy, przy których pomaga jako opiekun.",
     "ai": "Wprowadzanie głosowe zadań i zakupów na obsługiwanych urządzeniach. Rodinka Pro podpowiada zakupy i posiłki na podstawie danych waszej rodziny.",
     "calendar_sync": "Rodinka nie łączy się jeszcze z kalendarzami Google, Apple ani Outlook.",
-    "platforms": "Aplikacja webowa na telefon, tablet i komputer, którą można dodać do ekranu głównego (PWA). Na Windows także w Microsoft Store.",
+    "platforms": "Aplikacja webowa na telefon, tablet i komputer, którą można dodać do ekranu głównego (PWA). W systemie Windows także w Microsoft Store.",
     "offline": "Dzisiaj, kalendarz, obowiązki i zakupy można edytować offline; posiłki, wspomnienia i wycieczki da się przeglądać.",
     "languages": "Cały interfejs po czesku, słowacku, angielsku, niemiecku i polsku.",
     "ads": "Bez reklam, także w wersji bezpłatnej.",
@@ -987,12 +987,12 @@ CMP_COMPETITOR_NOTES = {
         "calendar": "Wspólny kalendarz rodzinny dla maksymalnie 12 członków.",
         "recurring": "Powtarzające się wydarzenia; obowiązki powtarzają się codziennie lub co tydzień.",
         "shopping": "Listy zakupów udostępniane wszystkim na koncie.",
-        "meals": "Skrzynka z przepisami, planowanie posiłków i składniki na listę. Planer posiłków z AI w wyższym planie Max.",
+        "meals": "Zbiór przepisów, planowanie posiłków i składniki na listę. Planer posiłków z AI w wyższym planie Max.",
         "chores": "Cozi Chores: każda osoba ma własną listę obowiązków (w aplikacjach mobilnych).",
         "kids": "Na stronie nie znaleźliśmy osobnych profili dzieci, nagród ani kieszonkowego.",
         "memories": "Według FAQ do wydarzeń i list nie można dołączać obrazów ani plików. Nie znaleźliśmy dziennika ani kamieni milowych.",
         "roles": "Według FAQ Cozi nie ma ograniczonego dostępu: wszyscy na koncie mogą wszystko przeglądać, dodawać, edytować i usuwać.",
-        "calendar_sync": "Kalendarze Google, Apple, Outlook i inne wyświetlane w Cozi oraz Cozi wysyłane do innych kalendarzy; w obu przypadkach tylko do odczytu.",
+        "calendar_sync": "Kalendarze Google, Apple, Outlook i inne można wyświetlać w Cozi, a kalendarz Cozi w innych kalendarzach; w obu przypadkach tylko do odczytu.",
         "platforms": "Web, iPhone i Android.",
         "offline": "Listy zakupów można odhaczać offline. Pracy offline innych części nie udało się zweryfikować.",
         "languages": "Czeskiego ani słowackiego nie udało się zweryfikować.",
@@ -1088,7 +1088,7 @@ CMP_GUIDE = {
         "cozi": ("potrzebujecie głównie kalendarza i list, chcecie widzieć też kalendarze służbowe i szkolne i odpowiada wam angielski.", "wersja bezpłatna wyświetla reklamy i według FAQ Cozi nie można ograniczyć, co widzi każda osoba na rodzinnym koncie."),
     },
     "faq": (
-        ("Potrzebuję kalendarza rodzinnego czy pełnego planera rodzinnego?", "Jeśli chodzi wam tylko o terminy, wystarczy wspólny kalendarz rodzinny. Gdy dochodzą obowiązki, zakupy i posiłki, planer oszczędza przełączania między kilkoma aplikacjami i czatami."),
+        ("Potrzebuję kalendarza rodzinnego czy pełnego planera rodzinnego?", "Jeśli chodzi wam tylko o terminy, wystarczy wspólny kalendarz rodzinny. Gdy dochodzą obowiązki, zakupy i posiłki, planer pozwala uniknąć przełączania się między kilkoma aplikacjami i czatami."),
         ("Czy nie wystarczy udostępniony Kalendarz Google?", "Dla dwojga dorosłych często tak. Aplikacje rodzinne dodają to, czego brakuje zwykłemu kalendarzowi: konta dzieci, rodzinne obowiązki, listę zakupów czy informację, kto zabiera dziecko i dokąd."),
         ("Czy dzieci powinny korzystać z aplikacji rodzinnej?", "Od wieku szkolnego to pomaga: dziecko widzi swoje plany i zadania bez pytania. Ważne, by aplikacja pozwalała dzieciom widzieć tylko to, co jest dla nich przeznaczone."),
         ("Ile kosztuje planer rodzinny?", "Każda aplikacja w tym przeglądzie ma wersję bezpłatną. Plany płatne różnią się zawartością, walutą i sposobem płatności, dlatego porównujemy je w poszczególnych porównaniach."),
@@ -1123,7 +1123,7 @@ CMP_PAGES = {
         "comp_pros": ("Szybkie dodawanie głosem, tekstem lub zdjęciem", "Połączenie z Kalendarzem Google", "Aplikacje na iPhone’a, iPada i Androida, z wersją czeską"),
         "comp_cons": ("Wersja webowa tylko z płatnym Smart i sparowaniem z telefonu", "Free zawiera 10 kredytów AI miesięcznie i jeden załącznik na wpis"),
         "pricing": (
-            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; na Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna i nie wymaga karty płatniczej. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane, a ewentualna oferta pojawi się w aplikacji.",
+            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; w systemie Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna i nie wymaga karty płatniczej. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane, a ewentualna oferta pojawi się w aplikacji.",
             "Familia oferuje aplikacje na iPhone’a, iPada i Androida; wersja webowa jest częścią planu Smart. Free jest bezpłatny, a Smart to miesięczna subskrypcja dla całej rodziny. Strona podaje cenę ze znakiem $ bez kodu waluty i zaznacza, że ceny w App Store różnią się w zależności od kraju, więc nie podajemy kwoty.",
         ),
         "faq": (
@@ -1153,7 +1153,7 @@ CMP_PAGES = {
             "Jaka jest główna różnica między Rodinką a FamilyWall?",
             "FamilyWall łączy wspólny kalendarz i listy z rodzinnym komunikatorem, galerią zdjęć i udostępnianiem lokalizacji; planer posiłków, dokumenty i połączenie z kalendarzami Google i Outlook są w Premium. Rodinka w wersji bezpłatnej oferuje kalendarz, który pokazuje, kto kogo zawozi, zadania z nagrodami i kieszonkowym dla dzieci, planowanie posiłków, wycieczki, zwierzęta i wspólną kronikę, z całym interfejsem po czesku, słowacku, angielsku, niemiecku i polsku. Nie udostępnia lokalizacji i nie łączy jeszcze innych kalendarzy.",
         ),
-        "fit_rodinka": ("chcecie planować w rodzinie we własnym języku, także z dziadkami,", "chcecie dać dzieciom własne konto z zadaniami, nagrodami i kieszonkowym,", "planujecie posiłki i wycieczki i nie chcecie za to płatnego planu."),
+        "fit_rodinka": ("chcecie planować w rodzinie we własnym języku, także z dziadkami,", "chcecie dać dzieciom własne konto z zadaniami, nagrodami i kieszonkowym,", "planujecie posiłki i wycieczki i nie chcecie w tym celu wykupywać płatnego planu."),
         "fit_comp": ("chcecie udostępniać lokalizację w rodzinie i dostawać powiadomienia o przybyciu do domu czy szkoły,", "wasza rodzina pisze i dzieli się zdjęciami i filmami w jednej aplikacji,", "potrzebujecie służbowego kalendarza Google lub Outlook obok rodzinnego."),
         "scenarios": (
             ("Kto odbiera z treningu", "W Rodince trening pokazuje, kogo dotyczy i kto zabiera dziecko, a babcia może potwierdzić linkiem bez konta. W FamilyWall termin jest we wspólnym kalendarzu i według strony widać, gdzie kto jest."),
@@ -1162,10 +1162,10 @@ CMP_PAGES = {
         ),
         "rodinka_pros": ("Cały interfejs po czesku, słowacku, angielsku, niemiecku i polsku", "Konta dzieci z nagrodami, kieszonkowym i ograniczonym widokiem", "Planowanie posiłków, wycieczki, zwierzęta i kronika w wersji bezpłatnej"),
         "rodinka_cons": ("Brak udostępniania lokalizacji", "Brak jeszcze połączenia z kalendarzami Google, Apple czy Outlook", "Na telefonie działa jako aplikacja webowa dodana do ekranu głównego"),
-        "comp_pros": ("Rodzinny komunikator i galeria zdjęć i filmów", "Udostępnianie lokalizacji z powiadomieniami o przybyciu i wyjściu", "Aplikacje na iPhone’a, iPada i Androida oraz web, według strony bez reklam"),
+        "comp_pros": ("Rodzinny komunikator oraz galeria zdjęć i filmów", "Udostępnianie lokalizacji z powiadomieniami o przybyciu i wyjściu", "Aplikacje na iPhone’a, iPada i Androida oraz web, według strony bez reklam"),
         "comp_cons": ("Planer posiłków, dokumenty i łączenie kalendarzy są w Premium", "Czeskiego ani słowackiego nie udało się zweryfikować"),
         "pricing": (
-            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; na Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna, nie wymaga karty płatniczej i zawiera kalendarz, obowiązki, zakupy, posiłki, wycieczki, wspomnienia i dokumenty. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane.",
+            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; w systemie Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna, nie wymaga karty płatniczej i zawiera kalendarz, obowiązki, zakupy, posiłki, wycieczki, wspomnienia i dokumenty. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane.",
             "FamilyWall jest dostępny w przeglądarce, na iPhonie, iPadzie i Androidzie. Podstawa jest bezpłatna; Premium obejmuje całą rodzinę, można je opłacać miesięcznie lub rocznie i zaczyna się 30-dniowym okresem próbnym. Subskrypcję można wykupić przez Google Play, App Store albo stronę. Strona podaje cenę ze znakiem $ bez kodu waluty, więc jej nie podajemy.",
         ),
         "faq": (
@@ -1189,11 +1189,11 @@ CMP_PAGES = {
         "og_description": "Uznany kalendarz rodzinny, który łączy inne kalendarze, czy planer rodzinny z kontami dzieci? Porównanie ze źródłami.",
         "og_alt": "Porównanie aplikacji Rodinka i Cozi",
         "h1": "Rodinka vs Cozi",
-        "lead": "Cozi to uznany organizer rodzinny z kalendarzem, listami i skrzynką z przepisami, który potrafi też wyświetlać inne kalendarze. Rodinka to planer rodzinny po czesku, słowacku, angielsku, niemiecku i polsku, który obok kalendarza i zakupów obejmuje też dzieci, wycieczki, zwierzęta i wspomnienia.",
+        "lead": "Cozi to uznany organizer rodzinny z kalendarzem, listami i zbiorem przepisów, który potrafi też wyświetlać inne kalendarze. Rodinka to planer rodzinny po czesku, słowacku, angielsku, niemiecku i polsku, który obok kalendarza i zakupów obejmuje też dzieci, wycieczki, zwierzęta i wspomnienia.",
         "card": "Kalendarz rodzinny, który pokazuje inne kalendarze, czy planer z kontami dzieci.",
         "answer": (
             "Jaka jest główna różnica między Rodinką a Cozi?",
-            "Cozi oferuje wspólny kalendarz dla maksymalnie 12 członków, listy zakupów, obowiązki i skrzynkę z przepisami oraz potrafi wyświetlać kalendarze Google, Apple i Outlook; wersja bezpłatna pokazuje reklamy, a według FAQ wszyscy widzą i edytują wszystko. Rodinka ma role dorosłych i dzieci, konta dzieci z nagrodami i kieszonkowym, planowanie posiłków, wycieczki i rodzinną kronikę, nie ma reklam, a obok angielskiego działa też po czesku, słowacku, niemiecku i polsku. Innych kalendarzy jeszcze nie łączy.",
+            "Cozi oferuje wspólny kalendarz dla maksymalnie 12 członków, listy zakupów, obowiązki i zbiór przepisów oraz potrafi wyświetlać kalendarze Google, Apple i Outlook; wersja bezpłatna pokazuje reklamy, a według FAQ wszyscy widzą i edytują wszystko. Rodinka ma role dorosłych i dzieci, konta dzieci z nagrodami i kieszonkowym, planowanie posiłków, wycieczki i rodzinną kronikę, nie ma reklam, a obok angielskiego działa też po czesku, słowacku, niemiecku i polsku. Innych kalendarzy jeszcze nie łączy.",
         ),
         "fit_rodinka": ("chcecie aplikacji bez reklam, we własnym języku,", "chcecie, żeby dzieci widziały tylko to, co jest dla nich, i zdobywały nagrody za zadania,", "chcecie mieć w tym samym miejscu także wycieczki, zwierzęta, dokumenty i rodzinne wspomnienia."),
         "fit_comp": ("potrzebujecie kalendarzy służbowych, szkolnych czy sportowych obok rodzinnego,", "odpowiada wam angielski i lubicie uznaną aplikację z długą historią,", "nie przeszkadza wam, że wszyscy na koncie mają taki sam pełny dostęp."),
@@ -1204,11 +1204,11 @@ CMP_PAGES = {
         ),
         "rodinka_pros": ("Bez reklam, z całym interfejsem po czesku, słowacku, angielsku, niemiecku i polsku", "Role dorosłych i dzieci, konta dzieci z nagrodami i kieszonkowym", "Wycieczki, zwierzęta, dokumenty i rodzinna kronika w jednym miejscu"),
         "rodinka_cons": ("Brak jeszcze połączenia z kalendarzami Google, Apple czy Outlook", "Na telefonie działa jako aplikacja webowa dodana do ekranu głównego"),
-        "comp_pros": ("Wyświetla w Cozi kalendarze Google, Apple, Outlook i inne", "Kalendarz, listy, obowiązki i skrzynka z przepisami w wersji bezpłatnej", "Aplikacje na iPhone’a i Androida oraz wersja webowa"),
+        "comp_pros": ("Wyświetla w Cozi kalendarze Google, Apple, Outlook i inne", "Kalendarz, listy, obowiązki i zbiór przepisów w wersji bezpłatnej", "Aplikacje na iPhone’a i Androida oraz wersja webowa"),
         "comp_cons": ("Wersja bezpłatna wyświetla reklamy", "Według FAQ brak ograniczenia dostępu dla poszczególnych członków", "Czeskiego ani słowackiego nie udało się zweryfikować"),
         "pricing": (
-            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; na Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna, nie ma reklam i nie wymaga karty płatniczej. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane.",
-            "Cozi jest dostępne w przeglądarce, na iPhonie i Androidzie. Wersja bezpłatna utrzymuje się z reklam. Według FAQ Cozi Gold kosztuje 39 USD rocznie i obejmuje wszystkich na koncie; daje między innymi brak reklam, widok miesiąca na telefonie, wyszukiwanie i więcej przypomnień. Dwutygodniowy okres próbny dotyczy tylko subskrypcji rozpoczętych w wersji webowej. Wyższy plan Max dodaje funkcje AI.",
+            "Rodinka działa w przeglądarce na telefonie, tablecie i komputerze i można ją dodać do ekranu głównego jak aplikację; w systemie Windows jest także w Microsoft Store. Rodinka Free jest bezpłatna, nie ma reklam i nie wymaga karty płatniczej. Rodinka Pro dla całej rodziny dodaje kolejne narzędzia i miejsce na zdjęcia; ceny nie są jeszcze opublikowane.",
+            "Cozi jest dostępne w przeglądarce, na iPhonie i Androidzie. Wersja bezpłatna utrzymuje się z reklam. Według FAQ Cozi Gold kosztuje 39 USD rocznie i obejmuje wszystkich na koncie; oferuje między innymi korzystanie bez reklam, widok miesiąca na telefonie, wyszukiwanie i więcej przypomnień. Dwutygodniowy okres próbny dotyczy tylko subskrypcji rozpoczętych w wersji webowej. Wyższy plan Max dodaje funkcje AI.",
         ),
         "faq": (
             ("Czy Rodinka jest alternatywą dla Cozi?", "Tak, jeśli chcecie planera rodzinnego bez reklam, z kontami dzieci, także w innym języku niż angielski. Jeśli niezbędne jest widzenie kalendarzy służbowych czy szkolnych w kalendarzu rodzinnym, Cozi już to potrafi, a Rodinka jeszcze nie."),
