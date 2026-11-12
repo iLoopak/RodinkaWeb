@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT))
 import comparisons as cmp  # noqa: E402
 import generate_site as site  # noqa: E402
 
-LOCALES = ("cs", "sk", "en")
+LOCALES = ("cs", "sk", "en", "de", "pl")
 OFFICIAL_HOSTS = {
     "familia": {"familiaplanner.com"},
     "familywall": {"www.familywall.com", "support.familywall.com"},
@@ -96,7 +96,7 @@ class ComparisonDataTest(unittest.TestCase):
 
     def test_no_means_the_competitor_said_so(self):
         # "No" is only for an explicit statement on the competitor's own site.
-        prefixes = {"cs": "Podle ", "sk": "Podľa ", "en": "According to "}
+        prefixes = {"cs": "Podle ", "sk": "Podľa ", "en": "According to ", "de": "Laut ", "pl": "Według "}
         for key, competitor in cmp.COMPETITORS.items():
             for area, status, note, _ in competitor["rows"]:
                 if status == "no":
@@ -124,7 +124,8 @@ class ComparisonDataTest(unittest.TestCase):
         for name, tree in (("COMMON", cmp.COMMON), ("HUB", cmp.HUB), ("GUIDE", cmp.GUIDE), *((f"page {key}", page) for key, page in cmp.COMPARISON_PAGES.items())):
             self.assertEqual(set(tree), set(LOCALES), name)
             self.assertEqual(shape(tree["cs"]), shape(tree["sk"]), f"{name}: cs/sk differ")
-            self.assertEqual(shape(tree["cs"]), shape(tree["en"]), f"{name}: cs/en differ")
+            for locale in LOCALES[1:]:
+                self.assertEqual(shape(tree["cs"]), shape(tree[locale]), f"{name}: cs/{locale} differ")
 
     def test_every_competitor_has_a_page_and_paths(self):
         self.assertEqual(set(cmp.COMPETITOR_ORDER), set(cmp.COMPETITORS))
