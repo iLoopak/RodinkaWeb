@@ -1,5 +1,5 @@
 {
-  "source": "iLoopak/Rodinka src/features/legal @ 5881506",
+  "source": "iLoopak/Rodinka src/features/legal @ cbdad977",
   "operator": {
     "legalName": "Lukáš Sitta",
     "address": "Podlesí I 5311, 760 05 Zlín",
@@ -16,7 +16,7 @@
       "businessRegisterLabel": "OSVČ zapsaná v živnostenském rejstříku; evidující úřad",
       "phoneLabel": "Telefon",
       "notVatRegistered": "Provozovatel není plátcem DPH.",
-      "lastUpdated": "Poslední aktualizace: 5. 11. 2026",
+      "lastUpdated": "Poslední aktualizace: 11. 11. 2026",
       "terms": {
         "title": "Podmínky používání a pravidla obsahu",
         "intro": "Tyto podmínky popisují, jak Rodinku používat, co do ní nepatří a jak funguje předplatné Rodinka Pro.",
@@ -347,6 +347,19 @@
             "links": []
           },
           {
+            "id": "smart-quick-add",
+            "heading": "Chytré přidávání s AI (připravovaná funkce)",
+            "paragraphs": [
+              "Připravujeme volitelnou funkci Chytré přidávání: z krátkého textu, který dospělý člen rodiny napíše nebo nadiktuje, navrhne položky nákupního seznamu a úkoly. Funkce zatím není veřejně dostupná a Rodinka v jejím rámci dosud nezpracovává žádné údaje rodin. Než funkci zpřístupníme, tuto část aktualizujeme.",
+              "Po zpřístupnění se text, který do funkce zadáte, odešle přes náš server službě Mistral AI SAS (Francie), která z něj připraví návrh. Text může obsahovat jména členů rodiny, včetně dětí, a cokoli dalšího, co do něj napíšete. Seznam členů rodiny ani jejich profily Mistral AI neposíláme; jména v návrhu přiřazuje ke členům až náš server. Před prvním použitím vás aplikace požádá o výslovné svolení.",
+              "AI pouze navrhuje: do kalendáře, úkolů ani nákupního seznamu se nic nezapíše, dokud návrh sami nepotvrdíte. Dětské účty funkci používat nemohou.",
+              "Zadaný text ani návrh Rodinka neukládá do své databáze využití. Ukládá jen technické záznamy o použití spojené s vaším účtem a rodinou (například čas, počet navržených položek, výsledek a spotřebu), aby mohla hlídat limity a náklady; po 13 měsících je nahradí jen anonymní měsíční součty.",
+              "Účelem je usnadnit zadávání položek a úkolů; právním základem je plnění smlouvy o používání Rodinky u funkce, kterou sami spustíte. Mistral AI bude text zpracovávat jako náš zpracovatel podle smlouvy o zpracování osobních údajů, s hostováním v EU, a používání těchto dat k tréninku modelů u něj před spuštěním vypneme. Podle svých podmínek může poskytovatel vstupy a výstupy po omezenou dobu uchovávat, například k ochraně před zneužitím, a část jeho infrastruktury (například síť pro doručování obsahu a bezpečnostní služby) může působit i mimo EHP na základě smluvních záruk, jako jsou standardní smluvní doložky. Přesné podmínky uchování ověříme a popíšeme před spuštěním. Platí práva popsaná v části Vaše práva a kontakt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
             "heading": "Zpracovatelé",
             "paragraphs": [
               "Na provozu se podílejí:"
@@ -361,7 +374,8 @@
               "LocationIQ — napovídání adres při hledání místa a převod souřadnic načtených pro jednorázové sdílení polohy v Bezpečném příchodu na čitelný popisek místa či adresy (reverse geocoding); souřadnice se předávají přes náš server.",
               "Google — pouze pokud si zvolíte přihlášení přes Google.",
               "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — otevírají se jako externí odkaz, když si necháte zobrazit trasu.",
-              "Push služby prohlížečů a zařízení — doručení oznámení; jejich obsah je šifrovaný."
+              "Push služby prohlížečů a zařízení — doručení oznámení; jejich obsah je šifrovaný.",
+              "Mistral AI SAS (Francie) — připravovaná volitelná funkce Chytré přidávání; dokud není zpřístupněná, žádné údaje rodin se mu neposílají."
             ],
             "links": []
           },
@@ -452,7 +466,7 @@
       "businessRegisterLabel": "SZČO zapísaná v českom živnostenskom registri; evidujúci úrad",
       "phoneLabel": "Telefón",
       "notVatRegistered": "Prevádzkovateľ nie je platiteľom DPH.",
-      "lastUpdated": "Posledná aktualizácia: 5. 11. 2026",
+      "lastUpdated": "Posledná aktualizácia: 11. 11. 2026",
       "terms": {
         "title": "Podmienky používania a pravidlá obsahu",
         "intro": "Tieto podmienky opisujú, ako Rodinku používať, čo do nej nepatrí a ako funguje predplatné Rodinka Pro.",
@@ -783,6 +797,19 @@
             "links": []
           },
           {
+            "id": "smart-quick-add",
+            "heading": "Inteligentné pridávanie s AI (pripravovaná funkcia)",
+            "paragraphs": [
+              "Pripravujeme voliteľnú funkciu Inteligentné pridávanie: z krátkeho textu, ktorý dospelý člen rodiny napíše alebo nadiktuje, navrhne položky nákupného zoznamu a úlohy. Funkcia zatiaľ nie je verejne dostupná a Rodinka v jej rámci doteraz nespracúva žiadne údaje rodín. Skôr než funkciu sprístupníme, túto časť aktualizujeme.",
+              "Po sprístupnení sa text, ktorý do funkcie zadáte, odošle cez náš server službe Mistral AI SAS (Francúzsko), ktorá z neho pripraví návrh. Text môže obsahovať mená členov rodiny vrátane detí a čokoľvek ďalšie, čo doň napíšete. Zoznam členov rodiny ani ich profily Mistral AI neposielame; mená v návrhu priraďuje k členom až náš server. Pred prvým použitím vás aplikácia požiada o výslovné povolenie.",
+              "AI iba navrhuje: do kalendára, úloh ani nákupného zoznamu sa nič nezapíše, kým návrh sami nepotvrdíte. Detské účty funkciu používať nemôžu.",
+              "Zadaný text ani návrh Rodinka neukladá do svojej databázy využitia. Ukladá iba technické záznamy o použití prepojené s vaším účtom a rodinou (napríklad čas, počet navrhnutých položiek, výsledok a spotrebu), aby mohla strážiť limity a náklady; po 13 mesiacoch ich nahradia iba anonymné mesačné súčty.",
+              "Účelom je uľahčiť zadávanie položiek a úloh; právnym základom je plnenie zmluvy o používaní Rodinky pri funkcii, ktorú sami spustíte. Mistral AI bude text spracúvať ako náš sprostredkovateľ podľa zmluvy o spracúvaní osobných údajov, s hostovaním v EÚ, a používanie týchto údajov na trénovanie modelov uňho pred spustením vypneme. Podľa svojich podmienok môže poskytovateľ vstupy a výstupy po obmedzený čas uchovávať, napríklad na ochranu pred zneužitím, a časť jeho infraštruktúry (napríklad sieť na doručovanie obsahu a bezpečnostné služby) môže pôsobiť aj mimo EHP na základe zmluvných záruk, ako sú štandardné zmluvné doložky. Presné podmienky uchovávania overíme a opíšeme pred spustením. Platia práva opísané v časti Vaše práva a kontakt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
             "heading": "Sprostredkovatelia",
             "paragraphs": [
               "Na prevádzke sa podieľajú:"
@@ -797,7 +824,8 @@
               "LocationIQ — napovedanie adries pri hľadaní miesta a prevod súradníc načítaných na jednorazové zdieľanie polohy v Bezpečnom príchode na čitateľný popis miesta či adresy (reverse geocoding); súradnice sa odovzdávajú cez náš server.",
               "Google — iba ak si zvolíte prihlásenie cez Google.",
               "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — otvárajú sa ako externý odkaz, keď si necháte zobraziť trasu.",
-              "Push služby prehliadačov a zariadení — doručenie oznámení; ich obsah je šifrovaný."
+              "Push služby prehliadačov a zariadení — doručenie oznámení; ich obsah je šifrovaný.",
+              "Mistral AI SAS (Francúzsko) — pripravovaná voliteľná funkcia Inteligentné pridávanie; kým nie je sprístupnená, žiadne údaje rodín sa mu neposielajú."
             ],
             "links": []
           },
@@ -888,7 +916,7 @@
       "businessRegisterLabel": "Czech sole trader registered in the Trade Register; registering authority",
       "phoneLabel": "Telephone",
       "notVatRegistered": "The operator is not registered for VAT.",
-      "lastUpdated": "Last updated: 5 November 2026",
+      "lastUpdated": "Last updated: 11 November 2026",
       "terms": {
         "title": "Terms of use and content guidelines",
         "intro": "These terms describe how to use Rodinka, what does not belong in it and how the Rodinka Pro subscription works.",
@@ -1219,6 +1247,19 @@
             "links": []
           },
           {
+            "id": "smart-quick-add",
+            "heading": "Smart Quick Add with AI (upcoming feature)",
+            "paragraphs": [
+              "We are preparing an optional feature, Smart Quick Add: from a short text an adult family member types or dictates, it suggests shopping list items and tasks. The feature is not publicly available yet, and Rodinka does not process any family data for it so far. We will update this section before we make the feature available.",
+              "Once available, the text you enter into the feature is sent through our server to Mistral AI SAS (France), which prepares a suggestion from it. The text may contain names of family members, including children, and anything else you write in it. We do not send your family member list or profiles to Mistral AI; names in a suggestion are matched to members only by our server. Before the first use, the app will ask for your explicit permission.",
+              "The AI only suggests: nothing is written to the calendar, tasks or shopping list until you confirm the suggestion yourself. Child accounts cannot use the feature.",
+              "Rodinka does not store the text you enter or the suggestion in its usage database. It keeps only technical usage records linked to your account and family (for example the time, number of suggested items, outcome and consumption) to enforce limits and costs; after 13 months they are replaced by anonymous monthly totals only.",
+              "The purpose is to make adding items and tasks easier; the legal basis is performance of the contract for using Rodinka, for a feature you start yourself. Mistral AI will process the text as our processor under a data processing agreement, with hosting in the EU, and before launch we will switch off the use of this data for model training. Under its terms the provider may keep inputs and outputs for a limited time, for example to protect against abuse, and parts of its infrastructure (for example a content delivery network and security services) may operate outside the EEA under contractual safeguards such as standard contractual clauses. We will verify and describe the exact retention terms before launch. The rights described in Your rights and contact apply."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
             "heading": "Processors",
             "paragraphs": [
               "The following services are involved in running Rodinka:"
@@ -1233,7 +1274,8 @@
               "LocationIQ — address suggestions when searching for a place, and turning the coordinates read for a one-time Safe arrival location share into a readable place or address label (reverse geocoding); the coordinates are passed through our server.",
               "Google — only if you choose Google sign-in.",
               "Mapy.com, OpenStreetMap, Apple Maps, Google Maps — opened as an external link when you ask for directions.",
-              "Browser and device push services — notification delivery; the payload is encrypted."
+              "Browser and device push services — notification delivery; the payload is encrypted.",
+              "Mistral AI SAS (France) — the upcoming optional Smart Quick Add feature; no family data is sent to it until the feature is available."
             ],
             "links": []
           },
@@ -1324,7 +1366,7 @@
       "businessRegisterLabel": "Einzelunternehmer, eingetragen im Gewerberegister; Registerbehörde",
       "phoneLabel": "Telefon",
       "notVatRegistered": "Der Anbieter ist nicht umsatzsteuerpflichtig.",
-      "lastUpdated": "Zuletzt aktualisiert: 10. November 2026",
+      "lastUpdated": "Zuletzt aktualisiert: 11. November 2026",
       "terms": {
         "title": "Nutzungsbedingungen und Inhaltsregeln",
         "intro": "Diese Bedingungen erklären die Nutzung von Rodinka, welche Inhalte nicht hineingehören und wie das Rodinka-Pro-Abonnement funktioniert.",
@@ -1655,6 +1697,19 @@
             "links": []
           },
           {
+            "id": "smart-quick-add",
+            "heading": "Intelligentes Hinzufügen mit KI (geplante Funktion)",
+            "paragraphs": [
+              "Wir bereiten eine optionale Funktion vor, Intelligentes Hinzufügen: Aus einem kurzen Text, den ein erwachsenes Familienmitglied eingibt oder diktiert, schlägt sie Einträge für die Einkaufsliste und Aufgaben vor. Die Funktion ist noch nicht öffentlich verfügbar, und Rodinka verarbeitet dafür bisher keine Familiendaten. Bevor wir die Funktion bereitstellen, aktualisieren wir diesen Abschnitt.",
+              "Nach der Bereitstellung wird der Text, den du in die Funktion eingibst, über unseren Server an Mistral AI SAS (Frankreich) gesendet, das daraus einen Vorschlag erstellt. Der Text kann Namen von Familienmitgliedern enthalten, auch von Kindern, sowie alles Weitere, was du hineinschreibst. Die Mitgliederliste und Profile deiner Familie senden wir nicht an Mistral AI; Namen im Vorschlag ordnet erst unser Server den Mitgliedern zu. Vor der ersten Nutzung bittet dich die App um deine ausdrückliche Erlaubnis.",
+              "Die KI macht nur Vorschläge: In Kalender, Aufgaben oder Einkaufsliste wird nichts eingetragen, bevor du den Vorschlag selbst bestätigst. Kinderkonten können die Funktion nicht nutzen.",
+              "Rodinka speichert den eingegebenen Text und den Vorschlag nicht in ihrer Nutzungsdatenbank. Gespeichert werden nur technische, mit deinem Konto und deiner Familie verknüpfte Nutzungsdatensätze (zum Beispiel Zeitpunkt, Anzahl vorgeschlagener Einträge, Ergebnis und Verbrauch), um Limits und Kosten zu überwachen; nach 13 Monaten werden sie durch anonyme Monatssummen ersetzt.",
+              "Zweck ist ein einfacheres Erfassen von Einträgen und Aufgaben; Rechtsgrundlage ist die Erfüllung des Vertrags über die Nutzung von Rodinka bei einer Funktion, die du selbst startest. Mistral AI wird den Text als unser Auftragsverarbeiter auf Grundlage eines Auftragsverarbeitungsvertrags mit Hosting in der EU verarbeiten, und vor dem Start schalten wir dort die Nutzung dieser Daten zum Modelltraining ab. Nach seinen Bedingungen kann der Anbieter Ein- und Ausgaben für begrenzte Zeit speichern, etwa zum Schutz vor Missbrauch, und Teile seiner Infrastruktur (etwa ein Content-Delivery-Netzwerk und Sicherheitsdienste) können auf Grundlage vertraglicher Garantien wie Standardvertragsklauseln auch außerhalb des EWR tätig sein. Die genauen Speicherbedingungen prüfen und beschreiben wir vor dem Start. Es gelten die im Abschnitt Deine Rechte und Kontakt beschriebenen Rechte."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
             "heading": "Auftragsverarbeiter",
             "paragraphs": [
               "Folgende Dienste sind am Betrieb von Rodinka beteiligt:"
@@ -1669,7 +1724,8 @@
               "LocationIQ – Adressvorschläge bei der Ortssuche und Umwandlung der für eine einmalige Standortfreigabe zur sicheren Ankunft ausgelesenen Koordinaten in einen lesbaren Orts- oder Adressnamen (Reverse Geocoding); die Koordinaten werden über unseren Server übermittelt.",
               "Google – nur wenn du die Google-Anmeldung auswählst.",
               "Mapy.com, OpenStreetMap, Apple Karten und Google Maps – werden als externer Link geöffnet, wenn du eine Wegbeschreibung anforderst.",
-              "Browser- und Geräte-Pushdienste – Zustellung von Benachrichtigungen; die Nutzlast ist verschlüsselt."
+              "Browser- und Geräte-Pushdienste – Zustellung von Benachrichtigungen; die Nutzlast ist verschlüsselt.",
+              "Mistral AI SAS (Frankreich) – geplante optionale Funktion Intelligentes Hinzufügen; solange sie nicht bereitgestellt ist, werden keine Familiendaten übermittelt."
             ],
             "links": []
           },
@@ -1760,7 +1816,7 @@
       "businessRegisterLabel": "Jednoosobowa działalność gospodarcza wpisana do rejestru działalności; organ prowadzący rejestr",
       "phoneLabel": "Telefon",
       "notVatRegistered": "Usługodawca nie jest płatnikiem VAT.",
-      "lastUpdated": "Ostatnia aktualizacja: 10 listopada 2026 r.",
+      "lastUpdated": "Ostatnia aktualizacja: 11 listopada 2026 r.",
       "terms": {
         "title": "Warunki korzystania i zasady dotyczące treści",
         "intro": "Warunki opisują korzystanie z Rodinki, treści, których nie należy w niej umieszczać, oraz działanie subskrypcji Rodinka Pro.",
@@ -2091,6 +2147,19 @@
             "links": []
           },
           {
+            "id": "smart-quick-add",
+            "heading": "Inteligentne dodawanie z AI (planowana funkcja)",
+            "paragraphs": [
+              "Przygotowujemy opcjonalną funkcję Inteligentne dodawanie: na podstawie krótkiego tekstu, który dorosły członek rodziny wpisze lub podyktuje, proponuje pozycje listy zakupów i zadania. Funkcja nie jest jeszcze publicznie dostępna, a Rodinka nie przetwarza w jej ramach żadnych danych rodzin. Zanim udostępnimy funkcję, zaktualizujemy tę sekcję.",
+              "Po udostępnieniu tekst wpisany przez Ciebie w funkcji zostanie wysłany przez nasz serwer do Mistral AI SAS (Francja), który przygotuje na jego podstawie propozycję. Tekst może zawierać imiona członków rodziny, także dzieci, oraz wszystko inne, co w nim napiszesz. Nie wysyłamy do Mistral AI listy członków rodziny ani ich profili; imiona w propozycji przypisuje do członków dopiero nasz serwer. Przed pierwszym użyciem aplikacja poprosi Cię o wyraźne pozwolenie.",
+              "AI tylko proponuje: nic nie zostanie zapisane w kalendarzu, zadaniach ani na liście zakupów, dopóki sam nie potwierdzisz propozycji. Konta dzieci nie mogą korzystać z tej funkcji.",
+              "Rodinka nie zapisuje wpisanego tekstu ani propozycji w swojej bazie danych użycia. Przechowuje tylko techniczne zapisy użycia powiązane z Twoim kontem i rodziną (na przykład czas, liczbę proponowanych pozycji, wynik i zużycie), aby pilnować limitów i kosztów; po 13 miesiącach zastępują je wyłącznie anonimowe sumy miesięczne.",
+              "Celem jest ułatwienie dodawania pozycji i zadań; podstawą prawną jest wykonanie umowy o korzystanie z Rodinki w przypadku funkcji, którą sam uruchomisz. Mistral AI będzie przetwarzać tekst jako nasz podmiot przetwarzający na podstawie umowy powierzenia, z hostingiem w UE, a przed uruchomieniem wyłączymy u niego wykorzystywanie tych danych do trenowania modeli. Zgodnie ze swoimi warunkami dostawca może przechowywać dane wejściowe i wyjściowe przez ograniczony czas, na przykład w celu ochrony przed nadużyciami, a część jego infrastruktury (na przykład sieć dostarczania treści i usługi bezpieczeństwa) może działać także poza EOG na podstawie zabezpieczeń umownych, takich jak standardowe klauzule umowne. Dokładne warunki przechowywania sprawdzimy i opiszemy przed uruchomieniem. Obowiązują prawa opisane w sekcji Twoje prawa i kontakt."
+            ],
+            "items": [],
+            "links": []
+          },
+          {
             "heading": "Podmioty przetwarzające",
             "paragraphs": [
               "W działaniu Rodinki uczestniczą następujące usługi:"
@@ -2105,7 +2174,8 @@
               "LocationIQ — podpowiedzi adresów podczas wyszukiwania miejsca oraz zamiana współrzędnych odczytanych przy jednorazowym udostępnianiu lokalizacji na czytelną nazwę miejsca lub adres (geokodowanie odwrotne); współrzędne przechodzą przez nasz serwer.",
               "Google — tylko jeśli wybierzesz logowanie przez Google.",
               "Mapy.com, OpenStreetMap, Apple Maps i Google Maps — otwierane jako link zewnętrzny na Twoje żądanie wyznaczenia trasy.",
-              "Usługi push przeglądarki i urządzenia — dostarczanie powiadomień; ich ładunek jest szyfrowany."
+              "Usługi push przeglądarki i urządzenia — dostarczanie powiadomień; ich ładunek jest szyfrowany.",
+              "Mistral AI SAS (Francja) — planowana opcjonalna funkcja Inteligentne dodawanie; dopóki nie zostanie udostępniona, nie są do niego wysyłane żadne dane rodzin."
             ],
             "links": []
           },
