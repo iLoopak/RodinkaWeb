@@ -25,3 +25,11 @@ jobs:
           python tools/validate_seo.py
           python tools/validate_analytics.py
           python tools/validate_legal.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test comparison and consent-gated CTA behavior
+        run: |
+          python -m unittest discover -s tools -p "test_*.py"
+          node --check script.js
+          node tools/test_cta_analytics.cjs

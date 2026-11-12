@@ -60,9 +60,9 @@ AREAS = {
 }
 
 # Rodinka's side of every table, checked against the released app on VERIFIED_ON
-# (production client bundle and Rodinka/docs/PRODUCT_OVERVIEW.md). Native store
-# apps, external calendar sync and Safe arrival are not released and must not
-# be presented as available.
+# (production client bundle and Rodinka/docs/PRODUCT_OVERVIEW.md). Store
+# availability was verified on 2026-11-12. External calendar sync and Safe
+# arrival must not be presented as available.
 RODINKA = {
     "calendar": ("yes", t(
         "Měsíční, týdenní i agendový pohled. U události je vidět, koho se týká a kdo ji zajišťuje.",
@@ -140,9 +140,9 @@ RODINKA = {
         "Rodinka does not connect to Google, Apple or Outlook calendars yet.",
     )),
     "platforms": ("info", t(
-        "Webová aplikace na telefonu, tabletu i počítači; na plochu ji přidáte jako aplikaci (PWA). Ve Windows také z Microsoft Store.",
-        "Webová aplikácia v telefóne, tablete aj počítači; na plochu ju pridáte ako aplikáciu (PWA). Vo Windows aj z Microsoft Store.",
-        "A web app on phones, tablets and computers that you can add to your home screen (PWA). On Windows, also from the Microsoft Store.",
+        "Aplikace pro iOS v App Storu a pro Android na Google Play. Plnohodnotná webová aplikace na telefonu, tabletu i počítači, také jako PWA. Ve Windows i z Microsoft Store.",
+        "Aplikácia pre iOS v App Store a pre Android na Google Play. Plnohodnotná webová aplikácia v telefóne, tablete aj počítači, aj ako PWA. Vo Windows aj z Microsoft Store.",
+        "An iOS app on the App Store and an Android app on Google Play. A full web app on phones, tablets and computers, also as a PWA. On Windows, also from the Microsoft Store.",
     )),
     "offline": ("yes", t(
         "Dnes, kalendář, úkoly a nákup jdou měnit offline; jídelníček, vzpomínky a výlety si přečtete.",

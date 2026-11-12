@@ -9,6 +9,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from validate_seo import FAMILIES
+from generate_site import STORE_URLS
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,9 +19,9 @@ EXPECTED_PAGES = sum(len(variants) for variants in FAMILIES.values())
 GTM_ID = "GTM-5FM9NJHK"
 GA4_ID = "G-LMZQ91Y9NP"
 APP_ORIGIN = "https://app.mojerodinka.cz"
-ALLOWED_LOCATIONS = {"header", "hero", "content", "video", "footer"}
+ALLOWED_LOCATIONS = {"header", "hero", "content", "video", "footer", "pricing"}
 # The app's public legal pages are linked as documents, not as app CTAs, so
-# they carry no analytics location and never send cta_app_click.
+# they carry no analytics location and never send web_app_cta_click.
 APP_LEGAL_PATHS = {"/terms", "/privacy", "/support"}
 EXPECTED_COPY = {
     "cs": ("Povolit analytiku", "Odmítnout", "Nastavení cookies"),
@@ -37,6 +38,7 @@ class AnalyticsParser(HTMLParser):
         self.language = ""
         self.app_links: list[dict[str, str]] = []
         self.legal_links: list[dict[str, str]] = []
+        self.store_links: list[dict[str, str]] = []
         self.has_consent_panel = False
         self.has_cookie_settings = False
 
@@ -50,6 +52,8 @@ class AnalyticsParser(HTMLParser):
             self.has_cookie_settings = True
         elif tag == "a" and attrs.get("href"):
             destination = urlparse(attrs["href"])
+            if "data-store-platform" in attrs:
+                self.store_links.append(attrs)
             if f"{destination.scheme}://{destination.netloc}" == APP_ORIGIN:
                 if destination.path in APP_LEGAL_PATHS:
                     self.legal_links.append(attrs)
@@ -91,6 +95,14 @@ def main() -> int:
 
         if not parser.app_links:
             errors.append(f"{relative}: no application CTA links found")
+        for platform in ("ios", "android"):
+            if not any(a.get("data-store-platform") == platform for a in parser.store_links):
+                errors.append(f"{relative}: missing {platform} download CTA")
+        for attrs in parser.store_links:
+            if attrs.get("href") != STORE_URLS.get(attrs.get("data-store-platform")):
+                errors.append(f"{relative}: store URL differs from verified configuration")
+            if attrs.get("data-analytics-location") not in ALLOWED_LOCATIONS:
+                errors.append(f"{relative}: invalid store placement")
         for attrs in parser.legal_links:
             if "data-analytics-location" in attrs:
                 errors.append(f"{relative}: legal page link {attrs.get('href')!r} must not be tracked as an app CTA")
@@ -101,11 +113,12 @@ def main() -> int:
 
     script = (ROOT / "script.js").read_text(encoding="utf-8")
     for token in (
-        "cta_app_click",
-        "cta_location",
-        "cta_text",
-        "page_path",
-        "page_language",
+        "web_app_cta_click",
+        "store_cta_click",
+        "platform",
+        "placement",
+        "locale",
+        "consentConfig.analytics !== 'granted'",
         "rodinka_analytics_consent",
         "analytics_storage",
     ):

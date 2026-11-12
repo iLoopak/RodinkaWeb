@@ -19,6 +19,25 @@ import locale_pl
 ROOT = Path(__file__).resolve().parent
 SITE_URL = "https://mojerodinka.cz"
 APP_URL = "https://app.mojerodinka.cz"
+STORE_URLS = {
+    "ios": "https://apps.apple.com/cz/app/rodinka-family-planner/id6827545676",
+    "android": "https://play.google.com/store/apps/details?id=cz.rodinka.app",
+}
+# Official localized artwork; the destination URLs stay exactly as verified.
+STORE_COPY = {
+    "cs": ("Stáhnout aplikaci", "Nebo pokračovat ve webové aplikaci", "Přihlásit se", "Stáhnout v App Storu", "Stáhnout na Google Play"),
+    "sk": ("Stiahnuť aplikáciu", "Alebo pokračovať vo webovej aplikácii", "Prihlásiť sa", "Stiahnuť v App Store", "Stiahnuť na Google Play"),
+    "en": ("Download the app", "Or continue in the web app", "Sign in", "Download on the App Store", "Get it on Google Play"),
+    "de": ("App herunterladen", "Oder in der Web-App fortfahren", "Anmelden", "Im App Store laden", "Jetzt bei Google Play"),
+    "pl": ("Pobierz aplikację", "Lub przejdź do aplikacji internetowej", "Zaloguj się", "Pobierz w App Store", "Pobierz z Google Play"),
+}
+STORE_INTRO = {
+    "cs": ("Stáhněte si Rodinku pro iOS nebo Android. Řeknete, kdo do rodiny patří a s čím má pomáhat, a můžete začít. K dispozici je i plnohodnotná webová verze.", "Na počítači můžete používat webovou aplikaci bez instalace. Ve Windows je alternativou také Microsoft Store."),
+    "sk": ("Stiahnite si Rodinku pre iOS alebo Android. Poviete, kto do rodiny patrí a s čím má pomáhať, a môžete začať. K dispozícii je aj plnohodnotná webová verzia.", "Na počítači môžete používať webovú aplikáciu bez inštalácie. Vo Windows je alternatívou aj Microsoft Store."),
+    "en": ("Download Rodinka for iOS or Android. Tell it who is in your family and what you need help with, and get started. The full web version is also available.", "On a computer, use the web app without installing anything. On Windows, the Microsoft Store is another option."),
+    "de": ("Lade Rodinka für iOS oder Android herunter. Sag uns, wer zu deiner Familie gehört und wobei Rodinka helfen soll, und leg los. Die vollwertige Webversion ist ebenfalls verfügbar.", "Am Computer kannst du die Web-App ohne Installation nutzen. Unter Windows ist auch der Microsoft Store eine Alternative."),
+    "pl": ("Pobierz Rodinkę na iOS lub Androida. Wskaż, kto należy do rodziny i w czym aplikacja ma pomagać, i zacznij. Dostępna jest też pełna wersja webowa.", "Na komputerze możesz korzystać z aplikacji webowej bez instalacji. W systemie Windows alternatywą jest też Microsoft Store."),
+}
 SOCIAL_PROFILES = (
     ("Instagram", "https://www.instagram.com/mojerodinka.cz/", "social-instagram"),
     ("Facebook", "https://www.facebook.com/profile.php?id=61595033996266", "social-facebook"),
@@ -30,7 +49,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20261112a"
+ASSET_VERSION = "20261112b"
 
 # Self-hosted webfont, built by tools/build_fonts.py. The app sets every word in
 # Manrope, so the site does too: one variable file (wght 500-800) carries body,
@@ -1829,6 +1848,19 @@ def schema(page_key: str, locale: str, name: str, description: str) -> str:
                 "operatingSystem": "Web",
                 "isPartOf": {"@id": f"{SITE_URL}/#website"},
             },
+            *[
+                {
+                    "@type": "MobileApplication",
+                    "@id": f"{SITE_URL}/#{platform}-app",
+                    "name": "Rodinka",
+                    "url": url,
+                    "installUrl": url,
+                    "operatingSystem": "iOS" if platform == "ios" else "Android",
+                    "applicationCategory": "LifestyleApplication",
+                    "isPartOf": {"@id": f"{SITE_URL}/#website"},
+                }
+                for platform, url in STORE_URLS.items()
+            ],
             {
                 "@type": "WebPage",
                 "@id": f"{canonical(path)}#webpage",
@@ -2194,6 +2226,22 @@ def language_switcher(page_key: str, locale: str) -> str:
 NAV_KEYS = ("calendar", "chores", "shopping", "meals", "trips", "memories")
 
 
+def store_buttons(locale: str, placement: str) -> str:
+    download, web, _, apple, google = STORE_COPY[locale]
+    badges = "".join(
+        f'<a class="store-badge store-badge--{platform}" href="{STORE_URLS[platform]}" '
+        f'data-store-platform="{platform}" data-analytics-location="{placement}">'
+        f'<img src="/assets/stores/{asset}-{locale}.{extension}" alt="{esc(label)}" '
+        f'width="{width}" height="{height}" /></a>'
+        for platform, asset, extension, label, width, height in (
+            ("ios", "apple", "svg", apple, "119.66407", 40),
+            ("android", "google", "png", google, 646, 250),
+        )
+    )
+    return (f'<div class="store-cta"><div class="store-buttons" role="group" aria-label="{esc(download)}">{badges}</div>'
+            f'<a class="web-app-link" href="{APP_URL}" data-analytics-location="{placement}">{esc(web)}</a></div>')
+
+
 def site_header(page_key: str, locale: str) -> str:
     cfg = LOCALES[locale]
     current = ' aria-current="page"'
@@ -2208,7 +2256,7 @@ def site_header(page_key: str, locale: str) -> str:
         <button class="menu-button" type="button" aria-label="{esc(cfg["menu"])}" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
         <nav class="nav" id="main-navigation" aria-label="{esc(cfg["primary_nav"])}">
           {links}
-          <a class="nav-cta" href="{APP_URL}" data-analytics-location="header">{esc(cfg["open_app"])} <span aria-hidden="true">→</span></a>
+          <a class="nav-download" href="#download">{esc(STORE_COPY[locale][0])}</a><a class="nav-login" href="{APP_URL}" data-analytics-location="header">{esc(STORE_COPY[locale][2])}</a>
           <div class="nav-preferences">
             {language_switcher(page_key, locale)}
             <button class="theme-switcher" type="button" data-theme-switch data-light-label="{esc(cfg['theme_light_label'])}" data-dark-label="{esc(cfg['theme_dark_label'])}" aria-label="{esc(cfg['theme_dark_label'])}" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
@@ -2233,7 +2281,8 @@ def site_footer(locale: str) -> str:
         f'<li><a href="{esc(info_link(key, locale)[0])}">{esc(INFO_COMMON[locale]["links"][key])}</a></li>'
         for key in ("pricing", "refunds", "terms", "privacy")
     )
-    return f'''    <footer class="site-footer">
+    return f'''    <footer class="site-footer" id="download">
+      <div class="footer-download"><h2>{esc(STORE_COPY[locale][0])}</h2>{store_buttons(locale, "footer")}</div>
       <div class="site-footer-inner">
         <div class="footer-brand">
           <a class="brand" href="{cfg["home_path"]}">{STATIC_MARK}<span>Rodinka</span></a><span class="serif">{esc(cfg["claim"])}</span><p>{esc(cfg["footer_text"])}</p>
@@ -2243,7 +2292,7 @@ def site_footer(locale: str) -> str:
           </div>
         </div>
         <nav class="footer-nav" aria-label="{esc(cfg["features"])}"><h2>{esc(cfg["features"])}</h2><ul>{feature_links}</ul></nav>
-        <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(cfg["open_app"])}</a></li><li><a href="{cfg["home_path"]}#rodinka-pro">Rodinka Pro</a></li><li><a href="{PATHS["compare"][locale]}">{esc(LLMS_LABELS[locale]["compare"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
+        <nav class="footer-nav" aria-label="{esc(cfg["about"])}"><h2>{esc(cfg["about"])}</h2><ul><li><a href="{PATHS["app"][locale]}">{esc(cfg["app_label"])}</a></li><li><a href="{APP_URL}" data-analytics-location="footer">{esc(STORE_COPY[locale][2])}</a></li><li><a href="{cfg["home_path"]}#rodinka-pro">Rodinka Pro</a></li><li><a href="{PATHS["compare"][locale]}">{esc(LLMS_LABELS[locale]["compare"])}</a></li><li><button class="footer-link" type="button" data-cookie-settings>{esc(cfg["cookie_settings"])}</button></li></ul></nav>
         <nav class="footer-nav" aria-label="{esc(INFO_COMMON[locale]["legal_kicker"].capitalize())}"><h2>{esc(INFO_COMMON[locale]["legal_kicker"].capitalize())}</h2><ul>{footer_legal_links}</ul></nav>
       </div>
       <p class="copyright">{esc(cfg["copyright"])}</p>
@@ -2394,7 +2443,7 @@ def render_focus(locale: str) -> str:
         link_items = "".join(f'<a class="card-link" href="{PATHS[key][locale]}">{esc(label)} <span aria-hidden="true">→</span></a>' for key, label in links)
         cards += f'<article class="focus-card reveal" data-tone="{tone}">{tone_icon(tone, glyph)}<h3>{esc(title)}</h3><p>{esc(text)}</p><ul class="chips">{chip_items}</ul><div class="card-links">{link_items}</div></article>'
     cta_title, cta_text = data["cta"]
-    cards += f'<article class="focus-card focus-card--cta reveal"><h3>{esc(cta_title)}</h3><p>{esc(cta_text)}</p><a class="button button-primary" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a></article>'
+    cards += f'<article class="focus-card focus-card--cta reveal"><h3>{esc(cta_title)}</h3><p>{esc(cta_text)}</p><a class="button button-primary" href="#download">{esc(STORE_COPY[locale][0])} <span aria-hidden="true">→</span></a></article>'
     return f'''      <section class="section" id="funkce" aria-labelledby="focus-title">
         <div class="section-inner">
           <div class="section-head reveal"><p class="section-kicker">{esc(data["kicker"])}</p><h2 class="section-title" id="focus-title">{esc(data["title"])}</h2><p class="section-lead">{esc(data["lead"])}</p></div>
@@ -2522,7 +2571,7 @@ def render_home_spot(locale: str) -> str:
         <div class="spot reveal">
           <div class="spot-frame">
             <video class="spot-video" controls playsinline preload="none" aria-labelledby="spot-title" data-src-tall="{stem}-9x16.mp4"><source src="{stem}-16x9.mp4" type="video/mp4" /></video>
-            <a class="spot-cta" href="{APP_URL}" data-analytics-location="video" data-from="{spot["cta_from"]}" data-width="{spot["cta_width"]}" hidden>{esc(spot["cta"])}</a>
+            <a class="spot-cta" href="#download" data-from="{spot["cta_from"]}" data-width="{spot["cta_width"]}" hidden>{esc(spot["cta"])}</a>
             <button class="spot-cover" type="button" aria-label="{esc(spot["label"])}">
               <picture><source media="{SPOT_TALL_MEDIA}" srcset="{stem}-9x16.webp" width="720" height="1280" /><img src="{stem}-16x9.webp" width="1600" height="900" alt="" loading="lazy" decoding="async" /></picture>
               <span class="spot-play" aria-hidden="true"><span class="spot-play-icon"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></svg></span><span><strong>{esc(spot["play"])}</strong><small>{esc(spot["meta"])}</small></span></span>
@@ -2621,7 +2670,7 @@ def render_home(locale: str) -> str:
             <h1>{esc(data["h1"])}</h1>
             <p class="brand-line">{esc(cfg["claim"])}</p>
             <p class="hero-lead">{esc(data["lead"])}</p>
-            <div class="hero-actions"><a class="button button-primary button-lg" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-to-funguje">{esc(data["how_link"])} <span aria-hidden="true">↓</span></a></div>
+            <div class="hero-actions">{store_buttons(locale, "hero")} <a class="text-link" href="#jak-to-funguje">{esc(data["how_link"])} <span aria-hidden="true">↓</span></a></div>
             <ul class="hero-proof">{proof}</ul>
             <div class="trust-row">{DEMO_MARK}<p><strong>{esc(data["trust_title"])}</strong><br />{esc(data["trust_text"])}</p></div>
           </div>
@@ -2642,7 +2691,7 @@ def render_home(locale: str) -> str:
 {render_directory(locale)}
       <section class="section band"><figure class="family-quote reveal">{STATIC_MARK}<blockquote><p>{esc(data["quote"])}</p></blockquote><figcaption>{esc(data["quote_by"])}</figcaption></figure></section>
 {render_home_pro(locale)}
-      <section class="cta-section" id="vyzkouset"><div class="cta-card reveal"><p class="section-kicker">{esc(data["cta_kicker"])}</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="cta-secondary" href="{APP_URL}" data-analytics-location="content">{esc(data["login"])}</a></div><ol class="mini-journey">{journey}</ol><div class="install-options"><h3>{esc(data["install_title"])}</h3><p>{esc(data["install_text"])}</p><a class="store-link" href="https://get.microsoft.com/installer/download/9nbxf0lqbmbj?referrer=appbadge">{esc(data["store"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(data["fine_print"])}</small></div></section>'''
+      <section class="cta-section" id="vyzkouset"><div class="cta-card reveal"><p class="section-kicker">{esc(data["cta_kicker"])}</p><h2>{esc(data["cta_title"])}</h2><p>{esc(STORE_INTRO[locale][0])}</p><div class="cta-actions">{store_buttons(locale, "content")}</div><ol class="mini-journey">{journey}</ol><div class="install-options"><h3>{esc(data["install_title"])}</h3><p>{esc(STORE_INTRO[locale][1])}</p><a class="store-link" href="https://get.microsoft.com/installer/download/9nbxf0lqbmbj?referrer=appbadge">{esc(data["store"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(data["fine_print"])}</small></div></section>'''
     return page_shell("home", locale, data, main)
 
 
@@ -2660,7 +2709,7 @@ def render_topic(page_key: str, locale: str) -> str:
     problem_class = "content-section problem-section" + (" problem-section--short" if short else "")
     main = f'''      <article class="topic-page">
         <div class="topic-hero-wrap">
-          <header class="topic-hero"><nav class="breadcrumbs" aria-label="{esc(cfg["breadcrumb"])}"><a href="{cfg["home_path"]}">{esc(cfg["home"])}</a><span aria-hidden="true">/</span><span aria-current="page">{esc(LLMS_LABELS[locale][page_key])}</span></nav><p class="section-kicker">{tone_icon(tone, glyph)}{esc(data["eyebrow"])}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions"><a class="button button-primary button-lg" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#jak-pomaha">{esc(data["help_title"])} <span aria-hidden="true">↓</span></a></div></header>
+          <header class="topic-hero"><nav class="breadcrumbs" aria-label="{esc(cfg["breadcrumb"])}"><a href="{cfg["home_path"]}">{esc(cfg["home"])}</a><span aria-hidden="true">/</span><span aria-current="page">{esc(LLMS_LABELS[locale][page_key])}</span></nav><p class="section-kicker">{tone_icon(tone, glyph)}{esc(data["eyebrow"])}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions">{store_buttons(locale, "hero")} <a class="text-link" href="#jak-pomaha">{esc(data["help_title"])} <span aria-hidden="true">↓</span></a></div></header>
         </div>
 {render_direct_answer(page_key, locale)}
         <section class="{problem_class}"><div class="section-copy"><p class="section-kicker">{esc(data["eyebrow"])}</p><h2>{esc(data["problem_title"])}</h2>{"".join(f"<p>{esc(paragraph)}</p>" for paragraph in data["problem"])}</div>{short}<div class="scenario-grid">{scenarios}</div></section>
@@ -2668,7 +2717,7 @@ def render_topic(page_key: str, locale: str) -> str:
         <section class="content-section answers-section"><div class="section-copy"><h2>{esc(data["answers_title"])}</h2></div><div class="answers-list">{answers}</div></section>
         <aside class="related-section" aria-labelledby="related-title"><p class="section-kicker">{esc(cfg["related_kicker"])}</p><h2 id="related-title">{esc(cfg["related"])}</h2><ul class="related-grid">{related}</ul></aside>
       </article>
-      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(cfg["cta_note"])}</small></div></section>'''
+      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions">{store_buttons(locale, "pricing" if page_key == "pricing" else "content")} </div><small class="form-note">{esc(cfg["cta_note"])}</small></div></section>'''
     return page_shell(page_key, locale, data, main)
 
 
@@ -2793,14 +2842,14 @@ def compare_hero(page_key: str, locale: str, anchor: str, anchor_label: str) -> 
     cfg = LOCALES[locale]
     eyebrow = data.get("eyebrow") or cmp.COMMON[locale]["section"].upper()
     return f'''        <div class="topic-hero-wrap">
-          <header class="topic-hero">{render_breadcrumbs(page_key, locale)}<p class="section-kicker">{tone_icon("calendar", "compare")}{esc(eyebrow)}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions"><a class="button button-primary button-lg" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#{anchor}">{esc(anchor_label)} <span aria-hidden="true">↓</span></a></div></header>
+          <header class="topic-hero">{render_breadcrumbs(page_key, locale)}<p class="section-kicker">{tone_icon("calendar", "compare")}{esc(eyebrow)}</p><h1>{esc(data["h1"])}</h1><p class="topic-lead">{esc(data["lead"])}</p><div class="hero-actions">{store_buttons(locale, "hero")} <a class="text-link" href="#{anchor}">{esc(anchor_label)} <span aria-hidden="true">↓</span></a></div></header>
         </div>'''
 
 
 def compare_cta(page_key: str, locale: str) -> str:
     data = compare_copy(page_key, locale)
     cfg = LOCALES[locale]
-    return f'''      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(cfg["cta_note"])}</small></div></section>'''
+    return f'''      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions">{store_buttons(locale, "content")} </div><small class="form-note">{esc(cfg["cta_note"])}</small></div></section>'''
 
 
 def status_badge(status: str, locale: str) -> str:
@@ -3349,8 +3398,8 @@ def render_plans(locale: str) -> str:
     return f'''        <section class="content-section plans-section" id="plany" aria-labelledby="plans-title">
           <div class="section-copy"><h2 id="plans-title">{esc(data["plans_title"])}</h2></div>
           <div class="plan-grid">
-            <article class="plan-card surface" aria-labelledby="plan-free"><h3 id="plan-free">{esc(free["name"])}</h3><p class="plan-price"><strong>{esc(free["price"])}</strong> <span>{esc(free["period"])}</span></p><p class="plan-text">{esc(free["text"])}</p><ul class="plan-features">{free_features}</ul><div class="plan-action"><a class="button button-secondary" href="{APP_URL}" data-analytics-location="content">{esc(free["cta"])} <span aria-hidden="true">→</span></a></div></article>
-            <article class="plan-card plan-card--pro surface" aria-labelledby="plan-pro"><h3 id="plan-pro">{esc(pro["name"])}</h3><p class="plan-price"><strong>{esc(pro["price_status"])}</strong></p><p class="plan-text">{esc(pro["text"])}</p><ul class="plan-features">{pro_features}</ul><div class="plan-action"><a class="button button-primary" href="{APP_URL}" data-analytics-location="content">{esc(pro["cta"])} <span aria-hidden="true">→</span></a><small>{esc(pro["cta_note"])}</small></div></article>
+            <article class="plan-card surface" aria-labelledby="plan-free"><h3 id="plan-free">{esc(free["name"])}</h3><p class="plan-price"><strong>{esc(free["price"])}</strong> <span>{esc(free["period"])}</span></p><p class="plan-text">{esc(free["text"])}</p><ul class="plan-features">{free_features}</ul><div class="plan-action">{store_buttons(locale, "pricing")}</div></article>
+            <article class="plan-card plan-card--pro surface" aria-labelledby="plan-pro"><h3 id="plan-pro">{esc(pro["name"])}</h3><p class="plan-price"><strong>{esc(pro["price_status"])}</strong></p><p class="plan-text">{esc(pro["text"])}</p><ul class="plan-features">{pro_features}</ul><div class="plan-action"><a class="text-link" href="{APP_URL}" data-analytics-location="pricing">{esc(pro["cta"])} <span aria-hidden="true">→</span></a><small>{esc(pro["cta_note"])}</small></div></article>
           </div>
           <p class="plan-note">{esc(data["price_note"])}</p>
         </section>'''
@@ -3365,7 +3414,7 @@ def render_info(page_key: str, locale: str) -> str:
         for heading, paragraphs in data["sections"]
     )
     if page_key == "pricing":
-        actions = f'<a class="button button-primary button-lg" href="{APP_URL}" data-analytics-location="hero">{esc(cfg["start"])} <span aria-hidden="true">→</span></a><a class="text-link" href="#plany">{esc(data["plans_title"])} <span aria-hidden="true">↓</span></a>'
+        actions = f'{store_buttons(locale, "pricing")} <a class="text-link" href="#plany">{esc(data["plans_title"])} <span aria-hidden="true">↓</span></a>'
         plans = render_plans(locale)
     else:
         terms_url, _ = info_link("terms", locale)
@@ -3393,7 +3442,7 @@ def render_info(page_key: str, locale: str) -> str:
         <section class="content-section answers-section"><div class="answers-list">{sections}</div>{support}</section>
 {render_info_links(page_key, locale)}
       </article>
-      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions"><a class="app-cta" href="{APP_URL}" data-analytics-location="content">{esc(cfg["start"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(cfg["cta_note"])}</small></div></section>'''
+      <section class="cta-section"><div class="cta-card"><p class="section-kicker">Rodinka</p><h2>{esc(data["cta_title"])}</h2><p>{esc(data["cta_text"])}</p><div class="cta-actions">{store_buttons(locale, "pricing" if page_key == "pricing" else "content")} </div><small class="form-note">{esc(cfg["cta_note"])}</small></div></section>'''
     return page_shell(page_key, locale, data, main)
 
 

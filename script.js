@@ -177,20 +177,20 @@ document.addEventListener('click', (event) => {
     : null;
   if (!appLink) return;
 
+  // Do not queue or replay conversion events without analytics consent.
+  if (consentConfig.analytics !== 'granted') return;
   try {
+    const platform = appLink.dataset.storePlatform;
+    const isStore = platform === 'ios' || platform === 'android';
     const destination = new URL(appLink.href, window.location.href);
-    if (destination.origin !== 'https://app.mojerodinka.cz') return;
-
-    const textSource = appLink.cloneNode(true);
-    textSource.querySelectorAll('[aria-hidden="true"]').forEach((element) => element.remove());
+    if (!isStore && destination.origin !== 'https://app.mojerodinka.cz') return;
     window.dataLayer = window.dataLayer || [];
     if (typeof window.dataLayer.push !== 'function') return;
     window.dataLayer.push({
-      event: 'cta_app_click',
-      cta_location: appLink.dataset.analyticsLocation,
-      cta_text: textSource.textContent.replace(/\s+/g, ' ').trim(),
-      page_path: window.location.pathname,
-      page_language: document.documentElement.lang.split('-')[0],
+      event: isStore ? 'store_cta_click' : 'web_app_cta_click',
+      ...(isStore ? { platform } : {}),
+      placement: appLink.dataset.analyticsLocation,
+      locale: document.documentElement.lang.split('-')[0],
     });
   } catch (error) {
     // Navigation is never delayed or cancelled when analytics is unavailable.
