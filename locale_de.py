@@ -42,6 +42,31 @@ LOCALE = {
     "consent_reject": "Ablehnen",
 }
 
+PATHS = {
+    "home": "/de/",
+    "planner": "/de/familienplaner/",
+    "calendar": "/de/familienkalender/",
+    "shopping": "/de/gemeinsame-einkaufsliste/",
+    "chores": "/de/aufgaben-fuer-die-familie/",
+    "meals": "/de/essensplanung/",
+    "app": "/de/familienorganizer/",
+    "baby": "/de/vorbereitung-auf-ein-baby/",
+    "memories": "/de/familienerinnerungen/",
+    "documents": "/de/ablaufdaten-von-dokumenten/",
+    "trips": "/de/familienausfluege/",
+    "circle": "/de/grosse-familie/",
+    "compare": "/de/vergleich/",
+    "vs_familia": "/de/vergleich/rodinka-vs-familia/",
+    "vs_familywall": "/de/vergleich/rodinka-vs-familywall/",
+    "vs_cozi": "/de/vergleich/rodinka-vs-cozi/",
+    "best": "/de/beste-familienplaner/",
+    # Paddle reviews these exact public paths; they keep one slug in every language.
+    "pricing": "/de/pricing/",
+    "refunds": "/de/refund-policy/",
+    "terms": "/de/terms/",
+    "privacy": "/de/privacy/",
+}
+
 DIRECT_ANSWER_LABEL = "KURZE ANTWORT"
 SUPPORT_LABEL = "Rodinka-Support"
 CANONICAL_LABEL = "Aktuelles Dokument in der App Rodinka"
@@ -263,12 +288,12 @@ INVITE_MOCK = {
     "rows": (
         ("Wann", "Dienstag, 6. Oktober · 15:00"),
         ("Wo", "Schwimmbad Lužánky, Brno"),
-        ("Du begleitest", "Ema"),
+        ("Wen du begleitest", "Ema"),
         ("Hinweise", "Badeanzug und Handtuch sind im blauen Rucksack."),
     ),
-    "confirm": "Ja, ich gehe",
+    "confirm": "Ja, ich komme",
     "decline": "Ich kann nicht",
-    "privacy": "Diese Seite sieht nur, wer den Link hat. Ein Rodinka-Konto brauchst du nicht.",
+    "privacy": "Diese Seite ist nur für Personen mit dem Link sichtbar. Ein Rodinka-Konto ist nicht erforderlich.",
     "echo_label": "In Kláras Kalender",
     "echo": ("15:00", "Schwimmen", "Ema · Begleitung Jana", "bestätigt"),
     "caption": "Oma öffnet den Link auf ihrem Handy und antwortet mit einem Tippen. Die Eltern sehen sofort, dass der Termin bestätigt ist.",
@@ -434,7 +459,7 @@ TOPICS = {
         "help_title": "Wie Rodinka die große Familie einbindet",
         "help_intro": "Vier Möglichkeiten, die ihr einzeln nutzen könnt. Keine davon gibt jemandem Zugang zu eurer ganzen Familie, solange ihr die Person nicht als Mitglied einladet.",
         "steps": (
-            ("Begleitung per Link bestätigen", "Für einen Termin, bei dem jemand außerhalb der Familie die Kinder begleitet, erstellst du einen Link und schickst ihn auf dem üblichen Weg. Die Person sieht Titel, Zeit, Ort, deine Hinweise und, wenn du es erlaubst, die Namen der Kinder. Sie antwortet „Ja, ich gehe“ oder „Ich kann nicht“, auf Wunsch mit kurzer Notiz, und du siehst die Antwort am Termin."),
+            ("Begleitung per Link bestätigen", "Für einen Termin, bei dem jemand außerhalb der Familie die Kinder begleitet, erstellst du einen Link und schickst ihn auf dem üblichen Weg. Die Person sieht Titel, Zeit, Ort, deine Hinweise und, wenn du es erlaubst, die Namen der Kinder. Sie antwortet „Ja, ich komme“ oder „Ich kann nicht“, auf Wunsch mit kurzer Notiz, und du siehst die Antwort am Termin."),
             ("Helfende Personen mit eigener Anmeldung", "Wer regelmäßig hilft, kann ein eigenes Konto haben. Du lädst die Person per E-Mail ein, und in Rodinka sieht sie nur die Termine, für die ihr sie als Begleitung auswählt, und bestätigt jeden einzelnen. Den Zugang kannst du jederzeit entfernen."),
             ("Ein Konto in mehreren Familien", "Ein Konto kann zu mehr als einer Familie gehören – etwa zu deinem eigenen Haushalt und zur Familie deiner Eltern. Jede behält ihre eigenen Informationen und Einstellungen, und du wechselst in der Kopfzeile der App zwischen ihnen."),
             ("Ein Profil an ein Kind übergeben", "Wenn ein Kind eine eigene E-Mail-Adresse und ein eigenes Passwort nutzt, übergebt ihr ihm sein Profil. Erinnerungen, Meilensteine, Aufgaben und Taschengeld bleiben, und das Passwort, das ihr kanntet, funktioniert nicht mehr. Das Profil bleibt ein Kinderprofil mit denselben Regeln wie bisher."),

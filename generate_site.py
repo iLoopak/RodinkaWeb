@@ -12,6 +12,8 @@ import math
 from pathlib import Path
 
 import comparisons as cmp
+import locale_de
+import locale_pl
 
 
 ROOT = Path(__file__).resolve().parent
@@ -40,6 +42,11 @@ MANROPE_WOFF2 = "/assets/fonts/manrope-latin-ext-500-800.woff2"
 VS_KEYS = tuple(f"vs_{key}" for key in cmp.COMPETITOR_ORDER)
 COMPARE_KEYS = ("compare", *VS_KEYS, "best")
 
+# Website languages. Czech is the default at the root; every other language
+# lives under /<code>/. German and Polish copy comes from locale_de.py and
+# locale_pl.py and is merged in by install_locale() below.
+LOCALE_CODES = ("cs", "sk", "en", "de", "pl")
+
 TOPIC_KEYS = ("planner", "calendar", "circle", "chores", "shopping", "meals", "trips", "memories", "documents", "baby", "app")
 
 
@@ -66,7 +73,7 @@ LOCALES = {
         "language_label": "Jazyk webu",
         "theme_light_label": "Přepnout na světlý režim",
         "theme_dark_label": "Přepnout na tmavý režim",
-        "footer_text": "Rodinný plánovač pro kalendář, úkoly, nákupy, výlety i vzpomínky — pro celou rodinu i ty, kdo jí pomáhají. Česky, slovensky a anglicky.",
+        "footer_text": "Rodinný plánovač pro kalendář, úkoly, nákupy, výlety i vzpomínky — pro celou rodinu i ty, kdo jí pomáhají. Česky, slovensky, anglicky, německy a polsky.",
         "cta_note": "Otevře se Rodinka v prohlížeči. Bez platební karty a bez instalace.",
         "social_heading": "Sledujte Rodinku",
         "new_tab": "otevře se v nové kartě",
@@ -100,7 +107,7 @@ LOCALES = {
         "language_label": "Jazyk webu",
         "theme_light_label": "Prepnúť na svetlý režim",
         "theme_dark_label": "Prepnúť na tmavý režim",
-        "footer_text": "Rodinný plánovač pre kalendár, úlohy, nákupy, výlety aj spomienky — pre celú rodinu aj tých, ktorí jej pomáhajú. Po česky, slovensky a anglicky.",
+        "footer_text": "Rodinný plánovač pre kalendár, úlohy, nákupy, výlety aj spomienky — pre celú rodinu aj tých, ktorí jej pomáhajú. Po česky, slovensky, anglicky, nemecky a poľsky.",
         "cta_note": "Otvorí sa Rodinka v prehliadači. Bez platobnej karty a bez inštalácie.",
         "social_heading": "Sledujte Rodinku",
         "new_tab": "otvorí sa na novej karte",
@@ -134,7 +141,7 @@ LOCALES = {
         "language_label": "Website language",
         "theme_light_label": "Switch to light mode",
         "theme_dark_label": "Switch to dark mode",
-        "footer_text": "A family organizer for the calendar, chores, shopping, trips and memories — for the whole family and the people who help. In Czech, Slovak and English.",
+        "footer_text": "A family organizer for the calendar, chores, shopping, trips and memories — for the whole family and the people who help. In Czech, Slovak, English, German and Polish.",
         "cta_note": "Rodinka opens in your browser. No payment card, nothing to install.",
         "social_heading": "Follow Rodinka",
         "new_tab": "opens in a new tab",
@@ -147,6 +154,13 @@ LOCALES = {
         "consent_reject": "Reject",
     },
 }
+
+
+# Small per-language labels used by several templates.
+DIRECT_ANSWER_LABELS = {"cs": "STRUČNÁ ODPOVĚĎ", "sk": "STRUČNÁ ODPOVEĎ", "en": "DIRECT ANSWER"}
+SUPPORT_LABELS = {"cs": "Podpora Rodinky", "sk": "Podpora Rodinky", "en": "Rodinka support"}
+CANONICAL_LABELS = {"cs": "Aktuální dokument v aplikaci Rodinka", "sk": "Aktuálny dokument v aplikácii Rodinka", "en": "Current document in the Rodinka app"}
+LANGUAGE_SWITCH = {"cs": ("CZ", "Čeština"), "sk": ("SK", "Slovenčina"), "en": ("EN", "English")}
 
 
 PATHS = {
@@ -998,7 +1012,7 @@ HOME_TRUST = {
             ("image", "Fotky v soukromém úložišti", "Fotografie a skeny se členům rodiny zobrazují jen přes dočasné zabezpečené odkazy."),
             ("offline", "Funguje i bez signálu", "Dnes, kalendář, úkoly a nákup jdou měnit i offline a změny se po připojení dorovnají. Jídelníček, vzpomínky a tipy na výlety si přečtete i bez připojení."),
             ("bell", "Připomínky, které respektují noc", "Každý si nastaví tiché hodiny, kategorie připomínek i denní nebo týdenní souhrn."),
-            ("languages", "Česky, slovensky i anglicky", "Rozhraní je ve třech jazycích, ve světlém i tmavém vzhledu, na mobilu, tabletu i počítači."),
+            ("languages", "Pět jazyků", "Rozhraní je česky, slovensky, anglicky, německy a polsky, ve světlém i tmavém vzhledu, na mobilu, tabletu i počítači."),
         ),
     },
     "sk": {
@@ -1011,7 +1025,7 @@ HOME_TRUST = {
             ("image", "Fotky v súkromnom úložisku", "Fotografie a skeny sa členom rodiny zobrazujú len cez dočasné zabezpečené odkazy."),
             ("offline", "Funguje aj bez signálu", "Dnes, kalendár, úlohy a nákup sa dajú meniť aj offline a zmeny sa po pripojení dorovnajú. Jedálniček, spomienky a tipy na výlety si prečítate aj bez pripojenia."),
             ("bell", "Pripomienky, ktoré rešpektujú noc", "Každý si nastaví tiché hodiny, kategórie pripomienok aj denný alebo týždenný súhrn."),
-            ("languages", "Po česky, slovensky aj anglicky", "Rozhranie je v troch jazykoch, vo svetlom aj tmavom vzhľade, v mobile, tablete aj počítači."),
+            ("languages", "Päť jazykov", "Rozhranie je po česky, slovensky, anglicky, nemecky a poľsky, vo svetlom aj tmavom vzhľade, v mobile, tablete aj počítači."),
         ),
     },
     "en": {
@@ -1024,7 +1038,7 @@ HOME_TRUST = {
             ("image", "Photos in private storage", "Photos and scans are shown to family members only through temporary secured links."),
             ("offline", "Works without a signal", "Today, the calendar, chores and shopping can be changed offline and catch up once you reconnect. The meal plan, memories and trip ideas stay readable without a connection."),
             ("bell", "Reminders that respect the night", "Everyone sets their own quiet hours, reminder categories and a daily or weekly digest."),
-            ("languages", "Czech, Slovak and English", "The interface comes in three languages, in light and dark themes, on phones, tablets and computers."),
+            ("languages", "Five languages", "The interface comes in Czech, Slovak, English, German and Polish, in light and dark themes, on phones, tablets and computers."),
         ),
     },
 }
@@ -1786,7 +1800,7 @@ def output_path(path: str) -> Path:
 
 def alternates(page_key: str) -> str:
     lines = []
-    for locale in ("cs", "sk", "en"):
+    for locale in LOCALE_CODES:
         lines.append(f'    <link rel="alternate" hreflang="{locale}" href="{canonical(PATHS[page_key][locale])}" />')
     lines.append(f'    <link rel="alternate" hreflang="x-default" href="{canonical(PATHS[page_key]["cs"])}" />')
     return "\n".join(lines)
@@ -1803,7 +1817,7 @@ def schema(page_key: str, locale: str, name: str, description: str) -> str:
                 "url": f"{SITE_URL}/",
                 "name": "Rodinka",
                 "description": LOCALES[locale]["site_description"],
-                "inLanguage": ["cs", "sk", "en"],
+                "inLanguage": list(LOCALE_CODES),
             },
             {
                 "@type": "WebApplication",
@@ -1919,7 +1933,7 @@ def head(page_key: str, locale: str, data: dict) -> str:
     path = PATHS[page_key][locale]
     other_locales = "\n".join(
         f'    <meta property="og:locale:alternate" content="{LOCALES[other]["og_locale"]}" />'
-        for other in ("cs", "sk", "en") if other != locale
+        for other in LOCALE_CODES if other != locale
     )
     return f'''  <head>
     <meta charset="UTF-8" />
@@ -2167,10 +2181,10 @@ TOPIC_TONES = {
 # Page chrome
 
 def language_switcher(page_key: str, locale: str) -> str:
-    labels = {"cs": "CZ", "sk": "SK", "en": "EN"}
-    names = {"cs": "Čeština", "sk": "Slovenčina", "en": "English"}
+    labels = {code: label for code, (label, _) in LANGUAGE_SWITCH.items()}
+    names = {code: name for code, (_, name) in LANGUAGE_SWITCH.items()}
     links = []
-    for code in ("cs", "sk", "en"):
+    for code in LOCALE_CODES:
         current = ' aria-current="page"' if code == locale else ""
         href = canonical(PATHS[page_key][code]) if page_key in LEGAL_KEYS else PATHS[page_key][code]
         links.append(f'<a href="{href}" lang="{code}" hreflang="{code}" aria-label="{names[code]}"{current}>{labels[code]}</a>')
@@ -2299,7 +2313,6 @@ def invite_mock(locale: str) -> str:
 
 
 def render_direct_answer(page_key: str, locale: str) -> str:
-    labels = {"cs": "STRUČNÁ ODPOVĚĎ", "sk": "STRUČNÁ ODPOVEĎ", "en": "DIRECT ANSWER"}
     question, answer = DIRECT_ANSWERS[locale][page_key]
     if page_key in PRODUCT_PROOFS:
         figure = product_figure(page_key, locale)
@@ -2313,7 +2326,7 @@ def render_direct_answer(page_key: str, locale: str) -> str:
     figure_markup = f"\n        {figure}" if figure else ""
     return f'''      <section class="proof-section direct-answer{modifier}" aria-labelledby="direct-answer-{page_key}">
         <div class="proof-copy">
-          <p class="section-kicker">{labels[locale]}</p>
+          <p class="section-kicker">{DIRECT_ANSWER_LABELS[locale]}</p>
           <h2 id="direct-answer-{page_key}">{esc(question)}</h2>
           <p>{esc(answer)}</p>
         </div>{figure_markup}
@@ -2663,7 +2676,6 @@ def render_topic(page_key: str, locale: str) -> str:
 # Comparison section. Facts and copy come from comparisons.py; these functions
 # only lay them out with the topic pages' building blocks.
 
-DIRECT_ANSWER_LABELS = {"cs": "STRUČNÁ ODPOVĚĎ", "sk": "STRUČNÁ ODPOVEĎ", "en": "DIRECT ANSWER"}
 
 
 def compare_copy(page_key: str, locale: str) -> dict:
@@ -2954,7 +2966,7 @@ def render_sitemap() -> str:
     page_order = ("home", *TOPIC_KEYS, *COMPARE_KEYS, *INFO_KEYS)
     urls = "\n".join(
         f"  <url><loc>{canonical(PATHS[page_key][locale])}</loc></url>"
-        for locale in ("cs", "sk", "en")
+        for locale in LOCALE_CODES
         for page_key in page_order
     )
     return f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -2972,7 +2984,7 @@ LLMS_LABELS = {
     "en": {"home": "Rodinka", "planner": "Family planner", "calendar": "Family calendar", "shopping": "Shared shopping list", "chores": "Family chores", "meals": "Meal planning", "trips": "Family trips", "memories": "Family memories", "documents": "Document expiry reminders", "baby": "Preparing for a baby", "app": "Family organizer app", "circle": "Extended family and helpers", "compare": "Family planner comparison", "vs_familia": "Rodinka vs Familia", "vs_familywall": "Rodinka vs FamilyWall", "vs_cozi": "Rodinka vs Cozi", "best": "How to choose a family planner", "pricing": "Pricing", "refunds": "Refund policy", "terms": "Terms of use", "privacy": "Privacy policy"},
 }
 
-LLMS_SECTIONS = (("cs", "Czech (default)"), ("sk", "Slovak"), ("en", "English"))
+LLMS_SECTIONS = (("cs", "Czech (default)"), ("sk", "Slovak"), ("en", "English"), ("de", "German"), ("pl", "Polish"))
 
 
 def render_llms_txt() -> str:
@@ -3364,7 +3376,7 @@ def render_info(page_key: str, locale: str) -> str:
         plans = ""
     support = ""
     if page_key == "refunds":
-        support_label = {"cs": "Podpora Rodinky", "sk": "Podpora Rodinky", "en": "Rodinka support"}[locale]
+        support_label = SUPPORT_LABELS[locale]
         support = f'<p class="info-support"><a class="card-link" href="{SUPPORT_PAGE_URL}" target="_blank" rel="noopener">{esc(support_label)} <span aria-hidden="true">↗</span><span class="visually-hidden"> ({esc(cfg["new_tab"])})</span></a></p>'
     main = f'''      <article class="topic-page info-page">
         <div class="topic-hero-wrap">
@@ -3372,7 +3384,7 @@ def render_info(page_key: str, locale: str) -> str:
         </div>
       <section class="proof-section direct-answer proof-section--text" aria-labelledby="direct-answer-{page_key}">
         <div class="proof-copy">
-          <p class="section-kicker">{ {"cs": "STRUČNÁ ODPOVĚĎ", "sk": "STRUČNÁ ODPOVEĎ", "en": "DIRECT ANSWER"}[locale] }</p>
+          <p class="section-kicker">{DIRECT_ANSWER_LABELS[locale]}</p>
           <h2 id="direct-answer-{page_key}">{esc(question)}</h2>
           <p>{esc(answer)}</p>
         </div>
@@ -3496,7 +3508,7 @@ def render_legal(page_key: str, locale: str, legal: dict) -> str:
         operator_lines.append(f'<p>{esc(content["phoneLabel"])}: {esc(operator["contactPhone"])}</p>')
     operator_lines.append(f'<p><a href="mailto:{esc(operator["contactEmail"])}">{esc(operator["contactEmail"])}</a></p>')
     sections += f'<article class="answer" id="provozovatel"><h3>{esc(content["operatorHeading"])}</h3><div class="answer-body">{"".join(operator_lines)}</div></article>'
-    canonical_label = {"cs": "Aktuální dokument v aplikaci Rodinka", "sk": "Aktuálny dokument v aplikácii Rodinka", "en": "Current document in the Rodinka app"}[locale]
+    canonical_label = CANONICAL_LABELS[locale]
     intro = f'<p class="topic-lead">{legal_text(page["intro"], locale)}</p>' if page["intro"] else ""
     intro += f'<p><a href="{canonical(PATHS[page_key][locale])}">{esc(canonical_label)}</a></p>'
     main = f'''      <article class="topic-page info-page legal-page">
@@ -3505,7 +3517,7 @@ def render_legal(page_key: str, locale: str, legal: dict) -> str:
         </div>
       <section class="proof-section direct-answer proof-section--text" aria-labelledby="direct-answer-{page_key}">
         <div class="proof-copy">
-          <p class="section-kicker">{ {"cs": "STRUČNÁ ODPOVĚĎ", "sk": "STRUČNÁ ODPOVEĎ", "en": "DIRECT ANSWER"}[locale] }</p>
+          <p class="section-kicker">{DIRECT_ANSWER_LABELS[locale]}</p>
           <h2 id="direct-answer-{page_key}">{esc(question)}</h2>
           <p>{esc(answer)}</p>
         </div>
@@ -3516,9 +3528,38 @@ def render_legal(page_key: str, locale: str, legal: dict) -> str:
     return page_shell(page_key, locale, data, main)
 
 
+# ---------------------------------------------------------------------------
+# German and Polish. Their copy lives in locale_de.py and locale_pl.py with the
+# same shapes as the English entries above; install_locale() merges it into the
+# shared structures so every template renders five languages the same way.
+
+def install_locale(code: str, module) -> None:
+    LOCALES[code] = module.LOCALE
+    for key, path in module.PATHS.items():
+        PATHS[key][code] = path
+    OG_IMAGES[code] = f"/og-image-{code}.png"
+    DIRECT_ANSWER_LABELS[code] = module.DIRECT_ANSWER_LABEL
+    SUPPORT_LABELS[code] = module.SUPPORT_LABEL
+    CANONICAL_LABELS[code] = module.CANONICAL_LABEL
+    LANGUAGE_SWITCH[code] = module.LANGUAGE_SWITCH
+    for name in (
+        "DIRECT_ANSWERS", "HOME", "HOME_PHONE", "HOME_FOCUS", "HOME_START", "HOME_FAMILY_LAYER", "TRIP_MOCK",
+        "HOME_TRIPS_STORY", "HOME_MEMORY_STORY", "HOME_BABY_STORY", "HOME_CIRCLE", "INVITE_MOCK", "HOME_TRUST",
+        "HOME_PRO", "TOPICS", "LLMS_LABELS", "INFO_COMMON", "INFO_PAGES", "LEGAL_META",
+    ):
+        globals()[name][code] = getattr(module, name)
+    for key, (alt, caption) in module.PRODUCT_PROOFS.items():
+        PRODUCT_PROOFS[key]["alt"][code] = alt
+        PRODUCT_PROOFS[key]["caption"][code] = caption
+
+
+install_locale("de", locale_de)
+install_locale("pl", locale_pl)
+
+
 def main() -> None:
     legal = load_legal_content()
-    for locale in ("cs", "sk", "en"):
+    for locale in LOCALE_CODES:
         write_page(output_path(PATHS["home"][locale]), render_home(locale))
         for page_key in TOPIC_KEYS:
             write_page(output_path(PATHS[page_key][locale]), render_topic(page_key, locale))
@@ -3532,7 +3573,7 @@ def main() -> None:
             write_page(output_path(PATHS[page_key][locale]), render_legal(page_key, locale, legal))
     write_page(ROOT / "sitemap.xml", render_sitemap())
     write_page(ROOT / "llms.txt", render_llms_txt())
-    print(f"Generated {3 * (1 + len(TOPIC_KEYS) + len(COMPARE_KEYS) + len(INFO_KEYS) + len(LEGAL_KEYS))} localized HTML pages, sitemap.xml and llms.txt.")
+    print(f"Generated {len(LOCALE_CODES) * (1 + len(TOPIC_KEYS) + len(COMPARE_KEYS) + len(INFO_KEYS) + len(LEGAL_KEYS))} localized HTML pages, sitemap.xml and llms.txt.")
 
 
 if __name__ == "__main__":
