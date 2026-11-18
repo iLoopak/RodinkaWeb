@@ -777,7 +777,7 @@ COMPARISON_PAGES = {
                 "Ve verzi Free 10 AI kreditů měsíčně a jedna příloha k položce",
             ),
             "pricing": (
-                "Rodinka běží v prohlížeči na telefonu, tabletu i počítači a na plochu ji přidáte jako aplikaci; ve Windows ji najdete i v Microsoft Store. Rodinka Free je zdarma a bez platební karty. Rodinka Pro pro celou rodinu přidává další nástroje a víc místa na fotky; ceny zatím nezveřejňujeme a případnou nabídku uvidíte v aplikaci.",
+                "Rodinka je v App Storu a na Google Play a na počítači běží jako plnohodnotná webová aplikace; ve Windows ji najdete i v Microsoft Store. Rodinka Free je zdarma a bez platební karty. Rodinka Pro pro celou rodinu přidává další nástroje a víc místa na fotky; ceny zatím nezveřejňujeme a případnou nabídku uvidíte v aplikaci.",
                 "Familia nabízí aplikace pro iPhone, iPad a Android; webová verze patří k tarifu Smart. Free je zdarma, Smart je měsíční předplatné pro celou rodinu. Web uvádí cenu se symbolem $ bez kódu měny a upozorňuje, že ceny v App Store se liší podle země, proto částku neuvádíme.",
             ),
             "faq": (
@@ -838,7 +838,7 @@ COMPARISON_PAGES = {
                 "Vo verzii Free 10 AI kreditov mesačne a jedna príloha k položke",
             ),
             "pricing": (
-                "Rodinka beží v prehliadači v telefóne, tablete aj počítači a na plochu ju pridáte ako aplikáciu; vo Windows ju nájdete aj v Microsoft Store. Rodinka Free je zadarmo a bez platobnej karty. Rodinka Pro pre celú rodinu pridáva ďalšie nástroje a viac miesta na fotky; ceny zatiaľ nezverejňujeme a prípadnú ponuku uvidíte v aplikácii.",
+                "Rodinka je v App Store a na Google Play a na počítači beží ako plnohodnotná webová aplikácia; vo Windows ju nájdete aj v Microsoft Store. Rodinka Free je zadarmo a bez platobnej karty. Rodinka Pro pre celú rodinu pridáva ďalšie nástroje a viac miesta na fotky; ceny zatiaľ nezverejňujeme a prípadnú ponuku uvidíte v aplikácii.",
                 "Familia ponúka aplikácie pre iPhone, iPad a Android; webová verzia patrí k tarifu Smart. Free je zadarmo, Smart je mesačné predplatné pre celú rodinu. Web uvádza cenu so symbolom $ bez kódu meny a upozorňuje, že ceny v App Store sa líšia podľa krajiny, preto sumu neuvádzame.",
             ),
             "faq": (
@@ -899,7 +899,7 @@ COMPARISON_PAGES = {
                 "Free includes 10 AI credits a month and one attachment per item",
             ),
             "pricing": (
-                "Rodinka runs in the browser on phones, tablets and computers and can be added to the home screen like an app; on Windows it is also in the Microsoft Store. Rodinka Free costs nothing and needs no payment card. Rodinka Pro, for the whole family, adds more tools and photo storage; prices are not published yet, and any offer will be shown in the app.",
+                "Rodinka is on the App Store and Google Play and runs as a full web app on computers; on Windows it is also in the Microsoft Store. Rodinka Free costs nothing and needs no payment card. Rodinka Pro, for the whole family, adds more tools and photo storage; prices are not published yet, and any offer will be shown in the app.",
                 "Familia offers apps for iPhone, iPad and Android; the web version comes with the Smart plan. Free costs nothing and Smart is a monthly subscription for the whole family. The site shows the price with a $ sign and no currency code and notes that App Store prices vary by country, so we do not quote an amount.",
             ),
             "faq": (
@@ -965,7 +965,7 @@ COMPARISON_PAGES["familywall"] = {
             "Češtinu ani slovenštinu se nám ověřit nepodařilo",
         ),
         "pricing": (
-            "Rodinka běží v prohlížeči na telefonu, tabletu i počítači a na plochu ji přidáte jako aplikaci; ve Windows ji najdete i v Microsoft Store. Rodinka Free je zdarma a bez platební karty a obsahuje kalendář, úkoly, nákupy, jídla, výlety, vzpomínky i doklady. Rodinka Pro pro celou rodinu přidává další nástroje a víc místa na fotky; ceny zatím nezveřejňujeme.",
+            "Rodinka je v App Storu a na Google Play a na počítači běží jako plnohodnotná webová aplikace; ve Windows ji najdete i v Microsoft Store. Rodinka Free je zdarma a bez platební karty a obsahuje kalendář, úkoly, nákupy, jídla, výlety, vzpomínky i doklady. Rodinka Pro pro celou rodinu přidává další nástroje a víc místa na fotky; ceny zatím nezveřejňujeme.",
             "FamilyWall je dostupná na webu, iPhonu, iPadu a Androidu. Základ je zdarma, Premium platí pro celou rodinu, dá se platit měsíčně nebo ročně a začíná 30denní zkušební verzí. Předplatit lze přes Google Play, App Store nebo web. Cena je na webu uvedena se symbolem $ bez kódu měny, proto ji neuvádíme.",
         ),
         "faq": (
@@ -1027,7 +1027,7 @@ COMPARISON_PAGES["familywall"] = {
             "Češtinu ani slovenčinu sa nám overiť nepodarilo",
         ),
         "pricing": (
-            "Rodinka beží v prehliadači v telefóne, tablete aj počítači a na plochu ju pridáte ako aplikáciu; vo Windows ju nájdete aj v Microsoft Store. Rodinka Free je zadarmo a bez platobnej karty a obsahuje kalendár, úlohy, nákupy, jedlá, výlety, spomienky aj doklady. Rodinka Pro pre celú rodinu pridáva ďalšie nástroje a viac miesta na fotky; ceny zatiaľ nezverejňujeme.",
+            "Rodinka je v App Store a na Google Play a na počítači beží ako plnohodnotná webová aplikácia; vo Windows ju nájdete aj v Microsoft Store. Rodinka Free je zadarmo a bez platobnej karty a obsahuje kalendár, úlohy, nákupy, jedlá, výlety, spomienky aj doklady. Rodinka Pro pre celú rodinu pridáva ďalšie nástroje a viac miesta na fotky; ceny zatiaľ nezverejňujeme.",
             "FamilyWall je dostupná na webe, iPhone, iPade a Androide. Základ je zadarmo, Premium platí pre celú rodinu, dá sa platiť mesačne alebo ročne a začína 30-dňovou skúšobnou verziou. Predplatiť možno cez Google Play, App Store alebo web. Cena je na webe uvedená so symbolom $ bez kódu meny, preto ju neuvádzame.",
         ),
         "faq": (
@@ -1089,7 +1089,7 @@ COMPARISON_PAGES["familywall"] = {
             "We could not verify Czech or Slovak",
         ),
         "pricing": (
-            "Rodinka runs in the browser on phones, tablets and computers and can be added to the home screen like an app; on Windows it is also in the Microsoft Store. Rodinka Free costs nothing, needs no payment card and includes the calendar, chores, shopping, meals, trips, memories and documents. Rodinka Pro, for the whole family, adds more tools and photo storage; prices are not published yet.",
+            "Rodinka is on the App Store and Google Play and runs as a full web app on computers; on Windows it is also in the Microsoft Store. Rodinka Free costs nothing, needs no payment card and includes the calendar, chores, shopping, meals, trips, memories and documents. Rodinka Pro, for the whole family, adds more tools and photo storage; prices are not published yet.",
             "FamilyWall is available on the web, iPhone, iPad and Android. The core is free; Premium covers the whole family, can be paid monthly or yearly and starts with a 30-day trial. You can subscribe through Google Play, the App Store or the website. The site shows the price with a $ sign and no currency code, so we do not quote it.",
         ),
         "faq": (
@@ -1154,7 +1154,7 @@ COMPARISON_PAGES["cozi"] = {
             "Češtinu ani slovenštinu se nám ověřit nepodařilo",
         ),
         "pricing": (
-            "Rodinka běží v prohlížeči na telefonu, tabletu i počítači a na plochu ji přidáte jako aplikaci; ve Windows ji najdete i v Microsoft Store. Rodinka Free je zdarma, bez reklam a bez platební karty. Rodinka Pro pro celou rodinu přidává další nástroje a víc místa na fotky; ceny zatím nezveřejňujeme.",
+            "Rodinka je v App Storu a na Google Play a na počítači běží jako plnohodnotná webová aplikace; ve Windows ji najdete i v Microsoft Store. Rodinka Free je zdarma, bez reklam a bez platební karty. Rodinka Pro pro celou rodinu přidává další nástroje a víc místa na fotky; ceny zatím nezveřejňujeme.",
             "Cozi je dostupné na webu, iPhonu a Androidu. Verze zdarma je hrazená z reklam. Cozi Gold stojí podle FAQ 39 USD ročně a platí pro všechny v účtu; přidává mimo jiné provoz bez reklam, měsíční pohled v mobilu, hledání a víc připomínek. Dvoutýdenní zkušební verze platí jen při objednání na webu. Vyšší tarif Max přidává AI funkce.",
         ),
         "faq": (
@@ -1216,7 +1216,7 @@ COMPARISON_PAGES["cozi"] = {
             "Češtinu ani slovenčinu sa nám overiť nepodarilo",
         ),
         "pricing": (
-            "Rodinka beží v prehliadači v telefóne, tablete aj počítači a na plochu ju pridáte ako aplikáciu; vo Windows ju nájdete aj v Microsoft Store. Rodinka Free je zadarmo, bez reklám a bez platobnej karty. Rodinka Pro pre celú rodinu pridáva ďalšie nástroje a viac miesta na fotky; ceny zatiaľ nezverejňujeme.",
+            "Rodinka je v App Store a na Google Play a na počítači beží ako plnohodnotná webová aplikácia; vo Windows ju nájdete aj v Microsoft Store. Rodinka Free je zadarmo, bez reklám a bez platobnej karty. Rodinka Pro pre celú rodinu pridáva ďalšie nástroje a viac miesta na fotky; ceny zatiaľ nezverejňujeme.",
             "Cozi je dostupné na webe, iPhone a Androide. Verzia zadarmo je hradená z reklám. Cozi Gold stojí podľa FAQ 39 USD ročne a platí pre všetkých v účte; pridáva okrem iného prevádzku bez reklám, mesačný pohľad v mobile, vyhľadávanie a viac pripomienok. Dvojtýždňová skúšobná verzia platí len pri objednaní na webe. Vyšší tarif Max pridáva AI funkcie.",
         ),
         "faq": (
@@ -1278,7 +1278,7 @@ COMPARISON_PAGES["cozi"] = {
             "We could not verify Czech or Slovak",
         ),
         "pricing": (
-            "Rodinka runs in the browser on phones, tablets and computers and can be added to the home screen like an app; on Windows it is also in the Microsoft Store. Rodinka Free costs nothing, has no ads and needs no payment card. Rodinka Pro, for the whole family, adds more tools and photo storage; prices are not published yet.",
+            "Rodinka is on the App Store and Google Play and runs as a full web app on computers; on Windows it is also in the Microsoft Store. Rodinka Free costs nothing, has no ads and needs no payment card. Rodinka Pro, for the whole family, adds more tools and photo storage; prices are not published yet.",
             "Cozi is available on the web, iPhone and Android. The free version is supported by ads. According to the FAQ, Cozi Gold costs USD 39 a year and covers everyone in the account; it adds no ads, a month view on mobile, search and more reminders, among other things. The two-week trial applies only to subscriptions started on the web. A higher Max plan adds AI features.",
         ),
         "faq": (

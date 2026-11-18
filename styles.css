@@ -328,6 +328,15 @@ i.petal,i.avatar{font-style:normal}
 .invite-echo-text small{display:block;color:var(--text-muted);font-size:11px}
 .invite-chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:999px;background:var(--category-tasks-soft);color:var(--category-tasks);font-size:10.5px;font-weight:800;white-space:nowrap}
 .invite-chip svg{width:13px;height:13px}
+.escort-screen{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 4px 12px}
+.escort-screen strong{font-weight:800;font-size:20px;letter-spacing:-.02em}
+.escort-screen span{color:var(--text-muted);font-size:11px;font-weight:700}
+.escort-card{padding:12px;border:1.5px dashed var(--category-activities-border);border-radius:var(--radius-medium);background:var(--surface-paper)}
+.escort-head{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;align-items:center}
+.escort-state{margin:8px 0 10px;color:var(--category-activities);font-size:11px;font-weight:800}
+.escort-next{margin-top:8px}
+.help-figure{display:grid;margin-top:28px}
+.help-figure .app-mock{justify-self:start}
 .trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 36px;margin:0;padding:0;list-style:none}
 .trust-grid li{display:grid;grid-template-columns:40px 1fr;gap:14px}
 .trust-grid .tone-icon{width:40px;height:40px;border-radius:12px}
