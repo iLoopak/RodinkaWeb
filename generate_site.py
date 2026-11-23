@@ -49,7 +49,7 @@ CONSENT_VERSION = 1
 OG_IMAGE_WIDTH = 1794
 OG_IMAGE_HEIGHT = 877
 OG_IMAGES = {"cs": "/og-image.png", "sk": "/og-image-sk.png", "en": "/og-image-en.png"}
-ASSET_VERSION = "20261113a"
+ASSET_VERSION = "20261123c"
 
 # Self-hosted webfont, built by tools/build_fonts.py. The app sets every word in
 # Manrope, so the site does too: one variable file (wght 500-800) carries body,
@@ -488,35 +488,6 @@ PRODUCT_PROOFS = {
 }
 
 
-HOME_MEMORY_STORY = {
-    "src": "/assets/product/rodinka-family-memories.webp",
-    "cs": {
-        "kicker": "NEJEN POVINNOSTI",
-        "title": "Nejen to, co musíte zařídit. I to, co si chcete pamatovat.",
-        "text": "Dětské milníky, rodinné poklady, dětské hlášky i společné zážitky s fotkou se v Rodince řadí na jednu společnou časovou osu. Každou vzpomínku můžete přiřadit člověku, kterého se týká, na obrazovce Dnes se občas připomene, co se stalo v tentýž den v minulých letech, a z milníku si připravíte kartičku k vytištění.",
-        "link": "Rodinné vzpomínky",
-        "alt": "Obrazovka Vzpomínky v Rodince s časovou osou rodiny a fotografií z podzimní procházky v lese",
-        "caption": "Vzpomínky s fotkou, dětské milníky i rodinné poklady na jedné časové ose celé rodiny.",
-    },
-    "sk": {
-        "kicker": "NIELEN POVINNOSTI",
-        "title": "Nielen to, čo musíte zariadiť. Aj to, čo si chcete pamätať.",
-        "text": "Detské míľniky, rodinné poklady, detské hlášky aj spoločné zážitky s fotkou sa v Rodinke radia na jednu spoločnú časovú os. Každú spomienku môžete priradiť človeku, ktorého sa týka, na obrazovke Dnes sa občas pripomenie, čo sa stalo v ten istý deň v minulých rokoch, a z míľnika si pripravíte kartičku na vytlačenie.",
-        "link": "Rodinné spomienky",
-        "alt": "Obrazovka Spomienky v Rodinke s časovou osou rodiny a fotografiou z jesennej prechádzky v lese",
-        "caption": "Spomienky s fotkou, detské míľniky aj rodinné poklady na jednej časovej osi celej rodiny.",
-    },
-    "en": {
-        "kicker": "MORE THAN ADMIN",
-        "title": "Not only what has to be arranged. Also what you want to remember.",
-        "text": "Children’s milestones, family treasures, things kids say and shared experiences with a photo share a single timeline in Rodinka. Every memory can belong to the person it is about, the Today screen occasionally resurfaces what happened on the same date in earlier years, and a milestone can become a card you print at home.",
-        "link": "Family memories",
-        "alt": "The Memories screen in Rodinka with the family timeline and a photo from an autumn walk in the woods",
-        "caption": "Memories with a photo, children’s milestones and family treasures on one shared family timeline.",
-    },
-}
-
-
 HOME_BABY_STORY = {
     "src": "/assets/product/rodinka-expected-child.webp",
     "cs": {
@@ -662,64 +633,111 @@ SERIES = {
                 "title": "Tohle si chceme pamatovat.",
                 "text": "Kuba jede poprvé sám na kole a máma si fotku uloží do Rodinky. O rok později se k ní rodina vrátí na obrazovce Dnes v sekci V tento den.",
             },
+            {
+                "stem": "kazdodenni-rodinka-13-plati-to-jeste",
+                "seconds": 19,
+                "page": "documents",
+                "title": "Platí to ještě?",
+                "text": "Kubův pas propadne a s ním i dovolená. Rodinka připomene konec platnosti dokladu s předstihem, tady tři měsíce dopředu, a z připomínky jde rovnou vytvořit úkol.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-25-co-bude-k-veceri",
+                "seconds": 28,
+                "page": "meals",
+                "title": "Co bude k večeři?",
+                "text": "Každý večer stejná otázka u otevřené lednice, den za dnem. Jídelníček na týden v Rodince ukáže, co se dnes vaří a kdo to připraví.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-28-velka-bitva-o-kos",
+                "seconds": 27,
+                "page": "chores",
+                "title": "Velká bitva o koš",
+                "text": "Každé úterý honička kolem stolu. Vynést koš je v Rodince opakovaný úkol s odměnou: Kuba ho odškrtne, táta schválí a kapesné se připíše.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-17-babi-muzes-ve-stredu",
+                "seconds": 18,
+                "page": "circle",
+                "title": "Babi, můžeš ve středu?",
+                "text": "Babičce chodí vzkazy od obou rodičů a každý říká něco jiného. V Rodince dostane jeden doprovod s časem a místem a odpoví „Půjdu“.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-08-odpada-to-dneska",
+                "seconds": 16,
+                "page": "planner",
+                "extra": True,
+                "title": "Odpadá to dneska?",
+                "text": "Judo dnes odpadá a táta se to dozví poslední, v dešti před tělocvičnou. Zrušený termín se v Rodince přeškrtne u všech a příští středa zůstane, jak byla.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-10-kdy-muzou-vsichni",
+                "seconds": 21,
+                "page": "calendar",
+                "extra": True,
+                "title": "Kdy můžou všichni?",
+                "text": "Máma hledá sobotu na návštěvu babičky a škrtá jednu za druhou. V měsíčním kalendáři hned vidí, kdo má kdy program nebo je pryč, a najde den, kdy můžou všichni.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-11-kolik-mi-jeste-chybi",
+                "seconds": 19,
+                "page": "chores",
+                "extra": True,
+                "title": "Kolik mi ještě chybí?",
+                "text": "Ema šetří na brusle a táta počítá knoflíky z prasátka. V Rodince si dítě z kapesného odkládá na vlastní cíl a samo vidí, kolik mu ještě chybí.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-16-vencil-uz-nekdo-badyho",
+                "seconds": 17,
+                "page": "chores",
+                "extra": True,
+                "title": "Venčil už někdo Badyho?",
+                "text": "Bady jde ven potřetí za jedno ráno. Venčení je v Rodince opakovaná péče s tím, kdo jde, a když je hotovo, vidí to celá rodina.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-12-jak-to-tenkrat-rikal",
+                "seconds": 21,
+                "page": "memories",
+                "extra": True,
+                "title": "Jak to tenkrát říkal?",
+                "text": "Kubovu větu od večeře si každý pamatuje jinak. Uložená dětská hláška zůstane ve Vzpomínkách přesně tak, jak zazněla, i s datem.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-30-rok-za-20-sekund",
+                "seconds": 27,
+                "page": "memories",
+                "extra": True,
+                "title": "Rok za 20 sekund",
+                "text": "Celý rok v kuchyni Novákových za pár vteřin. Z uložených vzpomínek, hlášek a milníků pak vznikne Rodinná ročenka k prohlížení i tisku, která je součástí Rodinky Pro.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-15-kdo-koupi-jednorozce",
+                "seconds": 18,
+                "page": "app",
+                "extra": True,
+                "title": "Kdo koupí jednorožce?",
+                "text": "Tři stejné dárky k narozeninám. V Přáních si dospělí potichu označí, co zařídí, a obdarovaná Ema to neuvidí.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-18-plati-jeste-ta-snidane",
+                "seconds": 19,
+                "page": "app",
+                "extra": True,
+                "title": "Platí ještě ta snídaně?",
+                "text": "Emina poukázka na snídani do postele prošla pračkou. Rodinné poukázky zůstanou v aplikaci a máma ji uplatní, kdy se jí to hodí.",
+            },
+            {
+                "stem": "kazdodenni-rodinka-09-jakou-ma-ted-botu",
+                "seconds": 17,
+                "page": "app",
+                "extra": True,
+                "title": "Jakou má teď botu?",
+                "text": "Táta tipuje velikost bot v kočkách. V osobním přehledu Kuby je zapsaná obuv i oblečení, takže máma v obchodě kupuje napoprvé.",
+            },
         ),
     },
 }
 SERIES_POSTER_WIDTH = 720
 SERIES_POSTER_HEIGHT = 1280
-
-
-
-# The Today screen drawn in the hero. Every string is the app's own wording
-# (Rodinka/src/strings/today.ts, shell.ts and the Rodinka Today copy), so the
-# drawing says what the product says. The family is illustrative.
-HOME_PHONE = {
-    "cs": {
-        "family": "Novákovi",
-        "greeting": "Vítejte, Kláro.",
-        "date": "Úterý 6. října",
-        "summary": "Dnes vás čekají 3 věci.",
-        "program": "Dnešní program",
-        "rows": (("7:45", "Školka", "Tobiáš · doprovází Martin"), ("15:00", "Plavání", "Ema · doprovází Klára"), ("18:30", "Večeře: rizoto", "Připraví Martin")),
-        "dinner": "večeře",
-        "daily_title": "Dnešní Rodinka",
-        "daily_eyebrow": "Dnešní hlasování",
-        "question": "Kam vyrazíme v sobotu?",
-        "options": (("Na hrad", "2 hlasy"), ("Do zoo", "1 hlas"), ("K babičce", "0 hlasů")),
-        "voted": "Hlasovali 3 z 4",
-        "nav": ("Dnes", "Kalendář", "Vzpomínky", "Plánovat", "Rodina"),
-    },
-    "sk": {
-        "family": "Novákovci",
-        "greeting": "Vitajte, Klára.",
-        "date": "Utorok 6. októbra",
-        "summary": "Dnes vás čakajú 3 veci.",
-        "program": "Dnešný program",
-        "rows": (("7:45", "Škôlka", "Tobiáš · sprevádza Martin"), ("15:00", "Plávanie", "Ema · sprevádza Klára"), ("18:30", "Večera: rizoto", "Pripraví Martin")),
-        "dinner": "večera",
-        "daily_title": "Dnešná Rodinka",
-        "daily_eyebrow": "Dnešné hlasovanie",
-        "question": "Kam vyrazíme v sobotu?",
-        "options": (("Na hrad", "2 hlasy"), ("Do zoo", "1 hlas"), ("K babke", "0 hlasov")),
-        "voted": "Hlasovali 3 z 4",
-        "nav": ("Dnes", "Kalendár", "Spomienky", "Plánovať", "Rodina"),
-    },
-    "en": {
-        "family": "Novák",
-        "greeting": "Welcome, Klára.",
-        "date": "Tuesday, 6 October",
-        "summary": "You have 3 things today.",
-        "program": "Today’s schedule",
-        "rows": (("7:45", "Nursery", "Tobiáš · accompanied by Martin"), ("15:00", "Swimming", "Ema · accompanied by Klára"), ("18:30", "Dinner: risotto", "Prepared by Martin")),
-        "dinner": "dinner",
-        "daily_title": "Rodinka Today",
-        "daily_eyebrow": "Today’s vote",
-        "question": "Where shall we go on Saturday?",
-        "options": (("To the castle", "2 votes"), ("To the zoo", "1 vote"), ("To Grandma’s", "0 votes")),
-        "voted": "3 of 4 have voted",
-        "nav": ("Today", "Calendar", "Memories", "Plan", "Family"),
-    },
-}
 
 
 # The seven areas the app asks about right after a family is created
@@ -836,10 +854,12 @@ HOME_FAMILY_LAYER = {
         "lead": "Kalendář, úkoly a nákupy řeší provoz. Rodinka k nim přidává věci, kvůli kterým ji otevřete rádi — a pár těch, na které se jinak zapomíná.",
         "cards": (
             ("memories", "sparkle", "Každý den malý důvod být spolu", "Dnešní Rodinka nabídne jednu otázku pro celou rodinu, krátké hlasování, hádanku nebo vzpomínku z minulých let. Není to povinnost: žádné série, body ani žebříčky.", "memories"),
-            ("tasks", "child", "Děti mají vlastní Rodinku", "Přihlášení bez e-mailu, vlastní úkoly, nákupní seznam a kalendář. Za splněné úkoly odměna nebo kapesné a pět rodinných her, které fungují i offline. Až bude dítě chtít vlastní účet, předáte mu profil i s historií.", "chores"),
+            ("tasks", "child", "Děti mají vlastní Rodinku", "Přihlášení bez e-mailu, vlastní úkoly, nákupní seznam a kalendář. Za splněné úkoly odměna nebo kapesné a pět rodinných her, které fungují i offline. Z kapesného si můžou šetřit na vlastní cíl a samy vidí, kolik jim ještě chybí. Až bude dítě chtít vlastní účet, předáte mu profil i s historií.", "chores"),
             ("family", "gift", "Přání, která se nekoupí dvakrát", "Každý v rodině si vede seznam věcí a zážitků, které by ho potěšily. Dospělí si u přání potichu označí „Tohle zařídím“ a obdarovaný se o tom nedozví.", "app"),
             ("calendar", "chat", "Domluva u toho, čeho se týká", "Rodinný chat i přímé zprávy. Do konverzace pošlete konkrétní úkol, nákup nebo událost a ze zprávy rovnou vytvoříte úkol.", "app"),
             ("health", "health", "Zdraví a mazlíčci", "Prohlídky, očkování a další dávky celé rodiny s včasnou připomínkou. Mazlíček má vlastní profil, péči i veterinární historii. Slouží k plánování, ne ke zdravotní dokumentaci.", "app"),
+            ("family", "confirm", "Malé sliby, které se neztratí", "Rodinné poukázky jsou drobné dárky z laskavosti: snídaně do postele, výběr večerní pohádky nebo společná vyjížďka na kole. Dát je může i dítě. Obdarovaný poukázku uplatní, až se mu to hodí, a nic se přitom neplatí.", "app"),
+            ("tasks", "sprout", "Velikost máte po ruce", "U každého dítěte si zapíšete velikost oblečení a bot, třeba 122–128 nebo EU 31, a k tomu poznámku. V obchodě se podíváte do telefonu místo tipování a starší velikosti zůstanou v historii.", "app"),
         ),
     },
     "sk": {
@@ -848,10 +868,12 @@ HOME_FAMILY_LAYER = {
         "lead": "Kalendár, úlohy a nákupy riešia prevádzku. Rodinka k nim pridáva veci, kvôli ktorým ju otvoríte radi — a zopár tých, na ktoré sa inak zabúda.",
         "cards": (
             ("memories", "sparkle", "Každý deň malý dôvod byť spolu", "Dnešná Rodinka ponúkne jednu otázku pre celú rodinu, krátke hlasovanie, hádanku alebo spomienku z minulých rokov. Nie je to povinnosť: žiadne série, body ani rebríčky.", "memories"),
-            ("tasks", "child", "Deti majú vlastnú Rodinku", "Prihlásenie bez e-mailu, vlastné úlohy, nákupný zoznam a kalendár. Za splnené úlohy odmena alebo vreckové a päť rodinných hier, ktoré fungujú aj offline. Keď bude dieťa chcieť vlastný účet, odovzdáte mu profil aj s históriou.", "chores"),
+            ("tasks", "child", "Deti majú vlastnú Rodinku", "Prihlásenie bez e-mailu, vlastné úlohy, nákupný zoznam a kalendár. Za splnené úlohy odmena alebo vreckové a päť rodinných hier, ktoré fungujú aj offline. Z vreckového si môžu šetriť na vlastný cieľ a samy vidia, koľko im ešte chýba. Keď bude dieťa chcieť vlastný účet, odovzdáte mu profil aj s históriou.", "chores"),
             ("family", "gift", "Priania, ktoré sa nekúpia dvakrát", "Každý v rodine si vedie zoznam vecí a zážitkov, ktoré by ho potešili. Dospelí si pri priani potichu označia „Toto zariadim“ a obdarovaný sa o tom nedozvie.", "app"),
             ("calendar", "chat", "Dohoda pri tom, čoho sa týka", "Rodinný chat aj priame správy. Do konverzácie pošlete konkrétnu úlohu, nákup alebo udalosť a zo správy rovno vytvoríte úlohu.", "app"),
             ("health", "health", "Zdravie a zvieratká", "Prehliadky, očkovania a ďalšie dávky celej rodiny s včasnou pripomienkou. Zvieratko má vlastný profil, starostlivosť aj veterinárnu históriu. Slúži na plánovanie, nie na zdravotnú dokumentáciu.", "app"),
+            ("family", "confirm", "Malé sľuby, ktoré sa nestratia", "Rodinné poukážky sú drobné dary z láskavosti: raňajky do postele, výber večernej rozprávky alebo spoločná jazda na bicykli. Darovať ich môže aj dieťa. Obdarovaný poukážku uplatní, keď sa mu to hodí, a nič sa pritom neplatí.", "app"),
+            ("tasks", "sprout", "Veľkosť máte poruke", "Pri každom dieťati si zapíšete veľkosť oblečenia a topánok, napríklad 122–128 alebo EU 31, a k tomu poznámku. V obchode sa pozriete do telefónu namiesto tipovania a staršie veľkosti zostanú v histórii.", "app"),
         ),
     },
     "en": {
@@ -860,10 +882,12 @@ HOME_FAMILY_LAYER = {
         "lead": "A calendar, chores and shopping keep a household running. Rodinka adds the things you open it for gladly — and a few that are otherwise easy to forget.",
         "cards": (
             ("memories", "sparkle", "A small reason to be together each day", "Rodinka Today offers one question for the whole family, a short vote, a riddle or a memory from earlier years. It is not a task: no streaks, points or leaderboards.", "memories"),
-            ("tasks", "child", "Children get their own Rodinka", "A sign-in without an email address, their own chores, the shopping list and the calendar. A reward or pocket money for finished chores, and five family games that work offline too. When a child wants an account of their own, hand over their profile with its history.", "chores"),
+            ("tasks", "child", "Children get their own Rodinka", "A sign-in without an email address, their own chores, the shopping list and the calendar. A reward or pocket money for finished chores, and five family games that work offline too. They can set part of their pocket money aside for a goal and see for themselves how much is still missing. When a child wants an account of their own, hand over their profile with its history.", "chores"),
             ("family", "gift", "Wishes that never get bought twice", "Everyone in the family keeps a list of things and experiences they would love. Adults can quietly mark a wish “I’ll get this”, and the person who made it never finds out.", "app"),
             ("calendar", "chat", "Talk next to what it is about", "A family chat and direct messages. Share a specific chore, shopping item or event into the conversation, and turn a message into a chore in one step.", "app"),
             ("health", "health", "Health and pets", "Check-ups, vaccinations and next doses for the whole family, with a timely reminder. A pet gets its own profile, care routines and vet history. It is for planning, not medical records.", "app"),
+            ("family", "confirm", "Small promises that don’t get lost", "Family vouchers are small gifts of kindness: breakfast in bed, choosing tonight’s bedtime story or a bike ride together. Children can give them too. Whoever receives one redeems it when it suits them, and no money changes hands.", "app"),
+            ("tasks", "sprout", "Sizes at hand", "For each child, note their clothing and shoe sizes, such as 122–128 or EU 31, plus a note. In the shop you check your phone instead of guessing, and earlier sizes stay in the history.", "app"),
         ),
     },
 }
@@ -898,31 +922,6 @@ TRIP_MOCK = {
         "tips": (("Pernštejn Castle", "Nedvědice", (3, 1, 0)), ("Harusův kopec lookout", "Nové Město na Moravě", (2, 1, 1)), ("Jihlava Zoo", "Jihlava", (1, 2, 1))),
         "selected": "Chosen",
         "caption": "A trip plan: dates, area, ideas and the whole family’s votes. The chosen idea becomes an event in the family calendar.",
-    },
-}
-
-
-HOME_TRIPS_STORY = {
-    "cs": {
-        "kicker": "VÝLETY A DOVOLENÉ",
-        "title": "Kam pojedeme? Rozhodne celá rodina.",
-        "text": "Tipy na výlety ukládáte průběžně — stačí vložit odkaz a Rodinka si z něj vezme název i náhled. Když přijde volný víkend, složíte z tipů plán cesty, každý dá svůj hlas a vybraný tip se propíše do kalendáře.",
-        "points": ("Zásobník nápadů v kartách i na mapě.", "Plán cesty připnete na obrazovku Dnes.", "Po návratu klepnete na Byli jsme a z výletu je vzpomínka.", "A než vyrazíte, děti si zahrají Nacpi kufr."),
-        "link": "Rodinné výlety",
-    },
-    "sk": {
-        "kicker": "VÝLETY A DOVOLENKY",
-        "title": "Kam pôjdeme? Rozhodne celá rodina.",
-        "text": "Tipy na výlety ukladáte priebežne — stačí vložiť odkaz a Rodinka si z neho vezme názov aj náhľad. Keď príde voľný víkend, zostavíte z tipov plán cesty, každý dá svoj hlas a vybraný tip sa prenesie do kalendára.",
-        "points": ("Zásobník nápadov v kartách aj na mape.", "Plán cesty pripnete na obrazovku Dnes.", "Po návrate ťuknete na Boli sme a z výletu je spomienka.", "A kým vyrazíte, deti si zahrajú Napchaj kufor."),
-        "link": "Rodinné výlety",
-    },
-    "en": {
-        "kicker": "TRIPS AND HOLIDAYS",
-        "title": "Where shall we go? The whole family decides.",
-        "text": "Save trip ideas as they come up — paste a link and Rodinka picks up the title and a preview. When a free weekend arrives, turn a few ideas into a trip plan, everyone casts a vote, and the chosen idea lands in the calendar.",
-        "points": ("An idea backlog as cards or on a map.", "Pin the trip plan to the Today screen.", "Back home, tap Been there and the trip becomes a memory.", "And before you leave, the kids can play Pack the Trunk."),
-        "link": "Family trips",
     },
 }
 
@@ -1149,6 +1148,170 @@ HOME_PRO = {'cs': {'title': 'Ještě o kousek víc pro vaši Rodinku',
                    'in-app offer.',
         'cta': 'Compare Free and Pro'}}
 
+
+
+# The product tour (Rodinka/promo/rodinka-spot, `?film=tour`): a minute of the
+# Nováks' week in the real app, captured from the running client, not drawn.
+# Czech voice-over, so only the Czech homepage plays it, at the end of the day.
+HOME_TOUR = {
+    "cs": {
+        "stem": "rodinka-product-tour-9x16",
+        "seconds": 57,
+        "kicker": "PRODUKTOVÁ PROHLÍDKA",
+        "title": "Celý týden Novákových ve skutečné aplikaci",
+        "text": "Necelá minuta s Novákovými: kalendář, úkoly, nákup, výlety a vzpomínky tak, jak je rodina opravdu používá. Na obrazovkách nejsou ilustrace, ale skutečná Rodinka.",
+        "video_title": "Prohlídka Rodinky: týden Novákových",
+    },
+}
+
+# The Nováks: the family from the Každodenní Rodinka series tells the homepage.
+# Their names, the questions on their notes and the app wording in the phone and
+# on the cards follow the spot (Rodinka/promo/rodinka-spot) and the app's own
+# catalogues (Dnes u nás, Dnešní program, Přidal/a, V tento den, Zásobník
+# nápadů, the escort's “Půjdu”). The paper figures and the notes are renders
+# from the spot's engine in /assets/novakovi/; the notes carry the question in
+# the page's language (listek-<key>[-<locale>].webp). Everything drawn is
+# aria-hidden or has its words in the HTML next to it.
+HOME_NOVAK = {
+    "cs": {
+        "family": "Novákovi",
+        "names": {"mama": "Máma", "tata": "Táta", "ema": "Ema", "kuba": "Kuba", "babicka": "Babička"},
+        "eyebrow": "Seznamte se: Novákovi",
+        "lead": "Táta myslí, že Kubu vyzvedne máma. Máma, že táta. Ema chce vědět, kam se pojede o víkendu, a babička, jestli má přijít ve středu. Rodinka je jedno místo, kde to Novákovi mají pohromadě: kalendář, úkoly, nákupy a jídla, výlety i vzpomínky. Každý vidí to, co se ho týká.",
+        "notes_label": "Otázky, které Novákovi řeší každý den",
+        "toggle": ("Dát to do Rodinky", "Ukázat zase chaos"),
+        "calm": "A je jasno.",
+        "phone": {
+            "title": "Dnes u nás", "date": "Úterý 13. října", "summary": "Dnes vás čekají 3 věci.",
+            "program": "Dnešní program", "week": "Tento týden",
+            "today": (("15:30", "Vyzvednutí ze školky", "Kuba · doprovází Táta"), ("16:30", "Judo", "Ema · doprovází Táta"), ("18:30", "Večeře u babičky", "Celá rodina")),
+            "later": (("St", "Vyzvednutí ze školky", "Kuba · doprovází Babička"), ("", "Nákupní seznam", "Mléko, banány, máslo…"), ("So", "Stezka korunami stromů", "Naplánováno na sobotu")),
+            "nav": ("Dnes", "Kalendář", "Vzpomínky", "Plánovat", "Rodina"),
+        },
+        "cast": {
+            "kicker": "SEZNAMTE SE",
+            "title": "Novákovi. Rodina jako ta vaše.",
+            "lead": "Dva rodiče, dvě děti, babička na telefonu a pes, který by šel ven pořád. Každý má v Rodince to svoje a všichni vidí, co se jich týká.",
+            "people": (
+                ("Ví, kdo má kdy kroužek, zubaře i narozeniny.", "Teď to vidí i ostatní."),
+                ("Vyzvedává. Když ví, že má.", "Teď to ví vždycky."),
+                ("Pořád se ptá, kam pojedeme o víkendu.", "Teď vybíráme spolu."),
+                ("Psát ještě neumí. Jogurty na nákup ale přidá.", "Hlasem.*"),
+            ),
+            "babicka": ("A babička.", "Vyzvedává Kubu, když ji rodina poprosí. Doprovod potvrdí jedním klepnutím, i bez účtu v Rodince."),
+            "bady": ("A Bady.", "Venčení má v Rodince vlastní řádek s tím, kdo jde. Nikdo ho už nevenčí třikrát za ráno."),
+            "footnote": "* Hlasové zadávání funguje na podporovaných zařízeních.",
+        },
+        "day": {
+            "kicker": "JEDEN DEN U NOVÁKOVÝCH",
+            "title": "Obyčejný týden. Nic se neztratí.",
+            "lead": "Projděte si s Novákovými jedno úterý a kousek týdne kolem něj. U každé chvíle je krátké video ze série Každodenní Rodinka.",
+            "rail": "Chvíle týdne",
+            "stops": {
+                "rano": ("7:12", "Úterý ráno", "Jeden pohled ráno a víme to všichni.", "U snídaně stačí otevřít obrazovku Dnes: kdo kam jde, kdo koho vyzvedává a kde se večer sejdeme. Táta najde svoje vyzvedávání, Ema svoje judo.", "Rodinný plánovač", ("Dnes u nás", "Dnes vás čekají 3 věci.", "Vyzvednutí · Judo · Večeře u babičky", "")),
+                "nakup": ("10:40", "Dopoledne", "Nákup si píšeme dohromady. I to máslo.", "Máma stojí v obchodě a odpovědi z chatu chodí po jedné. Ve sdíleném seznamu je všechno pohromadě, roztříděné podle sekcí, a co kdo přidá, ukáže se hned.", "Sdílený nákupní seznam", ("Nákupní seznam", "Máslo", "Přidal/a Táta", "")),
+                "skolka": ("15:30", "Odpoledne", "U vyzvednutí je vidět, kdo jde.", "Máma i táta počítali s tím, že Kubu vyzvedne ten druhý. V kalendáři má vyzvednutí i doprovod, takže otázka „vyzvedneš ho, že jo?“ odpadá.", "Rodinný kalendář", ("15:30", "Vyzvednutí ze školky", "Kuba · doprovází Táta", "")),
+                "judo": ("16:30", "Odpoledne", "Kroužky nemusí nikdo držet v hlavě.", "Ve čtyři? V pět? Denní linka na obrazovce Dnes ukáže, že Ema má judo v půl páté a kdo ji veze.", "Denní přehled v plánovači", ("16:30", "Judo", "Ema · doprovází Táta", "")),
+                "vecere": ("18:30", "Večer", "Co se domluví, nezapadne v chatu.", "Babiččina sedmdesátka se řešila v chatu, v kalendáři, na lepíku i v e-mailu. V Rodince z toho zůstane jedno místo: oslava, dort a co ještě koupit.", "Aplikace pro rodinu", ("18:30", "Večeře u babičky", "Celá rodina", "")),
+                "babicka": ("Středa", "O den později", "Babička ví, kdy jde. A nemusí luštit vzkazy.", "Místo zpráv od obou rodičů dostane babička jeden doprovod: kdy, kam a koho. Klepne na „Půjdu“ a rodina u události hned vidí, že je potvrzeno. Z rodiny vidí jen to, k čemu ji přizvete.", "Rodina napříč generacemi", ("Středa 15:30", "Vyzvednutí ze školky", "Kuba", "Potvrzeno")),
+                "vylet": ("Sobota", "Víkend", "Nápady, které nezapadnou.", "Tátův odkaz z chatu, screenshot hradu, babiččina pohlednice: všechno se sejde v Zásobníku nápadů. Kuba přidá srdíčko a sobota je naplánovaná.", "Rodinné výlety", ("Zásobník nápadů", "Stezka korunami stromů", "Naplánováno na sobotu", "")),
+                "vzpominka": ("Za rok", "O rok později", "A tohle si chceme pamatovat.", "Kuba poprvé sám na kole. Máma uloží fotku do Rodinky a o rok později se k ní celá rodina vrátí na obrazovce Dnes v sekci V tento den.", "Rodinné vzpomínky", ("V tento den", "Kuba poprvé sám na kole", "Před rokem", "")),
+            },
+        },
+    },
+    "sk": {
+        "family": "Novákovci",
+        "names": {"mama": "Mama", "tata": "Ocko", "ema": "Ema", "kuba": "Kuba", "babicka": "Babka"},
+        "eyebrow": "Zoznámte sa: Novákovci",
+        "lead": "Ocko si myslí, že Kubu vyzdvihne mama. Mama, že ocko. Ema chce vedieť, kam sa pôjde cez víkend, a babka, či má prísť v stredu. Rodinka je jedno miesto, kde to Novákovci majú pokope: kalendár, úlohy, nákupy a jedlá, výlety aj spomienky. Každý vidí to, čo sa ho týka.",
+        "notes_label": "Otázky, ktoré Novákovci riešia každý deň",
+        "toggle": ("Dať to do Rodinky", "Ukázať zase chaos"),
+        "calm": "A je jasno.",
+        "phone": {
+            "title": "Dnes u nás", "date": "Utorok 13. októbra", "summary": "Dnes vás čakajú 3 veci.",
+            "program": "Dnešný program", "week": "Tento týždeň",
+            "today": (("15:30", "Vyzdvihnutie zo škôlky", "Kuba · sprevádza Ocko"), ("16:30", "Džudo", "Ema · sprevádza Ocko"), ("18:30", "Večera u babky", "Celá rodina")),
+            "later": (("St", "Vyzdvihnutie zo škôlky", "Kuba · sprevádza Babka"), ("", "Nákupný zoznam", "Mlieko, banány, maslo…"), ("So", "Chodník korunami stromov", "Naplánované na sobotu")),
+            "nav": ("Dnes", "Kalendár", "Spomienky", "Plánovať", "Rodina"),
+        },
+        "cast": {
+            "kicker": "ZOZNÁMTE SA",
+            "title": "Novákovci. Rodina ako tá vaša.",
+            "lead": "Dvaja rodičia, dve deti, babka na telefóne a pes, ktorý by šiel von stále. Každý má v Rodinke to svoje a všetci vidia, čo sa ich týka.",
+            "people": (
+                ("Vie, kto má kedy krúžok, zubára aj narodeniny.", "Teraz to vidia aj ostatní."),
+                ("Vyzdvihuje. Keď vie, že má.", "Teraz to vie vždy."),
+                ("Stále sa pýta, kam pôjdeme cez víkend.", "Teraz vyberáme spolu."),
+                ("Písať ešte nevie. Jogurty na nákup ale pridá.", "Hlasom.*"),
+            ),
+            "babicka": ("A babka.", "Vyzdvihuje Kubu, keď ju rodina poprosí. Sprievod potvrdí jedným ťuknutím, aj bez účtu v Rodinke."),
+            "bady": ("A Bady.", "Venčenie má v Rodinke vlastný riadok s tým, kto ide. Nikto ho už nevenčí trikrát za ráno."),
+            "footnote": "* Hlasové zadávanie funguje na podporovaných zariadeniach.",
+        },
+        "day": {
+            "kicker": "JEDEN DEŇ U NOVÁKOVCOV",
+            "title": "Obyčajný týždeň. Nič sa nestratí.",
+            "lead": "Prejdite si s Novákovcami jeden utorok a kúsok týždňa okolo neho. Pri každej chvíli uvidíte, ako ju rieši Rodinka.",
+            "rail": "Chvíle týždňa",
+            "stops": {
+                "rano": ("7:12", "Utorok ráno", "Jeden pohľad ráno a vieme to všetci.", "Pri raňajkách stačí otvoriť obrazovku Dnes: kto kam ide, kto koho vyzdvihuje a kde sa večer stretneme. Ocko nájde svoje vyzdvihnutie, Ema svoje džudo.", "Rodinný plánovač", ("Dnes u nás", "Dnes vás čakajú 3 veci.", "Vyzdvihnutie · Džudo · Večera u babky", "")),
+                "nakup": ("10:40", "Dopoludnia", "Nákup si píšeme spolu. Aj to maslo.", "Mama stojí v obchode a odpovede z chatu chodia po jednej. V spoločnom zozname je všetko pokope, roztriedené podľa sekcií, a čo kto pridá, ukáže sa hneď.", "Spoločný nákupný zoznam", ("Nákupný zoznam", "Maslo", "Pridal/a Ocko", "")),
+                "skolka": ("15:30", "Popoludní", "Pri vyzdvihnutí je vidieť, kto ide.", "Mama aj ocko rátali s tým, že Kubu vyzdvihne ten druhý. V kalendári má vyzdvihnutie aj sprievod, takže otázka „vyzdvihneš ho, však?“ odpadá.", "Rodinný kalendár", ("15:30", "Vyzdvihnutie zo škôlky", "Kuba · sprevádza Ocko", "")),
+                "judo": ("16:30", "Popoludní", "Krúžky nemusí nikto držať v hlave.", "O štvrtej? O piatej? Denná linka na obrazovke Dnes ukáže, že Ema má džudo o pol piatej a kto ju vezie.", "Denný prehľad v plánovači", ("16:30", "Džudo", "Ema · sprevádza Ocko", "")),
+                "vecere": ("18:30", "Večer", "Čo sa dohodne, nezapadne v chate.", "Babkina sedemdesiatka sa riešila v chate, v kalendári, na lístočku aj v e-maile. V Rodinke z toho zostane jedno miesto: oslava, torta a čo ešte kúpiť.", "Aplikácia pre rodinu", ("18:30", "Večera u babky", "Celá rodina", "")),
+                "babicka": ("Streda", "O deň neskôr", "Babka vie, kedy ide. A nemusí lúštiť odkazy.", "Namiesto správ od oboch rodičov dostane babka jeden sprievod: kedy, kam a koho. Ťukne na „Pôjdem“ a rodina pri udalosti hneď vidí, že je potvrdené. Z rodiny vidí len to, k čomu ju prizvete.", "Rodina naprieč generáciami", ("Streda 15:30", "Vyzdvihnutie zo škôlky", "Kuba", "Potvrdené")),
+                "vylet": ("Sobota", "Víkend", "Nápady, ktoré nezapadnú.", "Ockov odkaz z chatu, screenshot hradu, babkina pohľadnica: všetko sa stretne v Zásobníku nápadov. Kuba pridá srdiečko a sobota je naplánovaná.", "Rodinné výlety", ("Zásobník nápadov", "Chodník korunami stromov", "Naplánované na sobotu", "")),
+                "vzpominka": ("O rok", "O rok neskôr", "A toto si chceme pamätať.", "Kuba prvýkrát sám na bicykli. Mama uloží fotku do Rodinky a o rok neskôr sa k nej celá rodina vráti na obrazovke Dnes v sekcii V tento deň.", "Rodinné spomienky", ("V tento deň", "Kuba prvýkrát sám na bicykli", "Pred rokom", "")),
+            },
+        },
+    },
+    "en": {
+        "family": "Nováks",
+        "names": {"mama": "Mom", "tata": "Dad", "ema": "Ema", "kuba": "Kuba", "babicka": "Grandma"},
+        "eyebrow": "Meet the Nováks",
+        "lead": "Dad thinks Mom is picking Kuba up. Mom thinks Dad is. Ema wants to know where they are going this weekend, and Grandma whether she should come on Wednesday. Rodinka is the one place where the Nováks keep it all together: the calendar, chores, shopping and meals, trips and memories. Everyone sees what concerns them.",
+        "notes_label": "Questions the Nováks ask every day",
+        "toggle": ("Put it in Rodinka", "Show the chaos again"),
+        "calm": "All clear.",
+        "phone": {
+            "title": "Today at our place", "date": "Tuesday, 13 October", "summary": "You have 3 things today.",
+            "program": "Today’s schedule", "week": "This week",
+            "today": (("15:30", "Nursery pick-up", "Kuba · accompanied by Dad"), ("16:30", "Judo", "Ema · accompanied by Dad"), ("18:30", "Dinner at Grandma’s", "Whole family")),
+            "later": (("Wed", "Nursery pick-up", "Kuba · accompanied by Grandma"), ("", "Shopping list", "Milk, bananas, butter…"), ("Sat", "Lipno Treetop Walk", "Planned for Saturday")),
+            "nav": ("Today", "Calendar", "Memories", "Plan", "Family"),
+        },
+        "cast": {
+            "kicker": "MEET THE FAMILY",
+            "title": "The Nováks. A family like yours.",
+            "lead": "Two parents, two children, Grandma on the phone and a dog who would go out all day. Everyone has their own corner of Rodinka, and everyone sees what concerns them.",
+            "people": (
+                ("Knows who has which club, dentist and birthday when.", "Now everyone else sees it too."),
+                ("Does the pick-ups. When he knows it’s his turn.", "Now he always knows."),
+                ("Keeps asking where we are going this weekend.", "Now we choose together."),
+                ("Can’t write yet. Still adds yoghurts to the list.", "By voice.*"),
+            ),
+            "babicka": ("And Grandma.", "She picks Kuba up when the family asks her. She confirms with one tap, even without a Rodinka account."),
+            "bady": ("And Bady.", "His walk has its own line in Rodinka, with who is taking him. Nobody walks him three times before breakfast any more."),
+            "footnote": "* Voice input works on supported devices.",
+        },
+        "day": {
+            "kicker": "ONE DAY WITH THE NOVÁKS",
+            "title": "An ordinary week. Nothing gets lost.",
+            "lead": "Spend a Tuesday with the Nováks, plus a little of the week around it. For each moment you will see how Rodinka handles it.",
+            "rail": "Moments of the week",
+            "stops": {
+                "rano": ("7:12", "Tuesday morning", "One look in the morning and we all know.", "At breakfast the Today screen is enough: who is going where, who is picking up whom and where we meet in the evening. Dad finds his pick-up, Ema her judo.", "Family planner", ("Today at our place", "You have 3 things today.", "Pick-up · Judo · Dinner at Grandma’s", "")),
+                "nakup": ("10:40", "Mid-morning", "We write the shopping list together. Butter included.", "Mom is in the shop and the answers from the chat arrive one by one. The shared list keeps everything in one place, sorted into sections, and whatever someone adds shows up straight away.", "Shared shopping list", ("Shopping list", "Butter", "Added by Dad", "")),
+                "skolka": ("15:30", "Afternoon", "The pick-up shows who is going.", "Mom and Dad each assumed the other was getting Kuba. In the calendar the pick-up has someone accompanying it, so “you’re getting him, right?” is no longer a question.", "Family calendar", ("15:30", "Nursery pick-up", "Kuba · accompanied by Dad", "")),
+                "judo": ("16:30", "Afternoon", "Nobody has to keep the clubs in their head.", "Four? Five? The day line on the Today screen shows that Ema has judo at half past four and who is driving her.", "Daily overview in the planner", ("16:30", "Judo", "Ema · accompanied by Dad", "")),
+                "vecere": ("18:30", "Evening", "What gets agreed doesn’t sink in the chat.", "Grandma’s 70th was discussed in the chat, the calendar, on a sticky note and by email. In Rodinka it all ends up in one place: the party, the cake and what still needs buying.", "Family organizer app", ("18:30", "Dinner at Grandma’s", "Whole family", "")),
+                "babicka": ("Wednesday", "The next day", "Grandma knows when she’s needed. No decoding messages.", "Instead of messages from both parents, Grandma gets one request: when, where and who. She taps “I’ll go” and the family sees straight away that it is confirmed. She only sees what you invite her to.", "Family across generations", ("Wednesday 15:30", "Nursery pick-up", "Kuba", "Confirmed")),
+                "vylet": ("Saturday", "Weekend", "Ideas that don’t get lost.", "Dad’s link from the chat, a screenshot of a castle, Grandma’s postcard: they all meet in the idea pool. Kuba adds a heart and Saturday is planned.", "Family trips", ("Idea pool", "Lipno Treetop Walk", "Planned for Saturday", "")),
+                "vzpominka": ("A year on", "A year later", "And this is something we want to remember.", "Kuba rides his bike on his own for the first time. Mom saves the photo in Rodinka, and a year later the whole family comes back to it on the Today screen under On this day.", "Family memories", ("On this day", "Kuba’s first ride on his own", "A year ago", "")),
+            },
+        },
+    },
+}
 
 HOME = {
     "cs": {
@@ -2454,7 +2617,7 @@ def trip_mock(locale: str) -> str:
         tips += f'<div class="mock-tip{" is-selected" if selected else ""}"><div class="mock-tip-head"><div><strong>{esc(title)}</strong><small>{esc(place)}</small></div>{badge}</div><div class="mock-votes">{vote_pills}</div></div>'
     pills = "".join(f'<span{pinned if index == len(mock["pills"]) - 1 else ""}>{esc(pill)}</span>' for index, pill in enumerate(mock["pills"]))
     return f'''<figure class="app-mock">
-          <div aria-hidden="true"><div class="mock-card"><p class="mock-kicker">{esc(mock["kicker"])}</p><p class="mock-title">{esc(mock["title"])}</p><div class="mock-pills">{pills}</div><p class="mock-note"><b>Klára:</b> {esc(mock["note"])}</p><div class="mock-tips">{tips}</div></div></div>
+          <div aria-hidden="true"><div class="mock-card"><p class="mock-kicker">{esc(mock["kicker"])}</p><p class="mock-title">{esc(mock["title"])}</p><div class="mock-pills">{pills}</div><p class="mock-note"><b>{esc(HOME_NOVAK[locale]["names"]["mama"])}:</b> {esc(mock["note"])}</p><div class="mock-tips">{tips}</div></div></div>
           <figcaption class="mock-caption">{esc(mock["caption"])}</figcaption>
         </figure>'''
 
@@ -2503,58 +2666,6 @@ def render_direct_answer(page_key: str, locale: str) -> str:
       </section>'''
 
 
-def _petals(members: tuple[int, ...]) -> str:
-    return "".join(
-        f'<i class="petal{" is-child" if DEMO_FAMILY[index][2] == "child" else ""}" style="--c:{DEMO_FAMILY[index][3]}"></i>'
-        for index in members
-    )
-
-
-def _day_at(hour: float) -> str:
-    # The app's day line runs 7–21 h.
-    return f"{(hour - 7) / 14 * 100:.2f}%"
-
-
-def render_phone(locale: str) -> str:
-    """The Today screen as the app draws it: header, hero with the day line,
-    today's programme, the Rodinka Today card and the five-tab navigation."""
-    phone = HOME_PHONE[locale]
-    stops = ""
-    for hour, people, time, who in ((7.75, (3, 0), "7:45", phone["rows"][0][2].split(" · ")[0]), (15, (2, 1), "15:00", phone["rows"][1][2].split(" · ")[0]), (18.5, (), "18:30", phone["dinner"])):
-        figure = _petals(people) if people else '<i class="day-line-meal"></i>'
-        stops += f'<span class="day-line-stop" style="--at:{_day_at(hour)}"><span class="day-line-figure">{figure}</span><span class="day-line-label"><b>{time}</b><span>{esc(who)}</span></span></span>'
-    avatars = ((3, 0), (2, 1), None)
-    rows = ""
-    for (time, title, meta), people in zip(phone["rows"], avatars):
-        faces = (
-            "".join(f'<i class="avatar" style="--c:{DEMO_FAMILY[index][3]}">{DEMO_FAMILY[index][1]}</i>' for index in people)
-            if people else f'<i class="avatar is-meal">{icon("meals")}</i>'
-        )
-        rows += f'<div class="app-row"><span class="app-row-time">{time}</span><span class="avatars">{faces}</span><span><strong>{esc(title)}</strong><small>{esc(meta)}</small></span></div>'
-    options = "".join(
-        f'<div class="daily-option{" is-selected" if index == 0 else ""}"><span>{esc(label)}</span><small>{esc(tally)}</small></div>'
-        for index, (label, tally) in enumerate(phone["options"])
-    )
-    nav_icons = ("today", "calendar", "memories", "planning")
-    active = ' class="is-active"'
-    nav = "".join(f'<span{active if index == 0 else ""}>{icon(name)}{esc(label)}</span>' for index, (name, label) in enumerate(zip(nav_icons, phone["nav"])))
-    nav += f'<span>{DEMO_MARK}{esc(phone["nav"][4])}</span>'
-    return f'''<div class="phone">
-            <div class="phone-screen">
-              <div class="phone-status"><span>9:41</span><i><b></b></i></div>
-              <div class="app-header">{DEMO_MARK}<span class="app-title">Rodinka<span>{esc(phone["family"])}</span></span><span class="app-header-actions"><span class="app-icon">{icon("chat")}</span><span class="app-icon">{icon("bell")}<b>1</b></span></span></div>
-              <div class="app-body">
-                <div class="today-card"><p class="today-greeting">{esc(phone["greeting"])}</p><p class="today-date">{esc(phone["date"])}</p><p class="today-summary">{esc(phone["summary"])}</p><div class="day-line"><span class="day-line-past" style="--at:{_day_at(12.5)}"></span><span class="day-line-now" style="--at:{_day_at(12.5)}"></span>{stops}</div></div>
-                <p class="app-section-title">{esc(phone["program"])}</p>
-                <div class="app-list">{rows}</div>
-                <p class="app-section-title">{DEMO_MARK}{esc(phone["daily_title"])}</p>
-                <div class="daily-card"><p class="daily-eyebrow">{esc(phone["daily_eyebrow"])}</p><p class="daily-question">{esc(phone["question"])}</p><div class="daily-options">{options}</div><p class="daily-meta">{esc(phone["voted"])}</p></div>
-              </div>
-              <div class="bottom-nav">{nav}</div>
-            </div>
-          </div>'''
-
-
 def render_focus(locale: str) -> str:
     data = HOME_FOCUS[locale]
     cfg = LOCALES[locale]
@@ -2576,7 +2687,8 @@ def render_focus(locale: str) -> str:
 def render_start(locale: str) -> str:
     data = HOME_START[locale]
     steps = "".join(f'<li class="start-step"><div><h3>{esc(title)}</h3><p>{esc(text)}</p></div></li>' for title, text in data["steps"])
-    members = "".join(f'<li><i class="petal" style="--c:{member[3]}"></i>{esc(member[0])}</li>' for member in DEMO_FAMILY)
+    names = HOME_NOVAK[locale]["names"]
+    members = "".join(f'<li><i class="petal" style="--c:{member[3]}"></i>{esc(names[key])}</li>' for member, key in zip(DEMO_FAMILY, ("tata", "mama", "ema", "kuba")))
     members += f'<li><i class="petal" style="--c:var(--text-muted);opacity:.55"></i>{esc(data["pet"])}</li>'
     kit_title, kit_text = data["kit"]
     return f'''      <section class="section band" id="jak-to-funguje" aria-labelledby="start-title">
@@ -2646,15 +2758,6 @@ def story_figure(src: str, story: dict, locale: str) -> str:
         </figure>'''
 
 
-def render_stories(locale: str) -> str:
-    trips = render_story("trips-story-title", HOME_TRIPS_STORY[locale], trip_mock(locale), "trips", locale)
-    baby = render_story("baby-story-title", HOME_BABY_STORY[locale], story_figure(HOME_BABY_STORY["src"], HOME_BABY_STORY[locale], locale), "baby", locale, reverse=True)
-    memories = render_story("memory-story-title", HOME_MEMORY_STORY[locale], story_figure(HOME_MEMORY_STORY["src"], HOME_MEMORY_STORY[locale], locale), "memories", locale)
-    return f'''      <div class="section stories">
-{trips}
-{memories}
-{baby}
-      </div>'''
 
 
 def render_trust(locale: str) -> str:
@@ -2728,43 +2831,28 @@ def render_short(episode: dict, locale: str, tone: str, link: str = "", attrs: s
 
 def topic_short(page_key: str, locale: str) -> str:
     series = SERIES.get(locale)
-    episode = next((item for item in series["episodes"] if item["page"] == page_key), None) if series else None
+    episode = next((item for item in series["episodes"] if item["page"] == page_key and not item.get("extra")), None) if series else None
     if not episode:
         return ""
     return render_short(episode, locale, TOPIC_TONES[page_key][0])
 
 
-def render_series(locale: str) -> str:
-    """The whole series on the homepage: one player showing the chosen episode
-    and the list of episodes next to it. Without JavaScript the list is hidden
-    and every episode stays in the page as its own player."""
+# Further episodes about a topic play below "how Rodinka helps", each with its
+# question and a line on what happens in it.
+MORE_SHORTS_COPY = {"cs": ("KAŽDODENNÍ RODINKA", "Další chvíle ze série")}
+
+
+def render_more_shorts(page_key: str, locale: str) -> str:
     series = SERIES.get(locale)
     if not series:
         return ""
-    shorts, picks = [], ""
-    for index, episode in enumerate(series["episodes"]):
-        key = episode.get("link") or episode["page"]
-        panel = f"series-{index + 1:02d}"
-        active = index == 0
-        link = f' <a class="card-link" href="{PATHS[key][locale]}">{esc(LLMS_LABELS[locale][key])} <span aria-hidden="true">→</span></a>'
-        shorts.append(render_short(episode, locale, TOPIC_TONES[key][0], link, f' id="{panel}"{" data-active" if active else ""}'))
-        picks += (
-            f'<li><button class="series-pick" type="button" aria-controls="{panel}" aria-current="{"true" if active else "false"}">'
-            f'<span class="series-pick-text"><span class="series-question">{esc(episode["title"])}</span><span class="series-topic">{esc(LLMS_LABELS[locale][key])}</span></span>'
-            f'<span class="series-time"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" /></svg>{series_time(episode["seconds"])}</span></button></li>'
-        )
-    stage = "\n        ".join(shorts)
-    return f'''      <section class="section series-section" aria-labelledby="series-title">
-        <div class="section-inner">
-          <div class="section-head reveal"><p class="section-kicker">{esc(series["kicker"])}</p><h2 class="section-title" id="series-title">{esc(series["title"])}</h2><p class="section-lead">{esc(series["lead"])}</p></div>
-          <div class="series reveal">
-            <div class="series-stage">
-        {stage}
-            </div>
-            <ol class="series-list" aria-label="{esc(series["list"])}">{picks}</ol>
-          </div>
-        </div>
-      </section>'''
+    extras = [item for item in series["episodes"] if item["page"] == page_key and item.get("extra")]
+    if not extras:
+        return ""
+    kicker, title = MORE_SHORTS_COPY[locale]
+    shorts = "".join(render_short(item, locale, TOPIC_TONES[page_key][0]) for item in extras)
+    return f'''
+        <section class="content-section more-shorts" aria-labelledby="more-shorts-title"><div class="section-copy"><p class="section-kicker">{esc(kicker)}</p><h2 id="more-shorts-title">{esc(title)}</h2></div><div class="more-shorts-grid">{shorts}</div></section>'''
 
 
 def render_home_pro(locale: str) -> str:
@@ -2779,39 +2867,276 @@ def render_home_pro(locale: str) -> str:
       </section>'''
 
 
-def render_home(locale: str) -> str:
+# --- The Nováks on the homepage ---------------------------------------------
+# Hero (their questions on paper notes turn into the Today screen), the family
+# itself, one day with them (each moment: the note, what Rodinka does, the
+# series episode where one exists in the page's language, otherwise a drawn
+# answer card), and a finale where their family mark settles into the Rodinka
+# logo. Layout data is shared; words live in HOME_NOVAK per locale.
+
+NOVAK_ASSETS = "/assets/novakovi/"
+NOVAK_NOTE_HEIGHTS = {"kdo": 327, "krouzek": 341, "nakup": 329, "vikend": 340, "babicka": 329, "nezapomneli": 329, "resili": 332}
+NOVAK_NOTE_TEXT = {
+    "cs": {"kdo": "Kdo dnes vyzvedává?", "krouzek": "V kolik je ten kroužek?", "nakup": "Co máme koupit?", "vikend": "Kam o víkendu?", "babicka": "Babi, můžeš ve středu?", "nezapomneli": "Nezapomněli jsme na něco?", "resili": "Kde jsme to řešili?"},
+    "sk": {"kdo": "Kto dnes vyzdvihuje?", "krouzek": "O koľkej je ten krúžok?", "nakup": "Čo máme kúpiť?", "vikend": "Kam cez víkend?", "babicka": "Babka, môžeš v stredu?", "nezapomneli": "Nezabudli sme na niečo?", "resili": "Kde sme to riešili?"},
+    "en": {"kdo": "Who’s picking up today?", "krouzek": "What time is that club?", "nakup": "What do we need to buy?", "vikend": "Where to this weekend?", "babicka": "Grandma, free on Wednesday?", "nezapomneli": "Did we forget something?", "resili": "Where did we talk about it?"},
+    "de": {"kdo": "Wer holt heute ab?", "krouzek": "Wann ist das Training?", "nakup": "Was müssen wir kaufen?", "vikend": "Wohin am Wochenende?", "babicka": "Oma, kannst du am Mittwoch?", "nezapomneli": "Haben wir was vergessen?", "resili": "Wo hatten wir das besprochen?"},
+    "pl": {"kdo": "Kto dziś odbiera?", "krouzek": "O której są te zajęcia?", "nakup": "Co mamy kupić?", "vikend": "Dokąd na weekend?", "babicka": "Babciu, możesz w środę?", "nezapomneli": "Czy o czymś zapomnieliśmy?", "resili": "Gdzie my to ustalaliśmy?"},
+}
+# (person, image width, member colour); every figure is 640 px tall.
+NOVAK_PEOPLE = (("tata", 349, "var(--member-blue)"), ("mama", 421, "var(--member-coral)"), ("ema", 464, "var(--member-honey)"), ("kuba", 541, "var(--member-mint)"))
+NOVAK_FIGURE_WIDTHS = {key: width for key, width, _ in NOVAK_PEOPLE} | {"babicka": 396}
+# Hero notes: (note, left %, top %, rotation, the Today row it lands in).
+NOVAK_HERO_NOTES = (
+    ("kdo", 2, 3, -8, "skolka"), ("krouzek", 50, 0, 6, "judo"), ("nakup", 27, 19, -3, "nakup"),
+    ("vikend", 61, 23, 9, "vylet"), ("babicka", -2, 36, 5, "babicka"), ("nezapomneli", 38, 41, -7, "vecere"),
+)
+# Day stops: (key, note, series episode stem, topic link, figure, tone).
+NOVAK_STOPS = (
+    ("rano", "nezapomneli", "kazdodenni-rodinka-05-co-nas-dnes-ceka", "planner", "mama", "activities"),
+    ("nakup", "nakup", "kazdodenni-rodinka-02-co-mame-koupit", "shopping", "tata", "family"),
+    ("skolka", "kdo", "kazdodenni-rodinka-01-kdo-dnes-vyzvedava", "calendar", "kuba", "calendar"),
+    ("judo", "krouzek", "kazdodenni-rodinka-03-v-kolik-ma-krouzek", "planner", "ema", "activities"),
+    ("vecere", "resili", "kazdodenni-rodinka-06-kde-jsme-to-resili", "app", "babicka", "family"),
+    ("babicka", "babicka", "kazdodenni-rodinka-17-babi-muzes-ve-stredu", "circle", "babicka", "calendar"),
+    ("vylet", "vikend", "kazdodenni-rodinka-04-kam-jsme-chteli-jet", "trips", "ema", "travel"),
+    ("vzpominka", None, "kazdodenni-rodinka-07-tohle-si-chceme-pamatovat", "memories", "kuba", "memories"),
+)
+# The finale's petals: Novák family mark → default Rodinka logo. The blue petal
+# folds into the coral one. (x, rotation, half-width, half-height) in a 64 box.
+NOVAK_LOGO_PETALS = (
+    ("var(--member-blue)", (11.027, -13, 6.027, 12.623), (13.708, -14, 0.01, 0.01)),
+    ("#e9785e", (25.009, -4.333, 6.027, 15.892), (13.708, -14, 7.452, 12.195)),
+    ("#f2c85b", (38.991, 4.333, 6.027, 12.585), (32, 0, 8.13, 18.293)),
+    ("#8bc6ad", (52.973, 13, 6.027, 10.932), (50.293, 12, 7.452, 14.227)),
+)
+_UNIT_PETAL = "M -1 0 A 1 1 0 0 1 1 0 L 1 0.1 A 0.9 0.9 0 0 1 0.1 1 L -0.1 1 A 0.9 0.9 0 0 1 -1 0.1 Z"
+
+
+def novak_note_src(note: str, locale: str) -> str:
+    suffix = "" if locale == "cs" else f"-{locale}"
+    return f"{NOVAK_ASSETS}listek-{note}{suffix}.webp"
+
+
+def novak_note_img(note: str, locale: str, lazy: bool = True) -> str:
+    loading = ' loading="lazy"' if lazy else ""
+    return f'<img src="{novak_note_src(note, locale)}" width="400" height="{NOVAK_NOTE_HEIGHTS[note]}" alt=""{loading} decoding="async" />'
+
+
+def novak_figure_img(person: str, cls: str = "", lazy: bool = True) -> str:
+    loading = ' loading="lazy"' if lazy else ""
+    klass = f' class="{cls}"' if cls else ""
+    return f'<img{klass} src="{NOVAK_ASSETS}{person}.webp" width="{NOVAK_FIGURE_WIDTHS[person]}" height="640" alt=""{loading} decoding="async" />'
+
+
+def novak_family_imgs(lazy: bool) -> str:
+    return "".join(novak_figure_img(key, f"nd-member nd-member--{key}", lazy) for key, _, _ in NOVAK_PEOPLE)
+
+
+def _novak_row(row_id: str, time: str, avatars: str, title: str, meta: str, extra: str = "") -> str:
+    return (f'<div class="app-row nd-row" id="nd-row-{row_id}"><span class="app-row-time">{esc(time)}</span><span class="avatars">{avatars}</span>'
+            f'<span><strong>{esc(title)}</strong><small>{esc(meta)}</small></span>{extra}</div>')
+
+
+def render_novak_phone(locale: str) -> str:
+    data = HOME_NOVAK[locale]
+    phone, names = data["phone"], data["names"]
+    colour = {key: c for key, _, c in NOVAK_PEOPLE} | {"babicka": "var(--member-lavender)"}
+
+    def face(person: str) -> str:
+        return f'<i class="avatar" style="--c:{colour[person]}">{esc(names[person][:2].upper())}</i>'
+
+    family_face = '<i class="avatar is-family"><i class="petal" style="--c:var(--member-blue)"></i><i class="petal" style="--c:var(--member-coral)"></i></i>'
+    (t1, t2, t3), (l1, l2, l3) = phone["today"], phone["later"]
+    today = (_novak_row("skolka", *t1[:1], face("kuba") + face("tata"), *t1[1:])
+             + _novak_row("judo", *t2[:1], face("ema") + face("tata"), *t2[1:])
+             + _novak_row("vecere", *t3[:1], family_face, *t3[1:]))
+    chip = HOME_NOVAK[locale]["day"]["stops"]["babicka"][5][3]
+    later = (_novak_row("babicka", *l1[:1], face("babicka") + face("kuba"), *l1[1:], f'<span class="nd-chip">{esc(chip)}</span>')
+             + _novak_row("nakup", *l2[:1], f'<i class="avatar is-shop">{icon("shopping")}</i>', *l2[1:])
+             + _novak_row("vylet", *l3[:1], f'<i class="avatar is-trip">{icon("trips")}</i>', *l3[1:]))
+    nav_icons = ("today", "calendar", "memories", "planning")
+    nav = "".join(f'<span{" class=\"is-active\"" if index == 0 else ""}>{icon(name)}{esc(label)}</span>' for index, (name, label) in enumerate(zip(nav_icons, phone["nav"])))
+    nav += f'<span>{DEMO_MARK}{esc(phone["nav"][4])}</span>'
+    return f'''<div class="phone">
+                  <div class="phone-screen">
+                    <div class="phone-status"><span>7:12</span><i><b></b></i></div>
+                    <div class="app-header">{DEMO_MARK}<span class="app-title">Rodinka<span>{esc(data["family"])}</span></span><span class="app-header-actions"><span class="app-icon">{icon("chat")}</span><span class="app-icon">{icon("bell")}<b>1</b></span></span></div>
+                    <div class="app-body">
+                      <div class="today-card"><p class="today-greeting">{esc(phone["title"])}</p><p class="today-date">{esc(phone["date"])}</p><p class="today-summary">{esc(phone["summary"])}</p></div>
+                      <p class="app-section-title">{esc(phone["program"])}</p>
+                      <div class="app-list">{today}</div>
+                      <p class="app-section-title">{esc(phone["week"])}</p>
+                      <div class="app-list">{later}</div>
+                    </div>
+                    <div class="bottom-nav">{nav}</div>
+                  </div>
+                </div>'''
+
+
+def render_novak_hero(locale: str) -> str:
     data = HOME[locale]
+    novak = HOME_NOVAK[locale]
     cfg = LOCALES[locale]
     proof = "".join(f"<li>{esc(item)}</li>" for item in data["proof"])
-    journey = "".join(f"<li><b>{esc(title)}</b><small>{esc(text)}</small></li>" for title, text in data["journey"])
-    main = f'''      <div class="home-hero">
+    notes = "".join(
+        f'<li class="nd-note" style="--x:{x}%;--y:{y}%;--r:{r}deg;--i:{index}" data-target="nd-row-{target}">'
+        f'{novak_note_img(note, locale, lazy=False)}<span class="visually-hidden">{esc(NOVAK_NOTE_TEXT[locale][note])}</span></li>'
+        for index, (note, x, y, r, target) in enumerate(NOVAK_HERO_NOTES)
+    )
+    chaos, calm = novak["toggle"]
+    return f'''      <div class="home-hero nd-hero">
         <section class="hero">
           <div class="hero-copy reveal">
-            <p class="eyebrow">{STATIC_MARK}{esc(data["eyebrow"])}</p>
+            <p class="eyebrow">{STATIC_MARK}{esc(novak["eyebrow"])}</p>
             <h1>{esc(data["h1"])}</h1>
             <p class="brand-line">{esc(cfg["claim"])}</p>
-            <p class="hero-lead">{esc(data["lead"])}</p>
+            <p class="hero-lead">{esc(novak["lead"])}</p>
             <div class="hero-actions">{store_buttons(locale, "hero")} <a class="text-link" href="#jak-to-funguje">{esc(data["how_link"])} <span aria-hidden="true">↓</span></a></div>
             <ul class="hero-proof">{proof}</ul>
-            <div class="trust-row">{DEMO_MARK}<p><strong>{esc(data["trust_title"])}</strong><br />{esc(data["trust_text"])}</p></div>
           </div>
-          <div class="hero-visual" aria-hidden="true">
-          {render_phone(locale)}
+          <div class="nd-stage-wrap">
+            <div class="nd-stage" data-state="chaos">
+              <ul class="nd-notes" aria-label="{esc(novak["notes_label"])}">{notes}</ul>
+              <div class="nd-family" aria-hidden="true">{novak_family_imgs(lazy=False)}</div>
+              <div class="nd-phone" aria-hidden="true">
+                {render_novak_phone(locale)}
+              </div>
+              <p class="nd-calm-line" aria-hidden="true">{esc(novak["calm"])}</p>
+            </div>
+            <button class="nd-toggle" type="button" aria-pressed="false" hidden><span class="nd-toggle-chaos">{esc(chaos)}</span><span class="nd-toggle-calm">{esc(calm)}</span></button>
           </div>
         </section>
-      </div>
+      </div>'''
+
+
+def render_novak_cast(locale: str) -> str:
+    novak = HOME_NOVAK[locale]
+    cast, names = novak["cast"], novak["names"]
+    order = ("mama", "tata", "ema", "kuba")
+    colour = {key: c for key, _, c in NOVAK_PEOPLE}
+    people = "".join(
+        f'<li class="nd-person reveal" style="--c:{colour[key]}"><div class="nd-person-figure">{novak_figure_img(key)}</div>'
+        f'<h3>{esc(names[key])}</h3><p>{esc(line)}</p><p class="nd-accent">{esc(accent)}</p></li>'
+        for key, (line, accent) in zip(order, cast["people"])
+    )
+    grandma_title, grandma_text = cast["babicka"]
+    bady_title, bady_text = cast["bady"]
+    cfg = LOCALES[locale]
+    guests = (
+        f'<figure>{novak_figure_img("babicka")}<figcaption><b>{esc(grandma_title)}</b> {esc(grandma_text)} '
+        f'<a class="card-link" href="{PATHS["circle"][locale]}">{esc(LLMS_LABELS[locale]["circle"])} <span aria-hidden="true">→</span></a></figcaption></figure>'
+        f'<figure><img src="{NOVAK_ASSETS}bady.webp" width="751" height="440" alt="" loading="lazy" decoding="async" /><figcaption><b>{esc(bady_title)}</b> {esc(bady_text)} '
+        f'<a class="card-link" href="{PATHS["chores"][locale]}">{esc(LLMS_LABELS[locale]["chores"])} <span aria-hidden="true">→</span></a></figcaption></figure>'
+    )
+    return f'''      <section class="section nd-cast" aria-labelledby="cast-title">
+        <div class="section-inner">
+          <div class="section-head reveal"><p class="section-kicker">{esc(cast["kicker"])}</p><h2 class="section-title" id="cast-title">{esc(cast["title"])}</h2><p class="section-lead">{esc(cast["lead"])}</p></div>
+          <ul class="nd-people">{people}</ul>
+          <div class="nd-guests reveal">{guests}</div>
+          <p class="nd-footnote">{esc(cast["footnote"])}</p>
+        </div>
+      </section>'''
+
+
+def _novak_short(episode: dict, locale: str, tone: str) -> str:
+    series = SERIES[locale]
+    stem = f"/assets/video/{episode['stem']}"
+    label = series["label"].format(title=episode["title"], seconds=episode["seconds"])
+    meta = series["meta"].format(time=series_time(episode["seconds"]))
+    return (f'<figure class="short" data-tone="{tone}"><div class="short-frame">'
+            f'<video class="short-video" controls playsinline preload="none" aria-label="{esc(episode["title"])}"><source src="{stem}.mp4" type="video/mp4" /></video>'
+            f'<button class="short-cover" type="button" aria-label="{esc(label)}"><img src="{stem}.webp" width="{SERIES_POSTER_WIDTH}" height="{SERIES_POSTER_HEIGHT}" alt="" loading="lazy" decoding="async" />'
+            f'<span class="short-play" aria-hidden="true"><span class="short-play-icon"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></svg></span><span><strong>{esc(series["play"])}</strong><small>{esc(meta)}</small></span></span>'
+            f'</button></div></figure>')
+
+
+def _novak_card(person: str, card: tuple, tone: str) -> str:
+    """A drawn answer: the person on paper and the line Rodinka shows them."""
+    kicker, title, meta, chip = card
+    chip_markup = f'<span class="nd-card-chip">{esc(chip)}</span>' if chip else ""
+    return (f'<figure class="nd-answer" data-tone="{tone}" aria-hidden="true">{novak_figure_img(person)}'
+            f'<figcaption class="nd-answer-card"><small>{esc(kicker)}</small><b>{esc(title)}</b><span>{esc(meta)}</span>{chip_markup}</figcaption></figure>')
+
+
+def render_novak_day(locale: str) -> str:
+    novak = HOME_NOVAK[locale]
+    day = novak["day"]
+    series = SERIES.get(locale)
+    episodes = {item["stem"]: item for item in series["episodes"]} if series else {}
+    rail, stops = "", []
+    for index, (key, note, stem, link_key, person, tone) in enumerate(NOVAK_STOPS):
+        clock, when, title, text, link_label, card = day["stops"][key]
+        rail += f'<li><a href="#den-{key}" data-stop="{key}"><b>{esc(clock)}</b></a></li>'
+        note_markup = (f'<figure class="nd-stop-note">{novak_note_img(note, locale)}<figcaption class="visually-hidden">{esc(NOVAK_NOTE_TEXT[locale][note])}</figcaption></figure>'
+                       if note else "")
+        episode = episodes.get(stem) if stem else None
+        media = _novak_short(episode, locale, tone) if episode else _novak_card(person, card, tone)
+        stops.append(
+            f'<article class="nd-stop reveal" id="den-{key}" data-stop="{key}">'
+            f'<div class="nd-stop-copy"><p class="nd-clock"><b>{esc(clock)}</b><span>{esc(when)}</span></p>{note_markup}'
+            f'<h3>{esc(title)}</h3><p>{esc(text)}</p><a class="card-link" href="{PATHS[link_key][locale]}">{esc(link_label)} <span aria-hidden="true">→</span></a></div>'
+            f'<div class="nd-stop-media">{media}</div></article>'
+        )
+    marker = "".join(f'<i class="petal{" is-child" if key in ("ema", "kuba") else ""}" style="--c:{c}"></i>' for key, _, c in NOVAK_PEOPLE)
+    body = "\n          ".join(stops)
+    return f'''      <section class="section nd-day" aria-labelledby="day-title">
+        <div class="section-inner">
+          <div class="section-head reveal"><p class="section-kicker">{esc(day["kicker"])}</p><h2 class="section-title" id="day-title">{esc(day["title"])}</h2><p class="section-lead">{esc(day["lead"])}</p></div>
+          <nav class="nd-rail" aria-label="{esc(day["rail"])}"><ol>{rail}</ol><span class="nd-rail-marker" aria-hidden="true">{marker}</span></nav>
+          <div class="nd-stops">
+          {body}
+          </div>{render_novak_tour(locale)}
+        </div>
+      </section>'''
+
+
+def render_novak_tour(locale: str) -> str:
+    tour = HOME_TOUR.get(locale)
+    if not tour or not SERIES.get(locale):
+        return ""
+    episode = {"stem": tour["stem"], "title": tour["video_title"], "seconds": tour["seconds"]}
+    return (f'\n          <div class="nd-tour reveal"><div class="nd-tour-copy"><p class="section-kicker">{esc(tour["kicker"])}</p>'
+            f'<h3>{esc(tour["title"])}</h3><p>{esc(tour["text"])}</p></div>{_novak_short(episode, locale, "neutral")}</div>')
+
+
+def render_novak_finale(locale: str) -> str:
+    def place(prefix: str, values: tuple) -> str:
+        x, r, w, h = values
+        return f"--{prefix}x:{_num(x)}px;--{prefix}r:{_num(r)}deg;--{prefix}w:{_num(w)};--{prefix}h:{_num(h)};"
+
+    petals = "".join(
+        f'<g class="nd-petal" style="{place("f", family)}{place("l", logo)}--d:{index}"><path d="{_UNIT_PETAL}" fill="{fill}"/></g>'
+        for index, (fill, family, logo) in enumerate(NOVAK_LOGO_PETALS)
+    )
+    return f'''      <div class="nd-finale" aria-hidden="true">
+        <div class="nd-finale-family">{novak_family_imgs(lazy=True)}</div>
+        <div class="nd-finale-logo"><svg class="nd-finale-mark" viewBox="0 0 64 64" focusable="false">{petals}</svg><span class="nd-finale-word">Rodinka</span></div>
+        <p class="nd-finale-line">{esc(LOCALES[locale]["claim"])}</p>
+      </div>'''
+
+
+def render_home(locale: str) -> str:
+    data = HOME[locale]
+    journey = "".join(f"<li><b>{esc(title)}</b><small>{esc(text)}</small></li>" for title, text in data["journey"])
+    baby = render_story("baby-story-title", HOME_BABY_STORY[locale], story_figure(HOME_BABY_STORY["src"], HOME_BABY_STORY[locale], locale), "baby", locale, reverse=True)
+    main = f'''{render_novak_hero(locale)}
 {render_direct_answer("home", locale)}
+{render_novak_cast(locale)}
+{render_novak_day(locale)}
 {render_home_spot(locale)}
 {render_focus(locale)}
-{render_series(locale)}
 {render_circle(locale)}
 {render_start(locale)}
 {render_family_layer(locale)}
-{render_stories(locale)}
+      <div class="section stories">
+{baby}
+      </div>
 {render_trust(locale)}
 {render_directory(locale)}
       <section class="section band"><figure class="family-quote reveal">{STATIC_MARK}<blockquote><p>{esc(data["quote"])}</p></blockquote><figcaption>{esc(data["quote_by"])}</figcaption></figure></section>
 {render_home_pro(locale)}
+{render_novak_finale(locale)}
       <section class="cta-section" id="vyzkouset"><div class="cta-card reveal"><p class="section-kicker">{esc(data["cta_kicker"])}</p><h2>{esc(data["cta_title"])}</h2><p>{esc(STORE_INTRO[locale][0])}</p><div class="cta-actions">{store_buttons(locale, "content")}</div><ol class="mini-journey">{journey}</ol><div class="install-options"><h3>{esc(data["install_title"])}</h3><p>{esc(STORE_INTRO[locale][1])}</p><a class="store-link" href="https://get.microsoft.com/installer/download/9nbxf0lqbmbj?referrer=appbadge">{esc(data["store"])} <span aria-hidden="true">→</span></a></div><small class="form-note">{esc(data["fine_print"])}</small></div></section>'''
     return page_shell("home", locale, data, main)
 
@@ -2837,7 +3162,7 @@ def render_topic(page_key: str, locale: str) -> str:
         </div>
 {render_direct_answer(page_key, locale)}
         <section class="{problem_class}"><div class="section-copy"><p class="section-kicker">{esc(data["eyebrow"])}</p><h2>{esc(data["problem_title"])}</h2>{"".join(f"<p>{esc(paragraph)}</p>" for paragraph in data["problem"])}</div>{short}<div class="scenario-grid">{scenarios}</div></section>
-        <section class="help-section" id="jak-pomaha"><div class="section-copy"><p class="section-kicker">Rodinka</p><h2>{esc(data["help_title"])}</h2><p>{esc(data["help_intro"])}</p>{help_figure}</div><ol class="help-steps">{steps}</ol></section>
+        <section class="help-section" id="jak-pomaha"><div class="section-copy"><p class="section-kicker">Rodinka</p><h2>{esc(data["help_title"])}</h2><p>{esc(data["help_intro"])}</p>{help_figure}</div><ol class="help-steps">{steps}</ol></section>{render_more_shorts(page_key, locale)}
         <section class="content-section answers-section"><div class="section-copy"><h2>{esc(data["answers_title"])}</h2></div><div class="answers-list">{answers}</div></section>
         <aside class="related-section" aria-labelledby="related-title"><p class="section-kicker">{esc(cfg["related_kicker"])}</p><h2 id="related-title">{esc(cfg["related"])}</h2><ul class="related-grid">{related}</ul></aside>
       </article>
@@ -3716,9 +4041,9 @@ def install_locale(code: str, module) -> None:
     CANONICAL_LABELS[code] = module.CANONICAL_LABEL
     LANGUAGE_SWITCH[code] = module.LANGUAGE_SWITCH
     for name in (
-        "DIRECT_ANSWERS", "HOME", "HOME_PHONE", "HOME_FOCUS", "HOME_START", "HOME_FAMILY_LAYER", "TRIP_MOCK",
-        "HOME_TRIPS_STORY", "HOME_MEMORY_STORY", "HOME_BABY_STORY", "HOME_CIRCLE", "ESCORT_MOCK", "INVITE_MOCK", "HOME_TRUST",
-        "HOME_PRO", "TOPICS", "LLMS_LABELS", "INFO_COMMON", "INFO_PAGES", "LEGAL_META",
+        "DIRECT_ANSWERS", "HOME", "HOME_FOCUS", "HOME_START", "HOME_FAMILY_LAYER", "TRIP_MOCK",
+        "HOME_BABY_STORY", "HOME_CIRCLE", "ESCORT_MOCK", "INVITE_MOCK", "HOME_TRUST",
+        "HOME_PRO", "HOME_NOVAK", "HOME_SPOT", "TOPICS", "LLMS_LABELS", "INFO_COMMON", "INFO_PAGES", "LEGAL_META",
     ):
         globals()[name][code] = getattr(module, name)
     for key, (alt, caption) in module.PRODUCT_PROOFS.items():

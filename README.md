@@ -46,9 +46,23 @@ Web přebírá vizuální systém aplikace Rodinka (`Rodinka/visual-identity.md`
 - Blok `:root` v `styles.css` je kopie sémantických tokenů aplikace (plochy, text, hranice, jediný accent `--interactive-primary`, vybraný stav, kategorie modulů, radiusy, stíny, pohyb) včetně tmavého motivu přes `prefers-color-scheme`. Při změně tokenů v aplikaci upravte stejné hodnoty i tady; nové lokální barvy nevymýšlejte.
 - Barva modulu (`data-tone`) odpovídá kategorii, kterou pro daný modul používá aplikace: úkoly zelená, aktivity levandulová, nákupy medová, doklady tlumená modrá, výlety přírodní zelená, jídla terakota.
 - Logo je port `FamilyMark` z aplikace (`family_mark*` v generátoru počítá stejné lístky jako `Rodinka/src/utils/familyMark.ts`). Ikony spodní navigace v ukázce jsou ikony aplikace.
-- Telefon v hero sekci, portrét rodiny a plán cesty jsou kresby skutečných komponent aplikace, ne screenshoty. Jsou vždy `aria-hidden` a stejnou informaci nese viditelný text vedle nich. Používají texty aplikace (Dnes, Dnešní Rodinka, Plány cest); když se v aplikaci změní, upravte `HOME_PHONE`, `TRIP_MOCK` a spol.
+- Telefon v hero sekci, karty odpovědí u Novákových, portrét rodiny a plán cesty jsou kresby skutečných komponent aplikace, ne screenshoty. Jsou vždy `aria-hidden` a stejnou informaci nese viditelný text vedle nich. Používají texty aplikace (Dnes u nás, Dnešní program, Přidal/a, V tento den, Zásobník nápadů, Plány cest); když se v aplikaci změní, upravte `HOME_NOVAK`, `TRIP_MOCK` a spol.
 - Sekce „S čím vám má Rodinka nejvíc pomáhat?“ zrcadlí sedm oblastí z úvodního průvodce aplikace (`HOME_FOCUS`) ve stejném pořadí a znění. Kroky „Jak začít“ odpovídají skutečnému průvodci (Rodina → S čím pomáhat → Portrét).
 - Tvrzení o funkcích musí odpovídat aktuálnímu stavu aplikace (runtime, ne roadmapě). Moment dne je součástí Rodinky Pro; hlasové zadávání je vždy „na podporovaných zařízeních“.
+
+### Homepage: jeden den u Novákových
+
+**CURRENT — stav k 23. 11. 2026.** Homepage ve všech pěti jazycích vypráví přínosy Rodinky příběhem Novákových, rodiny ze série Každodenní Rodinka (Máma, Táta, Ema, Kuba, babička a pes Bady; v SK Mama/Ocko/Babka, v EN Mom/Dad/Grandma, v DE Mama/Papa/Emma/Jakob/Oma, v PL Mama/Tata/Babcia). Stejně jako ve spotu se rodina v němčině a polštině jmenuje Nowak (Nowaks, Nowakowie). Data jsou v `HOME_NOVAK` (CS/SK/EN v generátoru, DE/PL v `locale_de.py` a `locale_pl.py`), rozložení v konstantách `NOVAK_*` a vykreslení v `render_novak_*`.
+
+- **Hero:** papírová kuchyň se šesti lístečky otázek a Novákovými. Po chvíli (nebo tlačítkem) přijede telefon s obrazovkou Dnes a každý lísteček odletí do „svého“ řádku. Bez JavaScriptu a při omezeném pohybu zůstane klidná scéna s lístečky. Na úzkých obrazovkách je scéna hned pod úvodním textem, před tlačítky obchodů.
+- **Seznamte se:** čtyři členové rodiny, babička (odkaz na Rodinu napříč generacemi) a Bady (odkaz na Úkoly pro rodinu). Kubovo „hlasem“ má poznámku o podporovaných zařízeních.
+- **Jeden den:** osm zastávek (7:12 → 10:40 → 15:30 → 16:30 → 18:30 → středa → sobota → za rok) s lepkavou lištou. Každá zastávka má lísteček s otázkou, přínos, odkaz na tematickou stránku a médium: na českých stránkách díl série (01–07), jinde a u babičky kreslenou kartu odpovědi s postavou.
+- **Kromě toho, co je potřeba zařídit:** sekce má sedm karet; přibyly Rodinné poukázky a Velikosti dětí (obě vydané funkce, odkaz na Aplikaci pro rodinu) a karta dětí zmiňuje Šetřím si na…. Ve validovaném textu se nesmí objevit „darovat“ (pojistka proti dárcovským odkazům), proto čeština píše „dát poukázku“.
+- **Finále:** Novákovi se před závěrečnou výzvou slijí do svého znaku a ten se promění ve výchozí logo Rodinky s claimem.
+
+Homepage zachovává všechny odkazy dřívější verze: sekce S čím pomáhat, Rodina napříč generacemi, Jak začít, Kromě toho, co je potřeba zařídit, příběh o miminku, průvodce tématy, Pro a CTA zůstaly; galerie série a příběhy o výletech a vzpomínkách se přesunuly do zastávek dne.
+
+Postavy a lístečky jsou rendery z enginu spotu (`Rodinka/promo/rodinka-spot`, `drawMember`, `drawBady`, `makeNote`) uložené jako WebP v `assets/novakovi/`: postavy jsou vysoké 640 px, lístečky široké 400 px. Lístečky nesou otázku v jazyce stránky: `listek-<klíč>.webp` pro češtinu a `listek-<klíč>-<jazyk>.webp` pro ostatní jazyky. Při změně textu otázky změňte `NOVAK_NOTE_TEXT` a lísteček vyrenderujte znovu stejným písmem (Caveat) a stejným seedem; delší text se zmenší, aby se vešel.
 
 ### Rodina napříč generacemi (G1–G5a)
 
@@ -170,9 +184,9 @@ Store listing obsahuje i `07` Milníky, zatím jen česky. Na web se nedostal, p
 
 ### Promo video
 
-Homepage CS, SK a EN mají pod stručnou odpovědí padesátivteřinový spot (DE a PL zatím bez lokalizovaného voice-overu, sekce se nevykreslí) z `Rodinka/promo/rodinka-spot/video/`. Obsah sekce i použitý soubor (`stem`) spravuje `HOME_SPOT` v generátoru. Každý z těchto jazyků má vlastní verzi spotu s lokalizovaným voice-overem. Soubory leží v `assets/video/` (slovenské s příponou `-sk`, anglické `-en`): 16:9 pro širší obrazovky, 9:16 pro telefony do 560 px. Video se stahuje až po kliknutí na plakát. Bez JavaScriptu se zobrazí běžný přehrávač s verzí 16:9.
+Homepage ve všech pěti jazycích má pod „Jedním dnem u Novákových“ zhruba minutový spot z `Rodinka/promo/rodinka-spot/video/`. Obsah sekce i použitý soubor (`stem`) spravuje `HOME_SPOT` v generátoru. Každý z těchto jazyků má vlastní verzi spotu s lokalizovaným voice-overem. Soubory leží v `assets/video/` (slovenské s příponou `-sk`, anglické `-en`, německé `-de`, polské `-pl`): 16:9 pro širší obrazovky, 9:16 pro telefony do 560 px. Video se stahuje až po kliknutí na plakát. Bez JavaScriptu se zobrazí běžný přehrávač s verzí 16:9.
 
-Webové verze a WebP plakáty vznikly takto; pro 9:16 platí totéž se vstupem `rodinka-spot-1080x1920.mp4` a plakátem širokým 720 px, pro další jazyky vstupy i výstupy `rodinka-spot-sk-*` a `rodinka-spot-en-*`. Plakát je snímek, na kterém je celý titulek („Rodina je ten nejkrásnější chaos na světě.“) a všechny postavičky: 11,4 s u české a anglické verze, 11,02 s u slovenské, která běží o kousek dřív:
+Webové verze a WebP plakáty vznikly takto; pro 9:16 platí totéž se vstupem `rodinka-spot-1080x1920.mp4` a plakátem širokým 720 px, pro další jazyky vstupy i výstupy `rodinka-spot-sk-*` a `rodinka-spot-en-*`. Plakát je snímek, na kterém je celý titulek („Rodina je ten nejkrásnější chaos na světě.“) a všechny postavičky: 11,4 s u české a anglické verze, 11,02 s u slovenské, která běží o kousek dřív, 11,6 s (16:9) a 12,2 s (9:16) u německé a 11,45 s u polské. Německý a polský spot jsou render z 12. 11. 2026 (DE 54 s, PL 48 s). Odkaz přes závěrečné tlačítko ve videu (`cta_from`, `cta_width` v `HOME_SPOT`) je změřený ze snímků: tlačítko se objeví v 47,75 s (DE) a 41,95 s (PL) a je široké 604 a 522 px v jednotkách 1080 px záběru.
 
 ```bash
 ffmpeg -i rodinka-spot-1080p.mp4 -c:v libx264 -preset slow -crf 26 -r 30 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/rodinka-spot-16x9.mp4
@@ -183,7 +197,9 @@ Lokální `python -m http.server` nepodporuje HTTP Range, takže v něm video ne
 
 ### Série Každodenní Rodinka
 
-Sedm krátkých vertikálních dílů (9:16, 14–25 s) z `Rodinka/promo/rodinka-spot/` (`src/episodes/ep01`–`ep07`). Každý díl prodává jednu každodenní chvíli, proto hraje přímo u funkce, o které je: v sekci s popisem problému na odpovídající tematické stránce. Na homepage je pod sekcí „S čím vám má Rodinka nejvíc pomáhat?“ celá série jako jeden přehrávač se seznamem dílů; tam má domov i díl 05, který ukazuje obrazovku Dnes jako celek a vlastní stránku nemá.
+Dvacet krátkých vertikálních dílů (9:16, 14–28 s) z `Rodinka/promo/rodinka-spot/` (díly 01–13, 15–18, 25, 28 a 30). Každý díl prodává jednu každodenní chvíli, proto hraje přímo u funkce, o které je: hlavní díl tématu v sekci s popisem problému na tematické stránce, další díly téhož tématu (`"extra": True`) v sekci „Další chvíle ze série“ pod „Jak pomáhá Rodinka“. Na české homepage hrají díly u zastávek „Jednoho dne u Novákových“ (díl 05 u snídaně, 02 u nákupu, 01 u vyzvednutí, 03 u kroužku, 06 u večeře u babičky, 17 u babiččiny středy, 04 u výletu a 07 u vzpomínky); díl 05 vlastní tematickou stránku nemá. Den uzavírá produktová prohlídka (`HOME_TOUR`, `assets/video/rodinka-product-tour-9x16.*`, 57 s, plakát v 8 s): týden Novákových ve skutečné aplikaci, natočený ze spuštěného klienta. Má český voice-over, proto je jen na české homepage.
+
+Na web záměrně nejdou díly 14 (oznámení vydání v obchodech), 19–23 a 26–27 (žánrové parodie, 8bit a 3D) ani engagement reely, které končí otázkou do komentářů. Díl 24 ukazuje Domácí displej, který zatím není vydaný.
 
 | Díl | Stránka | Plakát |
 | --- | --- | --- |
@@ -191,11 +207,24 @@ Sedm krátkých vertikálních dílů (9:16, 14–25 s) z `Rodinka/promo/rodinka
 | 02 Co máme koupit? | Sdílený nákupní seznam | 3,0 s |
 | 03 V kolik má dneska kroužek? | Rodinný plánovač (kroužky) | 1,0 s |
 | 04 Kam jsme to chtěli jet? | Rodinné výlety | 1,2 s |
-| 05 Co nás dnes čeká? | jen homepage (odkaz na plánovač) | 0,8 s |
+| 05 Co nás dnes čeká? | jen homepage (zastávka 7:12, odkaz na plánovač) | 0,8 s |
 | 06 Kde jsme to řešili? | Aplikace pro rodinu | 1,1 s |
 | 07 Tohle si chceme pamatovat. | Rodinné vzpomínky | 7,4 s |
+| 08 Odpadá to dneska? | Rodinný plánovač (další díl) | 1,0 s |
+| 09 Jakou má teď botu? | Aplikace pro rodinu (další díl, velikosti dětí) | 2,0 s |
+| 10 Kdy můžou všichni? | Rodinný kalendář (další díl) | 2,0 s |
+| 11 Kolik mi ještě chybí? | Úkoly pro rodinu (další díl, Šetřím si na…) | 2,0 s |
+| 12 Jak to tenkrát říkal? | Rodinné vzpomínky (další díl) | 3,0 s |
+| 13 Platí to ještě? | Hlídání platnosti dokladů | 2,0 s |
+| 15 Kdo koupí jednorožce? | Aplikace pro rodinu (další díl, přání) | 1,0 s |
+| 16 Venčil už někdo Badyho? | Úkoly pro rodinu (další díl, mazlíčci) | 2,0 s |
+| 17 Babi, můžeš ve středu? | Rodina napříč generacemi + homepage (středa) | 2,0 s |
+| 18 Platí ještě ta snídaně? | Aplikace pro rodinu (další díl, poukázky) | 2,0 s |
+| 25 Co bude k večeři? | Plánování jídla | 2,0 s |
+| 28 Velká bitva o koš | Úkoly pro rodinu | 5,0 s |
+| 30 Rok za 20 sekund | Rodinné vzpomínky (další díl, Ročenka v Pro) | 2,0 s |
 
-Obsah, přiřazení ke stránkám (`page`, u dílu bez stránky `link`) a zaokrouhlenou délku (`seconds`) spravuje `SERIES` v generátoru. Hlas i texty v obraze jsou české, takže díly jsou zatím jen na českých stránkách; lokalizované rendery stačí přidat jako `SERIES["sk"]`, `SERIES["en"]` atd. Soubory leží v `assets/video/kazdodenni-rodinka-NN-*.mp4` s plakátem `.webp` širokým 720 px. Stejně jako u spotu se video stahuje až po kliknutí na plakát a naráz hraje vždy jen jedno video na stránce. Webové verze vznikly ze zdrojů `*-1080x1920.mp4` takto (plakát je snímek s úvodní otázkou dílu, u 07 polaroid s popiskem):
+Obsah, přiřazení ke stránkám (`page`, u dílu bez stránky `link`) a zaokrouhlenou délku (`seconds`) spravuje `SERIES` v generátoru. Hlas i texty v obraze jsou české, takže díly jsou zatím jen na českých stránkách; lokalizované rendery stačí přidat jako `SERIES["sk"]`, `SERIES["en"]` atd. Soubory leží v `assets/video/kazdodenni-rodinka-NN-*.mp4` s plakátem `.webp` širokým 720 px. Díl 28 (němý film s filmovým zrnem) je zmenšený na 720 px šířky (`-vf scale=720:-2 -crf 27`), jinak by zrno nafouklo soubor na 25 MB. Stejně jako u spotu se video stahuje až po kliknutí na plakát a naráz hraje vždy jen jedno video na stránce. Webové verze vznikly ze zdrojů `*-1080x1920.mp4` takto (plakát je snímek s úvodní otázkou dílu, u 07 polaroid s popiskem):
 
 ```bash
 ffmpeg -i kazdodenni-rodinka-01-kdo-dnes-vyzvedava-1080x1920.mp4 -c:v libx264 -preset slow -crf 26 -r 30 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/kazdodenni-rodinka-01-kdo-dnes-vyzvedava.mp4
