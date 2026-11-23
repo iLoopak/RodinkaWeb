@@ -158,14 +158,6 @@ PRODUCT_PROOFS = {
     ),
 }
 
-HOME_MEMORY_STORY = {
-    "kicker": "WIĘCEJ NIŻ ORGANIZACJA",
-    "title": "Nie tylko to, co trzeba załatwić. Także to, co chcecie zapamiętać.",
-    "text": "Kamienie milowe dzieci, rodzinne skarby, powiedzonka dzieci i wspólne przeżycia ze zdjęciem leżą w Rodince na jednej wspólnej osi czasu. Każde wspomnienie może należeć do osoby, której dotyczy, ekran Dzisiaj od czasu do czasu przypomina, co wydarzyło się tego samego dnia w poprzednich latach, a kamień milowy można zamienić w kartkę do wydruku w domu.",
-    "link": "Rodzinne wspomnienia",
-    "alt": "Ekran Wspomnienia w Rodince z rodzinną osią czasu i zdjęciem z jesiennego spaceru po lesie",
-    "caption": "Wspomnienia ze zdjęciem, kamienie milowe dzieci i rodzinne skarby na jednej wspólnej rodzinnej osi czasu.",
-}
 
 HOME_BABY_STORY = {
     "kicker": "NOWY ROZDZIAŁ WASZEJ RODZINY",
@@ -176,25 +168,6 @@ HOME_BABY_STORY = {
     "caption": "Funkcja Dziecko w drodze daje dorosłym jeden wspólny przegląd rodzinnych przygotowań przed przyjściem dziecka na świat.",
 }
 
-HOME_PHONE = {
-    "family": "Novák",
-    "greeting": "Witaj, Klára.",
-    "date": "Wtorek, 6 października",
-    "summary": "Masz dziś 3 sprawy.",
-    "program": "Dzisiejszy program",
-    "rows": (
-        ("7:45", "Żłobek", "Tobiáš · opiekun Martin"),
-        ("15:00", "Pływanie", "Ema · opiekunka Klára"),
-        ("18:30", "Kolacja: risotto", "Gotuje Martin"),
-    ),
-    "dinner": "kolacja",
-    "daily_title": "Rodinka na dziś",
-    "daily_eyebrow": "Dzisiejsze głosowanie",
-    "question": "Dokąd jedziemy w sobotę?",
-    "options": (("Na zamek", "2 głosy"), ("Do zoo", "1 głos"), ("Do babci", "0 głosów")),
-    "voted": "Zagłosowało 3 z 4",
-    "nav": ("Dzisiaj", "Kalendarz", "Wspomnienia", "Planowanie", "Rodzina"),
-}
 
 HOME_FOCUS = {
     "kicker": "OD CZEGO ZACZĄĆ",
@@ -222,7 +195,7 @@ HOME_START = {
         ("To jest wasza Rodinka", "Własny znak waszej rodziny powstaje z jej członków. Na ekranie Dzisiaj czeka krótka lista najwyżej trzech kolejnych kroków."),
     ),
     "kit": ("Gotowe zestawy zamiast pustego ekranu", "Szkoła, dom, samochód czy dokumenty: zestaw pokazuje, co dodałby do Rodinki, i pozwala najpierw wszystko zmienić. Nic nie zostanie zapisane, dopóki nie potwierdzisz."),
-    "family": "Novákowie",
+    "family": "Nowakowie",
     "pet": "Bady",
     "caption": "Znak rodziny tworzą jej członkowie. Każdy ma swój kolor, dorośli są trochę wyżsi, a zwierzak to mniejszy listek na końcu rzędu.",
 }
@@ -233,10 +206,12 @@ HOME_FAMILY_LAYER = {
     "lead": "Kalendarz, obowiązki i zakupy sprawiają, że dom działa. Rodinka dodaje rzeczy, dla których chętnie ją otwieracie – i kilka takich, o których łatwo zapomnieć.",
     "cards": (
         ("memories", "sparkle", "Mały powód, by codziennie być razem", "Rodinka na dziś proponuje jedno pytanie dla całej rodziny, krótkie głosowanie, zagadkę albo wspomnienie z poprzednich lat. To nie obowiązek: bez serii, punktów i rankingów.", "memories"),
-        ("tasks", "child", "Dzieci mają własną Rodinkę", "Logowanie bez adresu e-mail, własne zadania, lista zakupów i kalendarz. Nagroda albo kieszonkowe za wykonane zadania i pięć rodzinnych gier, które działają też offline. Gdy dziecko zechce własnego konta, przekażecie mu profil razem z historią.", "chores"),
+        ("tasks", "child", "Dzieci mają własną Rodinkę", "Logowanie bez adresu e-mail, własne zadania, lista zakupów i kalendarz. Nagroda albo kieszonkowe za wykonane zadania i pięć rodzinnych gier, które działają też offline. Z kieszonkowego mogą odkładać na własny cel i same widzą, ile im jeszcze brakuje. Gdy dziecko zechce własnego konta, przekażecie mu profil razem z historią.", "chores"),
         ("family", "gift", "Życzenia, których nikt nie kupi dwa razy", "Każdy w rodzinie prowadzi listę rzeczy i przeżyć, o których marzy. Dorośli mogą po cichu oznaczyć życzenie „Kupię to”, a osoba, która je dodała, nigdy się o tym nie dowie.", "app"),
         ("calendar", "chat", "Rozmowa tam, gdzie jej miejsce", "Rodzinny czat i wiadomości prywatne. Udostępnij w rozmowie konkretne zadanie, pozycję z listy zakupów albo wydarzenie i jednym krokiem zamień wiadomość w zadanie.", "app"),
         ("health", "health", "Zdrowie i zwierzęta", "Badania kontrolne, szczepienia i kolejne dawki dla całej rodziny z przypomnieniem na czas. Zwierzak ma własny profil, rutyny opieki i historię wizyt u weterynarza. To narzędzie do planowania, nie dokumentacja medyczna.", "app"),
+        ("family", "confirm", "Małe obietnice, które nie przepadają", "Rodzinne bony to drobne prezenty z serca: śniadanie do łóżka, wybór wieczornej bajki albo wspólna przejażdżka rowerowa. Dzieci też mogą je dawać. Kto dostanie bon, wykorzysta go, kiedy mu pasuje, i nic się przy tym nie płaci.", "app"),
+        ("tasks", "sprout", "Rozmiary zawsze pod ręką", "Dla każdego dziecka zapiszecie rozmiar ubrań i butów, na przykład 122–128 albo EU 31, i dodacie notatkę. W sklepie zerkniecie do telefonu zamiast zgadywać, a wcześniejsze rozmiary zostaną w historii.", "app"),
     ),
 }
 
@@ -254,18 +229,6 @@ TRIP_MOCK = {
     "caption": "Plan wycieczki: termin, okolica, pomysły i głosy całej rodziny. Wybrany pomysł staje się wydarzeniem w rodzinnym kalendarzu.",
 }
 
-HOME_TRIPS_STORY = {
-    "kicker": "WYCIECZKI I WAKACJE",
-    "title": "Dokąd jedziemy? Decyduje cała rodzina.",
-    "text": "Zapisuj pomysły na wycieczki, gdy tylko się pojawią – wklej link, a Rodinka pobierze tytuł i podgląd. Gdy przyjdzie wolny weekend, z kilku pomysłów powstaje plan wycieczki, wszyscy głosują, a wybrany pomysł trafia do kalendarza.",
-    "points": (
-        "Pula pomysłów jako karty albo na mapie.",
-        "Plan wycieczki przypięty do ekranu Dzisiaj.",
-        "Po powrocie stuknij Odwiedzone, a wycieczka stanie się wspomnieniem.",
-        "A przed wyjazdem dzieci mogą zagrać w Pakowanie bagażnika.",
-    ),
-    "link": "Rodzinne wycieczki",
-}
 
 HOME_CIRCLE = {
     "kicker": "RODZINA PONAD POKOLENIAMI",
@@ -1239,4 +1202,64 @@ CMP_PAGES = {
         "cta_title": "Wypróbujcie Rodinkę – bez reklam i bez karty.",
         "cta_text": "Załóżcie rodzinę, dodajcie pierwsze zajęcia i zakupy i zobaczcie, czy Rodinka wam pasuje.",
     },
+}
+
+HOME_NOVAK = {
+    "family": "Nowakowie",
+    "names": {"mama": "Mama", "tata": "Tata", "ema": "Ema", "kuba": "Kuba", "babicka": "Babcia"},
+    "eyebrow": "Poznajcie Nowaków",
+    "lead": "Tata myśli, że Kubę odbierze mama. Mama myśli, że tata. Ema chce wiedzieć, dokąd jadą w weekend, a babcia, czy ma przyjść w środę. Rodinka to jedno miejsce, w którym Nowakowie mają wszystko razem: kalendarz, obowiązki, zakupy i posiłki, wycieczki i wspomnienia. Każdy widzi to, co go dotyczy.",
+    "notes_label": "Pytania, które Nowakowie zadają sobie codziennie",
+    "toggle": ("Wrzuć to do Rodinki", "Pokaż znów chaos"),
+    "calm": "Wszystko jasne.",
+    "phone": {
+        "title": "Dzisiaj u nas", "date": "Wtorek, 13 października", "summary": "Masz dziś 3 sprawy.",
+        "program": "Dzisiejszy plan", "week": "W tym tygodniu",
+        "today": (("15:30", "Odbiór z przedszkola", "Kuba · opiekun Tata"), ("16:30", "Judo", "Ema · opiekun Tata"), ("18:30", "Kolacja u babci", "Cała rodzina")),
+        "later": (("Śr", "Odbiór z przedszkola", "Kuba · opiekunka Babcia"), ("", "Lista zakupów", "Mleko, banany, masło…"), ("Sob", "Ścieżka w koronach drzew Lipno", "Zaplanowane na sobotę")),
+        "nav": ("Dzisiaj", "Kalendarz", "Wspomnienia", "Planowanie", "Rodzina"),
+    },
+    "cast": {
+        "kicker": "POZNAJCIE ICH",
+        "title": "Nowakowie. Rodzina taka jak wasza.",
+        "lead": "Dwoje rodziców, dwoje dzieci, babcia pod telefonem i pies, który najchętniej wychodziłby bez przerwy. Każdy ma w Rodince swoje sprawy i każdy widzi to, co go dotyczy.",
+        "people": (
+            ("Wie, kto kiedy ma zajęcia, dentystę i urodziny.", "Teraz widzą to też inni."),
+            ("Odbiera dzieci. Kiedy wie, że to jego kolej.", "Teraz wie zawsze."),
+            ("Ciągle pyta, dokąd pojedziemy w weekend.", "Teraz wybieramy razem."),
+            ("Nie umie jeszcze pisać. Jogurty i tak doda do listy.", "Głosem.*"),
+        ),
+        "babicka": ("I babcia.", "Odbiera Kubę, kiedy rodzina ją o to poprosi. Potwierdza jednym dotknięciem, nawet bez konta w Rodince."),
+        "bady": ("I Bady.", "Spacer z nim ma w Rodince własny wiersz z osobą, która wychodzi. Nikt już nie wyprowadza go trzy razy przed śniadaniem."),
+        "footnote": "* Wprowadzanie głosowe działa na obsługiwanych urządzeniach.",
+    },
+    "day": {
+        "kicker": "JEDEN DZIEŃ U NOWAKÓW",
+        "title": "Zwykły tydzień. Nic nie ginie.",
+        "lead": "Spędźcie z Nowakami jeden wtorek i kawałek tygodnia wokół niego. Przy każdej chwili zobaczycie, jak radzi sobie z nią Rodinka.",
+        "rail": "Chwile tygodnia",
+        "stops": {
+            "rano": ("7:12", "Wtorek rano", "Jedno spojrzenie rano i wszyscy wiedzą.", "Przy śniadaniu wystarczy ekran Dzisiaj: kto dokąd idzie, kto kogo odbiera i gdzie spotykamy się wieczorem. Tata znajduje swój odbiór, Ema swoje judo.", "Planer rodzinny", ("Dzisiaj u nas", "Masz dziś 3 sprawy.", "Odbiór · Judo · Kolacja u babci", "")),
+            "nakup": ("10:40", "Przed południem", "Listę zakupów piszemy razem. Z masłem włącznie.", "Mama stoi w sklepie, a odpowiedzi z czatu przychodzą po jednej. Na wspólnej liście wszystko jest w jednym miejscu, podzielone na sekcje, a to, co ktoś doda, widać od razu.", "Wspólna lista zakupów", ("Lista zakupów", "Masło", "Dodano: Tata", "")),
+            "skolka": ("15:30", "Po południu", "Przy odbiorze widać, kto idzie.", "Mama i tata byli pewni, że Kubę odbierze to drugie. W kalendarzu odbiór ma opiekuna, więc pytanie „Odbierzesz go, prawda?” znika.", "Kalendarz rodzinny", ("15:30", "Odbiór z przedszkola", "Kuba · opiekun Tata", "")),
+            "judo": ("16:30", "Po południu", "Nikt nie musi pamiętać wszystkich zajęć.", "O czwartej? O piątej? Linia dnia na ekranie Dzisiaj pokazuje, że Ema ma judo o wpół do piątej i kto ją zawozi.", "Przegląd dnia w planerze", ("16:30", "Judo", "Ema · opiekun Tata", "")),
+            "vecere": ("18:30", "Wieczór", "Ustalenia nie giną w czacie.", "Siedemdziesiątkę babci omawiano na czacie, w kalendarzu, na karteczce i w e-mailu. W Rodince zostaje z tego jedno miejsce: przyjęcie, tort i to, co trzeba jeszcze kupić.", "Aplikacja dla rodziny", ("18:30", "Kolacja u babci", "Cała rodzina", "")),
+            "babicka": ("Środa", "Następnego dnia", "Babcia wie, kiedy jest potrzebna. Bez rozszyfrowywania wiadomości.", "Zamiast wiadomości od obojga rodziców babcia dostaje jedną prośbę o opiekę: kiedy, dokąd i kogo. Dotyka „Przyjdę”, a rodzina od razu widzi przy wydarzeniu, że jest potwierdzone. Z życia rodziny widzi tylko to, do czego ją zaprosicie.", "Rodzina ponad pokoleniami", ("Środa 15:30", "Odbiór z przedszkola", "Kuba", "Potwierdzone")),
+            "vylet": ("Sobota", "Weekend", "Pomysły, które nie przepadają.", "Link taty z czatu, zrzut ekranu z zamkiem, pocztówka od babci: wszystko trafia do puli pomysłów. Kuba dodaje serduszko i sobota jest zaplanowana.", "Rodzinne wycieczki", ("Pula pomysłów", "Ścieżka w koronach drzew Lipno", "Zaplanowane na sobotę", "")),
+            "vzpominka": ("Za rok", "Rok później", "A to chcemy zapamiętać.", "Kuba pierwszy raz jedzie sam na rowerze. Mama zapisuje zdjęcie w Rodince, a rok później cała rodzina wraca do niego na ekranie Dzisiaj w sekcji Tego dnia.", "Rodzinne wspomnienia", ("Tego dnia", "Pierwsza samodzielna jazda Kuby", "Rok temu", "")),
+        },
+    },
+}
+
+HOME_SPOT = {
+    "stem": "/assets/video/rodinka-spot-pl",
+    "kicker": "RODINKA W NIECAŁĄ MINUTĘ",
+    "title": "Rodzina to najpiękniejszy chaos.",
+    "lead": "Jeden zwykły poranek – od pytań na lodówce po wspólny weekend.",
+    "play": "Obejrzyj Rodinkę",
+    "meta": "Wideo · 0:48 · z dźwiękiem",
+    "label": "Odtwórz film o Rodince, 48 sekund z dźwiękiem",
+    "cta": "Wypróbuj Rodinkę",
+    "cta_from": "41.95",
+    "cta_width": "522",
 }

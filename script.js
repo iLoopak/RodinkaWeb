@@ -308,3 +308,123 @@ document.addEventListener('play', (event) => {
     if (video !== event.target) video.pause();
   });
 }, true);
+
+// The Nováks on the homepage: their notes fly into the Today screen, the
+// day rail follows the reader, and their mark settles into the Rodinka logo.
+(() => {
+  const reduce = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------------------------------------------------------------- hero */
+  const stage = document.querySelector('.nd-stage');
+  const toggle = document.querySelector('.nd-toggle');
+  if (stage && toggle) {
+    const notes = [...stage.querySelectorAll('.nd-note')];
+    notes.forEach((note) => { note.dataset.r = note.style.getPropertyValue('--r'); });
+
+    // Where each note has to land: measured with the phone already in place.
+    const measure = () => {
+      stage.classList.add('nd-measuring');
+      const phone = stage.querySelector('.nd-phone');
+      const prev = phone.style.transition;
+      phone.style.transition = 'none';
+      stage.dataset.state = 'calm';
+      const targets = notes.map((note) => {
+        const row = document.getElementById(note.dataset.target);
+        return row ? row.getBoundingClientRect() : null;
+      });
+      stage.dataset.state = 'chaos';
+      void phone.offsetWidth;
+      phone.style.transition = prev;
+      stage.classList.remove('nd-measuring');
+      return targets;
+    };
+
+    const calm = () => {
+      const targets = measure();
+      notes.forEach((note, i) => {
+        const t = targets[i];
+        if (!t) return;
+        const box = note.getBoundingClientRect();
+        const dx = t.left + t.width * 0.62 - (box.left + box.width / 2);
+        const dy = t.top + t.height / 2 - (box.top + box.height / 2);
+        note.style.setProperty('--dx', `${dx}px`);
+        note.style.setProperty('--dy', `${dy}px`);
+        note.style.setProperty('--s', String(Math.max(0.12, (t.height * 1.3) / box.height)));
+        note.style.setProperty('--r', '0deg');
+        const row = document.getElementById(note.dataset.target);
+        if (row) row.style.setProperty('--row-delay', `${i * 90}ms`);
+      });
+      stage.dataset.state = 'calm';
+      toggle.setAttribute('aria-pressed', 'true');
+    };
+
+    const chaos = () => {
+      notes.forEach((note) => {
+        note.style.removeProperty('--dx');
+        note.style.removeProperty('--dy');
+        note.style.removeProperty('--s');
+        note.style.setProperty('--r', note.dataset.r);
+      });
+      stage.dataset.state = 'chaos';
+      toggle.setAttribute('aria-pressed', 'false');
+    };
+
+    toggle.hidden = false;
+    let touched = false;
+    toggle.addEventListener('click', () => {
+      touched = true;
+      if (stage.dataset.state === 'chaos') calm(); else chaos();
+    });
+
+    // First impression: let the chaos breathe for a moment, then tidy it up once.
+    if (!reduce && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        if (!entries.some((e) => e.isIntersecting)) return;
+        io.disconnect();
+        setTimeout(() => { if (!touched) calm(); }, 2200);
+      }, { threshold: 0.6 });
+      io.observe(stage);
+    }
+    window.addEventListener('resize', () => { if (stage.dataset.state === 'calm') calm(); });
+  }
+
+  /* ---------------------------------------------------------------- day rail */
+  const rail = document.querySelector('.nd-rail');
+  if (rail && 'IntersectionObserver' in window) {
+    const links = [...rail.querySelectorAll('a[data-stop]')];
+    const marker = rail.querySelector('.nd-rail-marker');
+    const list = rail.querySelector('ol');
+    const setActive = (id) => {
+      links.forEach((a) => {
+        const on = a.dataset.stop === id;
+        if (on) {
+          a.setAttribute('aria-current', 'step');
+          const x = a.offsetLeft - list.scrollLeft + a.offsetWidth / 2 - marker.offsetWidth / 2 + list.offsetLeft;
+          marker.style.setProperty('--mx', `${x}px`);
+          if (list.scrollWidth > list.clientWidth) list.scrollTo({ left: a.offsetLeft - list.clientWidth / 2 + a.offsetWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+        } else {
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    const io = new IntersectionObserver((entries) => {
+      const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible[0]) setActive(visible[0].target.dataset.stop);
+    }, { rootMargin: '-35% 0px -45% 0px', threshold: [0, 0.25, 0.5] });
+    document.querySelectorAll('.nd-stop').forEach((s) => io.observe(s));
+    setActive(links[0]?.dataset.stop);
+  }
+
+  /* ---------------------------------------------------------------- finale */
+  const finale = document.querySelector('.nd-finale');
+  if (finale && !('IntersectionObserver' in window)) finale.classList.add('is-gathered', 'is-logo');
+  if (finale && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      io.disconnect();
+      finale.classList.add('is-gathered');
+      setTimeout(() => finale.classList.add('is-logo'), reduce ? 0 : 2300);
+    }, { threshold: 0.6 });
+    io.observe(finale);
+  }
+})();
